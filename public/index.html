@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIBachKhoa - AI Solutions for the Future</title>
+    <meta name="description" content="AIBachKhoa provides cutting-edge AI solutions including iTask for task management and CrewAI for autonomous AI agents.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <nav class="navbar glass">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">AI</span>BachKhoa
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#about" class="nav-link" data-i18n="nav_about">Về chúng tôi</a>
+                <a href="#products" class="nav-link" data-i18n="nav_products">Sản phẩm</a>
+                <button id="lang-toggle" class="icon-btn" aria-label="Toggle Language">
+                    EN
+                </button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="#products" class="nav-link btn-primary-sm" data-i18n="nav_get_started">Bắt đầu</a>
+            </div>
+            
+            <div class="mobile-controls">
+                <button id="mobile-lang-toggle" class="icon-btn mobile-only">EN</button>
+                <button id="mobile-theme-toggle" class="icon-btn mobile-only">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Menu" id="mobile-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="about">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge glass-badge" data-i18n="hero_badge">Nâng Tầm Quy Trình Làm Việc</div>
+                <h1 class="hero-title" data-i18n="hero_title">Hệ Sinh Thái <span class="gradient-text">AI Tương Lai</span></h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Khám phá các công cụ mạnh mẽ được thiết kế để tự động hóa công việc, điều phối các trợ lý AI và nâng cao năng suất của bạn lên những tầm cao mới.</p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary" data-i18n="btn_explore">Khám phá Sản phẩm</a>
+                    <a href="https://itask.aibachkhoa.com/plans" target="_blank" class="btn btn-outline" data-i18n="btn_try_itask">Thử nghiệm iTask</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="glass-card hero-card floating">
+                    <div class="card-header">
+                        <div class="dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="skeleton line-1"></div>
+                        <div class="skeleton line-2"></div>
+                        <div class="skeleton line-3"></div>
+                        <div class="ai-node">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card hero-card-small floating-delayed">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-info">
+                        <h4>10x</h4>
+                        <p data-i18n="hero_stat">Năng suất</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="products_title">Giải Pháp <span class="gradient-text">Nổi Bật</span></h2>
+                <p data-i18n="products_subtitle">Chọn công cụ phù hợp với nhu cầu cụ thể của bạn. Từ quản lý công việc thông minh đến điều phối hệ thống đa AI.</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- iTask Product Card -->
+                <a href="https://itask.aibachkhoa.com/plans" target="_blank" class="product-card glass hover-effect">
+                    <div class="product-icon itask-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    </div>
+                    <div class="product-content">
+                        <h3>iTask</h3>
+                        <div class="tag" data-i18n="tag_task">Quản lý Công việc</div>
+                        <p data-i18n="itask_desc">Tối ưu hóa quy trình với hệ thống quản lý công việc thông minh. Tổ chức, ưu tiên và chinh phục mục tiêu với sự hỗ trợ của AI.</p>
+                        <div class="features-list">
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="feat_prioritization">Ưu tiên thông minh</span></span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="feat_collaboration">Cộng tác nhóm</span></span>
+                        </div>
+                        <div class="product-action">
+                            <span data-i18n="action_plans">Xem Gói Dịch Vụ</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- CrewAI Product Card -->
+                <a href="https://crew.aibachkhoa.com" target="_blank" class="product-card glass hover-effect">
+                    <div class="product-icon crew-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <div class="product-content">
+                        <h3>CrewAI Interface</h3>
+                        <div class="tag" data-i18n="tag_orchestration">Điều phối AI</div>
+                        <p data-i18n="crew_desc">Triển khai và quản lý các AI tự động. Xây dựng đội ngũ tác tử AI tùy chỉnh để tự động hóa các quy trình phức tạp.</p>
+                        <div class="features-list">
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="feat_multiagent">Hệ thống Đa AI</span></span>
+                            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="feat_roles">Vai trò tùy chỉnh</span></span>
+                        </div>
+                        <div class="product-action">
+                            <span data-i18n="action_console">Mở Bảng Điều Khiển</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer glass">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-text">AI</span>BachKhoa
+                </a>
+                <p data-i18n="footer_desc">Phát triển các giải pháp AI thế hệ tiếp theo cho nhà phát triển và doanh nghiệp.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4 data-i18n="footer_prod">Sản phẩm</h4>
+                    <a href="https://itask.aibachkhoa.com/plans">iTask Plans</a>
+                    <a href="https://crew.aibachkhoa.com">Crew Console</a>
+                </div>
+                <div class="link-group">
+                    <h4 data-i18n="footer_comp">Công ty</h4>
+                    <a href="#" data-i18n="nav_about">Về chúng tôi</a>
+                    <a href="#" data-i18n="footer_contact">Liên hệ</a>
+                    <a href="#" data-i18n="footer_privacy">Chính sách Bảo mật</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AIBachKhoa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
