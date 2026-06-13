@@ -57,8 +57,37 @@
                     <a href="https://itask.aibachkhoa.com/plans" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="cta_try">Dùng thử iTask</a>
                 </div>
             </div>
-            <div class="hero-media reveal" aria-hidden="true">
-                <div class="hero-media-frame"></div>
+            <div class="hero-media reveal">
+                <div class="carousel" id="hero-carousel" role="region" aria-roledescription="carousel" aria-label="Sản phẩm AIBachKhoa">
+                    <div class="carousel-viewport">
+                        <a class="slide slide--itask is-active" href="https://itask.aibachkhoa.com/plans" target="_blank" rel="noopener" aria-label="iTask">
+                            <span class="slide-overlay">
+                                <span class="slide-tag" data-i18n="tag_task">Quản lý công việc</span>
+                                <span class="slide-name">iTask</span>
+                                <span class="slide-cta"><span data-i18n="slide_cta">Tìm hiểu sản phẩm</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                            </span>
+                        </a>
+                        <a class="slide slide--crew" href="https://crew.aibachkhoa.com" target="_blank" rel="noopener" aria-label="CrewAI">
+                            <span class="slide-overlay">
+                                <span class="slide-tag" data-i18n="tag_orchestration">Điều phối tác tử AI</span>
+                                <span class="slide-name">CrewAI</span>
+                                <span class="slide-cta"><span data-i18n="slide_cta">Tìm hiểu sản phẩm</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                            </span>
+                        </a>
+                        <a class="slide slide--osint" href="https://crewosint.aibachkhoa.com/" target="_blank" rel="noopener" aria-label="CrewOSINT">
+                            <span class="slide-overlay">
+                                <span class="slide-tag" data-i18n="tag_osint">Điều tra nguồn mở</span>
+                                <span class="slide-name">CrewOSINT</span>
+                                <span class="slide-cta"><span data-i18n="slide_cta">Tìm hiểu sản phẩm</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="carousel-dots" role="tablist" aria-label="Chọn sản phẩm">
+                        <button class="dot is-active" type="button" aria-label="iTask" aria-current="true"></button>
+                        <button class="dot" type="button" aria-label="CrewAI" aria-current="false"></button>
+                        <button class="dot" type="button" aria-label="CrewOSINT" aria-current="false"></button>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -156,7 +185,7 @@
         </div>
         <div class="container footer-bottom">
             <p>&copy; 2026 AIBachKhoa</p>
-            <p data-i18n="footer_rights">Mọi quyền được bảo lưu.</p>
+            <p>All rights reserved.</p>
         </div>
     </footer>
 

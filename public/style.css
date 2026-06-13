@@ -222,24 +222,86 @@ ul { list-style: none; }
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
 }
-.hero-media-frame {
+/* Hero product carousel */
+.carousel, .carousel-viewport { position: absolute; inset: 0; }
+
+.slide {
     position: absolute;
     inset: 0;
-    background-image:
-        linear-gradient(180deg, transparent 30%, var(--duotone)),
-        url('https://picsum.photos/seed/aibachkhoa-engineering/1000/1250');
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(1) contrast(1.05);
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
 }
-.hero-media::after {
+.slide.is-active { opacity: 1; visibility: visible; }
+
+.slide::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(120% 90% at 85% 12%, var(--accent-soft), transparent 60%);
-    mix-blend-mode: screen;
-    pointer-events: none;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(1) contrast(1.05);
+    transform: scale(1);
+    transition: transform 7s ease;
 }
+.slide.is-active::before { transform: scale(1.07); }
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 32%, rgba(8, 8, 10, 0.88) 100%),
+               radial-gradient(90% 60% at 80% 12%, var(--accent-soft), transparent 55%);
+}
+.slide--itask::before { background-image: url('https://picsum.photos/seed/itask-workflow/1000/1250'); }
+.slide--crew::before  { background-image: url('https://picsum.photos/seed/crewai-agents/1000/1250'); }
+.slide--osint::before { background-image: url('https://picsum.photos/seed/crewosint-intel/1000/1250'); }
+
+.slide-overlay {
+    position: relative;
+    z-index: 1;
+    padding: 1.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+}
+.slide-tag { font-size: 0.82rem; font-weight: 600; color: #ffb284; }
+.slide-name { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 600; color: #fafafa; line-height: 1.05; }
+.slide-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 0.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #fafafa;
+}
+.slide-cta svg { width: 18px; height: 18px; transition: transform 0.2s ease; }
+.slide:hover .slide-cta svg { transform: translateX(4px); }
+
+.carousel-dots {
+    position: absolute;
+    z-index: 2;
+    right: 1.4rem;
+    bottom: 1.7rem;
+    display: flex;
+    gap: 0.5rem;
+}
+.dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+.dot.is-active { width: 22px; background: #fafafa; }
+.dot:hover { background: rgba(255, 255, 255, 0.7); }
 
 /* ---------- Products ---------- */
 .products { padding: 7rem 0; }
@@ -429,9 +491,12 @@ ul { list-style: none; }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .reveal { opacity: 1; transform: none; transition: none; }
-    .btn, .product-visual, .product-visual::before, .product-link svg { transition: none; }
-    .product-visual:hover { transform: none; }
-    .product-visual:hover::before { transform: none; }
+    .btn, .pcard, .pcard-visual::before, .product-link svg { transition: none; }
+    .pcard:hover { transform: none; }
+    .pcard:hover .pcard-visual::before { transform: none; }
+    .slide { transition: opacity 0.2s ease; }
+    .slide::before, .slide.is-active::before { transition: none; transform: none; }
+    .slide-cta svg, .dot { transition: none; }
 }
 
 @media (prefers-reduced-transparency: reduce) {

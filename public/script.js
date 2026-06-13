@@ -8,6 +8,7 @@ const i18n = {
         hero_title: "Công cụ AI cho công việc và <em>tự động hóa</em>.",
         hero_subtitle: "iTask quản lý công việc. CrewAI điều phối các tác tử AI tự động hóa những quy trình phức tạp.",
         btn_explore: "Khám phá sản phẩm",
+        slide_cta: "Tìm hiểu sản phẩm",
         products_title: "Chọn công cụ phù hợp với bạn.",
         products_sub: "Ba sản phẩm độc lập, mỗi sản phẩm giải quyết một nhu cầu cụ thể.",
         tag_task: "Quản lý công việc",
@@ -41,6 +42,7 @@ const i18n = {
         hero_title: "AI tools for work and <em>automation</em>.",
         hero_subtitle: "iTask manages your tasks. CrewAI orchestrates autonomous agents that automate complex workflows.",
         btn_explore: "Explore products",
+        slide_cta: "Explore product",
         products_title: "Pick the tool that fits.",
         products_sub: "Three independent products, each built for a specific need.",
         tag_task: "Task management",
@@ -141,5 +143,44 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
         reveals.forEach(el => io.observe(el));
+    }
+
+    // ---------- Hero product carousel ----------
+    const carousel = document.getElementById('hero-carousel');
+    if (carousel) {
+        const slides = Array.from(carousel.querySelectorAll('.slide'));
+        const dots = Array.from(carousel.querySelectorAll('.dot'));
+        let idx = 0, timer = null;
+        const INTERVAL = 4800;
+
+        const go = (n) => {
+            idx = (n + slides.length) % slides.length;
+            slides.forEach((s, i) => s.classList.toggle('is-active', i === idx));
+            dots.forEach((d, i) => {
+                d.classList.toggle('is-active', i === idx);
+                d.setAttribute('aria-current', i === idx ? 'true' : 'false');
+            });
+        };
+        const start = () => { if (reduce) return; stop(); timer = setInterval(() => go(idx + 1), INTERVAL); };
+        const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+
+        dots.forEach((d, i) => d.addEventListener('click', () => { go(i); start(); }));
+        carousel.addEventListener('mouseenter', stop);
+        carousel.addEventListener('mouseleave', start);
+        carousel.addEventListener('focusin', stop);
+        carousel.addEventListener('focusout', start);
+        document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
+
+        // touch swipe
+        let x0 = null;
+        carousel.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+        carousel.addEventListener('touchend', e => {
+            if (x0 === null) return;
+            const dx = e.changedTouches[0].clientX - x0;
+            if (Math.abs(dx) > 40) { go(idx + (dx < 0 ? 1 : -1)); start(); }
+            x0 = null;
+        }, { passive: true });
+
+        start();
     }
 });
