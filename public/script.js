@@ -10,7 +10,7 @@ const i18n = {
         btn_explore: "Khám phá sản phẩm",
         slide_cta: "Tìm hiểu sản phẩm",
         products_title: "Chọn công cụ phù hợp với bạn.",
-        products_sub: "Ba sản phẩm độc lập, mỗi sản phẩm giải quyết một nhu cầu cụ thể.",
+        products_sub: "Bốn sản phẩm độc lập, mỗi sản phẩm giải quyết một nhu cầu cụ thể.",
         tag_task: "Quản lý công việc",
         itask_desc: "Tổ chức, ưu tiên và theo dõi công việc trong một nơi duy nhất. AI gợi ý thứ tự ưu tiên và tóm tắt tiến độ cho cả nhóm.",
         feat_prioritization: "Ưu tiên thông minh theo ngữ cảnh",
@@ -24,6 +24,11 @@ const i18n = {
         tag_osint: "Điều tra nguồn mở",
         osint_desc: "Các tác tử AI tự động thu thập và phân tích thông tin từ nguồn mở, rồi tổng hợp thành báo cáo điều tra rõ ràng.",
         action_osint: "Khám phá CrewOSINT",
+        tag_platform: "Nền tảng xây dựng AI agent",
+        platform_desc: "Thiết kế, triển khai và mở rộng ứng dụng LLM cùng quy trình đa tác tử trên một canvas trực quan, kèm không gian làm việc và phân quyền.",
+        feat_platform_builder: "Trình kéo-thả xây dựng AI agent",
+        feat_platform_integrations: "Hơn 100 tích hợp sẵn có",
+        action_platform: "Bắt đầu miễn phí",
         cta_title: "Bắt đầu với công cụ phù hợp với đội ngũ của bạn.",
         cta_crew: "Tìm hiểu CrewAI",
         footer_desc: "Xây dựng công cụ AI thực dụng cho nhà phát triển và doanh nghiệp.",
@@ -44,7 +49,7 @@ const i18n = {
         btn_explore: "Explore products",
         slide_cta: "Explore product",
         products_title: "Pick the tool that fits.",
-        products_sub: "Three independent products, each built for a specific need.",
+        products_sub: "Four independent products, each built for a specific need.",
         tag_task: "Task management",
         itask_desc: "Organize, prioritize, and track work in one place. AI suggests what to do next and summarizes progress for the whole team.",
         feat_prioritization: "Context-aware smart prioritization",
@@ -58,6 +63,11 @@ const i18n = {
         tag_osint: "Open-source intelligence",
         osint_desc: "AI agents automatically gather and analyze open-source information, then compile it into a clear investigation report.",
         action_osint: "Explore CrewOSINT",
+        tag_platform: "AI agent platform",
+        platform_desc: "Design, deploy, and scale LLM apps and multi-agent workflows on a visual canvas, with workspaces and role-based access.",
+        feat_platform_builder: "Drag-and-drop agent builder",
+        feat_platform_integrations: "100+ built-in integrations",
+        action_platform: "Start free",
         cta_title: "Start with the tool that fits your team.",
         cta_crew: "Explore CrewAI",
         footer_desc: "Building practical AI tools for developers and businesses.",
@@ -74,8 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ---------- Theme ----------
     const themeToggles = [document.getElementById('theme-toggle'), document.getElementById('mobile-theme-toggle')];
-    let currentTheme = localStorage.getItem('theme') ||
-        (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    let currentTheme = localStorage.getItem('theme') || 'light';
     root.setAttribute('data-theme', currentTheme);
 
     themeToggles.forEach(t => t && t.addEventListener('click', () => {
