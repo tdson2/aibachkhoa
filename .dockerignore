@@ -1,0 +1,11 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+.agents
+skills-lock.json
+vercel.json
+Dockerfile
+.dockerignore
+docker-compose.yml
+*.md

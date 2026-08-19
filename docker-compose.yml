@@ -1,0 +1,35 @@
+services:
+  web:
+    build: .
+    image: aibachkhoa-landing:latest
+    container_name: aibachkhoa-web
+    restart: unless-stopped
+    init: true                      # tini làm PID 1 -> xử lý SIGTERM, tắt container gọn gàng
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+    ports:
+      # cloudflared chạy trên host -> trỏ tunnel tới http://localhost:3000
+      # Chỉ bind vào localhost nên port KHÔNG lộ ra Internet, dù firewall có mở.
+      - "127.0.0.1:3000:3000"
+    # ----- Hardening -----
+    read_only: true                 # filesystem chỉ đọc, mã nguồn không thể bị ghi đè
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    mem_limit: 256m
+    pids_limit: 128
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:3000/"]
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
