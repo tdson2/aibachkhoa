@@ -12,6 +12,35 @@ const i18n = {
         aria_theme: "Toggle theme",
         aria_menu: "Open menu",
         aria_carousel: "AIBachKhoa products",
+        nav_services: "Services",
+        services_title: "Need something built?",
+        services_sub: "Send over the brief. We scope it, build it and hand it back — from a single feature to a whole outsourced project.",
+        svc_brief_title: "Send us a brief",
+        svc_brief_desc: "Describe the problem. You get back a scope, a timeline and a clear quote.",
+        svc_outsource_title: "Outsourced projects",
+        svc_outsource_desc: "A team that carries the project end to end: web, mobile, backend and release.",
+        svc_ai_title: "AI integration",
+        svc_ai_desc: "Agents, chat and on-device models wired into the product you already run.",
+        svc_support_title: "Support and maintenance",
+        svc_support_desc: "We keep what we ship running, and pick up work that was left unfinished.",
+        contact_eyebrow: "Product consulting",
+        contact_title: "Talk to a person, not a form.",
+        contact_sub: "Zalo, WhatsApp or email — whichever suits you. Usually answered the same day.",
+        contact_role: "Product consulting and development",
+        label_email: "Email",
+        label_phone: "Phone",
+        label_zalo: "Zalo",
+        label_whatsapp: "WhatsApp",
+        cta_contact: "Get in touch",
+        group_web: "Web & desktop",
+        group_mobile: "Mobile apps",
+        showcase_title: "Everything we build.",
+        showcase_sub: "Eleven products in one strip. Drag sideways, or let it drift on its own.",
+        gallery_title: "Inside the apps.",
+        gallery_sub: "Real screens from our mobile apps.",
+        aria_prev: "Previous",
+        aria_next: "Next",
+        hint_drag: "Drag to browse",
         aria_dots: "Choose product",
         skip_link: "Skip to content",
         nav_about: "About",
@@ -84,6 +113,35 @@ const i18n = {
         aria_theme: "Cambiar tema",
         aria_menu: "Abrir menú",
         aria_carousel: "Productos de AIBachKhoa",
+        nav_services: "Servicios",
+        services_title: "¿Necesitas construir algo?",
+        services_sub: "Envíanos el planteamiento. Lo definimos, lo construimos y te lo entregamos: desde una función suelta hasta un proyecto completo.",
+        svc_brief_title: "Cuéntanos tu proyecto",
+        svc_brief_desc: "Descríbenos el problema. Te devolvemos alcance, plazos y un presupuesto claro.",
+        svc_outsource_title: "Proyectos subcontratados",
+        svc_outsource_desc: "Un equipo que lleva el proyecto de principio a fin: web, móvil, backend y publicación.",
+        svc_ai_title: "Integración de IA",
+        svc_ai_desc: "Agentes, chat y modelos en el dispositivo integrados en el producto que ya tienes.",
+        svc_support_title: "Soporte y mantenimiento",
+        svc_support_desc: "Mantenemos en marcha lo que entregamos y retomamos trabajos inacabados.",
+        contact_eyebrow: "Consultoría de producto",
+        contact_title: "Habla con una persona, no con un formulario.",
+        contact_sub: "Zalo, WhatsApp o correo, lo que te resulte más cómodo. Solemos responder el mismo día.",
+        contact_role: "Consultoría y desarrollo de producto",
+        label_email: "Correo",
+        label_phone: "Teléfono",
+        label_zalo: "Zalo",
+        label_whatsapp: "WhatsApp",
+        cta_contact: "Contactar",
+        group_web: "Web y escritorio",
+        group_mobile: "Apps móviles",
+        showcase_title: "Todo lo que construimos.",
+        showcase_sub: "Once productos en una sola franja. Arrastra o déjalo correr solo.",
+        gallery_title: "Dentro de las apps.",
+        gallery_sub: "Pantallas reales de nuestras apps móviles.",
+        aria_prev: "Anterior",
+        aria_next: "Siguiente",
+        hint_drag: "Arrastra para explorar",
         aria_dots: "Elegir producto",
         skip_link: "Saltar al contenido",
         nav_about: "Nosotros",
@@ -156,6 +214,35 @@ const i18n = {
         aria_theme: "切换主题",
         aria_menu: "打开菜单",
         aria_carousel: "AIBachKhoa 产品",
+        nav_services: "服务",
+        services_title: "需要开发点什么？",
+        services_sub: "把需求发给我们。我们负责梳理、开发并交付——从单个功能到整个外包项目。",
+        svc_brief_title: "发来需求",
+        svc_brief_desc: "描述你的问题，我们回复范围、时间表和明确的报价。",
+        svc_outsource_title: "外包项目",
+        svc_outsource_desc: "一支团队从头做到尾：Web、移动端、后端与上线。",
+        svc_ai_title: "AI 集成",
+        svc_ai_desc: "把智能体、对话和端侧模型接入你现有的产品。",
+        svc_support_title: "支持与维护",
+        svc_support_desc: "我们让交付的系统持续运行，也接手别人未完成的工作。",
+        contact_eyebrow: "产品咨询",
+        contact_title: "直接找人聊，不用填表。",
+        contact_sub: "Zalo、WhatsApp 或邮件都可以，通常当天回复。",
+        contact_role: "产品咨询与开发",
+        label_email: "邮箱",
+        label_phone: "电话",
+        label_zalo: "Zalo",
+        label_whatsapp: "WhatsApp",
+        cta_contact: "联系我们",
+        group_web: "网页与桌面端",
+        group_mobile: "移动应用",
+        showcase_title: "我们打造的一切。",
+        showcase_sub: "十一款产品汇于一处。左右拖动，或让它自己滚动。",
+        gallery_title: "应用内部一览。",
+        gallery_sub: "来自我们移动应用的真实界面。",
+        aria_prev: "上一个",
+        aria_next: "下一个",
+        hint_drag: "拖动浏览",
         aria_dots: "选择产品",
         skip_link: "跳到主要内容",
         nav_about: "关于我们",
@@ -228,6 +315,35 @@ const i18n = {
         aria_theme: "थीम बदलें",
         aria_menu: "मेन्यू खोलें",
         aria_carousel: "AIBachKhoa उत्पाद",
+        nav_services: "सेवाएँ",
+        services_title: "कुछ बनवाना है?",
+        services_sub: "अपनी ज़रूरत हमें भेजिए। हम दायरा तय करते हैं, बनाते हैं और सौंप देते हैं — एक फ़ीचर से लेकर पूरे आउटसोर्स प्रोजेक्ट तक।",
+        svc_brief_title: "अपनी ज़रूरत भेजें",
+        svc_brief_desc: "समस्या बताइए। बदले में दायरा, समयसीमा और साफ़ अनुमान मिलेगा।",
+        svc_outsource_title: "आउटसोर्स प्रोजेक्ट",
+        svc_outsource_desc: "एक टीम जो प्रोजेक्ट शुरू से अंत तक संभालती है: वेब, मोबाइल, बैकएंड और रिलीज़।",
+        svc_ai_title: "AI एकीकरण",
+        svc_ai_desc: "एजेंट, चैट और डिवाइस पर चलने वाले मॉडल आपके मौजूदा प्रोडक्ट में जोड़ते हैं।",
+        svc_support_title: "सहायता और रखरखाव",
+        svc_support_desc: "हम जो बनाते हैं उसे चलाते रहते हैं, और अधूरे छूटे काम भी उठाते हैं।",
+        contact_eyebrow: "प्रोडक्ट परामर्श",
+        contact_title: "फ़ॉर्म नहीं, सीधे इंसान से बात कीजिए।",
+        contact_sub: "Zalo, WhatsApp या ईमेल — जो आपको ठीक लगे। आमतौर पर उसी दिन जवाब मिलता है।",
+        contact_role: "प्रोडक्ट परामर्श और विकास",
+        label_email: "ईमेल",
+        label_phone: "फ़ोन",
+        label_zalo: "Zalo",
+        label_whatsapp: "WhatsApp",
+        cta_contact: "संपर्क करें",
+        group_web: "वेब और डेस्कटॉप",
+        group_mobile: "मोबाइल ऐप्स",
+        showcase_title: "हम जो कुछ भी बनाते हैं।",
+        showcase_sub: "एक ही पट्टी में ग्यारह उत्पाद। बगल में खींचें, या इसे अपने आप चलने दें।",
+        gallery_title: "ऐप्स के भीतर।",
+        gallery_sub: "हमारे मोबाइल ऐप्स की असली स्क्रीन।",
+        aria_prev: "पिछला",
+        aria_next: "अगला",
+        hint_drag: "देखने के लिए खींचें",
         aria_dots: "उत्पाद चुनें",
         skip_link: "मुख्य सामग्री पर जाएँ",
         nav_about: "हमारे बारे में",
@@ -300,6 +416,35 @@ const i18n = {
         aria_theme: "تبديل المظهر",
         aria_menu: "فتح القائمة",
         aria_carousel: "منتجات AIBachKhoa",
+        nav_services: "الخدمات",
+        services_title: "تحتاج إلى بناء شيء ما؟",
+        services_sub: "أرسل لنا المتطلبات. نحدّد النطاق وننفّذ ونسلّم — من ميزة واحدة إلى مشروع كامل بالتعهيد.",
+        svc_brief_title: "أرسل لنا متطلباتك",
+        svc_brief_desc: "صف المشكلة، ونعود إليك بالنطاق والجدول الزمني وعرض سعر واضح.",
+        svc_outsource_title: "مشاريع بالتعهيد",
+        svc_outsource_desc: "فريق يتولى المشروع من أوله إلى آخره: الويب والهاتف والخلفية والإطلاق.",
+        svc_ai_title: "دمج الذكاء الاصطناعي",
+        svc_ai_desc: "وكلاء ومحادثة ونماذج تعمل على الجهاز، مدمجة في منتجك الحالي.",
+        svc_support_title: "الدعم والصيانة",
+        svc_support_desc: "نُبقي ما نسلّمه يعمل، ونستكمل الأعمال التي تُركت ناقصة.",
+        contact_eyebrow: "استشارات المنتج",
+        contact_title: "تحدّث إلى شخص، لا إلى نموذج.",
+        contact_sub: "Zalo أو WhatsApp أو البريد — كما يناسبك. نردّ عادة في اليوم نفسه.",
+        contact_role: "استشارات وتطوير المنتجات",
+        label_email: "البريد الإلكتروني",
+        label_phone: "الهاتف",
+        label_zalo: "Zalo",
+        label_whatsapp: "WhatsApp",
+        cta_contact: "تواصل معنا",
+        group_web: "الويب وسطح المكتب",
+        group_mobile: "تطبيقات الهاتف",
+        showcase_title: "كل ما نبنيه.",
+        showcase_sub: "أحد عشر منتجًا في شريط واحد. اسحب جانبًا أو دعه ينساب وحده.",
+        gallery_title: "من داخل التطبيقات.",
+        gallery_sub: "لقطات حقيقية من تطبيقاتنا للهواتف.",
+        aria_prev: "السابق",
+        aria_next: "التالي",
+        hint_drag: "اسحب للتصفح",
         aria_dots: "اختر منتجًا",
         skip_link: "تخطَّ إلى المحتوى",
         nav_about: "من نحن",
@@ -372,6 +517,35 @@ const i18n = {
         aria_theme: "Alternar tema",
         aria_menu: "Abrir menu",
         aria_carousel: "Produtos da AIBachKhoa",
+        nav_services: "Serviços",
+        services_title: "Precisa construir alguma coisa?",
+        services_sub: "Mande o briefing. A gente define o escopo, desenvolve e entrega — de uma única funcionalidade a um projeto inteiro terceirizado.",
+        svc_brief_title: "Mande um briefing",
+        svc_brief_desc: "Descreva o problema. Você recebe escopo, prazo e um orçamento claro.",
+        svc_outsource_title: "Projetos terceirizados",
+        svc_outsource_desc: "Um time que leva o projeto de ponta a ponta: web, mobile, backend e publicação.",
+        svc_ai_title: "Integração de IA",
+        svc_ai_desc: "Agentes, chat e modelos no próprio dispositivo integrados ao produto que você já tem.",
+        svc_support_title: "Suporte e manutenção",
+        svc_support_desc: "Mantemos rodando o que entregamos e assumimos trabalhos deixados pela metade.",
+        contact_eyebrow: "Consultoria de produto",
+        contact_title: "Fale com uma pessoa, não com um formulário.",
+        contact_sub: "Zalo, WhatsApp ou e-mail — o que for melhor para você. Costumamos responder no mesmo dia.",
+        contact_role: "Consultoria e desenvolvimento de produto",
+        label_email: "E-mail",
+        label_phone: "Telefone",
+        label_zalo: "Zalo",
+        label_whatsapp: "WhatsApp",
+        cta_contact: "Entre em contato",
+        group_web: "Web e desktop",
+        group_mobile: "Apps móveis",
+        showcase_title: "Tudo o que construímos.",
+        showcase_sub: "Onze produtos numa só faixa. Arraste para o lado ou deixe correr sozinho.",
+        gallery_title: "Por dentro dos apps.",
+        gallery_sub: "Telas reais dos nossos aplicativos móveis.",
+        aria_prev: "Anterior",
+        aria_next: "Próximo",
+        hint_drag: "Arraste para navegar",
         aria_dots: "Escolher produto",
         skip_link: "Ir para o conteúdo",
         nav_about: "Sobre nós",
@@ -444,6 +618,35 @@ const i18n = {
         aria_theme: "Changer de thème",
         aria_menu: "Ouvrir le menu",
         aria_carousel: "Produits AIBachKhoa",
+        nav_services: "Services",
+        services_title: "Un projet à construire ?",
+        services_sub: "Envoyez-nous le cahier des charges. On cadre, on développe et on livre — d'une seule fonctionnalité à un projet entier en sous-traitance.",
+        svc_brief_title: "Envoyez votre besoin",
+        svc_brief_desc: "Décrivez le problème. Vous recevez un périmètre, un calendrier et un devis clair.",
+        svc_outsource_title: "Projets en sous-traitance",
+        svc_outsource_desc: "Une équipe qui prend le projet de bout en bout : web, mobile, backend et mise en production.",
+        svc_ai_title: "Intégration de l'IA",
+        svc_ai_desc: "Agents, chat et modèles embarqués intégrés au produit que vous exploitez déjà.",
+        svc_support_title: "Support et maintenance",
+        svc_support_desc: "Nous maintenons ce que nous livrons, et reprenons les chantiers laissés inachevés.",
+        contact_eyebrow: "Conseil produit",
+        contact_title: "Parlez à quelqu'un, pas à un formulaire.",
+        contact_sub: "Zalo, WhatsApp ou e-mail — comme vous préférez. Réponse en général le jour même.",
+        contact_role: "Conseil et développement produit",
+        label_email: "E-mail",
+        label_phone: "Téléphone",
+        label_zalo: "Zalo",
+        label_whatsapp: "WhatsApp",
+        cta_contact: "Nous contacter",
+        group_web: "Web et bureau",
+        group_mobile: "Applis mobiles",
+        showcase_title: "Tout ce que nous construisons.",
+        showcase_sub: "Onze produits sur une seule bande. Faites glisser, ou laissez défiler.",
+        gallery_title: "À l'intérieur des applis.",
+        gallery_sub: "De vrais écrans de nos applications mobiles.",
+        aria_prev: "Précédent",
+        aria_next: "Suivant",
+        hint_drag: "Faites glisser pour parcourir",
         aria_dots: "Choisir un produit",
         skip_link: "Aller au contenu",
         nav_about: "À propos",
@@ -516,6 +719,35 @@ const i18n = {
         aria_theme: "Design wechseln",
         aria_menu: "Menü öffnen",
         aria_carousel: "AIBachKhoa-Produkte",
+        nav_services: "Leistungen",
+        services_title: "Etwas zu bauen?",
+        services_sub: "Schick uns das Briefing. Wir schneiden es zu, bauen es und übergeben es — von einem einzelnen Feature bis zum kompletten Outsourcing-Projekt.",
+        svc_brief_title: "Briefing schicken",
+        svc_brief_desc: "Beschreib das Problem. Du bekommst Umfang, Zeitplan und ein klares Angebot zurück.",
+        svc_outsource_title: "Outsourcing-Projekte",
+        svc_outsource_desc: "Ein Team, das das Projekt von Anfang bis Ende trägt: Web, Mobile, Backend und Release.",
+        svc_ai_title: "KI-Integration",
+        svc_ai_desc: "Agenten, Chat und Modelle auf dem Gerät — eingebaut in das Produkt, das ihr schon betreibt.",
+        svc_support_title: "Support und Wartung",
+        svc_support_desc: "Wir halten am Laufen, was wir ausliefern, und übernehmen liegen gebliebene Arbeit.",
+        contact_eyebrow: "Produktberatung",
+        contact_title: "Sprich mit einem Menschen, nicht mit einem Formular.",
+        contact_sub: "Zalo, WhatsApp oder E-Mail – ganz wie es passt. Antwort meist noch am selben Tag.",
+        contact_role: "Produktberatung und Entwicklung",
+        label_email: "E-Mail",
+        label_phone: "Telefon",
+        label_zalo: "Zalo",
+        label_whatsapp: "WhatsApp",
+        cta_contact: "Kontakt aufnehmen",
+        group_web: "Web und Desktop",
+        group_mobile: "Mobile Apps",
+        showcase_title: "Alles, was wir bauen.",
+        showcase_sub: "Elf Produkte in einem Band. Zur Seite ziehen – oder einfach laufen lassen.",
+        gallery_title: "Ein Blick in die Apps.",
+        gallery_sub: "Echte Screens aus unseren Mobile-Apps.",
+        aria_prev: "Zurück",
+        aria_next: "Weiter",
+        hint_drag: "Zum Blättern ziehen",
         aria_dots: "Produkt wählen",
         skip_link: "Zum Inhalt springen",
         nav_about: "Über uns",
@@ -588,6 +820,35 @@ const i18n = {
         aria_theme: "テーマを切り替える",
         aria_menu: "メニューを開く",
         aria_carousel: "AIBachKhoa の製品",
+        nav_services: "サービス",
+        services_title: "つくりたいものはありますか。",
+        services_sub: "要件をお送りください。範囲を決め、開発し、お渡しします——機能ひとつから、まるごとの受託開発まで。",
+        svc_brief_title: "要件を送る",
+        svc_brief_desc: "課題をお聞かせください。範囲・スケジュール・明確な見積もりをお返しします。",
+        svc_outsource_title: "受託開発",
+        svc_outsource_desc: "Web、モバイル、バックエンド、リリースまで一気通貫で担当するチームです。",
+        svc_ai_title: "AI の組み込み",
+        svc_ai_desc: "エージェント、チャット、端末内モデルを、いま動いているプロダクトに組み込みます。",
+        svc_support_title: "サポートと保守",
+        svc_support_desc: "納めたものを動かし続けます。途中で止まった開発も引き受けます。",
+        contact_eyebrow: "プロダクト相談",
+        contact_title: "フォームではなく、人に相談してください。",
+        contact_sub: "Zalo、WhatsApp、メール——やりやすい方法でどうぞ。多くは当日中にお返事します。",
+        contact_role: "プロダクト相談・開発",
+        label_email: "メール",
+        label_phone: "電話",
+        label_zalo: "Zalo",
+        label_whatsapp: "WhatsApp",
+        cta_contact: "問い合わせる",
+        group_web: "Web・デスクトップ",
+        group_mobile: "モバイルアプリ",
+        showcase_title: "私たちがつくるすべて。",
+        showcase_sub: "11のプロダクトをひと続きに。横にドラッグしても、自動で流れても。",
+        gallery_title: "アプリの中身。",
+        gallery_sub: "モバイルアプリの実際の画面です。",
+        aria_prev: "前へ",
+        aria_next: "次へ",
+        hint_drag: "ドラッグして見る",
         aria_dots: "製品を選ぶ",
         skip_link: "本文へスキップ",
         nav_about: "私たちについて",
@@ -660,6 +921,35 @@ const i18n = {
         aria_theme: "테마 전환",
         aria_menu: "메뉴 열기",
         aria_carousel: "AIBachKhoa 제품",
+        nav_services: "서비스",
+        services_title: "만들고 싶은 게 있나요?",
+        services_sub: "요구사항을 보내주세요. 범위를 잡고, 개발하고, 넘겨드립니다 — 기능 하나부터 전체 외주 프로젝트까지.",
+        svc_brief_title: "요구사항 보내기",
+        svc_brief_desc: "문제를 알려주시면 범위와 일정, 명확한 견적으로 답을 드립니다.",
+        svc_outsource_title: "외주 프로젝트",
+        svc_outsource_desc: "웹, 모바일, 백엔드, 배포까지 처음부터 끝까지 맡는 팀입니다.",
+        svc_ai_title: "AI 연동",
+        svc_ai_desc: "에이전트와 채팅, 온디바이스 모델을 이미 운영 중인 제품에 붙입니다.",
+        svc_support_title: "지원 및 유지보수",
+        svc_support_desc: "우리가 만든 것을 계속 돌아가게 하고, 남겨진 작업도 이어받습니다.",
+        contact_eyebrow: "제품 컨설팅",
+        contact_title: "양식이 아니라 사람과 이야기하세요.",
+        contact_sub: "Zalo, WhatsApp, 이메일 — 편한 방법으로 연락 주세요. 보통 당일에 답장드립니다.",
+        contact_role: "제품 컨설팅 및 개발",
+        label_email: "이메일",
+        label_phone: "전화",
+        label_zalo: "Zalo",
+        label_whatsapp: "WhatsApp",
+        cta_contact: "문의하기",
+        group_web: "웹 · 데스크톱",
+        group_mobile: "모바일 앱",
+        showcase_title: "우리가 만드는 모든 것.",
+        showcase_sub: "열한 개의 제품을 한 줄에. 옆으로 끌거나, 그대로 흐르게 두세요.",
+        gallery_title: "앱 속을 들여다보기.",
+        gallery_sub: "모바일 앱의 실제 화면입니다.",
+        aria_prev: "이전",
+        aria_next: "다음",
+        hint_drag: "끌어서 둘러보기",
         aria_dots: "제품 선택",
         skip_link: "본문으로 건너뛰기",
         nav_about: "회사 소개",
@@ -732,6 +1022,35 @@ const i18n = {
         aria_theme: "Сменить тему",
         aria_menu: "Открыть меню",
         aria_carousel: "Продукты AIBachKhoa",
+        nav_services: "Услуги",
+        services_title: "Нужно что-то разработать?",
+        services_sub: "Пришлите задачу. Мы оценим объём, сделаем и передадим результат — от одной функции до целого проекта на аутсорсе.",
+        svc_brief_title: "Пришлите задачу",
+        svc_brief_desc: "Опишите проблему — в ответ получите объём работ, сроки и понятную смету.",
+        svc_outsource_title: "Проекты на аутсорсе",
+        svc_outsource_desc: "Команда ведёт проект от начала до конца: веб, мобильные, бэкенд и релиз.",
+        svc_ai_title: "Интеграция ИИ",
+        svc_ai_desc: "Агенты, чат и модели на устройстве — встроенные в продукт, который у вас уже работает.",
+        svc_support_title: "Поддержка и сопровождение",
+        svc_support_desc: "Поддерживаем то, что выпустили, и подхватываем незаконченную работу.",
+        contact_eyebrow: "Консультации по продукту",
+        contact_title: "Говорите с человеком, а не с формой.",
+        contact_sub: "Zalo, WhatsApp или почта — как вам удобнее. Обычно отвечаем в тот же день.",
+        contact_role: "Консультации и разработка продукта",
+        label_email: "Почта",
+        label_phone: "Телефон",
+        label_zalo: "Zalo",
+        label_whatsapp: "WhatsApp",
+        cta_contact: "Связаться",
+        group_web: "Веб и десктоп",
+        group_mobile: "Мобильные приложения",
+        showcase_title: "Всё, что мы создаём.",
+        showcase_sub: "Одиннадцать продуктов в одной ленте. Тяните вбок или просто смотрите.",
+        gallery_title: "Внутри приложений.",
+        gallery_sub: "Реальные экраны наших мобильных приложений.",
+        aria_prev: "Назад",
+        aria_next: "Вперёд",
+        hint_drag: "Тяните, чтобы листать",
         aria_dots: "Выбрать продукт",
         skip_link: "Перейти к содержимому",
         nav_about: "О нас",
@@ -806,6 +1125,35 @@ const i18n = {
         aria_theme: "Đổi giao diện",
         aria_menu: "Mở menu",
         aria_carousel: "Sản phẩm AIBachKhoa",
+        nav_services: "Dịch vụ",
+        services_title: "Cần phát triển sản phẩm?",
+        services_sub: "Gửi đầu bài cho chúng tôi. Chúng tôi bóc tách phạm vi, phát triển và bàn giao — từ một tính năng nhỏ đến trọn gói dự án outsource.",
+        svc_brief_title: "Gửi đầu bài",
+        svc_brief_desc: "Mô tả bài toán của bạn. Chúng tôi phản hồi phạm vi, tiến độ và báo giá rõ ràng.",
+        svc_outsource_title: "Dự án outsource",
+        svc_outsource_desc: "Một đội đi cùng dự án từ đầu đến cuối: web, mobile, backend và phát hành.",
+        svc_ai_title: "Tích hợp AI",
+        svc_ai_desc: "Agent, chat và mô hình chạy trên thiết bị, gắn thẳng vào sản phẩm bạn đang vận hành.",
+        svc_support_title: "Hỗ trợ và bảo trì",
+        svc_support_desc: "Giữ cho những gì đã bàn giao chạy ổn định, và nhận cả phần việc còn dang dở.",
+        contact_eyebrow: "Tư vấn sản phẩm",
+        contact_title: "Nói chuyện với người thật, không phải cái form.",
+        contact_sub: "Zalo, WhatsApp hay email đều được — tiện gì dùng nấy. Thường phản hồi ngay trong ngày.",
+        contact_role: "Tư vấn và phát triển sản phẩm",
+        label_email: "Email",
+        label_phone: "Điện thoại",
+        label_zalo: "Zalo",
+        label_whatsapp: "WhatsApp",
+        cta_contact: "Liên hệ tư vấn",
+        group_web: "Web & máy tính",
+        group_mobile: "Ứng dụng di động",
+        showcase_title: "Tất cả những gì chúng tôi làm.",
+        showcase_sub: "Mười một sản phẩm trong một dải. Kéo ngang, hoặc để nó tự trôi.",
+        gallery_title: "Bên trong các ứng dụng.",
+        gallery_sub: "Ảnh chụp thật từ các ứng dụng di động của chúng tôi.",
+        aria_prev: "Trước",
+        aria_next: "Tiếp",
+        hint_drag: "Kéo để xem",
         aria_dots: "Chọn sản phẩm",
         skip_link: "Bỏ qua đến nội dung",
         nav_about: "Về chúng tôi",
@@ -1035,4 +1383,235 @@ document.addEventListener('DOMContentLoaded', () => {
 
         start();
     }
+
+    // ---------- Draggable product carousels ----------
+    /* One component, two behaviours:
+         data-mode="marquee" -> endless drift; the rail is duplicated and we
+                                jump back one copy at the seam
+         data-mode="snap"    -> steps a page at a time on a timer
+       Both are ordinary scroll containers, so touch, wheel and keyboard
+       already work; JS only adds mouse dragging and the autoplay. */
+    const initDragCarousel = (root) => {
+        const viewport = root.querySelector('.dcar-viewport');
+        const rail = root.querySelector('.dcar-rail');
+        if (!viewport || !rail) return;
+
+        const loop = root.dataset.mode === 'marquee';
+        const drift = parseFloat(root.dataset.speed) || 0.42;          // px per 60fps frame
+        const interval = parseInt(root.dataset.interval, 10) || 4500;  // ms between pages
+        const bar = root.querySelector('.dcar-progress span');
+        const sign = getComputedStyle(viewport).direction === 'rtl' ? -1 : 1;
+
+        // Work in "reading direction" pixels: 0 .. max, whatever the writing mode.
+        const getPos = () => viewport.scrollLeft * sign;
+        const setPos = (p) => { viewport.scrollLeft = p * sign; };
+        const maxPos = () => Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+
+        let period = 0;    // width of one copy of the rail (marquee only)
+        let count = 0;     // items in one copy
+        if (loop) {
+            const originals = Array.from(rail.children);
+            count = originals.length;
+            // enough copies that a seam jump never exposes empty track,
+            // even on a very wide display
+            const oneCopy = Math.max(1, rail.scrollWidth);
+            const wide = Math.max(viewport.clientWidth, window.innerWidth || 0);
+            const copies = Math.max(2, Math.ceil((wide * 2) / oneCopy) + 1);
+            for (let c = 1; c < copies; c++) {
+                originals.forEach(node => {
+                    const copy = node.cloneNode(true);
+                    copy.setAttribute('aria-hidden', 'true');
+                    copy.setAttribute('tabindex', '-1');
+                    rail.appendChild(copy);
+                });
+            }
+        }
+
+        const measure = () => {
+            if (!loop) return;
+            const kids = rail.children;
+            // distance between an item and its clone == exactly one copy
+            period = kids.length > count ? Math.abs(kids[count].offsetLeft - kids[0].offsetLeft) : 0;
+        };
+
+        const stride = () => {
+            const first = rail.children[0];
+            if (!first) return viewport.clientWidth;
+            const gap = parseFloat(getComputedStyle(rail).columnGap) || 0;
+            return first.getBoundingClientRect().width + gap;
+        };
+        // move a whole page of items, or one item if only one fits
+        const page = () => {
+            const s = stride();
+            return Math.max(s, Math.floor(viewport.clientWidth / s) * s);
+        };
+
+        const clamp = (p) => {
+            if (period <= 0) return p;
+            while (p >= period) p -= period;
+            while (p < 0) p += period;
+            return p;
+        };
+
+        const updateProgress = () => {
+            if (!bar) return;
+            const frac = viewport.scrollWidth ? viewport.clientWidth / viewport.scrollWidth : 1;
+            const max = maxPos();
+            const ratio = max > 0 ? Math.min(1, Math.max(0, getPos() / max)) : 0;
+            bar.style.width = (frac * 100) + '%';
+            bar.style.transform = 'translateX(' + (sign * ratio * (100 / frac - 100)) + '%)';
+        };
+
+        // ---- state ----
+        let pos = 0, pending = 0, rafId = null, timer = null, prev = 0;
+        let dragging = false, hovering = false, focused = false, inView = false;
+
+        const running = () => !reduce && !dragging && !hovering && !focused &&
+                              !document.hidden && inView;
+
+        // ---- marquee frame ----
+        const frame = (ts) => {
+            const dt = prev ? Math.min(ts - prev, 60) : 16.7;
+            prev = ts;
+            const actual = getPos();
+            if (Math.abs(actual - pos) > 1.5) pos = actual;   // the user took over
+            let delta = 0;
+            if (pending) {                                    // arrow nudge, eased out
+                const bite = Math.abs(pending) > 1 ? pending * 0.14 : pending;
+                delta += bite;
+                pending -= bite;
+            }
+            if (running()) delta += drift * dt / 16.7;
+            if (delta) { pos = clamp(pos + delta); setPos(pos); }
+            rafId = requestAnimationFrame(frame);
+        };
+
+        const sync = () => {
+            if (loop) {
+                const want = inView && !reduce;
+                if (want && rafId === null) { prev = 0; pos = getPos(); rafId = requestAnimationFrame(frame); }
+                else if (!want && rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
+            } else {
+                const want = !reduce && inView && !document.hidden;
+                if (want && !timer) timer = setInterval(() => { if (running()) nudge(1); }, interval);
+                else if (!want && timer) { clearInterval(timer); timer = null; }
+            }
+        };
+
+        // ---- stepping ----
+        const nudge = (dir) => {
+            const dist = dir * page();
+            if (loop) {
+                if (reduce || rafId === null) { pos = clamp(getPos() + dist); setPos(pos); }
+                else pending += dist;
+                return;
+            }
+            // stop on the last page first, and only wrap once already there
+            const max = maxPos();
+            const cur = getPos();
+            let target = cur + dist;
+            if (dir > 0) target = cur >= max - 2 ? 0 : Math.min(target, max);
+            else target = cur <= 2 ? max : Math.max(target, 0);
+            viewport.scrollTo({ left: target * sign, behavior: reduce ? 'auto' : 'smooth' });
+        };
+
+        root.querySelectorAll('.dcar-btn').forEach(btn => {
+            btn.addEventListener('click', () => nudge(parseInt(btn.dataset.dir, 10) || 1));
+        });
+
+        // ---- mouse dragging (touch keeps the native scroll and its momentum) ----
+        /* Two deliberate omissions here, both because they break links:
+           - no preventDefault() on pointerdown: it also suppresses the click
+           - pointer capture is taken only once the pointer has really moved,
+             because a captured pointer retargets the click to the viewport */
+        const THRESHOLD = 4;
+        let armed = false, pointerId = null;
+        let startX = 0, startScroll = 0, moved = 0, vel = 0, lastX = 0, lastT = 0, glide = null;
+
+        const stopGlide = () => { if (glide) { cancelAnimationFrame(glide); glide = null; } };
+
+        viewport.addEventListener('pointerdown', (e) => {
+            if (e.pointerType !== 'mouse' || e.button !== 0) return;
+            armed = true;
+            dragging = false;
+            moved = 0;
+            vel = 0;
+            pending = 0;
+            pointerId = e.pointerId;
+            startX = lastX = e.clientX;
+            startScroll = viewport.scrollLeft;
+            lastT = e.timeStamp;
+            stopGlide();
+        });
+        viewport.addEventListener('dragstart', (e) => e.preventDefault());
+
+        viewport.addEventListener('pointermove', (e) => {
+            if (!armed) return;
+            const dx = e.clientX - startX;
+            moved = Math.max(moved, Math.abs(dx));
+            if (!dragging) {
+                if (moved <= THRESHOLD) return;      // still just a click
+                dragging = true;
+                viewport.classList.add('is-dragging');
+                try { viewport.setPointerCapture(pointerId); } catch (err) { /* older engines */ }
+            }
+            // scrollLeft moves opposite to the pointer in both writing modes
+            viewport.scrollLeft = startScroll - dx;
+            const dt = e.timeStamp - lastT;
+            if (dt > 0) vel = ((e.clientX - lastX) / dt) * 16.7;
+            lastX = e.clientX;
+            lastT = e.timeStamp;
+            if (loop) { pos = clamp(getPos()); setPos(pos); startScroll = viewport.scrollLeft; startX = e.clientX; }
+        });
+
+        const endDrag = () => {
+            armed = false;
+            if (!dragging) return;
+            dragging = false;
+            viewport.classList.remove('is-dragging');
+            let v = Math.max(-70, Math.min(70, vel));
+            if (Math.abs(v) < 1.5 || reduce) return;
+            const step = () => {                    // short inertial flick
+                v *= 0.94;
+                viewport.scrollLeft -= v;
+                if (loop) { pos = clamp(getPos()); setPos(pos); }
+                glide = Math.abs(v) > 0.4 ? requestAnimationFrame(step) : null;
+            };
+            glide = requestAnimationFrame(step);
+        };
+        viewport.addEventListener('pointerup', endDrag);
+        viewport.addEventListener('pointercancel', endDrag);
+        viewport.addEventListener('lostpointercapture', endDrag);
+        // a drag that ends on a card must not open it
+        viewport.addEventListener('click', (e) => {
+            if (moved > THRESHOLD) { e.preventDefault(); e.stopPropagation(); }
+        }, true);
+
+        // ---- pause rules ----
+        // mouseenter/leave as well: a few engines swallow the pointer
+        // boundary events when a capture is released outside the element
+        viewport.addEventListener('pointerenter', () => { hovering = true; });
+        viewport.addEventListener('pointerleave', () => { hovering = false; });
+        viewport.addEventListener('mouseenter', () => { hovering = true; });
+        viewport.addEventListener('mouseleave', () => { hovering = false; });
+        root.addEventListener('focusin', () => { focused = true; });
+        root.addEventListener('focusout', () => { focused = false; });
+        document.addEventListener('visibilitychange', sync);
+        viewport.addEventListener('scroll', updateProgress, { passive: true });
+
+        new IntersectionObserver(([entry]) => {
+            inView = entry.isIntersecting;
+            sync();
+        }, { threshold: 0 }).observe(root);
+
+        const relayout = () => { measure(); updateProgress(); };
+        if (window.ResizeObserver) new ResizeObserver(relayout).observe(rail);
+        else window.addEventListener('resize', relayout);
+        window.addEventListener('load', relayout);   // images settle the widths
+
+        measure();
+        updateProgress();
+    };
+
+    document.querySelectorAll('[data-carousel]').forEach(initDragCarousel);
 });
