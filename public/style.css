@@ -480,6 +480,7 @@ ul { list-style: none; }
 .pcard-visual--platform { --gx: 74%; --gy: 26%; }
 .pcard-visual--chat     { --gx: 34%; --gy: 38%; }
 .pcard-visual--bksafe   { --gx: 66%; --gy: 58%; }
+.pcard-visual--bksafemac{ --gx: 62%; --gy: 30%; }
 .pcard-visual--driving  { --gx: 30%; --gy: 60%; }
 .pcard-visual--chef     { --gx: 70%; --gy: 34%; }
 .pcard-visual--novels   { --gx: 40%; --gy: 66%; }
@@ -511,6 +512,18 @@ ul { list-style: none; }
     transition: transform 0.3s ease;
 }
 .pcard:hover .pviz-shot { transform: translateY(-4px); }
+
+/* the macOS capture already carries its own window frame with rounded
+   alpha corners, so it needs a shadow that follows that shape */
+.pviz-shot--mac {
+    width: 88%;
+    max-width: 500px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    filter: drop-shadow(0 18px 32px rgba(20, 12, 4, 0.32));
+}
+:root[data-theme="dark"] .pviz-shot--mac { filter: drop-shadow(0 18px 32px rgba(0, 0, 0, 0.6)); }
 
 /* phone screenshots: taller, shown as an overlapping pair */
 .pcard-visual--bksafe { gap: 0; }

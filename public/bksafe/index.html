@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BKSafe — Bảo vệ máy Mac và điện thoại Android | AIBachKhoa</title>
+    <meta name="description" content="BKSafe theo dõi sức khoẻ máy, quét mã độc, dọn rác và canh lưu lượng mạng. Bản macOS 1.2.8 tải trực tiếp, bản Android trên Google Play. Mọi phân tích chạy ngay trên máy.">
+    <link rel="canonical" href="https://aibachkhoa.com/bksafe">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BKSafe — Bảo vệ máy Mac và điện thoại Android">
+    <meta property="og:description" content="Theo dõi sức khoẻ máy, quét mã độc, dọn rác và canh lưu lượng mạng — phân tích chạy ngay trên máy.">
+    <meta property="og:image" content="https://aibachkhoa.com/assets/bksafe/macos/01-he-thong-tong-quan.png">
+    <meta property="og:url" content="https://aibachkhoa.com/bksafe">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/apps/bksafe-icon.png">
+    <link rel="apple-touch-icon" href="/assets/apps/bksafe-icon.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/bksafe/bksafe.css">
+</head>
+<body>
+    <a href="#overview" class="skip-link" data-i18n="skip_link">Tới nội dung</a>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="AIBachKhoa">
+                <img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="/" class="nav-link" data-i18n="nav_home">Trang chủ</a>
+                <a href="#overview" class="nav-link" data-i18n="nav_overview">Tổng quan</a>
+                <a href="#macos" class="nav-link">macOS</a>
+                <a href="#android" class="nav-link">Android</a>
+                <span class="nav-divider" aria-hidden="true"></span>
+                <select id="lang-select" class="lang-select" data-i18n-aria="aria_lang" aria-label="Đổi ngôn ngữ"></select>
+                <button id="theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Đổi giao diện sáng tối">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+                <a href="#download" class="btn btn-primary btn-sm" data-i18n="cta_download">Tải về</a>
+            </div>
+
+            <div class="mobile-controls">
+                <select id="mobile-lang-select" class="lang-select lang-select--compact" data-display="code" data-i18n-aria="aria_lang" aria-label="Đổi ngôn ngữ"></select>
+                <button id="mobile-theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Đổi giao diện sáng tối">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+                <button class="icon-btn mobile-menu-btn" data-i18n-aria="aria_menu" aria-label="Mở menu" id="mobile-btn" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="bk-hero" id="overview">
+        <div class="container bk-hero-grid">
+            <div class="bk-hero-copy reveal">
+                <div class="bk-brandline">
+                    <img src="/assets/apps/bksafe-icon.png" alt="" class="bk-brandmark" width="512" height="512">
+                    <div>
+                        <p class="bk-wordmark">BKSafe</p>
+                        <p class="bk-brandsub" data-i18n="hero_platforms">macOS · Android</p>
+                    </div>
+                </div>
+                <h1 class="bk-hero-title" data-i18n="hero_title">Máy của bạn, <em>trong tầm mắt</em>.</h1>
+                <p class="bk-hero-sub" data-i18n="hero_sub">BKSafe theo dõi sức khoẻ máy, quét mã độc, dọn rác và canh chừng lưu lượng mạng. Toàn bộ việc phân tích diễn ra ngay trên thiết bị — không có tệp nào của bạn rời khỏi máy.</p>
+                <div class="bk-hero-actions">
+                    <a href="/downloads/BKSafe-1.2.8.dmg" class="btn btn-primary bk-btn-mac" download>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.9c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.9-3-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.2 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.2.9-1.2 1.3-2.5 1.3-2.5s-2.5-1-2.5-3.6zM14.2 5.6c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.8-1.3z"/></svg>
+                        <span data-i18n="btn_dl_mac">Tải cho macOS</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.tdson.bksafe" target="_blank" rel="noopener" class="btn btn-ghost bk-btn-play">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3.6 2.2 13 11.6l2.6-2.6L5.3 2.6a1.6 1.6 0 0 0-1.7-.4z"/><path fill="#4285f4" d="M3.1 2.7A1.6 1.6 0 0 0 2.8 3.6v16.8c0 .34.1.65.3.9L12.4 12z"/><path fill="#fbbc04" d="m16.7 9.6-2.9 2.4 2.9 2.9 3.4-2c.8-.5.8-1.7 0-2.2z"/><path fill="#ea4335" d="M13 12.4 3.6 21.8c.5.4 1.2.5 1.7.2l10.3-6z"/></svg>
+                        <span data-i18n="btn_dl_play">Tải trên Google Play</span>
+                    </a>
+                </div>
+                <p class="bk-hero-meta" data-i18n="hero_meta">Bản macOS 1.2.8 · 29 MB · macOS 11 Big Sur trở lên · Universal cho Intel và Apple Silicon</p>
+            </div>
+
+            <div class="bk-hero-media reveal">
+                <div class="bk-stage">
+                    <figure class="mac-window mac-window--hero">
+                        <img src="/assets/bksafe/macos/01-he-thong-tong-quan.png" alt="BKSafe trên macOS — màn hình Hệ thống" width="1600" height="1000" fetchpriority="high">
+                    </figure>
+                    <div class="phone-frame phone-frame--hero">
+                        <img src="/assets/bksafe-home.png" alt="BKSafe trên Android — màn hình chính" width="1200" height="2400">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= TRUST STRIP ================= -->
+        <section class="bk-pillars">
+            <div class="container bk-pillar-grid reveal">
+                <div class="bk-pillar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 4.5 6v6c0 4.2 3 7.7 7.5 9 4.5-1.3 7.5-4.8 7.5-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+                    <h3 data-i18n="pillar_local_t">Phân tích tại chỗ</h3>
+                    <p data-i18n="pillar_local_d">Mọi phép quét và đo đạc chạy trên chính thiết bị. Tệp của bạn không được tải lên máy chủ nào.</p>
+                </div>
+                <div class="bk-pillar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2.2"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10"/><circle cx="12" cy="15" r="1.4"/></svg>
+                    <h3 data-i18n="pillar_notary_t">Đã công chứng Apple</h3>
+                    <p data-i18n="pillar_notary_d">Ký bằng Developer ID và đóng dấu công chứng. Kéo vào Applications là mở được, không cảnh báo, không cần gỡ chặn.</p>
+                </div>
+                <div class="bk-pillar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4.5" y="4.5" width="15" height="15" rx="2.4"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2.5v2M15 2.5v2M9 19.5v2M15 19.5v2M2.5 9h2M2.5 15h2M19.5 9h2M19.5 15h2"/></svg>
+                    <h3 data-i18n="pillar_universal_t">Một bản cho mọi Mac</h3>
+                    <p data-i18n="pillar_universal_d">Gói universal chạy nguyên bản trên cả chip Intel lẫn Apple Silicon — không cần Rosetta, không phải chọn bản.</p>
+                </div>
+                <div class="bk-pillar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="12" height="10" rx="1.8"/><path d="M6 19h6"/><rect x="16.5" y="8.5" width="5" height="11" rx="1.5"/></svg>
+                    <h3 data-i18n="pillar_two_t">Máy tính và điện thoại</h3>
+                    <p data-i18n="pillar_two_d">Bản macOS lo cho chiếc Mac, bản Android lo cho chiếc điện thoại. Cùng một triết lý, hai giao diện riêng.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PLATFORM PICKER ================= -->
+        <section class="bk-picker">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2 class="section-title" data-i18n="pick_title">Chọn nền tảng của bạn.</h2>
+                    <p class="section-sub" data-i18n="pick_sub">Hai ứng dụng riêng biệt, mỗi bản được viết cho đúng hệ điều hành của nó.</p>
+                </div>
+                <div class="bk-picker-grid reveal">
+                    <a href="#macos" class="bk-picker-card bk-picker-card--mac">
+                        <div class="bk-picker-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.9c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.9-3-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.2 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.2.9-1.2 1.3-2.5 1.3-2.5s-2.5-1-2.5-3.6zM14.2 5.6c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.8-1.3z"/></svg>
+                        </div>
+                        <div class="bk-picker-body">
+                            <span class="bk-picker-kicker" data-i18n="pick_mac_kicker">Ứng dụng máy tính</span>
+                            <h3>BKSafe cho macOS</h3>
+                            <p data-i18n="pick_mac_desc">Chín màn hình theo dõi và bảo trì: hệ thống, dọn rác, quét mã độc, rà soát bảo mật, sức khoẻ ổ đĩa, nhiệt độ, mạng và cảnh báo bất thường.</p>
+                            <span class="bk-picker-go"><span data-i18n="pick_mac_go">Xem bản macOS 1.2.8</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                        </div>
+                    </a>
+                    <a href="#android" class="bk-picker-card bk-picker-card--droid">
+                        <div class="bk-picker-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 6.2a6.6 6.6 0 0 1 10.2 0zM16.6 4.9l1-1.7a.4.4 0 0 0-.7-.4l-1 1.8a7.6 7.6 0 0 0-5.8 0l-1-1.8a.4.4 0 0 0-.7.4l1 1.7A6.9 6.9 0 0 0 5.6 10h12.8a6.9 6.9 0 0 0-3.8-5.1zM9.2 8a.7.7 0 1 1 0-1.4.7.7 0 0 1 0 1.4zm5.6 0a.7.7 0 1 1 0-1.4.7.7 0 0 1 0 1.4zM4.6 11a1.5 1.5 0 0 0-1.5 1.5v5a1.5 1.5 0 0 0 3 0v-5A1.5 1.5 0 0 0 4.6 11zm14.8 0a1.5 1.5 0 0 0-1.5 1.5v5a1.5 1.5 0 0 0 3 0v-5a1.5 1.5 0 0 0-1.5-1.5zM5.9 11v8.2c0 .7.6 1.3 1.3 1.3h1v3a1.5 1.5 0 0 0 3 0v-3h1.6v3a1.5 1.5 0 0 0 3 0v-3h1c.7 0 1.3-.6 1.3-1.3V11z"/></svg>
+                        </div>
+                        <div class="bk-picker-body">
+                            <span class="bk-picker-kicker" data-i18n="pick_droid_kicker">Ứng dụng di động</span>
+                            <h3>BKSafe cho Android</h3>
+                            <p data-i18n="pick_droid_desc">Quét ứng dụng và tệp bằng mô hình AI chạy trên máy, chặn cuộc gọi lừa đảo, két bảo mật có mã PIN và điểm an toàn cho cả máy.</p>
+                            <span class="bk-picker-go"><span data-i18n="pick_droid_go">Xem bản Android</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= macOS ================= -->
+        <section class="bk-platform bk-platform--mac" id="macos">
+            <div class="container">
+                <div class="bk-plat-head reveal">
+                    <p class="eyebrow" data-i18n="mac_eyebrow">Bản macOS</p>
+                    <h2 class="section-title" data-i18n="mac_title">Chiếc Mac của bạn, đo tới từng nhân xử lý.</h2>
+                    <p class="section-sub" data-i18n="mac_sub">BKSafe lấy số liệu ngay từ nhân hệ điều hành và cảm biến của máy, làm mới hai giây một lần. Không đồ thị trang trí — mỗi con số đều là thứ đang thật sự xảy ra bên trong máy.</p>
+                    <ul class="bk-badges">
+                        <li class="bk-badge bk-badge--live"><span data-i18n="mac_badge_ver">Phiên bản 1.2.8 · build 21</span></li>
+                        <li class="bk-badge"><span data-i18n="mac_badge_req">macOS 11 Big Sur trở lên</span></li>
+                        <li class="bk-badge"><span data-i18n="mac_badge_arch">Universal · Intel &amp; Apple Silicon</span></li>
+                    </ul>
+                </div>
+
+                <!-- feature grid -->
+                <div class="bk-feat-grid reveal">
+                    <article class="bk-feat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 12 15.5 8"/></svg>
+                        <h3 data-i18n="f_sys_t">Hệ thống</h3>
+                        <p data-i18n="f_sys_d">CPU, GPU, bộ nhớ, lưu trữ và mạng cạnh nhau. Cấu hình máy, thời gian bật, số tiến trình và áp lực bộ nhớ ngay trong một màn.</p>
+                    </article>
+                    <article class="bk-feat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="7" width="10" height="10" rx="1.6"/><path d="M10 2.5v3M14 2.5v3M10 18.5v3M14 18.5v3M2.5 10h3M2.5 14h3M18.5 10h3M18.5 14h3"/></svg>
+                        <h3 data-i18n="f_cpu_t">CPU theo từng lõi</h3>
+                        <p data-i18n="f_cpu_d">Mức bận của từng lõi, tách rõ cụm lõi hiệu năng và cụm lõi tiết kiệm điện, tải trung bình 1/5/15 phút và những tiến trình ngốn CPU nhất.</p>
+                    </article>
+                    <article class="bk-feat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M8 10h3M8 14h8M14.5 10h1.5"/></svg>
+                        <h3 data-i18n="f_gpu_t">GPU</h3>
+                        <p data-i18n="f_gpu_d">Mức bận, khối dựng hình và khối chia mảnh, bộ nhớ đồ hoạ đang chiếm so với hạn mức, số nhân và số lần trình điều khiển phải dựng lại GPU.</p>
+                    </article>
+                    <article class="bk-feat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16v12H4z"/><path d="M8 10h8M8 14h5"/></svg>
+                        <h3 data-i18n="f_mem_t">Bộ nhớ</h3>
+                        <p data-i18n="f_mem_d">Chia đúng cách macOS chia: ứng dụng, ghim cứng, đã nén và đệm tệp. Kèm áp lực bộ nhớ và phần đã tráo ra ổ.</p>
+                    </article>
+                    <article class="bk-feat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7.5C3 5.6 7 4 12 4s9 1.6 9 3.5v9C21 18.4 17 20 12 20s-9-1.6-9-3.5z"/><path d="M3 7.5C3 9.4 7 11 12 11s9-1.6 9-3.5"/></svg>
+                        <h3 data-i18n="f_disk_t">Sức khoẻ ổ đĩa</h3>
+                        <p data-i18n="f_disk_d">Đọc thẳng nhật ký SMART của ổ: mức hao mòn, khối dự phòng còn lại, tổng ghi, số lần tắt đột ngột, lỗi đọc ghi và nhiệt độ ổ.</p>
+                    </article>
+                    <article class="bk-feat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 14.8V5a2 2 0 1 0-4 0v9.8a4 4 0 1 0 4 0z"/></svg>
+                        <h3 data-i18n="f_temp_t">Nhiệt độ</h3>
+                        <p data-i18n="f_temp_d">Toàn bộ cảm biến nhiệt của máy, chỉ rõ cảm biến nào đang nóng nhất và máy có đang phải hạ xung vì nhiệt hay không.</p>
+                    </article>
+                    <article class="bk-feat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="2"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.5 5.5a9 9 0 0 0 0 13M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                        <h3 data-i18n="f_net_t">Mạng</h3>
+                        <p data-i18n="f_net_d">Ai đang chuyển dữ liệu, chuyển bao nhiêu, qua đường truyền nào và máy đang mở những cổng nào ra ngoài — kèm lưu lượng theo từng tiến trình.</p>
+                    </article>
+                    <article class="bk-feat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3.5 16.5 8 11l3.5 3.5L16 8l4.5 6"/><rect x="2.5" y="4" width="19" height="16" rx="2"/></svg>
+                        <h3 data-i18n="f_mon_t">Cảnh báo bất thường</h3>
+                        <p data-i18n="f_mon_d">Lấy mẫu hai giây một lần và chỉ lên tiếng khi một chỉ số ở ngoài ngưỡng suốt nhiều lần liên tiếp. Ngưỡng do bạn đặt, mở một ứng dụng nặng không bị coi là bất thường.</p>
+                    </article>
+                    <article class="bk-feat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12l-1 12H7z"/><path d="M9.5 8V5.5h5V8M4 8h16"/></svg>
+                        <h3 data-i18n="f_clean_t">Dọn rác</h3>
+                        <p data-i18n="f_clean_d">Tìm bộ nhớ đệm, nhật ký, tệp tạm và phần thừa của những ứng dụng đã gỡ. Bạn xem danh sách rồi mới quyết định xoá.</p>
+                    </article>
+                    <article class="bk-feat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20.5 20.5-4.4-4.4"/></svg>
+                        <h3 data-i18n="f_scan_t">Quét mã độc</h3>
+                        <p data-i18n="f_scan_d">Rà các thư mục hay bị nhắm tới và những thứ tự khởi động cùng máy, đối chiếu với dấu hiệu của phần mềm quảng cáo và mã độc trên macOS.</p>
+                    </article>
+                    <article class="bk-feat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 4.5 6v6c0 4.2 3 7.7 7.5 9 4.5-1.3 7.5-4.8 7.5-9V6z"/></svg>
+                        <h3 data-i18n="f_sec_t">Rà soát bảo mật</h3>
+                        <p data-i18n="f_sec_d">Kiểm các lớp phòng vệ của macOS, cổng đang mở và mọi thứ tự chạy cùng máy. Chỉ đọc cấu hình, không đổi gì trên máy bạn.</p>
+                    </article>
+                    <article class="bk-feat">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/><path d="m19.4 14-.9-.5a6.9 6.9 0 0 0 0-3l.9-.5a1.4 1.4 0 0 0 .5-1.9l-.7-1.2a1.4 1.4 0 0 0-1.9-.5l-.9.5a6.9 6.9 0 0 0-2.6-1.5V4a1.4 1.4 0 0 0-1.4-1.4h-1.4A1.4 1.4 0 0 0 9.6 4v1.4a6.9 6.9 0 0 0-2.6 1.5l-.9-.5a1.4 1.4 0 0 0-1.9.5l-.7 1.2a1.4 1.4 0 0 0 .5 1.9l.9.5a6.9 6.9 0 0 0 0 3l-.9.5a1.4 1.4 0 0 0-.5 1.9l.7 1.2a1.4 1.4 0 0 0 1.9.5l.9-.5a6.9 6.9 0 0 0 2.6 1.5V20a1.4 1.4 0 0 0 1.4 1.4h1.4a1.4 1.4 0 0 0 1.4-1.4v-1.4a6.9 6.9 0 0 0 2.6-1.5l.9.5a1.4 1.4 0 0 0 1.9-.5l.7-1.2a1.4 1.4 0 0 0-.5-1.9z"/></svg>
+                        <h3 data-i18n="f_set_t">Cài đặt</h3>
+                        <p data-i18n="f_set_d">Đặt ngưỡng cảnh báo, chọn nhận hay không nhận thông báo, và quyết định ứng dụng chạy nền tới đâu.</p>
+                    </article>
+                </div>
+
+                <!-- gallery -->
+                <div class="bk-gallery reveal" id="gallery">
+                    <div class="bk-gal-head">
+                        <h3 data-i18n="gal_title">Nhìn tận mắt từng màn hình</h3>
+                        <p data-i18n="gal_sub">Ảnh chụp thật trên Mac mini M4 chạy macOS 26.6.</p>
+                    </div>
+                    <div class="bk-gal-tabs" role="tablist" data-i18n-aria="gal_aria" aria-label="Chọn màn hình">
+                        <button class="bk-gal-tab is-active" role="tab" aria-selected="true" data-shot="01-he-thong-tong-quan" data-key="s01"><span data-i18n="s01_tab">Tổng quan</span></button>
+                        <button class="bk-gal-tab" role="tab" aria-selected="false" data-shot="02-he-thong-cpu" data-key="s02"><span data-i18n="s02_tab">CPU</span></button>
+                        <button class="bk-gal-tab" role="tab" aria-selected="false" data-shot="03-he-thong-gpu" data-key="s03"><span data-i18n="s03_tab">GPU</span></button>
+                        <button class="bk-gal-tab" role="tab" aria-selected="false" data-shot="04-he-thong-bo-nho" data-key="s04"><span data-i18n="s04_tab">Bộ nhớ</span></button>
+                        <button class="bk-gal-tab" role="tab" aria-selected="false" data-shot="05-he-thong-luu-tru" data-key="s05"><span data-i18n="s05_tab">Lưu trữ</span></button>
+                        <button class="bk-gal-tab" role="tab" aria-selected="false" data-shot="06-he-thong-mang" data-key="s06"><span data-i18n="s06_tab">Đường truyền</span></button>
+                        <button class="bk-gal-tab" role="tab" aria-selected="false" data-shot="10-o-dia" data-key="s10"><span data-i18n="s10_tab">Ổ đĩa</span></button>
+                        <button class="bk-gal-tab" role="tab" aria-selected="false" data-shot="11-nhiet-do" data-key="s11"><span data-i18n="s11_tab">Nhiệt độ</span></button>
+                        <button class="bk-gal-tab" role="tab" aria-selected="false" data-shot="12-mang" data-key="s12"><span data-i18n="s12_tab">Mạng</span></button>
+                        <button class="bk-gal-tab" role="tab" aria-selected="false" data-shot="13-giam-sat" data-key="s13"><span data-i18n="s13_tab">Giám sát</span></button>
+                        <button class="bk-gal-tab" role="tab" aria-selected="false" data-shot="07-don-rac" data-key="s07"><span data-i18n="s07_tab">Dọn rác</span></button>
+                        <button class="bk-gal-tab" role="tab" aria-selected="false" data-shot="08-quet-ma-doc" data-key="s08"><span data-i18n="s08_tab">Quét mã độc</span></button>
+                        <button class="bk-gal-tab" role="tab" aria-selected="false" data-shot="09-bao-mat" data-key="s09"><span data-i18n="s09_tab">Bảo mật</span></button>
+                        <button class="bk-gal-tab" role="tab" aria-selected="false" data-shot="14-cai-dat" data-key="s14"><span data-i18n="s14_tab">Cài đặt</span></button>
+                    </div>
+                    <figure class="mac-window mac-window--gal">
+                        <img id="gal-img" src="/assets/bksafe/macos/01-he-thong-tong-quan.png" alt="BKSafe — Hệ thống, Tổng quan" width="1600" height="1000" loading="lazy">
+                    </figure>
+                    <figcaption class="bk-gal-cap"><strong id="gal-title">Hệ thống — Tổng quan</strong><span id="gal-cap">CPU, GPU, bộ nhớ, lưu trữ và mạng cạnh nhau, kèm cấu hình máy và trạng thái hiện tại.</span></figcaption>
+                </div>
+
+                <!-- permission note -->
+                <aside class="bk-note reveal">
+                    <div class="bk-note-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 8.2v.1M12 11v5"/></svg>
+                    </div>
+                    <div>
+                        <h3 data-i18n="note_title">Vì sao ứng dụng xin quyền Toàn quyền truy cập ổ đĩa</h3>
+                        <p data-i18n="note_body">BKSafe cần đọc IORegistry để lấy chỉ số SMART của ổ cứng và số liệu cảm biến nhiệt, cần gọi các công cụ hệ thống của macOS như <code>diskutil</code>, <code>nettop</code>, <code>lsof</code>, <code>tmutil</code>, và cần duyệt những thư mục rác nằm ngoài vùng chứa riêng của ứng dụng. Vì vậy ứng dụng chạy ngoài hộp cát và phát hành qua Developer ID thay vì qua Mac App Store — đúng cách CleanMyMac, iStat Menus hay Little Snitch vẫn làm. Quyền này chỉ dùng để đọc; ứng dụng không gửi gì ra ngoài.</p>
+                    </div>
+                </aside>
+
+                <!-- install steps -->
+                <div class="bk-steps reveal">
+                    <h3 class="bk-steps-title" data-i18n="steps_title">Cài trong ba bước</h3>
+                    <ol class="bk-step-list">
+                        <li>
+                            <span class="bk-step-num">1</span>
+                            <p data-i18n="step_1">Tải tệp <code>BKSafe-1.2.8.dmg</code> về máy.</p>
+                        </li>
+                        <li>
+                            <span class="bk-step-num">2</span>
+                            <p data-i18n="step_2">Mở tệp vừa tải, kéo <strong>BKSafe</strong> vào thư mục <strong>Applications</strong>.</p>
+                        </li>
+                        <li>
+                            <span class="bk-step-num">3</span>
+                            <p data-i18n="step_3">Mở BKSafe từ Launchpad hoặc thư mục Ứng dụng.</p>
+                        </li>
+                    </ol>
+                    <p class="bk-steps-foot" data-i18n="steps_foot">Không cần bấm chuột phải rồi chọn Mở, không cần vào Cài đặt để gỡ chặn, không có cảnh báo “không xác minh được nhà phát triển”. Vé công chứng của Apple được đóng thẳng vào cả tệp DMG lẫn ứng dụng bên trong, nên máy <strong>không có mạng</strong> vẫn mở được bình thường.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ANDROID ================= -->
+        <section class="bk-platform bk-platform--droid" id="android">
+            <div class="container">
+                <div class="bk-plat-head reveal">
+                    <p class="eyebrow" data-i18n="droid_eyebrow">Bản Android</p>
+                    <h2 class="section-title" data-i18n="droid_title">Chiếc điện thoại tự lo được cho mình.</h2>
+                    <p class="section-sub" data-i18n="droid_sub">Mô hình AI nằm sẵn trong máy soi ứng dụng và tệp, chặn cuộc gọi lừa đảo trước khi máy kịp đổ chuông, và cất những thứ riêng tư sau một mã PIN. Không có bước nào phải gửi dữ liệu lên máy chủ.</p>
+                    <ul class="bk-badges">
+                        <li class="bk-badge bk-badge--live"><span data-i18n="droid_badge_store">Có trên Google Play</span></li>
+                        <li class="bk-badge"><span data-i18n="droid_badge_free">Miễn phí tải về</span></li>
+                        <li class="bk-badge"><span data-i18n="droid_badge_vi">Giao diện tiếng Việt</span></li>
+                    </ul>
+                </div>
+
+                <div class="bk-droid-grid reveal">
+                    <div class="bk-droid-shots">
+                        <div class="phone-frame">
+                            <img src="/assets/bksafe-home.png" alt="BKSafe Android — màn hình chính với nút quét nhanh" width="1200" height="2400" loading="lazy">
+                        </div>
+                        <div class="phone-frame phone-frame--offset">
+                            <img src="/assets/bksafe-tools.png" alt="BKSafe Android — bộ công cụ bảo vệ" width="1200" height="2400" loading="lazy">
+                        </div>
+                    </div>
+                    <ul class="bk-droid-feats">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2 4 13h6l-1 9 9-11h-6z"/></svg>
+                            <div>
+                                <h3 data-i18n="d_scan_t">Quét nhanh bằng AI trên máy</h3>
+                                <p data-i18n="d_scan_d">Một chạm là soi hết ứng dụng đã cài và tệp trong máy. Mô hình chạy ngay trên điện thoại nên quét được cả khi đang ngoài vùng phủ sóng.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="m6 6 12 12"/></svg>
+                            <div>
+                                <h3 data-i18n="d_call_t">Chặn cuộc gọi lừa đảo</h3>
+                                <p data-i18n="d_call_d">Số quấy rối và số lừa đảo bị chặn trước khi máy đổ chuông, kèm nhật ký để bạn xem lại đã chặn những ai.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2.2"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10"/></svg>
+                            <div>
+                                <h3 data-i18n="d_vault_t">Két bảo mật</h3>
+                                <p data-i18n="d_vault_d">Mật khẩu và thông tin nhạy cảm được mã hoá, mở khoá bằng mã PIN riêng của bạn.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18V9M9 18V4M14 18v-7M19 18v-4"/><path d="M3 21h18"/></svg>
+                            <div>
+                                <h3 data-i18n="d_bg_t">Soi dịch vụ nền</h3>
+                                <p data-i18n="d_bg_d">Chỉ ra ứng dụng nào đang âm thầm chạy nền, ngốn pin hay gửi dữ liệu đi khi bạn không dùng tới.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg>
+                            <div>
+                                <h3 data-i18n="d_score_t">Điểm an toàn</h3>
+                                <p data-i18n="d_score_d">Một con số duy nhất cho biết máy đang ở mức nào, kèm danh sách việc cần làm để nâng điểm lên.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 8h12l-1 12H7z"/><path d="M9.5 8V5.5h5V8M4 8h16"/></svg>
+                            <div>
+                                <h3 data-i18n="d_clean_t">Dọn rác và bảo vệ riêng tư</h3>
+                                <p data-i18n="d_clean_d">Xoá tệp thừa, dọn dấu vết duyệt web và rà lại những quyền mà các ứng dụng đang giữ.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DOWNLOAD ================= -->
+        <section class="bk-download" id="download">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow" data-i18n="dl_eyebrow">Tải về</p>
+                    <h2 class="section-title" data-i18n="dl_title">Lấy BKSafe về máy.</h2>
+                    <p class="section-sub" data-i18n="dl_sub">Bản macOS tải thẳng từ đây. Bản Android lấy trên Google Play.</p>
+                </div>
+
+                <div class="bk-dl-grid reveal">
+                    <!-- macOS card -->
+                    <article class="bk-dl-card">
+                        <header class="bk-dl-top">
+                            <div class="bk-dl-os">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.9c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.9-3-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.2 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.2.9-1.2 1.3-2.5 1.3-2.5s-2.5-1-2.5-3.6zM14.2 5.6c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.8-1.3z"/></svg>
+                                <div>
+                                    <h3>BKSafe cho macOS</h3>
+                                    <p data-i18n="dl_mac_line">Tệp cài đặt DMG · tải trực tiếp</p>
+                                </div>
+                            </div>
+                            <span class="bk-verpill">1.2.8</span>
+                        </header>
+
+                        <a href="/downloads/BKSafe-1.2.8.dmg" class="btn btn-primary bk-dl-btn" download>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3.5v11M7.5 10.5 12 15l4.5-4.5"/><path d="M4.5 19.5h15"/></svg>
+                            <span data-i18n="dl_mac_btn">Tải BKSafe-1.2.8.dmg (29 MB)</span>
+                        </a>
+
+                        <dl class="bk-specs">
+                            <div><dt data-i18n="spec_file">Tên tệp</dt><dd><code>BKSafe-1.2.8.dmg</code></dd></div>
+                            <div><dt data-i18n="spec_size">Kích cỡ</dt><dd>29 MB <span class="bk-dim">(30.465.129 byte)</span></dd></div>
+                            <div><dt data-i18n="spec_ver">Phiên bản</dt><dd data-i18n="spec_ver_v">1.2.8 (build 21)</dd></div>
+                            <div><dt data-i18n="spec_req">Yêu cầu</dt><dd data-i18n="spec_req_v">macOS 11.0 Big Sur trở lên</dd></div>
+                            <div><dt data-i18n="spec_arch">Kiến trúc</dt><dd data-i18n="spec_arch_v">Universal — Intel (x86_64) và Apple Silicon (arm64)</dd></div>
+                            <div><dt data-i18n="spec_sign">Ký bởi</dt><dd>Developer ID Application: Son Tran (X8QLV458HY)</dd></div>
+                            <div><dt data-i18n="spec_notary">Công chứng</dt><dd data-i18n="spec_notary_v">Đã công chứng Apple và đóng dấu (notarized + stapled)</dd></div>
+                        </dl>
+
+                        <div class="bk-sha">
+                            <div class="bk-sha-head">
+                                <span data-i18n="sha_label">SHA-256</span>
+                                <button class="bk-copy" id="copy-sha" type="button" data-i18n="sha_copy">Sao chép</button>
+                            </div>
+                            <code id="sha-value">63d61a7dbef9c85e4538229c0a683e3e69221121ba0869890b12515c9f7519eb</code>
+                            <p class="bk-sha-hint" data-i18n="sha_hint">Đối chiếu bằng <code>shasum -a 256 BKSafe-1.2.8.dmg</code>, hoặc dùng luôn <a href="/downloads/BKSafe-1.2.8.dmg.sha256" download>tệp .sha256 kèm theo</a>.</p>
+                        </div>
+                    </article>
+
+                    <!-- Android card -->
+                    <article class="bk-dl-card bk-dl-card--droid">
+                        <header class="bk-dl-top">
+                            <div class="bk-dl-os">
+                                <img src="/assets/apps/bksafe-icon.png" alt="" width="512" height="512" class="bk-dl-appicon">
+                                <div>
+                                    <h3>BKSafe cho Android</h3>
+                                    <p data-i18n="dl_droid_line">Cài qua Google Play · tự động cập nhật</p>
+                                </div>
+                            </div>
+                            <span class="bk-verpill bk-verpill--play">Google Play</span>
+                        </header>
+
+                        <a href="https://play.google.com/store/apps/details?id=com.tdson.bksafe" target="_blank" rel="noopener" class="bk-play-badge">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3.6 2.2 13 11.6l2.6-2.6L5.3 2.6a1.6 1.6 0 0 0-1.7-.4z"/><path fill="#4285f4" d="M3.1 2.7A1.6 1.6 0 0 0 2.8 3.6v16.8c0 .34.1.65.3.9L12.4 12z"/><path fill="#fbbc04" d="m16.7 9.6-2.9 2.4 2.9 2.9 3.4-2c.8-.5.8-1.7 0-2.2z"/><path fill="#ea4335" d="M13 12.4 3.6 21.8c.5.4 1.2.5 1.7.2l10.3-6z"/></svg>
+                            <span>
+                                <small data-i18n="play_small">TẢI VỀ TRÊN</small>
+                                <strong>Google Play</strong>
+                            </span>
+                        </a>
+
+                        <dl class="bk-specs">
+                            <div><dt data-i18n="spec_pkg">Mã ứng dụng</dt><dd><code>com.tdson.bksafe</code></dd></div>
+                            <div><dt data-i18n="spec_store">Kênh phát hành</dt><dd data-i18n="spec_store_v">Google Play — bản cập nhật về thẳng máy</dd></div>
+                            <div><dt data-i18n="spec_price">Giá</dt><dd data-i18n="spec_price_v">Miễn phí tải về</dd></div>
+                            <div><dt data-i18n="spec_lang">Ngôn ngữ</dt><dd data-i18n="spec_lang_v">Tiếng Việt</dd></div>
+                        </dl>
+
+                        <p class="bk-dl-foot" data-i18n="dl_droid_foot">Chưa có bản iOS. Trên iPhone, những gì BKSafe làm được đều nằm ngoài phạm vi mà iOS cho phép một ứng dụng chạm tới.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FAQ ================= -->
+        <section class="bk-faq">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2 class="section-title" data-i18n="faq_title">Vài câu hay được hỏi.</h2>
+                </div>
+                <div class="bk-faq-list reveal">
+                    <details class="bk-faq-item">
+                        <summary data-i18n="faq_1_q">BKSafe có gửi dữ liệu của tôi đi đâu không?</summary>
+                        <p data-i18n="faq_1_a">Không. Việc quét và đo đạc chạy hoàn toàn trên thiết bị. Ứng dụng không tải tệp, danh sách tiến trình hay số liệu máy của bạn lên bất kỳ máy chủ nào — bạn có thể tự kiểm chứng bằng chính màn Mạng của ứng dụng, nơi liệt kê lưu lượng theo từng tiến trình.</p>
+                    </details>
+                    <details class="bk-faq-item">
+                        <summary data-i18n="faq_2_q">Vì sao bản macOS không có trên Mac App Store?</summary>
+                        <p data-i18n="faq_2_a">Ứng dụng trên App Store bắt buộc chạy trong hộp cát, mà trong hộp cát thì không đọc được chỉ số SMART của ổ, không đọc được cảm biến nhiệt và không duyệt được thư mục rác ngoài vùng chứa riêng. Vì vậy BKSafe phát hành qua Developer ID và công chứng của Apple — cách mà CleanMyMac, iStat Menus hay Little Snitch vẫn dùng.</p>
+                    </details>
+                    <details class="bk-faq-item">
+                        <summary data-i18n="faq_3_q">Mở lên có bị macOS chặn không?</summary>
+                        <p data-i18n="faq_3_a">Không. Bản 1.2.8 được ký bằng Developer ID và đã qua công chứng của Apple, vé công chứng đóng thẳng vào cả tệp DMG lẫn ứng dụng bên trong. Bạn chỉ cần kéo vào Applications rồi mở như mọi ứng dụng khác, kể cả lúc máy không có mạng.</p>
+                    </details>
+                    <details class="bk-faq-item">
+                        <summary data-i18n="faq_4_q">Máy Mac chip Intel dùng được không?</summary>
+                        <p data-i18n="faq_4_a">Được. Đây là gói universal, chạy nguyên bản trên cả Intel (x86_64) lẫn Apple Silicon (arm64). Chỉ có một tệp tải về, không phải chọn bản cho đúng máy.</p>
+                    </details>
+                    <details class="bk-faq-item">
+                        <summary data-i18n="faq_5_q">Làm sao biết tệp tải về là tệp gốc?</summary>
+                        <p data-i18n="faq_5_a">Chạy <code>shasum -a 256 BKSafe-1.2.8.dmg</code> rồi so với chuỗi SHA-256 đăng ở mục Tải về. Hai chuỗi trùng nhau nghĩa là tệp còn nguyên vẹn.</p>
+                    </details>
+                    <details class="bk-faq-item">
+                        <summary data-i18n="faq_6_q">Bản Android và bản macOS có dùng chung tài khoản không?</summary>
+                        <p data-i18n="faq_6_a">Không. Đây là hai ứng dụng độc lập, mỗi bản làm việc riêng trên thiết bị của nó. Không có tài khoản chung, cũng không có dữ liệu nào đồng bộ qua lại giữa hai máy.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="bk-cta">
+            <div class="container bk-cta-inner reveal">
+                <h2 class="cta-title" data-i18n="cta_title">Bắt đầu với chiếc máy bạn đang dùng.</h2>
+                <div class="cta-actions">
+                    <a href="/downloads/BKSafe-1.2.8.dmg" class="btn btn-primary" download data-i18n="btn_dl_mac">Tải cho macOS</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.tdson.bksafe" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="btn_dl_play">Tải trên Google Play</a>
+                    <a href="/#contact" class="btn btn-ghost" data-i18n="cta_contact">Liên hệ</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo"><img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span></a>
+                <p data-i18n="footer_desc">Xây những công cụ AI dùng được thật, cho lập trình viên và doanh nghiệp.</p>
+                <div class="footer-contact">
+                    <p class="footer-contact-name">Trần Đức Sơn</p>
+                    <a href="mailto:tdson278@gmail.com">tdson278@gmail.com</a>
+                    <a href="tel:+84343185566">+84 343 185 566</a>
+                    <p class="footer-contact-apps">
+                        <a href="https://zalo.me/84343185566" target="_blank" rel="noopener">Zalo</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://wa.me/84343185566" target="_blank" rel="noopener">WhatsApp</a>
+                    </p>
+                </div>
+            </div>
+            <nav class="footer-col" data-i18n-aria="footer_bk" aria-label="BKSafe">
+                <h4 data-i18n="footer_bk">BKSafe</h4>
+                <a href="#overview" data-i18n="nav_overview">Tổng quan</a>
+                <a href="#macos" data-i18n="footer_mac">Bản macOS</a>
+                <a href="#android" data-i18n="footer_droid">Bản Android</a>
+                <a href="#download" data-i18n="cta_download">Tải về</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_prod" aria-label="Products">
+                <h4 data-i18n="footer_prod">Sản phẩm khác</h4>
+                <a href="https://itask.aibachkhoa.com/plans" target="_blank" rel="noopener">iTask</a>
+                <a href="https://crew.aibachkhoa.com" target="_blank" rel="noopener">CrewAI</a>
+                <a href="https://crewosint.aibachkhoa.com/" target="_blank" rel="noopener">CrewOSINT</a>
+                <a href="https://crewaiplatform.aibachkhoa.com" target="_blank" rel="noopener">CrewAI Platform</a>
+                <a href="https://crewchat.aibachkhoa.com" target="_blank" rel="noopener">CrewChat</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_comp" aria-label="Company">
+                <h4 data-i18n="footer_comp">Công ty</h4>
+                <a href="/#about" data-i18n="footer_about">Giới thiệu</a>
+                <a href="/#services" data-i18n="footer_services">Dịch vụ</a>
+                <a href="/#contact" data-i18n="footer_contact">Liên hệ</a>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AIBachKhoa</p>
+            <p data-i18n="footer_rights">Bảo lưu mọi quyền.</p>
+        </div>
+    </footer>
+
+    <script src="/bksafe/bksafe.js"></script>
+</body>
+</html>
