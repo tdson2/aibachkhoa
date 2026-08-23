@@ -1,16 +1,19 @@
 /* =========================================================
    BKSafe product page.
-   Vietnamese is the default here — this is a product sold to
-   Vietnamese users — with English kept alongside it. Theme is
-   shared with the main site through the same 'theme' key; the
-   language choice is stored separately so it does not fight
-   with the eleven-language picker on the landing page.
+   NOTE: Vietnamese ("vi") is temporarily hidden from the language
+   picker, the same way it is on the landing page — the strings are
+   kept in this file, so bringing it back only means adding
+   { code: 'vi', label: 'Tiếng Việt' } to LANGS below (and, for the
+   pre-JS paint, restoring the Vietnamese copy in index.html).
+   Theme is shared with the main site through the same 'theme' key;
+   the language choice is stored separately so it does not fight
+   with the picker on the landing page.
    ========================================================= */
 
 const i18n = {
     vi: {
-        page_title: "BKSafe — Bảo vệ máy Mac và điện thoại Android | AIBachKhoa",
-        meta_desc: "BKSafe theo dõi sức khoẻ máy, quét mã độc, dọn rác và canh lưu lượng mạng. Bản macOS 1.2.8 tải trực tiếp, bản Android trên Google Play.",
+        page_title: "BKSafe — Bảo vệ máy Mac, máy Windows và điện thoại Android | AIBachKhoa",
+        meta_desc: "BKSafe theo dõi sức khoẻ máy, quét mã độc, dọn rác và canh lưu lượng mạng. Bản macOS 1.2.8 và bản Windows 1.2.9 tải trực tiếp, bản Android và bản Lite cho máy yếu trên Google Play.",
         aria_lang: "Đổi ngôn ngữ",
         aria_theme: "Đổi giao diện sáng tối",
         aria_menu: "Mở menu",
@@ -20,29 +23,33 @@ const i18n = {
         nav_overview: "Tổng quan",
         cta_download: "Tải về",
 
-        hero_platforms: "macOS · Android",
+        hero_platforms: "macOS · Windows · Android",
         hero_title: "Máy của bạn, <em>trong tầm mắt</em>.",
         hero_sub: "BKSafe theo dõi sức khoẻ máy, quét mã độc, dọn rác và canh chừng lưu lượng mạng. Toàn bộ việc phân tích diễn ra ngay trên thiết bị — không có tệp nào của bạn rời khỏi máy.",
         btn_dl_mac: "Tải cho macOS",
+        btn_dl_win: "Tải cho Windows",
         btn_dl_play: "Tải trên Google Play",
-        hero_meta: "Bản macOS 1.2.8 · 29 MB · macOS 11 Big Sur trở lên · Universal cho Intel và Apple Silicon",
+        hero_meta: "macOS 1.2.8 · 29 MB · universal cho Intel và Apple Silicon. Windows 1.2.9 · 19 MB · chạy ngay, không cần cài.",
 
         pillar_local_t: "Phân tích tại chỗ",
         pillar_local_d: "Mọi phép quét và đo đạc chạy trên chính thiết bị. Tệp của bạn không được tải lên máy chủ nào.",
         pillar_notary_t: "Đã công chứng Apple",
         pillar_notary_d: "Ký bằng Developer ID và đóng dấu công chứng. Kéo vào Applications là mở được, không cảnh báo, không cần gỡ chặn.",
-        pillar_universal_t: "Một bản cho mọi Mac",
-        pillar_universal_d: "Gói universal chạy nguyên bản trên cả chip Intel lẫn Apple Silicon — không cần Rosetta, không phải chọn bản.",
+        pillar_portable_t: "Chạy ngay, không cần cài",
+        pillar_portable_d: "Bản Windows là một thư mục chép đi đâu cũng chạy — ổ USB, ổ mạng hay một máy khác. Không có bộ cài, bấm đúp là xong.",
         pillar_two_t: "Máy tính và điện thoại",
-        pillar_two_d: "Bản macOS lo cho chiếc Mac, bản Android lo cho chiếc điện thoại. Cùng một triết lý, hai giao diện riêng.",
+        pillar_two_d: "Bản macOS lo cho chiếc Mac, bản Windows lo cho chiếc PC, bản Android lo cho chiếc điện thoại. Cùng một triết lý, ba giao diện riêng.",
 
         pick_title: "Chọn nền tảng của bạn.",
-        pick_sub: "Hai ứng dụng riêng biệt, mỗi bản được viết cho đúng hệ điều hành của nó.",
+        pick_sub: "Ba ứng dụng riêng biệt, mỗi bản được viết cho đúng hệ điều hành của nó.",
         pick_mac_kicker: "Ứng dụng máy tính",
         pick_mac_desc: "Chín màn hình theo dõi và bảo trì: hệ thống, dọn rác, quét mã độc, rà soát bảo mật, sức khoẻ ổ đĩa, nhiệt độ, mạng và cảnh báo bất thường.",
         pick_mac_go: "Xem bản macOS 1.2.8",
+        pick_win_kicker: "Ứng dụng máy tính",
+        pick_win_desc: "Mười màn hình: dọn rác, đo dung lượng, bộ nhớ, quét virus, chống mã hoá hàng loạt, an toàn hệ thống, dịch vụ nền, mạng, ổ cứng và giám sát.",
+        pick_win_go: "Xem bản Windows 1.2.9",
         pick_droid_kicker: "Ứng dụng di động",
-        pick_droid_desc: "Quét ứng dụng và tệp bằng mô hình AI chạy trên máy, chặn cuộc gọi lừa đảo, két bảo mật có mã PIN và điểm an toàn cho cả máy.",
+        pick_droid_desc: "Quét ứng dụng và tệp bằng mô hình AI chạy trên máy, chặn cuộc gọi lừa đảo, két bảo mật có mã PIN và điểm an toàn cho cả máy. Máy yếu thì có bản Lite.",
         pick_droid_go: "Xem bản Android",
 
         mac_eyebrow: "Bản macOS",
@@ -119,6 +126,43 @@ const i18n = {
         step_3: "Mở BKSafe từ Launchpad hoặc thư mục Ứng dụng.",
         steps_foot: "Không cần bấm chuột phải rồi chọn Mở, không cần vào Cài đặt để gỡ chặn, không có cảnh báo “không xác minh được nhà phát triển”. Vé công chứng của Apple được đóng thẳng vào cả tệp DMG lẫn ứng dụng bên trong, nên máy <strong>không có mạng</strong> vẫn mở được bình thường.",
 
+        win_eyebrow: "Bản Windows",
+        win_title: "Chiếc PC của bạn, không còn chỗ nào khuất.",
+        win_sub: "Cùng một BKSafe, viết riêng cho Windows: mười màn hình lấy số liệu thật từ hệ điều hành — dọn rác, đo dung lượng, quét virus theo nội dung tệp, canh mã hoá hàng loạt, soi dịch vụ nền và báo khi có bất thường. Không có bộ cài: giải nén ra, bấm đúp là chạy.",
+        win_badge_ver: "Phiên bản 1.2.9 · build 22",
+        win_badge_req: "Windows 10 64-bit trở lên",
+        win_badge_portable: "Chạy ngay — không cần cài đặt",
+
+        w_clean_t: "Dọn rác",
+        w_clean_d: "Tìm những gì Windows và các ứng dụng bỏ lại: thư mục tạm, kho cập nhật, bộ nhớ đệm trình duyệt, bản Windows cũ. Chỉ liệt kê — không gì bị xoá cho tới khi bạn tự chọn.",
+        w_storage_t: "Dung lượng",
+        w_storage_d: "Thư mục nào, tệp nào đang chiếm chỗ — đo thật chứ không ước lượng. Xem theo thư mục, theo tệp lớn nhất hoặc theo loại tệp.",
+        w_mem_t: "Bộ nhớ",
+        w_mem_d: "RAM đang đi đâu và tiến trình nào đang giữ nó, kèm phần đệm tệp có thể nhả ra khi máy cần.",
+        w_scan_t: "Quét virus",
+        w_scan_d: "Đọc nội dung từng tệp rồi đối chiếu chữ ký — không đoán theo tên hay đuôi tệp. Bạn chọn thư mục muốn quét.",
+        w_guard_t: "Chống mã hoá hàng loạt",
+        w_guard_d: "Canh hành vi chứ không canh mẫu: hàng loạt tài liệu bị ghi đè và đổi đuôi trong vài giây là ứng dụng lên tiếng ngay.",
+        w_sec_t: "An toàn hệ thống",
+        w_sec_d: "Các lớp phòng vệ của Windows có đang bật không, cái gì tự chạy cùng máy, và có bản vá nào đang chờ.",
+        w_svc_t: "Dịch vụ hệ thống",
+        w_svc_d: "Cái gì đang chạy nền dưới quyền hệ thống, ai ký nó và nó nằm ở đâu — dịch vụ mới cài được biết trong một hai giây.",
+        w_net_t: "Mạng",
+        w_net_d: "Đang truyền bao nhiêu, tiến trình nào truyền, và cổng nào đang mở ra ngoài.",
+        w_disk_t: "Ổ cứng",
+        w_disk_d: "Sức khoẻ phần cứng, lưu lượng đọc ghi và mức phân mảnh của từng ổ.",
+        w_mon_t: "Giám sát",
+        w_mon_d: "Toàn bộ máy trong một màn hình, kèm mọi cảnh báo đã phát. Chỉ lên tiếng khi một chỉ số ở ngoài ngưỡng bạn đặt.",
+
+        win_note_title: "Khi nào cần chạy bằng quyền quản trị",
+        win_note_body: "Xem hằng ngày thì bản thường là đủ — rà soát, quét virus, đo dung lượng và canh mã hoá hàng loạt đều chạy bình thường ở quyền người dùng. Chỉ ba việc cần quyền quản trị: xoá rác của chính Windows (thư mục tạm hệ thống, kho cập nhật, bản Windows cũ), dừng hoặc tắt một dịch vụ, và đếm số byte mạng theo từng tiến trình. Gói tải về có sẵn tệp <code>Chay bang quyen quan tri.bat</code>, và ngay trong ứng dụng cũng có nút <strong>Mở lại bằng quyền quản trị</strong> ở màn Cài đặt và màn Dọn rác.",
+
+        win_steps_title: "Chạy trong ba bước",
+        win_step_1: "Tải tệp <code>BKSafe-1.2.9-win-x64-portable.zip</code> rồi giải nén ra một thư mục.",
+        win_step_2: "Bấm đúp vào <code>bksafe.exe</code>. Không có bước cài đặt nào.",
+        win_step_3: "Muốn dọn rác của hệ thống thì chạy <code>Chay bang quyen quan tri.bat</code> đi kèm.",
+        win_steps_foot: "Chép cả thư mục đi đâu cũng chạy — ổ USB, ổ mạng hay một máy khác; chỉ đừng tách riêng <code>bksafe.exe</code> khỏi thư mục <code>data</code> và các tệp .dll nằm cùng chỗ. Cài đặt của bạn nằm ở <code>%APPDATA%\\BKSafe\\BKSafe</code> nên xoá thư mục ứng dụng cũng không mất cài đặt. Ứng dụng chưa mua chứng chỉ ký mã nên lần đầu mở, SmartScreen có thể hiện một màn xanh — bấm <strong>More info</strong> rồi <strong>Run anyway</strong>.",
+
         droid_eyebrow: "Bản Android",
         droid_title: "Chiếc điện thoại tự lo được cho mình.",
         droid_sub: "Mô hình AI nằm sẵn trong máy soi ứng dụng và tệp, chặn cuộc gọi lừa đảo trước khi máy kịp đổ chuông, và cất những thứ riêng tư sau một mã PIN. Không có bước nào phải gửi dữ liệu lên máy chủ.",
@@ -138,9 +182,21 @@ const i18n = {
         d_clean_t: "Dọn rác và bảo vệ riêng tư",
         d_clean_d: "Xoá tệp thừa, dọn dấu vết duyệt web và rà lại những quyền mà các ứng dụng đang giữ.",
 
+        lite_title: "Máy yếu, máy cũ? Có bản Lite.",
+        lite_sub: "BKSafe Lite bỏ hết phần chạy nền và giữ đúng bốn việc bạn bấm là chạy. Không thanh menu, không dịch vụ nền — mở lên là thấy thông tin máy và bốn nút.",
+        lite_f1_t: "Quét tệp",
+        lite_f1_d: "Đối chiếu chữ ký TLSH ngay trên máy — không cần mô hình AI nặng, không cần mạng.",
+        lite_f2_t: "Dọn dẹp rác",
+        lite_f2_d: "Tìm tệp thừa, cho xem danh sách và dung lượng lấy lại được rồi mới xoá.",
+        lite_f3_t: "Kiểm tra pin",
+        lite_f3_d: "Mức pin, nhiệt độ, số chu kỳ sạc và tình trạng sức khoẻ pin.",
+        lite_f4_t: "Đo tốc độ mạng",
+        lite_f4_d: "Tải xuống, tải lên, độ trễ và độ dao động, kèm loại kết nối và mức mất gói.",
+        lite_note: "Bản Lite không có quét dịch vụ nền, giám sát lưu lượng, két mật khẩu hay điểm an toàn — những phần đó nằm ở bản đầy đủ.",
+
         dl_eyebrow: "Tải về",
         dl_title: "Lấy BKSafe về máy.",
-        dl_sub: "Bản macOS tải thẳng từ đây. Bản Android lấy trên Google Play.",
+        dl_sub: "Bản macOS và bản Windows tải thẳng từ đây. Hai bản Android lấy trên Google Play.",
         dl_mac_line: "Tệp cài đặt DMG · tải trực tiếp",
         dl_mac_btn: "Tải BKSafe-1.2.8.dmg (29 MB)",
         dl_droid_line: "Cài qua Google Play · tự động cập nhật",
@@ -160,7 +216,20 @@ const i18n = {
         sha_copy: "Sao chép",
         sha_copied: "Đã chép",
         sha_hint: "Đối chiếu bằng <code>shasum -a 256 BKSafe-1.2.8.dmg</code>, hoặc dùng luôn <a href=\"/downloads/BKSafe-1.2.8.dmg.sha256\" download>tệp .sha256 kèm theo</a>.",
-        dl_droid_foot: "Chưa có bản iOS. Trên iPhone, những gì BKSafe làm được đều nằm ngoài phạm vi mà iOS cho phép một ứng dụng chạm tới.",
+        dl_droid_foot: "Máy yếu hay máy cũ thì lấy bản Lite ở bên. Chưa có bản iOS — trên iPhone, những gì BKSafe làm được đều nằm ngoài phạm vi mà iOS cho phép một ứng dụng chạm tới.",
+
+        dl_win_line: "Gói portable ZIP · tải trực tiếp",
+        dl_win_btn: "Tải gói Windows portable (19 MB)",
+        dl_lite_line: "Cài qua Google Play · dành cho máy yếu",
+        dl_lite_foot: "Bốn việc, không hơn: quét tệp, dọn rác, kiểm tra pin và đo tốc độ mạng. Không dịch vụ nền, không mô hình AI — nên nhẹ và ít ngốn pin.",
+        spec_ver_win: "1.2.9 (build 22)",
+        spec_req_win: "Windows 10 64-bit trở lên",
+        spec_arch_win: "x64 — sau khi giải nén chiếm khoảng 39 MB",
+        spec_req_droid: "Android 7.0 trở lên",
+        spec_install: "Cài đặt",
+        spec_install_v: "Không cần — giải nén rồi bấm đúp <code>bksafe.exe</code>",
+        spec_sign_win: "Chưa ký mã — SmartScreen có thể hỏi ở lần mở đầu",
+        sha_hint_win: "Đối chiếu bằng <code>Get-FileHash BKSafe-1.2.9-win-x64-portable.zip -Algorithm SHA256</code> trong PowerShell, hoặc dùng luôn <a href=\"/downloads/BKSafe-1.2.9-win-x64-portable.zip.sha256\" download>tệp .sha256 kèm theo</a>.",
 
         faq_title: "Vài câu hay được hỏi.",
         faq_1_q: "BKSafe có gửi dữ liệu của tôi đi đâu không?",
@@ -172,9 +241,18 @@ const i18n = {
         faq_4_q: "Máy Mac chip Intel dùng được không?",
         faq_4_a: "Được. Đây là gói universal, chạy nguyên bản trên cả Intel (x86_64) lẫn Apple Silicon (arm64). Chỉ có một tệp tải về, không phải chọn bản cho đúng máy.",
         faq_5_q: "Làm sao biết tệp tải về là tệp gốc?",
-        faq_5_a: "Chạy <code>shasum -a 256 BKSafe-1.2.8.dmg</code> rồi so với chuỗi SHA-256 đăng ở mục Tải về. Hai chuỗi trùng nhau nghĩa là tệp còn nguyên vẹn.",
-        faq_6_q: "Bản Android và bản macOS có dùng chung tài khoản không?",
-        faq_6_a: "Không. Đây là hai ứng dụng độc lập, mỗi bản làm việc riêng trên thiết bị của nó. Không có tài khoản chung, cũng không có dữ liệu nào đồng bộ qua lại giữa hai máy.",
+        faq_5_a: "Trên Mac chạy <code>shasum -a 256 BKSafe-1.2.8.dmg</code>; trên Windows mở PowerShell rồi chạy <code>Get-FileHash BKSafe-1.2.9-win-x64-portable.zip -Algorithm SHA256</code>. So kết quả với chuỗi SHA-256 đăng ở mục Tải về — trùng nhau nghĩa là tệp còn nguyên vẹn.",
+        faq_6_q: "Các bản có dùng chung tài khoản không?",
+        faq_6_a: "Không. macOS, Windows và Android là những ứng dụng độc lập, mỗi bản làm việc riêng trên thiết bị của nó. Không có tài khoản chung, cũng không có dữ liệu nào đồng bộ qua lại giữa các máy.",
+
+        faq_w1_q: "Bản Windows có phải cài đặt không?",
+        faq_w1_a: "Không. Đây là gói portable: giải nén tệp ZIP ra một thư mục rồi bấm đúp <code>bksafe.exe</code>. Chép cả thư mục sang ổ USB hay máy khác vẫn chạy — chỉ đừng tách riêng <code>bksafe.exe</code> khỏi thư mục <code>data</code> và các tệp .dll đi kèm. Cài đặt của bạn được lưu riêng ở <code>%APPDATA%\\BKSafe\\BKSafe</code>.",
+        faq_w2_q: "Windows hiện màn xanh “Windows protected your PC” thì làm sao?",
+        faq_w2_a: "Bấm <strong>More info</strong> rồi <strong>Run anyway</strong>. Ứng dụng chưa mua chứng chỉ ký mã, nên SmartScreen cảnh báo ở những lần mở đầu. Nếu mở không lên, chuột phải vào <code>bksafe.exe</code> → Properties → đánh dấu <strong>Unblock</strong> ở cuối thẻ General → OK. Bạn có thể đối chiếu chuỗi SHA-256 đăng ở mục Tải về để chắc tệp còn nguyên vẹn.",
+        faq_w3_q: "Khi nào phải chạy bằng quyền quản trị?",
+        faq_w3_a: "Chỉ khi muốn xoá rác của chính Windows, dừng hoặc tắt một dịch vụ, hoặc đếm số byte mạng theo từng tiến trình. Khi ấy dùng tệp <code>Chay bang quyen quan tri.bat</code> đi kèm, hoặc bấm <strong>Mở lại bằng quyền quản trị</strong> ngay trong ứng dụng. Xem hằng ngày thì quyền người dùng là đủ.",
+        faq_lite_q: "Bản Lite khác bản BKSafe đầy đủ thế nào?",
+        faq_lite_a: "Bản Lite (<code>com.tdson.bksafelite</code>) giữ bốn việc: quét tệp, dọn rác, kiểm tra pin và đo tốc độ mạng. Nó không dùng mô hình AI mà đối chiếu chữ ký TLSH, và không chạy dịch vụ nền nào — nên nhẹ hơn và ít ngốn pin hơn trên máy yếu. Chặn cuộc gọi lừa đảo, quét dịch vụ nền, két bảo mật và điểm an toàn chỉ có ở bản đầy đủ. Hai bản cài song song được vì là hai ứng dụng riêng.",
 
         cta_title: "Bắt đầu với chiếc máy bạn đang dùng.",
         cta_contact: "Liên hệ",
@@ -182,6 +260,7 @@ const i18n = {
         footer_desc: "Xây những công cụ AI dùng được thật, cho lập trình viên và doanh nghiệp.",
         footer_bk: "BKSafe",
         footer_mac: "Bản macOS",
+        footer_win: "Bản Windows",
         footer_droid: "Bản Android",
         footer_prod: "Sản phẩm khác",
         footer_comp: "Công ty",
@@ -192,8 +271,8 @@ const i18n = {
     },
 
     en: {
-        page_title: "BKSafe — Security for your Mac and Android phone | AIBachKhoa",
-        meta_desc: "BKSafe watches machine health, scans for malware, clears junk and keeps an eye on network traffic. macOS 1.2.8 as a direct download, Android on Google Play.",
+        page_title: "BKSafe — Security for your Mac, your PC and your Android phone | AIBachKhoa",
+        meta_desc: "BKSafe watches machine health, scans for malware, clears junk and keeps an eye on network traffic. macOS 1.2.8 and Windows 1.2.9 as direct downloads, Android and the lightweight Lite build on Google Play.",
         aria_lang: "Change language",
         aria_theme: "Toggle theme",
         aria_menu: "Open menu",
@@ -203,29 +282,33 @@ const i18n = {
         nav_overview: "Overview",
         cta_download: "Download",
 
-        hero_platforms: "macOS · Android",
+        hero_platforms: "macOS · Windows · Android",
         hero_title: "Your machine, <em>in plain sight</em>.",
         hero_sub: "BKSafe watches machine health, scans for malware, clears out junk and keeps an eye on network traffic. Every bit of analysis happens on the device — none of your files ever leave it.",
         btn_dl_mac: "Download for macOS",
+        btn_dl_win: "Download for Windows",
         btn_dl_play: "Get it on Google Play",
-        hero_meta: "macOS 1.2.8 · 29 MB · macOS 11 Big Sur or later · Universal for Intel and Apple Silicon",
+        hero_meta: "macOS 1.2.8 · 29 MB · universal for Intel and Apple Silicon. Windows 1.2.9 · 19 MB · runs straight out of the folder.",
 
         pillar_local_t: "Analysis stays local",
         pillar_local_d: "Every scan and measurement runs on the device itself. Your files are never uploaded to a server.",
         pillar_notary_t: "Notarized by Apple",
         pillar_notary_d: "Signed with a Developer ID and notarized. Drag it into Applications and open it — no warning, no unblocking.",
-        pillar_universal_t: "One build for every Mac",
-        pillar_universal_d: "A universal binary that runs natively on Intel and Apple Silicon — no Rosetta, no picking the right build.",
+        pillar_portable_t: "Runs without installing",
+        pillar_portable_d: "The Windows build is a folder you can copy anywhere — a USB stick, a network share, another PC. No installer; double-click and it runs.",
         pillar_two_t: "Desktop and phone",
-        pillar_two_d: "The macOS app looks after the Mac, the Android app after the phone. Same thinking, two interfaces built for their own platform.",
+        pillar_two_d: "The macOS app looks after the Mac, the Windows app after the PC, the Android app after the phone. Same thinking, three interfaces built for their own platform.",
 
         pick_title: "Pick your platform.",
-        pick_sub: "Two separate apps, each written for the operating system it runs on.",
+        pick_sub: "Three separate apps, each written for the operating system it runs on.",
         pick_mac_kicker: "Desktop app",
         pick_mac_desc: "Nine screens for monitoring and upkeep: system, cleaner, malware scan, security audit, disk health, temperature, network and anomaly alerts.",
         pick_mac_go: "See the macOS 1.2.8 build",
+        pick_win_kicker: "Desktop app",
+        pick_win_desc: "Ten screens: cleaner, storage, memory, virus scan, ransomware guard, system safety, services, network, drive health and monitoring.",
+        pick_win_go: "See the Windows 1.2.9 build",
         pick_droid_kicker: "Mobile app",
-        pick_droid_desc: "Scans apps and files with an on-device AI model, blocks scam calls, keeps a PIN-locked vault and scores how safe the phone is.",
+        pick_droid_desc: "Scans apps and files with an on-device AI model, blocks scam calls, keeps a PIN-locked vault and scores how safe the phone is. Older phones get the Lite build.",
         pick_droid_go: "See the Android build",
 
         mac_eyebrow: "macOS build",
@@ -302,6 +385,43 @@ const i18n = {
         step_3: "Open BKSafe from Launchpad or the Applications folder.",
         steps_foot: "No right-click-then-Open, no trip to Settings to unblock it, no “unidentified developer” warning. Apple's notarization ticket is stapled to both the DMG and the app inside it, so the Mac opens it fine even with <strong>no network connection</strong>.",
 
+        win_eyebrow: "Windows build",
+        win_title: "Your PC, with nothing left in the dark.",
+        win_sub: "The same BKSafe, written for Windows: ten screens reading real figures from the operating system — cleaner, storage, virus scanning by file content, ransomware guard, background services, and an alert when something goes out of range. No installer: unzip it, double-click it, it runs.",
+        win_badge_ver: "Version 1.2.9 · build 22",
+        win_badge_req: "Windows 10 64-bit or later",
+        win_badge_portable: "Portable — no installation",
+
+        w_clean_t: "Cleaner",
+        w_clean_d: "Finds what Windows and your apps leave behind: temp folders, the update store, browser caches, the old Windows install. It only lists — nothing is deleted until you pick it.",
+        w_storage_t: "Storage",
+        w_storage_d: "Which folders and which files are taking up the room — measured, not estimated. View by folder, by largest file, or by file type.",
+        w_mem_t: "Memory",
+        w_mem_d: "Where the RAM is going and which process is holding it, plus the file cache that can be handed back when the machine needs it.",
+        w_scan_t: "Virus scan",
+        w_scan_d: "Reads the contents of each file and matches it against signatures — no guessing from names or extensions. You choose the folders to sweep.",
+        w_guard_t: "Ransomware guard",
+        w_guard_d: "Watches behaviour rather than samples: the moment a batch of documents is overwritten and renamed within seconds, the app speaks up.",
+        w_sec_t: "System safety",
+        w_sec_d: "Whether Windows' defence layers are switched on, what starts itself with the machine, and whether any patch is waiting.",
+        w_svc_t: "System services",
+        w_svc_d: "What is running in the background with system rights, who signed it and where it lives — a newly installed service shows up within a second or two.",
+        w_net_t: "Network",
+        w_net_d: "How much is moving, which process is moving it, and which ports are open to the outside.",
+        w_disk_t: "Drive",
+        w_disk_d: "Hardware health, read and write throughput, and how fragmented each volume is.",
+        w_mon_t: "Monitor",
+        w_mon_d: "The whole machine on one screen, with every alert it has raised. It speaks up only when a figure sits outside the range you set.",
+
+        win_note_title: "When you need administrator rights",
+        win_note_body: "For everyday use the normal build is enough — auditing, virus scanning, measuring storage and the ransomware guard all work at user level. Only three things need administrator rights: deleting Windows' own junk (the system temp folder, the update store, the old Windows install), stopping or disabling a service, and counting network bytes per process. The download ships with <code>Chay bang quyen quan tri.bat</code>, and the app itself has a <strong>Relaunch as administrator</strong> button on the Settings and Cleaner screens.",
+
+        win_steps_title: "Running it in three steps",
+        win_step_1: "Download <code>BKSafe-1.2.9-win-x64-portable.zip</code> and unzip it into a folder.",
+        win_step_2: "Double-click <code>bksafe.exe</code>. There is no installation step.",
+        win_step_3: "To clear the system's own junk, use the bundled <code>Chay bang quyen quan tri.bat</code>.",
+        win_steps_foot: "Copy the whole folder anywhere and it runs — a USB stick, a network share, another PC; just do not separate <code>bksafe.exe</code> from the <code>data</code> folder and the .dll files beside it. Your settings live in <code>%APPDATA%\\BKSafe\\BKSafe</code>, so deleting the app folder does not lose them. The app has no code-signing certificate yet, so the first launch may bring up a blue SmartScreen panel — click <strong>More info</strong> then <strong>Run anyway</strong>.",
+
         droid_eyebrow: "Android build",
         droid_title: "A phone that looks after itself.",
         droid_sub: "An AI model that lives on the phone inspects apps and files, scam calls are blocked before the phone rings, and private things sit behind a PIN. Not one step of it needs a server.",
@@ -321,9 +441,21 @@ const i18n = {
         d_clean_t: "Cleanup and privacy",
         d_clean_d: "Clears junk files, wipes browsing traces and reviews the permissions your apps are holding on to.",
 
+        lite_title: "Older phone, slower phone? Take the Lite build.",
+        lite_sub: "BKSafe Lite drops everything that runs in the background and keeps the four things you tap. No menu bar, no background service — open it and you see the device figures and four buttons.",
+        lite_f1_t: "File scan",
+        lite_f1_d: "Matches TLSH signatures on the phone itself — no heavy AI model, no network needed.",
+        lite_f2_t: "Junk cleanup",
+        lite_f2_d: "Finds leftover files, shows the list and how much you would get back, then deletes what you picked.",
+        lite_f3_t: "Battery check",
+        lite_f3_d: "Charge level, temperature, charge cycles and how the battery's health is holding up.",
+        lite_f4_t: "Network speed test",
+        lite_f4_d: "Download, upload, latency and jitter, along with the connection type and packet loss.",
+        lite_note: "The Lite build has no background-service scan, no traffic monitoring, no password vault and no safety score — those live in the full build.",
+
         dl_eyebrow: "Download",
         dl_title: "Get BKSafe on your device.",
-        dl_sub: "The macOS build downloads straight from here. The Android build comes from Google Play.",
+        dl_sub: "The macOS and Windows builds download straight from here. Both Android builds come from Google Play.",
         dl_mac_line: "DMG installer · direct download",
         dl_mac_btn: "Download BKSafe-1.2.8.dmg (29 MB)",
         dl_droid_line: "Installed via Google Play · updates itself",
@@ -343,7 +475,20 @@ const i18n = {
         sha_copy: "Copy",
         sha_copied: "Copied",
         sha_hint: "Check it with <code>shasum -a 256 BKSafe-1.2.8.dmg</code>, or use the <a href=\"/downloads/BKSafe-1.2.8.dmg.sha256\" download>.sha256 file</a> alongside it.",
-        dl_droid_foot: "There is no iOS build. On iPhone, everything BKSafe does sits outside what iOS lets an app reach.",
+        dl_droid_foot: "On an older or slower phone, take the Lite build next to this one. There is no iOS build — on iPhone, everything BKSafe does sits outside what iOS lets an app reach.",
+
+        dl_win_line: "Portable ZIP · direct download",
+        dl_win_btn: "Download the Windows portable build (19 MB)",
+        dl_lite_line: "Installed via Google Play · built for slower phones",
+        dl_lite_foot: "Four things, no more: file scan, junk cleanup, battery check and a network speed test. No background service and no AI model, so it stays light on the battery.",
+        spec_ver_win: "1.2.9 (build 22)",
+        spec_req_win: "Windows 10 64-bit or later",
+        spec_arch_win: "x64 — about 39 MB once unzipped",
+        spec_req_droid: "Android 7.0 or later",
+        spec_install: "Installation",
+        spec_install_v: "None — unzip, then double-click <code>bksafe.exe</code>",
+        spec_sign_win: "Not code-signed — SmartScreen may ask on first launch",
+        sha_hint_win: "Check it with <code>Get-FileHash BKSafe-1.2.9-win-x64-portable.zip -Algorithm SHA256</code> in PowerShell, or use the <a href=\"/downloads/BKSafe-1.2.9-win-x64-portable.zip.sha256\" download>.sha256 file</a> alongside it.",
 
         faq_title: "Questions that come up.",
         faq_1_q: "Does BKSafe send my data anywhere?",
@@ -355,9 +500,18 @@ const i18n = {
         faq_4_q: "Does it work on Intel Macs?",
         faq_4_a: "Yes. It is a universal binary that runs natively on both Intel (x86_64) and Apple Silicon (arm64). There is one file to download, and no build to choose between.",
         faq_5_q: "How do I know the download is genuine?",
-        faq_5_a: "Run <code>shasum -a 256 BKSafe-1.2.8.dmg</code> and compare it with the SHA-256 published in the Download section. Matching strings mean the file is intact.",
-        faq_6_q: "Do the Android and macOS apps share an account?",
-        faq_6_a: "No. They are two independent apps, each working on its own device. There is no shared account and nothing syncs between them.",
+        faq_5_a: "On a Mac run <code>shasum -a 256 BKSafe-1.2.8.dmg</code>; on Windows open PowerShell and run <code>Get-FileHash BKSafe-1.2.9-win-x64-portable.zip -Algorithm SHA256</code>. Compare the result with the SHA-256 published in the Download section — matching strings mean the file is intact.",
+        faq_6_q: "Do the builds share an account?",
+        faq_6_a: "No. The macOS, Windows and Android apps are independent, each working on its own device. There is no shared account and nothing syncs between them.",
+
+        faq_w1_q: "Does the Windows build need installing?",
+        faq_w1_a: "No. It is a portable package: unzip it into a folder and double-click <code>bksafe.exe</code>. Copy the whole folder to a USB stick or another PC and it still runs — just do not separate <code>bksafe.exe</code> from the <code>data</code> folder and the .dll files beside it. Your settings are kept separately in <code>%APPDATA%\\BKSafe\\BKSafe</code>.",
+        faq_w2_q: "Windows shows “Windows protected your PC” — what now?",
+        faq_w2_a: "Click <strong>More info</strong> then <strong>Run anyway</strong>. The app has no code-signing certificate yet, so SmartScreen warns on the first few launches. If it will not start at all, right-click <code>bksafe.exe</code> → Properties → tick <strong>Unblock</strong> at the bottom of the General tab → OK. You can compare the SHA-256 published in the Download section to confirm the file is intact.",
+        faq_w3_q: "When do I have to run it as administrator?",
+        faq_w3_a: "Only to delete Windows' own junk, to stop or disable a service, or to count network bytes per process. For those, use the bundled <code>Chay bang quyen quan tri.bat</code>, or press <strong>Relaunch as administrator</strong> inside the app. For everyday use, ordinary user rights are enough.",
+        faq_lite_q: "How does Lite differ from the full BKSafe?",
+        faq_lite_a: "Lite (<code>com.tdson.bksafelite</code>) keeps four things: file scan, junk cleanup, battery check and a network speed test. It matches TLSH signatures instead of running an AI model, and it runs no background service — so it is lighter and easier on the battery of an older phone. Scam call blocking, the background-service scan, the vault and the safety score are in the full build only. They are separate apps, so you can keep both installed.",
 
         cta_title: "Start with the device in front of you.",
         cta_contact: "Get in touch",
@@ -365,6 +519,7 @@ const i18n = {
         footer_desc: "Building practical AI tools for developers and businesses.",
         footer_bk: "BKSafe",
         footer_mac: "macOS build",
+        footer_win: "Windows build",
         footer_droid: "Android build",
         footer_prod: "Other products",
         footer_comp: "Company",
@@ -375,11 +530,12 @@ const i18n = {
     }
 };
 
+/* Languages offered in the picker, in order.
+   'vi' is deliberately left out — add { code: 'vi', label: 'Tiếng Việt' } to show it again. */
 const LANGS = [
-    { code: 'vi', label: 'Tiếng Việt' },
     { code: 'en', label: 'English' }
 ];
-const DEFAULT_LANG = 'vi';
+const DEFAULT_LANG = 'en';
 const SHOT_DIR = '/assets/bksafe/macos/';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -400,22 +556,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSelects = [document.getElementById('lang-select'), document.getElementById('mobile-lang-select')].filter(Boolean);
     const supported = LANGS.map(l => l.code);
 
-    // Vietnamese is the face of this page and stays that way unless the
-    // visitor asked for something else. Browser locale is deliberately
-    // ignored — plenty of Vietnamese users run an en-US browser, and
-    // they should still land on the Vietnamese copy.
+    // A stored choice wins, then whatever the visitor picked on the
+    // landing page. Anything no longer offered — a 'vi' left over from
+    // before it was hidden, say — falls through to the default.
     const detectLang = () => {
         const saved = localStorage.getItem('bksafe-lang');
         if (saved && supported.includes(saved)) return saved;
-        // A language explicitly picked on the landing page is a real
-        // choice, so honour it: Vietnamese stays, anything else means
-        // this visitor is reading the site in English.
         const site = localStorage.getItem('lang');
-        if (site) return site === 'vi' ? 'vi' : 'en';
+        if (site && supported.includes(site)) return site;
         return DEFAULT_LANG;
     };
 
     langSelects.forEach(sel => {
+        // Nothing to choose between while only one language is offered.
+        sel.hidden = LANGS.length < 2;
         sel.innerHTML = '';
         LANGS.forEach(l => {
             const opt = document.createElement('option');
@@ -492,9 +646,11 @@ document.addEventListener('DOMContentLoaded', () => {
     updateLanguage(currentLang);
 
     // ---------- Copy the checksum ----------
-    const copyBtn = document.getElementById('copy-sha');
-    const shaValue = document.getElementById('sha-value');
-    if (copyBtn && shaValue && navigator.clipboard) {
+    // One button per download card, so bind them all rather than a single id.
+    document.querySelectorAll('.bk-sha').forEach(block => {
+        const copyBtn = block.querySelector('.bk-copy');
+        const shaValue = block.querySelector('.bk-sha-value');
+        if (!copyBtn || !shaValue || !navigator.clipboard) return;
         copyBtn.addEventListener('click', async () => {
             try {
                 await navigator.clipboard.writeText(shaValue.textContent.trim());
@@ -507,7 +663,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 1800);
             } catch { /* clipboard refused — the text is selectable anyway */ }
         });
-    }
+    });
 
     // ---------- Mobile menu ----------
     const mobileBtn = document.getElementById('mobile-btn');

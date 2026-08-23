@@ -699,7 +699,7 @@ ul { list-style: none; }
 .footer-contact-name { font-weight: 600; }
 .footer-contact a { color: var(--text-muted); transition: color 0.2s ease; }
 .footer-contact a:hover { color: var(--accent); }
-.footer-contact-apps { display: flex; gap: 0.5rem; color: var(--border-strong); margin-top: 0.15rem; }
+.footer-contact-apps { display: flex; flex-wrap: wrap; gap: 0.5rem; color: var(--border-strong); margin-top: 0.15rem; }
 
 /* ---------- CTA band ---------- */
 .cta-band { padding: 2rem 0 7rem; }
