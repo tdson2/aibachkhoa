@@ -37,7 +37,7 @@ const i18n = {
         group_web: "Web & desktop",
         group_mobile: "Mobile apps",
         showcase_title: "Everything we build.",
-        showcase_sub: "Eleven products in one strip. Drag sideways, or let it drift on its own.",
+        showcase_sub: "Twelve products in one strip. Drag sideways, or let it drift on its own.",
         gallery_title: "Inside the apps.",
         gallery_sub: "Real screens from our mobile apps.",
         aria_prev: "Previous",
@@ -110,7 +110,12 @@ const i18n = {
         tag_fortune: "Fortune telling",
         fortune_desc: "AI-assisted fortune readings — tarot, cards and more. Meant as entertainment and a nudge for reflection, never as serious advice.",
         tag_game: "Puzzle game",
-        game_desc: "A small rocket-control puzzle game to unwind with. This is the demo build; a full version with more levels is on the way."
+        game_desc: "A small rocket-control puzzle game to unwind with. This is the demo build; a full version with more levels is on the way.",
+        tag_dungeon: "Action roguelite",
+        dungeon_desc: "A hand-made pixel-art action roguelite. Cut down through a hundred procedurally generated depths, take a boon at every gate, and meet the lord waiting on every fifth. No ads, no purchases, plays offline.",
+        feat_dungeon_gen: "A hundred floors, every one generated and proved",
+        feat_dungeon_touch: "Full touch controls, gamepad and keyboard",
+        action_dungeon: "Explore the game"
     },
     es: {
         page_title: "AIBachKhoa — Herramientas de IA para el trabajo y la automatización",
@@ -144,7 +149,7 @@ const i18n = {
         group_web: "Web y escritorio",
         group_mobile: "Apps móviles",
         showcase_title: "Todo lo que construimos.",
-        showcase_sub: "Once productos en una sola franja. Arrastra o déjalo correr solo.",
+        showcase_sub: "Doce productos en una sola franja. Arrastra o déjalo correr solo.",
         gallery_title: "Dentro de las apps.",
         gallery_sub: "Pantallas reales de nuestras apps móviles.",
         aria_prev: "Anterior",
@@ -217,7 +222,12 @@ const i18n = {
         tag_fortune: "Adivinación",
         fortune_desc: "Lecturas de la suerte con ayuda de IA: tarot, cartas y más. Es entretenimiento y una excusa para reflexionar, nunca un consejo serio.",
         tag_game: "Juego de puzles",
-        game_desc: "Un pequeño juego de puzles en el que pilotas un cohete para desconectar. Esta es la versión demo; la completa, con más niveles, está en camino."
+        game_desc: "Un pequeño juego de puzles en el que pilotas un cohete para desconectar. Esta es la versión demo; la completa, con más niveles, está en camino.",
+        tag_dungeon: "Roguelite de acción",
+        dungeon_desc: "Un roguelite de acción en pixel art hecho a mano. Desciende cortando por cien niveles generados proceduralmente, elige un don en cada puerta y enfréntate al señor que espera en cada quinto. Sin anuncios, sin compras, funciona sin conexión.",
+        feat_dungeon_gen: "Cien pisos, todos generados y verificados",
+        feat_dungeon_touch: "Controles táctiles completos, mando y teclado",
+        action_dungeon: "Descubre el juego"
     },
     zh: {
         page_title: "AIBachKhoa — 面向工作与自动化的 AI 工具",
@@ -251,7 +261,7 @@ const i18n = {
         group_web: "网页与桌面端",
         group_mobile: "移动应用",
         showcase_title: "我们打造的一切。",
-        showcase_sub: "十一款产品汇于一处。左右拖动，或让它自己滚动。",
+        showcase_sub: "十二款产品汇于一处。左右拖动，或让它自己滚动。",
         gallery_title: "应用内部一览。",
         gallery_sub: "来自我们移动应用的真实界面。",
         aria_prev: "上一个",
@@ -324,7 +334,12 @@ const i18n = {
         tag_fortune: "占卜",
         fortune_desc: "由 AI 辅助的占卜：塔罗、纸牌等。只当娱乐和自省的引子，切勿当作正经建议。",
         tag_game: "解谜游戏",
-        game_desc: "一款操控火箭的小型解谜游戏，用来放松。目前是演示版，关卡更多的完整版正在开发中。"
+        game_desc: "一款操控火箭的小型解谜游戏，用来放松。目前是演示版，关卡更多的完整版正在开发中。",
+        tag_dungeon: "动作 Roguelite",
+        dungeon_desc: "一款手工打造的像素风动作 Roguelite。一路砍杀穿过一百层程序生成的地牢，每道门前领取一项恩赐，每第五层都有一位领主等着你。无广告、无内购，可离线游玩。",
+        feat_dungeon_gen: "一百层地牢，层层生成并经过验证",
+        feat_dungeon_touch: "完整触屏操作，支持手柄与键盘",
+        action_dungeon: "了解这款游戏"
     },
     hi: {
         page_title: "AIBachKhoa — काम और स्वचालन के लिए AI टूल",
@@ -358,7 +373,7 @@ const i18n = {
         group_web: "वेब और डेस्कटॉप",
         group_mobile: "मोबाइल ऐप्स",
         showcase_title: "हम जो कुछ भी बनाते हैं।",
-        showcase_sub: "एक ही पट्टी में ग्यारह उत्पाद। बगल में खींचें, या इसे अपने आप चलने दें।",
+        showcase_sub: "एक ही पट्टी में बारह उत्पाद। बगल में खींचें, या इसे अपने आप चलने दें।",
         gallery_title: "ऐप्स के भीतर।",
         gallery_sub: "हमारे मोबाइल ऐप्स की असली स्क्रीन।",
         aria_prev: "पिछला",
@@ -431,7 +446,12 @@ const i18n = {
         tag_fortune: "भविष्यफल",
         fortune_desc: "AI की मदद से भविष्यफल — टैरो, ताश और बहुत कुछ। यह मनोरंजन और सोचने का बहाना है, गंभीर सलाह नहीं।",
         tag_game: "पहेली गेम",
-        game_desc: "रॉकेट चलाने वाला छोटा पहेली गेम, हल्के-फुल्के मनोरंजन के लिए। यह डेमो संस्करण है; ज़्यादा लेवल वाला पूरा संस्करण आ रहा है।"
+        game_desc: "रॉकेट चलाने वाला छोटा पहेली गेम, हल्के-फुल्के मनोरंजन के लिए। यह डेमो संस्करण है; ज़्यादा लेवल वाला पूरा संस्करण आ रहा है।",
+        tag_dungeon: "एक्शन रॉगलाइट",
+        dungeon_desc: "हाथ से बनाया गया पिक्सल-आर्ट एक्शन रॉगलाइट। प्रोसीजरली बने सौ तहखानों से लड़ते हुए नीचे उतरिए, हर द्वार पर एक वरदान लीजिए, और हर पाँचवें तल पर बैठे स्वामी से भिड़िए। कोई विज्ञापन नहीं, कोई खरीदारी नहीं, ऑफ़लाइन चलता है।",
+        feat_dungeon_gen: "सौ तल, हर एक जनरेट और जाँचा हुआ",
+        feat_dungeon_touch: "पूरे टच कंट्रोल, गेमपैड और कीबोर्ड",
+        action_dungeon: "गेम देखें"
     },
     ar: {
         page_title: "AIBachKhoa — أدوات ذكاء اصطناعي للعمل والأتمتة",
@@ -465,7 +485,7 @@ const i18n = {
         group_web: "الويب وسطح المكتب",
         group_mobile: "تطبيقات الهاتف",
         showcase_title: "كل ما نبنيه.",
-        showcase_sub: "أحد عشر منتجًا في شريط واحد. اسحب جانبًا أو دعه ينساب وحده.",
+        showcase_sub: "اثنا عشر منتجًا في شريط واحد. اسحب جانبًا أو دعه ينساب وحده.",
         gallery_title: "من داخل التطبيقات.",
         gallery_sub: "لقطات حقيقية من تطبيقاتنا للهواتف.",
         aria_prev: "السابق",
@@ -538,7 +558,12 @@ const i18n = {
         tag_fortune: "قراءة الطالع",
         fortune_desc: "قراءات طالع بمساعدة الذكاء الاصطناعي: تاروت وأوراق وغيرها. للتسلية والتأمل فقط، لا كنصيحة جادّة.",
         tag_game: "لعبة ألغاز",
-        game_desc: "لعبة ألغاز صغيرة تتحكم فيها بصاروخ، للاسترخاء. هذه نسخة تجريبية، والنسخة الكاملة بمراحل أكثر في الطريق."
+        game_desc: "لعبة ألغاز صغيرة تتحكم فيها بصاروخ، للاسترخاء. هذه نسخة تجريبية، والنسخة الكاملة بمراحل أكثر في الطريق.",
+        tag_dungeon: "روغلايت أكشن",
+        dungeon_desc: "لعبة أكشن روغلايت بفن البكسل مصنوعة يدويًا. اشقّ طريقك نزولًا عبر مئة طابق تُولَّد إجرائيًا، وخذ نعمة عند كل بوابة، وواجه السيد المنتظر في كل طابق خامس. بلا إعلانات، بلا مشتريات، وتعمل دون إنترنت.",
+        feat_dungeon_gen: "مئة طابق، كل طابق مُولَّد ومُتحقَّق منه",
+        feat_dungeon_touch: "تحكّم لمسي كامل، مع ذراع التحكم ولوحة المفاتيح",
+        action_dungeon: "استكشف اللعبة"
     },
     pt: {
         page_title: "AIBachKhoa — Ferramentas de IA para o trabalho e a automação",
@@ -572,7 +597,7 @@ const i18n = {
         group_web: "Web e desktop",
         group_mobile: "Apps móveis",
         showcase_title: "Tudo o que construímos.",
-        showcase_sub: "Onze produtos numa só faixa. Arraste para o lado ou deixe correr sozinho.",
+        showcase_sub: "Doze produtos numa só faixa. Arraste para o lado ou deixe correr sozinho.",
         gallery_title: "Por dentro dos apps.",
         gallery_sub: "Telas reais dos nossos aplicativos móveis.",
         aria_prev: "Anterior",
@@ -645,7 +670,12 @@ const i18n = {
         tag_fortune: "Adivinhação",
         fortune_desc: "Leituras da sorte com apoio de IA: tarô, cartas e mais. É entretenimento e um convite à reflexão, nunca conselho sério.",
         tag_game: "Jogo de puzzle",
-        game_desc: "Um pequeno jogo de puzzle em que você controla um foguete, para relaxar. Esta é a versão demo; a completa, com mais fases, está a caminho."
+        game_desc: "Um pequeno jogo de puzzle em que você controla um foguete, para relaxar. Esta é a versão demo; a completa, com mais fases, está a caminho.",
+        tag_dungeon: "Roguelite de ação",
+        dungeon_desc: "Um roguelite de ação em pixel art feito à mão. Desça cortando por cem andares gerados proceduralmente, escolha uma bênção em cada portão e encare o senhor que espera a cada quinto. Sem anúncios, sem compras, joga offline.",
+        feat_dungeon_gen: "Cem andares, todos gerados e verificados",
+        feat_dungeon_touch: "Controles de toque completos, gamepad e teclado",
+        action_dungeon: "Conheça o jogo"
     },
     fr: {
         page_title: "AIBachKhoa — Des outils d'IA pour le travail et l'automatisation",
@@ -679,7 +709,7 @@ const i18n = {
         group_web: "Web et bureau",
         group_mobile: "Applis mobiles",
         showcase_title: "Tout ce que nous construisons.",
-        showcase_sub: "Onze produits sur une seule bande. Faites glisser, ou laissez défiler.",
+        showcase_sub: "Douze produits sur une seule bande. Faites glisser, ou laissez défiler.",
         gallery_title: "À l'intérieur des applis.",
         gallery_sub: "De vrais écrans de nos applications mobiles.",
         aria_prev: "Précédent",
@@ -752,7 +782,12 @@ const i18n = {
         tag_fortune: "Voyance",
         fortune_desc: "Des tirages assistés par IA : tarot, cartes et plus encore. À prendre comme un divertissement et une invitation à réfléchir, jamais comme un conseil sérieux.",
         tag_game: "Jeu de réflexion",
-        game_desc: "Un petit jeu de réflexion où l'on pilote une fusée, pour se détendre. Voici la version démo ; la version complète, avec plus de niveaux, arrive."
+        game_desc: "Un petit jeu de réflexion où l'on pilote une fusée, pour se détendre. Voici la version démo ; la version complète, avec plus de niveaux, arrive.",
+        tag_dungeon: "Roguelite d'action",
+        dungeon_desc: "Un roguelite d'action en pixel art fait main. Taillez-vous un chemin à travers cent étages générés procéduralement, prenez une faveur à chaque porte et affrontez le seigneur qui attend tous les cinq étages. Sans publicité, sans achats, jouable hors ligne.",
+        feat_dungeon_gen: "Cent étages, tous générés et vérifiés",
+        feat_dungeon_touch: "Commandes tactiles complètes, manette et clavier",
+        action_dungeon: "Découvrir le jeu"
     },
     de: {
         page_title: "AIBachKhoa — KI-Werkzeuge für Arbeit und Automatisierung",
@@ -786,7 +821,7 @@ const i18n = {
         group_web: "Web und Desktop",
         group_mobile: "Mobile Apps",
         showcase_title: "Alles, was wir bauen.",
-        showcase_sub: "Elf Produkte in einem Band. Zur Seite ziehen – oder einfach laufen lassen.",
+        showcase_sub: "Zwölf Produkte in einem Band. Zur Seite ziehen – oder einfach laufen lassen.",
         gallery_title: "Ein Blick in die Apps.",
         gallery_sub: "Echte Screens aus unseren Mobile-Apps.",
         aria_prev: "Zurück",
@@ -859,7 +894,12 @@ const i18n = {
         tag_fortune: "Wahrsagen",
         fortune_desc: "Wahrsagerei mit KI-Unterstützung: Tarot, Karten und mehr. Als Unterhaltung und Denkanstoß gedacht, nie als ernsthafter Rat.",
         tag_game: "Puzzlespiel",
-        game_desc: "Ein kleines Puzzlespiel, in dem ihr eine Rakete steuert – zum Abschalten. Das ist die Demo; die Vollversion mit mehr Levels folgt."
+        game_desc: "Ein kleines Puzzlespiel, in dem ihr eine Rakete steuert – zum Abschalten. Das ist die Demo; die Vollversion mit mehr Levels folgt.",
+        tag_dungeon: "Action-Roguelite",
+        dungeon_desc: "Ein handgemachtes Pixel-Art-Action-Roguelite. Kämpft euch durch hundert prozedural erzeugte Tiefen, nehmt an jedem Tor eine Gabe mit und trefft auf jeder fünften Ebene den wartenden Fürsten. Keine Werbung, keine Käufe, offline spielbar.",
+        feat_dungeon_gen: "Hundert Ebenen, jede erzeugt und geprüft",
+        feat_dungeon_touch: "Vollständige Touch-Steuerung, Gamepad und Tastatur",
+        action_dungeon: "Das Spiel ansehen"
     },
     ja: {
         page_title: "AIBachKhoa — 仕事と自動化のための AI ツール",
@@ -893,7 +933,7 @@ const i18n = {
         group_web: "Web・デスクトップ",
         group_mobile: "モバイルアプリ",
         showcase_title: "私たちがつくるすべて。",
-        showcase_sub: "11のプロダクトをひと続きに。横にドラッグしても、自動で流れても。",
+        showcase_sub: "12のプロダクトをひと続きに。横にドラッグしても、自動で流れても。",
         gallery_title: "アプリの中身。",
         gallery_sub: "モバイルアプリの実際の画面です。",
         aria_prev: "前へ",
@@ -966,7 +1006,12 @@ const i18n = {
         tag_fortune: "占い",
         fortune_desc: "AI を使った占い。タロットやカードなどを楽しめます。あくまで娯楽と考えるきっかけであり、真剣な助言ではありません。",
         tag_game: "パズルゲーム",
-        game_desc: "ロケットを操作する小さなパズルゲーム。息抜きにどうぞ。現在はデモ版で、ステージを増やした完全版を準備中です。"
+        game_desc: "ロケットを操作する小さなパズルゲーム。息抜きにどうぞ。現在はデモ版で、ステージを増やした完全版を準備中です。",
+        tag_dungeon: "アクションローグライト",
+        dungeon_desc: "手づくりのドット絵アクションローグライト。自動生成される100層のダンジョンを斬り進み、門ごとに恩恵をひとつ選び、5層ごとに待ち構える領主と対峙します。広告なし、課金なし、オフラインで遊べます。",
+        feat_dungeon_gen: "100層すべてが生成され、到達可能性を検証済み",
+        feat_dungeon_touch: "フルタッチ操作、ゲームパッドとキーボードにも対応",
+        action_dungeon: "ゲームを見る"
     },
     ko: {
         page_title: "AIBachKhoa — 업무와 자동화를 위한 AI 도구",
@@ -1000,7 +1045,7 @@ const i18n = {
         group_web: "웹 · 데스크톱",
         group_mobile: "모바일 앱",
         showcase_title: "우리가 만드는 모든 것.",
-        showcase_sub: "열한 개의 제품을 한 줄에. 옆으로 끌거나, 그대로 흐르게 두세요.",
+        showcase_sub: "열두 개의 제품을 한 줄에. 옆으로 끌거나, 그대로 흐르게 두세요.",
         gallery_title: "앱 속을 들여다보기.",
         gallery_sub: "모바일 앱의 실제 화면입니다.",
         aria_prev: "이전",
@@ -1073,7 +1118,12 @@ const i18n = {
         tag_fortune: "운세",
         fortune_desc: "AI로 보는 운세 — 타로, 카드 등을 즐길 수 있습니다. 진지한 조언이 아니라 재미와 생각거리로 봐 주세요.",
         tag_game: "퍼즐 게임",
-        game_desc: "로켓을 조종하는 작은 퍼즐 게임으로 가볍게 즐겨 보세요. 지금은 데모 버전이며, 레벨을 늘린 정식 버전을 준비 중입니다."
+        game_desc: "로켓을 조종하는 작은 퍼즐 게임으로 가볍게 즐겨 보세요. 지금은 데모 버전이며, 레벨을 늘린 정식 버전을 준비 중입니다.",
+        tag_dungeon: "액션 로그라이트",
+        dungeon_desc: "손으로 빚은 픽셀 아트 액션 로그라이트. 절차적으로 생성되는 100개 층을 베어 내려가며 관문마다 은총을 하나 고르고, 다섯 번째 층마다 기다리는 군주와 맞섭니다. 광고 없음, 결제 없음, 오프라인 플레이.",
+        feat_dungeon_gen: "100개 층 전부 생성되고 검증됨",
+        feat_dungeon_touch: "완전한 터치 조작, 게임패드와 키보드 지원",
+        action_dungeon: "게임 보기"
     },
     ru: {
         page_title: "AIBachKhoa — ИИ-инструменты для работы и автоматизации",
@@ -1107,7 +1157,7 @@ const i18n = {
         group_web: "Веб и десктоп",
         group_mobile: "Мобильные приложения",
         showcase_title: "Всё, что мы создаём.",
-        showcase_sub: "Одиннадцать продуктов в одной ленте. Тяните вбок или просто смотрите.",
+        showcase_sub: "Двенадцать продуктов в одной ленте. Тяните вбок или просто смотрите.",
         gallery_title: "Внутри приложений.",
         gallery_sub: "Реальные экраны наших мобильных приложений.",
         aria_prev: "Назад",
@@ -1180,7 +1230,12 @@ const i18n = {
         tag_fortune: "Гадания",
         fortune_desc: "Гадания с помощью ИИ: таро, карты и не только. Это развлечение и повод задуматься, а не серьёзный совет.",
         tag_game: "Головоломка",
-        game_desc: "Небольшая головоломка с управлением ракетой — чтобы отвлечься. Сейчас это демоверсия, полная с новыми уровнями в работе."
+        game_desc: "Небольшая головоломка с управлением ракетой — чтобы отвлечься. Сейчас это демоверсия, полная с новыми уровнями в работе.",
+        tag_dungeon: "Экшен-рогалик",
+        dungeon_desc: "Пиксельный экшен-рогалик, сделанный вручную. Прорубайтесь вниз через сто процедурно сгенерированных уровней, берите дар у каждых ворот и встречайте владыку, который ждёт на каждом пятом. Без рекламы, без покупок, играет офлайн.",
+        feat_dungeon_gen: "Сто уровней, каждый сгенерирован и проверен",
+        feat_dungeon_touch: "Полное сенсорное управление, геймпад и клавиатура",
+        action_dungeon: "Посмотреть игру"
     },
 
     /* --- Tiếng Việt: tạm ẩn khỏi bộ chọn ngôn ngữ (giữ lại bản dịch) --- */
@@ -1216,7 +1271,7 @@ const i18n = {
         group_web: "Web & máy tính",
         group_mobile: "Ứng dụng di động",
         showcase_title: "Tất cả những gì chúng tôi làm.",
-        showcase_sub: "Mười một sản phẩm trong một dải. Kéo ngang, hoặc để nó tự trôi.",
+        showcase_sub: "Mười hai sản phẩm trong một dải. Kéo ngang, hoặc để nó tự trôi.",
         gallery_title: "Bên trong các ứng dụng.",
         gallery_sub: "Ảnh chụp thật từ các ứng dụng di động của chúng tôi.",
         aria_prev: "Trước",
@@ -1289,7 +1344,12 @@ const i18n = {
         tag_fortune: "Bói toán",
         fortune_desc: "Bói toán có AI hỗ trợ: Tarot, bài Tây, Quan Âm… Chỉ mang tính giải trí và tham khảo, không phải lời khuyên nghiêm túc.",
         tag_game: "Trò chơi giải đố",
-        game_desc: "Trò chơi giải đố điều khiển tên lửa, chơi cho thư giãn. Đây là bản demo; bản đầy đủ với nhiều màn hơn đang được phát triển."
+        game_desc: "Trò chơi giải đố điều khiển tên lửa, chơi cho thư giãn. Đây là bản demo; bản đầy đủ với nhiều màn hơn đang được phát triển.",
+        tag_dungeon: "Roguelite hành động",
+        dungeon_desc: "Game hành động roguelite pixel art làm thủ công. Chém đường xuống một trăm tầng ngục sinh ngẫu nhiên, nhận một ân huệ ở mỗi cổng, và đối mặt lãnh chúa chờ sẵn ở mỗi tầng thứ năm. Không quảng cáo, không mua trong ứng dụng, chơi offline.",
+        feat_dungeon_gen: "Một trăm tầng, tầng nào cũng sinh ra và được chứng minh",
+        feat_dungeon_touch: "Điều khiển cảm ứng đầy đủ, tay cầm và bàn phím",
+        action_dungeon: "Xem chi tiết game"
     }
 };
 

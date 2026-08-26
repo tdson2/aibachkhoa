@@ -10,6 +10,16 @@ app.get('/bksafe', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'bksafe', 'index.html'));
 });
 
+// Clean URLs for the Dungeon of the Fallen Blade pages, for the same
+// reason: no /dungeon-blade -> /dungeon-blade/ redirect on the way in.
+app.get('/dungeon-blade', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'dungeon-blade', 'index.html'));
+});
+
+app.get('/dungeon-blade/policy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'dungeon-blade', 'policy', 'index.html'));
+});
+
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 

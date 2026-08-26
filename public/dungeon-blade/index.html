@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeon of the Fallen Blade — a hundred depths, one blade | AIBachKhoa</title>
+    <meta name="description" content="A hand-made pixel-art action roguelite for Android: a hundred procedurally generated depths, twenty lords, a three-hit sword combo, a bow and a dodge roll. No ads, no purchases, plays offline.">
+    <link rel="canonical" href="https://aibachkhoa.com/dungeon-blade">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dungeon of the Fallen Blade — a hundred depths, one blade">
+    <meta property="og:description" content="Cut down through a hundred procedurally generated depths, take a boon at every gate, and meet the lord waiting on every fifth. Offline pixel roguelite, no ads.">
+    <meta property="og:image" content="https://aibachkhoa.com/assets/games/dungeon-blade/shot-01.png">
+    <meta property="og:url" content="https://aibachkhoa.com/dungeon-blade">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/games/dungeon-blade/icon.png">
+    <link rel="apple-touch-icon" href="/assets/games/dungeon-blade/icon.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/dungeon-blade/dungeon-blade.css">
+</head>
+<body>
+    <a href="#overview" class="skip-link" data-i18n="skip_link">Skip to content</a>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="AIBachKhoa">
+                <img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="/" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="#overview" class="nav-link" data-i18n="nav_overview">Overview</a>
+                <a href="#trailer" class="nav-link" data-i18n="nav_trailer">Trailer</a>
+                <a href="#descent" class="nav-link" data-i18n="nav_descent">The descent</a>
+                <a href="#combat" class="nav-link" data-i18n="nav_combat">Combat</a>
+                <a href="#gallery" class="nav-link" data-i18n="nav_shots">Screenshots</a>
+                <a href="/dungeon-blade/policy" class="nav-link" data-i18n="nav_policy">Privacy</a>
+                <span class="nav-divider" aria-hidden="true"></span>
+                <select id="lang-select" class="lang-select" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+            </div>
+
+            <div class="mobile-controls">
+                <select id="mobile-lang-select" class="lang-select lang-select--compact" data-display="code" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="mobile-theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+                <button class="icon-btn mobile-menu-btn" data-i18n-aria="aria_menu" aria-label="Open menu" id="mobile-btn" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="dg-hero" id="overview">
+        <div class="container">
+            <div class="dg-hero-grid">
+                <div class="dg-hero-copy reveal">
+                    <div class="dg-brandline">
+                        <img src="/assets/games/dungeon-blade/icon.png" alt="" class="dg-brandmark" width="512" height="512">
+                        <div>
+                            <p class="dg-wordmark">Dungeon of the Fallen Blade</p>
+                            <p class="dg-brandsub" data-i18n="hero_kicker">Android · pixel action roguelite</p>
+                        </div>
+                    </div>
+                    <h1 class="dg-hero-title" data-i18n="hero_title">A hundred depths. <em>One blade</em>.</h1>
+                    <p class="dg-hero-sub" data-i18n="hero_sub">A hand-made pixel-art action roguelite. Cut your way down a hundred procedurally generated depths, take a boon at every gate, and meet the lord waiting on every fifth. Every run rebuilds the dungeon from scratch — nothing is memorised, everything is earned.</p>
+                    <div class="dg-hero-actions">
+                        <!-- The Play listing is not published yet. When it goes live, replace
+                             this span with:
+                             <a href="https://play.google.com/store/apps/details?id=com.tdson.dungeonblade"
+                                target="_blank" rel="noopener" class="btn btn-primary">…</a> -->
+                        <span class="dg-soon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.6 2.2 13 11.6l2.6-2.6L5.3 2.6a1.6 1.6 0 0 0-1.7-.4zM3.1 2.7A1.6 1.6 0 0 0 2.8 3.6v16.8c0 .34.1.65.3.9L12.4 12zm13.6 6.9-2.9 2.4 2.9 2.9 3.4-2c.8-.5.8-1.7 0-2.2zM13 12.4 3.6 21.8c.5.4 1.2.5 1.7.2l10.3-6z"/></svg>
+                            <span data-i18n="btn_soon">Coming to Google Play</span>
+                        </span>
+                        <a href="#trailer" class="btn btn-primary" data-i18n="btn_trailer">Watch the trailer</a>
+                        <a href="#gallery" class="btn btn-ghost" data-i18n="btn_shots">See how it plays</a>
+                    </div>
+                    <p class="dg-hero-meta" data-i18n="hero_meta">Application id <code>com.tdson.dungeonblade</code> · landscape, arm64-v8a and armeabi-v7a · English, Tiếng Việt, Español, Français, Deutsch, Português.</p>
+                </div>
+
+                <div class="dg-hero-media reveal">
+                    <div class="dg-shot-frame">
+                        <img src="/assets/games/dungeon-blade/shot-01.png" alt="The title screen of Dungeon of the Fallen Blade" width="1920" height="1080">
+                    </div>
+                </div>
+            </div>
+
+            <div class="dg-stats reveal">
+                <div class="dg-stat"><span class="dg-stat-n">100</span><span class="dg-stat-l" data-i18n="stat_depths">Depths, all generated</span></div>
+                <div class="dg-stat"><span class="dg-stat-n">20</span><span class="dg-stat-l" data-i18n="stat_lords">Named lords, one every fifth</span></div>
+                <div class="dg-stat"><span class="dg-stat-n">8</span><span class="dg-stat-l" data-i18n="stat_boons">Boons to pick between floors</span></div>
+                <div class="dg-stat"><span class="dg-stat-n">6</span><span class="dg-stat-l" data-i18n="stat_langs">Languages</span></div>
+                <div class="dg-stat"><span class="dg-stat-n">0</span><span class="dg-stat-l" data-i18n="stat_zero">Ads, purchases, accounts</span></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= TRAILER ================= -->
+        <section class="dg-section dg-section--tint" id="trailer">
+            <div class="container">
+                <div class="dg-head reveal">
+                    <p class="dg-eyebrow" data-i18n="trailer_eyebrow">Trailer</p>
+                    <h2 class="dg-title" data-i18n="trailer_title">Two minutes <em>of the descent</em>.</h2>
+                    <p class="dg-sub" data-i18n="trailer_sub">Cut from real capture on a phone, scored with an arrangement of the same motifs the game loops in play.</p>
+                </div>
+
+                <!-- Click-to-play: the poster is our own capture and the YouTube
+                     iframe is only created once someone asks for it, so an
+                     ordinary visit loads nothing from a third party. -->
+                <div class="dg-video reveal" id="trailer-player" data-video="k2L-ZMqknHc">
+                    <button type="button" class="dg-video-poster" data-i18n-aria="trailer_play" aria-label="Play the trailer">
+                        <img src="/assets/games/dungeon-blade/shot-06.png" alt="" width="1920" height="1080" loading="lazy">
+                        <span class="dg-video-play" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19 12z"/></svg>
+                        </span>
+                    </button>
+                </div>
+                <p class="dg-video-note reveal">
+                    <a href="https://youtu.be/k2L-ZMqknHc" target="_blank" rel="noopener" data-i18n="trailer_watch">Watch it on YouTube</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= DESCENT ================= -->
+        <section class="dg-section" id="descent">
+            <div class="container">
+                <div class="dg-head reveal">
+                    <p class="dg-eyebrow" data-i18n="descent_eyebrow">The descent</p>
+                    <h2 class="dg-title" data-i18n="descent_title">Twenty acts of five, <em>and a lord at the bottom of each</em>.</h2>
+                    <p class="dg-sub" data-i18n="descent_sub">An act sets the colour of its stone, how often a pit is fire rather than spikes, which music plays and which enemies patrol it. Its first four depths are ordinary warrens; its fifth is an arena holding that act's lord. So a boss waits on depth 5, 10, 15 … 100.</p>
+                </div>
+
+                <div class="dg-acts reveal">
+                    <div class="dg-act"><span class="dg-act-d">1–5</span><span class="dg-act-n">The Forgotten Crypt</span></div>
+                    <div class="dg-act"><span class="dg-act-d">6–10</span><span class="dg-act-n">Halls of Rust</span></div>
+                    <div class="dg-act"><span class="dg-act-d">11–15</span><span class="dg-act-n">The Blood Cistern</span></div>
+                    <div class="dg-act"><span class="dg-act-d">16–20</span><span class="dg-act-n">Emberfall Depths</span></div>
+                    <div class="dg-act"><span class="dg-act-d">21–25</span><span class="dg-act-n">The Drowned Vaults</span></div>
+                    <div class="dg-act"><span class="dg-act-d">26–30</span><span class="dg-act-n">The Marrow Warrens</span></div>
+                    <div class="dg-act"><span class="dg-act-d">31–35</span><span class="dg-act-n">The Ashen Galleries</span></div>
+                    <div class="dg-act"><span class="dg-act-d">36–40</span><span class="dg-act-n">The Sunken Spire</span></div>
+                    <div class="dg-act"><span class="dg-act-d">41–45</span><span class="dg-act-n">The Grinding Works</span></div>
+                    <div class="dg-act"><span class="dg-act-d">46–50</span><span class="dg-act-n">The Hollow Cathedral</span></div>
+                    <div class="dg-act"><span class="dg-act-d">51–55</span><span class="dg-act-n">The Frostbound Silence</span></div>
+                    <div class="dg-act"><span class="dg-act-d">56–60</span><span class="dg-act-n">The Voidlit Reaches</span></div>
+                    <div class="dg-act"><span class="dg-act-d">61–65</span><span class="dg-act-n">The Warlord's Waste</span></div>
+                    <div class="dg-act"><span class="dg-act-d">66–70</span><span class="dg-act-n">The Severed Sanctum</span></div>
+                    <div class="dg-act"><span class="dg-act-d">71–75</span><span class="dg-act-n">The Gilded Ossuary</span></div>
+                    <div class="dg-act"><span class="dg-act-d">76–80</span><span class="dg-act-n">The Dread Furnace</span></div>
+                    <div class="dg-act"><span class="dg-act-d">81–85</span><span class="dg-act-n">The World's Wound</span></div>
+                    <div class="dg-act"><span class="dg-act-d">86–90</span><span class="dg-act-n">The Plague Gardens</span></div>
+                    <div class="dg-act"><span class="dg-act-d">91–95</span><span class="dg-act-n">The Black Procession</span></div>
+                    <div class="dg-act dg-act--last"><span class="dg-act-d">96–100</span><span class="dg-act-n">The Fallen Throne</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= COMBAT ================= -->
+        <section class="dg-section dg-section--tint" id="combat">
+            <div class="container">
+                <div class="dg-head reveal">
+                    <p class="dg-eyebrow" data-i18n="combat_eyebrow">Combat</p>
+                    <h2 class="dg-title" data-i18n="combat_title">Swings with <em>weight</em>.</h2>
+                    <p class="dg-sub" data-i18n="combat_sub">Three ways to answer a room, and a stamina bar that makes you choose between them.</p>
+                </div>
+
+                <div class="dg-grid reveal">
+                    <div class="dg-card">
+                        <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m4 19 3.5-3.5M6 17l11-11 3-3 .5 3.5L18 9 8 19z"/><path d="m14 6 4 4"/></svg></span>
+                        <h3 data-i18n="c_combo_t">A three-hit sword combo</h3>
+                        <p data-i18n="c_combo_d">Chain the swings and the third lands as a heavy finisher, with more reach and more knockback than the two before it. Break the chain and it starts again.</p>
+                    </div>
+                    <div class="dg-card">
+                        <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19 19 5M19 5h-5M19 5v5"/><path d="M6 5c6 1.5 9.5 5 11 11"/></svg></span>
+                        <h3 data-i18n="c_bow_t">A bow for the fights you would rather not walk into</h3>
+                        <p data-i18n="c_bow_d">Arrows cost stamina, so a room cleared at range is a room you enter with nothing left for a roll. The Deep Quiver boon makes the trade worth more.</p>
+                    </div>
+                    <div class="dg-card">
+                        <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16"/><path d="m9.5 9.5 5 5M14.5 9.5l-5 5"/></svg></span>
+                        <h3 data-i18n="c_roll_t">A dodge roll with real invulnerability</h3>
+                        <p data-i18n="c_roll_d">Not a dash with a hopeful hitbox — the roll grants actual i-frames, and costs stamina to use. Rolling through a lord's charge is the game's main defensive move.</p>
+                    </div>
+                    <div class="dg-card">
+                        <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20V7"/><path d="m7 12 5-5 5 5"/><path d="M4 20h16"/></svg></span>
+                        <h3 data-i18n="c_move_t">Movement that reads the room</h3>
+                        <p data-i18n="c_move_d">Hold jump to rise higher, tap again to double jump, and press down with jump to drop through a wooden platform. Every ledge in the dungeon is proved reachable with these alone.</p>
+                    </div>
+                </div>
+
+                <div class="dg-head reveal" style="margin-top: clamp(2.5rem, 5vw, 4rem);">
+                    <h3 class="dg-title" style="font-size: clamp(1.35rem, 2.2vw, 1.8rem);" data-i18n="controls_title">Controls</h3>
+                    <p class="dg-sub" data-i18n="controls_sub">The same bindings the title screen's HOW TO PLAY page lists, and the touch pads carry them on a phone.</p>
+                </div>
+
+                <div class="dg-tablewrap reveal">
+                    <table class="dg-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="th_action">Action</th>
+                                <th data-i18n="th_keyboard">Keyboard</th>
+                                <th data-i18n="th_gamepad">Gamepad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row" data-i18n="k_move">Move</th><td><span class="dg-key">A</span> / <span class="dg-key">D</span> or arrows</td><td data-i18n="g_stick">Left stick / D-pad</td></tr>
+                            <tr><th scope="row" data-i18n="k_jump">Jump (double jump)</th><td><span class="dg-key">Space</span> / <span class="dg-key">Z</span></td><td>A</td></tr>
+                            <tr><th scope="row" data-i18n="k_drop">Drop through platform</th><td><span class="dg-key">S</span> + jump</td><td data-i18n="g_downa">Down + A</td></tr>
+                            <tr><th scope="row" data-i18n="k_attack">Attack (3-hit combo)</th><td><span class="dg-key">J</span> / <span data-i18n="k_lmb">left mouse</span></td><td>X</td></tr>
+                            <tr><th scope="row" data-i18n="k_bow">Bow</th><td><span class="dg-key">K</span> / <span data-i18n="k_rmb">right mouse</span></td><td>Y</td></tr>
+                            <tr><th scope="row" data-i18n="k_roll">Dodge roll (i-frames)</th><td><span class="dg-key">L</span> / <span class="dg-key">Shift</span></td><td>B</td></tr>
+                            <tr><th scope="row" data-i18n="k_potion">Drink potion</th><td><span class="dg-key">Q</span></td><td>LB</td></tr>
+                            <tr><th scope="row" data-i18n="k_use">Interact (chests, gate)</th><td><span class="dg-key">E</span> / <span class="dg-key">Enter</span></td><td>RB</td></tr>
+                            <tr><th scope="row" data-i18n="k_map">Dungeon map</th><td><span class="dg-key">Tab</span></td><td>—</td></tr>
+                            <tr><th scope="row" data-i18n="k_pause">Pause</th><td><span class="dg-key">Esc</span> / <span class="dg-key">P</span></td><td>Start</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= THE DUNGEON ================= -->
+        <section class="dg-section" id="dungeon">
+            <div class="container">
+                <div class="dg-head reveal">
+                    <p class="dg-eyebrow" data-i18n="gen_eyebrow">The dungeon</p>
+                    <h2 class="dg-title" data-i18n="gen_title">A floor is not a corridor — <em>it runs in four directions</em>.</h2>
+                    <p class="dg-sub" data-i18n="gen_sub">The generator lays out a grid of 28×16-tile rooms and wires them together left, right, up and down, then carves each room from an archetype of its own.</p>
+                </div>
+
+                <div class="dg-grid reveal">
+                    <div class="dg-card">
+                        <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h4M6.5 10v4"/></svg></span>
+                        <h3 data-i18n="g_tree_t">Rooms wired in all four directions</h3>
+                        <p data-i18n="g_tree_d">A randomised spanning tree connects every room, weighted towards vertical steps so a depth stacks as much as it spreads. Neighbours on a row get a side door; rooms stacked on each other get a shaft with a drop-through walkway and staggered ledges climbing back up.</p>
+                    </div>
+                    <div class="dg-card">
+                        <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h4l2-5 4 10 2-5h4"/></svg></span>
+                        <h3 data-i18n="g_braid_t">Loops and dead ends, not one route</h3>
+                        <p data-i18n="g_braid_d">A few braided edges are cut between neighbours so a floor is never a single corridor. The rate stays low and climbs slowly with depth — past about a quarter of the pairs a floor stops being a route and becomes open ground.</p>
+                    </div>
+                    <div class="dg-card">
+                        <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v2"/></svg></span>
+                        <h3 data-i18n="g_gate_t">A key, a gate, and an exit that can be anywhere</h3>
+                        <p data-i18n="g_gate_d">The entrance is a random dead end and the exit is the dead end furthest from it — above, below, left or right of where you start. From depth 2 the portal is sealed behind a barred gate whose key waits in another dead end, guarded.</p>
+                    </div>
+                    <div class="dg-card">
+                        <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 14h18"/><path d="m6 14 1.5-3L9 14l1.5-3L12 14l1.5-3L15 14l1.5-3L18 14"/><path d="M3 19h18"/></svg></span>
+                        <h3 data-i18n="g_pit_t">Pits kill, so the generator proves around them</h3>
+                        <p data-i18n="g_pit_d">Falling into spikes or fire is death on the spot, for the player and for anything chasing them. Pits are capped inside a single flat jump, and the validator marks every deadly tile and refuses to route through one.</p>
+                    </div>
+                    <div class="dg-card">
+                        <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6 9 17l-5-5"/></svg></span>
+                        <h3 data-i18n="g_proof_t">Every layout is proved before it is used</h3>
+                        <p data-i18n="g_proof_d">A conservative model of what the player can actually reach — flat and three-tile jumps, no double jump, drop-through platforms, falls, no deadly tiles — checks that the key is reachable with the gate shut, the portal with it open, and that no room is walled off. A layout that does not prove out is re-rolled.</p>
+                    </div>
+                    <div class="dg-card">
+                        <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h14v16l-7-4-7 4z"/><path d="M9 9h6M9 12.5h4"/></svg></span>
+                        <h3 data-i18n="g_audit_t">And every depth is audited for survivability</h3>
+                        <p data-i18n="g_audit_d">A second pass walks all hundred depths simulating a clean run and flags a floor that would drag, kill in under three hits, hold more than two enemies a room, or leave a gap wider than one flat jump. A third hands each depth to a bot that plays it through the real input actions and reports whether it can be finished.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= LORDS ================= -->
+        <section class="dg-section dg-section--tint" id="lords">
+            <div class="container">
+                <div class="dg-head reveal">
+                    <p class="dg-eyebrow" data-i18n="lord_eyebrow">The lords</p>
+                    <h2 class="dg-title" data-i18n="lord_title">A lord is not <em>a big orc with more health</em>.</h2>
+                    <p class="dg-sub" data-i18n="lord_sub">Each carries a short list of moves with their own cooldowns and range bands, and takes the first one that is off cooldown and in range. They break into a second phase at half health; most break again at a third, coming back faster, throwing longer volleys and calling deeper reinforcements.</p>
+                </div>
+
+                <div class="dg-tablewrap reveal">
+                    <table class="dg-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="th_move">Move</th>
+                                <th data-i18n="th_does">What it does</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row" data-i18n="m_leap">Leap</th><td data-i18n="m_leap_d">Crouches, then jumps onto where you are standing and lands in a shockwave. This is the answer to a ledge: a lord that cannot walk to you arrives anyway.</td></tr>
+                            <tr><th scope="row" data-i18n="m_charge">Charge</th><td data-i18n="m_charge_d">Winds up, then dashes the length of the arena with its hitbox live. Running it into a wall staggers it — the miss is your window.</td></tr>
+                            <tr><th scope="row" data-i18n="m_quake">Quake</th><td data-i18n="m_quake_d">The longest tell in the game, because it is the widest hit in the game: it clears five body-widths of ground on both sides.</td></tr>
+                            <tr><th scope="row" data-i18n="m_fan">Fan</th><td data-i18n="m_fan_d">A wall of bolts across an arc. Sidestepping alone will not clear it.</td></tr>
+                            <tr><th scope="row" data-i18n="m_mortar">Mortar</th><td data-i18n="m_mortar_d">Lobbed bolts that arc over cover and come down where you are standing.</td></tr>
+                            <tr><th scope="row" data-i18n="m_contact">Contact</th><td data-i18n="m_contact_d">Standing inside the biggest lords costs health on its own.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="dg-grid reveal" style="margin-top: 1.1rem;">
+                    <div class="dg-card">
+                        <h3 data-i18n="l_rhythm_t">A fight you cannot wait out</h3>
+                        <p data-i18n="l_rhythm_d">A lord's moves are staggered at the start, so it does not dump its whole kit in the opening four seconds. A shared gap between any two moves keeps the kit a rhythm rather than one unbroken pin. And every cooldown shortens the longer the fight runs, so turtling on a ledge just brings the leap sooner.</p>
+                    </div>
+                    <div class="dg-card">
+                        <h3 data-i18n="l_size_t">Size is derived from health</h3>
+                        <p data-i18n="l_size_d">How big a thing looks is how much punishment it will take, and that comparison holds across sprite sheets drawn at different resolutions. Twenty lords are built from seven family kits crossed with a per-boss spec: size, colour, health, reach, volley and what it roars when it is hurt.</p>
+                    </div>
+                    <div class="dg-card">
+                        <h3 data-i18n="l_arena_t">Four arena patterns, checked by hand</h3>
+                        <p data-i18n="l_arena_d">Arenas come in four ledge patterns of increasing length, so twenty fights do not all happen in the same hall repainted. An arena skips the ordinary validator, so every ledge tier is checked against the 6.08 tiles a double jump actually clears.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BOONS ================= -->
+        <section class="dg-section" id="boons">
+            <div class="container">
+                <div class="dg-head reveal">
+                    <p class="dg-eyebrow" data-i18n="boon_eyebrow">Boons</p>
+                    <h2 class="dg-title" data-i18n="boon_title">One choice <em>at every gate</em>.</h2>
+                    <p class="dg-sub" data-i18n="boon_sub">Level up as you kill, then take a boon on the way down. Three are offered, one is yours — and the deeper you go, the more it takes.</p>
+                </div>
+
+                <div class="dg-boons reveal">
+                    <div class="dg-boon"><span class="dg-boon-n">Vitality</span><span class="dg-boon-d" data-i18n="b_vit">+25 max HP and heal fully</span></div>
+                    <div class="dg-boon"><span class="dg-boon-n">Might</span><span class="dg-boon-d" data-i18n="b_might">+4 attack power</span></div>
+                    <div class="dg-boon"><span class="dg-boon-n">Swiftness</span><span class="dg-boon-d" data-i18n="b_swift">+12% speed and +20 stamina</span></div>
+                    <div class="dg-boon"><span class="dg-boon-n">Keen Edge</span><span class="dg-boon-d" data-i18n="b_keen">+10% critical chance</span></div>
+                    <div class="dg-boon"><span class="dg-boon-n">Blood Pact</span><span class="dg-boon-d" data-i18n="b_leech">Heal 8% of the damage you deal</span></div>
+                    <div class="dg-boon"><span class="dg-boon-n">Iron Ward</span><span class="dg-boon-d" data-i18n="b_ward">Take 12% less damage</span></div>
+                    <div class="dg-boon"><span class="dg-boon-n">Deep Quiver</span><span class="dg-boon-d" data-i18n="b_quiver">+60% arrow damage</span></div>
+                    <div class="dg-boon"><span class="dg-boon-n">Alchemy</span><span class="dg-boon-d" data-i18n="b_flask">+2 potions and stronger heals</span></div>
+                </div>
+
+                <div class="dg-note reveal" style="margin-top: 1.4rem; max-width: 52rem;">
+                    <p data-i18n="boon_death"><strong>Death ends the run.</strong> There is no checkpoint and nothing respawns where you fell — the results screen's only way back into the dungeon resets you to depth one with the levels, boons and gold gone.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PHONE ================= -->
+        <section class="dg-section dg-section--tint" id="phone">
+            <div class="container">
+                <div class="dg-split">
+                    <div class="reveal">
+                        <p class="dg-eyebrow" data-i18n="phone_eyebrow">Built for a phone</p>
+                        <h2 class="dg-title" data-i18n="phone_title">Touch controls that <em>hold a direction and swing at once</em>.</h2>
+                        <p class="dg-sub" style="margin-bottom: 1.8rem;" data-i18n="phone_sub">A floating analogue stick on the left half of the screen and a compact action cluster in the bottom-right corner: attack, jump, bow, dodge, potion, plus a <em>use</em> pad that only appears next to a chest or a gate.</p>
+                        <ul class="dg-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_multi"><strong>Every pad is multi-touch.</strong> Hold a direction, attack and jump at the same moment. The touch targets are about 30% larger than the art so they stay easy to hit.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_wide"><strong>A tall screen gets a wider view, not black bars.</strong> The 384×216 viewport fixes its height and grows its width to fill the device, and the HUD re-anchors itself on rotation.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_pixel"><strong>Whole pixels on real hardware.</strong> 1920×1080 is exactly 5× the canvas, so on a 2220×1080 phone the art lands on whole pixels with no resampling.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_auto"><strong>On automatically, and switchable.</strong> The pads turn on for Android, iOS or anything reporting a touchscreen; <em>Options → Touch pad</em> cycles auto / on / off. Gamepads and keyboards work throughout.</span></li>
+                        </ul>
+                    </div>
+                    <div class="reveal">
+                        <div class="dg-shot-frame">
+                            <img src="/assets/games/dungeon-blade/shot-02.png" alt="On-screen controls during a fight on Depth II" width="1920" height="1080" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GALLERY ================= -->
+        <section class="dg-section" id="gallery">
+            <div class="container">
+                <div class="dg-head reveal">
+                    <p class="dg-eyebrow" data-i18n="gal_eyebrow">Screenshots</p>
+                    <h2 class="dg-title" data-i18n="gal_title">Straight captures, <em>no mock-ups</em>.</h2>
+                    <p class="dg-sub" data-i18n="gal_sub">Every frame here comes off the running build at 1920×1080 — five times the game's own canvas, so the pixels stay square.</p>
+                </div>
+
+                <div class="dg-gal reveal">
+                    <div>
+                        <div class="dg-gal-stage">
+                            <img id="gal-img" src="/assets/games/dungeon-blade/shot-01.png" alt="Dungeon of the Fallen Blade screenshot" width="1920" height="1080" loading="lazy">
+                        </div>
+                        <div class="dg-gal-cap">
+                            <p class="dg-gal-cap-t" id="gal-title">The title screen</p>
+                            <p class="dg-gal-cap-d" id="gal-cap">A branded intro clip plays first; any key, click or tap skips it. The deepest descent and the run count sit under the menu.</p>
+                        </div>
+                    </div>
+                    <div class="dg-gal-tabs" role="tablist" data-i18n-aria="gal_title" aria-label="Screenshots">
+                        <button type="button" class="dg-gal-tab is-active" data-shot="shot-01" data-key="s1" role="tab" aria-selected="true" data-i18n="s1_title">The title screen</button>
+                        <button type="button" class="dg-gal-tab" data-shot="shot-02" data-key="s2" role="tab" aria-selected="false" data-i18n="s2_title">The three-hit combo</button>
+                        <button type="button" class="dg-gal-tab" data-shot="shot-03" data-key="s3" role="tab" aria-selected="false" data-i18n="s3_title">A floor built fresh</button>
+                        <button type="button" class="dg-gal-tab" data-shot="shot-04" data-key="s4" role="tab" aria-selected="false" data-i18n="s4_title">Rolling through a hit</button>
+                        <button type="button" class="dg-gal-tab" data-shot="shot-08" data-key="s5" role="tab" aria-selected="false" data-i18n="s5_title">A depth announces itself</button>
+                        <button type="button" class="dg-gal-tab" data-shot="shot-07" data-key="s6" role="tab" aria-selected="false" data-i18n="s6_title">Choosing a boon</button>
+                        <button type="button" class="dg-gal-tab" data-shot="shot-06" data-key="s7" role="tab" aria-selected="false" data-i18n="s7_title">An arena, and a lord</button>
+                        <button type="button" class="dg-gal-tab" data-shot="shot-05" data-key="s8" role="tab" aria-selected="false" data-i18n="s8_title">The second phase</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= UNDER THE HOOD ================= -->
+        <section class="dg-section dg-section--tint" id="build">
+            <div class="container">
+                <div class="dg-head reveal">
+                    <p class="dg-eyebrow" data-i18n="hood_eyebrow">Under the hood</p>
+                    <h2 class="dg-title" data-i18n="hood_title">Built in Godot, <em>drawn by code</em>.</h2>
+                    <p class="dg-sub" data-i18n="hood_sub">Godot 4.7, GDScript, the GL Compatibility renderer, and a 384×216 canvas that scales by whole pixels.</p>
+                </div>
+
+                <div class="dg-grid reveal">
+                    <div class="dg-card">
+                        <h3 data-i18n="h_gen_t">Almost every asset is generated</h3>
+                        <p data-i18n="h_gen_d">The tileset, props, parallax backgrounds, combat effects, HUD chrome, touch pads, the bitmap font and all the audio come out of Python generators — 29 sound effects and six music loops synthesised from oscillators rather than sampled. Only the character sprite sheets and the arrow are drawn art.</p>
+                    </div>
+                    <div class="dg-card">
+                        <h3 data-i18n="h_scene_t">Almost no scene files</h3>
+                        <p data-i18n="h_scene_d">The whole game is one node with a script. The TileSet, SpriteFrames, collision shapes and UI are all built at runtime, so there is nothing to keep in sync between the editor and the code.</p>
+                    </div>
+                    <div class="dg-card">
+                        <h3 data-i18n="h_font_t">A 5×7 font that carries Vietnamese</h3>
+                        <p data-i18n="h_font_d">Accented glyphs are composed from a base letter plus combining marks on a 7×13 canvas rather than drawn by hand, so a capital with two marks above it fits. A checker measures every translated string against the box the UI gives it, using the real font metrics, and fails the build if one would not fit.</p>
+                    </div>
+                    <div class="dg-card">
+                        <h3 data-i18n="h_lang_t">Six languages, English as the base</h3>
+                        <p data-i18n="h_lang_d">English, Tiếng Việt, Español, Français, Deutsch and Português. English holds every key and anything a translation is missing falls back to it. Labels step down through four baked font sizes to fit their box.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= NO STRINGS ================= -->
+        <section class="dg-section" id="privacy">
+            <div class="container">
+                <div class="dg-split">
+                    <div class="reveal">
+                        <p class="dg-eyebrow" data-i18n="ns_eyebrow">No strings</p>
+                        <h2 class="dg-title" data-i18n="ns_title">Nothing to buy, <em>nothing to sign into</em>.</h2>
+                        <p class="dg-sub" style="margin-bottom: 1.8rem;" data-i18n="ns_sub">The game runs entirely on the device. Settings and the best-depth record live in the app's own save file, and uninstalling the app takes them with it.</p>
+                        <ul class="dg-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ns_ads"><strong>No ads.</strong> None anywhere in the game, and no ad network in the build.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ns_iap"><strong>No in-app purchases.</strong> The whole hundred depths ship in the download.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ns_acct"><strong>No account and no sign-in.</strong> Everything is available without credentials.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ns_offline"><strong>Plays offline.</strong> No third-party SDK collects anything, and nothing is stored on a server.</span></li>
+                        </ul>
+                        <p style="margin-top: 1.8rem;">
+                            <a href="/dungeon-blade/policy" class="btn btn-primary" data-i18n="ns_readpolicy">Read the privacy policy</a>
+                        </p>
+                    </div>
+                    <div class="reveal">
+                        <div class="dg-faq">
+                            <details class="dg-faq-item" open>
+                                <summary data-i18n="faq1_q">Which Android versions does it run on?</summary>
+                                <p data-i18n="faq1_a">Android 7.0 and up, on arm64-v8a and armeabi-v7a. Google Play splits the bundle per device, so a phone downloads roughly a third of the whole build. It is verified on a Galaxy S8+ at 2220×1080, which is exactly 5× the game's canvas.</p>
+                            </details>
+                            <details class="dg-faq-item">
+                                <summary data-i18n="faq2_q">Does it need an internet connection?</summary>
+                                <p data-i18n="faq2_a">No. Nothing in the game talks to a network — there is no leaderboard, no cloud save and no analytics. Put the phone in airplane mode and it plays exactly the same.</p>
+                            </details>
+                            <details class="dg-faq-item">
+                                <summary data-i18n="faq3_q">Is there a save between runs?</summary>
+                                <p data-i18n="faq3_a">Only your settings and the deepest depth you have reached. A run itself has no checkpoint: death resets you to depth one with the levels, boons and gold gone. That is the roguelite part.</p>
+                            </details>
+                            <details class="dg-faq-item">
+                                <summary data-i18n="faq4_q">Can I play it with a gamepad, or on a desktop?</summary>
+                                <p data-i18n="faq4_a">Yes. Keyboard and gamepad bindings are first-class, and the on-screen pads can be forced off under <em>Options → Touch pad</em>. The project runs on the GL Compatibility renderer at a base viewport that scales by whole pixels, so it stays crisp on a handheld or a desktop.</p>
+                            </details>
+                            <details class="dg-faq-item">
+                                <summary data-i18n="faq5_q">How violent is it?</summary>
+                                <p data-i18n="faq5_a">Fantasy violence with pixel-art blood effects, and nothing else sensitive. That lands around ESRB Teen / PEGI 12 / IARC 12+, and 13+ is the natural audience.</p>
+                            </details>
+                            <details class="dg-faq-item">
+                                <summary data-i18n="faq6_q">Where can I get a build right now?</summary>
+                                <p data-i18n="faq6_a">The Play listing is still in review. Until it is live, ask through the contact details on the AIBachKhoa home page and we will send you an APK to sideload.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="dg-cta">
+            <div class="container dg-cta-inner reveal">
+                <h2 class="cta-title" data-i18n="cta_title">The blade fell a long way down.</h2>
+                <div class="dg-cta-actions">
+                    <a href="#gallery" class="btn btn-primary" data-i18n="btn_shots">See how it plays</a>
+                    <a href="/dungeon-blade/policy" class="btn btn-ghost" data-i18n="nav_policy">Privacy policy</a>
+                    <a href="/#contact" class="btn btn-ghost" data-i18n="btn_contact">Ask about a build</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo"><img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span></a>
+                <p data-i18n="footer_desc">Building practical AI tools for developers and businesses.</p>
+                <div class="footer-contact">
+                    <p class="footer-contact-name">Trần Đức Sơn</p>
+                    <a href="mailto:tdson278@gmail.com">tdson278@gmail.com</a>
+                    <a href="tel:+84343185566">+84 343 185 566</a>
+                    <p class="footer-contact-apps">
+                        <a href="https://zalo.me/84343185566" target="_blank" rel="noopener">Zalo</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://wa.me/84343185566" target="_blank" rel="noopener">WhatsApp</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://www.linkedin.com/in/son-tran-458b24158/" target="_blank" rel="noopener">LinkedIn</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://www.upwork.com/freelancers/~0113b97260ff6eb129" target="_blank" rel="noopener">Upwork</a>
+                    </p>
+                </div>
+            </div>
+            <nav class="footer-col" data-i18n-aria="footer_game" aria-label="Dungeon of the Fallen Blade">
+                <h4 data-i18n="footer_game">The game</h4>
+                <a href="#overview" data-i18n="nav_overview">Overview</a>
+                <a href="#trailer" data-i18n="nav_trailer">Trailer</a>
+                <a href="#descent" data-i18n="nav_descent">The descent</a>
+                <a href="#combat" data-i18n="nav_combat">Combat</a>
+                <a href="#gallery" data-i18n="nav_shots">Screenshots</a>
+                <a href="/dungeon-blade/policy" data-i18n="nav_policy">Privacy</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_prod" aria-label="Other products">
+                <h4 data-i18n="footer_prod">Other products</h4>
+                <a href="/bksafe">BKSafe</a>
+                <a href="https://itask.aibachkhoa.com/plans" target="_blank" rel="noopener">iTask</a>
+                <a href="https://crew.aibachkhoa.com" target="_blank" rel="noopener">CrewAI</a>
+                <a href="https://crewaiplatform.aibachkhoa.com" target="_blank" rel="noopener">CrewAI Platform</a>
+                <a href="https://crewchat.aibachkhoa.com" target="_blank" rel="noopener">CrewChat</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_comp" aria-label="Company">
+                <h4 data-i18n="footer_comp">Company</h4>
+                <a href="/#about" data-i18n="footer_about">About</a>
+                <a href="/#services" data-i18n="footer_services">Services</a>
+                <a href="/#contact" data-i18n="footer_contact">Contact</a>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AIBachKhoa</p>
+            <p data-i18n="footer_rights">All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/dungeon-blade/dungeon-blade.js"></script>
+</body>
+</html>

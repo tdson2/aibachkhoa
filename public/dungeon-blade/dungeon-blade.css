@@ -1,0 +1,614 @@
+/* =========================================================
+   Dungeon of the Fallen Blade product page.
+   Rides on ../style.css for chrome (nav, footer, buttons, container).
+   Adds the game's own palette — torch gold on crypt violet — over
+   the site's orange brand, the same way bksafe.css adds its green.
+   ========================================================= */
+
+:root[data-theme="light"] {
+    --dg: #b4801a;
+    --dg-ink: #8a5f0b;
+    --dg-soft: rgba(214, 160, 44, 0.13);
+    --dg-line: rgba(214, 160, 44, 0.30);
+    --dg-glow: rgba(214, 160, 44, 0.16);
+    --dg-blood: #a8332f;
+    --dg-chrome: #17121c;
+    --dg-stone: #f6efe4;
+}
+
+:root[data-theme="dark"] {
+    --dg: #f0c14b;
+    --dg-ink: #f7d788;
+    --dg-soft: rgba(240, 193, 75, 0.14);
+    --dg-line: rgba(240, 193, 75, 0.28);
+    --dg-glow: rgba(240, 193, 75, 0.10);
+    --dg-blood: #e05a52;
+    --dg-chrome: #0a070d;
+    --dg-stone: #191320;
+}
+
+/* ---------- Hero ---------- */
+.dg-hero {
+    position: relative;
+    padding: calc(68px + clamp(3rem, 7vw, 5.5rem)) 0 clamp(3.5rem, 7vw, 5.5rem);
+    background:
+        radial-gradient(46% 40% at 10% 0%, var(--dg-glow), transparent 68%),
+        radial-gradient(48% 44% at 90% 14%, var(--hero-glow), transparent 70%);
+}
+
+.dg-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    align-items: center;
+}
+
+.dg-brandline { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1.5rem; }
+.dg-brandmark {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    /* pixel art — never let the browser smooth it */
+    image-rendering: pixelated;
+    background: var(--dg-chrome);
+    box-shadow: 0 12px 30px -14px rgba(0, 0, 0, 0.55);
+}
+.dg-wordmark {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1.15;
+}
+.dg-brandsub {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dg-ink);
+}
+
+.dg-hero-title {
+    font-size: clamp(2.2rem, 4.4vw, 3.7rem);
+    font-weight: 700;
+    margin-bottom: 1.15rem;
+}
+.dg-hero-title em { font-style: normal; color: var(--dg-ink); }
+
+.dg-hero-sub {
+    font-size: clamp(1rem, 1.25vw, 1.12rem);
+    color: var(--text-muted);
+    max-width: 34rem;
+    margin-bottom: 1.8rem;
+}
+
+.dg-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem; }
+
+/* The Play listing is not live yet, so the store button is a state, not
+   a link. Swap this span for an <a class="btn btn-primary"> when it is. */
+.dg-soon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.72rem 1.15rem;
+    border-radius: 8px;
+    border: 1px dashed var(--dg-line);
+    background: var(--dg-soft);
+    color: var(--dg-ink);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.dg-soon svg { width: 18px; height: 18px; flex: none; }
+
+.dg-hero-meta { font-size: 0.85rem; color: var(--text-muted); }
+
+.dg-hero-media { position: relative; }
+.dg-shot-frame {
+    position: relative;
+    border-radius: 16px;
+    padding: 8px;
+    border: 1px solid var(--border-strong);
+    background:
+        radial-gradient(80% 60% at 50% 0%, var(--dg-soft), transparent 72%),
+        var(--surface-2);
+    box-shadow: var(--shadow);
+}
+.dg-shot-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    image-rendering: pixelated;
+}
+
+/* ---------- Trailer ---------- */
+.dg-video {
+    position: relative;
+    max-width: 62rem;
+    border-radius: 16px;
+    padding: 8px;
+    border: 1px solid var(--border-strong);
+    background:
+        radial-gradient(80% 60% at 50% 0%, var(--dg-soft), transparent 72%),
+        var(--surface);
+    box-shadow: var(--shadow);
+}
+
+/* the poster is a button so it is reachable by keyboard before the
+   iframe exists; it is swapped out for the real player on click */
+.dg-video-poster {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--dg-chrome);
+    cursor: pointer;
+    line-height: 0;
+}
+.dg-video-poster img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    image-rendering: pixelated;
+    transition: transform 0.4s ease, filter 0.3s ease;
+    filter: brightness(0.82);
+}
+.dg-video-poster:hover img { transform: scale(1.02); filter: brightness(0.95); }
+
+.dg-video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: var(--dg);
+    color: #17120a;
+    box-shadow: 0 14px 34px -12px rgba(0, 0, 0, 0.7);
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+.dg-video-play svg { width: 34px; height: 34px; margin-inline-start: 3px; }
+.dg-video-poster:hover .dg-video-play { transform: translate(-50%, -50%) scale(1.07); }
+
+/* once playing, the iframe fills the same box */
+.dg-video iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+    border-radius: 10px;
+    /* dark ground so there is no white flash while the player loads */
+    background: var(--dg-chrome);
+}
+
+.dg-video-note { margin-top: 0.9rem; font-size: 0.88rem; color: var(--text-muted); }
+.dg-video-note a { color: var(--dg-ink); text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---------- Stat strip ---------- */
+.dg-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1px;
+    margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--border);
+}
+.dg-stat { background: var(--surface); padding: 1.3rem 1.2rem; }
+.dg-stat-n {
+    display: block;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(1.6rem, 2.6vw, 2.15rem);
+    font-weight: 700;
+    color: var(--dg-ink);
+    line-height: 1.1;
+}
+.dg-stat-l {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* ---------- Section shell ---------- */
+.dg-section { padding: clamp(3.5rem, 7vw, 6rem) 0; }
+.dg-section--tint { background: var(--surface-2); }
+
+.dg-head { max-width: 46rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.dg-eyebrow {
+    display: inline-block;
+    padding: 0.38rem 0.8rem;
+    margin-bottom: 1.1rem;
+    border-radius: 999px;
+    border: 1px solid var(--dg-line);
+    background: var(--dg-soft);
+    color: var(--dg-ink);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.dg-title {
+    font-size: clamp(1.75rem, 3.2vw, 2.6rem);
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+}
+.dg-title em { font-style: normal; color: var(--dg-ink); }
+.dg-sub { color: var(--text-muted); font-size: clamp(0.98rem, 1.15vw, 1.08rem); }
+
+/* ---------- Feature cards ---------- */
+.dg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.1rem;
+}
+.dg-card {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.dg-card:hover { transform: translateY(-3px); border-color: var(--dg-line); }
+.dg-card-ico {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background: var(--dg-soft);
+    color: var(--dg-ink);
+}
+.dg-card-ico svg { width: 21px; height: 21px; }
+.dg-card h3 { font-size: 1.06rem; font-weight: 600; margin-bottom: 0.5rem; }
+.dg-card p { font-size: 0.93rem; color: var(--text-muted); }
+
+/* ---------- Acts ladder ---------- */
+.dg-acts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 0.75rem;
+}
+.dg-act {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    border-inline-start: 3px solid var(--dg-line);
+    border-radius: 10px;
+    background: var(--surface);
+}
+.dg-act-d {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+.dg-act-n { font-size: 0.92rem; font-weight: 500; }
+/* the twentieth act is the one the run ends on */
+.dg-act--last { border-inline-start-color: var(--dg-blood); }
+.dg-act--last .dg-act-n { color: var(--dg-ink); font-weight: 600; }
+
+/* ---------- Tables (controls, boss moves, boons) ---------- */
+.dg-tablewrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+}
+.dg-table { width: 100%; border-collapse: collapse; min-width: 34rem; }
+.dg-table th,
+.dg-table td {
+    padding: 0.85rem 1.1rem;
+    text-align: start;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.93rem;
+}
+.dg-table thead th {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: var(--surface-2);
+}
+.dg-table tbody tr:last-child th,
+.dg-table tbody tr:last-child td { border-bottom: 0; }
+.dg-table tbody th { font-weight: 600; white-space: nowrap; }
+.dg-table td { color: var(--text-muted); }
+.dg-key {
+    display: inline-block;
+    padding: 0.12rem 0.45rem;
+    border: 1px solid var(--border-strong);
+    border-bottom-width: 2px;
+    border-radius: 5px;
+    background: var(--surface-2);
+    color: var(--text);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8rem;
+}
+
+/* ---------- Boons ---------- */
+.dg-boons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+    gap: 0.75rem;
+}
+.dg-boon {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+}
+.dg-boon-n {
+    display: block;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dg-ink);
+}
+.dg-boon-d { display: block; margin-top: 0.25rem; font-size: 0.88rem; color: var(--text-muted); }
+
+/* ---------- Screenshot gallery ---------- */
+.dg-gal {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    gap: 1.5rem;
+    align-items: start;
+}
+.dg-gal-stage {
+    border-radius: 16px;
+    padding: 8px;
+    border: 1px solid var(--border-strong);
+    background:
+        radial-gradient(80% 60% at 50% 0%, var(--dg-soft), transparent 72%),
+        var(--surface-2);
+}
+.dg-gal-stage img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    image-rendering: pixelated;
+}
+.dg-gal-cap { margin-top: 0.9rem; padding: 0 0.3rem; }
+.dg-gal-cap-t { font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 600; }
+.dg-gal-cap-d { font-size: 0.9rem; color: var(--text-muted); }
+
+.dg-gal-tabs { display: flex; flex-direction: column; gap: 0.4rem; }
+.dg-gal-tab {
+    padding: 0.6rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--surface);
+    color: var(--text-muted);
+    font: inherit;
+    font-size: 0.88rem;
+    text-align: start;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+.dg-gal-tab:hover { color: var(--text); border-color: var(--border-strong); }
+.dg-gal-tab.is-active {
+    border-color: var(--dg-line);
+    background: var(--dg-soft);
+    color: var(--dg-ink);
+    font-weight: 600;
+}
+
+/* ---------- Split: pitch + list ---------- */
+.dg-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2rem, 4vw, 3.5rem);
+    align-items: center;
+}
+.dg-list { display: grid; gap: 0.9rem; }
+.dg-list li { display: flex; gap: 0.7rem; font-size: 0.95rem; color: var(--text-muted); }
+.dg-list svg { width: 19px; height: 19px; flex: none; margin-top: 0.15rem; color: var(--dg-ink); }
+.dg-list strong { color: var(--text); font-weight: 600; }
+
+/* ---------- FAQ ---------- */
+.dg-faq { display: grid; gap: 0.7rem; max-width: 52rem; }
+.dg-faq-item {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    padding: 0.2rem 1.15rem;
+}
+.dg-faq-item summary {
+    padding: 0.95rem 0;
+    font-weight: 600;
+    font-size: 0.98rem;
+    cursor: pointer;
+    list-style: none;
+}
+.dg-faq-item summary::-webkit-details-marker { display: none; }
+.dg-faq-item summary::after {
+    content: "+";
+    float: inline-end;
+    color: var(--dg-ink);
+    font-weight: 400;
+}
+.dg-faq-item[open] summary::after { content: "\2212"; }
+.dg-faq-item p { padding-bottom: 1rem; font-size: 0.93rem; color: var(--text-muted); }
+.dg-faq-item code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.85em;
+    padding: 0.1rem 0.35rem;
+    border-radius: 5px;
+    background: var(--surface-2);
+}
+
+/* ---------- CTA ---------- */
+.dg-cta {
+    padding: clamp(3rem, 6vw, 5rem) 0;
+    background:
+        radial-gradient(58% 100% at 50% 0%, var(--dg-glow), transparent 72%),
+        var(--bg);
+    border-top: 1px solid var(--border);
+}
+.dg-cta-inner { text-align: center; }
+.dg-cta-inner .cta-title { margin-bottom: 1.5rem; }
+.dg-cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; }
+
+/* ---------- Policy page ---------- */
+.dg-policy { padding: calc(68px + clamp(2.5rem, 6vw, 4.5rem)) 0 clamp(3rem, 6vw, 5rem); }
+.dg-policy-head { max-width: 52rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.dg-policy-stamp {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.dg-policy-body { max-width: 52rem; }
+.dg-policy-body h2 {
+    font-size: clamp(1.25rem, 2.1vw, 1.6rem);
+    font-weight: 700;
+    margin: 2.4rem 0 0.85rem;
+    padding-top: 2.4rem;
+    border-top: 1px solid var(--border);
+}
+.dg-policy-body h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.dg-policy-body h3 {
+    font-size: 1.02rem;
+    font-weight: 600;
+    margin: 1.6rem 0 0.6rem;
+}
+.dg-policy-body p { margin-bottom: 0.9rem; color: var(--text-muted); font-size: 0.96rem; }
+.dg-policy-body ul { margin: 0 0 1.1rem; padding: 0; display: grid; gap: 0.5rem; }
+.dg-policy-body li {
+    position: relative;
+    padding-inline-start: 1.2rem;
+    color: var(--text-muted);
+    font-size: 0.96rem;
+}
+.dg-policy-body li::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0.62em;
+    width: 6px;
+    height: 6px;
+    border-radius: 2px;
+    background: var(--dg-line);
+}
+.dg-policy-body strong { color: var(--text); font-weight: 600; }
+.dg-policy-body a { color: var(--dg-ink); text-decoration: underline; text-underline-offset: 2px; }
+
+.dg-note {
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 1.4rem;
+    border: 1px solid var(--dg-line);
+    border-radius: 12px;
+    background: var(--dg-soft);
+}
+.dg-note p { margin: 0; color: var(--text); font-size: 0.93rem; }
+
+.dg-toc {
+    padding: 1.25rem 1.4rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+}
+.dg-toc h2 {
+    all: unset;
+    display: block;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+}
+.dg-toc ol {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: 0.35rem 1.2rem;
+    counter-reset: toc;
+}
+/* hanging number, so a two-line entry keeps its digits on the first line */
+.dg-toc li {
+    counter-increment: toc;
+    position: relative;
+    padding-inline-start: 1.7rem;
+    font-size: 0.9rem;
+}
+.dg-toc li::before {
+    content: counter(toc) ".";
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    width: 1.4rem;
+    text-align: end;
+    color: var(--text-muted);
+}
+.dg-toc a { color: var(--text); }
+.dg-toc a:hover { color: var(--dg-ink); }
+
+.dg-contact-card {
+    display: grid;
+    gap: 0.45rem;
+    padding: 1.35rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+}
+.dg-contact-card dt {
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+.dg-contact-card dd { margin: 0 0 0.6rem; font-size: 0.96rem; }
+.dg-contact-card dd:last-child { margin-bottom: 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+    .dg-hero-grid,
+    .dg-split { grid-template-columns: 1fr; }
+    .dg-hero-media { order: -1; }
+    .dg-gal { grid-template-columns: 1fr; }
+    .dg-gal-tabs { flex-direction: row; flex-wrap: wrap; }
+    .dg-gal-tab { flex: 1 1 8rem; }
+}
+
+@media (max-width: 640px) {
+    .dg-brandmark { width: 50px; height: 50px; }
+    .dg-stat { padding: 1.05rem 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dg-card, .dg-gal-tab { transition: none; }
+    .dg-card:hover { transform: none; }
+}
