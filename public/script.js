@@ -112,7 +112,7 @@ const i18n = {
         tag_game: "Puzzle game",
         game_desc: "A small rocket-control puzzle game to unwind with. This is the demo build; a full version with more levels is on the way.",
         tag_dungeon: "Action roguelite",
-        dungeon_desc: "A hand-made pixel-art action roguelite. Cut down through a hundred procedurally generated depths, take a boon at every gate, and meet the lord waiting on every fifth. No ads, no purchases, plays offline.",
+        dungeon_desc: "A hand-made pixel-art action roguelite. Cut down through a hundred procedurally generated depths, take a boon at every gate, and meet the lord waiting on every fifth. No ads and no in-app purchases, with Google Play Games leaderboards.",
         feat_dungeon_gen: "A hundred floors, every one generated and proved",
         feat_dungeon_touch: "Full touch controls, gamepad and keyboard",
         action_dungeon: "Explore the game"
@@ -224,7 +224,7 @@ const i18n = {
         tag_game: "Juego de puzles",
         game_desc: "Un pequeño juego de puzles en el que pilotas un cohete para desconectar. Esta es la versión demo; la completa, con más niveles, está en camino.",
         tag_dungeon: "Roguelite de acción",
-        dungeon_desc: "Un roguelite de acción en pixel art hecho a mano. Desciende cortando por cien niveles generados proceduralmente, elige un don en cada puerta y enfréntate al señor que espera en cada quinto. Sin anuncios, sin compras, funciona sin conexión.",
+        dungeon_desc: "Un roguelite de acción en pixel art hecho a mano. Desciende cortando por cien niveles generados proceduralmente, elige un don en cada puerta y enfréntate al señor que espera en cada quinto. Sin anuncios ni compras integradas, con tablas de clasificación de Google Play Games.",
         feat_dungeon_gen: "Cien pisos, todos generados y verificados",
         feat_dungeon_touch: "Controles táctiles completos, mando y teclado",
         action_dungeon: "Descubre el juego"
@@ -336,7 +336,7 @@ const i18n = {
         tag_game: "解谜游戏",
         game_desc: "一款操控火箭的小型解谜游戏，用来放松。目前是演示版，关卡更多的完整版正在开发中。",
         tag_dungeon: "动作 Roguelite",
-        dungeon_desc: "一款手工打造的像素风动作 Roguelite。一路砍杀穿过一百层程序生成的地牢，每道门前领取一项恩赐，每第五层都有一位领主等着你。无广告、无内购，可离线游玩。",
+        dungeon_desc: "一款手工打造的像素风动作 Roguelite。一路砍杀穿过一百层程序生成的地牢，每道门前领取一项恩赐，每第五层都有一位领主等着你。无广告、无内购，接入 Google Play Games 排行榜。",
         feat_dungeon_gen: "一百层地牢，层层生成并经过验证",
         feat_dungeon_touch: "完整触屏操作，支持手柄与键盘",
         action_dungeon: "了解这款游戏"
@@ -448,7 +448,7 @@ const i18n = {
         tag_game: "पहेली गेम",
         game_desc: "रॉकेट चलाने वाला छोटा पहेली गेम, हल्के-फुल्के मनोरंजन के लिए। यह डेमो संस्करण है; ज़्यादा लेवल वाला पूरा संस्करण आ रहा है।",
         tag_dungeon: "एक्शन रॉगलाइट",
-        dungeon_desc: "हाथ से बनाया गया पिक्सल-आर्ट एक्शन रॉगलाइट। प्रोसीजरली बने सौ तहखानों से लड़ते हुए नीचे उतरिए, हर द्वार पर एक वरदान लीजिए, और हर पाँचवें तल पर बैठे स्वामी से भिड़िए। कोई विज्ञापन नहीं, कोई खरीदारी नहीं, ऑफ़लाइन चलता है।",
+        dungeon_desc: "हाथ से बनाया गया पिक्सल-आर्ट एक्शन रॉगलाइट। प्रोसीजरली बने सौ तहखानों से लड़ते हुए नीचे उतरिए, हर द्वार पर एक वरदान लीजिए, और हर पाँचवें तल पर बैठे स्वामी से भिड़िए। कोई विज्ञापन नहीं, कोई इन-ऐप खरीदारी नहीं, और Google Play Games लीडरबोर्ड।",
         feat_dungeon_gen: "सौ तल, हर एक जनरेट और जाँचा हुआ",
         feat_dungeon_touch: "पूरे टच कंट्रोल, गेमपैड और कीबोर्ड",
         action_dungeon: "गेम देखें"
@@ -560,7 +560,7 @@ const i18n = {
         tag_game: "لعبة ألغاز",
         game_desc: "لعبة ألغاز صغيرة تتحكم فيها بصاروخ، للاسترخاء. هذه نسخة تجريبية، والنسخة الكاملة بمراحل أكثر في الطريق.",
         tag_dungeon: "روغلايت أكشن",
-        dungeon_desc: "لعبة أكشن روغلايت بفن البكسل مصنوعة يدويًا. اشقّ طريقك نزولًا عبر مئة طابق تُولَّد إجرائيًا، وخذ نعمة عند كل بوابة، وواجه السيد المنتظر في كل طابق خامس. بلا إعلانات، بلا مشتريات، وتعمل دون إنترنت.",
+        dungeon_desc: "لعبة أكشن روغلايت بفن البكسل مصنوعة يدويًا. اشقّ طريقك نزولًا عبر مئة طابق تُولَّد إجرائيًا، وخذ نعمة عند كل بوابة، وواجه السيد المنتظر في كل طابق خامس. بلا إعلانات ولا مشتريات داخل التطبيق، مع لوحات صدارة Google Play Games.",
         feat_dungeon_gen: "مئة طابق، كل طابق مُولَّد ومُتحقَّق منه",
         feat_dungeon_touch: "تحكّم لمسي كامل، مع ذراع التحكم ولوحة المفاتيح",
         action_dungeon: "استكشف اللعبة"
@@ -672,7 +672,7 @@ const i18n = {
         tag_game: "Jogo de puzzle",
         game_desc: "Um pequeno jogo de puzzle em que você controla um foguete, para relaxar. Esta é a versão demo; a completa, com mais fases, está a caminho.",
         tag_dungeon: "Roguelite de ação",
-        dungeon_desc: "Um roguelite de ação em pixel art feito à mão. Desça cortando por cem andares gerados proceduralmente, escolha uma bênção em cada portão e encare o senhor que espera a cada quinto. Sem anúncios, sem compras, joga offline.",
+        dungeon_desc: "Um roguelite de ação em pixel art feito à mão. Desça cortando por cem andares gerados proceduralmente, escolha uma bênção em cada portão e encare o senhor que espera a cada quinto. Sem anúncios e sem compras no aplicativo, com placares do Google Play Games.",
         feat_dungeon_gen: "Cem andares, todos gerados e verificados",
         feat_dungeon_touch: "Controles de toque completos, gamepad e teclado",
         action_dungeon: "Conheça o jogo"
@@ -784,7 +784,7 @@ const i18n = {
         tag_game: "Jeu de réflexion",
         game_desc: "Un petit jeu de réflexion où l'on pilote une fusée, pour se détendre. Voici la version démo ; la version complète, avec plus de niveaux, arrive.",
         tag_dungeon: "Roguelite d'action",
-        dungeon_desc: "Un roguelite d'action en pixel art fait main. Taillez-vous un chemin à travers cent étages générés procéduralement, prenez une faveur à chaque porte et affrontez le seigneur qui attend tous les cinq étages. Sans publicité, sans achats, jouable hors ligne.",
+        dungeon_desc: "Un roguelite d'action en pixel art fait main. Taillez-vous un chemin à travers cent étages générés procéduralement, prenez une faveur à chaque porte et affrontez le seigneur qui attend tous les cinq étages. Sans publicité ni achat intégré, avec les classements Google Play Games.",
         feat_dungeon_gen: "Cent étages, tous générés et vérifiés",
         feat_dungeon_touch: "Commandes tactiles complètes, manette et clavier",
         action_dungeon: "Découvrir le jeu"
@@ -896,7 +896,7 @@ const i18n = {
         tag_game: "Puzzlespiel",
         game_desc: "Ein kleines Puzzlespiel, in dem ihr eine Rakete steuert – zum Abschalten. Das ist die Demo; die Vollversion mit mehr Levels folgt.",
         tag_dungeon: "Action-Roguelite",
-        dungeon_desc: "Ein handgemachtes Pixel-Art-Action-Roguelite. Kämpft euch durch hundert prozedural erzeugte Tiefen, nehmt an jedem Tor eine Gabe mit und trefft auf jeder fünften Ebene den wartenden Fürsten. Keine Werbung, keine Käufe, offline spielbar.",
+        dungeon_desc: "Ein handgemachtes Pixel-Art-Action-Roguelite. Kämpft euch durch hundert prozedural erzeugte Tiefen, nehmt an jedem Tor eine Gabe mit und trefft auf jeder fünften Ebene den wartenden Fürsten. Keine Werbung, keine In-App-Käufe, dafür Google-Play-Games-Bestenlisten.",
         feat_dungeon_gen: "Hundert Ebenen, jede erzeugt und geprüft",
         feat_dungeon_touch: "Vollständige Touch-Steuerung, Gamepad und Tastatur",
         action_dungeon: "Das Spiel ansehen"
@@ -1008,7 +1008,7 @@ const i18n = {
         tag_game: "パズルゲーム",
         game_desc: "ロケットを操作する小さなパズルゲーム。息抜きにどうぞ。現在はデモ版で、ステージを増やした完全版を準備中です。",
         tag_dungeon: "アクションローグライト",
-        dungeon_desc: "手づくりのドット絵アクションローグライト。自動生成される100層のダンジョンを斬り進み、門ごとに恩恵をひとつ選び、5層ごとに待ち構える領主と対峙します。広告なし、課金なし、オフラインで遊べます。",
+        dungeon_desc: "手づくりのドット絵アクションローグライト。自動生成される100層のダンジョンを斬り進み、門ごとに恩恵をひとつ選び、5層ごとに待ち構える領主と対峙します。広告なし、課金なし。Google Play Games のリーダーボードに対応。",
         feat_dungeon_gen: "100層すべてが生成され、到達可能性を検証済み",
         feat_dungeon_touch: "フルタッチ操作、ゲームパッドとキーボードにも対応",
         action_dungeon: "ゲームを見る"
@@ -1120,7 +1120,7 @@ const i18n = {
         tag_game: "퍼즐 게임",
         game_desc: "로켓을 조종하는 작은 퍼즐 게임으로 가볍게 즐겨 보세요. 지금은 데모 버전이며, 레벨을 늘린 정식 버전을 준비 중입니다.",
         tag_dungeon: "액션 로그라이트",
-        dungeon_desc: "손으로 빚은 픽셀 아트 액션 로그라이트. 절차적으로 생성되는 100개 층을 베어 내려가며 관문마다 은총을 하나 고르고, 다섯 번째 층마다 기다리는 군주와 맞섭니다. 광고 없음, 결제 없음, 오프라인 플레이.",
+        dungeon_desc: "손으로 빚은 픽셀 아트 액션 로그라이트. 절차적으로 생성되는 100개 층을 베어 내려가며 관문마다 은총을 하나 고르고, 다섯 번째 층마다 기다리는 군주와 맞섭니다. 광고 없음, 인앱 결제 없음. Google Play Games 리더보드를 지원합니다.",
         feat_dungeon_gen: "100개 층 전부 생성되고 검증됨",
         feat_dungeon_touch: "완전한 터치 조작, 게임패드와 키보드 지원",
         action_dungeon: "게임 보기"
@@ -1232,7 +1232,7 @@ const i18n = {
         tag_game: "Головоломка",
         game_desc: "Небольшая головоломка с управлением ракетой — чтобы отвлечься. Сейчас это демоверсия, полная с новыми уровнями в работе.",
         tag_dungeon: "Экшен-рогалик",
-        dungeon_desc: "Пиксельный экшен-рогалик, сделанный вручную. Прорубайтесь вниз через сто процедурно сгенерированных уровней, берите дар у каждых ворот и встречайте владыку, который ждёт на каждом пятом. Без рекламы, без покупок, играет офлайн.",
+        dungeon_desc: "Пиксельный экшен-рогалик, сделанный вручную. Прорубайтесь вниз через сто процедурно сгенерированных уровней, берите дар у каждых ворот и встречайте владыку, который ждёт на каждом пятом. Без рекламы и внутриигровых покупок, с таблицами лидеров Google Play Games.",
         feat_dungeon_gen: "Сто уровней, каждый сгенерирован и проверен",
         feat_dungeon_touch: "Полное сенсорное управление, геймпад и клавиатура",
         action_dungeon: "Посмотреть игру"
@@ -1346,7 +1346,7 @@ const i18n = {
         tag_game: "Trò chơi giải đố",
         game_desc: "Trò chơi giải đố điều khiển tên lửa, chơi cho thư giãn. Đây là bản demo; bản đầy đủ với nhiều màn hơn đang được phát triển.",
         tag_dungeon: "Roguelite hành động",
-        dungeon_desc: "Game hành động roguelite pixel art làm thủ công. Chém đường xuống một trăm tầng ngục sinh ngẫu nhiên, nhận một ân huệ ở mỗi cổng, và đối mặt lãnh chúa chờ sẵn ở mỗi tầng thứ năm. Không quảng cáo, không mua trong ứng dụng, chơi offline.",
+        dungeon_desc: "Game hành động roguelite pixel art làm thủ công. Chém đường xuống một trăm tầng ngục sinh ngẫu nhiên, nhận một ân huệ ở mỗi cổng, và đối mặt lãnh chúa chờ sẵn ở mỗi tầng thứ năm. Không quảng cáo, không mua trong ứng dụng, có bảng xếp hạng Google Play Games.",
         feat_dungeon_gen: "Một trăm tầng, tầng nào cũng sinh ra và được chứng minh",
         feat_dungeon_touch: "Điều khiển cảm ứng đầy đủ, tay cầm và bàn phím",
         action_dungeon: "Xem chi tiết game"

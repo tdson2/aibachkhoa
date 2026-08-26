@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dungeon of the Fallen Blade — a hundred depths, one blade | AIBachKhoa</title>
-    <meta name="description" content="A hand-made pixel-art action roguelite for Android: a hundred procedurally generated depths, twenty lords, a three-hit sword combo, a bow and a dodge roll. No ads, no purchases, plays offline.">
+    <meta name="description" content="A hand-made pixel-art action roguelite for Android: a hundred procedurally generated depths, twenty lords, a three-hit sword combo, a bow and a dodge roll, with Google Play Games leaderboards. No ads, no purchases.">
     <link rel="canonical" href="https://aibachkhoa.com/dungeon-blade">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Dungeon of the Fallen Blade — a hundred depths, one blade">
-    <meta property="og:description" content="Cut down through a hundred procedurally generated depths, take a boon at every gate, and meet the lord waiting on every fifth. Offline pixel roguelite, no ads.">
+    <meta property="og:description" content="Cut down through a hundred procedurally generated depths, take a boon at every gate, and meet the lord waiting on every fifth. Pixel roguelite with Play Games leaderboards, no ads.">
     <meta property="og:image" content="https://aibachkhoa.com/assets/games/dungeon-blade/shot-01.png">
     <meta property="og:url" content="https://aibachkhoa.com/dungeon-blade">
     <meta name="twitter:card" content="summary_large_image">
@@ -99,7 +99,7 @@
                 <div class="dg-stat"><span class="dg-stat-n">20</span><span class="dg-stat-l" data-i18n="stat_lords">Named lords, one every fifth</span></div>
                 <div class="dg-stat"><span class="dg-stat-n">8</span><span class="dg-stat-l" data-i18n="stat_boons">Boons to pick between floors</span></div>
                 <div class="dg-stat"><span class="dg-stat-n">6</span><span class="dg-stat-l" data-i18n="stat_langs">Languages</span></div>
-                <div class="dg-stat"><span class="dg-stat-n">0</span><span class="dg-stat-l" data-i18n="stat_zero">Ads, purchases, accounts</span></div>
+                <div class="dg-stat"><span class="dg-stat-n">0</span><span class="dg-stat-l" data-i18n="stat_zero">Ads, purchases, paywalls</span></div>
             </div>
         </div>
     </header>
@@ -436,13 +436,13 @@
                 <div class="dg-split">
                     <div class="reveal">
                         <p class="dg-eyebrow" data-i18n="ns_eyebrow">No strings</p>
-                        <h2 class="dg-title" data-i18n="ns_title">Nothing to buy, <em>nothing to sign into</em>.</h2>
-                        <p class="dg-sub" style="margin-bottom: 1.8rem;" data-i18n="ns_sub">The game runs entirely on the device. Settings and the best-depth record live in the app's own save file, and uninstalling the app takes them with it.</p>
+                        <h2 class="dg-title" data-i18n="ns_title">Nothing to buy, <em>nothing behind a paywall</em>.</h2>
+                        <p class="dg-sub" style="margin-bottom: 1.8rem;" data-i18n="ns_sub">The game itself runs on the device. Settings and your best depth live in the app's own save file; the only thing that ever leaves the phone is a leaderboard score, and only once you sign in to Google Play Games.</p>
                         <ul class="dg-list">
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ns_ads"><strong>No ads.</strong> None anywhere in the game, and no ad network in the build.</span></li>
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ns_iap"><strong>No in-app purchases.</strong> The whole hundred depths ship in the download.</span></li>
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ns_acct"><strong>No account and no sign-in.</strong> Everything is available without credentials.</span></li>
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ns_offline"><strong>Plays offline.</strong> No third-party SDK collects anything, and nothing is stored on a server.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ns_acct"><strong>Signing in is optional.</strong> Every depth, boon and lord is playable without an account — Play Games only adds the leaderboards and the achievements.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ns_offline"><strong>Plays with the connection off.</strong> The app asks for the internet permission so it can reach Play Games; drop the connection and the game plays exactly the same, minus posting a score.</span></li>
                         </ul>
                         <p style="margin-top: 1.8rem;">
                             <a href="/dungeon-blade/policy" class="btn btn-primary" data-i18n="ns_readpolicy">Read the privacy policy</a>
@@ -456,11 +456,15 @@
                             </details>
                             <details class="dg-faq-item">
                                 <summary data-i18n="faq2_q">Does it need an internet connection?</summary>
-                                <p data-i18n="faq2_a">No. Nothing in the game talks to a network — there is no leaderboard, no cloud save and no analytics. Put the phone in airplane mode and it plays exactly the same.</p>
+                                <p data-i18n="faq2_a">Not to play. The app declares the internet permission because it talks to Google Play Games for the leaderboards and achievements, but every depth, boon and lord works with the connection off — you simply do not post a score while it is.</p>
+                            </details>
+                            <details class="dg-faq-item">
+                                <summary data-i18n="faq2b_q">What is sent to Google Play Games?</summary>
+                                <p data-i18n="faq2b_a">Three leaderboard scores — deepest descent, richest run and fastest descent — and progress on eight achievements, tied to your own Play Games profile and handled by Google under its own privacy policy. None of it happens unless you sign in, and nothing else leaves the phone.</p>
                             </details>
                             <details class="dg-faq-item">
                                 <summary data-i18n="faq3_q">Is there a save between runs?</summary>
-                                <p data-i18n="faq3_a">Only your settings and the deepest depth you have reached. A run itself has no checkpoint: death resets you to depth one with the levels, boons and gold gone. That is the roguelite part.</p>
+                                <p data-i18n="faq3_a">Only your settings and the deepest depth you have reached. A run itself has no checkpoint: death resets you to depth one with the levels, boons and gold gone. That is the roguelite part. Signed in, your best depth, richest run and fastest descent also go to the leaderboards.</p>
                             </details>
                             <details class="dg-faq-item">
                                 <summary data-i18n="faq4_q">Can I play it with a gamepad, or on a desktop?</summary>

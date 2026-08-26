@@ -13,7 +13,7 @@
 const i18n = {
     en: {
         page_title: "Dungeon of the Fallen Blade — a hundred depths, one blade | AIBachKhoa",
-        meta_desc: "A hand-made pixel-art action roguelite for Android: a hundred procedurally generated depths, twenty lords, a three-hit sword combo, a bow and a dodge roll. No ads, no purchases, plays offline.",
+        meta_desc: "A hand-made pixel-art action roguelite for Android: a hundred procedurally generated depths, twenty lords, a three-hit sword combo, a bow and a dodge roll, with Google Play Games leaderboards. No ads, no purchases.",
         aria_lang: "Change language",
         aria_theme: "Toggle theme",
         aria_menu: "Open menu",
@@ -40,7 +40,7 @@ const i18n = {
         stat_lords: "Named lords, one every fifth",
         stat_boons: "Boons to pick between floors",
         stat_langs: "Languages",
-        stat_zero: "Ads, purchases, accounts",
+        stat_zero: "Ads, purchases, paywalls",
 
         trailer_eyebrow: "Trailer",
         trailer_title: "Two minutes <em>of the descent</em>.",
@@ -178,20 +178,22 @@ const i18n = {
         h_lang_d: "English, Tiếng Việt, Español, Français, Deutsch and Português. English holds every key and anything a translation is missing falls back to it. Labels step down through four baked font sizes to fit their box.",
 
         ns_eyebrow: "No strings",
-        ns_title: "Nothing to buy, <em>nothing to sign into</em>.",
-        ns_sub: "The game runs entirely on the device. Settings and the best-depth record live in the app's own save file, and uninstalling the app takes them with it.",
+        ns_title: "Nothing to buy, <em>nothing behind a paywall</em>.",
+        ns_sub: "The game itself runs on the device. Settings and your best depth live in the app's own save file; the only thing that ever leaves the phone is a leaderboard score, and only once you sign in to Google Play Games.",
         ns_ads: "<strong>No ads.</strong> None anywhere in the game, and no ad network in the build.",
         ns_iap: "<strong>No in-app purchases.</strong> The whole hundred depths ship in the download.",
-        ns_acct: "<strong>No account and no sign-in.</strong> Everything is available without credentials.",
-        ns_offline: "<strong>Plays offline.</strong> No third-party SDK collects anything, and nothing is stored on a server.",
+        ns_acct: "<strong>Signing in is optional.</strong> Every depth, boon and lord is playable without an account — Play Games only adds the leaderboards and the achievements.",
+        ns_offline: "<strong>Plays with the connection off.</strong> The app asks for the internet permission so it can reach Play Games; drop the connection and the game plays exactly the same, minus posting a score.",
         ns_readpolicy: "Read the privacy policy",
 
         faq1_q: "Which Android versions does it run on?",
         faq1_a: "Android 7.0 and up, on arm64-v8a and armeabi-v7a. Google Play splits the bundle per device, so a phone downloads roughly a third of the whole build. It is verified on a Galaxy S8+ at 2220×1080, which is exactly 5× the game's canvas.",
         faq2_q: "Does it need an internet connection?",
-        faq2_a: "No. Nothing in the game talks to a network — there is no leaderboard, no cloud save and no analytics. Put the phone in airplane mode and it plays exactly the same.",
+        faq2_a: "Not to play. The app declares the internet permission because it talks to Google Play Games for the leaderboards and achievements, but every depth, boon and lord works with the connection off — you simply do not post a score while it is.",
+        faq2b_q: "What is sent to Google Play Games?",
+        faq2b_a: "Three leaderboard scores — deepest descent, richest run and fastest descent — and progress on eight achievements, tied to your own Play Games profile and handled by Google under its own privacy policy. None of it happens unless you sign in, and nothing else leaves the phone.",
         faq3_q: "Is there a save between runs?",
-        faq3_a: "Only your settings and the deepest depth you have reached. A run itself has no checkpoint: death resets you to depth one with the levels, boons and gold gone. That is the roguelite part.",
+        faq3_a: "Only your settings and the deepest depth you have reached. A run itself has no checkpoint: death resets you to depth one with the levels, boons and gold gone. That is the roguelite part. Signed in, your best depth, richest run and fastest descent also go to the leaderboards.",
         faq4_q: "Can I play it with a gamepad, or on a desktop?",
         faq4_a: "Yes. Keyboard and gamepad bindings are first-class, and the on-screen pads can be forced off under <em>Options → Touch pad</em>. The project runs on the GL Compatibility renderer at a base viewport that scales by whole pixels, so it stays crisp on a handheld or a desktop.",
         faq5_q: "How violent is it?",
@@ -212,7 +214,7 @@ const i18n = {
 
         // ---- privacy policy page ----
         pol_page_title: "Privacy Policy — Dungeon of the Fallen Blade | AIBachKhoa",
-        pol_meta_desc: "How Dungeon of the Fallen Blade handles information: no third-party SDKs, nothing stored on a server, everything processed on the device.",
+        pol_meta_desc: "How Dungeon of the Fallen Blade handles information: what stays on your device, what Google Play Games receives when you sign in, and why the app asks for the internet permission.",
         pol_eyebrow: "Legal",
         pol_title: "Privacy Policy",
         pol_game: "Dungeon of the Fallen Blade",
@@ -222,7 +224,7 @@ const i18n = {
         pol_back: "Back to the game",
 
         pol_h_intro: "Introduction",
-        pol_intro: "Dungeon of the Fallen Blade is a 2D pixel-art action roguelite for mobile: a hundred procedurally generated depths, a sword, a bow and a dodge roll, played entirely on your own device.",
+        pol_intro: "Dungeon of the Fallen Blade is a 2D pixel-art action roguelite for mobile: a hundred procedurally generated depths, a sword, a bow and a dodge roll, played on your own device, with optional leaderboards and achievements through Google Play Games Services.",
 
         pol_h_defs: "Interpretation and Definitions",
         pol_h_interp: "Interpretation",
@@ -265,10 +267,17 @@ const i18n = {
         pol_usage_p3: "We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.",
 
         pol_h_sharing: "Sharing Data with Third Parties",
-        pol_sharing: "We are committed to not sharing any user data with third parties. The app does not integrate any third-party SDKs, APIs or services that may collect user data.",
+        pol_sharing_1: "The App integrates <strong>Google Play Games Services</strong> so that it can offer leaderboards and achievements. This is the only third-party SDK in the App. Signing in to Play Games is optional and is never required to play.",
+        pol_sharing_2: "If You do sign in, the App sends Google three leaderboard scores — deepest descent, richest run and fastest descent — together with Your progress on eight achievements, tied to Your own Play Games profile. Google processes that data as an independent controller under its own privacy policy. If You do not sign in, nothing is sent.",
+        pol_sharing_3: "We do not sell user data, and we do not share it with anyone beyond what is described above. No advertising, analytics or tracking SDK is present in the App.",
+
+        pol_h_perm: "Permissions and Network Access",
+        pol_perm_1: "The App declares the Android <code>INTERNET</code> permission. It needs that permission for one purpose: reaching Google Play Games Services for the leaderboards and achievements described above.",
+        pol_perm_2: "The game itself does not require a connection. Every call to Play Games is skipped when You are not signed in, and a run plays identically with the connection off — You simply do not post a score while it is. The App requests no other sensitive permission: no location, no contacts, no storage access to Your personal files.",
 
         pol_h_storage: "Data Storage and Deletion",
-        pol_storage: "Dungeon of the Fallen Blade does not collect or store user data on its servers. All data related to the application's operation is processed and stored locally on the user's device. The user can delete this data by uninstalling the application or using the data deletion functions built into the application (if available).",
+        pol_storage_1: "We operate no servers of our own and do not collect or store user data on them. Everything the game needs in order to run — Your settings and Your best-depth record — is processed and stored locally on Your device. You can delete it by uninstalling the application or using the data deletion functions built into the application (if available).",
+        pol_storage_2: "The leaderboard scores and achievement progress described above are the exception: they are held by Google Play Games Services, not by us. You can review or remove them through Your Google Play Games account settings.",
 
         pol_h_sensitive: "Sensitive Data",
         pol_sensitive_lead: "Dungeon of the Fallen Blade does not collect any sensitive user data, including but not limited to:",
@@ -366,7 +375,7 @@ const i18n = {
 
     vi: {
         page_title: "Dungeon of the Fallen Blade — một trăm tầng ngục, một thanh kiếm | AIBachKhoa",
-        meta_desc: "Game hành động roguelite pixel art cho Android: một trăm tầng ngục sinh ngẫu nhiên, hai mươi lãnh chúa, combo kiếm ba nhát, cung tên và lăn né. Không quảng cáo, không mua trong ứng dụng, chơi offline.",
+        meta_desc: "Game hành động roguelite pixel art cho Android: một trăm tầng ngục sinh ngẫu nhiên, hai mươi lãnh chúa, combo kiếm ba nhát, cung tên và lăn né, kèm bảng xếp hạng Google Play Games. Không quảng cáo, không mua trong ứng dụng.",
         aria_lang: "Đổi ngôn ngữ",
         aria_theme: "Đổi giao diện sáng tối",
         aria_menu: "Mở menu",
@@ -393,7 +402,7 @@ const i18n = {
         stat_lords: "Lãnh chúa, một con mỗi năm tầng",
         stat_boons: "Ân huệ để chọn giữa các tầng",
         stat_langs: "Ngôn ngữ",
-        stat_zero: "Quảng cáo, mua bán, tài khoản",
+        stat_zero: "Quảng cáo, mua bán, tường phí",
 
         trailer_eyebrow: "Trailer",
         trailer_title: "Hai phút <em>của đường xuống</em>.",
@@ -531,20 +540,22 @@ const i18n = {
         h_lang_d: "English, Tiếng Việt, Español, Français, Deutsch và Português. Tiếng Anh giữ đủ mọi khoá và bất cứ chuỗi nào bản dịch thiếu đều rơi về nó. Nhãn chữ tự hạ dần qua bốn cỡ phông đã nướng sẵn cho vừa hộp.",
 
         ns_eyebrow: "Không ràng buộc",
-        ns_title: "Không có gì để mua, <em>không có gì để đăng nhập</em>.",
-        ns_sub: "Game chạy hoàn toàn trên thiết bị. Cài đặt và kỷ lục độ sâu nằm trong file lưu của chính ứng dụng, gỡ ứng dụng là mất theo.",
+        ns_title: "Không có gì để mua, <em>không có gì chặn sau tường phí</em>.",
+        ns_sub: "Bản thân game chạy trên thiết bị. Cài đặt và kỷ lục độ sâu nằm trong file lưu của chính ứng dụng; thứ duy nhất rời khỏi máy là điểm bảng xếp hạng, và chỉ khi bạn đăng nhập Google Play Games.",
         ns_ads: "<strong>Không quảng cáo.</strong> Không có chỗ nào trong game, và không có mạng quảng cáo nào trong bản dựng.",
         ns_iap: "<strong>Không mua trong ứng dụng.</strong> Trọn một trăm tầng nằm sẵn trong bản tải về.",
-        ns_acct: "<strong>Không tài khoản, không đăng nhập.</strong> Mọi thứ đều dùng được mà không cần thông tin đăng nhập.",
-        ns_offline: "<strong>Chơi offline.</strong> Không SDK bên thứ ba nào thu thập gì, và không có gì được lưu trên máy chủ.",
+        ns_acct: "<strong>Đăng nhập là tuỳ chọn.</strong> Mọi tầng ngục, ân huệ và lãnh chúa đều chơi được mà không cần tài khoản — Play Games chỉ thêm bảng xếp hạng và thành tựu.",
+        ns_offline: "<strong>Tắt mạng vẫn chơi được.</strong> Ứng dụng xin quyền internet để nói chuyện với Play Games; ngắt kết nối thì game vẫn chạy y hệt, chỉ là không gửi điểm lên được.",
         ns_readpolicy: "Đọc chính sách quyền riêng tư",
 
         faq1_q: "Nó chạy trên phiên bản Android nào?",
         faq1_a: "Android 7.0 trở lên, trên arm64-v8a và armeabi-v7a. Google Play tách gói theo từng máy, nên điện thoại chỉ tải khoảng một phần ba cả bản dựng. Đã kiểm chứng trên Galaxy S8+ ở 2220×1080, đúng bằng 5× khung vẽ của game.",
         faq2_q: "Có cần kết nối mạng không?",
-        faq2_a: "Không. Không phần nào trong game nói chuyện với mạng — không bảng xếp hạng, không lưu đám mây, không đo đạc. Bật chế độ máy bay thì game vẫn chạy y hệt.",
+        faq2_a: "Không cần để chơi. Ứng dụng khai quyền internet vì nó nói chuyện với Google Play Games để lo bảng xếp hạng và thành tựu, nhưng mọi tầng ngục, ân huệ và lãnh chúa đều chạy bình thường khi tắt mạng — chỉ là lúc đó bạn không gửi điểm lên được.",
+        faq2b_q: "Những gì được gửi lên Google Play Games?",
+        faq2b_a: "Ba loại điểm bảng xếp hạng — độ sâu nhất, lượt chơi giàu nhất và lượt xuống nhanh nhất — cùng tiến độ của tám thành tựu, gắn với hồ sơ Play Games của chính bạn và do Google xử lý theo chính sách quyền riêng tư của họ. Không có gì trong số đó xảy ra nếu bạn không đăng nhập, và ngoài chúng ra không gì rời khỏi máy.",
         faq3_q: "Có lưu tiến trình giữa các lượt chơi không?",
-        faq3_a: "Chỉ cài đặt và tầng sâu nhất bạn từng tới. Bản thân một lượt chơi không có điểm lưu: chết là về tầng một, mất sạch cấp độ, ân huệ và vàng. Đó chính là phần roguelite.",
+        faq3_a: "Chỉ cài đặt và tầng sâu nhất bạn từng tới. Bản thân một lượt chơi không có điểm lưu: chết là về tầng một, mất sạch cấp độ, ân huệ và vàng. Đó chính là phần roguelite. Nếu đã đăng nhập, độ sâu nhất, lượt chơi giàu nhất và lượt xuống nhanh nhất cũng được gửi lên bảng xếp hạng.",
         faq4_q: "Chơi bằng tay cầm hay trên máy tính được không?",
         faq4_a: "Được. Phím bàn phím và tay cầm đều là công dân hạng nhất, còn nút cảm ứng có thể tắt hẳn ở <em>Options → Touch pad</em>. Dự án chạy trên bộ dựng hình GL Compatibility với khung nhìn gốc phóng theo bội số pixel nguyên, nên vẫn sắc nét trên máy cầm tay hay máy bàn.",
         faq5_q: "Mức độ bạo lực thế nào?",
@@ -565,7 +576,7 @@ const i18n = {
 
         // ---- privacy policy page ----
         pol_page_title: "Chính sách quyền riêng tư — Dungeon of the Fallen Blade | AIBachKhoa",
-        pol_meta_desc: "Dungeon of the Fallen Blade xử lý thông tin ra sao: không SDK bên thứ ba, không lưu gì trên máy chủ, mọi thứ xử lý ngay trên thiết bị.",
+        pol_meta_desc: "Dungeon of the Fallen Blade xử lý thông tin ra sao: những gì nằm lại trên máy bạn, những gì Google Play Games nhận khi bạn đăng nhập, và vì sao ứng dụng xin quyền internet.",
         pol_eyebrow: "Pháp lý",
         pol_title: "Chính sách quyền riêng tư",
         pol_game: "Dungeon of the Fallen Blade",
@@ -575,7 +586,7 @@ const i18n = {
         pol_back: "Quay lại trang game",
 
         pol_h_intro: "Giới thiệu",
-        pol_intro: "Dungeon of the Fallen Blade là một game hành động roguelite pixel art 2D cho di động: một trăm tầng ngục sinh ngẫu nhiên, một thanh kiếm, một cây cung và một cú lăn né, chơi hoàn toàn trên chính thiết bị của bạn.",
+        pol_intro: "Dungeon of the Fallen Blade là một game hành động roguelite pixel art 2D cho di động: một trăm tầng ngục sinh ngẫu nhiên, một thanh kiếm, một cây cung và một cú lăn né, chơi trên chính thiết bị của bạn, kèm bảng xếp hạng và thành tựu tuỳ chọn qua Google Play Games Services.",
 
         pol_h_defs: "Cách hiểu và định nghĩa",
         pol_h_interp: "Cách hiểu",
@@ -618,10 +629,17 @@ const i18n = {
         pol_usage_p3: "Chúng tôi cũng có thể thu thập thông tin mà trình duyệt của Bạn gửi đi mỗi khi Bạn ghé thăm Dịch vụ hoặc khi Bạn truy cập Dịch vụ bằng hoặc thông qua một thiết bị di động.",
 
         pol_h_sharing: "Chia sẻ dữ liệu với bên thứ ba",
-        pol_sharing: "Chúng tôi cam kết không chia sẻ bất kỳ dữ liệu người dùng nào với bên thứ ba. Ứng dụng không tích hợp bất kỳ SDK, API hay dịch vụ bên thứ ba nào có thể thu thập dữ liệu người dùng.",
+        pol_sharing_1: "Ứng dụng có tích hợp <strong>Google Play Games Services</strong> để cung cấp bảng xếp hạng và thành tựu. Đây là SDK bên thứ ba duy nhất trong Ứng dụng. Việc đăng nhập Play Games là tuỳ chọn và không bao giờ bắt buộc để chơi.",
+        pol_sharing_2: "Nếu Bạn có đăng nhập, Ứng dụng gửi cho Google ba loại điểm bảng xếp hạng — độ sâu nhất, lượt chơi giàu nhất và lượt xuống nhanh nhất — cùng tiến độ của tám thành tựu, gắn với hồ sơ Play Games của chính Bạn. Google xử lý dữ liệu đó với tư cách một bên kiểm soát độc lập, theo chính sách quyền riêng tư của họ. Nếu Bạn không đăng nhập, không có gì được gửi đi.",
+        pol_sharing_3: "Chúng tôi không bán dữ liệu người dùng, và không chia sẻ nó với ai ngoài phạm vi mô tả ở trên. Trong Ứng dụng không có SDK quảng cáo, đo đạc hay theo dõi nào.",
+
+        pol_h_perm: "Quyền truy cập và kết nối mạng",
+        pol_perm_1: "Ứng dụng khai quyền <code>INTERNET</code> của Android. Quyền này chỉ phục vụ một mục đích: kết nối tới Google Play Games Services cho bảng xếp hạng và thành tựu nêu trên.",
+        pol_perm_2: "Bản thân game không cần kết nối. Mọi lệnh gọi tới Play Games đều được bỏ qua khi Bạn chưa đăng nhập, và một lượt chơi diễn ra y hệt khi tắt mạng — chỉ là lúc đó Bạn không gửi điểm lên được. Ứng dụng không xin bất kỳ quyền nhạy cảm nào khác: không vị trí, không danh bạ, không truy cập kho tệp cá nhân của Bạn.",
 
         pol_h_storage: "Lưu trữ và xoá dữ liệu",
-        pol_storage: "Dungeon of the Fallen Blade không thu thập hay lưu trữ dữ liệu người dùng trên máy chủ của mình. Toàn bộ dữ liệu liên quan đến hoạt động của ứng dụng được xử lý và lưu ngay trên thiết bị của người dùng. Người dùng có thể xoá dữ liệu này bằng cách gỡ cài đặt ứng dụng hoặc dùng chức năng xoá dữ liệu tích hợp trong ứng dụng (nếu có).",
+        pol_storage_1: "Chúng tôi không vận hành máy chủ nào của riêng mình và không thu thập hay lưu dữ liệu người dùng trên đó. Mọi thứ game cần để chạy — cài đặt và kỷ lục độ sâu của Bạn — đều được xử lý và lưu ngay trên thiết bị của Bạn. Bạn có thể xoá bằng cách gỡ cài đặt ứng dụng hoặc dùng chức năng xoá dữ liệu tích hợp trong ứng dụng (nếu có).",
+        pol_storage_2: "Điểm bảng xếp hạng và tiến độ thành tựu nêu trên là ngoại lệ: chúng do Google Play Games Services giữ, không phải chúng tôi. Bạn có thể xem lại hoặc xoá chúng trong phần cài đặt tài khoản Google Play Games của mình.",
 
         pol_h_sensitive: "Dữ liệu nhạy cảm",
         pol_sensitive_lead: "Dungeon of the Fallen Blade không thu thập bất kỳ dữ liệu nhạy cảm nào của người dùng, bao gồm nhưng không giới hạn ở:",
