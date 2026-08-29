@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novaryn — one thumb, endless waves | AIBachKhoa</title>
+    <meta name="description" content="A vertical arcade shoot-'em-up for Android. Drag to fly, the cannon fires itself, and every fifth wave brings a boss with a health bar. Ten ships, three power-ups, no ads, plays offline.">
+    <link rel="canonical" href="https://aibachkhoa.com/novaryn">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Novaryn — one thumb, endless waves">
+    <meta property="og:description" content="Drag anywhere to fly. The cannon fires by itself — everything else is dodging, timing, and knowing when to push your luck. Endless waves, real bosses, no ads.">
+    <meta property="og:image" content="https://aibachkhoa.com/assets/games/novaryn/feature.png">
+    <meta property="og:url" content="https://aibachkhoa.com/novaryn">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/games/novaryn/icon.png">
+    <link rel="apple-touch-icon" href="/assets/games/novaryn/icon.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/novaryn/novaryn.css">
+</head>
+<body>
+    <a href="#overview" class="skip-link" data-i18n="skip_link">Skip to content</a>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="AIBachKhoa">
+                <img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="/" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="#overview" class="nav-link" data-i18n="nav_overview">Overview</a>
+                <a href="#loop" class="nav-link" data-i18n="nav_loop">The run</a>
+                <a href="#gems" class="nav-link" data-i18n="nav_gems">Power-ups</a>
+                <a href="#ships" class="nav-link" data-i18n="nav_ships">Ships</a>
+                <a href="#gallery" class="nav-link" data-i18n="nav_shots">Screenshots</a>
+                <a href="/novaryn/policy" class="nav-link" data-i18n="nav_policy">Privacy</a>
+                <span class="nav-divider" aria-hidden="true"></span>
+                <select id="lang-select" class="lang-select" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+            </div>
+
+            <div class="mobile-controls">
+                <select id="mobile-lang-select" class="lang-select lang-select--compact" data-display="code" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="mobile-theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+                <button class="icon-btn mobile-menu-btn" data-i18n-aria="aria_menu" aria-label="Open menu" id="mobile-btn" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="nv-hero" id="overview">
+        <div class="container">
+            <div class="nv-hero-grid">
+                <div class="nv-hero-copy reveal">
+                    <div class="nv-brandline">
+                        <img src="/assets/games/novaryn/icon.png" alt="" class="nv-brandmark" width="512" height="512">
+                        <div>
+                            <p class="nv-wordmark">NOVARYN</p>
+                            <p class="nv-brandsub" data-i18n="hero_kicker">Android · arcade space shooter</p>
+                        </div>
+                    </div>
+                    <h1 class="nv-hero-title" data-i18n="hero_title">One thumb. <em>Endless waves</em>.</h1>
+                    <p class="nv-hero-sub" data-i18n="hero_sub">A vertical arcade shoot-'em-up made for short sessions. Drag anywhere on the screen to fly; your cannon fires by itself. Everything else is dodging, timing, and knowing when to push your luck.</p>
+                    <div class="nv-hero-actions">
+                        <a href="https://play.google.com/store/apps/details?id=com.tdson.novaryn" target="_blank" rel="noopener" class="btn btn-primary">
+                            <svg class="nv-play-glyph" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3.6 2.2 13 11.6l2.6-2.6L5.3 2.6a1.6 1.6 0 0 0-1.7-.4zM3.1 2.7A1.6 1.6 0 0 0 2.8 3.6v16.8c0 .34.1.65.3.9L12.4 12zm13.6 6.9-2.9 2.4 2.9 2.9 3.4-2c.8-.5.8-1.7 0-2.2zM13 12.4 3.6 21.8c.5.4 1.2.5 1.7.2l10.3-6z"/></svg>
+                            <span data-i18n="btn_play">Get it on Google Play</span>
+                        </a>
+                        <a href="#gallery" class="btn btn-ghost" data-i18n="btn_shots">See how it plays</a>
+                    </div>
+                    <p class="nv-hero-meta" data-i18n="hero_meta">Application id <code>com.tdson.novaryn</code> · portrait, Android 7.0 and up · rated Everyone, with in-game purchases.</p>
+                </div>
+
+                <div class="nv-hero-media reveal">
+                    <div class="nv-hero-art" aria-hidden="true"></div>
+                    <div class="nv-phone">
+                        <img src="/assets/games/novaryn/shot-04.png" alt="Wave 10 of Novaryn — the Reaver boss above a curtain of green bolts" width="1080" height="2400">
+                    </div>
+                </div>
+            </div>
+
+            <div class="nv-stats reveal">
+                <div class="nv-stat"><span class="nv-stat-n">∞</span><span class="nv-stat-l" data-i18n="stat_waves">Waves — there is no end screen</span></div>
+                <div class="nv-stat"><span class="nv-stat-n">5</span><span class="nv-stat-l" data-i18n="stat_boss">Waves between bosses</span></div>
+                <div class="nv-stat"><span class="nv-stat-n">4</span><span class="nv-stat-l" data-i18n="stat_gun">Cannon levels to climb</span></div>
+                <div class="nv-stat"><span class="nv-stat-n">10</span><span class="nv-stat-l" data-i18n="stat_ships">Ships to fly</span></div>
+                <div class="nv-stat"><span class="nv-stat-n">0</span><span class="nv-stat-l" data-i18n="stat_ads">Ads, anywhere in the game</span></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= THE RUN ================= -->
+        <section class="nv-section nv-section--tint" id="loop">
+            <div class="container">
+                <div class="nv-head reveal">
+                    <p class="nv-eyebrow" data-i18n="loop_eyebrow">The run</p>
+                    <h2 class="nv-title" data-i18n="loop_title">Drag to fly. <em>The rest is nerve</em>.</h2>
+                    <p class="nv-sub" data-i18n="loop_sub">There is no fire button, no joystick and no menu between you and the next attempt. You put a thumb down anywhere on the glass and the ship follows it — which means the only decision left in the game is where to be, and that is the decision the whole thing is built around.</p>
+                </div>
+
+                <div class="nv-grid reveal">
+                    <div class="nv-card">
+                        <span class="nv-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8.5 3.5v9.2L6.2 11a2 2 0 0 0-2.7 2.9l4 5.2a4 4 0 0 0 3.2 1.6h4.2a4 4 0 0 0 4-4V9.5a1.6 1.6 0 0 0-3.2 0"/><path d="M12 9.2V7a1.6 1.6 0 0 0-3.2 0"/><path d="M15.2 9.5V7.6a1.6 1.6 0 0 0-3.2 0"/></svg></span>
+                        <h3 data-i18n="c_touch_t">Anywhere on the screen is the stick</h3>
+                        <p data-i18n="c_touch_d">Not a pad in a corner your thumb has to find. Put a finger down where it already is and the ship tracks it one-to-one, so nothing you own is ever covered by your own hand at the moment you need to see it.</p>
+                    </div>
+                    <div class="nv-card">
+                        <span class="nv-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21V3"/><path d="m8 7 4-4 4 4"/><path d="M6 13h1.5M16.5 13H18M6 17h1.5M16.5 17H18"/></svg></span>
+                        <h3 data-i18n="c_auto_t">The cannon is never your problem</h3>
+                        <p data-i18n="c_auto_d">It fires on its own, at its own rate, for the whole run. Nothing is lost to a missed tap, and nothing is won by mashing — a run reads entirely as a line you flew, not a button you held.</p>
+                    </div>
+                    <div class="nv-card">
+                        <span class="nv-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h4l2 12h4l2-12h4"/><circle cx="12" cy="12" r="1.4"/></svg></span>
+                        <h3 data-i18n="c_wave_t">Waves arrive, and keep arriving</h3>
+                        <p data-i18n="c_wave_d">Formations come in denser and faster each time, and there is nothing at the end to reach. The score counter and the BEST under it are the whole scoreboard: how far you got, against how far you have ever got.</p>
+                    </div>
+                    <div class="nv-card">
+                        <span class="nv-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5l3 1.8"/></svg></span>
+                        <h3 data-i18n="c_again_t">One more try is eight seconds away</h3>
+                        <p data-i18n="c_again_d">Death drops you straight back to the menu with START under your thumb. No unlock gate, no energy bar, no countdown — the loop is short enough to fit a bus stop and honest enough that a bad run is your fault.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BOSSES ================= -->
+        <section class="nv-section" id="bosses">
+            <div class="container">
+                <div class="nv-head reveal">
+                    <p class="nv-eyebrow" data-i18n="boss_eyebrow">Bosses</p>
+                    <h2 class="nv-title" data-i18n="boss_title">Every fifth wave, <em>something with a name</em>.</h2>
+                    <p class="nv-sub" data-i18n="boss_sub">Four waves of formations, then a health bar slides across the top of the screen. A boss is not a bigger fighter — it holds position, takes real punishment, and throws a pattern you have to read rather than out-shoot. Learn it once and it stays learned.</p>
+                </div>
+
+                <div class="nv-waves reveal">
+                    <div class="nv-wave"><span class="nv-wave-d">1–4</span><span class="nv-wave-n" data-i18n="w_open">Opening formations</span></div>
+                    <div class="nv-wave nv-wave--boss"><span class="nv-wave-d">5</span><span class="nv-wave-n">Dreadnought</span></div>
+                    <div class="nv-wave"><span class="nv-wave-d">6–9</span><span class="nv-wave-n" data-i18n="w_tight">Tighter, faster</span></div>
+                    <div class="nv-wave nv-wave--boss"><span class="nv-wave-d">10</span><span class="nv-wave-n">Reaver</span></div>
+                    <div class="nv-wave"><span class="nv-wave-d">11–14</span><span class="nv-wave-n" data-i18n="w_press">The screen fills in</span></div>
+                    <div class="nv-wave nv-wave--boss"><span class="nv-wave-d">15</span><span class="nv-wave-n" data-i18n="w_next">The next one waiting</span></div>
+                    <div class="nv-wave"><span class="nv-wave-d">16+</span><span class="nv-wave-n" data-i18n="w_on">And on, without a ceiling</span></div>
+                    <div class="nv-wave nv-wave--boss"><span class="nv-wave-d">×5</span><span class="nv-wave-n" data-i18n="w_rule">A boss on every fifth</span></div>
+                </div>
+
+                <div class="nv-split" style="margin-top: clamp(2.5rem, 5vw, 4rem);">
+                    <div class="reveal">
+                        <h3 class="nv-title" style="font-size: clamp(1.35rem, 2.2vw, 1.8rem);" data-i18n="boss_read_t">Read the pattern, not the bullet</h3>
+                        <p class="nv-sub" style="margin-bottom: 1.6rem;" data-i18n="boss_read_d">A boss volley arrives as a shape — a fan that widens as it falls, a column that walks across the lane you are standing in. Chasing individual bolts loses. Picking the gap the shape will leave, and being in it early, wins.</p>
+                        <ul class="nv-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="boss_l1"><strong>The health bar is the timer.</strong> It only moves while you are firing into the thing, so time spent hiding at the bottom of the screen is time the volleys keep coming for free.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="boss_l2"><strong>Close range is the trade.</strong> Your cannon does more work the nearer you sit, and every bolt gets less room to be dodged. Where you settle is the whole fight.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="boss_l3"><strong>Ordinary fighters keep coming.</strong> A boss is never alone on the screen, so the safe gap in the volley is often the lane a fighter is about to fly down.</span></li>
+                        </ul>
+                    </div>
+                    <div class="reveal">
+                        <div class="nv-phone">
+                            <img src="/assets/games/novaryn/shot-03.png" alt="Wave 5 of Novaryn — the Dreadnought boss and its first volley" width="1080" height="2400" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= POWER-UPS ================= -->
+        <section class="nv-section nv-section--tint" id="gems">
+            <div class="container">
+                <div class="nv-head reveal">
+                    <p class="nv-eyebrow" data-i18n="gem_eyebrow">Power-ups</p>
+                    <h2 class="nv-title" data-i18n="gem_title">Three gems, <em>and one honest trade</em>.</h2>
+                    <p class="nv-sub" data-i18n="gem_sub">Gems drop where the fighting was. Picking one up means flying into the space you were dodging a second ago — and that trade, made a dozen times a run, is the whole game.</p>
+                </div>
+
+                <div class="nv-gems reveal">
+                    <div class="nv-gem nv-gem--p">
+                        <span class="nv-gem-mark" aria-hidden="true">P</span>
+                        <div>
+                            <p class="nv-gem-n" data-i18n="gem_p_n">P — the gold gem</p>
+                            <p class="nv-gem-d" data-i18n="gem_p_d">Upgrades your cannon, up to level 4. The single biggest change to how a run feels, and the reason a good run gets easier rather than harder.</p>
+                        </div>
+                    </div>
+                    <div class="nv-gem nv-gem--s">
+                        <span class="nv-gem-mark" aria-hidden="true">S</span>
+                        <div>
+                            <p class="nv-gem-n" data-i18n="gem_s_n">S — the cyan gem</p>
+                            <p class="nv-gem-d" data-i18n="gem_s_d">A shield bubble that soaks exactly one hit. One mistake forgiven — which is usually one more than you need to reach the next boss.</p>
+                        </div>
+                    </div>
+                    <div class="nv-gem nv-gem--x">
+                        <span class="nv-gem-mark" aria-hidden="true">+</span>
+                        <div>
+                            <p class="nv-gem-n" data-i18n="gem_x_n">+ — the pink gem</p>
+                            <p class="nv-gem-d" data-i18n="gem_x_d">An extra ship on the counter in the top-right corner. The only thing in the game that gives back what a bad second took away.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nv-note reveal" style="margin-top: 1.4rem; max-width: 52rem;">
+                    <p data-i18n="gem_note"><strong>Nothing here is bought.</strong> Every power-up in Novaryn drops from play. There is no gem sold in the shop, no revive offered after a death, and no advantage available for money — the shop holds ship skins and nothing else.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SHIPS ================= -->
+        <section class="nv-section" id="ships">
+            <div class="container">
+                <div class="nv-head reveal">
+                    <p class="nv-eyebrow" data-i18n="ship_eyebrow">Ships</p>
+                    <h2 class="nv-title" data-i18n="ship_title">Ten hulls, <em>all of them cosmetic</em>.</h2>
+                    <p class="nv-sub" data-i18n="ship_sub">You start in the Aegis Cyan. Everything else in the shop changes how your run looks and nothing about how it plays — no faster ship, no wider cannon, no extra life for money. A leaderboard where the top scores could be bought would not be worth reading.</p>
+                </div>
+
+                <div class="nv-ships reveal">
+                    <div class="nv-ship nv-ship--free"><span><span class="nv-ship-n">Aegis Cyan</span><span class="nv-ship-t" data-i18n="ship_start">The ship you start in</span></span><span class="nv-ship-p" data-i18n="ship_incl">Included</span></div>
+                    <div class="nv-ship nv-ship--free"><span><span class="nv-ship-n">Crimson Raider</span><span class="nv-ship-t" data-i18n="ship_std">Standard skin</span></span><span class="nv-ship-p" data-i18n="ship_incl">Included</span></div>
+                    <div class="nv-ship"><span><span class="nv-ship-n">Emerald Wraith</span><span class="nv-ship-t" data-i18n="ship_std">Standard skin</span></span><span class="nv-ship-p">$1.99</span></div>
+                    <div class="nv-ship"><span><span class="nv-ship-n">Nova Racer</span><span class="nv-ship-t" data-i18n="ship_std">Standard skin</span></span><span class="nv-ship-p">$1.99</span></div>
+                    <div class="nv-ship"><span><span class="nv-ship-n">Phantom</span><span class="nv-ship-t" data-i18n="ship_std">Standard skin</span></span><span class="nv-ship-p">$2.49</span></div>
+                    <div class="nv-ship"><span><span class="nv-ship-n">Solaris</span><span class="nv-ship-t" data-i18n="ship_pro">Pro skin</span></span><span class="nv-ship-p">$4.99</span></div>
+                    <div class="nv-ship"><span><span class="nv-ship-n">Voidwing</span><span class="nv-ship-t" data-i18n="ship_pro">Pro skin</span></span><span class="nv-ship-p">$4.99</span></div>
+                    <div class="nv-ship"><span><span class="nv-ship-n">Inferno Bruiser</span><span class="nv-ship-t" data-i18n="ship_pro">Pro skin</span></span><span class="nv-ship-p">$5.99</span></div>
+                    <div class="nv-ship"><span><span class="nv-ship-n">Aurora Prism</span><span class="nv-ship-t" data-i18n="ship_pro">Pro skin</span></span><span class="nv-ship-p">$5.99</span></div>
+                    <div class="nv-ship"><span><span class="nv-ship-n">Celestia</span><span class="nv-ship-t" data-i18n="ship_pro">Pro skin</span></span><span class="nv-ship-p" data-i18n="ship_shop">In the shop</span></div>
+                </div>
+
+                <div class="nv-note reveal" style="margin-top: 1.4rem; max-width: 52rem;">
+                    <p data-i18n="ship_price_note"><strong>Prices are the US list.</strong> Google Play shows the shop in your own currency, and a skin you buy outright stays yours for good — on this device and on any other you sign in to with the same Google account.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRO ================= -->
+        <section class="nv-section nv-section--tint" id="pro">
+            <div class="container">
+                <div class="nv-head reveal">
+                    <p class="nv-eyebrow" data-i18n="pro_eyebrow">Novaryn Pro</p>
+                    <h2 class="nv-title" data-i18n="pro_title">Optional, monthly, <em>and spelled out</em>.</h2>
+                    <p class="nv-sub" data-i18n="pro_sub">Pro is a subscription that unlocks every ship in the shop while it is active. It is the only recurring charge in the game, it changes nothing about how a run plays, and here is exactly what happens if you stop paying for it.</p>
+                </div>
+
+                <div class="nv-tablewrap reveal">
+                    <table class="nv-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="th_q">The question</th>
+                                <th data-i18n="th_a">The answer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row" data-i18n="pro_q1">What it unlocks</th><td data-i18n="pro_a1">Every ship in the shop, standard and Pro alike, for as long as the subscription is active.</td></tr>
+                            <tr><th scope="row" data-i18n="pro_q2">What it costs</th><td data-i18n="pro_a2">$4.99 a month on the US list, shown in your own currency at checkout and billed by Google Play.</td></tr>
+                            <tr><th scope="row" data-i18n="pro_q3">What it does to a run</th><td data-i18n="pro_a3">Nothing. No extra ship, no stronger cannon, no revive. Pro buys paint.</td></tr>
+                            <tr><th scope="row" data-i18n="pro_q4">If you cancel</th><td data-i18n="pro_a4">Ships unlocked <em>through</em> Pro lock again when it lapses. Ships you bought outright stay yours — cancelling never takes back a purchase.</td></tr>
+                            <tr><th scope="row" data-i18n="pro_q5">How to cancel</th><td data-i18n="pro_a5">Any time, in Google Play → Payments &amp; subscriptions. We never see your card, and there is no cancellation flow inside the game to argue with you.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GALLERY ================= -->
+        <section class="nv-section" id="gallery">
+            <div class="container">
+                <div class="nv-head reveal">
+                    <p class="nv-eyebrow" data-i18n="gal_eyebrow">Screenshots</p>
+                    <h2 class="nv-title" data-i18n="gal_title">Straight captures, <em>no mock-ups</em>.</h2>
+                    <p class="nv-sub" data-i18n="gal_sub">Every frame here comes off a phone at 1080×2400, exactly as the game draws it.</p>
+                </div>
+
+                <div class="nv-gal reveal">
+                    <div class="nv-gal-stage" id="gal-stage">
+                        <img id="gal-img" src="/assets/games/novaryn/shot-01.png" alt="Novaryn screenshot" width="1080" height="2400" loading="lazy">
+                    </div>
+                    <div class="nv-gal-side">
+                        <div>
+                            <p class="nv-gal-cap-t" id="gal-title">The title screen</p>
+                            <p class="nv-gal-cap-d" id="gal-cap">Start, shop, leaderboard, settings — and the HUD already showing behind the panel, so the first thing you see is the thing you will be reading all run.</p>
+                        </div>
+                        <div class="nv-gal-tabs" role="tablist" data-i18n-aria="gal_title" aria-label="Screenshots">
+                            <button type="button" class="nv-gal-tab is-active" data-shot="shot-01" data-key="s1" role="tab" aria-selected="true" data-i18n="s1_title">The title screen</button>
+                            <button type="button" class="nv-gal-tab" data-shot="shot-02" data-key="s2" role="tab" aria-selected="false" data-i18n="s2_title">Wave one, first blood</button>
+                            <button type="button" class="nv-gal-tab" data-shot="shot-03" data-key="s3" role="tab" aria-selected="false" data-i18n="s3_title">The Dreadnought</button>
+                            <button type="button" class="nv-gal-tab" data-shot="shot-04" data-key="s4" role="tab" aria-selected="false" data-i18n="s4_title">The Reaver, at wave ten</button>
+                            <button type="button" class="nv-gal-tab" data-shot="shot-05" data-key="s5" role="tab" aria-selected="false" data-i18n="s5_title">The shop</button>
+                            <button type="button" class="nv-gal-tab" data-shot="shot-06" data-key="s6" role="tab" aria-selected="false" data-i18n="s6_title">Settings, in full</button>
+                            <button type="button" class="nv-gal-tab" data-shot="shot-07" data-key="s7" role="tab" aria-selected="false" data-i18n="s7_title">Key art</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PHONE ================= -->
+        <section class="nv-section nv-section--tint" id="phone">
+            <div class="container">
+                <div class="nv-split">
+                    <div class="reveal">
+                        <p class="nv-eyebrow" data-i18n="phone_eyebrow">Built for a phone</p>
+                        <h2 class="nv-title" data-i18n="phone_title">Portrait, offline, <em>and small</em>.</h2>
+                        <p class="nv-sub" style="margin-bottom: 1.8rem;" data-i18n="phone_sub">Novaryn is shaped around the way a phone is actually held: upright, in one hand, for a few minutes at a time, often somewhere with no signal.</p>
+                        <ul class="nv-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_portrait"><strong>Portrait and one-handed.</strong> Playable while standing on a bus, with no rotation and no second thumb required.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_offline"><strong>Plays fully offline.</strong> The whole game runs on the device. Turn the connection off and nothing changes.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_small"><strong>Small download, old hardware.</strong> Android 7.0 and up, and it does not ask a budget phone for more than it has.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_local"><strong>Your best score is yours.</strong> It is kept on the device, in the game's own save file, and it is not sent anywhere.</span></li>
+                        </ul>
+                        <p style="margin-top: 1.8rem;">
+                            <a href="/novaryn/policy" class="btn btn-primary" data-i18n="btn_policy">Read the privacy policy</a>
+                        </p>
+                    </div>
+                    <div class="reveal">
+                        <div class="nv-faq">
+                            <details class="nv-faq-item" open>
+                                <summary data-i18n="faq1_q">Which Android versions does it run on?</summary>
+                                <p data-i18n="faq1_a">Android 7.0 and up. The listing is version 1.0.0, published on 18 August 2026, rated Everyone with in-game purchases declared.</p>
+                            </details>
+                            <details class="nv-faq-item">
+                                <summary data-i18n="faq2_q">Are there ads?</summary>
+                                <p data-i18n="faq2_a">None. No banner, no interstitial between runs, and no rewarded video offering you a revive. There is no ad network in the build at all.</p>
+                            </details>
+                            <details class="nv-faq-item">
+                                <summary data-i18n="faq3_q">Does it need an internet connection?</summary>
+                                <p data-i18n="faq3_a">No. A run plays identically with the connection off. A connection is only used when you open the shop or make a purchase, because that goes through Google Play Billing.</p>
+                            </details>
+                            <details class="nv-faq-item">
+                                <summary data-i18n="faq4_q">Can I lose a skin I paid for?</summary>
+                                <p data-i18n="faq4_a">Not one you bought outright — those are one-time purchases tied to your Google account and restore when you reinstall. Only ships unlocked <em>through</em> a Pro subscription lock again if Pro lapses.</p>
+                            </details>
+                            <details class="nv-faq-item">
+                                <summary data-i18n="faq5_q">Is my high score sent anywhere?</summary>
+                                <p data-i18n="faq5_a">Your best score is kept on the device, in the game's own save file. Uninstalling the app removes it.</p>
+                            </details>
+                            <details class="nv-faq-item">
+                                <summary data-i18n="faq6_q">Is it suitable for children?</summary>
+                                <p data-i18n="faq6_a">It is rated Everyone: an abstract space shooter with no blood, no story and no chat. Worth knowing that it does carry in-app purchases, so a shared device is worth a Play Store purchase PIN.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="nv-cta">
+            <div class="container nv-cta-inner reveal">
+                <h2 class="cta-title" data-i18n="cta_title">There is no end screen. Only how far you got.</h2>
+                <div class="nv-cta-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.tdson.novaryn" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="btn_play">Get it on Google Play</a>
+                    <a href="/novaryn/policy" class="btn btn-ghost" data-i18n="nav_policy">Privacy policy</a>
+                    <a href="/#contact" class="btn btn-ghost" data-i18n="btn_contact">Contact us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo"><img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span></a>
+                <p data-i18n="footer_desc">Building practical AI tools for developers and businesses.</p>
+                <div class="footer-contact">
+                    <p class="footer-contact-name">Trần Đức Sơn</p>
+                    <a href="mailto:tdson278@gmail.com">tdson278@gmail.com</a>
+                    <a href="tel:+84343185566">+84 343 185 566</a>
+                    <p class="footer-contact-apps">
+                        <a href="https://zalo.me/84343185566" target="_blank" rel="noopener">Zalo</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://wa.me/84343185566" target="_blank" rel="noopener">WhatsApp</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://www.linkedin.com/in/son-tran-458b24158/" target="_blank" rel="noopener">LinkedIn</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://www.upwork.com/freelancers/~0113b97260ff6eb129" target="_blank" rel="noopener">Upwork</a>
+                    </p>
+                </div>
+            </div>
+            <nav class="footer-col" data-i18n-aria="footer_game" aria-label="Novaryn">
+                <h4 data-i18n="footer_game">The game</h4>
+                <a href="#overview" data-i18n="nav_overview">Overview</a>
+                <a href="#loop" data-i18n="nav_loop">The run</a>
+                <a href="#gems" data-i18n="nav_gems">Power-ups</a>
+                <a href="#ships" data-i18n="nav_ships">Ships</a>
+                <a href="#gallery" data-i18n="nav_shots">Screenshots</a>
+                <a href="/novaryn/policy" data-i18n="nav_policy">Privacy</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_prod" aria-label="Other products">
+                <h4 data-i18n="footer_prod">Other products</h4>
+                <a href="/dungeon-blade">Dungeon of the Fallen Blade</a>
+                <a href="/bksafe">BKSafe</a>
+                <a href="https://itask.aibachkhoa.com/plans" target="_blank" rel="noopener">iTask</a>
+                <a href="https://crew.aibachkhoa.com" target="_blank" rel="noopener">CrewAI</a>
+                <a href="https://crewaiplatform.aibachkhoa.com" target="_blank" rel="noopener">CrewAI Platform</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_comp" aria-label="Company">
+                <h4 data-i18n="footer_comp">Company</h4>
+                <a href="/#about" data-i18n="footer_about">About</a>
+                <a href="/#services" data-i18n="footer_services">Services</a>
+                <a href="/#contact" data-i18n="footer_contact">Contact</a>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AIBachKhoa</p>
+            <p data-i18n="footer_rights">All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/novaryn/novaryn.js"></script>
+</body>
+</html>

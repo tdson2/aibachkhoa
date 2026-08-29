@@ -115,7 +115,12 @@ const i18n = {
         dungeon_desc: "A hand-made pixel-art action roguelite. Cut down through a hundred procedurally generated depths, take a boon at every gate, and meet the lord waiting on every fifth. No ads and no in-app purchases, with Google Play Games leaderboards.",
         feat_dungeon_gen: "A hundred floors, every one generated and proved",
         feat_dungeon_touch: "Full touch controls, gamepad and keyboard",
-        action_dungeon: "Explore the game"
+        action_dungeon: "Explore the game",
+        tag_novaryn: "Arcade space shooter",
+        novaryn_desc: "A vertical arcade shoot-'em-up made for one thumb and short sessions. Drag anywhere to fly, the cannon fires itself, and every fifth wave brings a boss with a health bar. No ads, and it plays fully offline.",
+        feat_novaryn_waves: "Endless waves, a named boss on every fifth",
+        feat_novaryn_cosmetic: "Ten ships, every one of them cosmetic only",
+        action_novaryn: "Explore the game"
     },
     es: {
         page_title: "AIBachKhoa — Herramientas de IA para el trabajo y la automatización",
@@ -227,7 +232,12 @@ const i18n = {
         dungeon_desc: "Un roguelite de acción en pixel art hecho a mano. Desciende cortando por cien niveles generados proceduralmente, elige un don en cada puerta y enfréntate al señor que espera en cada quinto. Sin anuncios ni compras integradas, con tablas de clasificación de Google Play Games.",
         feat_dungeon_gen: "Cien pisos, todos generados y verificados",
         feat_dungeon_touch: "Controles táctiles completos, mando y teclado",
-        action_dungeon: "Descubre el juego"
+        action_dungeon: "Descubre el juego",
+        tag_novaryn: "Shooter espacial arcade",
+        novaryn_desc: "Un shoot 'em up arcade vertical hecho para un solo pulgar y partidas cortas. Arrastra donde quieras para volar, el cañón dispara solo y cada quinta oleada trae un jefe con barra de vida. Sin anuncios, y se juega totalmente sin conexión.",
+        feat_novaryn_waves: "Oleadas infinitas, un jefe con nombre en cada quinta",
+        feat_novaryn_cosmetic: "Diez naves, todas puramente estéticas",
+        action_novaryn: "Descubre el juego"
     },
     zh: {
         page_title: "AIBachKhoa — 面向工作与自动化的 AI 工具",
@@ -339,7 +349,12 @@ const i18n = {
         dungeon_desc: "一款手工打造的像素风动作 Roguelite。一路砍杀穿过一百层程序生成的地牢，每道门前领取一项恩赐，每第五层都有一位领主等着你。无广告、无内购，接入 Google Play Games 排行榜。",
         feat_dungeon_gen: "一百层地牢，层层生成并经过验证",
         feat_dungeon_touch: "完整触屏操作，支持手柄与键盘",
-        action_dungeon: "了解这款游戏"
+        action_dungeon: "了解这款游戏",
+        tag_novaryn: "街机太空射击",
+        novaryn_desc: "一款为单手拇指和碎片时间打造的竖版街机射击游戏。在屏幕任意处拖动即可飞行，炮火自动开火，每第五波都会出现带血条的首领。无广告，完全离线可玩。",
+        feat_novaryn_waves: "无尽波次，每第五波一位具名首领",
+        feat_novaryn_cosmetic: "十架战机，全部只改外观",
+        action_novaryn: "了解这款游戏"
     },
     hi: {
         page_title: "AIBachKhoa — काम और स्वचालन के लिए AI टूल",
@@ -451,7 +466,12 @@ const i18n = {
         dungeon_desc: "हाथ से बनाया गया पिक्सल-आर्ट एक्शन रॉगलाइट। प्रोसीजरली बने सौ तहखानों से लड़ते हुए नीचे उतरिए, हर द्वार पर एक वरदान लीजिए, और हर पाँचवें तल पर बैठे स्वामी से भिड़िए। कोई विज्ञापन नहीं, कोई इन-ऐप खरीदारी नहीं, और Google Play Games लीडरबोर्ड।",
         feat_dungeon_gen: "सौ तल, हर एक जनरेट और जाँचा हुआ",
         feat_dungeon_touch: "पूरे टच कंट्रोल, गेमपैड और कीबोर्ड",
-        action_dungeon: "गेम देखें"
+        action_dungeon: "गेम देखें",
+        tag_novaryn: "आर्केड स्पेस शूटर",
+        novaryn_desc: "एक अंगूठे और छोटे सत्रों के लिए बना वर्टिकल आर्केड शूट-एम-अप। उड़ने के लिए स्क्रीन पर कहीं भी खींचिए, तोप खुद चलती है, और हर पाँचवीं लहर पर हेल्थ बार वाला बॉस आता है। कोई विज्ञापन नहीं, और पूरी तरह ऑफ़लाइन चलता है।",
+        feat_novaryn_waves: "अनंत लहरें, हर पाँचवीं पर एक नामी बॉस",
+        feat_novaryn_cosmetic: "दस जहाज़, सभी सिर्फ़ दिखावे के लिए",
+        action_novaryn: "गेम देखें"
     },
     ar: {
         page_title: "AIBachKhoa — أدوات ذكاء اصطناعي للعمل والأتمتة",
@@ -563,7 +583,12 @@ const i18n = {
         dungeon_desc: "لعبة أكشن روغلايت بفن البكسل مصنوعة يدويًا. اشقّ طريقك نزولًا عبر مئة طابق تُولَّد إجرائيًا، وخذ نعمة عند كل بوابة، وواجه السيد المنتظر في كل طابق خامس. بلا إعلانات ولا مشتريات داخل التطبيق، مع لوحات صدارة Google Play Games.",
         feat_dungeon_gen: "مئة طابق، كل طابق مُولَّد ومُتحقَّق منه",
         feat_dungeon_touch: "تحكّم لمسي كامل، مع ذراع التحكم ولوحة المفاتيح",
-        action_dungeon: "استكشف اللعبة"
+        action_dungeon: "استكشف اللعبة",
+        tag_novaryn: "لعبة إطلاق نار فضائية",
+        novaryn_desc: "لعبة إطلاق نار عمودية بأسلوب الأركيد، مصممة لإبهام واحد ولجلسات قصيرة. اسحب في أي مكان على الشاشة للطيران، والمدفع يطلق من تلقاء نفسه، وكل موجة خامسة تجلب زعيمًا بشريط صحة. بلا إعلانات، وتعمل بالكامل دون اتصال.",
+        feat_novaryn_waves: "موجات لا تنتهي، وزعيم باسمه في كل موجة خامسة",
+        feat_novaryn_cosmetic: "عشر سفن، جميعها تجميلية فقط",
+        action_novaryn: "استكشف اللعبة"
     },
     pt: {
         page_title: "AIBachKhoa — Ferramentas de IA para o trabalho e a automação",
@@ -675,7 +700,12 @@ const i18n = {
         dungeon_desc: "Um roguelite de ação em pixel art feito à mão. Desça cortando por cem andares gerados proceduralmente, escolha uma bênção em cada portão e encare o senhor que espera a cada quinto. Sem anúncios e sem compras no aplicativo, com placares do Google Play Games.",
         feat_dungeon_gen: "Cem andares, todos gerados e verificados",
         feat_dungeon_touch: "Controles de toque completos, gamepad e teclado",
-        action_dungeon: "Conheça o jogo"
+        action_dungeon: "Conheça o jogo",
+        tag_novaryn: "Shooter espacial arcade",
+        novaryn_desc: "Um shoot 'em up arcade vertical feito para um polegar só e partidas curtas. Arraste em qualquer ponto da tela para voar, o canhão dispara sozinho e cada quinta onda traz um chefe com barra de vida. Sem anúncios, e joga totalmente offline.",
+        feat_novaryn_waves: "Ondas infinitas, um chefe com nome a cada quinta",
+        feat_novaryn_cosmetic: "Dez naves, todas apenas cosméticas",
+        action_novaryn: "Conheça o jogo"
     },
     fr: {
         page_title: "AIBachKhoa — Des outils d'IA pour le travail et l'automatisation",
@@ -787,7 +817,12 @@ const i18n = {
         dungeon_desc: "Un roguelite d'action en pixel art fait main. Taillez-vous un chemin à travers cent étages générés procéduralement, prenez une faveur à chaque porte et affrontez le seigneur qui attend tous les cinq étages. Sans publicité ni achat intégré, avec les classements Google Play Games.",
         feat_dungeon_gen: "Cent étages, tous générés et vérifiés",
         feat_dungeon_touch: "Commandes tactiles complètes, manette et clavier",
-        action_dungeon: "Découvrir le jeu"
+        action_dungeon: "Découvrir le jeu",
+        tag_novaryn: "Shoot'em up spatial arcade",
+        novaryn_desc: "Un shoot'em up arcade vertical pensé pour un seul pouce et des parties courtes. Glissez n'importe où pour voler, le canon tire tout seul, et une vague sur cinq amène un boss avec sa barre de vie. Sans publicité, et jouable entièrement hors ligne.",
+        feat_novaryn_waves: "Des vagues sans fin, un boss nommé toutes les cinq",
+        feat_novaryn_cosmetic: "Dix vaisseaux, tous purement cosmétiques",
+        action_novaryn: "Découvrir le jeu"
     },
     de: {
         page_title: "AIBachKhoa — KI-Werkzeuge für Arbeit und Automatisierung",
@@ -899,7 +934,12 @@ const i18n = {
         dungeon_desc: "Ein handgemachtes Pixel-Art-Action-Roguelite. Kämpft euch durch hundert prozedural erzeugte Tiefen, nehmt an jedem Tor eine Gabe mit und trefft auf jeder fünften Ebene den wartenden Fürsten. Keine Werbung, keine In-App-Käufe, dafür Google-Play-Games-Bestenlisten.",
         feat_dungeon_gen: "Hundert Ebenen, jede erzeugt und geprüft",
         feat_dungeon_touch: "Vollständige Touch-Steuerung, Gamepad und Tastatur",
-        action_dungeon: "Das Spiel ansehen"
+        action_dungeon: "Das Spiel ansehen",
+        tag_novaryn: "Arcade-Weltraum-Shooter",
+        novaryn_desc: "Ein vertikaler Arcade-Shoot-'em-up für einen Daumen und kurze Sitzungen. Zieh irgendwo auf dem Bildschirm, um zu fliegen, die Kanone feuert von selbst, und jede fünfte Welle bringt einen Boss mit Lebensbalken. Keine Werbung, und komplett offline spielbar.",
+        feat_novaryn_waves: "Endlose Wellen, ein benannter Boss auf jeder fünften",
+        feat_novaryn_cosmetic: "Zehn Schiffe, alle rein kosmetisch",
+        action_novaryn: "Das Spiel ansehen"
     },
     ja: {
         page_title: "AIBachKhoa — 仕事と自動化のための AI ツール",
@@ -1011,7 +1051,12 @@ const i18n = {
         dungeon_desc: "手づくりのドット絵アクションローグライト。自動生成される100層のダンジョンを斬り進み、門ごとに恩恵をひとつ選び、5層ごとに待ち構える領主と対峙します。広告なし、課金なし。Google Play Games のリーダーボードに対応。",
         feat_dungeon_gen: "100層すべてが生成され、到達可能性を検証済み",
         feat_dungeon_touch: "フルタッチ操作、ゲームパッドとキーボードにも対応",
-        action_dungeon: "ゲームを見る"
+        action_dungeon: "ゲームを見る",
+        tag_novaryn: "アーケードシューティング",
+        novaryn_desc: "片手の親指と短いプレイ時間のために作られた縦スクロールのアーケードシューティング。画面のどこをドラッグしても機体が動き、砲は自動で撃ち、5 ウェーブごとに体力バーを持つボスが現れます。広告なし、完全オフラインで遊べます。",
+        feat_novaryn_waves: "無限に続くウェーブ、5 の倍数ごとに名前つきのボス",
+        feat_novaryn_cosmetic: "10 機の機体は、すべて見た目だけの違い",
+        action_novaryn: "ゲームを見る"
     },
     ko: {
         page_title: "AIBachKhoa — 업무와 자동화를 위한 AI 도구",
@@ -1123,7 +1168,12 @@ const i18n = {
         dungeon_desc: "손으로 빚은 픽셀 아트 액션 로그라이트. 절차적으로 생성되는 100개 층을 베어 내려가며 관문마다 은총을 하나 고르고, 다섯 번째 층마다 기다리는 군주와 맞섭니다. 광고 없음, 인앱 결제 없음. Google Play Games 리더보드를 지원합니다.",
         feat_dungeon_gen: "100개 층 전부 생성되고 검증됨",
         feat_dungeon_touch: "완전한 터치 조작, 게임패드와 키보드 지원",
-        action_dungeon: "게임 보기"
+        action_dungeon: "게임 보기",
+        tag_novaryn: "아케이드 슈팅 게임",
+        novaryn_desc: "엄지 하나와 짧은 시간에 맞춘 세로형 아케이드 슈팅 게임. 화면 아무 곳이나 끌어 비행하고, 대포는 알아서 발사되며, 다섯 번째 웨이브마다 체력 바를 단 보스가 등장합니다. 광고 없음, 완전 오프라인 플레이.",
+        feat_novaryn_waves: "끝없는 웨이브, 다섯 번째마다 이름 있는 보스",
+        feat_novaryn_cosmetic: "열 대의 기체, 전부 외형만 바뀌는 스킨",
+        action_novaryn: "게임 보기"
     },
     ru: {
         page_title: "AIBachKhoa — ИИ-инструменты для работы и автоматизации",
@@ -1235,7 +1285,12 @@ const i18n = {
         dungeon_desc: "Пиксельный экшен-рогалик, сделанный вручную. Прорубайтесь вниз через сто процедурно сгенерированных уровней, берите дар у каждых ворот и встречайте владыку, который ждёт на каждом пятом. Без рекламы и внутриигровых покупок, с таблицами лидеров Google Play Games.",
         feat_dungeon_gen: "Сто уровней, каждый сгенерирован и проверен",
         feat_dungeon_touch: "Полное сенсорное управление, геймпад и клавиатура",
-        action_dungeon: "Посмотреть игру"
+        action_dungeon: "Посмотреть игру",
+        tag_novaryn: "Аркадный космический шутер",
+        novaryn_desc: "Вертикальный аркадный шутер, сделанный под один большой палец и короткие сессии. Ведите пальцем в любом месте экрана, пушка стреляет сама, а каждая пятая волна приводит босса с полоской здоровья. Без рекламы и полностью офлайн.",
+        feat_novaryn_waves: "Бесконечные волны, именной босс на каждой пятой",
+        feat_novaryn_cosmetic: "Десять кораблей, все — только внешний вид",
+        action_novaryn: "Посмотреть игру"
     },
 
     /* --- Tiếng Việt: tạm ẩn khỏi bộ chọn ngôn ngữ (giữ lại bản dịch) --- */
@@ -1349,7 +1404,12 @@ const i18n = {
         dungeon_desc: "Game hành động roguelite pixel art làm thủ công. Chém đường xuống một trăm tầng ngục sinh ngẫu nhiên, nhận một ân huệ ở mỗi cổng, và đối mặt lãnh chúa chờ sẵn ở mỗi tầng thứ năm. Không quảng cáo, không mua trong ứng dụng, có bảng xếp hạng Google Play Games.",
         feat_dungeon_gen: "Một trăm tầng, tầng nào cũng sinh ra và được chứng minh",
         feat_dungeon_touch: "Điều khiển cảm ứng đầy đủ, tay cầm và bàn phím",
-        action_dungeon: "Xem chi tiết game"
+        action_dungeon: "Xem chi tiết game",
+        tag_novaryn: "Game bắn phi thuyền arcade",
+        novaryn_desc: "Game bắn phi thuyền arcade dọc màn hình, làm cho một ngón tay và những phút rảnh ngắn. Kéo ở bất kỳ đâu để bay, súng tự bắn, và cứ mỗi đợt thứ năm lại có một trùm với thanh máu. Không quảng cáo, chơi offline hoàn toàn.",
+        feat_novaryn_waves: "Đợt tấn công vô tận, mỗi đợt thứ năm một trùm có tên",
+        feat_novaryn_cosmetic: "Mười phi thuyền, tất cả chỉ khác vẻ ngoài",
+        action_novaryn: "Xem trò chơi"
     }
 };
 

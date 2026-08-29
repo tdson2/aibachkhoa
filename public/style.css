@@ -308,6 +308,7 @@ ul { list-style: none; }
 .slide--chat     { --gx: 32%; --gy: 40%; }
 .slide--bksafe   { --gx: 68%; --gy: 62%; }
 .slide--dungeon  { --gx: 44%; --gy: 30%; }
+.slide--novaryn  { --gx: 58%; --gy: 26%; }
 
 .slide-icon {
     position: absolute;
@@ -488,6 +489,7 @@ ul { list-style: none; }
 .pcard-visual--fortune  { --gx: 58%; --gy: 30%; }
 .pcard-visual--spacex   { --gx: 50%; --gy: 62%; }
 .pcard-visual--dungeon  { --gx: 44%; --gy: 32%; }
+.pcard-visual--novaryn  { --gx: 56%; --gy: 28%; }
 
 /* product screenshots sitting on the gradient panel */
 .pviz-badge {
@@ -939,6 +941,7 @@ ul { list-style: none; }
 .ctile--fortune  { --gx: 28%; }
 .ctile--spacex   { --gx: 88%; }
 .ctile--dungeon  { --gx: 8%; }
+.ctile--novaryn  { --gx: 52%; }
 .ctile-icon--pixel { image-rendering: pixelated; }
 
 /* ---- screenshots (snap) ---- */

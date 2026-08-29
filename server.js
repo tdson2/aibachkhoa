@@ -30,6 +30,15 @@ app.get('/iron-line/policy', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'iron-line', 'policy', 'index.html'));
 });
 
+// Clean URLs for the Novaryn pages, for the same reason.
+app.get('/novaryn', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'novaryn', 'index.html'));
+});
+
+app.get('/novaryn/policy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'novaryn', 'policy', 'index.html'));
+});
+
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
