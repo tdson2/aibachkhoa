@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Line — hold the line across 12 battlefields | AIBachKhoa</title>
+    <meta name="description" content="An offline tower defense for Android: 12 battlefields, four towers with four tiers each, fifteen enemy types on the ground and in the air. No ads, no purchases, no internet permission.">
+    <link rel="canonical" href="https://aibachkhoa.com/iron-line">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Iron Line — hold the line across 12 battlefields">
+    <meta property="og:description" content="An offline tower defense for Android: 12 battlefields, four towers with four tiers each, fifteen enemy types on the ground and in the air. No ads, no purchases, no internet permission.">
+    <meta property="og:url" content="https://aibachkhoa.com/iron-line">
+    <meta property="og:image" content="https://aibachkhoa.com/assets/games/iron-line/og.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/games/iron-line/icon-256.png">
+    <link rel="apple-touch-icon" href="/assets/games/iron-line/icon-256.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/iron-line/iron-line.css">
+</head>
+<body class="il-page">
+    <a href="#overview" class="skip-link" data-i18n="skip_link">Skip to content</a>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="AIBachKhoa">
+                <img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="/" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="#towers" class="nav-link" data-i18n="nav_towers">Towers</a>
+                <a href="#enemies" class="nav-link" data-i18n="nav_enemies">Enemies</a>
+                <a href="#gallery" class="nav-link" data-i18n="nav_shots">Screenshots</a>
+                <a href="/iron-line/policy" class="nav-link" data-i18n="nav_policy">Privacy</a>
+                <span class="nav-divider" aria-hidden="true"></span>
+                <select id="lang-select" class="lang-select" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+            </div>
+
+            <div class="mobile-controls">
+                <select id="mobile-lang-select" class="lang-select lang-select--compact" data-display="code" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="mobile-theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+                <button class="icon-btn mobile-menu-btn" data-i18n-aria="aria_menu" aria-label="Open menu" id="mobile-btn" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ------------------------------------------------------ hero -->
+        <section class="il-hero" id="overview">
+            <div class="container">
+                <div class="il-hero-grid">
+                    <div class="il-hero-copy">
+                        <p class="il-kicker" data-i18n="hero_kicker">Android · tower defense</p>
+                        <h1 class="il-hero-title" data-i18n="hero_title">One road. <em>Hold the line</em>.</h1>
+                        <p class="il-hero-sub" data-i18n="hero_sub">An armoured column is rolling toward your defence core. You have one road, a handful of empty plots, and not nearly enough credits. Build the line, upgrade it under fire, and keep the core untouched through twelve battlefields.</p>
+                        <div class="il-hero-actions">
+                            <a href="#gallery" class="btn btn-primary" data-i18n="btn_shots">See how it plays</a>
+                            <a href="/iron-line/policy" class="btn btn-ghost" data-i18n="btn_policy">Privacy policy</a>
+                        </div>
+                        <p class="il-hero-meta" data-i18n="hero_meta">Application id <code>com.tdson.ironline</code> · landscape · arm64-v8a, armeabi-v7a and x86_64 · English and Tiếng Việt · plays entirely offline.</p>
+                    </div>
+
+                    <div class="il-hero-media reveal">
+                        <div class="il-shot-frame">
+                            <img src="/assets/games/iron-line/shot-03.jpg" alt="Iron Line — a fortified line on Sand Belt" width="1600" height="900" fetchpriority="high">
+                        </div>
+                        <img class="il-hero-badge" src="/assets/games/iron-line/icon-256.png" alt="" width="256" height="256" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="il-stats reveal">
+                    <div class="il-stat"><p class="il-stat-n">12</p><p class="il-stat-l" data-i18n="stat_missions">Battlefields across five terrains</p></div>
+                    <div class="il-stat"><p class="il-stat-n">4</p><p class="il-stat-l" data-i18n="stat_towers">Towers, four tiers each</p></div>
+                    <div class="il-stat"><p class="il-stat-n">15</p><p class="il-stat-l" data-i18n="stat_enemies">Enemy types, ground and air</p></div>
+                    <div class="il-stat"><p class="il-stat-n">2</p><p class="il-stat-l" data-i18n="stat_langs">Languages</p></div>
+                    <div class="il-stat"><p class="il-stat-n">0</p><p class="il-stat-l" data-i18n="stat_zero">Ads, purchases, trackers</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------------------------------------------------- towers -->
+        <section class="il-section il-section--tint" id="towers">
+            <div class="container">
+                <div class="il-head reveal">
+                    <p class="il-eyebrow" data-i18n="towers_eyebrow">Towers</p>
+                    <h2 class="il-title" data-i18n="towers_title">Four emplacements, <em>four tiers each</em>.</h2>
+                    <p class="il-sub" data-i18n="towers_sub">Every tower upgrades four times, retargets on demand, and sells back for credits when the shape of the battle changes. There is no single build that answers every map.</p>
+                </div>
+
+                <div class="il-grid">
+                    <article class="il-card reveal">
+                        <div class="il-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 12h7M14 12h7"/><circle cx="12" cy="12" r="2.4"/><path d="M12 3v3.6M12 17.4V21"/></svg></div>
+                        <h3 data-i18n="t_gatling_t">Gatling</h3>
+                        <p data-i18n="t_gatling_d">Fast and cheap, useful from the first wave to the last. The tower you open with and the one still earning its plot at the end.</p>
+                        <p class="il-card-tier" data-i18n="t_gatling_tier">Mk1 – Mk4 · ground and air</p>
+                    </article>
+                    <article class="il-card reveal">
+                        <div class="il-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 12h20"/><path d="M6 8.5 3.5 12 6 15.5M18 8.5 20.5 12 18 15.5"/></svg></div>
+                        <h3 data-i18n="t_laser_t">Laser</h3>
+                        <p data-i18n="t_laser_d">A continuous beam that ignores armour outright. Expensive per plot, but the answer to anything that shrugs off bullets.</p>
+                        <p class="il-card-tier" data-i18n="t_laser_tier">Mk1 – Mk4 · ground and air</p>
+                    </article>
+                    <article class="il-card reveal">
+                        <div class="il-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2.5c2.6 2.4 4 5.6 4 9.1 0 2.6-.9 5-2.4 6.9h-3.2A11 11 0 0 1 8 11.6c0-3.5 1.4-6.7 4-9.1Z"/><path d="M8 15.5 5 18.5l1 3M16 15.5l3 3-1 3"/></svg></div>
+                        <h3 data-i18n="t_rocket_t">Rocket</h3>
+                        <p data-i18n="t_rocket_d">Heavy splash damage that clears a packed road in one salvo — but it cannot elevate, so it never touches an aircraft.</p>
+                        <p class="il-card-tier" data-i18n="t_rocket_tier">Mk1 – Mk4 · ground only</p>
+                    </article>
+                    <article class="il-card reveal">
+                        <div class="il-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2Z"/></svg></div>
+                        <h3 data-i18n="t_tesla_t">Tesla</h3>
+                        <p data-i18n="t_tesla_d">Chains lightning between targets and slows everything it touches. Weak alone, quietly decisive next to anything else.</p>
+                        <p class="il-card-tier" data-i18n="t_tesla_tier">Mk1 – Mk4 · ground and air</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- --------------------------------------------------- enemies -->
+        <section class="il-section" id="enemies">
+            <div class="container il-split">
+                <div class="reveal">
+                    <p class="il-eyebrow" data-i18n="air_eyebrow">Ground and air</p>
+                    <h2 class="il-title" data-i18n="air_title">Fifteen ways in, <em>and only one road</em>.</h2>
+                    <p class="il-sub" data-i18n="air_sub">Scouts, armoured hulls, shielded carriers and swarms follow the route you fortified. Drones, biplanes, jets and heavy bombers ignore it completely and fly straight at the core.</p>
+                    <ul class="il-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="air_1"><strong>The road is only half the map.</strong> Five of the fifteen enemy types never touch it — they take the straight line to your core instead.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="air_2"><strong>Rockets cannot elevate.</strong> An all-Rocket wall holds the road perfectly and loses the sky, so the line has to stay balanced.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="air_3"><strong>They shoot back.</strong> Armoured hulls, serpents and bosses return fire on your emplacements, and bombers drop ordnance directly on top of them.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="air_4"><strong>Towers have hull integrity.</strong> They patch themselves up between engagements and salvage part of their cost if they are destroyed — where you place one matters as much as which one you place.</span></li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <div class="il-shot-frame">
+                        <img src="/assets/games/iron-line/shot-05.jpg" alt="Iron Line — a column caught at the first bend" width="1600" height="900" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------------------------------------------------------ pace -->
+        <section class="il-section il-section--tint">
+            <div class="container il-split">
+                <div class="reveal">
+                    <div class="il-shot-frame">
+                        <img src="/assets/games/iron-line/shot-06.jpg" alt="Iron Line — the tower card, showing range and upgrade cost" width="1600" height="900" loading="lazy">
+                    </div>
+                </div>
+                <div class="reveal">
+                    <p class="il-eyebrow" data-i18n="pace_eyebrow">Your pace</p>
+                    <h2 class="il-title" data-i18n="pace_title">Call the wave, <em>or take the minute</em>.</h2>
+                    <p class="il-sub" data-i18n="pace_sub">Nothing runs on a timer you do not control. Call a wave early for bonus credits when the line is ready, or run the battle at 1x, 2x or 3x once it is set. Pause at any point.</p>
+                    <ul class="il-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pace_1"><strong>Early-call bonus.</strong> Every wave you summon ahead of schedule pays extra credits into the same budget you are building with.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pace_2"><strong>Three speeds.</strong> Once the line holds itself, run it at double or triple time rather than watching it work.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pace_3"><strong>Ranked out of three.</strong> Keep the core untouched to earn all three marks. Progress saves on the device, with no account and no sync.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- --------------------------------------------------- gallery -->
+        <section class="il-section" id="gallery">
+            <div class="container">
+                <div class="il-head reveal">
+                    <p class="il-eyebrow" data-i18n="gal_eyebrow">Screenshots</p>
+                    <h2 class="il-title" data-i18n="gal_title">The real thing, <em>at native resolution</em>.</h2>
+                    <p class="il-sub" data-i18n="gal_sub">Captured from the game as it runs, with no device frames and no added marketing copy.</p>
+                </div>
+
+                <div class="il-gal reveal">
+                    <div class="il-gal-tabs" role="tablist" aria-label="Screenshots">
+                        <button class="il-gal-tab is-active" role="tab" aria-selected="true" data-shot="shot-03" data-key="g_line">The line</button>
+                        <button class="il-gal-tab" role="tab" aria-selected="false" data-shot="shot-05" data-key="g_combat">Under fire</button>
+                        <button class="il-gal-tab" role="tab" aria-selected="false" data-shot="shot-04" data-key="g_build">Build menu</button>
+                        <button class="il-gal-tab" role="tab" aria-selected="false" data-shot="shot-06" data-key="g_tower">Tower card</button>
+                        <button class="il-gal-tab" role="tab" aria-selected="false" data-shot="shot-02" data-key="g_missions">Mission select</button>
+                        <button class="il-gal-tab" role="tab" aria-selected="false" data-shot="shot-01" data-key="g_menu">Main menu</button>
+                        <button class="il-gal-tab" role="tab" aria-selected="false" data-shot="shot-07" data-key="g_victory">Victory</button>
+                    </div>
+                    <div class="il-gal-stage">
+                        <img id="gal-img" src="/assets/games/iron-line/shot-03.jpg" alt="Iron Line — the line" width="1600" height="900" loading="lazy">
+                    </div>
+                    <div class="il-gal-cap">
+                        <p class="il-gal-cap-t" id="gal-title">The line</p>
+                        <p class="il-gal-cap-d" id="gal-cap">Sand Belt, mission five. Eight plots filled, every tower on Mk3, and the first wave still forming at the road head.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --------------------------------------------------- privacy -->
+        <section class="il-section il-section--tint" id="privacy">
+            <div class="container il-split">
+                <div class="reveal">
+                    <p class="il-eyebrow" data-i18n="priv_eyebrow">Privacy</p>
+                    <h2 class="il-title" data-i18n="priv_title">It cannot phone home. <em>There is no network code</em>.</h2>
+                    <p class="il-sub" data-i18n="priv_sub">Iron Line is not built to collect anything, and it is not able to. The app ships without the internet permission, so there is no connection for data to leave through even if something tried.</p>
+                    <div class="il-hero-actions">
+                        <a href="/iron-line/policy" class="btn btn-primary" data-i18n="priv_link">Read the full privacy policy</a>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <ul class="il-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="priv_1"><strong>No data collected.</strong> No account, no sign-in, no analytics, no advertising id, no crash reporting.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="priv_2"><strong>No third-party SDKs.</strong> Nothing from an ad network, an analytics vendor or a games service is linked into the build.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="priv_3"><strong>No internet permission.</strong> <code>INTERNET</code> is not declared in the manifest. The only permissions are <code>VIBRATE</code> and <code>WAKE_LOCK</code>.</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="priv_4"><strong>Your save stays yours.</strong> Progress is written to the app's private storage on the device and is removed with the app.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------------------------------------------------------- cta -->
+        <section class="il-cta">
+            <div class="container">
+                <div class="il-cta-inner reveal">
+                    <h2 class="il-title" data-i18n="cta_title">Twelve battlefields. <em>Nothing else asked of you</em>.</h2>
+                    <p data-i18n="cta_sub">No ads, no in-app purchases, no connection required, nothing collected. Buy nothing, sign in to nothing, and play the whole campaign on a plane.</p>
+                    <div class="il-cta-actions">
+                        <span class="il-soon" data-i18n="cta_soon">Coming to Google Play</span>
+                        <a href="/#contact" class="btn btn-ghost" data-i18n="btn_contact">Ask about a build</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo"><img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span></a>
+                <p data-i18n="footer_desc">Building practical AI tools for developers and businesses.</p>
+                <div class="footer-contact">
+                    <p class="footer-contact-name">Trần Đức Sơn</p>
+                    <a href="mailto:tdson278@gmail.com">tdson278@gmail.com</a>
+                    <a href="tel:+84343185566">+84 343 185 566</a>
+                    <p class="footer-contact-apps">
+                        <a href="https://zalo.me/84343185566" target="_blank" rel="noopener">Zalo</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://wa.me/84343185566" target="_blank" rel="noopener">WhatsApp</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://www.linkedin.com/in/son-tran-458b24158/" target="_blank" rel="noopener">LinkedIn</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://www.upwork.com/freelancers/~0113b97260ff6eb129" target="_blank" rel="noopener">Upwork</a>
+                    </p>
+                </div>
+            </div>
+            <nav class="footer-col" data-i18n-aria="footer_game" aria-label="Iron Line">
+                <h4 data-i18n="footer_game">The game</h4>
+                <a href="#overview" data-i18n="nav_overview">Overview</a>
+                <a href="#towers" data-i18n="nav_towers">Towers</a>
+                <a href="#enemies" data-i18n="nav_enemies">Enemies</a>
+                <a href="#gallery" data-i18n="nav_shots">Screenshots</a>
+                <a href="/iron-line/policy" data-i18n="nav_policy">Privacy</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_prod" aria-label="Other products">
+                <h4 data-i18n="footer_prod">Other products</h4>
+                <a href="/bksafe">BKSafe</a>
+                <a href="/dungeon-blade">Dungeon of the Fallen Blade</a>
+                <a href="https://itask.aibachkhoa.com/plans" target="_blank" rel="noopener">iTask</a>
+                <a href="https://crew.aibachkhoa.com" target="_blank" rel="noopener">CrewAI</a>
+                <a href="https://crewchat.aibachkhoa.com" target="_blank" rel="noopener">CrewChat</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_comp" aria-label="Company">
+                <h4 data-i18n="footer_comp">Company</h4>
+                <a href="/#about" data-i18n="footer_about">About</a>
+                <a href="/#services" data-i18n="footer_services">Services</a>
+                <a href="/#contact" data-i18n="footer_contact">Contact</a>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AIBachKhoa</p>
+            <p data-i18n="footer_rights">All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/iron-line/iron-line.js"></script>
+</body>
+</html>

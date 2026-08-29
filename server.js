@@ -20,6 +20,16 @@ app.get('/dungeon-blade/policy', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dungeon-blade', 'policy', 'index.html'));
 });
 
+// Clean URLs for the Iron Line pages, for the same reason: no
+// /iron-line -> /iron-line/ redirect on the way in.
+app.get('/iron-line', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'iron-line', 'index.html'));
+});
+
+app.get('/iron-line/policy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'iron-line', 'policy', 'index.html'));
+});
+
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 

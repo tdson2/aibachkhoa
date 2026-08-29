@@ -1,0 +1,389 @@
+/* =========================================================
+   Iron Line product + policy pages.
+   Prefix: .il-  (the site's shared shell — navbar, footer,
+   .btn, .container — comes from /style.css).
+   The game's own navy/gold reads as a second accent inside
+   art surfaces only; buttons and links stay on the site accent.
+   ========================================================= */
+
+.il-page {
+    --il-navy: #0b101a;
+    --il-navy-2: #141e30;
+    --il-gold: #ffc857;
+}
+
+/* ------------------------------------------------------------- shell ---- */
+.il-section { padding: clamp(3.5rem, 7vw, 6.5rem) 0; }
+.il-section--tint { background: var(--surface-2); }
+
+.il-eyebrow {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    margin-bottom: 0.7rem;
+}
+
+.il-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 3.6vw, 2.9rem);
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+}
+.il-title em { font-style: normal; color: var(--accent); }
+
+.il-sub {
+    color: var(--text-muted);
+    max-width: 46rem;
+    margin-top: 1rem;
+    font-size: 1.02rem;
+    line-height: 1.7;
+}
+
+.il-head { margin-bottom: 2.6rem; }
+
+/* -------------------------------------------------------------- hero ---- */
+.il-hero {
+    position: relative;
+    padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(3rem, 6vw, 5rem);
+    overflow: hidden;
+}
+.il-hero::before {
+    content: '';
+    position: absolute;
+    inset: -40% 30% auto -10%;
+    height: 70vh;
+    background: radial-gradient(closest-side, var(--hero-glow), transparent 70%);
+    pointer-events: none;
+}
+.il-hero-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: clamp(2rem, 4vw, 4rem);
+    align-items: center;
+}
+.il-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+}
+.il-hero-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.3rem, 5.4vw, 4rem);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    margin: 1.2rem 0 0;
+}
+.il-hero-title em { font-style: normal; color: var(--accent); }
+.il-hero-sub {
+    color: var(--text-muted);
+    font-size: clamp(1rem, 1.2vw, 1.12rem);
+    line-height: 1.72;
+    margin-top: 1.2rem;
+    max-width: 34rem;
+}
+.il-hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.9rem; }
+.il-hero-meta {
+    margin-top: 1.6rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 34rem;
+}
+.il-hero-meta code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.86em;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 0.1rem 0.35rem;
+}
+
+.il-hero-media { position: relative; }
+.il-shot-frame {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border-strong);
+    background: var(--il-navy);
+    box-shadow: var(--shadow);
+    aspect-ratio: 16 / 9;
+}
+.il-shot-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.il-hero-badge {
+    position: absolute;
+    left: -14px;
+    bottom: -14px;
+    width: 84px;
+    height: 84px;
+    border-radius: 20px;
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow);
+    background: var(--surface);
+}
+
+/* ------------------------------------------------------------- stats ---- */
+.il-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+.il-stat { background: var(--bg); padding: 1.4rem 1.2rem; text-align: center; }
+.il-stat-n {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+}
+.il-stat-l {
+    margin-top: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+}
+
+/* ------------------------------------------------------------- cards ---- */
+.il-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+    gap: 1.1rem;
+}
+.il-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.5rem;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.il-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+.il-card-ico {
+    width: 40px; height: 40px;
+    display: grid; place-items: center;
+    border-radius: 11px;
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    margin-bottom: 1rem;
+}
+.il-card-ico svg { width: 20px; height: 20px; }
+.il-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.il-card p { color: var(--text-muted); font-size: 0.94rem; line-height: 1.65; }
+.il-card-tier {
+    margin-top: 0.9rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------- split ---- */
+.il-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2rem, 4vw, 3.5rem);
+    align-items: center;
+}
+.il-list { display: grid; gap: 1rem; margin-top: 1.6rem; padding: 0; }
+.il-list li { display: flex; gap: 0.8rem; align-items: flex-start; list-style: none; }
+.il-list svg { width: 19px; height: 19px; color: var(--accent); flex: none; margin-top: 0.18rem; }
+.il-list span { color: var(--text-muted); font-size: 0.96rem; line-height: 1.62; }
+.il-list strong { color: var(--text); font-weight: 600; }
+
+/* ----------------------------------------------------------- gallery ---- */
+.il-gal-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.4rem;
+}
+.il-gal-tab {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+}
+.il-gal-tab:hover { color: var(--text); border-color: var(--border-strong); }
+.il-gal-tab.is-active {
+    color: var(--btn-fg);
+    background: var(--btn-bg);
+    border-color: var(--btn-bg);
+}
+.il-gal-stage {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border-strong);
+    background: var(--il-navy);
+    box-shadow: var(--shadow);
+    aspect-ratio: 16 / 9;
+}
+.il-gal-stage img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.il-gal-cap { margin-top: 1.1rem; max-width: 44rem; }
+.il-gal-cap-t { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1rem; }
+.il-gal-cap-d { color: var(--text-muted); font-size: 0.94rem; line-height: 1.65; margin-top: 0.3rem; }
+
+/* -------------------------------------------------------------- note ---- */
+.il-note {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.2rem;
+    margin: 1.6rem 0;
+}
+.il-note p { color: var(--text); font-size: 0.94rem; line-height: 1.65; margin: 0; }
+
+/* --------------------------------------------------------------- cta ---- */
+.il-cta { padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 7vw, 6rem); }
+.il-cta-inner {
+    background: linear-gradient(135deg, var(--il-navy), var(--il-navy-2));
+    border: 1px solid var(--border-strong);
+    border-radius: 18px;
+    padding: clamp(2.2rem, 5vw, 3.6rem);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.il-cta-inner::after {
+    content: '';
+    position: absolute;
+    inset: auto -20% -60% -20%;
+    height: 60%;
+    background: radial-gradient(closest-side, rgba(255, 200, 87, 0.18), transparent 70%);
+    pointer-events: none;
+}
+.il-cta-inner .il-title { color: #f4f7fb; position: relative; }
+.il-cta-inner .il-title em { color: var(--il-gold); }
+.il-cta-inner p { color: #9fb0c6; margin: 1rem auto 0; max-width: 34rem; position: relative; line-height: 1.7; }
+.il-cta-actions {
+    display: flex; flex-wrap: wrap; gap: 0.8rem;
+    justify-content: center; margin-top: 2rem; position: relative;
+}
+.il-soon {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.9rem;
+    color: var(--il-navy); background: var(--il-gold);
+    border-radius: 10px; padding: 0.75rem 1.3rem;
+}
+
+/* ------------------------------------------------------------ policy ---- */
+.il-policy { padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 7vw, 6rem); }
+.il-policy-head { margin-bottom: 2.5rem; }
+.il-policy-stamp { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.6rem; }
+.il-policy-body { max-width: 48rem; }
+.il-policy-body h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.3rem; font-weight: 600;
+    margin: 2.6rem 0 0.9rem;
+    scroll-margin-top: 6rem;
+}
+.il-policy-body h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.02rem; font-weight: 600;
+    margin: 1.7rem 0 0.6rem;
+}
+.il-policy-body p { color: var(--text-muted); line-height: 1.78; margin-bottom: 1rem; }
+.il-policy-body strong { color: var(--text); font-weight: 600; }
+/* /style.css resets `ul { list-style: none }` site-wide, so the bullet is
+   drawn back in the same way the other policy page does it. Ordered lists
+   keep their numbers and only need the indent. */
+.il-policy-body ul { margin: 0 0 1.2rem; padding: 0; display: grid; gap: 0.5rem; }
+.il-policy-body ol { margin: 0 0 1.2rem 1.2rem; }
+.il-policy-body li { color: var(--text-muted); line-height: 1.75; }
+.il-policy-body ul > li {
+    position: relative;
+    padding-inline-start: 1.2rem;
+}
+.il-policy-body ul > li::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0.66em;
+    width: 6px;
+    height: 6px;
+    border-radius: 2px;
+    background: var(--accent);
+}
+.il-policy-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+
+.il-toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.4rem 1.6rem;
+    margin: 1.8rem 0 2.4rem;
+}
+.il-toc h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin: 0 0 0.9rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+.il-toc ol { margin: 0 0 0 1.1rem; }
+.il-toc li { margin-bottom: 0.4rem; }
+.il-toc a { color: var(--text); text-decoration: none; font-size: 0.94rem; }
+.il-toc a:hover { color: var(--accent); text-decoration: underline; }
+
+.il-tablewrap { overflow-x: auto; margin: 1.4rem 0 1.8rem; }
+.il-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 30rem; }
+.il-table th, .il-table td {
+    text-align: left; padding: 0.75rem 0.9rem;
+    border-bottom: 1px solid var(--border); vertical-align: top;
+}
+.il-table th {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 600;
+    color: var(--text); white-space: nowrap;
+}
+.il-table td { color: var(--text-muted); line-height: 1.6; }
+
+/* --------------------------------------------------------- animation ---- */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .il-card:hover { transform: none; }
+}
+
+/* -------------------------------------------------------- responsive ---- */
+@media (max-width: 900px) {
+    .il-hero-grid, .il-split { grid-template-columns: 1fr; }
+    .il-hero-media { order: -1; }
+    .il-hero-badge { width: 66px; height: 66px; left: -8px; bottom: -8px; }
+}
+@media (max-width: 560px) {
+    .il-stats { grid-template-columns: repeat(2, 1fr); }
+    .il-hero-actions .btn, .il-cta-actions .btn { width: 100%; justify-content: center; }
+}
