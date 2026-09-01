@@ -37,7 +37,7 @@ const i18n = {
         group_web: "Web & desktop",
         group_mobile: "Mobile apps",
         showcase_title: "Everything we build.",
-        showcase_sub: "Twelve products in one strip. Drag sideways, or let it drift on its own.",
+        showcase_sub: "Fourteen products in one strip. Drag sideways, or let it drift on its own.",
         gallery_title: "Inside the apps.",
         gallery_sub: "Real screens from our mobile apps.",
         aria_prev: "Previous",
@@ -120,7 +120,12 @@ const i18n = {
         novaryn_desc: "A vertical arcade shoot-'em-up made for one thumb and short sessions. Drag anywhere to fly, the cannon fires itself, and every fifth wave brings a boss with a health bar. No ads, and it plays fully offline.",
         feat_novaryn_waves: "Endless waves, a named boss on every fifth",
         feat_novaryn_cosmetic: "Ten ships, every one of them cosmetic only",
-        action_novaryn: "Explore the game"
+        action_novaryn: "Explore the game",
+        tag_ironline: "Tower defense",
+        ironline_desc: "An offline tower defense: twelve battlefields, four towers with four tiers each, and fifteen enemy types coming by ground and by air. No ads, no purchases, and no internet permission at all.",
+        feat_ironline_maps: "Twelve battlefields, four towers with four tiers each",
+        feat_ironline_air: "Fifteen enemy types, on the ground and in the air",
+        action_ironline: "Explore the game"
     },
     es: {
         page_title: "AIBachKhoa — Herramientas de IA para el trabajo y la automatización",
@@ -154,7 +159,7 @@ const i18n = {
         group_web: "Web y escritorio",
         group_mobile: "Apps móviles",
         showcase_title: "Todo lo que construimos.",
-        showcase_sub: "Doce productos en una sola franja. Arrastra o déjalo correr solo.",
+        showcase_sub: "Catorce productos en una sola franja. Arrastra o déjalo correr solo.",
         gallery_title: "Dentro de las apps.",
         gallery_sub: "Pantallas reales de nuestras apps móviles.",
         aria_prev: "Anterior",
@@ -237,7 +242,12 @@ const i18n = {
         novaryn_desc: "Un shoot 'em up arcade vertical hecho para un solo pulgar y partidas cortas. Arrastra donde quieras para volar, el cañón dispara solo y cada quinta oleada trae un jefe con barra de vida. Sin anuncios, y se juega totalmente sin conexión.",
         feat_novaryn_waves: "Oleadas infinitas, un jefe con nombre en cada quinta",
         feat_novaryn_cosmetic: "Diez naves, todas puramente estéticas",
-        action_novaryn: "Descubre el juego"
+        action_novaryn: "Descubre el juego",
+        tag_ironline: "Defensa de torres",
+        ironline_desc: "Una defensa de torres sin conexión: doce campos de batalla, cuatro torres con cuatro niveles cada una y quince tipos de enemigos que llegan por tierra y por aire. Sin anuncios, sin compras y sin permiso de internet.",
+        feat_ironline_maps: "Doce campos de batalla, cuatro torres con cuatro niveles cada una",
+        feat_ironline_air: "Quince tipos de enemigos, por tierra y por aire",
+        action_ironline: "Descubre el juego"
     },
     zh: {
         page_title: "AIBachKhoa — 面向工作与自动化的 AI 工具",
@@ -271,7 +281,7 @@ const i18n = {
         group_web: "网页与桌面端",
         group_mobile: "移动应用",
         showcase_title: "我们打造的一切。",
-        showcase_sub: "十二款产品汇于一处。左右拖动，或让它自己滚动。",
+        showcase_sub: "十四款产品汇于一处。左右拖动，或让它自己滚动。",
         gallery_title: "应用内部一览。",
         gallery_sub: "来自我们移动应用的真实界面。",
         aria_prev: "上一个",
@@ -354,7 +364,12 @@ const i18n = {
         novaryn_desc: "一款为单手拇指和碎片时间打造的竖版街机射击游戏。在屏幕任意处拖动即可飞行，炮火自动开火，每第五波都会出现带血条的首领。无广告，完全离线可玩。",
         feat_novaryn_waves: "无尽波次，每第五波一位具名首领",
         feat_novaryn_cosmetic: "十架战机，全部只改外观",
-        action_novaryn: "了解这款游戏"
+        action_novaryn: "了解这款游戏",
+        tag_ironline: "塔防",
+        ironline_desc: "一款完全离线的塔防游戏：十二张战场地图，四种防御塔各有四级升级，十五种敌人从地面和空中同时来袭。无广告、无内购，也不申请任何网络权限。",
+        feat_ironline_maps: "十二张战场，四种塔各有四级",
+        feat_ironline_air: "十五种敌人，地面与空中齐进",
+        action_ironline: "了解这款游戏"
     },
     hi: {
         page_title: "AIBachKhoa — काम और स्वचालन के लिए AI टूल",
@@ -388,7 +403,7 @@ const i18n = {
         group_web: "वेब और डेस्कटॉप",
         group_mobile: "मोबाइल ऐप्स",
         showcase_title: "हम जो कुछ भी बनाते हैं।",
-        showcase_sub: "एक ही पट्टी में बारह उत्पाद। बगल में खींचें, या इसे अपने आप चलने दें।",
+        showcase_sub: "एक ही पट्टी में चौदह उत्पाद। बगल में खींचें, या इसे अपने आप चलने दें।",
         gallery_title: "ऐप्स के भीतर।",
         gallery_sub: "हमारे मोबाइल ऐप्स की असली स्क्रीन।",
         aria_prev: "पिछला",
@@ -471,7 +486,12 @@ const i18n = {
         novaryn_desc: "एक अंगूठे और छोटे सत्रों के लिए बना वर्टिकल आर्केड शूट-एम-अप। उड़ने के लिए स्क्रीन पर कहीं भी खींचिए, तोप खुद चलती है, और हर पाँचवीं लहर पर हेल्थ बार वाला बॉस आता है। कोई विज्ञापन नहीं, और पूरी तरह ऑफ़लाइन चलता है।",
         feat_novaryn_waves: "अनंत लहरें, हर पाँचवीं पर एक नामी बॉस",
         feat_novaryn_cosmetic: "दस जहाज़, सभी सिर्फ़ दिखावे के लिए",
-        action_novaryn: "गेम देखें"
+        action_novaryn: "गेम देखें",
+        tag_ironline: "टावर डिफ़ेंस",
+        ironline_desc: "पूरी तरह ऑफ़लाइन टावर डिफ़ेंस: बारह युद्धभूमि, चार टावर और हर एक के चार स्तर, और ज़मीन तथा हवा दोनों से आते पंद्रह तरह के दुश्मन। कोई विज्ञापन नहीं, कोई ख़रीदारी नहीं, और इंटरनेट की अनुमति भी नहीं।",
+        feat_ironline_maps: "बारह युद्धभूमि, चार टावर और हर एक के चार स्तर",
+        feat_ironline_air: "पंद्रह तरह के दुश्मन, ज़मीन पर और हवा में",
+        action_ironline: "गेम देखें"
     },
     ar: {
         page_title: "AIBachKhoa — أدوات ذكاء اصطناعي للعمل والأتمتة",
@@ -505,7 +525,7 @@ const i18n = {
         group_web: "الويب وسطح المكتب",
         group_mobile: "تطبيقات الهاتف",
         showcase_title: "كل ما نبنيه.",
-        showcase_sub: "اثنا عشر منتجًا في شريط واحد. اسحب جانبًا أو دعه ينساب وحده.",
+        showcase_sub: "أربعة عشر منتجًا في شريط واحد. اسحب جانبًا أو دعه ينساب وحده.",
         gallery_title: "من داخل التطبيقات.",
         gallery_sub: "لقطات حقيقية من تطبيقاتنا للهواتف.",
         aria_prev: "السابق",
@@ -588,7 +608,12 @@ const i18n = {
         novaryn_desc: "لعبة إطلاق نار عمودية بأسلوب الأركيد، مصممة لإبهام واحد ولجلسات قصيرة. اسحب في أي مكان على الشاشة للطيران، والمدفع يطلق من تلقاء نفسه، وكل موجة خامسة تجلب زعيمًا بشريط صحة. بلا إعلانات، وتعمل بالكامل دون اتصال.",
         feat_novaryn_waves: "موجات لا تنتهي، وزعيم باسمه في كل موجة خامسة",
         feat_novaryn_cosmetic: "عشر سفن، جميعها تجميلية فقط",
-        action_novaryn: "استكشف اللعبة"
+        action_novaryn: "استكشف اللعبة",
+        tag_ironline: "لعبة دفاع الأبراج",
+        ironline_desc: "لعبة دفاع أبراج تعمل دون اتصال: اثنا عشر ميدانًا، وأربعة أبراج لكل منها أربع مراتب، وخمسة عشر نوعًا من الأعداء يأتون برًّا وجوًّا. بلا إعلانات، وبلا مشتريات، وبلا أي إذن للإنترنت.",
+        feat_ironline_maps: "اثنا عشر ميدانًا، وأربعة أبراج لكل منها أربع مراتب",
+        feat_ironline_air: "خمسة عشر نوعًا من الأعداء، على الأرض وفي الجو",
+        action_ironline: "استكشف اللعبة"
     },
     pt: {
         page_title: "AIBachKhoa — Ferramentas de IA para o trabalho e a automação",
@@ -622,7 +647,7 @@ const i18n = {
         group_web: "Web e desktop",
         group_mobile: "Apps móveis",
         showcase_title: "Tudo o que construímos.",
-        showcase_sub: "Doze produtos numa só faixa. Arraste para o lado ou deixe correr sozinho.",
+        showcase_sub: "Catorze produtos numa só faixa. Arraste para o lado ou deixe correr sozinho.",
         gallery_title: "Por dentro dos apps.",
         gallery_sub: "Telas reais dos nossos aplicativos móveis.",
         aria_prev: "Anterior",
@@ -705,7 +730,12 @@ const i18n = {
         novaryn_desc: "Um shoot 'em up arcade vertical feito para um polegar só e partidas curtas. Arraste em qualquer ponto da tela para voar, o canhão dispara sozinho e cada quinta onda traz um chefe com barra de vida. Sem anúncios, e joga totalmente offline.",
         feat_novaryn_waves: "Ondas infinitas, um chefe com nome a cada quinta",
         feat_novaryn_cosmetic: "Dez naves, todas apenas cosméticas",
-        action_novaryn: "Conheça o jogo"
+        action_novaryn: "Conheça o jogo",
+        tag_ironline: "Tower defense",
+        ironline_desc: "Um tower defense offline: doze campos de batalha, quatro torres com quatro níveis cada uma e quinze tipos de inimigos que chegam por terra e pelo ar. Sem anúncios, sem compras e sem permissão de internet.",
+        feat_ironline_maps: "Doze campos de batalha, quatro torres com quatro níveis cada",
+        feat_ironline_air: "Quinze tipos de inimigos, por terra e pelo ar",
+        action_ironline: "Conheça o jogo"
     },
     fr: {
         page_title: "AIBachKhoa — Des outils d'IA pour le travail et l'automatisation",
@@ -739,7 +769,7 @@ const i18n = {
         group_web: "Web et bureau",
         group_mobile: "Applis mobiles",
         showcase_title: "Tout ce que nous construisons.",
-        showcase_sub: "Douze produits sur une seule bande. Faites glisser, ou laissez défiler.",
+        showcase_sub: "Quatorze produits sur une seule bande. Faites glisser, ou laissez défiler.",
         gallery_title: "À l'intérieur des applis.",
         gallery_sub: "De vrais écrans de nos applications mobiles.",
         aria_prev: "Précédent",
@@ -822,7 +852,12 @@ const i18n = {
         novaryn_desc: "Un shoot'em up arcade vertical pensé pour un seul pouce et des parties courtes. Glissez n'importe où pour voler, le canon tire tout seul, et une vague sur cinq amène un boss avec sa barre de vie. Sans publicité, et jouable entièrement hors ligne.",
         feat_novaryn_waves: "Des vagues sans fin, un boss nommé toutes les cinq",
         feat_novaryn_cosmetic: "Dix vaisseaux, tous purement cosmétiques",
-        action_novaryn: "Découvrir le jeu"
+        action_novaryn: "Découvrir le jeu",
+        tag_ironline: "Tower defense",
+        ironline_desc: "Un tower defense entièrement hors ligne : douze champs de bataille, quatre tours à quatre niveaux chacune, et quinze types d'ennemis qui arrivent par la terre et par les airs. Sans publicité, sans achat, et sans la moindre permission internet.",
+        feat_ironline_maps: "Douze champs de bataille, quatre tours à quatre niveaux chacune",
+        feat_ironline_air: "Quinze types d'ennemis, au sol et dans les airs",
+        action_ironline: "Découvrir le jeu"
     },
     de: {
         page_title: "AIBachKhoa — KI-Werkzeuge für Arbeit und Automatisierung",
@@ -856,7 +891,7 @@ const i18n = {
         group_web: "Web und Desktop",
         group_mobile: "Mobile Apps",
         showcase_title: "Alles, was wir bauen.",
-        showcase_sub: "Zwölf Produkte in einem Band. Zur Seite ziehen – oder einfach laufen lassen.",
+        showcase_sub: "Vierzehn Produkte in einem Band. Zur Seite ziehen – oder einfach laufen lassen.",
         gallery_title: "Ein Blick in die Apps.",
         gallery_sub: "Echte Screens aus unseren Mobile-Apps.",
         aria_prev: "Zurück",
@@ -939,7 +974,12 @@ const i18n = {
         novaryn_desc: "Ein vertikaler Arcade-Shoot-'em-up für einen Daumen und kurze Sitzungen. Zieh irgendwo auf dem Bildschirm, um zu fliegen, die Kanone feuert von selbst, und jede fünfte Welle bringt einen Boss mit Lebensbalken. Keine Werbung, und komplett offline spielbar.",
         feat_novaryn_waves: "Endlose Wellen, ein benannter Boss auf jeder fünften",
         feat_novaryn_cosmetic: "Zehn Schiffe, alle rein kosmetisch",
-        action_novaryn: "Das Spiel ansehen"
+        action_novaryn: "Das Spiel ansehen",
+        tag_ironline: "Tower-Defense",
+        ironline_desc: "Ein Tower-Defense-Spiel ganz ohne Internet: zwölf Schlachtfelder, vier Türme mit je vier Stufen und fünfzehn Gegnertypen, die am Boden und aus der Luft kommen. Keine Werbung, keine Käufe und keine Internet-Berechtigung.",
+        feat_ironline_maps: "Zwölf Schlachtfelder, vier Türme mit je vier Stufen",
+        feat_ironline_air: "Fünfzehn Gegnertypen, am Boden und in der Luft",
+        action_ironline: "Das Spiel ansehen"
     },
     ja: {
         page_title: "AIBachKhoa — 仕事と自動化のための AI ツール",
@@ -973,7 +1013,7 @@ const i18n = {
         group_web: "Web・デスクトップ",
         group_mobile: "モバイルアプリ",
         showcase_title: "私たちがつくるすべて。",
-        showcase_sub: "12のプロダクトをひと続きに。横にドラッグしても、自動で流れても。",
+        showcase_sub: "14のプロダクトをひと続きに。横にドラッグしても、自動で流れても。",
         gallery_title: "アプリの中身。",
         gallery_sub: "モバイルアプリの実際の画面です。",
         aria_prev: "前へ",
@@ -1056,7 +1096,12 @@ const i18n = {
         novaryn_desc: "片手の親指と短いプレイ時間のために作られた縦スクロールのアーケードシューティング。画面のどこをドラッグしても機体が動き、砲は自動で撃ち、5 ウェーブごとに体力バーを持つボスが現れます。広告なし、完全オフラインで遊べます。",
         feat_novaryn_waves: "無限に続くウェーブ、5 の倍数ごとに名前つきのボス",
         feat_novaryn_cosmetic: "10 機の機体は、すべて見た目だけの違い",
-        action_novaryn: "ゲームを見る"
+        action_novaryn: "ゲームを見る",
+        tag_ironline: "タワーディフェンス",
+        ironline_desc: "完全オフラインのタワーディフェンス。12 のステージ、4 種類のタワーにそれぞれ 4 段階の強化、地上と空から攻めてくる 15 種類の敵。広告なし、課金なし、インターネット権限も一切ありません。",
+        feat_ironline_maps: "12 のステージ、4 種類のタワーに各 4 段階",
+        feat_ironline_air: "15 種類の敵が、地上からも空からも",
+        action_ironline: "ゲームを見る"
     },
     ko: {
         page_title: "AIBachKhoa — 업무와 자동화를 위한 AI 도구",
@@ -1090,7 +1135,7 @@ const i18n = {
         group_web: "웹 · 데스크톱",
         group_mobile: "모바일 앱",
         showcase_title: "우리가 만드는 모든 것.",
-        showcase_sub: "열두 개의 제품을 한 줄에. 옆으로 끌거나, 그대로 흐르게 두세요.",
+        showcase_sub: "열네 개의 제품을 한 줄에. 옆으로 끌거나, 그대로 흐르게 두세요.",
         gallery_title: "앱 속을 들여다보기.",
         gallery_sub: "모바일 앱의 실제 화면입니다.",
         aria_prev: "이전",
@@ -1173,7 +1218,12 @@ const i18n = {
         novaryn_desc: "엄지 하나와 짧은 시간에 맞춘 세로형 아케이드 슈팅 게임. 화면 아무 곳이나 끌어 비행하고, 대포는 알아서 발사되며, 다섯 번째 웨이브마다 체력 바를 단 보스가 등장합니다. 광고 없음, 완전 오프라인 플레이.",
         feat_novaryn_waves: "끝없는 웨이브, 다섯 번째마다 이름 있는 보스",
         feat_novaryn_cosmetic: "열 대의 기체, 전부 외형만 바뀌는 스킨",
-        action_novaryn: "게임 보기"
+        action_novaryn: "게임 보기",
+        tag_ironline: "타워 디펜스",
+        ironline_desc: "완전 오프라인 타워 디펜스. 열두 개의 전장, 네 종류의 타워와 각 4단계 업그레이드, 지상과 공중으로 밀려오는 열다섯 종의 적. 광고 없음, 결제 없음, 인터넷 권한도 없습니다.",
+        feat_ironline_maps: "열두 개의 전장, 네 종류의 타워에 각 4단계",
+        feat_ironline_air: "열다섯 종의 적이 지상과 공중에서",
+        action_ironline: "게임 보기"
     },
     ru: {
         page_title: "AIBachKhoa — ИИ-инструменты для работы и автоматизации",
@@ -1207,7 +1257,7 @@ const i18n = {
         group_web: "Веб и десктоп",
         group_mobile: "Мобильные приложения",
         showcase_title: "Всё, что мы создаём.",
-        showcase_sub: "Двенадцать продуктов в одной ленте. Тяните вбок или просто смотрите.",
+        showcase_sub: "Четырнадцать продуктов в одной ленте. Тяните вбок или просто смотрите.",
         gallery_title: "Внутри приложений.",
         gallery_sub: "Реальные экраны наших мобильных приложений.",
         aria_prev: "Назад",
@@ -1290,7 +1340,12 @@ const i18n = {
         novaryn_desc: "Вертикальный аркадный шутер, сделанный под один большой палец и короткие сессии. Ведите пальцем в любом месте экрана, пушка стреляет сама, а каждая пятая волна приводит босса с полоской здоровья. Без рекламы и полностью офлайн.",
         feat_novaryn_waves: "Бесконечные волны, именной босс на каждой пятой",
         feat_novaryn_cosmetic: "Десять кораблей, все — только внешний вид",
-        action_novaryn: "Посмотреть игру"
+        action_novaryn: "Посмотреть игру",
+        tag_ironline: "Башенная защита",
+        ironline_desc: "Полностью офлайновая башенная защита: двенадцать полей боя, четыре башни по четыре уровня каждая и пятнадцать типов врагов — по земле и по воздуху. Без рекламы, без покупок и без разрешения на интернет.",
+        feat_ironline_maps: "Двенадцать полей боя, четыре башни по четыре уровня",
+        feat_ironline_air: "Пятнадцать типов врагов — по земле и по воздуху",
+        action_ironline: "Посмотреть игру"
     },
 
     /* --- Tiếng Việt: tạm ẩn khỏi bộ chọn ngôn ngữ (giữ lại bản dịch) --- */
@@ -1326,7 +1381,7 @@ const i18n = {
         group_web: "Web & máy tính",
         group_mobile: "Ứng dụng di động",
         showcase_title: "Tất cả những gì chúng tôi làm.",
-        showcase_sub: "Mười hai sản phẩm trong một dải. Kéo ngang, hoặc để nó tự trôi.",
+        showcase_sub: "Mười bốn sản phẩm trong một dải. Kéo ngang, hoặc để nó tự trôi.",
         gallery_title: "Bên trong các ứng dụng.",
         gallery_sub: "Ảnh chụp thật từ các ứng dụng di động của chúng tôi.",
         aria_prev: "Trước",
@@ -1409,7 +1464,12 @@ const i18n = {
         novaryn_desc: "Game bắn phi thuyền arcade dọc màn hình, làm cho một ngón tay và những phút rảnh ngắn. Kéo ở bất kỳ đâu để bay, súng tự bắn, và cứ mỗi đợt thứ năm lại có một trùm với thanh máu. Không quảng cáo, chơi offline hoàn toàn.",
         feat_novaryn_waves: "Đợt tấn công vô tận, mỗi đợt thứ năm một trùm có tên",
         feat_novaryn_cosmetic: "Mười phi thuyền, tất cả chỉ khác vẻ ngoài",
-        action_novaryn: "Xem trò chơi"
+        action_novaryn: "Xem trò chơi",
+        tag_ironline: "Game thủ thành",
+        ironline_desc: "Game thủ thành chơi offline hoàn toàn: mười hai màn chiến trường, bốn loại tháp mỗi loại bốn cấp, và mười lăm loại quân địch tiến vào cả đường bộ lẫn đường không. Không quảng cáo, không mua trong ứng dụng, và không xin quyền truy cập internet.",
+        feat_ironline_maps: "Mười hai chiến trường, bốn loại tháp mỗi loại bốn cấp",
+        feat_ironline_air: "Mười lăm loại quân địch, trên bộ và trên không",
+        action_ironline: "Xem trò chơi"
     }
 };
 

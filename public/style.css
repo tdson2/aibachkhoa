@@ -309,6 +309,7 @@ ul { list-style: none; }
 .slide--bksafe   { --gx: 68%; --gy: 62%; }
 .slide--dungeon  { --gx: 44%; --gy: 30%; }
 .slide--novaryn  { --gx: 58%; --gy: 26%; }
+.slide--ironline { --gx: 36%; --gy: 62%; }
 
 .slide-icon {
     position: absolute;
@@ -490,6 +491,7 @@ ul { list-style: none; }
 .pcard-visual--spacex   { --gx: 50%; --gy: 62%; }
 .pcard-visual--dungeon  { --gx: 44%; --gy: 32%; }
 .pcard-visual--novaryn  { --gx: 56%; --gy: 28%; }
+.pcard-visual--ironline { --gx: 38%; --gy: 60%; }
 
 /* product screenshots sitting on the gradient panel */
 .pviz-badge {
@@ -534,6 +536,13 @@ ul { list-style: none; }
     width: 88%;
     max-width: 520px;
     image-rendering: pixelated;
+    border-color: rgba(0, 0, 0, 0.35);
+}
+
+/* landscape captures that aren't pixel art: same framing, but let the browser smooth them */
+.pviz-shot--wide {
+    width: 88%;
+    max-width: 520px;
     border-color: rgba(0, 0, 0, 0.35);
 }
 
@@ -942,6 +951,7 @@ ul { list-style: none; }
 .ctile--spacex   { --gx: 88%; }
 .ctile--dungeon  { --gx: 8%; }
 .ctile--novaryn  { --gx: 52%; }
+.ctile--ironline { --gx: 70%; }
 .ctile-icon--pixel { image-rendering: pixelated; }
 
 /* ---- screenshots (snap) ---- */
@@ -996,6 +1006,7 @@ ul { list-style: none; }
     object-position: center;
     image-rendering: pixelated;
 }
+.cshot--smooth .cshot-frame img { image-rendering: auto; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1180px) {
