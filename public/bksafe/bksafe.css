@@ -649,3 +649,77 @@ code {
     .bk-picker-card, .bk-feat, .bk-play-badge, .bk-picker-go svg { transition: none; }
     .bk-picker-card:hover, .bk-feat:hover, .bk-play-badge:hover { transform: none; }
 }
+
+/* ------------------------------------------------------------- policy ---- */
+/* Trang chính sách dùng lại đúng bộ biến và kiểu chữ của trang sản phẩm, nên
+   nó không cần một bảng màu riêng — chỉ cần phần khung cho một trang toàn chữ. */
+.bk-policy { padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 7vw, 6rem); }
+.bk-policy-head { margin-bottom: 2.5rem; }
+.bk-policy-stamp { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.6rem; }
+.bk-policy-body { max-width: 48rem; }
+.bk-policy-body h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.3rem; font-weight: 600;
+    margin: 2.6rem 0 0.9rem;
+    scroll-margin-top: 6rem;
+}
+.bk-policy-body h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.02rem; font-weight: 600;
+    margin: 1.7rem 0 0.6rem;
+}
+.bk-policy-body p { color: var(--text-muted); line-height: 1.78; margin-bottom: 1rem; }
+.bk-policy-body strong { color: var(--text); font-weight: 600; }
+/* /style.css đặt `ul { list-style: none }` cho cả trang web, nên dấu đầu dòng
+   phải vẽ lại bằng tay. Danh sách đánh số vẫn giữ số, chỉ cần thụt lề. */
+.bk-policy-body ul { margin: 0 0 1.2rem; padding: 0; display: grid; gap: 0.5rem; }
+.bk-policy-body ol { margin: 0 0 1.2rem 1.2rem; }
+.bk-policy-body li { color: var(--text-muted); line-height: 1.75; }
+.bk-policy-body ul > li { position: relative; padding-inline-start: 1.2rem; }
+.bk-policy-body ul > li::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0.66em;
+    width: 6px; height: 6px;
+    border-radius: 2px;
+    background: var(--bk-ink);
+}
+.bk-policy-body a { color: var(--bk-ink); text-decoration: underline; text-underline-offset: 2px; }
+.bk-policy-body code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.88em;
+}
+
+.bk-toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.4rem 1.6rem;
+    margin: 1.8rem 0 2.4rem;
+}
+.bk-toc h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin: 0 0 0.9rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+.bk-toc ol { margin: 0 0 0 1.1rem; }
+.bk-toc li { margin-bottom: 0.4rem; }
+.bk-toc a { color: var(--text); text-decoration: none; font-size: 0.94rem; }
+.bk-toc a:hover { color: var(--bk-ink); text-decoration: underline; }
+
+.bk-tablewrap { overflow-x: auto; margin: 1.4rem 0 1.8rem; }
+.bk-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 30rem; }
+.bk-table th, .bk-table td {
+    text-align: left; padding: 0.75rem 0.9rem;
+    border-bottom: 1px solid var(--border); vertical-align: top;
+}
+.bk-table th {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 600;
+    color: var(--text); white-space: nowrap;
+}
+.bk-table td { color: var(--text-muted); line-height: 1.6; }

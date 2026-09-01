@@ -10,6 +10,10 @@ app.get('/bksafe', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'bksafe', 'index.html'));
 });
 
+app.get('/bksafe/policy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'bksafe', 'policy', 'index.html'));
+});
+
 // Clean URLs for the Dungeon of the Fallen Blade pages, for the same
 // reason: no /dungeon-blade -> /dungeon-blade/ redirect on the way in.
 app.get('/dungeon-blade', (req, res) => {
