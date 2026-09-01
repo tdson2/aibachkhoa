@@ -78,7 +78,7 @@
 }
 
 .bk-hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.3rem; }
-.bk-btn-mac svg, .bk-btn-win svg, .bk-btn-play svg { width: 19px; height: 19px; flex-shrink: 0; }
+.bk-btn-mac svg, .bk-btn-win svg, .bk-btn-linux svg, .bk-btn-play svg { width: 19px; height: 19px; flex-shrink: 0; }
 
 .bk-hero-meta { font-size: 0.86rem; color: var(--text-muted); }
 
@@ -206,6 +206,12 @@
     border-top: 1px solid var(--border);
     background:
         radial-gradient(40% 40% at 90% 0%, var(--bk-glow), transparent 70%),
+        var(--surface-2);
+}
+.bk-platform--linux {
+    border-top: 1px solid var(--border);
+    background:
+        radial-gradient(42% 42% at 92% 0%, var(--bk-glow), transparent 70%),
         var(--surface-2);
 }
 
@@ -439,7 +445,7 @@ code {
     background: var(--surface);
     box-shadow: var(--shadow);
 }
-.bk-dl-card--droid, .bk-dl-card--win, .bk-dl-card--lite { background: var(--surface); }
+.bk-dl-card--droid, .bk-dl-card--win, .bk-dl-card--linux, .bk-dl-card--lite { background: var(--surface); }
 .bk-dl-appicon--lite { background: var(--surface-2); }
 
 .bk-dl-top {
