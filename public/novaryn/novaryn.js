@@ -157,22 +157,22 @@ const i18n = {
 
         /* ---------- Privacy policy ---------- */
         pol_page_title: "Privacy Policy — Novaryn | AIBachKhoa",
-        pol_meta_desc: "How Novaryn handles information: what stays on your device, what Google Play Billing receives when you buy a ship or subscribe to Pro, and why the app needs no other permission.",
+        pol_meta_desc: "How Novaryn handles information: what stays on your device, what the App Store and Google Play receive when you buy a ship or subscribe to Pro, and why the app needs no other permission.",
         pol_back: "Back to the game",
         pol_eyebrow: "Legal",
         pol_title: "Privacy Policy",
         pol_game: "Novaryn",
-        pol_updated: "Last updated: 18 August 2026",
+        pol_updated: "Last updated: 2 September 2026",
         pol_lead: "This Privacy Policy explains how Novaryn (\"we\", \"our\", or \"us\") collects, uses, and protects your information when you use our mobile application Novaryn (the \"App\"). We are committed to protecting your privacy and complying with applicable data protection laws, including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA), where applicable.",
         pol_toc: "On this page",
 
         pol_h_intro: "Introduction",
-        pol_intro: "Novaryn is a vertical arcade shoot-'em-up for Android: endless waves of enemy formations, a boss on every fifth wave, and a collection of purely cosmetic ship skins. The game runs entirely on your own device. It has no accounts, no player profiles, no chat, no advertising and no analytics.",
+        pol_intro: "Novaryn is a vertical arcade shoot-'em-up for iPhone, iPad and Android: endless waves of enemy formations, a boss on every fifth wave, and a collection of purely cosmetic ship skins. The game runs entirely on your own device. It has no accounts, no player profiles, no chat, no advertising and no analytics.",
 
         pol_h_short: "The short version",
         pol_short_1: "<strong>We run no servers and we receive no data about you.</strong> Your settings and your best score are written to the App's own save file on your device and never leave it.",
         pol_short_2: "<strong>There are no ads and no tracking.</strong> There is no advertising SDK, no analytics SDK and no crash-reporting SDK in the build, so nothing is profiling you or measuring what you do.",
-        pol_short_3: "<strong>The one third party is Google Play Billing</strong>, and only when you choose to buy a ship skin or subscribe to Novaryn Pro. Google handles that transaction; we never see your payment details.",
+        pol_short_3: "<strong>The only third parties are the app stores</strong> — Apple's App Store on iPhone and iPad, Google Play on Android — and only when you choose to buy a ship skin or subscribe to Novaryn Pro. Apple or Google handles that transaction; we never see your payment details.",
         pol_short_4: "<strong>The App asks for no sensitive permission.</strong> No location, no contacts, no camera, no microphone, no access to your files.",
 
         pol_h_defs: "Interpretation and Definitions",
@@ -186,8 +186,8 @@ const i18n = {
         pol_d_device: "<strong>Device</strong> means any device that can access the Service, such as a phone or a tablet.",
         pol_d_personal: "<strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.",
         pol_d_service: "<strong>Service</strong> refers to the Application.",
-        pol_d_provider: "<strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. For this App, the only such party is Google, through Google Play and Google Play Billing.",
-        pol_d_purchase: "<strong>In-App Purchase</strong> means a ship skin bought outright, or the Novaryn Pro subscription, each transacted through Google Play Billing.",
+        pol_d_provider: "<strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company. For this App, the only such parties are Apple, through the App Store, and Google, through Google Play — and only when you make a purchase.",
+        pol_d_purchase: "<strong>In-App Purchase</strong> means a ship skin bought outright, or the Novaryn Pro subscription, each transacted through the App Store or Google Play, depending on where the App was installed from.",
         pol_d_you: "<strong>You</strong> means the individual accessing or using the Service.",
 
         pol_h_collect: "Data We Collect",
@@ -206,37 +206,37 @@ const i18n = {
 
         pol_h_purchases: "Purchases and Subscriptions",
         pol_purchase_1: "Novaryn offers optional in-app purchases: individual ship skins as one-time purchases, and <strong>Novaryn Pro</strong> as a monthly subscription that unlocks every ship in the shop while it is active. All purchases are cosmetic. Nothing sold in the App changes how the game plays.",
-        pol_purchase_2: "Every transaction is carried out by <strong>Google Play Billing</strong>. When you buy something, Google — not us — processes your payment. We never see, receive or store your card number, billing address or any other payment detail. What we receive from Google is a purchase token telling the App that an entitlement is active, so it can unlock the skin you paid for.",
-        pol_purchase_3: "Google processes that transaction as an independent controller under its own privacy policy. If you want to know what Google keeps about a Play purchase, that policy is the place to look, and your Google account settings are where you can review your purchase history.",
-        pol_purchase_4: "The Novaryn Pro subscription renews monthly until you cancel it, and you can cancel at any time in <strong>Google Play → Payments &amp; subscriptions</strong>. Ships unlocked through an active Pro subscription lock again if the subscription ends; ships you bought outright remain yours permanently and restore when you reinstall the App.",
+        pol_purchase_2: "Every transaction is carried out by the store the App was installed from — <strong>Apple's App Store</strong> or <strong>Google Play</strong>. Apple or Google, not us, processes your payment. We never see, receive or store your card number, billing address or any other payment detail. What the App receives back is only whether an entitlement is currently valid, so it can unlock the skin you paid for.",
+        pol_purchase_3: "Apple and Google each process that transaction as an independent controller under their own privacy policy. If you want to know what they keep about a purchase, those policies are the place to look, and your Apple Account or Google account settings are where you can review your purchase history.",
+        pol_purchase_4: "The Novaryn Pro subscription renews monthly until you cancel it, and you can cancel at any time — on iPhone or iPad in <strong>Settings → your name → Subscriptions</strong>, on Android in <strong>Google Play → Payments &amp; subscriptions</strong>. Ships unlocked through an active Pro subscription lock again if the subscription ends; ships you bought outright remain yours permanently and restore when you reinstall the App.",
 
         pol_h_sharing: "Sharing Data with Third Parties",
         pol_sharing_1: "We do not sell user data, and we have no user data to sell. There is no advertising network, no analytics provider, no crash-reporting service and no social SDK in the App.",
-        pol_sharing_2: "Google Play Billing is the only third-party service the App communicates with, and only at the moment you open the shop or complete a purchase. Outside of that, the App makes no network requests of its own.",
+        pol_sharing_2: "The App Store and Google Play are the only third-party services the App communicates with, and only at the moment you open the shop or complete a purchase. Outside of that, the App makes no network requests of its own.",
 
         pol_h_perm: "Permissions and Network Access",
-        pol_perm_1: "The App declares the Android <code>INTERNET</code> permission, which Google Play Billing requires in order to verify purchases and entitlements, and <code>WAKE_LOCK</code>, which keeps the screen from sleeping in the middle of a run.",
+        pol_perm_1: "On iOS the App declares no permission at all: the build carries no camera, microphone or photo-library usage description, because it touches none of them. On Android it declares <code>INTERNET</code>, which Google Play Billing requires in order to verify purchases and entitlements, and <code>WAKE_LOCK</code>, which keeps the screen from sleeping in the middle of a run.",
         pol_perm_2: "It requests no other sensitive permission: no location, no contacts, no camera, no microphone, and no access to the photos, videos or documents on your device.",
         pol_perm_3: "The game itself does not require a connection. Every wave, every boss and every power-up works with the connection off — the only thing that needs the network is the shop.",
 
         pol_h_storage: "Data Storage and Deletion",
         pol_storage_1: "We operate no servers of our own and store no user data. Everything the game needs in order to run is processed and stored locally on your device.",
         pol_storage_2: "You can delete all of it by uninstalling the App. That removes your best score, your settings and the record of which skin you had equipped.",
-        pol_storage_3: "Your purchase history is the exception, because it is held by Google rather than by us. Uninstalling the App does not erase a purchase — that is deliberate, and it is what lets a skin you paid for come back when you reinstall. Review or manage it through your Google Play account.",
+        pol_storage_3: "Your purchase history is the exception, because it is held by Apple or Google rather than by us. Uninstalling the App does not erase a purchase — that is deliberate, and it is what lets a skin you paid for come back when you reinstall, through <strong>Restore Purchases</strong> in the shop. Review or manage it through your Apple Account or your Google Play account.",
 
         pol_h_children: "Children's Privacy",
-        pol_children_1: "Novaryn is rated Everyone and contains no content directed at, or unsuitable for, children. We do not knowingly collect personal information from anyone, of any age, including children under 13.",
-        pol_children_2: "The App does contain in-app purchases. If a child uses your device, we suggest turning on purchase authentication in the Google Play Store settings so that a password or biometric is required before any purchase completes.",
+        pol_children_1: "Novaryn is rated for general audiences and contains no content directed at, or unsuitable for, children. We do not knowingly collect personal information from anyone, of any age, including children under 13.",
+        pol_children_2: "The App does contain in-app purchases. If a child uses your device, we suggest requiring authentication before a purchase completes — Ask to Buy or <strong>Screen Time → Content &amp; Privacy Restrictions</strong> on iOS, and purchase authentication in the Google Play Store settings on Android.",
 
         pol_h_rights: "Your Rights",
         pol_rights_lead: "Under the GDPR, the CCPA and comparable laws, you have rights of access, correction, deletion, portability and objection with respect to your personal data. Because we hold no personal data about you, there is nothing on our side for those requests to reach — but the rights still apply, and you are welcome to contact us to confirm that.",
         pol_rights_1: "<strong>Access:</strong> we hold no data about you to disclose.",
         pol_rights_2: "<strong>Deletion:</strong> uninstalling the App removes everything the App has stored.",
-        pol_rights_3: "<strong>Purchases:</strong> requests about payment records should go to Google, which processes them.",
+        pol_rights_3: "<strong>Purchases:</strong> requests about payment records should go to Apple or Google, whichever processed them.",
         pol_rights_4: "<strong>Objection:</strong> there is no profiling, automated decision-making or targeted advertising in the App to object to.",
 
         pol_h_security: "Security",
-        pol_security: "Because the App stores its data locally and transmits none of it, the ordinary risks of data in transit do not arise. Purchase traffic is handled by Google Play Billing over its own secured channel. That said, no method of electronic storage is completely secure, and the save file on your device is protected by your device's own security — a screen lock is worth having.",
+        pol_security: "Because the App stores its data locally and transmits none of it, the ordinary risks of data in transit do not arise. Purchase traffic is handled by the App Store or Google Play over their own secured channels. That said, no method of electronic storage is completely secure, and the save file on your device is protected by your device's own security — a screen lock is worth having.",
 
         pol_h_changes: "Changes to this Privacy Policy",
         pol_changes_1: "We may update this Privacy Policy from time to time — for instance, if a future version of the App gains a feature that changes how data is handled. We will post the new policy on this page and update the \"Last updated\" date at the top.",
@@ -410,12 +410,12 @@ const i18n = {
         pol_toc: "Nội dung trang này",
 
         pol_h_intro: "Giới thiệu",
-        pol_intro: "Novaryn là game bắn phi thuyền arcade dọc màn hình cho Android: các đợt đội hình địch vô tận, một trùm ở mỗi đợt thứ năm, và một bộ sưu tập skin phi thuyền thuần trang trí. Trò chơi chạy hoàn toàn trên máy của bạn. Nó không có tài khoản, không có hồ sơ người chơi, không có trò chuyện, không có quảng cáo và không có phân tích hành vi.",
+        pol_intro: "Novaryn là game bắn phi thuyền arcade dọc màn hình cho iPhone, iPad và Android: các đợt đội hình địch vô tận, một trùm ở mỗi đợt thứ năm, và một bộ sưu tập skin phi thuyền thuần trang trí. Trò chơi chạy hoàn toàn trên máy của bạn. Nó không có tài khoản, không có hồ sơ người chơi, không có trò chuyện, không có quảng cáo và không có phân tích hành vi.",
 
         pol_h_short: "Bản tóm tắt",
         pol_short_1: "<strong>Chúng tôi không vận hành máy chủ nào và không nhận dữ liệu nào về bạn.</strong> Cài đặt và điểm cao nhất của bạn được ghi vào tệp lưu riêng của Ứng dụng trên máy bạn và không bao giờ rời khỏi đó.",
         pol_short_2: "<strong>Không có quảng cáo và không có theo dõi.</strong> Trong bản dựng không có SDK quảng cáo, SDK phân tích hay SDK báo lỗi nào, nên không có gì đang lập hồ sơ hay đo đếm hành vi của bạn.",
-        pol_short_3: "<strong>Bên thứ ba duy nhất là Google Play Billing</strong>, và chỉ khi bạn chủ động mua một skin phi thuyền hoặc đăng ký Novaryn Pro. Google xử lý giao dịch đó; chúng tôi không bao giờ thấy thông tin thanh toán của bạn.",
+        pol_short_3: "<strong>Bên thứ ba duy nhất là các cửa hàng ứng dụng</strong> — App Store của Apple trên iPhone và iPad, Google Play trên Android — và chỉ khi bạn chủ động mua một skin phi thuyền hoặc đăng ký Novaryn Pro. Apple hoặc Google xử lý giao dịch đó; chúng tôi không bao giờ thấy thông tin thanh toán của bạn.",
         pol_short_4: "<strong>Ứng dụng không xin quyền nhạy cảm nào.</strong> Không vị trí, không danh bạ, không camera, không micro, không truy cập tệp của bạn.",
 
         pol_h_defs: "Diễn giải và định nghĩa",
@@ -429,8 +429,8 @@ const i18n = {
         pol_d_device: "<strong>Thiết bị</strong> là bất kỳ thiết bị nào truy cập được Dịch vụ, chẳng hạn điện thoại hoặc máy tính bảng.",
         pol_d_personal: "<strong>Dữ liệu cá nhân</strong> là mọi thông tin liên quan tới một cá nhân đã hoặc có thể xác định được.",
         pol_d_service: "<strong>Dịch vụ</strong> là Ứng dụng.",
-        pol_d_provider: "<strong>Nhà cung cấp dịch vụ</strong> là bất kỳ cá nhân hay pháp nhân nào xử lý dữ liệu thay mặt Công ty. Với Ứng dụng này, bên duy nhất như vậy là Google, thông qua Google Play và Google Play Billing.",
-        pol_d_purchase: "<strong>Mua trong ứng dụng</strong> là một skin phi thuyền mua đứt, hoặc gói đăng ký Novaryn Pro, đều giao dịch qua Google Play Billing.",
+        pol_d_provider: "<strong>Nhà cung cấp dịch vụ</strong> là bất kỳ cá nhân hay pháp nhân nào xử lý dữ liệu thay mặt Công ty. Với Ứng dụng này, những bên duy nhất như vậy là Apple, thông qua App Store, và Google, thông qua Google Play — và chỉ khi bạn thực hiện một giao dịch mua.",
+        pol_d_purchase: "<strong>Mua trong ứng dụng</strong> là một skin phi thuyền mua đứt, hoặc gói đăng ký Novaryn Pro, đều giao dịch qua App Store hoặc Google Play, tuỳ theo nơi bạn đã cài Ứng dụng.",
         pol_d_you: "<strong>Bạn</strong> là cá nhân truy cập hoặc sử dụng Dịch vụ.",
 
         pol_h_collect: "Dữ liệu chúng tôi thu thập",
@@ -449,37 +449,37 @@ const i18n = {
 
         pol_h_purchases: "Mua hàng và gói đăng ký",
         pol_purchase_1: "Novaryn có các khoản mua trong ứng dụng tuỳ chọn: từng skin phi thuyền dưới dạng mua một lần, và <strong>Novaryn Pro</strong> dưới dạng gói đăng ký tháng mở khoá mọi phi thuyền trong cửa hàng khi còn hiệu lực. Mọi khoản mua đều chỉ mang tính trang trí. Không thứ gì bán trong Ứng dụng làm thay đổi cách chơi.",
-        pol_purchase_2: "Mọi giao dịch đều do <strong>Google Play Billing</strong> thực hiện. Khi bạn mua thứ gì đó, Google — chứ không phải chúng tôi — xử lý khoản thanh toán. Chúng tôi không bao giờ thấy, nhận hay lưu số thẻ, địa chỉ thanh toán hay bất kỳ chi tiết thanh toán nào của bạn. Thứ chúng tôi nhận từ Google là một mã giao dịch cho Ứng dụng biết rằng một quyền sở hữu đang có hiệu lực, để nó mở khoá skin bạn đã trả tiền.",
-        pol_purchase_3: "Google xử lý giao dịch đó với tư cách một bên kiểm soát dữ liệu độc lập theo chính sách quyền riêng tư của riêng họ. Nếu bạn muốn biết Google lưu gì về một giao dịch trên Play, chính sách đó là nơi cần đọc, và phần cài đặt tài khoản Google là nơi bạn xem lại lịch sử mua hàng.",
-        pol_purchase_4: "Gói Novaryn Pro tự gia hạn hằng tháng cho tới khi bạn huỷ, và bạn có thể huỷ bất cứ lúc nào trong <strong>Google Play → Thanh toán và gói đăng ký</strong>. Những phi thuyền mở khoá nhờ gói Pro đang hiệu lực sẽ khoá lại khi gói kết thúc; những phi thuyền bạn mua đứt vẫn là của bạn vĩnh viễn và sẽ khôi phục khi bạn cài lại Ứng dụng.",
+        pol_purchase_2: "Mọi giao dịch đều do cửa hàng bạn đã cài Ứng dụng thực hiện — <strong>App Store của Apple</strong> hoặc <strong>Google Play</strong>. Apple hoặc Google, chứ không phải chúng tôi, xử lý khoản thanh toán. Chúng tôi không bao giờ thấy, nhận hay lưu số thẻ, địa chỉ thanh toán hay bất kỳ chi tiết thanh toán nào của bạn. Thứ Ứng dụng nhận lại chỉ là việc một quyền sở hữu có đang hiệu lực hay không, để nó mở khoá skin bạn đã trả tiền.",
+        pol_purchase_3: "Apple và Google mỗi bên xử lý giao dịch đó với tư cách một bên kiểm soát dữ liệu độc lập theo chính sách quyền riêng tư của riêng họ. Nếu bạn muốn biết họ lưu gì về một giao dịch, những chính sách đó là nơi cần đọc, và phần cài đặt Tài khoản Apple hoặc tài khoản Google là nơi bạn xem lại lịch sử mua hàng.",
+        pol_purchase_4: "Gói Novaryn Pro tự gia hạn hằng tháng cho tới khi bạn huỷ, và bạn có thể huỷ bất cứ lúc nào — trên iPhone hoặc iPad trong <strong>Cài đặt → tên bạn → Các gói đăng ký</strong>, trên Android trong <strong>Google Play → Thanh toán và gói đăng ký</strong>. Những phi thuyền mở khoá nhờ gói Pro đang hiệu lực sẽ khoá lại khi gói kết thúc; những phi thuyền bạn mua đứt vẫn là của bạn vĩnh viễn và sẽ khôi phục khi bạn cài lại Ứng dụng.",
 
         pol_h_sharing: "Chia sẻ dữ liệu với bên thứ ba",
         pol_sharing_1: "Chúng tôi không bán dữ liệu người dùng, và cũng không có dữ liệu người dùng nào để bán. Trong Ứng dụng không có mạng quảng cáo, không có nhà cung cấp phân tích, không có dịch vụ báo lỗi và không có SDK mạng xã hội nào.",
-        pol_sharing_2: "Google Play Billing là dịch vụ bên thứ ba duy nhất Ứng dụng liên lạc, và chỉ vào lúc bạn mở cửa hàng hoặc hoàn tất một giao dịch. Ngoài việc đó ra, Ứng dụng không tự gửi yêu cầu mạng nào.",
+        pol_sharing_2: "App Store và Google Play là những dịch vụ bên thứ ba duy nhất Ứng dụng liên lạc, và chỉ vào lúc bạn mở cửa hàng hoặc hoàn tất một giao dịch. Ngoài việc đó ra, Ứng dụng không tự gửi yêu cầu mạng nào.",
 
         pol_h_perm: "Quyền và truy cập mạng",
-        pol_perm_1: "Ứng dụng khai báo quyền Android <code>INTERNET</code>, thứ mà Google Play Billing cần để xác minh giao dịch và quyền sở hữu, cùng <code>WAKE_LOCK</code>, để màn hình không tắt giữa một ván chơi.",
+        pol_perm_1: "Trên iOS, Ứng dụng không khai báo quyền nào cả: bản build không chứa mô tả mục đích cho camera, micro hay thư viện ảnh, vì nó không đụng tới thứ nào trong số đó. Trên Android, Ứng dụng khai báo <code>INTERNET</code>, thứ mà Google Play Billing cần để xác minh giao dịch và quyền sở hữu, cùng <code>WAKE_LOCK</code>, để màn hình không tắt giữa một ván chơi.",
         pol_perm_2: "Ứng dụng không xin quyền nhạy cảm nào khác: không vị trí, không danh bạ, không camera, không micro, và không truy cập ảnh, video hay tài liệu trên máy bạn.",
         pol_perm_3: "Bản thân trò chơi không cần kết nối. Mọi đợt tấn công, mọi con trùm và mọi vật phẩm đều hoạt động khi tắt mạng — thứ duy nhất cần mạng là cửa hàng.",
 
         pol_h_storage: "Lưu trữ và xoá dữ liệu",
         pol_storage_1: "Chúng tôi không vận hành máy chủ nào của riêng mình và không lưu dữ liệu người dùng nào. Mọi thứ trò chơi cần để chạy đều được xử lý và lưu ngay trên máy bạn.",
         pol_storage_2: "Bạn có thể xoá toàn bộ bằng cách gỡ Ứng dụng. Việc đó xoá điểm cao nhất, cài đặt và ghi nhận về skin bạn đang dùng.",
-        pol_storage_3: "Lịch sử mua hàng là ngoại lệ, vì nó do Google giữ chứ không phải chúng tôi. Gỡ Ứng dụng không xoá một khoản mua — đó là chủ ý, và chính điều đó cho phép skin bạn đã trả tiền quay lại khi cài lại. Hãy xem hoặc quản lý nó qua tài khoản Google Play của bạn.",
+        pol_storage_3: "Lịch sử mua hàng là ngoại lệ, vì nó do Apple hoặc Google giữ chứ không phải chúng tôi. Gỡ Ứng dụng không xoá một khoản mua — đó là chủ ý, và chính điều đó cho phép skin bạn đã trả tiền quay lại khi cài lại, qua nút <strong>Restore Purchases</strong> trong cửa hàng. Hãy xem hoặc quản lý nó qua Tài khoản Apple hoặc tài khoản Google Play của bạn.",
 
         pol_h_children: "Quyền riêng tư của trẻ em",
-        pol_children_1: "Novaryn được phân loại Everyone và không chứa nội dung hướng tới trẻ em hay không phù hợp với trẻ em. Chúng tôi không cố ý thu thập thông tin cá nhân của bất kỳ ai, ở bất kỳ độ tuổi nào, kể cả trẻ em dưới 13 tuổi.",
-        pol_children_2: "Ứng dụng có mua trong ứng dụng. Nếu trẻ dùng máy của bạn, chúng tôi khuyến nghị bật xác thực mua hàng trong cài đặt Google Play Store để cần mật khẩu hoặc sinh trắc học trước khi một giao dịch hoàn tất.",
+        pol_children_1: "Novaryn được phân loại cho mọi đối tượng và không chứa nội dung hướng tới trẻ em hay không phù hợp với trẻ em. Chúng tôi không cố ý thu thập thông tin cá nhân của bất kỳ ai, ở bất kỳ độ tuổi nào, kể cả trẻ em dưới 13 tuổi.",
+        pol_children_2: "Ứng dụng có mua trong ứng dụng. Nếu trẻ dùng máy của bạn, chúng tôi khuyến nghị bật xác thực trước khi một giao dịch hoàn tất — Ask to Buy hoặc <strong>Thời gian sử dụng → Giới hạn nội dung và quyền riêng tư</strong> trên iOS, và xác thực mua hàng trong cài đặt Google Play Store trên Android.",
 
         pol_h_rights: "Quyền của bạn",
         pol_rights_lead: "Theo GDPR, CCPA và các luật tương đương, bạn có quyền truy cập, chỉnh sửa, xoá, chuyển dữ liệu và phản đối đối với dữ liệu cá nhân của mình. Vì chúng tôi không giữ dữ liệu cá nhân nào về bạn nên không có gì ở phía chúng tôi để các yêu cầu đó chạm tới — nhưng các quyền đó vẫn có hiệu lực, và bạn hoàn toàn có thể liên hệ để xác nhận điều này.",
         pol_rights_1: "<strong>Truy cập:</strong> chúng tôi không giữ dữ liệu nào về bạn để cung cấp.",
         pol_rights_2: "<strong>Xoá:</strong> gỡ Ứng dụng là xoá mọi thứ Ứng dụng đã lưu.",
-        pol_rights_3: "<strong>Mua hàng:</strong> yêu cầu về hồ sơ thanh toán nên gửi tới Google, bên xử lý chúng.",
+        pol_rights_3: "<strong>Mua hàng:</strong> yêu cầu về hồ sơ thanh toán nên gửi tới Apple hoặc Google, bên đã xử lý chúng.",
         pol_rights_4: "<strong>Phản đối:</strong> trong Ứng dụng không có việc lập hồ sơ, ra quyết định tự động hay quảng cáo nhắm mục tiêu nào để phản đối.",
 
         pol_h_security: "Bảo mật",
-        pol_security: "Vì Ứng dụng lưu dữ liệu cục bộ và không truyền đi thứ gì, các rủi ro thông thường của dữ liệu trên đường truyền không phát sinh. Lưu lượng giao dịch do Google Play Billing xử lý qua kênh bảo mật của riêng họ. Dù vậy, không phương thức lưu trữ điện tử nào an toàn tuyệt đối, và tệp lưu trên máy bạn được bảo vệ bởi chính bảo mật của thiết bị — nên có khoá màn hình.",
+        pol_security: "Vì Ứng dụng lưu dữ liệu cục bộ và không truyền đi thứ gì, các rủi ro thông thường của dữ liệu trên đường truyền không phát sinh. Lưu lượng giao dịch do App Store hoặc Google Play xử lý qua kênh bảo mật của riêng họ. Dù vậy, không phương thức lưu trữ điện tử nào an toàn tuyệt đối, và tệp lưu trên máy bạn được bảo vệ bởi chính bảo mật của thiết bị — nên có khoá màn hình.",
 
         pol_h_changes: "Thay đổi với Chính sách này",
         pol_changes_1: "Chúng tôi có thể cập nhật Chính sách quyền riêng tư này theo thời gian — ví dụ nếu một phiên bản sau của Ứng dụng có thêm tính năng làm thay đổi cách xử lý dữ liệu. Chúng tôi sẽ đăng chính sách mới trên trang này và cập nhật ngày \"Cập nhật lần cuối\" ở đầu trang.",
