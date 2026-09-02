@@ -1,0 +1,287 @@
+/* =========================================================
+   Mini Castle — product page + privacy policy.
+   Sits on top of /style.css: only the pieces this page adds.
+   The palette is pulled straight from the game's own art — the
+   Tiny Swords sky blue, the grass green and the parchment cream.
+   ========================================================= */
+
+.mc-page {
+    --mc-sky: #56ade8;
+    --mc-sky-deep: #2f7fb8;
+    --mc-grass: #7abd5c;
+    --mc-parchment: #f3e2c0;
+    --mc-ink: #1c3e62;
+    --mc-gold: #f5c542;
+}
+
+/* ---------- Hero ---------- */
+.mc-hero {
+    position: relative;
+    padding: 116px 0 72px;
+    overflow: hidden;
+    background:
+        radial-gradient(1200px 460px at 78% -8%, rgba(86, 173, 232, .30), transparent 62%),
+        radial-gradient(900px 420px at 12% 8%, rgba(122, 189, 92, .22), transparent 60%);
+}
+
+.mc-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 56px;
+    align-items: center;
+}
+
+.mc-brandline { display: flex; align-items: center; gap: 18px; margin-bottom: 22px; }
+
+.mc-brandmark {
+    width: 76px; height: 76px;
+    border-radius: 18px;
+    image-rendering: pixelated;
+    box-shadow: 0 10px 30px rgba(28, 62, 98, .22);
+}
+
+.mc-wordmark {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: .01em;
+    margin: 0;
+}
+
+.mc-brandsub {
+    margin: 2px 0 0;
+    font-size: .86rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.mc-hero-title {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(2.1rem, 4.4vw, 3.4rem);
+    line-height: 1.1;
+    margin: 0 0 18px;
+}
+
+.mc-hero-title em { font-style: normal; color: var(--mc-sky-deep); }
+
+.mc-hero-sub {
+    font-size: 1.06rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 46ch;
+    margin: 0 0 28px;
+}
+
+.mc-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.mc-hero-shot {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 26px 70px rgba(28, 62, 98, .28);
+    border: 1px solid var(--border);
+}
+
+.mc-hero-shot img { display: block; width: 100%; height: auto; image-rendering: pixelated; }
+
+/* ---------- Pull quote ---------- */
+.mc-quote {
+    padding: 8px 0 64px;
+}
+
+.mc-quote blockquote {
+    margin: 0 auto;
+    max-width: 62ch;
+    text-align: center;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+    line-height: 1.5;
+    color: var(--text);
+}
+
+.mc-quote blockquote::before,
+.mc-quote blockquote::after { content: '"'; color: var(--mc-sky-deep); }
+
+/* ---------- Section shell ---------- */
+.mc-section { padding: 72px 0; }
+.mc-section--tint { background: var(--surface-2); }
+
+.mc-head { max-width: 62ch; margin: 0 0 40px; }
+
+.mc-eyebrow {
+    margin: 0 0 10px;
+    font-size: .8rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--mc-sky-deep);
+    font-weight: 600;
+}
+
+.mc-title {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    line-height: 1.2;
+    margin: 0 0 12px;
+}
+
+.mc-lede { margin: 0; color: var(--text-muted); line-height: 1.7; }
+
+/* ---------- The day/night loop ---------- */
+.mc-loop {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.mc-loop-step {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+    padding: 26px 24px;
+}
+
+.mc-loop-glyph { font-size: 1.9rem; line-height: 1; display: block; margin-bottom: 14px; }
+
+.mc-loop-step h3 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.06rem;
+    margin: 0 0 8px;
+}
+
+.mc-loop-step p { margin: 0; color: var(--text-muted); line-height: 1.6; font-size: .95rem; }
+
+/* ---------- Resource / feature cards ---------- */
+.mc-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+    gap: 20px;
+}
+
+.mc-card {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--surface);
+    padding: 26px 24px;
+}
+
+.mc-card h3 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.04rem;
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mc-card p { margin: 0; color: var(--text-muted); line-height: 1.65; font-size: .95rem; }
+
+.mc-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    flex: 0 0 auto;
+}
+.mc-dot--gold { background: var(--mc-gold); }
+.mc-dot--wood { background: #a9743f; }
+.mc-dot--meat { background: #e2596f; }
+
+/* ---------- Gallery ---------- */
+.mc-gal-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.mc-gal-tab {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+    border-radius: 999px;
+    padding: 9px 17px;
+    font: inherit;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: background .16s ease, color .16s ease, border-color .16s ease;
+}
+
+.mc-gal-tab:hover { color: var(--text); }
+
+.mc-gal-tab.is-active {
+    background: var(--mc-sky-deep);
+    border-color: var(--mc-sky-deep);
+    color: #fff;
+}
+
+.mc-gal-stage {
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--surface-2);
+}
+
+.mc-gal-stage img {
+    display: block;
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.mc-gal-cap { margin: 16px 0 0; color: var(--text-muted); line-height: 1.6; }
+.mc-gal-cap strong { color: var(--text); display: block; margin-bottom: 4px; }
+
+/* ---------- Fact strip ---------- */
+.mc-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 18px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--surface);
+    padding: 30px 26px;
+}
+
+.mc-fact b {
+    display: block;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.1;
+    color: var(--mc-sky-deep);
+}
+
+.mc-fact span { color: var(--text-muted); font-size: .92rem; }
+
+/* ---------- Privacy page ---------- */
+.mc-policy { padding: 120px 0 84px; }
+.mc-policy-head { margin-bottom: 40px; }
+.mc-policy-date { color: var(--text-muted); font-size: .92rem; margin: 10px 0 0; }
+
+.mc-policy-body { max-width: 74ch; }
+
+.mc-policy-body h2 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.24rem;
+    margin: 40px 0 12px;
+}
+
+.mc-policy-body p,
+.mc-policy-body li { color: var(--text-muted); line-height: 1.75; }
+
+.mc-policy-body ul { padding-left: 1.15rem; }
+.mc-policy-body li { margin-bottom: 8px; }
+
+.mc-callout {
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--mc-sky-deep);
+    border-radius: 12px;
+    background: var(--surface);
+    padding: 20px 22px;
+    margin: 26px 0;
+}
+
+.mc-callout p { margin: 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .mc-hero { padding-top: 96px; }
+    .mc-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+    .mc-loop { grid-template-columns: minmax(0, 1fr); }
+}

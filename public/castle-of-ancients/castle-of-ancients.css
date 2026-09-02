@@ -1,0 +1,597 @@
+/* =========================================================
+   Castle of Ancients product page.
+   Rides on ../style.css for chrome (nav, footer, buttons, container).
+   Adds the game's own palette — weathered keep-stone teal over meadow
+   green, with a banner gold — the same way novaryn.css adds its ion
+   cyan and dungeon-blade.css its gold.
+   ========================================================= */
+
+:root[data-theme="light"] {
+    --ca: #17756a;
+    --ca-ink: #0f574f;
+    --ca-soft: rgba(23, 117, 106, 0.11);
+    --ca-line: rgba(23, 117, 106, 0.28);
+    --ca-glow: rgba(23, 117, 106, 0.15);
+    --ca-gold: #a97516;
+    --ca-stone: #4a6b8a;
+    --ca-moss: #4f7a2f;
+    --ca-deep: #12212b;
+    --ca-parch: #f3ead6;
+}
+
+:root[data-theme="dark"] {
+    --ca: #46c9b4;
+    --ca-ink: #7fe0cf;
+    --ca-soft: rgba(70, 201, 180, 0.12);
+    --ca-line: rgba(70, 201, 180, 0.26);
+    --ca-glow: rgba(70, 201, 180, 0.10);
+    --ca-gold: #eec25a;
+    --ca-stone: #86a8c6;
+    --ca-moss: #8fc25c;
+    --ca-deep: #070f14;
+    --ca-parch: #1a2530;
+}
+
+/* ---------- Hero ---------- */
+.ca-hero {
+    position: relative;
+    /* the key art is inset past the right edge on purpose; clip it here so it
+       never widens the page (same as .nv-hero on the Novaryn page) */
+    overflow: hidden;
+    padding: calc(68px + clamp(3rem, 7vw, 5.5rem)) 0 clamp(3.5rem, 7vw, 5.5rem);
+    background:
+        radial-gradient(46% 40% at 10% 0%, var(--ca-glow), transparent 68%),
+        radial-gradient(38% 44% at 92% 12%, rgba(169, 117, 22, 0.10), transparent 70%);
+}
+
+.ca-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: clamp(2rem, 4.5vw, 4rem);
+    align-items: center;
+}
+
+.ca-brandline {
+    display: flex;
+    align-items: center;
+    gap: 0.95rem;
+    margin-bottom: 1.4rem;
+}
+
+.ca-brandmark {
+    width: 62px;
+    height: 62px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    image-rendering: pixelated;
+}
+
+.ca-wordmark {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    font-size: 0.95rem;
+    color: var(--ca-ink);
+    margin: 0;
+}
+
+.ca-brandsub {
+    font-size: 0.82rem;
+    color: var(--text-muted, #6b7280);
+    margin: 0.15rem 0 0;
+}
+
+.ca-hero-title {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(2.1rem, 4.6vw, 3.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem;
+}
+
+.ca-hero-title em {
+    font-style: normal;
+    color: var(--ca);
+}
+
+.ca-hero-sub {
+    font-size: clamp(1rem, 1.3vw, 1.12rem);
+    line-height: 1.65;
+    color: var(--text-muted, #6b7280);
+    margin: 0 0 1.8rem;
+    max-width: 54ch;
+}
+
+.ca-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.ca-play-glyph,
+.ca-apple-glyph {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5rem;
+    flex: none;
+}
+
+.ca-hero-meta {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--text-muted, #6b7280);
+    margin: 0;
+}
+
+.ca-hero-meta code {
+    font-size: 0.82em;
+    padding: 0.12em 0.42em;
+    border-radius: 5px;
+    background: var(--ca-soft);
+    color: var(--ca-ink);
+}
+
+/* The screenshot sits in a slab of keep-stone rather than a phone frame:
+   this game is landscape, and a portrait phone bezel around a 16:9 shot
+   wastes most of the space it takes. */
+.ca-hero-media { position: relative; }
+
+.ca-slab {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--ca-line);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.22);
+    background: var(--ca-deep);
+}
+
+.ca-slab img {
+    display: block;
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.ca-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: clamp(2.5rem, 5vw, 3.8rem);
+}
+
+.ca-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1.1rem 1.2rem;
+    border-radius: 14px;
+    border: 1px solid var(--ca-line);
+    background: var(--ca-soft);
+}
+
+.ca-stat-n {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--ca);
+}
+
+.ca-stat-l {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--text-muted, #6b7280);
+}
+
+/* ---------- Sections ---------- */
+.ca-section { padding: clamp(3.5rem, 7vw, 5.5rem) 0; }
+.ca-section--tint { background: var(--ca-soft); }
+
+.ca-head {
+    max-width: 62ch;
+    margin: 0 auto clamp(2.2rem, 4vw, 3.2rem);
+    text-align: center;
+}
+
+.ca-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ca);
+    margin: 0 0 0.7rem;
+}
+
+.ca-title {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(1.6rem, 3.1vw, 2.4rem);
+    line-height: 1.18;
+    letter-spacing: -0.015em;
+    margin: 0 0 0.9rem;
+}
+
+.ca-title em { font-style: normal; color: var(--ca); }
+
+.ca-sub {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted, #6b7280);
+    margin: 0;
+}
+
+/* ---------- Card grid ---------- */
+.ca-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.1rem;
+}
+
+.ca-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--ca-line);
+    background: var(--bg, #fff);
+}
+
+.ca-card-ico {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    background: var(--ca-soft);
+    color: var(--ca);
+    margin-bottom: 0.9rem;
+}
+
+.ca-card-ico svg { width: 22px; height: 22px; }
+
+.ca-card h3 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.05rem;
+    margin: 0 0 0.5rem;
+}
+
+.ca-card p {
+    font-size: 0.92rem;
+    line-height: 1.62;
+    color: var(--text-muted, #6b7280);
+    margin: 0;
+}
+
+/* ---------- The four posts ---------- */
+.ca-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.1rem;
+}
+
+.ca-post {
+    position: relative;
+    padding: 1.5rem 1.4rem 1.4rem;
+    border-radius: 16px;
+    border: 1px solid var(--ca-line);
+    background: var(--bg, #fff);
+    overflow: hidden;
+}
+
+/* One coloured rule per post so the four read as four answers, not four
+   copies of the same card. */
+.ca-post::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: var(--post-hue, var(--ca));
+}
+
+.ca-post--archer { --post-hue: var(--ca-stone); }
+.ca-post--bolt   { --post-hue: var(--ca-gold); }
+.ca-post--barr   { --post-hue: var(--ca-moss); }
+.ca-post--mon    { --post-hue: var(--ca); }
+
+.ca-post-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.8rem;
+    margin-bottom: 0.55rem;
+}
+
+.ca-post-n {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.ca-post-cost {
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--post-hue, var(--ca));
+}
+
+.ca-post-d {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted, #6b7280);
+    margin: 0;
+}
+
+/* ---------- Enemy ladder ---------- */
+.ca-foes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.7rem;
+}
+
+.ca-foe {
+    display: flex;
+    flex-direction: column;
+    gap: 0.22rem;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--ca-line);
+    background: var(--bg, #fff);
+}
+
+.ca-foe--air { border-color: var(--ca-stone); background: var(--ca-soft); }
+.ca-foe--sea { border-color: var(--ca); background: var(--ca-soft); }
+.ca-foe--boss { border-color: var(--ca-gold); background: rgba(169, 117, 22, 0.09); }
+
+.ca-foe-n {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.ca-foe-d {
+    font-size: 0.79rem;
+    line-height: 1.45;
+    color: var(--text-muted, #6b7280);
+    margin: 0;
+}
+
+/* ---------- Split ---------- */
+.ca-split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(2rem, 4vw, 3.4rem);
+    align-items: center;
+}
+
+.ca-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.85rem;
+}
+
+.ca-list li {
+    display: flex;
+    gap: 0.7rem;
+    font-size: 0.94rem;
+    line-height: 1.6;
+    color: var(--text-muted, #6b7280);
+}
+
+.ca-list svg {
+    width: 18px;
+    height: 18px;
+    flex: none;
+    margin-top: 0.22rem;
+    color: var(--ca);
+}
+
+.ca-list strong { color: var(--text, #111827); }
+
+/* ---------- Campaign dials ---------- */
+.ca-dials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+}
+
+.ca-dial {
+    padding: 1.25rem 1.3rem;
+    border-radius: 14px;
+    border: 1px solid var(--ca-line);
+    background: var(--bg, #fff);
+}
+
+.ca-dial-n {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 0.98rem;
+    margin: 0 0 0.6rem;
+}
+
+.ca-notches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.ca-notch {
+    font-size: 0.76rem;
+    padding: 0.24rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid var(--ca-line);
+    color: var(--text-muted, #6b7280);
+}
+
+/* The nag-free setting on each dial — the one that takes the ceiling off. */
+.ca-notch--off {
+    border-color: var(--ca-gold);
+    color: var(--ca-gold);
+    font-weight: 600;
+}
+
+/* ---------- Gallery ---------- */
+.ca-gal-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.6rem;
+}
+
+.ca-gal-tab {
+    font: inherit;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--ca-line);
+    background: transparent;
+    color: var(--text-muted, #6b7280);
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease;
+}
+
+.ca-gal-tab:hover { background: var(--ca-soft); }
+
+.ca-gal-tab.is-active {
+    background: var(--ca);
+    border-color: var(--ca);
+    color: #fff;
+}
+
+.ca-gal-stage {
+    max-width: 980px;
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--ca-line);
+    background: var(--ca-deep);
+    box-shadow: 0 20px 46px rgba(0, 0, 0, 0.2);
+}
+
+.ca-gal-stage img {
+    display: block;
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.ca-gal-cap {
+    max-width: 62ch;
+    margin: 1.2rem auto 0;
+    text-align: center;
+}
+
+.ca-gal-cap h3 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.05rem;
+    margin: 0 0 0.35rem;
+}
+
+.ca-gal-cap p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted, #6b7280);
+    margin: 0;
+}
+
+/* ---------- CTA ---------- */
+.ca-cta {
+    padding: clamp(3.5rem, 7vw, 5rem) 0;
+    background:
+        radial-gradient(60% 60% at 50% 0%, var(--ca-glow), transparent 72%),
+        var(--ca-soft);
+}
+
+.ca-cta-inner { text-align: center; }
+
+.ca-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+/* ---------- Policy page ---------- */
+.ca-pol {
+    padding: calc(68px + clamp(2.5rem, 5vw, 4rem)) 0 clamp(3.5rem, 7vw, 5rem);
+}
+
+.ca-pol-wrap { max-width: 76ch; margin: 0 auto; }
+
+.ca-pol-kicker {
+    font-size: 0.8rem;
+    color: var(--text-muted, #6b7280);
+    margin: 0 0 1.6rem;
+}
+
+.ca-pol-lead {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    padding: 1.2rem 1.3rem;
+    border-radius: 14px;
+    border: 1px solid var(--ca-line);
+    background: var(--ca-soft);
+    margin: 0 0 2.2rem;
+}
+
+.ca-pol h2 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    margin: 2.2rem 0 0.8rem;
+}
+
+.ca-pol h3 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.02rem;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.ca-pol p,
+.ca-pol li {
+    font-size: 0.96rem;
+    line-height: 1.72;
+    color: var(--text-muted, #6b7280);
+}
+
+.ca-pol ul { padding-left: 1.15rem; display: grid; gap: 0.5rem; }
+.ca-pol strong { color: var(--text, #111827); }
+
+.ca-pol-tbl {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 0.4rem;
+    font-size: 0.92rem;
+}
+
+.ca-pol-tbl th,
+.ca-pol-tbl td {
+    text-align: left;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--ca-line);
+    line-height: 1.55;
+}
+
+.ca-pol-tbl th {
+    background: var(--ca-soft);
+    font-weight: 600;
+    color: var(--text, #111827);
+}
+
+.ca-pol-tbl td { color: var(--text-muted, #6b7280); }
+
+/* A table is the wrong shape for a phone; let it scroll on its own rather
+   than pushing the whole page sideways. */
+.ca-pol-scroll { overflow-x: auto; }
+
+/* ---------- Narrow screens ---------- */
+@media (max-width: 900px) {
+    .ca-hero-grid { grid-template-columns: 1fr; }
+    .ca-hero-media { order: -1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal { transition: none !important; }
+}

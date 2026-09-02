@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castle of Ancients — hold the road | AIBachKhoa</title>
+    <meta name="description" content="A hand-drawn pixel tower defense game for iPhone and iPad. Four guard posts, twelve maps, twenty-four kinds of enemy, and campaign rules you set yourself. No ads, no purchases, plays offline.">
+    <link rel="canonical" href="https://aibachkhoa.com/castle-of-ancients">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Castle of Ancients — hold the road">
+    <meta property="og:description" content="Drag a guard post from the side bar, drop it on the grass, and watch a stretch of open road turn into a killing field. Twelve maps, no ads, plays offline.">
+    <meta property="og:image" content="https://aibachkhoa.com/assets/games/castle-of-ancients/feature.png">
+    <meta property="og:url" content="https://aibachkhoa.com/castle-of-ancients">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/games/castle-of-ancients/icon.png">
+    <link rel="apple-touch-icon" href="/assets/games/castle-of-ancients/icon.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/castle-of-ancients/castle-of-ancients.css">
+</head>
+<body>
+    <a href="#overview" class="skip-link" data-i18n="skip_link">Skip to content</a>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="AIBachKhoa">
+                <img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="/" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="#overview" class="nav-link" data-i18n="nav_overview">Overview</a>
+                <a href="#posts" class="nav-link" data-i18n="nav_posts">Guard posts</a>
+                <a href="#foes" class="nav-link" data-i18n="nav_foes">Enemies</a>
+                <a href="#maps" class="nav-link" data-i18n="nav_maps">Maps</a>
+                <a href="#gallery" class="nav-link" data-i18n="nav_shots">Screenshots</a>
+                <a href="/castle-of-ancients/policy" class="nav-link" data-i18n="nav_policy">Privacy</a>
+                <span class="nav-divider" aria-hidden="true"></span>
+                <select id="lang-select" class="lang-select" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+            </div>
+
+            <div class="mobile-controls">
+                <select id="mobile-lang-select" class="lang-select lang-select--compact" data-display="code" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="mobile-theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+                <button class="icon-btn mobile-menu-btn" data-i18n-aria="aria_menu" aria-label="Open menu" id="mobile-btn" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="ca-hero" id="overview">
+        <div class="container">
+            <div class="ca-hero-grid">
+                <div class="ca-hero-copy reveal">
+                    <div class="ca-brandline">
+                        <img src="/assets/games/castle-of-ancients/icon.png" alt="" class="ca-brandmark" width="512" height="512">
+                        <div>
+                            <p class="ca-wordmark">CASTLE OF ANCIENTS</p>
+                            <p class="ca-brandsub" data-i18n="hero_kicker">iPhone · iPad · pixel tower defense</p>
+                        </div>
+                    </div>
+                    <h1 class="ca-hero-title" data-i18n="hero_title">One road. <em>One castle</em>. Hold it.</h1>
+                    <p class="ca-hero-sub" data-i18n="hero_sub">Drag a guard post from the side bar, drop it on the grass, and watch a stretch of open road turn into a killing field. Kill for gold, spend the gold on deeper defences, and hold the line to the last wave.</p>
+                    <div class="ca-hero-actions">
+                        <a href="#gallery" class="btn btn-primary" data-i18n="btn_shots">See how it plays</a>
+                        <a href="/castle-of-ancients/policy" class="btn btn-ghost" data-i18n="btn_policy">Read the privacy policy</a>
+                    </div>
+                    <p class="ca-hero-meta" data-i18n="hero_meta">Bundle id <code>com.tdson.castleofancients</code> · landscape, iPhone and iPad · no ads, no in-app purchases, plays fully offline.</p>
+                </div>
+
+                <div class="ca-hero-media reveal">
+                    <div class="ca-slab">
+                        <img src="/assets/games/castle-of-ancients/shot-03.png" data-i18n-aria="hero_shot_alt" alt="Castle of Ancients — archer towers holding a bend in the road against a goblin column" width="1920" height="1080">
+                    </div>
+                </div>
+            </div>
+
+            <div class="ca-stats reveal">
+                <div class="ca-stat"><span class="ca-stat-n">12</span><span class="ca-stat-l" data-i18n="stat_maps">Maps across two modes</span></div>
+                <div class="ca-stat"><span class="ca-stat-n">4</span><span class="ca-stat-l" data-i18n="stat_posts">Guard posts, three levels each</span></div>
+                <div class="ca-stat"><span class="ca-stat-n">24</span><span class="ca-stat-l" data-i18n="stat_foes">Kinds of enemy to answer</span></div>
+                <div class="ca-stat"><span class="ca-stat-n">6</span><span class="ca-stat-l" data-i18n="stat_langs">Languages in the box</span></div>
+                <div class="ca-stat"><span class="ca-stat-n">0</span><span class="ca-stat-l" data-i18n="stat_ads">Ads, trackers and purchases</span></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= THE LOOP ================= -->
+        <section class="ca-section ca-section--tint" id="loop">
+            <div class="container">
+                <div class="ca-head reveal">
+                    <p class="ca-eyebrow" data-i18n="loop_eyebrow">The loop</p>
+                    <h2 class="ca-title" data-i18n="loop_title">Build, kill, <em>build again</em>.</h2>
+                    <p class="ca-sub" data-i18n="loop_sub">Everything in the game runs off one number. Gold comes from things you killed, and it is the only thing that buys the defence that kills the next lot. Spend it in the wrong place and the road tells you so about forty seconds later.</p>
+                </div>
+
+                <div class="ca-grid reveal">
+                    <div class="ca-card">
+                        <span class="ca-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8.5 3.5v9.2L6.2 11a2 2 0 0 0-2.7 2.9l4 5.2a4 4 0 0 0 3.2 1.6h4.2a4 4 0 0 0 4-4V9.5a1.6 1.6 0 0 0-3.2 0"/><path d="M12 9.2V7a1.6 1.6 0 0 0-3.2 0"/><path d="M15.2 9.5V7.6a1.6 1.6 0 0 0-3.2 0"/></svg></span>
+                        <h3 data-i18n="c_drag_t">Drag it where you want it</h3>
+                        <p data-i18n="c_drag_d">One finger takes a card off the side bar and drops it on the tile you chose. Or tap the card, then tap the tile — the same build, two ways round, so it works whichever hand you have free.</p>
+                    </div>
+                    <div class="ca-card">
+                        <span class="ca-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.6v8.8M9.8 9.8h3.6a1.9 1.9 0 0 1 0 3.8h-3.2a1.9 1.9 0 0 0 0 3.8h3.8"/></svg></span>
+                        <h3 data-i18n="c_gold_t">Gold is the whole economy</h3>
+                        <p data-i18n="c_gold_d">There is no second currency, no energy bar and nothing to top up. Every coin came off something that died on your road, and the only question the game ever asks is where the next one goes.</p>
+                    </div>
+                    <div class="ca-card">
+                        <span class="ca-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20V5"/><path d="m7 10 5-5 5 5"/><path d="M5 20h14"/></svg></span>
+                        <h3 data-i18n="c_up_t">Upgrades put a body on the board</h3>
+                        <p data-i18n="c_up_d">Three levels per post, and each one is visible: another archer on the roof, another warrior standing in the road. You can see what you paid for without opening a stats panel.</p>
+                    </div>
+                    <div class="ca-card">
+                        <span class="ca-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 12a8.5 8.5 0 1 1-2.6-6.1"/><path d="M20.8 4.2v4.4h-4.4"/></svg></span>
+                        <h3 data-i18n="c_sell_t">A wrong post is not a lost run</h3>
+                        <p data-i18n="c_sell_d">Sell any post back for 60% of everything you poured into it and rebuild somewhere that works. The map is allowed to teach you something halfway through a wave.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GUARD POSTS ================= -->
+        <section class="ca-section" id="posts">
+            <div class="container">
+                <div class="ca-head reveal">
+                    <p class="ca-eyebrow" data-i18n="post_eyebrow">Guard posts</p>
+                    <h2 class="ca-title" data-i18n="post_title">Four posts, <em>four different answers</em>.</h2>
+                    <p class="ca-sub" data-i18n="post_sub">None of the four is the best one. Each closes a door the others leave open, and every map is really a question about which door matters here.</p>
+                </div>
+
+                <div class="ca-posts reveal">
+                    <div class="ca-post ca-post--archer">
+                        <div class="ca-post-top">
+                            <p class="ca-post-n" data-i18n="post_archer_n">Archer Tower</p>
+                            <span class="ca-post-cost" data-i18n="post_archer_c">70 gold</span>
+                        </div>
+                        <p class="ca-post-d" data-i18n="post_archer_d">Fast single-target fire, and the only cheap thing you own that can touch a flier. The backbone of every line you will ever build.</p>
+                    </div>
+                    <div class="ca-post ca-post--bolt">
+                        <div class="ca-post-top">
+                            <p class="ca-post-n" data-i18n="post_bolt_n">Bolt Yard</p>
+                            <span class="ca-post-cost" data-i18n="post_bolt_c">110 gold</span>
+                        </div>
+                        <p class="ca-post-d" data-i18n="post_bolt_d">Explosive bolts that splash across a packed column, and armour only stops half of it. Completely blind to anything airborne.</p>
+                    </div>
+                    <div class="ca-post ca-post--barr">
+                        <div class="ca-post-top">
+                            <p class="ca-post-n" data-i18n="post_barr_n">Barracks</p>
+                            <span class="ca-post-cost" data-i18n="post_barr_c">90 gold</span>
+                        </div>
+                        <p class="ca-post-d" data-i18n="post_barr_d">Barely shoots. It sends three warriors out to stand in the road and BLOCK it, holding the enemy still while everything else does the killing.</p>
+                    </div>
+                    <div class="ca-post ca-post--mon">
+                        <div class="ca-post-top">
+                            <p class="ca-post-n" data-i18n="post_mon_n">Monastery</p>
+                            <span class="ca-post-cost" data-i18n="post_mon_c">130 gold</span>
+                        </div>
+                        <p class="ca-post-d" data-i18n="post_mon_d">Magic that ignores armour completely and slows what it hits. The answer to skeletons, and the answer to the minotaur walking behind them.</p>
+                    </div>
+                </div>
+
+                <div class="ca-split" style="margin-top: clamp(2.5rem, 5vw, 4rem);">
+                    <div class="reveal">
+                        <h3 class="ca-title" style="font-size: clamp(1.35rem, 2.2vw, 1.8rem);" data-i18n="armour_t">Armour is subtraction, not a percentage</h3>
+                        <p class="ca-sub" style="margin-bottom: 1.6rem;" data-i18n="armour_d">Every point of armour comes straight off the damage of the hit that lands. That is why one post is never enough, and why the counter to a heavy column is a different post rather than a bigger one.</p>
+                        <ul class="ca-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="armour_l1"><strong>Arrows take armour full in the face.</strong> A skeleton with 5 armour eats most of an archer volley and keeps walking.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="armour_l2"><strong>Explosions get through half of it.</strong> Bolt Yards stay useful against armour longer than arrows do — right up until something flies.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="armour_l3"><strong>Magic ignores it entirely.</strong> The Monastery does its full number to the toughest thing on the map, and slows it on the way through.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="armour_l4"><strong>Nothing is ever fully immune.</strong> Even the weakest hit against the heaviest armour still carries 20% through, so no wave is ever unwinnable — only expensive.</span></li>
+                        </ul>
+                    </div>
+                    <div class="reveal">
+                        <div class="ca-slab">
+                            <img src="/assets/games/castle-of-ancients/shot-04.png" alt="Barracks warriors blocking the road while archer towers fire over them" width="1920" height="1080" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ENEMIES ================= -->
+        <section class="ca-section ca-section--tint" id="foes">
+            <div class="container">
+                <div class="ca-head reveal">
+                    <p class="ca-eyebrow" data-i18n="foe_eyebrow">Enemies</p>
+                    <h2 class="ca-title" data-i18n="foe_title">Twenty-four kinds of <em>trouble</em>.</h2>
+                    <p class="ca-sub" data-i18n="foe_sub">They do not just get bigger. Each one breaks a rule the last one obeyed — which is why a line that held for six waves can fail on the seventh without anything about it changing.</p>
+                </div>
+
+                <div class="ca-foes reveal">
+                    <div class="ca-foe"><p class="ca-foe-n">Torch Goblin</p><p class="ca-foe-d" data-i18n="foe_torch">Basic infantry. The wave you build against.</p></div>
+                    <div class="ca-foe"><p class="ca-foe-n">Barrel Goblin</p><p class="ca-foe-d" data-i18n="foe_barrel">Fast, thin, and through a gap before you look up.</p></div>
+                    <div class="ca-foe"><p class="ca-foe-n">TNT Goblin</p><p class="ca-foe-d" data-i18n="foe_tnt">Lobs bombs at your blockers from out of their reach.</p></div>
+                    <div class="ca-foe"><p class="ca-foe-n">Skeleton</p><p class="ca-foe-d" data-i18n="foe_skull">Armour 5 and slow. Arrows barely scratch it.</p></div>
+                    <div class="ca-foe"><p class="ca-foe-n">Stone Spider</p><p class="ca-foe-d" data-i18n="foe_spider">Very fast, and refuses to stop and fight your blockers.</p></div>
+                    <div class="ca-foe ca-foe--air"><p class="ca-foe-n">Bat <span class="ca-post-cost" data-i18n="tag_air">Flies</span></p><p class="ca-foe-d" data-i18n="foe_bat">Flies. Straight over the blockers, cutting the corners.</p></div>
+                    <div class="ca-foe"><p class="ca-foe-n">Imp</p><p class="ca-foe-d" data-i18n="foe_imp">Slips clean past anything standing in the road.</p></div>
+                    <div class="ca-foe ca-foe--air"><p class="ca-foe-n">Wisp <span class="ca-post-cost" data-i18n="tag_air">Flies</span></p><p class="ca-foe-d" data-i18n="foe_wisp">Flies, and flies straight at the castle.</p></div>
+                    <div class="ca-foe ca-foe--sea"><p class="ca-foe-n">Landing Raft <span class="ca-post-cost" data-i18n="tag_sea">From the water</span></p><p class="ca-foe-d" data-i18n="foe_raft">A boat, not a monster — sink it offshore and the whole squad aboard goes down with it.</p></div>
+                    <div class="ca-foe ca-foe--sea"><p class="ca-foe-n">Serpent <span class="ca-post-cost" data-i18n="tag_sea">From the water</span></p><p class="ca-foe-d" data-i18n="foe_serpent">Swims the waterway, then ignores your blockers on land.</p></div>
+                    <div class="ca-foe ca-foe--boss"><p class="ca-foe-n">Sea Turtle <span class="ca-post-cost" data-i18n="tag_boss">Boss</span></p><p class="ca-foe-d" data-i18n="foe_turtle">The sea boss. Armour so high only magic reads as damage.</p></div>
+                    <div class="ca-foe"><p class="ca-foe-n">Ogre</p><p class="ca-foe-d" data-i18n="foe_ogre">The heaviest thing on land, and slow as a landslide.</p></div>
+                    <div class="ca-foe ca-foe--boss"><p class="ca-foe-n">Minotaur <span class="ca-post-cost" data-i18n="tag_boss">Boss</span></p><p class="ca-foe-d" data-i18n="foe_mino">1500 HP, armour 8, and six castle health if it gets through.</p></div>
+                    <div class="ca-foe"><p class="ca-foe-n">+ 11</p><p class="ca-foe-d" data-i18n="foe_more">…and eleven more between them.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= MAPS ================= -->
+        <section class="ca-section" id="maps">
+            <div class="container">
+                <div class="ca-head reveal">
+                    <p class="ca-eyebrow" data-i18n="map_eyebrow">Maps</p>
+                    <h2 class="ca-title" data-i18n="map_title">Twelve maps, <em>two ways to play</em>.</h2>
+                    <p class="ca-sub" data-i18n="map_sub">Story teaches, campaign lets you set the terms. Both are the same game; only the guard rails differ.</p>
+                </div>
+
+                <div class="ca-split">
+                    <div class="reveal">
+                        <h3 class="ca-title" style="font-size: clamp(1.2rem, 2vw, 1.55rem);" data-i18n="story_t">Story — five missions, each one an idea</h3>
+                        <p class="ca-sub" style="margin-bottom: 1.4rem;" data-i18n="story_d">They unlock one after another, and each map is built around a single lesson rather than a difficulty number.</p>
+                        <ul class="ca-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="story_1"><strong>Gatemeadow.</strong> One straight road and open grass on both sides. Nothing to learn but the loop itself.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="story_2"><strong>Broken Gorge.</strong> The road doubles back on itself, and every bend is a place one tower covers twice.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="story_3"><strong>Shallow Ford.</strong> Water squeezes the building space, and the first fliers arrive to ignore your blockers.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="story_4"><strong>Muster Crossroads.</strong> Two columns march in and merge halfway. One line, built where they meet.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="story_5"><strong>Siege of the Old Keep.</strong> A 79-tile spiral with the keep ringed in the middle and two bosses inside the ring.</span></li>
+                        </ul>
+                    </div>
+                    <div class="reveal">
+                        <div class="ca-slab">
+                            <img src="/assets/games/castle-of-ancients/shot-05.png" alt="Siege of the Old Keep — a spiral road with the keep ringed in the middle" width="1920" height="1080" loading="lazy">
+                        </div>
+                        <p class="ca-sub" style="margin-top: 1.2rem;"><strong data-i18n="camp_t">Campaign — seven larger maps, unlocked from the start</strong><br><span data-i18n="camp_d">Bigger than the screen, so you pinch to zoom and drag to pan. From a windswept S-bend to a three-gate river delta, a 98-tile spiral, a mountaintop keep with a single ramp, and a castle beset on four sides at once.</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DIALS ================= -->
+        <section class="ca-section ca-section--tint" id="dials">
+            <div class="container">
+                <div class="ca-head reveal">
+                    <p class="ca-eyebrow" data-i18n="dial_eyebrow">Your rules</p>
+                    <h2 class="ca-title" data-i18n="dial_title">Four dials, and <em>every one comes off</em>.</h2>
+                    <p class="ca-sub" data-i18n="dial_sub">Set before each campaign run. Each dial has a setting that removes the limit outright — so the same seven maps are a tight economy puzzle or a sandbox, and that is your call rather than a difficulty menu's.</p>
+                </div>
+
+                <div class="ca-dials reveal">
+                    <div class="ca-dial">
+                        <p class="ca-dial-n" data-i18n="dial_gold">Gold</p>
+                        <div class="ca-notches">
+                            <span class="ca-notch" data-i18n="dial_gold_1">Lean ½</span>
+                            <span class="ca-notch" data-i18n="dial_gold_2">Normal</span>
+                            <span class="ca-notch" data-i18n="dial_gold_3">Flush ×2</span>
+                            <span class="ca-notch ca-notch--off" data-i18n="dial_gold_4">Infinite</span>
+                        </div>
+                    </div>
+                    <div class="ca-dial">
+                        <p class="ca-dial-n" data-i18n="dial_life">Castle health</p>
+                        <div class="ca-notches">
+                            <span class="ca-notch" data-i18n="dial_life_1">Brittle ½</span>
+                            <span class="ca-notch" data-i18n="dial_life_2">Normal</span>
+                            <span class="ca-notch" data-i18n="dial_life_3">Solid ×2.5</span>
+                            <span class="ca-notch ca-notch--off" data-i18n="dial_life_4">Immortal</span>
+                        </div>
+                    </div>
+                    <div class="ca-dial">
+                        <p class="ca-dial-n" data-i18n="dial_foe">Enemy strength</p>
+                        <div class="ca-notches">
+                            <span class="ca-notch" data-i18n="dial_foe_1">Easy ×0.7</span>
+                            <span class="ca-notch" data-i18n="dial_foe_2">Normal</span>
+                            <span class="ca-notch" data-i18n="dial_foe_3">Harsh ×1.5</span>
+                            <span class="ca-notch" data-i18n="dial_foe_4">Hell ×2.2</span>
+                        </div>
+                    </div>
+                    <div class="ca-dial">
+                        <p class="ca-dial-n" data-i18n="dial_wave">Waves</p>
+                        <div class="ca-notches">
+                            <span class="ca-notch" data-i18n="dial_wave_1">As the map says</span>
+                            <span class="ca-notch ca-notch--off" data-i18n="dial_wave_2">Endless</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TOUCH ================= -->
+        <section class="ca-section" id="touch">
+            <div class="container">
+                <div class="ca-split">
+                    <div class="reveal">
+                        <p class="ca-eyebrow" data-i18n="touch_eyebrow">Touch</p>
+                        <h2 class="ca-title" data-i18n="touch_title">Built for a hand, <em>not shrunk to fit one</em>.</h2>
+                        <p class="ca-sub" style="margin-bottom: 1.6rem;" data-i18n="touch_sub">The touch layout is not the desktop layout with bigger buttons. It is a different set of numbers, chosen because a finger is not a cursor.</p>
+                        <ul class="ca-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="touch_l1"><strong>The cards are taller</strong> and the side bar is wider, because a thumb reaching across a landscape screen is less accurate than a mouse that never misses.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="touch_l2"><strong>The drag threshold is wider,</strong> so a tap that wobbles two pixels is still a tap and not a half-started build you have to cancel.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="touch_l3"><strong>The tower ghost lifts clear of your fingertip,</strong> because your hand covers exactly the tile you are aiming at — the one place a preview must not be.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="touch_l4"><strong>Pinch to zoom, one finger to pan</strong> on the campaign maps, which are wider than any screen you own.</span></li>
+                        </ul>
+                    </div>
+                    <div class="reveal">
+                        <div class="ca-slab">
+                            <img src="/assets/games/castle-of-ancients/shot-02.png" alt="A guard post card lifted off the side bar and held over open grass" width="1920" height="1080" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GALLERY ================= -->
+        <section class="ca-section ca-section--tint" id="gallery">
+            <div class="container">
+                <div class="ca-head reveal">
+                    <p class="ca-eyebrow" data-i18n="shot_eyebrow">Screenshots</p>
+                    <h2 class="ca-title" data-i18n="shot_title">Real captures, <em>no mock-ups</em>.</h2>
+                    <p class="ca-sub" data-i18n="shot_sub">Every shot below is the game running, at full resolution, with nothing painted on afterwards.</p>
+                </div>
+
+                <div class="ca-gal-tabs reveal" role="tablist">
+                    <button class="ca-gal-tab is-active" role="tab" aria-selected="true" data-shot="shot-01" data-key="s1">1</button>
+                    <button class="ca-gal-tab" role="tab" aria-selected="false" data-shot="shot-02" data-key="s2">2</button>
+                    <button class="ca-gal-tab" role="tab" aria-selected="false" data-shot="shot-03" data-key="s3">3</button>
+                    <button class="ca-gal-tab" role="tab" aria-selected="false" data-shot="shot-04" data-key="s4">4</button>
+                    <button class="ca-gal-tab" role="tab" aria-selected="false" data-shot="shot-05" data-key="s5">5</button>
+                    <button class="ca-gal-tab" role="tab" aria-selected="false" data-shot="shot-06" data-key="s6">6</button>
+                    <button class="ca-gal-tab" role="tab" aria-selected="false" data-shot="shot-07" data-key="s7">7</button>
+                    <button class="ca-gal-tab" role="tab" aria-selected="false" data-shot="shot-08" data-key="s8">8</button>
+                </div>
+
+                <div class="ca-gal-stage reveal">
+                    <img id="gal-img" src="/assets/games/castle-of-ancients/shot-01.png" alt="Castle of Ancients — the main menu" width="1920" height="1080">
+                </div>
+                <div class="ca-gal-cap reveal">
+                    <h3 id="gal-title">The main menu</h3>
+                    <p id="gal-cap">Two modes and a settings screen. No account, no daily reward, nothing between the icon and a run.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="ca-cta">
+            <div class="container ca-cta-inner reveal">
+                <h2 class="cta-title" data-i18n="cta_title">One road leads to your castle. Everything on it wants the castle gone.</h2>
+                <div class="ca-cta-actions">
+                    <a href="#gallery" class="btn btn-primary" data-i18n="btn_shots">See how it plays</a>
+                    <a href="/castle-of-ancients/policy" class="btn btn-ghost" data-i18n="nav_policy">Privacy</a>
+                    <a href="/#contact" class="btn btn-ghost" data-i18n="btn_contact">Contact us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo"><img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span></a>
+                <p data-i18n="footer_desc">Building practical AI tools for developers and businesses.</p>
+                <div class="footer-contact">
+                    <p class="footer-contact-name">Trần Đức Sơn</p>
+                    <a href="mailto:tdson278@gmail.com">tdson278@gmail.com</a>
+                    <a href="tel:+84343185566">+84 343 185 566</a>
+                    <p class="footer-contact-apps">
+                        <a href="https://zalo.me/84343185566" target="_blank" rel="noopener">Zalo</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://wa.me/84343185566" target="_blank" rel="noopener">WhatsApp</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://www.linkedin.com/in/son-tran-458b24158/" target="_blank" rel="noopener">LinkedIn</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://www.upwork.com/freelancers/~0113b97260ff6eb129" target="_blank" rel="noopener">Upwork</a>
+                    </p>
+                </div>
+            </div>
+            <nav class="footer-col" data-i18n-aria="footer_game" aria-label="Castle of Ancients">
+                <h4 data-i18n="footer_game">The game</h4>
+                <a href="#overview" data-i18n="nav_overview">Overview</a>
+                <a href="#posts" data-i18n="nav_posts">Guard posts</a>
+                <a href="#foes" data-i18n="nav_foes">Enemies</a>
+                <a href="#maps" data-i18n="nav_maps">Maps</a>
+                <a href="#gallery" data-i18n="nav_shots">Screenshots</a>
+                <a href="/castle-of-ancients/policy" data-i18n="nav_policy">Privacy</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_prod" aria-label="Other products">
+                <h4 data-i18n="footer_prod">Other products</h4>
+                <a href="/novaryn">Novaryn</a>
+                <a href="/iron-line">Iron Line</a>
+                <a href="/dungeon-blade">Dungeon of the Fallen Blade</a>
+                <a href="/bksafe">BKSafe</a>
+                <a href="https://itask.aibachkhoa.com/plans" target="_blank" rel="noopener">iTask</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_comp" aria-label="Company">
+                <h4 data-i18n="footer_comp">Company</h4>
+                <a href="/#about" data-i18n="footer_about">About</a>
+                <a href="/#services" data-i18n="footer_services">Services</a>
+                <a href="/#contact" data-i18n="footer_contact">Contact</a>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AIBachKhoa</p>
+            <p data-i18n="footer_rights">All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/castle-of-ancients/castle-of-ancients.js"></script>
+</body>
+</html>

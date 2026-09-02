@@ -492,6 +492,7 @@ ul { list-style: none; }
 .pcard-visual--dungeon  { --gx: 44%; --gy: 32%; }
 .pcard-visual--novaryn  { --gx: 56%; --gy: 28%; }
 .pcard-visual--ironline { --gx: 38%; --gy: 60%; }
+.pcard-visual--minicastle { --gx: 46%; --gy: 30%; }
 
 /* product screenshots sitting on the gradient panel */
 .pviz-badge {

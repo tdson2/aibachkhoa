@@ -43,6 +43,24 @@ app.get('/novaryn/policy', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'novaryn', 'policy', 'index.html'));
 });
 
+// Clean URLs for the Castle of Ancients pages, for the same reason.
+app.get('/castle-of-ancients', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'castle-of-ancients', 'index.html'));
+});
+
+app.get('/castle-of-ancients/policy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'castle-of-ancients', 'policy', 'index.html'));
+});
+
+// Clean URLs for the Mini Castle pages, for the same reason.
+app.get('/mini-castle', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'mini-castle', 'index.html'));
+});
+
+app.get('/mini-castle/policy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'mini-castle', 'policy', 'index.html'));
+});
+
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
