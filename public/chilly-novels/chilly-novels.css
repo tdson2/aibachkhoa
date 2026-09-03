@@ -1,0 +1,315 @@
+/* =========================================================
+   Chilly Novels — product page + privacy policy.
+   Sits on top of /style.css: only the pieces this page adds.
+   The palette comes from the app itself — the cream paper it
+   reads on, the terracotta of its download button, and the
+   deep navy its cover illustrations are drawn in.
+   ========================================================= */
+
+.cn-page {
+    --cn-paper: #fbf8f3;
+    --cn-clay: #a85a2e;
+    --cn-clay-deep: #8d4522;
+    --cn-ink: #0e2a3d;
+    --cn-blush: #f3e8e2;
+}
+:root[data-theme="dark"] .cn-page {
+    --cn-clay: #d97c48;
+    --cn-clay-deep: #f0996a;
+    --cn-ink: #cfe0ee;
+}
+
+/* ---------- Hero ---------- */
+.cn-hero {
+    position: relative;
+    padding: 116px 0 72px;
+    overflow: hidden;
+    background:
+        radial-gradient(1100px 440px at 80% -6%, rgba(168, 90, 46, .22), transparent 62%),
+        radial-gradient(880px 400px at 10% 10%, rgba(14, 42, 61, .12), transparent 60%);
+}
+
+.cn-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .85fr);
+    gap: 56px;
+    align-items: center;
+}
+
+.cn-brandline { display: flex; align-items: center; gap: 18px; margin-bottom: 22px; }
+
+.cn-brandmark {
+    width: 76px;
+    height: 76px;
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(90, 48, 20, .26);
+}
+
+.cn-wordmark {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: .01em;
+    margin: 0;
+}
+
+.cn-brandsub {
+    margin: 2px 0 0;
+    font-size: .86rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.cn-hero-title {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(2.1rem, 4.4vw, 3.4rem);
+    line-height: 1.1;
+    margin: 0 0 18px;
+}
+.cn-hero-title em { font-style: normal; color: var(--cn-clay); }
+
+.cn-hero-sub {
+    font-size: 1.06rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 48ch;
+    margin: 0 0 28px;
+}
+
+.cn-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.cn-hero-meta {
+    margin: 22px 0 0;
+    font-size: .86rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+.cn-hero-meta code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: .82rem;
+    padding: .1rem .35rem;
+    border-radius: 6px;
+    background: var(--glass-quiet);
+    border: 1px solid var(--glass-brd);
+}
+
+/* the phone screenshots are tall, so the hero holds one upright */
+.cn-hero-shot {
+    justify-self: center;
+    width: min(300px, 100%);
+    border-radius: 26px;
+    overflow: hidden;
+    border: 1px solid var(--glass-brd);
+    background: var(--glass);
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+    box-shadow: var(--glass-shadow-lift), inset 0 1px 0 var(--glass-edge);
+    padding: 8px;
+}
+.cn-hero-shot img { display: block; width: 100%; height: auto; border-radius: 19px; }
+
+/* ---------- Pull quote ---------- */
+.cn-quote { padding: 12px 0 8px; }
+.cn-quote blockquote {
+    margin: 0;
+    max-width: 62ch;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+    line-height: 1.5;
+    letter-spacing: -.01em;
+    border-left: 3px solid var(--cn-clay);
+    padding-left: 20px;
+}
+
+/* ---------- Sections ---------- */
+.cn-section { padding: 76px 0; }
+.cn-section--tint {
+    background: linear-gradient(180deg, transparent, rgba(168, 90, 46, .07), transparent);
+}
+.cn-head { max-width: 60ch; margin-bottom: 38px; }
+.cn-eyebrow {
+    margin: 0 0 10px;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--cn-clay);
+}
+.cn-title {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+    line-height: 1.15;
+    margin: 0 0 14px;
+}
+.cn-lede { color: var(--text-muted); font-size: 1.02rem; line-height: 1.7; margin: 0; }
+
+/* ---------- Step / card grids ---------- */
+.cn-steps, .cn-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+.cn-step, .cn-card {
+    border: 1px solid var(--glass-brd);
+    border-radius: 18px;
+    background: var(--glass);
+    padding: 26px 24px;
+}
+.cn-step h3, .cn-card h3 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.1rem;
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cn-step p, .cn-card p { margin: 0; color: var(--text-muted); line-height: 1.7; font-size: .95rem; }
+
+.cn-stepn {
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 9px;
+    background: var(--cn-clay);
+    color: #fff;
+    font-size: .84rem;
+    font-weight: 700;
+}
+:root[data-theme="dark"] .cn-stepn { color: #1a0d02; }
+
+.cn-dot {
+    flex: 0 0 auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--cn-clay);
+}
+.cn-dot--text { background: var(--cn-ink); }
+.cn-dot--comic { background: var(--cn-clay); }
+
+/* ---------- Two-up: copy beside a screenshot ---------- */
+.cn-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, .68fr);
+    gap: 56px;
+    align-items: center;
+}
+.cn-split--flip { grid-template-columns: minmax(0, .68fr) minmax(0, 1fr); }
+.cn-split--flip .cn-shot { order: -1; }
+
+.cn-shot {
+    justify-self: center;
+    width: min(268px, 100%);
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--glass-brd);
+    background: var(--glass);
+    box-shadow: var(--glass-shadow), inset 0 1px 0 var(--glass-edge);
+    padding: 7px;
+}
+.cn-shot img { display: block; width: 100%; height: auto; border-radius: 18px; }
+
+.cn-list { margin: 22px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.cn-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    color: var(--text-muted);
+    line-height: 1.65;
+    font-size: .97rem;
+}
+.cn-list svg { flex: 0 0 auto; width: 18px; height: 18px; margin-top: 3px; color: var(--cn-clay); }
+.cn-list b { color: var(--text); font-weight: 600; }
+
+/* ---------- Screenshot gallery ---------- */
+.cn-gal-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+.cn-gal-tab {
+    border: 1px solid var(--glass-brd);
+    border-radius: 999px;
+    background: var(--glass-quiet);
+    color: var(--text);
+    padding: .5rem .95rem;
+    font-size: .9rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+.cn-gal-tab:hover { border-color: var(--cn-clay); }
+.cn-gal-tab.is-active { background: var(--cn-clay); border-color: transparent; color: #fff; }
+:root[data-theme="dark"] .cn-gal-tab.is-active { color: #1a0d02; }
+
+.cn-gal-stage {
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--glass-brd);
+    border-radius: 22px;
+    background: var(--glass-quiet);
+    padding: 26px;
+}
+.cn-gal-stage img {
+    display: block;
+    width: min(300px, 100%);
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 24px 50px -28px rgba(60, 34, 12, .6);
+}
+.cn-gal-cap { margin: 18px 0 0; color: var(--text-muted); line-height: 1.65; max-width: 66ch; }
+.cn-gal-cap strong { color: var(--text); display: block; margin-bottom: 4px; }
+
+/* ---------- Fact strip ---------- */
+.cn-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 18px;
+    border: 1px solid var(--glass-brd);
+    border-radius: 18px;
+    background: var(--glass);
+    padding: 30px 26px;
+}
+.cn-fact b {
+    display: block;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.1;
+    color: var(--cn-clay);
+}
+.cn-fact span { color: var(--text-muted); font-size: .92rem; }
+
+/* ---------- Privacy page ---------- */
+.cn-policy { padding: 120px 0 84px; }
+.cn-policy-head { margin-bottom: 40px; }
+.cn-policy-date { color: var(--text-muted); font-size: .92rem; margin: 10px 0 0; }
+.cn-policy-body { max-width: 74ch; }
+.cn-policy-body h2 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.24rem;
+    margin: 40px 0 12px;
+}
+.cn-policy-body p, .cn-policy-body li { color: var(--text-muted); line-height: 1.75; }
+.cn-policy-body ul { list-style: disc; padding-left: 1.3rem; }
+.cn-policy-body li::marker { color: var(--cn-clay); }
+.cn-policy-body li { margin-bottom: 8px; }
+.cn-policy-body a { color: var(--cn-clay); text-decoration: underline; }
+
+.cn-callout {
+    border: 1px solid var(--glass-brd);
+    border-left: 3px solid var(--cn-clay);
+    border-radius: 12px;
+    background: var(--glass);
+    padding: 20px 22px;
+    margin: 26px 0;
+}
+.cn-callout p { margin: 0; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .cn-hero { padding-top: 96px; }
+    .cn-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+    .cn-split, .cn-split--flip { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+    .cn-split--flip .cn-shot { order: 0; }
+    .cn-section { padding: 56px 0; }
+}

@@ -52,6 +52,15 @@ app.get('/castle-of-ancients/policy', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'castle-of-ancients', 'policy', 'index.html'));
 });
 
+// Clean URLs for the Chilly Novels pages, for the same reason.
+app.get('/chilly-novels', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'chilly-novels', 'index.html'));
+});
+
+app.get('/chilly-novels/policy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'chilly-novels', 'policy', 'index.html'));
+});
+
 // Clean URLs for the Mini Castle pages, for the same reason.
 app.get('/mini-castle', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'mini-castle', 'index.html'));

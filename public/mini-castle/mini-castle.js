@@ -11,6 +11,14 @@
 
 const i18n = {
     en: {
+        footer_desc: "Building practical AI tools for developers and businesses.",
+        footer_game: "The game",
+        footer_prod: "Other products",
+        footer_comp: "Company",
+        footer_about: "About",
+        footer_services: "Services",
+        footer_contact: "Contact",
+        footer_rights: "All rights reserved.",
         page_title: "Mini Castle — every gatherer is one less spear | AIBachKhoa",
         meta_desc: "A castle-defense game with a stripped-down RTS economy for iPhone, iPad and Android. Twenty nights, twenty-one maps, twenty-four edicts. No ads, no purchases, fully offline.",
         pol_page_title: "Privacy Policy — Mini Castle | AIBachKhoa",
@@ -115,6 +123,14 @@ const i18n = {
     },
 
     vi: {
+        footer_desc: "Xây những công cụ AI dùng được cho lập trình viên và doanh nghiệp.",
+        footer_game: "Trò chơi",
+        footer_prod: "Sản phẩm khác",
+        footer_comp: "Công ty",
+        footer_about: "Giới thiệu",
+        footer_services: "Dịch vụ",
+        footer_contact: "Liên hệ",
+        footer_rights: "Bảo lưu mọi quyền.",
         page_title: "Mini Castle — mỗi dân đi hái là một dân không cầm giáo | AIBachKhoa",
         meta_desc: "Game thủ thành pha kinh tế RTS rút gọn cho iPhone, iPad và Android. Hai mươi đêm, hai mươi mốt bản đồ, hai mươi bốn sắc lệnh. Không quảng cáo, không mua trong ứng dụng, chơi offline hoàn toàn.",
         pol_page_title: "Chính sách quyền riêng tư — Mini Castle | AIBachKhoa",

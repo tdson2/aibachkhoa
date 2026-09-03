@@ -6,8 +6,28 @@
    ========================================================= */
 const i18n = {
     en: {
+        feat_novels_offline: "Download once, read with no signal at all",
+        feat_novels_size: "Every story names its size before you tap",
+        action_novels: "Explore the app",
+        footer_games: "Games",
+        action_castle: "Explore the game",
+        badge_new: "New",
+        tag_castle: "Pixel tower defense",
+        castle_desc: "Drag a guard post out of the side bar, drop it on the grass, and a stretch of open road turns into a killing field. Kill for gold, spend the gold on deeper defences, and hold the line to the last wave. Twelve maps, no ads, plays offline.",
+        feat_castle_posts: "Drag-and-drop guard posts, upgraded mid-wave",
+        feat_castle_offline: "Twelve maps, no ads, fully offline",
+        filter_all: "Everything",
+        aria_filter: "Filter products",
+        latest_title: "Just shipped.",
+        latest_sub: "The four most recent releases, newest first. Everything else is in the grid below.",
+        latest_castle: "One road, one castle. Drop guard posts on the grass and turn a stretch of open road into a killing field &mdash; twelve maps, no ads, fully offline.",
+        latest_minicastle: "Every villager you send to gather is one less spear on the wall. Twenty nights, twenty-one maps.",
+        latest_bksafemac: "CPU, GPU, memory, disks, network and temperature on one screen, plus a malware scan and a junk cleaner.",
+        latest_ironline: "Hold the rail line against everything that walks down it. Build, upgrade, and never let the track break.",
+        hint_gallery: "Drag, or tap a shot to enlarge",
+        aria_close: "Close",
         page_title: "AIBachKhoa — AI tools for work and automation",
-        meta_desc: "AIBachKhoa builds practical AI tools: iTask for task management and CrewAI for orchestrating AI agents that automate workflows.",
+        meta_desc: "AIBachKhoa builds practical software: CrewAI Platform for running AI agents, BKSafe for device security, plus a shelf of mobile apps and games.",
         aria_lang: "Change language",
         aria_theme: "Toggle theme",
         aria_menu: "Open menu",
@@ -36,13 +56,10 @@ const i18n = {
         cta_contact: "Get in touch",
         group_web: "Web & desktop",
         group_mobile: "Mobile apps",
-        showcase_title: "Everything we build.",
-        showcase_sub: "Fourteen products in one strip. Drag sideways, or let it drift on its own.",
         gallery_title: "Inside the apps.",
-        gallery_sub: "Real screens from our mobile apps.",
+        gallery_sub: "Real screens from the apps and games, straight out of the build.",
         aria_prev: "Previous",
         aria_next: "Next",
-        hint_drag: "Drag to browse",
         aria_dots: "Choose product",
         skip_link: "Skip to content",
         nav_about: "About",
@@ -50,11 +67,11 @@ const i18n = {
         cta_try: "Try iTask",
         hero_eyebrow: "AI platform for teams",
         hero_title: "AI tools for work and <em>automation</em>.",
-        hero_subtitle: "iTask manages your tasks. CrewAI orchestrates autonomous agents that automate complex workflows.",
+        hero_subtitle: "CrewAI Platform runs your AI agents. BKSafe watches your machines. Alongside them, a shelf of mobile apps and games.",
         btn_explore: "Explore products",
         slide_cta: "Explore product",
         products_title: "Pick the tool that fits.",
-        products_sub: "Independent products, each built for a specific need.",
+        products_sub: "Thirteen independent products, each built for a specific need. Filter to what you care about.",
         tag_task: "Task management",
         itask_desc: "Organize, prioritize, and track work in one place. AI suggests what to do next and summarizes progress for the whole team.",
         feat_prioritization: "Context-aware smart prioritization",
@@ -79,7 +96,6 @@ const i18n = {
         footer_prod: "Products",
         footer_comp: "Company",
         footer_contact: "Contact",
-        footer_privacy: "Privacy policy",
         footer_rights: "All rights reserved.",
         feat_osint_auto: "Automated collection from open sources",
         feat_osint_report: "Findings compiled into a shareable report",
@@ -106,7 +122,7 @@ const i18n = {
         tag_cooking: "Cooking",
         cooking_desc: "Step-by-step recipes with checklists and timers, made for people who find cooking intimidating. Save your own recipes and share them with everyone.",
         tag_reading: "Reading",
-        reading_desc: "A quiet reading app with a collected library of stories, laid out for comfortable reading on a phone.",
+        reading_desc: "Short stories and comics you download once and then read offline. A whole prose story weighs about fifteen kilobytes, and there is no account to sign up for.",
         tag_fortune: "Fortune telling",
         fortune_desc: "AI-assisted fortune readings — tarot, cards and more. Meant as entertainment and a nudge for reflection, never as serious advice.",
         tag_game: "Puzzle game",
@@ -133,8 +149,28 @@ const i18n = {
         action_ironline: "Explore the game"
     },
     es: {
+        feat_novels_offline: "Descarga una vez y lee sin ninguna señal",
+        feat_novels_size: "Cada relato dice cuánto ocupa antes de que toques",
+        action_novels: "Descubrir la app",
+        footer_games: "Juegos",
+        action_castle: "Descubre el juego",
+        badge_new: "Nuevo",
+        tag_castle: "Tower defense en píxel",
+        castle_desc: "Arrastra un puesto de guardia desde la barra lateral, suéltalo sobre la hierba y un tramo de camino abierto se convierte en una trampa mortal. Mata para conseguir oro, gasta el oro en defensas más profundas y aguanta hasta la última oleada. Doce mapas, sin anuncios, funciona sin conexión.",
+        feat_castle_posts: "Puestos de guardia que se arrastran y se mejoran en plena oleada",
+        feat_castle_offline: "Doce mapas, sin anuncios, totalmente sin conexión",
+        filter_all: "Todo",
+        aria_filter: "Filtrar productos",
+        latest_title: "Recién lanzado.",
+        latest_sub: "Los cuatro lanzamientos más recientes, del más nuevo al más antiguo. Todo lo demás está en la cuadrícula de abajo.",
+        latest_castle: "Un camino, un castillo. Coloca puestos de guardia sobre la hierba y convierte un tramo de camino abierto en una trampa mortal: doce mapas, sin anuncios, totalmente sin conexión.",
+        latest_minicastle: "Cada aldeano que envías a recolectar es una lanza menos en la muralla. Veinte noches, veintiún mapas.",
+        latest_bksafemac: "CPU, GPU, memoria, discos, red y temperatura en una sola pantalla, más un análisis de malware y un limpiador de archivos basura.",
+        latest_ironline: "Defiende la vía férrea de todo lo que avanza por ella. Construye, mejora y no dejes que la línea se rompa.",
+        hint_gallery: "Arrastra, o toca una captura para ampliarla",
+        aria_close: "Cerrar",
         page_title: "AIBachKhoa — Herramientas de IA para el trabajo y la automatización",
-        meta_desc: "AIBachKhoa crea herramientas de IA prácticas: iTask para gestionar tareas y CrewAI para orquestar agentes que automatizan procesos.",
+        meta_desc: "AIBachKhoa crea software práctico: CrewAI Platform para ejecutar agentes de IA, BKSafe para la seguridad de tus dispositivos, y apps móviles y juegos.",
         aria_lang: "Cambiar idioma",
         aria_theme: "Cambiar tema",
         aria_menu: "Abrir menú",
@@ -163,13 +199,10 @@ const i18n = {
         cta_contact: "Contactar",
         group_web: "Web y escritorio",
         group_mobile: "Apps móviles",
-        showcase_title: "Todo lo que construimos.",
-        showcase_sub: "Catorce productos en una sola franja. Arrastra o déjalo correr solo.",
         gallery_title: "Dentro de las apps.",
-        gallery_sub: "Pantallas reales de nuestras apps móviles.",
+        gallery_sub: "Pantallas reales de las apps y los juegos, tal como salen de la compilación.",
         aria_prev: "Anterior",
         aria_next: "Siguiente",
-        hint_drag: "Arrastra para explorar",
         aria_dots: "Elegir producto",
         skip_link: "Saltar al contenido",
         nav_about: "Nosotros",
@@ -177,11 +210,11 @@ const i18n = {
         cta_try: "Prueba iTask",
         hero_eyebrow: "Plataforma de IA para equipos",
         hero_title: "Herramientas de IA para el trabajo y la <em>automatización</em>.",
-        hero_subtitle: "iTask gestiona tus tareas. CrewAI orquesta agentes autónomos que automatizan flujos de trabajo complejos.",
+        hero_subtitle: "CrewAI Platform ejecuta tus agentes de IA. BKSafe vigila tus equipos. Junto a ellos, una estantería de apps móviles y juegos.",
         btn_explore: "Explorar productos",
         slide_cta: "Ver producto",
         products_title: "Elige la herramienta que necesitas.",
-        products_sub: "Productos independientes, cada uno para una necesidad concreta.",
+        products_sub: "Trece productos independientes, cada uno para una necesidad concreta. Filtra por lo que te interese.",
         tag_task: "Gestión de tareas",
         itask_desc: "Organiza, prioriza y haz seguimiento del trabajo en un solo lugar. La IA sugiere qué hacer a continuación y resume el progreso de todo el equipo.",
         feat_prioritization: "Priorización inteligente según el contexto",
@@ -206,7 +239,6 @@ const i18n = {
         footer_prod: "Productos",
         footer_comp: "Empresa",
         footer_contact: "Contacto",
-        footer_privacy: "Política de privacidad",
         footer_rights: "Todos los derechos reservados.",
         feat_osint_auto: "Recopilación automática de fuentes abiertas",
         feat_osint_report: "Hallazgos reunidos en un informe compartible",
@@ -233,7 +265,7 @@ const i18n = {
         tag_cooking: "Cocina",
         cooking_desc: "Recetas paso a paso con listas y temporizadores, pensadas para quien se siente inseguro en la cocina. Guarda tus propias recetas y compártelas con los demás.",
         tag_reading: "Lectura",
-        reading_desc: "Una app de lectura tranquila con una biblioteca de relatos recopilados, presentada para leer cómodamente en el móvil.",
+        reading_desc: "Relatos y cómics que descargas una vez y luego lees sin conexión. Un relato completo pesa unos quince kilobytes, y no hay ninguna cuenta que crear.",
         tag_fortune: "Adivinación",
         fortune_desc: "Lecturas de la suerte con ayuda de IA: tarot, cartas y más. Es entretenimiento y una excusa para reflexionar, nunca un consejo serio.",
         tag_game: "Juego de puzles",
@@ -260,8 +292,28 @@ const i18n = {
         action_ironline: "Descubre el juego"
     },
     zh: {
+        feat_novels_offline: "下载一次，完全没有信号也能读",
+        feat_novels_size: "每篇故事在你点下之前先报出体积",
+        action_novels: "了解这款应用",
+        footer_games: "游戏",
+        action_castle: "了解这款游戏",
+        badge_new: "新品",
+        tag_castle: "像素塔防",
+        castle_desc: "从侧边栏拖出一座哨塔，放到草地上，一段空旷的道路就变成了屠场。击杀换金币，用金币加固纵深防线，一直守到最后一波。十二张地图，无广告，可离线游玩。",
+        feat_castle_posts: "拖放式哨塔，可在波次中途升级",
+        feat_castle_offline: "十二张地图，无广告，完全离线",
+        filter_all: "全部",
+        aria_filter: "筛选产品",
+        latest_title: "最新上线。",
+        latest_sub: "最近发布的四款产品，从最新开始。其余全部在下方的产品列表里。",
+        latest_castle: "一条路，一座城。把哨塔放到草地上，让一段空旷的道路变成屠场 —— 十二张地图，无广告，完全离线。",
+        latest_minicastle: "每派出一名村民去采集，城墙上就少一支长矛。二十个夜晚，二十一张地图。",
+        latest_bksafemac: "CPU、GPU、内存、磁盘、网络与温度集中在一屏，另有恶意软件扫描和垃圾清理。",
+        latest_ironline: "守住铁路线，挡下沿线推进的一切。建造、升级，别让轨道被打断。",
+        hint_gallery: "拖动浏览，点按截图可放大",
+        aria_close: "关闭",
         page_title: "AIBachKhoa — 面向工作与自动化的 AI 工具",
-        meta_desc: "AIBachKhoa 打造实用的 AI 工具：iTask 管理任务，CrewAI 编排智能体自动化流程。",
+        meta_desc: "AIBachKhoa 打造实用软件：用 CrewAI Platform 运行 AI 智能体，用 BKSafe 守护设备安全，还有一系列移动应用和游戏。",
         aria_lang: "切换语言",
         aria_theme: "切换主题",
         aria_menu: "打开菜单",
@@ -290,13 +342,10 @@ const i18n = {
         cta_contact: "联系我们",
         group_web: "网页与桌面端",
         group_mobile: "移动应用",
-        showcase_title: "我们打造的一切。",
-        showcase_sub: "十四款产品汇于一处。左右拖动，或让它自己滚动。",
         gallery_title: "应用内部一览。",
-        gallery_sub: "来自我们移动应用的真实界面。",
+        gallery_sub: "来自应用与游戏的真实界面，直接取自构建版本。",
         aria_prev: "上一个",
         aria_next: "下一个",
-        hint_drag: "拖动浏览",
         aria_dots: "选择产品",
         skip_link: "跳到主要内容",
         nav_about: "关于我们",
@@ -304,11 +353,11 @@ const i18n = {
         cta_try: "试用 iTask",
         hero_eyebrow: "面向团队的 AI 平台",
         hero_title: "用于工作与<em>自动化</em>的 AI 工具。",
-        hero_subtitle: "iTask 管理任务，CrewAI 编排自主智能体，自动化复杂的工作流程。",
+        hero_subtitle: "CrewAI Platform 运行你的 AI 智能体，BKSafe 看护你的设备，旁边还有一整排移动应用和游戏。",
         btn_explore: "浏览产品",
         slide_cta: "了解产品",
         products_title: "选择适合你的工具。",
-        products_sub: "独立的产品，各自解决一个具体需求。",
+        products_sub: "十三款独立产品，各自解决一个具体需求。按需筛选即可。",
         tag_task: "任务管理",
         itask_desc: "在一个地方组织、排序并跟踪工作。AI 会建议接下来该做什么，并为整个团队总结进度。",
         feat_prioritization: "结合上下文的智能优先级",
@@ -333,7 +382,6 @@ const i18n = {
         footer_prod: "产品",
         footer_comp: "公司",
         footer_contact: "联系我们",
-        footer_privacy: "隐私政策",
         footer_rights: "保留所有权利。",
         feat_osint_auto: "自动从公开来源采集信息",
         feat_osint_report: "调查结果汇总为可分享的报告",
@@ -360,7 +408,7 @@ const i18n = {
         tag_cooking: "烹饪",
         cooking_desc: "为怕下厨的人准备的分步食谱，带清单与计时器。也能保存自己的菜谱并分享给大家。",
         tag_reading: "阅读",
-        reading_desc: "一款安静的阅读应用，收录整理好的故事库，排版适合在手机上长时间阅读。",
+        reading_desc: "短篇故事和漫画，下载一次即可离线阅读。一整篇文字故事约十五 KB，且无需注册任何账号。",
         tag_fortune: "占卜",
         fortune_desc: "由 AI 辅助的占卜：塔罗、纸牌等。只当娱乐和自省的引子，切勿当作正经建议。",
         tag_game: "解谜游戏",
@@ -387,8 +435,28 @@ const i18n = {
         action_ironline: "了解这款游戏"
     },
     hi: {
+        feat_novels_offline: "एक बार डाउनलोड, फिर बिना किसी सिग्नल के पढ़ें",
+        feat_novels_size: "हर कहानी टैप करने से पहले अपना आकार बता देती है",
+        action_novels: "ऐप देखें",
+        footer_games: "गेम",
+        action_castle: "गेम देखें",
+        badge_new: "नया",
+        tag_castle: "पिक्सेल टावर डिफ़ेंस",
+        castle_desc: "साइड बार से एक गार्ड पोस्ट खींचें, उसे घास पर छोड़ें, और खुली सड़क का एक हिस्सा मौत का मैदान बन जाता है। सोने के लिए मारें, सोने को गहरी सुरक्षा पर खर्च करें, और आख़िरी लहर तक लाइन थामे रखें। बारह नक़्शे, कोई विज्ञापन नहीं, ऑफ़लाइन चलता है।",
+        feat_castle_posts: "ड्रैग-एंड-ड्रॉप गार्ड पोस्ट, लहर के बीच में ही अपग्रेड",
+        feat_castle_offline: "बारह नक़्शे, कोई विज्ञापन नहीं, पूरी तरह ऑफ़लाइन",
+        filter_all: "सब कुछ",
+        aria_filter: "उत्पाद फ़िल्टर करें",
+        latest_title: "अभी-अभी जारी।",
+        latest_sub: "चार सबसे नई रिलीज़, सबसे नई पहले। बाक़ी सब नीचे की सूची में है।",
+        latest_castle: "एक सड़क, एक किला। घास पर गार्ड पोस्ट रखें और खुली सड़क के एक हिस्से को मौत का मैदान बना दें — बारह नक़्शे, कोई विज्ञापन नहीं, पूरी तरह ऑफ़लाइन।",
+        latest_minicastle: "जिस भी ग्रामीण को इकट्ठा करने भेजा, वह दीवार पर एक भाला कम। बीस रातें, इक्कीस नक़्शे।",
+        latest_bksafemac: "CPU, GPU, मेमोरी, डिस्क, नेटवर्क और तापमान एक ही स्क्रीन पर, साथ में मैलवेयर स्कैन और जंक क्लीनर।",
+        latest_ironline: "रेल लाइन को उस पर बढ़ने वाली हर चीज़ से बचाइए। बनाइए, अपग्रेड कीजिए, और पटरी टूटने मत दीजिए।",
+        hint_gallery: "खींचें, या बड़ा करने के लिए किसी स्क्रीनशॉट पर टैप करें",
+        aria_close: "बंद करें",
         page_title: "AIBachKhoa — काम और स्वचालन के लिए AI टूल",
-        meta_desc: "AIBachKhoa व्यावहारिक AI टूल बनाता है: कार्य प्रबंधन के लिए iTask और वर्कफ़्लो स्वचालित करने वाले एजेंट के लिए CrewAI।",
+        meta_desc: "AIBachKhoa व्यावहारिक सॉफ़्टवेयर बनाता है: AI एजेंट चलाने के लिए CrewAI Platform, डिवाइस सुरक्षा के लिए BKSafe, साथ में मोबाइल ऐप्स और गेम्स।",
         aria_lang: "भाषा बदलें",
         aria_theme: "थीम बदलें",
         aria_menu: "मेन्यू खोलें",
@@ -417,13 +485,10 @@ const i18n = {
         cta_contact: "संपर्क करें",
         group_web: "वेब और डेस्कटॉप",
         group_mobile: "मोबाइल ऐप्स",
-        showcase_title: "हम जो कुछ भी बनाते हैं।",
-        showcase_sub: "एक ही पट्टी में चौदह उत्पाद। बगल में खींचें, या इसे अपने आप चलने दें।",
         gallery_title: "ऐप्स के भीतर।",
-        gallery_sub: "हमारे मोबाइल ऐप्स की असली स्क्रीन।",
+        gallery_sub: "ऐप्स और गेम्स की असली स्क्रीन, सीधे बिल्ड से।",
         aria_prev: "पिछला",
         aria_next: "अगला",
-        hint_drag: "देखने के लिए खींचें",
         aria_dots: "उत्पाद चुनें",
         skip_link: "मुख्य सामग्री पर जाएँ",
         nav_about: "हमारे बारे में",
@@ -431,11 +496,11 @@ const i18n = {
         cta_try: "iTask आज़माएँ",
         hero_eyebrow: "टीमों के लिए AI प्लेटफ़ॉर्म",
         hero_title: "काम और <em>स्वचालन</em> के लिए AI टूल।",
-        hero_subtitle: "iTask आपके कार्यों का प्रबंधन करता है। CrewAI स्वायत्त एजेंट संचालित कर जटिल वर्कफ़्लो स्वचालित करता है।",
+        hero_subtitle: "CrewAI Platform आपके AI एजेंट चलाता है। BKSafe आपकी मशीनों पर नज़र रखता है। इनके साथ मोबाइल ऐप्स और गेम्स की एक पूरी शेल्फ़।",
         btn_explore: "उत्पाद देखें",
         slide_cta: "उत्पाद जानें",
         products_title: "अपने लिए सही टूल चुनें।",
-        products_sub: "स्वतंत्र उत्पाद, हर एक किसी खास ज़रूरत के लिए।",
+        products_sub: "तेरह स्वतंत्र उत्पाद, हर एक किसी खास ज़रूरत के लिए। जो चाहिए उसी पर फ़िल्टर करें।",
         tag_task: "कार्य प्रबंधन",
         itask_desc: "काम को एक ही जगह व्यवस्थित करें, प्राथमिकता दें और ट्रैक करें। AI बताता है कि आगे क्या करना है और पूरी टीम की प्रगति का सार देता है।",
         feat_prioritization: "संदर्भ-आधारित स्मार्ट प्राथमिकता",
@@ -460,7 +525,6 @@ const i18n = {
         footer_prod: "उत्पाद",
         footer_comp: "कंपनी",
         footer_contact: "संपर्क",
-        footer_privacy: "गोपनीयता नीति",
         footer_rights: "सर्वाधिकार सुरक्षित।",
         feat_osint_auto: "खुले स्रोतों से स्वतः जानकारी संग्रह",
         feat_osint_report: "निष्कर्ष एक साझा करने योग्य रिपोर्ट में",
@@ -487,7 +551,7 @@ const i18n = {
         tag_cooking: "खाना बनाना",
         cooking_desc: "चेकलिस्ट और टाइमर के साथ चरण-दर-चरण रेसिपी, उनके लिए जिन्हें रसोई मुश्किल लगती है। अपनी रेसिपी सहेजें और सबके साथ साझा करें।",
         tag_reading: "पढ़ना",
-        reading_desc: "एक शांत रीडिंग ऐप, जिसमें चुनी हुई कहानियों का संग्रह फ़ोन पर आराम से पढ़ने के लिए सजाया गया है।",
+        reading_desc: "लघु कहानियाँ और कॉमिक्स, एक बार डाउनलोड कीजिए और फिर ऑफ़लाइन पढ़िए। पूरी एक कहानी लगभग पंद्रह किलोबाइट की है, और कोई खाता बनाने की ज़रूरत नहीं।",
         tag_fortune: "भविष्यफल",
         fortune_desc: "AI की मदद से भविष्यफल — टैरो, ताश और बहुत कुछ। यह मनोरंजन और सोचने का बहाना है, गंभीर सलाह नहीं।",
         tag_game: "पहेली गेम",
@@ -514,8 +578,28 @@ const i18n = {
         action_ironline: "गेम देखें"
     },
     ar: {
+        feat_novels_offline: "نزّلها مرة واحدة، واقرأ بلا أي إشارة",
+        feat_novels_size: "كل قصة تعلن حجمها قبل أن تضغط",
+        action_novels: "استكشف التطبيق",
+        footer_games: "الألعاب",
+        action_castle: "استكشف اللعبة",
+        badge_new: "جديد",
+        tag_castle: "دفاع أبراج بأسلوب البكسل",
+        castle_desc: "اسحب مركز حراسة من الشريط الجانبي، وأفلته على العشب، فيتحول امتداد من الطريق المفتوح إلى مقتلة. اقتل لتجمع الذهب، وأنفق الذهب على دفاعات أعمق، واصمد حتى الموجة الأخيرة. اثنتا عشرة خريطة، بلا إعلانات، ويعمل دون اتصال.",
+        feat_castle_posts: "مراكز حراسة بالسحب والإفلات، وتُطوَّر أثناء الموجة",
+        feat_castle_offline: "اثنتا عشرة خريطة، بلا إعلانات، دون اتصال تمامًا",
+        filter_all: "الكل",
+        aria_filter: "تصفية المنتجات",
+        latest_title: "صدر للتو.",
+        latest_sub: "أحدث أربعة إصدارات، الأحدث أولًا. وكل ما عداها في الشبكة أدناه.",
+        latest_castle: "طريق واحد وقلعة واحدة. ضع مراكز الحراسة على العشب لتحوّل امتدادًا من الطريق إلى مقتلة — اثنتا عشرة خريطة، بلا إعلانات، دون اتصال تمامًا.",
+        latest_minicastle: "كل قروي ترسله للجمع يعني رمحًا أقل على السور. عشرون ليلة وإحدى وعشرون خريطة.",
+        latest_bksafemac: "المعالج وبطاقة الرسوميات والذاكرة والأقراص والشبكة والحرارة في شاشة واحدة، مع فحص للبرمجيات الخبيثة ومنظّف للملفات غير الضرورية.",
+        latest_ironline: "ادفع عن خط السكة كل ما يزحف عليه. ابنِ وطوّر ولا تدع القضبان تنكسر.",
+        hint_gallery: "اسحب، أو المس لقطة لتكبيرها",
+        aria_close: "إغلاق",
         page_title: "AIBachKhoa — أدوات ذكاء اصطناعي للعمل والأتمتة",
-        meta_desc: "تبني AIBachKhoa أدوات ذكاء اصطناعي عملية: iTask لإدارة المهام وCrewAI لتنسيق الوكلاء الذين يؤتمتون سير العمل.",
+        meta_desc: "تبني AIBachKhoa برمجيات عملية: منصة CrewAI لتشغيل وكلاء الذكاء الاصطناعي، وBKSafe لأمن الأجهزة، إضافة إلى تطبيقات هاتف وألعاب.",
         aria_lang: "تغيير اللغة",
         aria_theme: "تبديل المظهر",
         aria_menu: "فتح القائمة",
@@ -544,13 +628,10 @@ const i18n = {
         cta_contact: "تواصل معنا",
         group_web: "الويب وسطح المكتب",
         group_mobile: "تطبيقات الهاتف",
-        showcase_title: "كل ما نبنيه.",
-        showcase_sub: "أربعة عشر منتجًا في شريط واحد. اسحب جانبًا أو دعه ينساب وحده.",
         gallery_title: "من داخل التطبيقات.",
-        gallery_sub: "لقطات حقيقية من تطبيقاتنا للهواتف.",
+        gallery_sub: "لقطات حقيقية من التطبيقات والألعاب، مأخوذة مباشرة من النسخة المبنية.",
         aria_prev: "السابق",
         aria_next: "التالي",
-        hint_drag: "اسحب للتصفح",
         aria_dots: "اختر منتجًا",
         skip_link: "تخطَّ إلى المحتوى",
         nav_about: "من نحن",
@@ -558,11 +639,11 @@ const i18n = {
         cta_try: "جرّب iTask",
         hero_eyebrow: "منصة ذكاء اصطناعي للفرق",
         hero_title: "أدوات ذكاء اصطناعي للعمل و<em>الأتمتة</em>.",
-        hero_subtitle: "iTask يدير مهامك، وCrewAI ينسّق وكلاء مستقلين لأتمتة سير العمل المعقّد.",
+        hero_subtitle: "منصة CrewAI تشغّل وكلاء الذكاء الاصطناعي لديك، وBKSafe يراقب أجهزتك، وإلى جانبهما رفّ كامل من تطبيقات الهاتف والألعاب.",
         btn_explore: "استكشف المنتجات",
         slide_cta: "تعرّف على المنتج",
         products_title: "اختر الأداة المناسبة لك.",
-        products_sub: "منتجات مستقلة، كل منها لحاجة محددة.",
+        products_sub: "ثلاثة عشر منتجًا مستقلًا، كل منها لحاجة محددة. صفِّ القائمة لما يهمّك.",
         tag_task: "إدارة المهام",
         itask_desc: "نظّم العمل ورتّب أولوياته وتابعه في مكان واحد. يقترح الذكاء الاصطناعي الخطوة التالية ويلخّص تقدّم الفريق بأكمله.",
         feat_prioritization: "ترتيب أولويات ذكي حسب السياق",
@@ -587,7 +668,6 @@ const i18n = {
         footer_prod: "المنتجات",
         footer_comp: "الشركة",
         footer_contact: "اتصل بنا",
-        footer_privacy: "سياسة الخصوصية",
         footer_rights: "جميع الحقوق محفوظة.",
         feat_osint_auto: "جمع تلقائي من المصادر المفتوحة",
         feat_osint_report: "نتائج مجمّعة في تقرير قابل للمشاركة",
@@ -614,7 +694,7 @@ const i18n = {
         tag_cooking: "الطبخ",
         cooking_desc: "وصفات خطوة بخطوة مع قوائم تحقّق ومؤقّتات، لمن يخيفه المطبخ. احفظ وصفاتك الخاصة وشاركها مع الجميع.",
         tag_reading: "القراءة",
-        reading_desc: "تطبيق قراءة هادئ يضم مكتبة قصص مختارة، منسّقة لقراءة مريحة على الهاتف.",
+        reading_desc: "قصص قصيرة وقصص مصوّرة تنزّلها مرة واحدة ثم تقرأها دون اتصال. القصة النصية كاملة تزن نحو خمسة عشر كيلوبايت، ولا حساب عليك إنشاؤه.",
         tag_fortune: "قراءة الطالع",
         fortune_desc: "قراءات طالع بمساعدة الذكاء الاصطناعي: تاروت وأوراق وغيرها. للتسلية والتأمل فقط، لا كنصيحة جادّة.",
         tag_game: "لعبة ألغاز",
@@ -641,8 +721,28 @@ const i18n = {
         action_ironline: "استكشف اللعبة"
     },
     pt: {
+        feat_novels_offline: "Descarregue uma vez, leia sem sinal nenhum",
+        feat_novels_size: "Cada história diz o seu tamanho antes de tocar",
+        action_novels: "Explorar a app",
+        footer_games: "Jogos",
+        action_castle: "Conheça o jogo",
+        badge_new: "Novo",
+        tag_castle: "Tower defense em pixel",
+        castle_desc: "Arraste um posto de guarda da barra lateral, largue-o na relva, e um troço de estrada aberta transforma-se num campo de morte. Mate por ouro, gaste o ouro em defesas mais profundas e segure a linha até à última vaga. Doze mapas, sem anúncios, joga-se offline.",
+        feat_castle_posts: "Postos de guarda que se arrastam e se melhoram a meio da vaga",
+        feat_castle_offline: "Doze mapas, sem anúncios, totalmente offline",
+        filter_all: "Tudo",
+        aria_filter: "Filtrar produtos",
+        latest_title: "Acabou de sair.",
+        latest_sub: "Os quatro lançamentos mais recentes, do mais novo para o mais antigo. Tudo o resto está na grelha abaixo.",
+        latest_castle: "Uma estrada, um castelo. Coloque postos de guarda na relva e transforme um troço de estrada aberta num campo de morte &mdash; doze mapas, sem anúncios, totalmente offline.",
+        latest_minicastle: "Cada aldeão que manda recolher é menos uma lança na muralha. Vinte noites, vinte e um mapas.",
+        latest_bksafemac: "CPU, GPU, memória, discos, rede e temperatura num só ecrã, mais uma análise de malware e um limpador de lixo.",
+        latest_ironline: "Defenda a linha férrea de tudo o que avança por ela. Construa, melhore e nunca deixe os carris partirem.",
+        hint_gallery: "Arraste, ou toque numa captura para ampliar",
+        aria_close: "Fechar",
         page_title: "AIBachKhoa — Ferramentas de IA para o trabalho e a automação",
-        meta_desc: "A AIBachKhoa cria ferramentas de IA práticas: iTask para gestão de tarefas e CrewAI para orquestrar agentes que automatizam processos.",
+        meta_desc: "A AIBachKhoa cria software prático: CrewAI Platform para executar agentes de IA, BKSafe para a segurança dos dispositivos, além de apps móveis e jogos.",
         aria_lang: "Mudar idioma",
         aria_theme: "Alternar tema",
         aria_menu: "Abrir menu",
@@ -671,13 +771,10 @@ const i18n = {
         cta_contact: "Entre em contato",
         group_web: "Web e desktop",
         group_mobile: "Apps móveis",
-        showcase_title: "Tudo o que construímos.",
-        showcase_sub: "Catorze produtos numa só faixa. Arraste para o lado ou deixe correr sozinho.",
         gallery_title: "Por dentro dos apps.",
-        gallery_sub: "Telas reais dos nossos aplicativos móveis.",
+        gallery_sub: "Telas reais dos aplicativos e jogos, tiradas diretamente da build.",
         aria_prev: "Anterior",
         aria_next: "Próximo",
-        hint_drag: "Arraste para navegar",
         aria_dots: "Escolher produto",
         skip_link: "Ir para o conteúdo",
         nav_about: "Sobre nós",
@@ -685,11 +782,11 @@ const i18n = {
         cta_try: "Experimentar o iTask",
         hero_eyebrow: "Plataforma de IA para equipes",
         hero_title: "Ferramentas de IA para o trabalho e a <em>automação</em>.",
-        hero_subtitle: "O iTask gerencia suas tarefas. O CrewAI orquestra agentes autônomos que automatizam fluxos de trabalho complexos.",
+        hero_subtitle: "A CrewAI Platform executa os seus agentes de IA. O BKSafe vigia as suas máquinas. Ao lado deles, uma prateleira de apps móveis e jogos.",
         btn_explore: "Explorar produtos",
         slide_cta: "Conhecer o produto",
         products_title: "Escolha a ferramenta certa para você.",
-        products_sub: "Produtos independentes, cada um para uma necessidade específica.",
+        products_sub: "Treze produtos independentes, cada um para uma necessidade específica. Filtre pelo que lhe interessa.",
         tag_task: "Gestão de tarefas",
         itask_desc: "Organize, priorize e acompanhe o trabalho em um só lugar. A IA sugere o próximo passo e resume o progresso de toda a equipe.",
         feat_prioritization: "Priorização inteligente conforme o contexto",
@@ -714,7 +811,6 @@ const i18n = {
         footer_prod: "Produtos",
         footer_comp: "Empresa",
         footer_contact: "Contato",
-        footer_privacy: "Política de privacidade",
         footer_rights: "Todos os direitos reservados.",
         feat_osint_auto: "Coleta automática de fontes abertas",
         feat_osint_report: "Achados reunidos em um relatório compartilhável",
@@ -741,7 +837,7 @@ const i18n = {
         tag_cooking: "Cozinha",
         cooking_desc: "Receitas passo a passo com checklists e cronômetros, feitas para quem tem receio de cozinhar. Salve suas próprias receitas e compartilhe com todo mundo.",
         tag_reading: "Leitura",
-        reading_desc: "Um app de leitura tranquilo, com uma biblioteca de histórias reunidas e formatadas para ler com conforto no celular.",
+        reading_desc: "Contos e banda desenhada que descarrega uma vez e depois lê offline. Um conto inteiro pesa cerca de quinze kilobytes, e não há nenhuma conta para criar.",
         tag_fortune: "Adivinhação",
         fortune_desc: "Leituras da sorte com apoio de IA: tarô, cartas e mais. É entretenimento e um convite à reflexão, nunca conselho sério.",
         tag_game: "Jogo de puzzle",
@@ -768,8 +864,28 @@ const i18n = {
         action_ironline: "Conheça o jogo"
     },
     fr: {
+        feat_novels_offline: "Téléchargé une fois, lu sans aucun réseau",
+        feat_novels_size: "Chaque récit annonce sa taille avant que vous n'appuyiez",
+        action_novels: "Découvrir l'application",
+        footer_games: "Jeux",
+        action_castle: "Découvrir le jeu",
+        badge_new: "Nouveau",
+        tag_castle: "Tower defense pixel",
+        castle_desc: "Faites glisser un poste de garde depuis la barre latérale, déposez-le sur l'herbe, et un tronçon de route dégagée devient un champ de tir. Tuez pour de l'or, dépensez cet or en défenses plus profondes, et tenez la ligne jusqu'à la dernière vague. Douze cartes, sans publicité, jouable hors ligne.",
+        feat_castle_posts: "Postes de garde en glisser-déposer, améliorables en pleine vague",
+        feat_castle_offline: "Douze cartes, sans publicité, entièrement hors ligne",
+        filter_all: "Tout",
+        aria_filter: "Filtrer les produits",
+        latest_title: "Tout juste sorti.",
+        latest_sub: "Les quatre sorties les plus récentes, la plus récente en premier. Tout le reste se trouve dans la grille ci-dessous.",
+        latest_castle: "Une route, un château. Posez des postes de garde sur l'herbe et transformez un tronçon de route dégagée en champ de tir &mdash; douze cartes, sans publicité, entièrement hors ligne.",
+        latest_minicastle: "Chaque villageois envoyé récolter, c'est une lance de moins sur le rempart. Vingt nuits, vingt et une cartes.",
+        latest_bksafemac: "Processeur, carte graphique, mémoire, disques, réseau et température sur un seul écran, plus une analyse antimalware et un nettoyeur de fichiers inutiles.",
+        latest_ironline: "Défendez la voie ferrée contre tout ce qui la remonte. Construisez, améliorez, et ne laissez jamais la voie céder.",
+        hint_gallery: "Faites glisser, ou touchez une capture pour l'agrandir",
+        aria_close: "Fermer",
         page_title: "AIBachKhoa — Des outils d'IA pour le travail et l'automatisation",
-        meta_desc: "AIBachKhoa conçoit des outils d'IA concrets : iTask pour gérer les tâches et CrewAI pour orchestrer des agents qui automatisent les processus.",
+        meta_desc: "AIBachKhoa crée des logiciels utiles : CrewAI Platform pour faire tourner des agents IA, BKSafe pour la sécurité des appareils, plus des applications mobiles et des jeux.",
         aria_lang: "Changer de langue",
         aria_theme: "Changer de thème",
         aria_menu: "Ouvrir le menu",
@@ -798,13 +914,10 @@ const i18n = {
         cta_contact: "Nous contacter",
         group_web: "Web et bureau",
         group_mobile: "Applis mobiles",
-        showcase_title: "Tout ce que nous construisons.",
-        showcase_sub: "Quatorze produits sur une seule bande. Faites glisser, ou laissez défiler.",
         gallery_title: "À l'intérieur des applis.",
-        gallery_sub: "De vrais écrans de nos applications mobiles.",
+        gallery_sub: "De vrais écrans des applications et des jeux, pris directement dans la build.",
         aria_prev: "Précédent",
         aria_next: "Suivant",
-        hint_drag: "Faites glisser pour parcourir",
         aria_dots: "Choisir un produit",
         skip_link: "Aller au contenu",
         nav_about: "À propos",
@@ -812,11 +925,11 @@ const i18n = {
         cta_try: "Essayer iTask",
         hero_eyebrow: "Plateforme d'IA pour les équipes",
         hero_title: "Des outils d'IA pour le travail et l'<em>automatisation</em>.",
-        hero_subtitle: "iTask gère vos tâches. CrewAI orchestre des agents autonomes qui automatisent des processus complexes.",
+        hero_subtitle: "CrewAI Platform fait tourner vos agents IA. BKSafe surveille vos machines. À côté, toute une étagère d'applications mobiles et de jeux.",
         btn_explore: "Découvrir les produits",
         slide_cta: "Découvrir le produit",
         products_title: "Choisissez l'outil qu'il vous faut.",
-        products_sub: "Des produits indépendants, chacun pour un besoin précis.",
+        products_sub: "Treize produits indépendants, chacun pour un besoin précis. Filtrez selon ce qui vous intéresse.",
         tag_task: "Gestion des tâches",
         itask_desc: "Organisez, priorisez et suivez le travail au même endroit. L'IA suggère la prochaine étape et résume l'avancement de toute l'équipe.",
         feat_prioritization: "Priorisation intelligente selon le contexte",
@@ -841,7 +954,6 @@ const i18n = {
         footer_prod: "Produits",
         footer_comp: "Entreprise",
         footer_contact: "Contact",
-        footer_privacy: "Politique de confidentialité",
         footer_rights: "Tous droits réservés.",
         feat_osint_auto: "Collecte automatisée en sources ouvertes",
         feat_osint_report: "Résultats réunis dans un rapport partageable",
@@ -868,7 +980,7 @@ const i18n = {
         tag_cooking: "Cuisine",
         cooking_desc: "Des recettes pas à pas avec listes et minuteurs, pensées pour celles et ceux que la cuisine intimide. Enregistrez vos propres recettes et partagez-les.",
         tag_reading: "Lecture",
-        reading_desc: "Une application de lecture paisible, avec une bibliothèque d'histoires réunies et mises en page pour lire confortablement sur téléphone.",
+        reading_desc: "Des nouvelles et des bandes dessinées que vous téléchargez une fois, puis lisez hors ligne. Un récit complet pèse une quinzaine de kilo-octets, et il n'y a aucun compte à créer.",
         tag_fortune: "Voyance",
         fortune_desc: "Des tirages assistés par IA : tarot, cartes et plus encore. À prendre comme un divertissement et une invitation à réfléchir, jamais comme un conseil sérieux.",
         tag_game: "Jeu de réflexion",
@@ -895,8 +1007,28 @@ const i18n = {
         action_ironline: "Découvrir le jeu"
     },
     de: {
+        feat_novels_offline: "Einmal laden, ganz ohne Empfang lesen",
+        feat_novels_size: "Jede Geschichte nennt ihre Größe, bevor Sie tippen",
+        action_novels: "App ansehen",
+        footer_games: "Spiele",
+        action_castle: "Das Spiel ansehen",
+        badge_new: "Neu",
+        tag_castle: "Pixel-Tower-Defense",
+        castle_desc: "Ziehen Sie einen Wachposten aus der Seitenleiste, setzen Sie ihn ins Gras, und ein Stück offene Straße wird zum Todesfeld. Töten bringt Gold, Gold bringt tiefere Verteidigung, und die Linie hält bis zur letzten Welle. Zwölf Karten, keine Werbung, offline spielbar.",
+        feat_castle_posts: "Wachposten per Drag-and-drop, mitten in der Welle aufrüstbar",
+        feat_castle_offline: "Zwölf Karten, keine Werbung, komplett offline",
+        filter_all: "Alles",
+        aria_filter: "Produkte filtern",
+        latest_title: "Frisch erschienen.",
+        latest_sub: "Die vier jüngsten Veröffentlichungen, die neueste zuerst. Alles andere steht im Raster darunter.",
+        latest_castle: "Eine Straße, eine Burg. Setzen Sie Wachposten ins Gras und machen Sie aus einem Stück offener Straße ein Todesfeld &mdash; zwölf Karten, keine Werbung, komplett offline.",
+        latest_minicastle: "Jeder Dorfbewohner, den Sie sammeln schicken, ist ein Speer weniger auf der Mauer. Zwanzig Nächte, einundzwanzig Karten.",
+        latest_bksafemac: "CPU, GPU, Speicher, Laufwerke, Netzwerk und Temperatur auf einem Bildschirm, dazu ein Malware-Scan und ein Junk-Cleaner.",
+        latest_ironline: "Halten Sie die Bahnlinie gegen alles, was auf ihr vorrückt. Bauen, aufrüsten, und die Gleise niemals reißen lassen.",
+        hint_gallery: "Ziehen, oder auf ein Bild tippen zum Vergrößern",
+        aria_close: "Schließen",
         page_title: "AIBachKhoa — KI-Werkzeuge für Arbeit und Automatisierung",
-        meta_desc: "AIBachKhoa baut praxisnahe KI-Werkzeuge: iTask für die Aufgabenverwaltung und CrewAI zum Orchestrieren von Agenten, die Abläufe automatisieren.",
+        meta_desc: "AIBachKhoa baut praktische Software: CrewAI Platform für KI-Agenten, BKSafe für Gerätesicherheit, dazu Mobile-Apps und Spiele.",
         aria_lang: "Sprache wechseln",
         aria_theme: "Design wechseln",
         aria_menu: "Menü öffnen",
@@ -925,13 +1057,10 @@ const i18n = {
         cta_contact: "Kontakt aufnehmen",
         group_web: "Web und Desktop",
         group_mobile: "Mobile Apps",
-        showcase_title: "Alles, was wir bauen.",
-        showcase_sub: "Vierzehn Produkte in einem Band. Zur Seite ziehen – oder einfach laufen lassen.",
         gallery_title: "Ein Blick in die Apps.",
-        gallery_sub: "Echte Screens aus unseren Mobile-Apps.",
+        gallery_sub: "Echte Bildschirme aus den Apps und Spielen, direkt aus dem Build.",
         aria_prev: "Zurück",
         aria_next: "Weiter",
-        hint_drag: "Zum Blättern ziehen",
         aria_dots: "Produkt wählen",
         skip_link: "Zum Inhalt springen",
         nav_about: "Über uns",
@@ -939,11 +1068,11 @@ const i18n = {
         cta_try: "iTask testen",
         hero_eyebrow: "KI-Plattform für Teams",
         hero_title: "KI-Werkzeuge für Arbeit und <em>Automatisierung</em>.",
-        hero_subtitle: "iTask verwaltet eure Aufgaben. CrewAI orchestriert autonome Agenten, die komplexe Abläufe automatisieren.",
+        hero_subtitle: "CrewAI Platform betreibt Ihre KI-Agenten. BKSafe behält Ihre Geräte im Blick. Daneben ein ganzes Regal voller Mobile-Apps und Spiele.",
         btn_explore: "Produkte entdecken",
         slide_cta: "Produkt ansehen",
         products_title: "Wählt das passende Werkzeug.",
-        products_sub: "Eigenständige Produkte, jedes für einen konkreten Bedarf.",
+        products_sub: "Dreizehn eigenständige Produkte, jedes für einen bestimmten Bedarf. Filtern Sie nach dem, was zählt.",
         tag_task: "Aufgabenverwaltung",
         itask_desc: "Arbeit an einem Ort organisieren, priorisieren und verfolgen. Die KI schlägt den nächsten Schritt vor und fasst den Fortschritt des ganzen Teams zusammen.",
         feat_prioritization: "Kontextbezogene, intelligente Priorisierung",
@@ -968,7 +1097,6 @@ const i18n = {
         footer_prod: "Produkte",
         footer_comp: "Unternehmen",
         footer_contact: "Kontakt",
-        footer_privacy: "Datenschutzerklärung",
         footer_rights: "Alle Rechte vorbehalten.",
         feat_osint_auto: "Automatische Erfassung aus offenen Quellen",
         feat_osint_report: "Ergebnisse in einem teilbaren Bericht",
@@ -995,7 +1123,7 @@ const i18n = {
         tag_cooking: "Kochen",
         cooking_desc: "Schritt-für-Schritt-Rezepte mit Checklisten und Timern, gemacht für alle, denen Kochen Respekt einflößt. Eigene Rezepte speichern und mit anderen teilen.",
         tag_reading: "Lesen",
-        reading_desc: "Eine ruhige Lese-App mit einer gesammelten Bibliothek von Geschichten, gesetzt für bequemes Lesen am Telefon.",
+        reading_desc: "Kurzgeschichten und Comics, einmal heruntergeladen und danach offline gelesen. Eine ganze Prosageschichte wiegt rund fünfzehn Kilobyte, und ein Konto braucht es nicht.",
         tag_fortune: "Wahrsagen",
         fortune_desc: "Wahrsagerei mit KI-Unterstützung: Tarot, Karten und mehr. Als Unterhaltung und Denkanstoß gedacht, nie als ernsthafter Rat.",
         tag_game: "Puzzlespiel",
@@ -1022,8 +1150,28 @@ const i18n = {
         action_ironline: "Das Spiel ansehen"
     },
     ja: {
+        feat_novels_offline: "一度落とせば、電波ゼロでも読める",
+        feat_novels_size: "どの作品もタップ前にサイズを表示",
+        action_novels: "アプリを見る",
+        footer_games: "ゲーム",
+        action_castle: "ゲームを見る",
+        badge_new: "新着",
+        tag_castle: "ドット絵タワーディフェンス",
+        castle_desc: "サイドバーから見張り所をドラッグして草地に置けば、何もない街道が殺戮の場に変わります。倒して金貨を稼ぎ、その金貨で防衛を厚くし、最後の波まで戦線を守り抜く。マップ12種、広告なし、オフラインで遊べます。",
+        feat_castle_posts: "ドラッグ＆ドロップの見張り所は、波の途中でも強化可能",
+        feat_castle_offline: "マップ12種、広告なし、完全オフライン",
+        filter_all: "すべて",
+        aria_filter: "製品を絞り込む",
+        latest_title: "出したばかり。",
+        latest_sub: "直近4本のリリースを新しい順に。ほかはすべて下の一覧にあります。",
+        latest_castle: "道は一本、城はひとつ。草地に見張り所を置いて、街道を殺戮の場に変える。マップ12種、広告なし、完全オフライン。",
+        latest_minicastle: "採集に送った村人の数だけ、城壁の槍が減ります。二十の夜、二十一のマップ。",
+        latest_bksafemac: "CPU・GPU・メモリ・ディスク・ネットワーク・温度を一画面に。マルウェアスキャンと不要ファイル掃除も。",
+        latest_ironline: "線路を進んでくるすべてを食い止める。建てて、強化して、レールを断たせない。",
+        hint_gallery: "ドラッグ、または画像をタップで拡大",
+        aria_close: "閉じる",
         page_title: "AIBachKhoa — 仕事と自動化のための AI ツール",
-        meta_desc: "AIBachKhoa は実用的な AI ツールを開発しています。タスク管理の iTask と、業務を自動化するエージェントを束ねる CrewAI。",
+        meta_desc: "AIBachKhoa は実用的なソフトウェアを作っています。AIエージェントを動かす CrewAI Platform、端末を守る BKSafe、そしてモバイルアプリとゲーム。",
         aria_lang: "言語を切り替える",
         aria_theme: "テーマを切り替える",
         aria_menu: "メニューを開く",
@@ -1052,13 +1200,10 @@ const i18n = {
         cta_contact: "問い合わせる",
         group_web: "Web・デスクトップ",
         group_mobile: "モバイルアプリ",
-        showcase_title: "私たちがつくるすべて。",
-        showcase_sub: "14のプロダクトをひと続きに。横にドラッグしても、自動で流れても。",
         gallery_title: "アプリの中身。",
-        gallery_sub: "モバイルアプリの実際の画面です。",
+        gallery_sub: "アプリとゲームの実画面。ビルドからそのまま。",
         aria_prev: "前へ",
         aria_next: "次へ",
-        hint_drag: "ドラッグして見る",
         aria_dots: "製品を選ぶ",
         skip_link: "本文へスキップ",
         nav_about: "私たちについて",
@@ -1066,11 +1211,11 @@ const i18n = {
         cta_try: "iTask を試す",
         hero_eyebrow: "チームのための AI プラットフォーム",
         hero_title: "仕事と<em>自動化</em>のための AI ツール。",
-        hero_subtitle: "iTask がタスクを管理し、CrewAI が自律エージェントを連携させて複雑な業務を自動化します。",
+        hero_subtitle: "CrewAI Platform がAIエージェントを動かし、BKSafe が端末を見守ります。その隣には、モバイルアプリとゲームがずらり。",
         btn_explore: "製品を見る",
         slide_cta: "製品を見る",
         products_title: "目的に合ったツールを選ぶ。",
-        products_sub: "独立した製品が、それぞれ具体的な課題を解決します。",
+        products_sub: "独立した13の製品、それぞれが特定の用途のために。気になるものだけ絞り込めます。",
         tag_task: "タスク管理",
         itask_desc: "作業を一か所で整理し、優先順位を付けて追跡。AI が次にやるべきことを提案し、チーム全体の進捗をまとめます。",
         feat_prioritization: "文脈をふまえた賢い優先順位付け",
@@ -1095,7 +1240,6 @@ const i18n = {
         footer_prod: "製品",
         footer_comp: "会社情報",
         footer_contact: "お問い合わせ",
-        footer_privacy: "プライバシーポリシー",
         footer_rights: "無断転載を禁じます。",
         feat_osint_auto: "公開情報の自動収集",
         feat_osint_report: "調査結果を共有できるレポートに集約",
@@ -1122,7 +1266,7 @@ const i18n = {
         tag_cooking: "料理",
         cooking_desc: "チェックリストとタイマー付きの手順レシピ。料理が苦手な人のために作りました。自分のレシピを保存して共有もできます。",
         tag_reading: "読書",
-        reading_desc: "集めた物語をそろえた、静かな読書アプリ。スマートフォンで読みやすいレイアウトです。",
+        reading_desc: "短編小説とマンガを一度ダウンロードすれば、あとはオフラインで読めます。文章の一作はおよそ15KB、アカウント登録も不要です。",
         tag_fortune: "占い",
         fortune_desc: "AI を使った占い。タロットやカードなどを楽しめます。あくまで娯楽と考えるきっかけであり、真剣な助言ではありません。",
         tag_game: "パズルゲーム",
@@ -1149,8 +1293,28 @@ const i18n = {
         action_ironline: "ゲームを見る"
     },
     ko: {
+        feat_novels_offline: "한 번 내려받으면 신호 없이도 읽기",
+        feat_novels_size: "모든 이야기가 누르기 전에 용량을 밝힙니다",
+        action_novels: "앱 살펴보기",
+        footer_games: "게임",
+        action_castle: "게임 보기",
+        badge_new: "신규",
+        tag_castle: "픽셀 타워 디펜스",
+        castle_desc: "사이드바에서 초소를 끌어다 잔디에 놓으면, 텅 빈 길 한 구간이 살육의 장으로 바뀝니다. 처치해 금화를 모으고, 그 금화로 방어를 더 두텁게 쌓아 마지막 웨이브까지 버티세요. 맵 12종, 광고 없음, 오프라인 플레이.",
+        feat_castle_posts: "끌어다 놓는 초소, 웨이브 도중에도 업그레이드",
+        feat_castle_offline: "맵 12종, 광고 없음, 완전 오프라인",
+        filter_all: "전체",
+        aria_filter: "제품 필터",
+        latest_title: "방금 나왔습니다.",
+        latest_sub: "가장 최근 출시한 네 가지를 최신순으로. 나머지는 아래 목록에 있습니다.",
+        latest_castle: "길 하나, 성 하나. 잔디에 초소를 놓아 텅 빈 길을 살육의 장으로 바꾸세요 &mdash; 맵 12종, 광고 없음, 완전 오프라인.",
+        latest_minicastle: "채집에 보낸 주민 한 명은 성벽 위 창 하나가 줄어드는 일. 스무 번의 밤, 스물한 개의 맵.",
+        latest_bksafemac: "CPU, GPU, 메모리, 디스크, 네트워크, 온도를 한 화면에. 악성코드 검사와 정크 정리까지.",
+        latest_ironline: "선로를 따라 밀려오는 모든 것을 막아내세요. 짓고, 강화하고, 레일이 끊기지 않게.",
+        hint_gallery: "드래그하거나 스크린샷을 눌러 확대",
+        aria_close: "닫기",
         page_title: "AIBachKhoa — 업무와 자동화를 위한 AI 도구",
-        meta_desc: "AIBachKhoa는 실용적인 AI 도구를 만듭니다. 업무 관리를 위한 iTask, 업무 흐름을 자동화하는 에이전트를 조율하는 CrewAI.",
+        meta_desc: "AIBachKhoa는 실용적인 소프트웨어를 만듭니다. AI 에이전트를 돌리는 CrewAI Platform, 기기 보안을 맡는 BKSafe, 그리고 모바일 앱과 게임까지.",
         aria_lang: "언어 변경",
         aria_theme: "테마 전환",
         aria_menu: "메뉴 열기",
@@ -1179,13 +1343,10 @@ const i18n = {
         cta_contact: "문의하기",
         group_web: "웹 · 데스크톱",
         group_mobile: "모바일 앱",
-        showcase_title: "우리가 만드는 모든 것.",
-        showcase_sub: "열네 개의 제품을 한 줄에. 옆으로 끌거나, 그대로 흐르게 두세요.",
         gallery_title: "앱 속을 들여다보기.",
-        gallery_sub: "모바일 앱의 실제 화면입니다.",
+        gallery_sub: "앱과 게임의 실제 화면, 빌드에서 그대로.",
         aria_prev: "이전",
         aria_next: "다음",
-        hint_drag: "끌어서 둘러보기",
         aria_dots: "제품 선택",
         skip_link: "본문으로 건너뛰기",
         nav_about: "회사 소개",
@@ -1193,11 +1354,11 @@ const i18n = {
         cta_try: "iTask 사용해보기",
         hero_eyebrow: "팀을 위한 AI 플랫폼",
         hero_title: "업무와 <em>자동화</em>를 위한 AI 도구.",
-        hero_subtitle: "iTask는 업무를 관리하고, CrewAI는 자율 에이전트를 조율해 복잡한 업무 흐름을 자동화합니다.",
+        hero_subtitle: "CrewAI Platform이 AI 에이전트를 돌리고, BKSafe가 기기를 지켜봅니다. 그 옆에는 모바일 앱과 게임이 한 칸 가득.",
         btn_explore: "제품 살펴보기",
         slide_cta: "제품 알아보기",
         products_title: "필요에 맞는 도구를 고르세요.",
-        products_sub: "독립적인 제품이 각각 하나의 구체적인 문제를 해결합니다.",
+        products_sub: "각기 다른 필요를 위해 만든 독립 제품 13종. 관심 있는 것만 골라 보세요.",
         tag_task: "업무 관리",
         itask_desc: "한곳에서 업무를 정리하고 우선순위를 정해 추적하세요. AI가 다음에 할 일을 제안하고 팀 전체의 진행 상황을 요약합니다.",
         feat_prioritization: "맥락을 이해하는 스마트 우선순위",
@@ -1222,7 +1383,6 @@ const i18n = {
         footer_prod: "제품",
         footer_comp: "회사",
         footer_contact: "문의하기",
-        footer_privacy: "개인정보 처리방침",
         footer_rights: "모든 권리 보유.",
         feat_osint_auto: "공개 출처에서 자동 수집",
         feat_osint_report: "조사 결과를 공유 가능한 보고서로 정리",
@@ -1249,7 +1409,7 @@ const i18n = {
         tag_cooking: "요리",
         cooking_desc: "체크리스트와 타이머가 있는 단계별 레시피. 요리가 부담스러운 사람을 위해 만들었습니다. 나만의 레시피를 저장하고 공유할 수도 있습니다.",
         tag_reading: "독서",
-        reading_desc: "모아 둔 이야기 서재를 담은 조용한 독서 앱. 휴대폰에서 편안하게 읽도록 구성했습니다.",
+        reading_desc: "한 번 내려받으면 오프라인으로 읽는 단편 소설과 만화. 글 한 편이 15KB 남짓이고, 가입할 계정도 없습니다.",
         tag_fortune: "운세",
         fortune_desc: "AI로 보는 운세 — 타로, 카드 등을 즐길 수 있습니다. 진지한 조언이 아니라 재미와 생각거리로 봐 주세요.",
         tag_game: "퍼즐 게임",
@@ -1276,8 +1436,28 @@ const i18n = {
         action_ironline: "게임 보기"
     },
     ru: {
+        feat_novels_offline: "Скачал один раз — читаешь вообще без связи",
+        feat_novels_size: "Каждый рассказ называет свой размер до нажатия",
+        action_novels: "Открыть приложение",
+        footer_games: "Игры",
+        action_castle: "Посмотреть игру",
+        badge_new: "Новое",
+        tag_castle: "Пиксельная башенная защита",
+        castle_desc: "Перетащите сторожевой пост с боковой панели, поставьте его на траву — и открытый участок дороги превращается в мясорубку. Убивайте ради золота, вкладывайте золото в глубину обороны и держите линию до последней волны. Двенадцать карт, без рекламы, играется офлайн.",
+        feat_castle_posts: "Сторожевые посты перетаскиванием, улучшаются прямо во время волны",
+        feat_castle_offline: "Двенадцать карт, без рекламы, полностью офлайн",
+        filter_all: "Все",
+        aria_filter: "Фильтр продуктов",
+        latest_title: "Только что вышло.",
+        latest_sub: "Четыре последних релиза, начиная с самого свежего. Всё остальное — в сетке ниже.",
+        latest_castle: "Одна дорога, один замок. Ставьте сторожевые посты на траву и превращайте открытый участок дороги в мясорубку — двенадцать карт, без рекламы, полностью офлайн.",
+        latest_minicastle: "Каждый житель, отправленный на сбор, — это на одно копьё меньше на стене. Двадцать ночей, двадцать одна карта.",
+        latest_bksafemac: "Процессор, видеокарта, память, диски, сеть и температура на одном экране, плюс проверка на вредоносное ПО и чистка мусора.",
+        latest_ironline: "Удерживайте железнодорожную линию против всего, что по ней идёт. Стройте, улучшайте и не дайте путям порваться.",
+        hint_gallery: "Перетащите или нажмите на снимок, чтобы увеличить",
+        aria_close: "Закрыть",
         page_title: "AIBachKhoa — ИИ-инструменты для работы и автоматизации",
-        meta_desc: "AIBachKhoa создаёт практичные ИИ-инструменты: iTask для управления задачами и CrewAI для оркестрации агентов, автоматизирующих процессы.",
+        meta_desc: "AIBachKhoa делает практичный софт: CrewAI Platform для запуска ИИ-агентов, BKSafe для безопасности устройств, а также мобильные приложения и игры.",
         aria_lang: "Сменить язык",
         aria_theme: "Сменить тему",
         aria_menu: "Открыть меню",
@@ -1306,13 +1486,10 @@ const i18n = {
         cta_contact: "Связаться",
         group_web: "Веб и десктоп",
         group_mobile: "Мобильные приложения",
-        showcase_title: "Всё, что мы создаём.",
-        showcase_sub: "Четырнадцать продуктов в одной ленте. Тяните вбок или просто смотрите.",
         gallery_title: "Внутри приложений.",
-        gallery_sub: "Реальные экраны наших мобильных приложений.",
+        gallery_sub: "Настоящие экраны приложений и игр — прямо из сборки.",
         aria_prev: "Назад",
         aria_next: "Вперёд",
-        hint_drag: "Тяните, чтобы листать",
         aria_dots: "Выбрать продукт",
         skip_link: "Перейти к содержимому",
         nav_about: "О нас",
@@ -1320,11 +1497,11 @@ const i18n = {
         cta_try: "Попробовать iTask",
         hero_eyebrow: "ИИ-платформа для команд",
         hero_title: "ИИ-инструменты для работы и <em>автоматизации</em>.",
-        hero_subtitle: "iTask управляет задачами. CrewAI координирует автономных агентов, которые автоматизируют сложные процессы.",
+        hero_subtitle: "CrewAI Platform запускает ваших ИИ-агентов. BKSafe присматривает за вашими устройствами. Рядом — целая полка мобильных приложений и игр.",
         btn_explore: "Смотреть продукты",
         slide_cta: "Узнать о продукте",
         products_title: "Выберите подходящий инструмент.",
-        products_sub: "Независимые продукты, каждый решает свою задачу.",
+        products_sub: "Тринадцать самостоятельных продуктов, каждый под свою задачу. Отфильтруйте то, что нужно.",
         tag_task: "Управление задачами",
         itask_desc: "Организуйте, расставляйте приоритеты и отслеживайте работу в одном месте. ИИ подсказывает, что делать дальше, и подводит итоги по всей команде.",
         feat_prioritization: "Умные приоритеты с учётом контекста",
@@ -1349,7 +1526,6 @@ const i18n = {
         footer_prod: "Продукты",
         footer_comp: "Компания",
         footer_contact: "Контакты",
-        footer_privacy: "Политика конфиденциальности",
         footer_rights: "Все права защищены.",
         feat_osint_auto: "Автоматический сбор из открытых источников",
         feat_osint_report: "Результаты собраны в отчёт для обмена",
@@ -1376,7 +1552,7 @@ const i18n = {
         tag_cooking: "Кулинария",
         cooking_desc: "Пошаговые рецепты с чек-листами и таймерами — для тех, кого кухня пугает. Сохраняйте свои рецепты и делитесь ими со всеми.",
         tag_reading: "Чтение",
-        reading_desc: "Спокойное приложение для чтения с собранной библиотекой историй, свёрстанной под удобное чтение с телефона.",
+        reading_desc: "Рассказы и комиксы, которые скачиваешь один раз и потом читаешь офлайн. Целый текстовый рассказ весит около пятнадцати килобайт, и никакой учётной записи заводить не нужно.",
         tag_fortune: "Гадания",
         fortune_desc: "Гадания с помощью ИИ: таро, карты и не только. Это развлечение и повод задуматься, а не серьёзный совет.",
         tag_game: "Головоломка",
@@ -1405,8 +1581,28 @@ const i18n = {
 
     /* --- Tiếng Việt: tạm ẩn khỏi bộ chọn ngôn ngữ (giữ lại bản dịch) --- */
     vi: {
+        feat_novels_offline: "Tải một lần, không sóng vẫn đọc được",
+        feat_novels_size: "Truyện nào cũng khai dung lượng trước khi bạn chạm",
+        action_novels: "Khám phá ứng dụng",
+        footer_games: "Trò chơi",
+        action_castle: "Xem trò chơi",
+        badge_new: "Mới",
+        tag_castle: "Thủ thành pixel",
+        castle_desc: "Kéo một trạm canh gác từ thanh bên, thả xuống bãi cỏ, và một khúc đường trống bỗng thành bãi tử địa. Diệt địch lấy vàng, đổ vàng vào hàng phòng thủ sâu hơn, rồi giữ vững phòng tuyến tới đợt cuối cùng. Mười hai bản đồ, không quảng cáo, chơi offline.",
+        feat_castle_posts: "Trạm canh kéo-thả, nâng cấp ngay giữa đợt tấn công",
+        feat_castle_offline: "Mười hai bản đồ, không quảng cáo, hoàn toàn offline",
+        filter_all: "Tất cả",
+        aria_filter: "Lọc sản phẩm",
+        latest_title: "Vừa ra mắt.",
+        latest_sub: "Bốn sản phẩm ra mắt gần nhất, mới nhất trước. Những thứ còn lại nằm ở lưới bên dưới.",
+        latest_castle: "Một con đường, một toà thành. Đặt trạm canh trên bãi cỏ và biến khúc đường trống thành bãi tử địa &mdash; mười hai bản đồ, không quảng cáo, hoàn toàn offline.",
+        latest_minicastle: "Mỗi dân làng bạn cử đi thu thập là một ngọn giáo bớt đi trên tường thành. Hai mươi đêm, hai mươi mốt bản đồ.",
+        latest_bksafemac: "CPU, GPU, bộ nhớ, ổ đĩa, mạng và nhiệt độ trên cùng một màn hình, kèm quét mã độc và dọn rác.",
+        latest_ironline: "Giữ tuyến đường ray trước mọi thứ tiến dọc theo nó. Xây, nâng cấp, và đừng để đường ray đứt gãy.",
+        hint_gallery: "Kéo, hoặc chạm vào ảnh để phóng to",
+        aria_close: "Đóng",
         page_title: "AIBachKhoa - Công cụ AI cho công việc và tự động hóa",
-        meta_desc: "AIBachKhoa xây dựng công cụ AI thực dụng: iTask quản lý công việc và CrewAI điều phối các tác tử AI tự động hóa quy trình.",
+        meta_desc: "AIBachKhoa xây phần mềm dùng được: CrewAI Platform để chạy các AI agent, BKSafe để bảo vệ thiết bị, cùng một loạt ứng dụng di động và trò chơi.",
         aria_lang: "Đổi ngôn ngữ",
         aria_theme: "Đổi giao diện",
         aria_menu: "Mở menu",
@@ -1435,13 +1631,10 @@ const i18n = {
         cta_contact: "Liên hệ tư vấn",
         group_web: "Web & máy tính",
         group_mobile: "Ứng dụng di động",
-        showcase_title: "Tất cả những gì chúng tôi làm.",
-        showcase_sub: "Mười bốn sản phẩm trong một dải. Kéo ngang, hoặc để nó tự trôi.",
         gallery_title: "Bên trong các ứng dụng.",
-        gallery_sub: "Ảnh chụp thật từ các ứng dụng di động của chúng tôi.",
+        gallery_sub: "Màn hình thật từ các ứng dụng và trò chơi, lấy thẳng từ bản build.",
         aria_prev: "Trước",
         aria_next: "Tiếp",
-        hint_drag: "Kéo để xem",
         aria_dots: "Chọn sản phẩm",
         skip_link: "Bỏ qua đến nội dung",
         nav_about: "Về chúng tôi",
@@ -1449,11 +1642,11 @@ const i18n = {
         cta_try: "Dùng thử iTask",
         hero_eyebrow: "Nền tảng AI cho doanh nghiệp",
         hero_title: "Công cụ AI cho công việc và <em>tự động hóa</em>.",
-        hero_subtitle: "iTask quản lý công việc. CrewAI điều phối các tác tử AI tự động hóa những quy trình phức tạp.",
+        hero_subtitle: "CrewAI Platform chạy các AI agent của bạn. BKSafe trông chừng máy móc của bạn. Bên cạnh đó là cả một kệ ứng dụng di động và trò chơi.",
         btn_explore: "Khám phá sản phẩm",
         slide_cta: "Tìm hiểu sản phẩm",
         products_title: "Chọn công cụ phù hợp với bạn.",
-        products_sub: "Các sản phẩm độc lập, mỗi sản phẩm giải quyết một nhu cầu cụ thể.",
+        products_sub: "Mười ba sản phẩm độc lập, mỗi cái cho một nhu cầu cụ thể. Lọc theo thứ bạn quan tâm.",
         tag_task: "Quản lý công việc",
         itask_desc: "Tổ chức, ưu tiên và theo dõi công việc trong một nơi duy nhất. AI gợi ý thứ tự ưu tiên và tóm tắt tiến độ cho cả nhóm.",
         feat_prioritization: "Ưu tiên thông minh theo ngữ cảnh",
@@ -1478,7 +1671,6 @@ const i18n = {
         footer_prod: "Sản phẩm",
         footer_comp: "Công ty",
         footer_contact: "Liên hệ",
-        footer_privacy: "Chính sách bảo mật",
         footer_rights: "Mọi quyền được bảo lưu.",
         feat_osint_auto: "Tự động thu thập từ nguồn mở",
         feat_osint_report: "Kết quả tổng hợp thành báo cáo chia sẻ được",
@@ -1505,7 +1697,7 @@ const i18n = {
         tag_cooking: "Nấu ăn",
         cooking_desc: "Công thức từng bước kèm danh sách việc cần làm và hẹn giờ, dành cho người ngại vào bếp. Bạn cũng có thể lưu công thức riêng và chia sẻ cho mọi người.",
         tag_reading: "Đọc truyện",
-        reading_desc: "Ứng dụng đọc truyện nhẹ nhàng với kho truyện được sưu tầm và biên tập, trình bày để đọc thoải mái trên điện thoại.",
+        reading_desc: "Truyện ngắn và truyện tranh, tải một lần rồi đọc offline. Một truyện chữ trọn bộ chỉ nặng chừng mười lăm kilobyte, và không có tài khoản nào phải đăng ký.",
         tag_fortune: "Bói toán",
         fortune_desc: "Bói toán có AI hỗ trợ: Tarot, bài Tây, Quan Âm… Chỉ mang tính giải trí và tham khảo, không phải lời khuyên nghiêm túc.",
         tag_game: "Trò chơi giải đố",
@@ -1590,6 +1782,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const t = (lang, key) => (i18n[lang] && i18n[lang][key]) || i18n[DEFAULT_LANG][key] || '';
 
+    /* Things drawn by JS (the lightbox caption) can't carry data-i18n,
+       so they subscribe here and repaint when the language changes. */
+    const langListeners = [];
+    const onLanguageChange = (fn) => langListeners.push(fn);
+
     const metaDesc = document.querySelector('meta[name="description"]');
 
     const updateLanguage = (lang) => {
@@ -1606,6 +1803,7 @@ document.addEventListener('DOMContentLoaded', () => {
         root.lang = lang;
         root.dir = RTL_LANGS.has(lang) ? 'rtl' : 'ltr';
         langSelects.forEach(sel => { sel.value = lang; });
+        langListeners.forEach(fn => fn(lang));
     };
 
     let currentLang = detectLang();
@@ -1926,4 +2124,119 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     document.querySelectorAll('[data-carousel]').forEach(initDragCarousel);
+
+    /* ---------- Product filter ----------
+       The chip row above the grid is a control, not decoration: each
+       chip shows or hides a whole category block. 'all' shows the lot. */
+    const filterBar = document.getElementById('product-filter');
+    if (filterBar) {
+        const chips = Array.from(filterBar.querySelectorAll('.chip'));
+        const groups = Array.from(document.querySelectorAll('.pgroup'));
+
+        const apply = (cat) => {
+            groups.forEach(g => { g.hidden = cat !== 'all' && g.dataset.cat !== cat; });
+            chips.forEach(c => {
+                const on = c.dataset.cat === cat;
+                c.classList.toggle('is-active', on);
+                c.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            // cards inside a group that was hidden never got their reveal
+            document.querySelectorAll('.pgroup:not([hidden]) .reveal:not(.in-view)')
+                .forEach(el => el.classList.add('in-view'));
+        };
+
+        chips.forEach(chip => chip.addEventListener('click', () => apply(chip.dataset.cat)));
+
+        // arrow keys walk the chip row, the way a tablist should
+        filterBar.addEventListener('keydown', (e) => {
+            const dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+            if (!dir) return;
+            e.preventDefault();
+            const i = chips.indexOf(document.activeElement);
+            const next = chips[(i + dir + chips.length) % chips.length];
+            next.focus();
+            apply(next.dataset.cat);
+        });
+    }
+
+    /* ---------- Screenshot lightbox ----------
+       Clicking a shot in the gallery opens it full size instead of
+       navigating away; arrows and the keyboard walk the whole set,
+       and the caption still links through to the product. */
+    const lbx = document.getElementById('lightbox');
+    const shots = Array.from(document.querySelectorAll('.cshot[data-shot]'));
+    if (lbx && shots.length) {
+        const img = document.getElementById('lbx-img');
+        const nameEl = document.getElementById('lbx-name');
+        const tagEl = document.getElementById('lbx-tag');
+        const linkEl = document.getElementById('lbx-link');
+        const countEl = document.getElementById('lbx-count');
+        let at = 0, opener = null;
+
+        const paint = (i) => {
+            at = (i + shots.length) % shots.length;
+            const shot = shots[at];
+            const src = shot.querySelector('img');
+            img.src = src.getAttribute('src');
+            img.alt = src.getAttribute('alt') || '';
+            img.classList.toggle('is-pixel', shot.classList.contains('cshot--wide') && !shot.classList.contains('cshot--smooth'));
+            nameEl.textContent = shot.dataset.name || '';
+            tagEl.textContent = t(currentLang, shot.dataset.tag) || '';
+            linkEl.href = shot.getAttribute('href');
+            if (shot.target) { linkEl.target = shot.target; linkEl.rel = 'noopener'; }
+            else { linkEl.removeAttribute('target'); linkEl.removeAttribute('rel'); }
+            countEl.textContent = (at + 1) + ' / ' + shots.length;
+        };
+
+        const open = (i, from) => {
+            opener = from || null;
+            paint(i);
+            lbx.hidden = false;
+            document.body.classList.add('lbx-open');
+            requestAnimationFrame(() => lbx.classList.add('is-open'));
+            lbx.querySelector('.lbx-close').focus();
+        };
+
+        const close = () => {
+            lbx.classList.remove('is-open');
+            document.body.classList.remove('lbx-open');
+            const done = () => { lbx.hidden = true; lbx.removeEventListener('transitionend', done); };
+            lbx.addEventListener('transitionend', done);
+            setTimeout(done, 350);           // in case the transition never fires
+            if (opener) opener.focus();
+        };
+
+        shots.forEach((shot, i) => shot.addEventListener('click', (e) => {
+            // the drag carousel already swallows clicks that were really drags
+            if (e.defaultPrevented) return;
+            e.preventDefault();
+            open(i, shot);
+        }));
+
+        lbx.addEventListener('click', (e) => {
+            if (e.target.closest('[data-lbx-close]')) { close(); return; }
+            const dir = e.target.closest('[data-lbx-dir]');
+            if (dir) paint(at + Number(dir.dataset.lbxDir));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (lbx.hidden) return;
+            if (e.key === 'Escape') { e.preventDefault(); close(); }
+            else if (e.key === 'ArrowRight') { e.preventDefault(); paint(at + 1); }
+            else if (e.key === 'ArrowLeft') { e.preventDefault(); paint(at - 1); }
+        });
+
+        // swipe through on touch
+        let sx = null;
+        lbx.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, { passive: true });
+        lbx.addEventListener('touchend', e => {
+            if (sx === null) return;
+            const dx = e.changedTouches[0].clientX - sx;
+            if (Math.abs(dx) > 45) paint(at + (dx < 0 ? 1 : -1));
+            sx = null;
+        }, { passive: true });
+
+        // keep the caption in the language the visitor picked
+        onLanguageChange(() => { if (!lbx.hidden) paint(at); });
+    }
 });

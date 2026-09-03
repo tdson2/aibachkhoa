@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chilly Novels — download once, read offline | AIBachKhoa</title>
+    <meta name="description" content="A small Vietnamese reading app for short stories and comics. Pick what you want, download it once — a story weighs about 15 KB — and read it offline forever. No account, nothing to sign up for.">
+    <link rel="canonical" href="https://aibachkhoa.com/chilly-novels">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chilly Novels — download once, read offline">
+    <meta property="og:description" content="Short stories and comics you download once and read offline. A whole story is about 15 KB. No account, no sign-up.">
+    <meta property="og:image" content="https://aibachkhoa.com/assets/apps/novels/feature.png">
+    <meta property="og:url" content="https://aibachkhoa.com/chilly-novels">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/apps/novels/icon.png">
+    <link rel="apple-touch-icon" href="/assets/apps/novels/icon.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/chilly-novels/chilly-novels.css">
+</head>
+<body class="page-product cn-page">
+    <div class="wingfield" aria-hidden="true">
+        <span class="wing wing--1"></span>
+        <span class="wing wing--2"></span>
+        <span class="wing wing--3"></span>
+        <span class="wing wing--4"></span>
+    </div>
+
+    <a href="#overview" class="skip-link" data-i18n="skip_link">Skip to content</a>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="AIBachKhoa">
+                <img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="/" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="#overview" class="nav-link" data-i18n="nav_overview">Overview</a>
+                <a href="#library" class="nav-link" data-i18n="nav_library">The library</a>
+                <a href="#reading" class="nav-link" data-i18n="nav_reading">Reading</a>
+                <a href="#gallery" class="nav-link" data-i18n="nav_shots">Screenshots</a>
+                <a href="/chilly-novels/policy" class="nav-link" data-i18n="nav_policy">Privacy</a>
+                <span class="nav-divider" aria-hidden="true"></span>
+                <select id="lang-select" class="lang-select" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+            </div>
+
+            <div class="mobile-controls">
+                <select id="mobile-lang-select" class="lang-select lang-select--compact" data-display="code" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="mobile-theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+                <button class="icon-btn mobile-menu-btn" data-i18n-aria="aria_menu" aria-label="Open menu" id="mobile-btn" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="cn-hero" id="overview">
+        <div class="container">
+            <div class="cn-hero-grid">
+                <div class="reveal">
+                    <div class="cn-brandline">
+                        <img src="/assets/apps/novels/icon.png" alt="" class="cn-brandmark" width="512" height="512">
+                        <div>
+                            <p class="cn-wordmark">Chilly Novels</p>
+                            <p class="cn-brandsub" data-i18n="hero_kicker">Android · Vietnamese · offline reading</p>
+                        </div>
+                    </div>
+                    <h1 class="cn-hero-title" data-i18n="hero_title">Download once. <em>Read offline</em> forever.</h1>
+                    <p class="cn-hero-sub" data-i18n="hero_sub">A small library of short stories and comics. Pick the ones you want, pull them onto the phone once, and they are yours to read on a plane, on the metro, or anywhere the signal gives up. A whole story weighs about fifteen kilobytes.</p>
+                    <div class="cn-hero-actions">
+                        <a href="https://play.google.com/store/apps/details?id=com.tdson.novely" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="btn_play">Get it on Google Play</a>
+                        <a href="#gallery" class="btn btn-ghost" data-i18n="btn_shots">See how it reads</a>
+                    </div>
+                    <p class="cn-hero-meta">
+                        <span data-i18n="hero_meta_app">Application id</span> <code>com.tdson.novely</code> ·
+                        <span data-i18n="hero_meta_rest">portrait, Android phones · Vietnamese interface · rated Teen · free, with ads</span>
+                    </p>
+                </div>
+                <div class="cn-hero-shot reveal">
+                    <img src="/assets/apps/novels/shot-04.png" alt="Chilly Novels home screen, with a featured story and shelves by genre" width="1080" height="2400">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="cn-quote">
+        <div class="container reveal">
+            <blockquote data-i18n="quote">Tải truyện về máy một lần rồi đọc offline thoải mái.</blockquote>
+        </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="cn-section cn-section--tint" id="how">
+        <div class="container">
+            <div class="cn-head reveal">
+                <p class="cn-eyebrow" data-i18n="how_eyebrow">How it works</p>
+                <h2 class="cn-title" data-i18n="how_title">Three taps, then the network stops mattering.</h2>
+                <p class="cn-lede" data-i18n="how_lede">The app opens on a shelf-building screen rather than a sign-up form. Nothing streams while you read, so a dead signal never costs you a chapter.</p>
+            </div>
+            <div class="cn-steps">
+                <article class="cn-step reveal">
+                    <h3><span class="cn-stepn" aria-hidden="true">1</span><span data-i18n="how_1_h">Build the shelf</span></h3>
+                    <p data-i18n="how_1_p">On first run the app shows the whole catalogue with a checkbox and a size beside each title, and adds up what you picked at the bottom. Take a couple, or take the lot — two stories came to 193 KB.</p>
+                </article>
+                <article class="cn-step reveal">
+                    <h3><span class="cn-stepn" aria-hidden="true">2</span><span data-i18n="how_2_h">Pull it down</span></h3>
+                    <p data-i18n="how_2_p">One download and the text lives on the phone. Anything you skipped stays in the catalogue, and you can come back for it whenever you next have a connection.</p>
+                </article>
+                <article class="cn-step reveal">
+                    <h3><span class="cn-stepn" aria-hidden="true">3</span><span data-i18n="how_3_h">Read anywhere</span></h3>
+                    <p data-i18n="how_3_p">Downloaded stories open with no network at all. Favourites, reading history and progress are written to the phone and never leave it.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= LIBRARY ================= -->
+    <section class="cn-section" id="library">
+        <div class="container">
+            <div class="cn-split">
+                <div class="reveal">
+                    <p class="cn-eyebrow" data-i18n="lib_eyebrow">The library</p>
+                    <h2 class="cn-title" data-i18n="lib_title">Two kinds of story, sorted the way you look for them.</h2>
+                    <p class="cn-lede" data-i18n="lib_lede">The shelf holds prose and comics side by side, grouped into everyday life, humour, school and fantasy. The search sheet narrows it down without making you scroll.</p>
+                    <ul class="cn-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span><b data-i18n="lib_f1_b">Prose or comics.</b> <span data-i18n="lib_f1">Filter to one or the other, or leave it on everything.</span></span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span><b data-i18n="lib_f2_b">Sort that admits what it is.</b> <span data-i18n="lib_f2">By title, by chapter count, or by how much space it will take.</span></span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span><b data-i18n="lib_f3_b">Downloaded only.</b> <span data-i18n="lib_f3">One switch hides everything you have not pulled down yet — the view you want on a train.</span></span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span><b data-i18n="lib_f4_b">Genre chips.</b> <span data-i18n="lib_f4">Everyday life, humour, school, fantasy — and per-story tags like adventure or detective.</span></span></li>
+                    </ul>
+                </div>
+                <div class="cn-shot reveal">
+                    <img src="/assets/apps/novels/shot-03.png" alt="The search sheet, filtering by story type, sort order and genre" width="1080" height="2400" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= READING ================= -->
+    <section class="cn-section cn-section--tint" id="reading">
+        <div class="container">
+            <div class="cn-split cn-split--flip">
+                <div class="cn-shot reveal">
+                    <img src="/assets/apps/novels/shot-07.png" alt="A story page: cover, author, chapter count, size and a download button" width="1080" height="2400" loading="lazy">
+                </div>
+                <div class="reveal">
+                    <p class="cn-eyebrow" data-i18n="read_eyebrow">Before you commit</p>
+                    <h2 class="cn-title" data-i18n="read_title">Every story tells you its size first.</h2>
+                    <p class="cn-lede" data-i18n="read_lede">Open a title and you get the cover, the author, how many chapters there are and exactly how many kilobytes it will cost you — on the button itself, before you tap it.</p>
+                    <ul class="cn-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span><b data-i18n="read_f1_b">A summary, not a teaser.</b> <span data-i18n="read_f1">Two lines telling you what the story actually is, so you can put it back.</span></span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span><b data-i18n="read_f2_b">Kept private on the device.</b> <span data-i18n="read_f2">Downloads sit in the app's own storage, encrypted, where nothing else on the phone reads them.</span></span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span><b data-i18n="read_f3_b">Favourites and progress.</b> <span data-i18n="read_f3">A heart on the story, a progress tab for what you have been through. Both stay on the phone.</span></span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span><b data-i18n="read_f4_b">No account, ever.</b> <span data-i18n="read_f4">There is no sign-up screen, because there is nothing to sign up to.</span></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+    <section class="cn-section" id="gallery">
+        <div class="container">
+            <div class="cn-head reveal">
+                <p class="cn-eyebrow" data-i18n="gal_eyebrow">Screenshots</p>
+                <h2 class="cn-title" data-i18n="gal_title">The whole app, six screens.</h2>
+                <p class="cn-lede" data-i18n="gal_lede">Straight from the current build on Google Play.</p>
+            </div>
+
+            <div class="cn-gal-tabs" role="tablist">
+                <button class="cn-gal-tab is-active" role="tab" aria-selected="true" data-shot="shot-04" data-key="gal_c1"><span data-i18n="gal_t1">Home</span></button>
+                <button class="cn-gal-tab" role="tab" aria-selected="false" data-shot="shot-03" data-key="gal_c2"><span data-i18n="gal_t2">Search</span></button>
+                <button class="cn-gal-tab" role="tab" aria-selected="false" data-shot="shot-07" data-key="gal_c3"><span data-i18n="gal_t3">A story</span></button>
+                <button class="cn-gal-tab" role="tab" aria-selected="false" data-shot="shot-05" data-key="gal_c4"><span data-i18n="gal_t4">First run</span></button>
+                <button class="cn-gal-tab" role="tab" aria-selected="false" data-shot="shot-06" data-key="gal_c5"><span data-i18n="gal_t5">Terms</span></button>
+                <button class="cn-gal-tab" role="tab" aria-selected="false" data-shot="shot-02" data-key="gal_c6"><span data-i18n="gal_t6">Welcome</span></button>
+            </div>
+
+            <div class="cn-gal-stage reveal">
+                <img id="gal-img" src="/assets/apps/novels/shot-04.png" alt="Chilly Novels screenshot" width="1080" height="2400">
+            </div>
+            <p class="cn-gal-cap"><strong id="gal-title">Home</strong><span id="gal-cap">A featured story at the top, then shelves by genre. Each cover carries its size, and anything already on the phone is flagged.</span></p>
+        </div>
+    </section>
+
+    <!-- ================= FACTS ================= -->
+    <section class="cn-section cn-section--tint">
+        <div class="container">
+            <div class="cn-head reveal">
+                <h2 class="cn-title" data-i18n="facts_title">At a glance</h2>
+            </div>
+            <div class="cn-facts reveal">
+                <div class="cn-fact"><b>2</b><span data-i18n="f1">kinds of story: prose and comics</span></div>
+                <div class="cn-fact"><b>~15 KB</b><span data-i18n="f2">for a whole prose story</span></div>
+                <div class="cn-fact"><b>4</b><span data-i18n="f3">genres on the shelf</span></div>
+                <div class="cn-fact"><b data-i18n="f4_b">Offline</b><span data-i18n="f4">once a story is downloaded</span></div>
+                <div class="cn-fact"><b data-i18n="f5_b">None</b><span data-i18n="f5">accounts or personal data collected</span></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo"><img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span></a>
+                <p data-i18n="footer_desc">Building practical AI tools for developers and businesses.</p>
+                <div class="footer-contact">
+                    <p class="footer-contact-name">Trần Đức Sơn</p>
+                    <a href="mailto:tdson278@gmail.com">tdson278@gmail.com</a>
+                    <a href="tel:+84343185566">+84 343 185 566</a>
+                    <p class="footer-contact-apps">
+                        <a href="https://zalo.me/84343185566" target="_blank" rel="noopener">Zalo</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://wa.me/84343185566" target="_blank" rel="noopener">WhatsApp</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://www.linkedin.com/in/son-tran-458b24158/" target="_blank" rel="noopener">LinkedIn</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://www.upwork.com/freelancers/~0113b97260ff6eb129" target="_blank" rel="noopener">Upwork</a>
+                    </p>
+                </div>
+            </div>
+            <nav class="footer-col" data-i18n-aria="footer_app" aria-label="Chilly Novels">
+                <h4 data-i18n="footer_app">The app</h4>
+                <a href="/chilly-novels#overview" data-i18n="nav_overview">Overview</a>
+                <a href="/chilly-novels#library" data-i18n="nav_library">The library</a>
+                <a href="/chilly-novels#reading" data-i18n="nav_reading">Reading</a>
+                <a href="/chilly-novels#gallery" data-i18n="nav_shots">Screenshots</a>
+                <a href="/chilly-novels/policy" data-i18n="nav_policy">Privacy</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_prod" aria-label="Other products">
+                <h4 data-i18n="footer_prod">Other products</h4>
+                <a href="/castle-of-ancients">Castle of Ancients</a>
+                <a href="/mini-castle">Mini Castle</a>
+                <a href="/iron-line">Iron Line</a>
+                <a href="/novaryn">Novaryn</a>
+                <a href="/bksafe">BKSafe</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_comp" aria-label="Company">
+                <h4 data-i18n="footer_comp">Company</h4>
+                <a href="/#about" data-i18n="footer_about">About</a>
+                <a href="/#services" data-i18n="footer_services">Services</a>
+                <a href="/#contact" data-i18n="footer_contact">Contact</a>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AIBachKhoa</p>
+            <p data-i18n="footer_rights">All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/chilly-novels/chilly-novels.js"></script>
+</body>
+</html>
