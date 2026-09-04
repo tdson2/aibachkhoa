@@ -429,6 +429,112 @@ code {
 .bk-lite-shots .phone-frame { max-width: 190px; }
 
 /* ---------- download ---------- */
+/* ── Bảng giá ─────────────────────────────────────────────────────────────────────────────
+   Dùng lại đúng khối thẻ của mục Tải về (viền, bo góc, bóng đổ) để hai mục cạnh nhau đọc như
+   một trang chứ không như hai trang ghép lại. Chỉ thẻ Pro được tô màu nhấn — nếu cả ba thẻ đều
+   nổi bật thì không thẻ nào nổi bật cả. */
+.bk-pricing {
+    padding: clamp(3.5rem, 7vw, 6.5rem) 0;
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 68px;
+}
+.bk-pricing .section-head { margin-bottom: 2.8rem; }
+
+.bk-pr-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    gap: 1.4rem;
+    align-items: stretch;
+}
+
+.bk-pr-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1.9rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 18px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+.bk-pr-card--pro {
+    border-color: var(--bk-line);
+    background: linear-gradient(180deg, var(--bk-soft), var(--surface) 42%);
+}
+
+.bk-pr-tag {
+    position: absolute;
+    top: -0.7rem;
+    left: 1.9rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    background: var(--bk);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.bk-pr-head { margin-bottom: 1.3rem; }
+.bk-pr-head h3 { margin: 0 0 0.7rem; font-size: 1.05rem; }
+
+.bk-pr-price { display: flex; align-items: baseline; gap: 0.35rem; margin: 0 0 0.35rem; }
+.bk-pr-amount { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
+.bk-pr-card--pro .bk-pr-amount { color: var(--bk-ink); }
+.bk-pr-per { font-size: 0.9rem; color: var(--text-dim); }
+.bk-pr-note { margin: 0; font-size: 0.85rem; color: var(--text-dim); }
+
+.bk-pr-list {
+    flex: 1;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+    /* Các dòng dồn lên đầu thay vì giãn đều theo chiều cao thẻ.
+       Thiếu dòng này thì `flex: 1` kéo danh sách cao bằng thẻ dài nhất, còn lưới chia đều khoảng
+       trống ra giữa các dòng — thẻ ít mục nhất trông như bị bung ra, và ba thẻ cạnh nhau không
+       còn đọc thành một bảng so sánh nữa. */
+    align-content: start;
+}
+.bk-pr-list li {
+    position: relative;
+    padding-left: 1.4rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--text);
+}
+/* Dấu tích vẽ bằng ::before thay vì ký tự trong HTML: nó là trang trí, và trình đọc màn hình
+   không nên đọc "dấu tích" trước mỗi dòng. */
+.bk-pr-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.45rem;
+    width: 0.55rem;
+    height: 0.3rem;
+    border-left: 2px solid var(--bk);
+    border-bottom: 2px solid var(--bk);
+    transform: rotate(-45deg);
+}
+
+.bk-pr-btn { width: 100%; }
+.bk-pr-fine {
+    margin: 0.9rem 0 0;
+    font-size: 0.76rem;
+    line-height: 1.5;
+    color: var(--text-dim);
+}
+
+.bk-pr-support {
+    margin: 2rem 0 0;
+    text-align: center;
+    font-size: 0.88rem;
+    color: var(--text-dim);
+}
+.bk-pr-support a { color: var(--bk-ink); font-weight: 600; }
+
 .bk-download {
     padding: clamp(3.5rem, 7vw, 6.5rem) 0;
     border-top: 1px solid var(--border);

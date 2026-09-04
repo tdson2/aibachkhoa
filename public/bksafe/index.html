@@ -43,6 +43,7 @@
                 <a href="#windows" class="nav-link">Windows</a>
                 <a href="#linux" class="nav-link">Linux</a>
                 <a href="#android" class="nav-link">Android</a>
+                <a href="#pricing" class="nav-link" data-i18n="nav_pricing">Pricing</a>
                 <a href="/bksafe/policy" class="nav-link" data-i18n="nav_policy">Privacy</a>
                 <span class="nav-divider" aria-hidden="true"></span>
                 <select id="lang-select" class="lang-select" data-i18n-aria="aria_lang" aria-label="Change language"></select>
@@ -80,7 +81,7 @@
                 <h1 class="bk-hero-title" data-i18n="hero_title">Your machine, <em>in plain sight</em>.</h1>
                 <p class="bk-hero-sub" data-i18n="hero_sub">BKSafe watches machine health, scans for malware, clears out junk and keeps an eye on network traffic. Every bit of analysis happens on the device — none of your files ever leave it.</p>
                 <div class="bk-hero-actions">
-                    <a href="/downloads/BKSafe-1.3.0.dmg" class="btn btn-primary bk-btn-mac" download>
+                    <a href="/downloads/BKSafe-1.3.2.dmg" class="btn btn-primary bk-btn-mac" download>
                         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.9c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.9-3-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.2 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.2.9-1.2 1.3-2.5 1.3-2.5s-2.5-1-2.5-3.6zM14.2 5.6c.6-.8 1-1.9.9-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.8-1.3z"/></svg>
                         <span data-i18n="btn_dl_mac">Download for macOS</span>
                     </a>
@@ -204,7 +205,7 @@
                     <h2 class="section-title" data-i18n="mac_title">Your Mac, measured down to the core.</h2>
                     <p class="section-sub" data-i18n="mac_sub">BKSafe reads straight from the kernel and the machine's own sensors, refreshed every two seconds. No decorative charts — every figure is something actually happening inside the Mac.</p>
                     <ul class="bk-badges">
-                        <li class="bk-badge bk-badge--live"><span data-i18n="mac_badge_ver">Version 1.3.0 · build 23</span></li>
+                        <li class="bk-badge bk-badge--live"><span data-i18n="mac_badge_ver">Version 1.3.2 · build 25</span></li>
                         <li class="bk-badge"><span data-i18n="mac_badge_req">macOS 11 Big Sur or later</span></li>
                         <li class="bk-badge"><span data-i18n="mac_badge_arch">Universal · Intel & Apple Silicon</span></li>
                     </ul>
@@ -319,7 +320,7 @@
                     <ol class="bk-step-list">
                         <li>
                             <span class="bk-step-num">1</span>
-                            <p data-i18n="step_1">Download <code>BKSafe-1.3.0.dmg</code>.</p>
+                            <p data-i18n="step_1">Download <code>BKSafe-1.3.2.dmg</code>.</p>
                         </li>
                         <li>
                             <span class="bk-step-num">2</span>
@@ -596,6 +597,78 @@
         </section>
 
         <!-- ================= DOWNLOAD ================= -->
+        <section class="bk-pricing" id="pricing">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow" data-i18n="pr_eyebrow">Pricing</p>
+                    <h2 class="section-title" data-i18n="pr_title">Protection is free. Automation is what costs.</h2>
+                    <p class="section-sub" data-i18n="pr_sub">Scanning, quarantine, cleanup and every live figure stay free forever — an antivirus that locks away the protecting part and then asks for money is not one we would ship. Pro sells the two things you cannot do by hand: watching while you are away, and remembering further back.</p>
+                </div>
+
+                <div class="bk-pr-grid reveal">
+                    <article class="bk-pr-card">
+                        <header class="bk-pr-head">
+                            <h3 data-i18n="pr_free_name">Free</h3>
+                            <p class="bk-pr-price"><span class="bk-pr-amount" data-i18n="pr_free_amount">$0</span></p>
+                            <p class="bk-pr-note" data-i18n="pr_free_note">Forever, on every platform.</p>
+                        </header>
+                        <ul class="bk-pr-list">
+                            <li data-i18n="pr_free_1">Scan files on demand, with the full external signature database</li>
+                            <li data-i18n="pr_free_2">Move anything found to quarantine</li>
+                            <li data-i18n="pr_free_3">Junk cleanup, storage, disk, memory, temperature, live network figures</li>
+                            <li data-i18n="pr_free_4">Startup-item and service inspection</li>
+                            <li data-i18n="pr_free_5">7 days of scan history</li>
+                        </ul>
+                        <a href="#download" class="btn btn-ghost bk-pr-btn" data-i18n="pr_free_btn">Download</a>
+                    </article>
+
+                    <article class="bk-pr-card bk-pr-card--pro">
+                        <span class="bk-pr-tag" data-i18n="pr_pro_tag">Best value</span>
+                        <header class="bk-pr-head">
+                            <h3 data-i18n="pr_pro_name">Pro — desktop</h3>
+                            <p class="bk-pr-price">
+                                <span class="bk-pr-amount">$14.99</span>
+                                <span class="bk-pr-per" data-i18n="pr_pro_per">/ year</span>
+                            </p>
+                            <p class="bk-pr-note" data-i18n="pr_pro_note">Or $1.99 a month — the yearly plan saves 37%.</p>
+                        </header>
+                        <ul class="bk-pr-list">
+                            <li data-i18n="pr_pro_1"><strong>Everything in Free</strong>, plus:</li>
+                            <li data-i18n="pr_pro_2">Real-time guard — new files scanned the moment they land, and the startup folders watched</li>
+                            <li data-i18n="pr_pro_3">Scheduled scans that run without you opening the app</li>
+                            <li data-i18n="pr_pro_4">Automatic traffic alerts every 6 hours</li>
+                            <li data-i18n="pr_pro_5">Full scan history instead of 7 days</li>
+                            <li data-i18n="pr_pro_6">BKSafe Firewall <span class="bk-dim" data-i18n="pr_pro_6_note">(Linux only)</span></li>
+                        </ul>
+                        <a href="#download" class="btn btn-primary bk-pr-btn" data-i18n="pr_pro_btn">Get BKSafe, then upgrade in the app</a>
+                        <p class="bk-pr-fine" data-i18n="pr_pro_fine">Paid through PayPal from inside the app. Renews automatically; cancel any time on paypal.com. Priced in USD — PayPal does not support VND.</p>
+                    </article>
+
+                    <article class="bk-pr-card">
+                        <header class="bk-pr-head">
+                            <h3 data-i18n="pr_droid_name">Premium — Android</h3>
+                            <p class="bk-pr-price">
+                                <span class="bk-pr-amount">299.000₫</span>
+                                <span class="bk-pr-per" data-i18n="pr_droid_per">/ year</span>
+                            </p>
+                            <p class="bk-pr-note" data-i18n="pr_droid_note">Billed through Google Play.</p>
+                        </header>
+                        <ul class="bk-pr-list">
+                            <li data-i18n="pr_droid_1">Automatic scan of newly installed apps and downloads</li>
+                            <li data-i18n="pr_droid_2">Traffic alerts without opening the app</li>
+                            <li data-i18n="pr_droid_3">30 days of traffic history instead of 7</li>
+                        </ul>
+                        <a href="#download" class="btn btn-ghost bk-pr-btn" data-i18n="pr_droid_btn">Get it on Google Play</a>
+                    </article>
+                </div>
+
+                <p class="bk-pr-support reveal">
+                    <span data-i18n="pr_support">Trouble paying, or a question about a charge?</span>
+                    <a href="mailto:tdson278@gmail.com">tdson278@gmail.com</a>
+                </p>
+            </div>
+        </section>
+
         <section class="bk-download" id="download">
             <div class="container">
                 <div class="section-head reveal">
@@ -694,15 +767,15 @@
                             <span class="bk-verpill">1.3.0</span>
                         </header>
 
-                        <a href="/downloads/BKSafe-1.3.0.dmg" class="btn btn-primary bk-dl-btn" download>
+                        <a href="/downloads/BKSafe-1.3.2.dmg" class="btn btn-primary bk-dl-btn" download>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3.5v11M7.5 10.5 12 15l4.5-4.5"/><path d="M4.5 19.5h15"/></svg>
-                            <span data-i18n="dl_mac_btn">Download BKSafe-1.3.0.dmg (29 MB)</span>
+                            <span data-i18n="dl_mac_btn">Download BKSafe-1.3.2.dmg (33 MB)</span>
                         </a>
 
                         <dl class="bk-specs">
-                            <div><dt data-i18n="spec_file">File name</dt><dd><code>BKSafe-1.3.0.dmg</code></dd></div>
-                            <div><dt data-i18n="spec_size">Size</dt><dd>29 MB <span class="bk-dim">(30.914.668 byte)</span></dd></div>
-                            <div><dt data-i18n="spec_ver">Version</dt><dd data-i18n="spec_ver_v">1.3.0 (build 23)</dd></div>
+                            <div><dt data-i18n="spec_file">File name</dt><dd><code>BKSafe-1.3.2.dmg</code></dd></div>
+                            <div><dt data-i18n="spec_size">Size</dt><dd>33 MB <span class="bk-dim">(33.135.044 byte)</span></dd></div>
+                            <div><dt data-i18n="spec_ver">Version</dt><dd data-i18n="spec_ver_v">1.3.2 (build 25)</dd></div>
                             <div><dt data-i18n="spec_req">Requires</dt><dd data-i18n="spec_req_v">macOS 11.0 Big Sur or later</dd></div>
                             <div><dt data-i18n="spec_arch">Architecture</dt><dd data-i18n="spec_arch_v">Universal — Intel (x86_64) and Apple Silicon (arm64)</dd></div>
                             <div><dt data-i18n="spec_sign">Signed by</dt><dd>Developer ID Application: Son Tran (X8QLV458HY)</dd></div>
@@ -714,8 +787,8 @@
                                 <span data-i18n="sha_label">SHA-256</span>
                                 <button class="bk-copy" type="button" data-i18n="sha_copy">Copy</button>
                             </div>
-                            <code class="bk-sha-value">b56a9b2edf935e587dc2b86e5bf38f38b76a86e6393af25c65e185cb62fa9263</code>
-                            <p class="bk-sha-hint" data-i18n="sha_hint">Check it with <code>shasum -a 256 BKSafe-1.3.0.dmg</code>, or use the <a href="/downloads/BKSafe-1.3.0.dmg.sha256" download>.sha256 file</a> alongside it.</p>
+                            <code class="bk-sha-value">b71b5d67a6d3c8cfc37e6203a88e04e188f44f3d241c0768cdc85f2c9fff8c84</code>
+                            <p class="bk-sha-hint" data-i18n="sha_hint">Check it with <code>shasum -a 256 BKSafe-1.3.2.dmg</code>, or use the <a href="/downloads/BKSafe-1.3.2.dmg.sha256" download>.sha256 file</a> alongside it.</p>
                         </div>
                     </article>
 
@@ -822,7 +895,7 @@
                     </details>
                     <details class="bk-faq-item">
                         <summary data-i18n="faq_5_q">How do I know the download is genuine?</summary>
-                        <p data-i18n="faq_5_a">On a Mac run <code>shasum -a 256 BKSafe-1.3.0.dmg</code>; on Windows open PowerShell and run <code>Get-FileHash BKSafe-1.3.0-win-x64-portable.zip -Algorithm SHA256</code>; on Linux run <code>sha256sum BKSafe-1.3.1-linux-amd64.deb</code>. Compare the result with the SHA-256 published in the Download section — matching strings mean the file is intact.</p>
+                        <p data-i18n="faq_5_a">On a Mac run <code>shasum -a 256 BKSafe-1.3.2.dmg</code>; on Windows open PowerShell and run <code>Get-FileHash BKSafe-1.3.0-win-x64-portable.zip -Algorithm SHA256</code>; on Linux run <code>sha256sum BKSafe-1.3.1-linux-amd64.deb</code>. Compare the result with the SHA-256 published in the Download section — matching strings mean the file is intact.</p>
                     </details>
                     <details class="bk-faq-item">
                         <summary data-i18n="faq_6_q">Do the builds share an account?</summary>
@@ -841,7 +914,7 @@
             <div class="container bk-cta-inner reveal">
                 <h2 class="cta-title" data-i18n="cta_title">Start with the device in front of you.</h2>
                 <div class="cta-actions">
-                    <a href="/downloads/BKSafe-1.3.0.dmg" class="btn btn-primary" download data-i18n="btn_dl_mac">Download for macOS</a>
+                    <a href="/downloads/BKSafe-1.3.2.dmg" class="btn btn-primary" download data-i18n="btn_dl_mac">Download for macOS</a>
                     <a href="/downloads/BKSafe-1.3.0-win-x64-portable.zip" class="btn btn-primary" download data-i18n="btn_dl_win">Download for Windows</a>
                     <a href="/downloads/BKSafe-1.3.1-linux-amd64.deb" class="btn btn-primary" download data-i18n="btn_dl_linux">Download for Linux</a>
                     <a href="https://play.google.com/store/apps/details?id=com.tdson.bksafe" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="btn_dl_play">Get it on Google Play</a>
