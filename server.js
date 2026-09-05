@@ -67,6 +67,21 @@ app.get('/chilly-novels/policy', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'chilly-novels', 'policy', 'index.html'));
 });
 
+// Clean URLs for the ChefEasy pages. The App Store listing's support and
+// marketing URLs must not lead to a Google Play page, so the iOS build gets
+// its own page next to the Android one.
+app.get('/chefeasy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'chefeasy', 'index.html'));
+});
+
+app.get('/chefeasy/ios', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'chefeasy', 'ios', 'index.html'));
+});
+
+app.get('/chefeasy/policy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'chefeasy', 'policy', 'index.html'));
+});
+
 // Clean URLs for the Mini Castle pages, for the same reason.
 app.get('/mini-castle', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'mini-castle', 'index.html'));

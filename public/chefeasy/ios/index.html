@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChefEasy cho iPhone & iPad — nấu theo từng bước | AIBachKhoa</title>
+    <meta name="description" content="Ứng dụng công thức nấu ăn cho iPhone và iPad: 44 món Việt, Trung, Nhật, Hàn, chế độ nấu dẫn từng bước có hẹn giờ, tìm món bằng giọng nói, đọc được khi không có mạng. Yêu cầu iOS 15.0 trở lên.">
+    <link rel="canonical" href="https://aibachkhoa.com/chefeasy/ios">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ChefEasy cho iPhone & iPad — nấu theo từng bước | AIBachKhoa">
+    <meta property="og:description" content="Ứng dụng công thức nấu ăn cho iPhone và iPad: 44 món Việt, Trung, Nhật, Hàn, chế độ nấu dẫn từng bước có hẹn giờ, tìm món bằng giọng nói, đọc được khi không có mạng. Yêu cầu iOS 15.0 trở lên.">
+    <meta property="og:url" content="https://aibachkhoa.com/chefeasy/ios">
+    <meta property="og:image" content="https://aibachkhoa.com/assets/apps/chefeasy/icon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="/assets/apps/chefeasy/icon.jpg">
+    <link rel="apple-touch-icon" href="/assets/apps/chefeasy/icon.jpg">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/chefeasy/chefeasy.css">
+</head>
+<body class="page-product" data-title-key="ios_page_title" data-desc-key="ios_meta_desc" data-shot-dir="/assets/apps/chefeasy/ios/">
+    <a href="#main" class="skip-link" data-i18n="skip_link">Tới nội dung chính</a>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="AIBachKhoa">
+                <img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="/" class="nav-link" data-i18n="nav_home">Trang chủ</a>
+                <a href="#cook" class="nav-link" data-i18n="nav_cook">Chế độ nấu</a>
+                <a href="#voice" class="nav-link" data-i18n="nav_voice">Giọng nói</a>
+                <a href="#perm" class="nav-link" data-i18n="ios_perm_eyebrow">Quyền ứng dụng</a>
+                <a href="#pro" class="nav-link" data-i18n="nav_pro">ChefEasy Pro</a>
+                <a href="#shots" class="nav-link" data-i18n="nav_shots">Ảnh màn hình</a>
+                <a href="/chefeasy" class="nav-link" data-i18n="nav_android">Bản Android</a>
+                <a href="/chefeasy/policy" class="nav-link" data-i18n="nav_policy">Quyền riêng tư</a>
+                <span class="nav-divider" aria-hidden="true"></span>
+                <select id="lang-select" class="lang-select" data-i18n-aria="aria_lang" aria-label="Đổi ngôn ngữ"></select>
+                <button id="theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Đổi giao diện">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+            </div>
+
+            <div class="mobile-controls">
+                <select id="mobile-lang-select" class="lang-select lang-select--compact" data-display="code" data-i18n-aria="aria_lang" aria-label="Đổi ngôn ngữ"></select>
+                <button id="mobile-theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Đổi giao diện">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+                <button class="icon-btn mobile-menu-btn" data-i18n-aria="aria_menu" aria-label="Mở menu" id="mobile-btn" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <header class="ce-hero" id="overview">
+        <div class="container">
+            <div class="ce-hero-grid">
+                <div class="ce-hero-copy reveal">
+                    <div class="ce-brandline">
+                        <img src="/assets/apps/chefeasy/icon.jpg" alt="" class="ce-brandmark" width="512" height="512">
+                        <div>
+                            <p class="ce-wordmark">ChefEasy</p>
+                            <p class="ce-brandsub" data-i18n="ios_kicker">iPhone &amp; iPad · nấu ăn tại nhà</p>
+                        </div>
+                    </div>
+                    <h1 class="ce-hero-title" data-i18n="hero_title">Nấu theo từng bước, <em>không phải đọc lại từ đầu</em>.</h1>
+                    <p class="ce-hero-sub" data-i18n="hero_sub">ChefEasy dẫn từng bước một, mỗi bước một đồng hồ riêng.</p>
+                    <div class="ce-hero-actions">
+                        <a href="https://apps.apple.com/app/id6752524704" target="_blank" rel="noopener" class="btn btn-primary">
+                            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16.4 12.7c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.1.8-.6 0-1.6-.7-2.7-.7-1.4 0-2.7.8-3.4 2-1.4 2.5-.4 6.2 1 8.2.7 1 1.5 2.1 2.6 2.1 1 0 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.6 1.1 0 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.3s-2.1-.8-2.2-3.1zM14.3 6.3c.6-.7 1-1.7.9-2.6-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.5.9.1 1.8-.5 2.5-1.2z"/></svg>
+                            <span data-i18n="btn_appstore">Xem trên App Store</span>
+                        </a>
+                        <a href="#shots" class="btn btn-ghost" data-i18n="btn_shots">Xem giao diện</a>
+                    </div>
+                    <p class="ce-hero-meta" data-i18n="ios_meta">Mã bundle <code>com.tdson.cooky</code> · iOS 15.0 trở lên.</p>
+                    <p class="ce-switch">
+                        <span data-i18n="switch_label">Nền tảng:</span>
+                        <strong data-i18n="switch_ios">iPhone &amp; iPad</strong>
+                        <a href="/chefeasy" data-i18n="switch_android">Android</a>
+                    </p>
+                </div>
+
+                <div class="ce-hero-media reveal">
+                    <div class="ce-hero-art" aria-hidden="true"></div>
+                    <div class="ce-phone">
+                        <img src="/assets/apps/chefeasy/ios/shot-01.png" alt="Trang chủ ChefEasy" width="620" height="1342">
+                    </div>
+                </div>
+            </div>
+
+            <div class="ce-stats reveal">
+                <div class="ce-stat"><span class="ce-stat-n">44</span><span class="ce-stat-l" data-i18n="stat_recipes">Món ăn, đọc được khi không có mạng</span></div>
+                <div class="ce-stat"><span class="ce-stat-n">5</span><span class="ce-stat-l" data-i18n="stat_langs">Ngôn ngữ giao diện và công thức</span></div>
+                <div class="ce-stat"><span class="ce-stat-n">4</span><span class="ce-stat-l" data-i18n="stat_cuisine">Nền ẩm thực: Việt, Trung, Nhật, Hàn</span></div>
+                <div class="ce-stat"><span class="ce-stat-n">0</span><span class="ce-stat-l" data-i18n="stat_offline">Lần cần mạng để mở một công thức</span></div>
+                <div class="ce-stat"><span class="ce-stat-n">0</span><span class="ce-stat-l" data-i18n="stat_account">Tài khoản phải tạo trước khi nấu</span></div>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <section class="ce-section ce-section--tint" id="cook">
+            <div class="container">
+                <div class="ce-head reveal">
+                    <p class="ce-eyebrow" data-i18n="cook_eyebrow">Chế độ nấu</p>
+                    <h2 class="ce-title" data-i18n="cook_title">Một bước một màn hình, <em>và một cái đồng hồ</em>.</h2>
+                    <p class="ce-sub" data-i18n="cook_sub">Công thức in trên giấy bắt bạn tự tìm lại dòng đang đọc dở. Chế độ nấu của ChefEasy làm ngược lại.</p>
+                </div>
+
+                <div class="ce-grid reveal">
+                    <div class="ce-card">
+                        <span class="ce-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h10M4 12h10M4 18h6"/><circle cx="19" cy="6" r="2"/></svg></span>
+                        <h3 data-i18n="c_step_t">Đúng một việc trên màn hình</h3>
+                        <p data-i18n="c_step_d">Bước đang thực hiện chiếm trọn khung nhìn, các bước còn lại thu xuống thành danh sách tiến độ bên dưới.</p>
+                    </div>
+                    <div class="ce-card">
+                        <span class="ce-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.6 1.6M9 2.5h6"/></svg></span>
+                        <h3 data-i18n="c_timer_t">Đồng hồ gắn vào từng việc, không phải cả món</h3>
+                        <p data-i18n="c_timer_d">Mỗi việc mang đồng hồ riêng, chạy tự động khi tới lượt, và có nút xong sớm khi bếp nhà bạn nhanh hơn công thức.</p>
+                    </div>
+                    <div class="ce-card">
+                        <span class="ce-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2.5" width="12" height="19" rx="2.4"/><path d="M10.5 5.5h3"/><path d="M12 12.5v3"/></svg></span>
+                        <h3 data-i18n="c_screen_t">Màn hình không tắt giữa chừng</h3>
+                        <p data-i18n="c_screen_d">Khi đang ở chế độ nấu, app giữ màn hình sáng.</p>
+                    </div>
+                    <div class="ce-card">
+                        <span class="ce-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5h9a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"/><path d="m3.5 6.2 2.3 2.3L10.5 3"/><path d="M9 11h7M9 15h7"/></svg></span>
+                        <h3 data-i18n="c_check_t">Nguyên liệu tick được</h3>
+                        <p data-i18n="c_check_d">Danh sách nguyên liệu có ô đánh dấu và bộ đếm ở góc.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ce-section" id="voice">
+            <div class="container">
+                <div class="ce-split">
+                    <div class="reveal">
+                        <p class="ce-eyebrow" data-i18n="voice_eyebrow">Giọng nói</p>
+                        <h2 class="ce-title" data-i18n="voice_title">Tay bận thì <em>nói</em>.</h2>
+                        <p class="ce-sub" style="margin-bottom: 1.8rem;" data-i18n="voice_sub">Nút micro nổi ở góc màn hình có mặt ở cả trang chủ, trang chi tiết lẫn trong lúc nấu.</p>
+                        <ul class="ce-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="v_1">Tìm món bằng lời.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="v_2">Điều khiển lúc đang nấu.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="v_3">Chỉ bật khi bạn bấm.</span></li>
+                        </ul>
+                        <div class="ce-note" style="margin-top: 1.8rem;">
+                            <p data-i18n="v_note">Việc chuyển giọng nói thành chữ do dịch vụ nhận dạng của hệ điều hành đảm nhiệm.</p>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <div class="ce-phone">
+                            <img src="/assets/apps/chefeasy/ios/shot-05.png" alt="Chế độ nấu từng bước của ChefEasy" width="620" height="1342" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ce-section ce-section--tint" id="perm">
+            <div class="container">
+                <div class="ce-head reveal">
+                    <p class="ce-eyebrow" data-i18n="ios_perm_eyebrow">Quyền ứng dụng xin</p>
+                    <h2 class="ce-title" data-i18n="ios_perm_title">Đúng hai quyền, <em>và chỉ khi bạn bấm</em>.</h2>
+                    <p class="ce-sub" data-i18n="ios_perm_sub">iOS hỏi bạn trước khi cấp.</p>
+                </div>
+                <div class="reveal" style="max-width: 56rem;">
+                    <ul class="ce-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ios_perm_mic">Micro.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ios_perm_speech">Nhận dạng giọng nói.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="ios_perm_none">Ngoài hai quyền trên, không xin gì thêm.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="ce-section ce-section--tint" id="langs">
+            <div class="container">
+                <div class="ce-head reveal">
+                    <p class="ce-eyebrow" data-i18n="lang_eyebrow">Ngôn ngữ</p>
+                    <h2 class="ce-title" data-i18n="lang_title">Năm thứ tiếng, <em>dịch cả công thức</em>.</h2>
+                    <p class="ce-sub" data-i18n="lang_sub">Không chỉ nút bấm và nhãn menu.</p>
+                </div>
+                <div class="ce-stats reveal">
+                    <div class="ce-stat"><span class="ce-stat-n" style="font-size:1.4rem" data-i18n="lang_vi">Tiếng Việt</span></div>
+                    <div class="ce-stat"><span class="ce-stat-n" style="font-size:1.4rem" data-i18n="lang_en">English</span></div>
+                    <div class="ce-stat"><span class="ce-stat-n" style="font-size:1.4rem" data-i18n="lang_ja">日本語</span></div>
+                    <div class="ce-stat"><span class="ce-stat-n" style="font-size:1.4rem" data-i18n="lang_ko">한국어</span></div>
+                    <div class="ce-stat"><span class="ce-stat-n" style="font-size:1.4rem" data-i18n="lang_zh">中文</span></div>
+                </div>
+                <div class="ce-note reveal" style="margin-top: 1.4rem; max-width: 52rem;">
+                    <p data-i18n="lang_note">Số liệu giữ nguyên khi đổi ngôn ngữ.</p>
+                </div>
+            </div>
+        </section>
+        <section class="ce-section" id="offline">
+            <div class="container">
+                <div class="ce-split">
+                    <div class="reveal">
+                        <p class="ce-eyebrow" data-i18n="offline_eyebrow">Không cần mạng</p>
+                        <h2 class="ce-title" data-i18n="offline_title">Công thức nằm sẵn <em>trong máy</em>.</h2>
+                        <p class="ce-sub" style="margin-bottom: 1.8rem;" data-i18n="offline_sub">Toàn bộ 44 công thức và ảnh món đi kèm ứng dụng.</p>
+                        <ul class="ce-list">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="o_1">Đọc công thức không cần mạng.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="o_2">Không có tài khoản.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="o_3">Món yêu thích lưu trong máy.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="o_4">Mạng chỉ dùng cho hai việc.</span></li>
+                        </ul>
+                        <p style="margin-top: 1.8rem;">
+                            <a href="/chefeasy/policy" class="btn btn-primary" data-i18n="btn_policy">Đọc chính sách quyền riêng tư</a>
+                        </p>
+                    </div>
+                    <div class="reveal">
+                        <div class="ce-faq">
+                            <details class="ce-faq-item" open>
+                                <summary data-i18n="ios_faq1_q">Câu hỏi</summary>
+                                <p data-i18n="ios_faq1_a">Trả lời</p>
+                            </details>
+                            <details class="ce-faq-item">
+                                <summary data-i18n="faq2_q">Câu hỏi</summary>
+                                <p data-i18n="faq2_a">Trả lời</p>
+                            </details>
+                            <details class="ce-faq-item">
+                                <summary data-i18n="faq3_q">Câu hỏi</summary>
+                                <p data-i18n="ios_faq3_a">Trả lời</p>
+                            </details>
+                            <details class="ce-faq-item">
+                                <summary data-i18n="faq4_q">Câu hỏi</summary>
+                                <p data-i18n="ios_faq4_a">Trả lời</p>
+                            </details>
+                            <details class="ce-faq-item">
+                                <summary data-i18n="faq5_q">Câu hỏi</summary>
+                                <p data-i18n="faq5_a">Trả lời</p>
+                            </details>
+                            <details class="ce-faq-item">
+                                <summary data-i18n="faq6_q">Câu hỏi</summary>
+                                <p data-i18n="faq6_a">Trả lời</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ce-section ce-section--tint" id="pro">
+            <div class="container">
+                <div class="ce-head reveal">
+                    <p class="ce-eyebrow" data-i18n="pro_eyebrow">ChefEasy Pro</p>
+                    <h2 class="ce-title" data-i18n="pro_title">Tuỳ chọn, và <em>nói rõ từng dòng</em>.</h2>
+                    <p class="ce-sub" data-i18n="pro_sub">Bản miễn phí dùng được đầy đủ toàn bộ món Việt.</p>
+                </div>
+
+                <div class="ce-tablewrap reveal">
+                    <table class="ce-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="th_q">Câu hỏi</th>
+                                <th data-i18n="th_a">Trả lời</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row" data-i18n="pro_q1">Pro mở thêm gì</th><td data-i18n="pro_a1">Bỏ quảng cáo, mở khoá món Trung, Nhật, Hàn.</td></tr>
+                            <tr><th scope="row" data-i18n="pro_q2">Không mua thì mất gì</th><td data-i18n="pro_a2">Không mất gì trong phần món Việt.</td></tr>
+                            <tr><th scope="row" data-i18n="pro_q3">Tính tiền thế nào</th><td data-i18n="ios_pro_a3">Gói tháng hoặc gói năm, tự gia hạn.</td></tr>
+                            <tr><th scope="row" data-i18n="pro_q4">Huỷ ở đâu</th><td data-i18n="ios_pro_a4">Huỷ bất cứ lúc nào.</td></tr>
+                            <tr><th scope="row" data-i18n="pro_q5">Huỷ rồi thì sao</th><td data-i18n="ios_pro_a5">Quảng cáo quay lại, món Việt vẫn nguyên.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="ce-section" id="shots">
+            <div class="container">
+                <div class="ce-head reveal">
+                    <p class="ce-eyebrow" data-i18n="gal_eyebrow">Ảnh màn hình</p>
+                    <h2 class="ce-title" data-i18n="gal_title">Chụp thẳng từ máy, <em>không dựng</em>.</h2>
+                    <p class="ce-sub" data-i18n="gal_sub">Mọi khung hình dưới đây chụp trực tiếp trên thiết bị, đúng như app vẽ ra.</p>
+                </div>
+
+                <div class="ce-gal reveal">
+                    <div class="ce-gal-stage" id="gal-stage">
+                        <img id="gal-img" src="" alt="Ảnh màn hình ChefEasy" width="620" height="1342" loading="lazy">
+                    </div>
+                    <div class="ce-gal-side">
+                        <div>
+                            <p class="ce-gal-cap-t" id="gal-title"></p>
+                            <p class="ce-gal-cap-d" id="gal-cap"></p>
+                        </div>
+                        <div class="ce-gal-tabs" role="tablist" data-i18n-aria="gal_eyebrow" aria-label="Ảnh màn hình">
+                            <button type="button" class="ce-gal-tab is-active" data-shot="shot-01" data-key="s1" role="tab" aria-selected="true" data-i18n="s1_title">Trang chủ</button>
+                            <button type="button" class="ce-gal-tab" data-shot="shot-02" data-key="s2" role="tab" aria-selected="false" data-i18n="s2_title">Trang chi tiết món</button>
+                            <button type="button" class="ce-gal-tab" data-shot="shot-03" data-key="s3" role="tab" aria-selected="false" data-i18n="s3_title">Nguyên liệu</button>
+                            <button type="button" class="ce-gal-tab" data-shot="shot-04" data-key="s4" role="tab" aria-selected="false" data-i18n="s4_title">Công thức đầy đủ</button>
+                            <button type="button" class="ce-gal-tab" data-shot="shot-05" data-key="s5" role="tab" aria-selected="false" data-i18n="s5_title">Đang nấu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ce-cta">
+            <div class="container ce-cta-inner reveal">
+                <h2 class="cta-title" data-i18n="cta_title">Mở app, chọn món, và để nó dẫn bạn từng bước.</h2>
+                <div class="ce-cta-actions">
+                    <a href="https://apps.apple.com/app/id6752524704" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="btn_appstore">Xem trên App Store</a>
+                    <a href="/chefeasy/policy" class="btn btn-ghost" data-i18n="nav_policy">Quyền riêng tư</a>
+                    <a href="/#contact" class="btn btn-ghost" data-i18n="btn_contact">Liên hệ</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo"><img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span></a>
+                <p data-i18n="footer_desc">Xây dựng công cụ AI thiết thực cho lập trình viên và doanh nghiệp.</p>
+                <div class="footer-contact">
+                    <p class="footer-contact-name">Trần Đức Sơn</p>
+                    <a href="mailto:tdson278@gmail.com">tdson278@gmail.com</a>
+                    <a href="tel:+84343185566">+84 343 185 566</a>
+                    <p class="footer-contact-apps">
+                        <a href="https://zalo.me/84343185566" target="_blank" rel="noopener">Zalo</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://wa.me/84343185566" target="_blank" rel="noopener">WhatsApp</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://www.linkedin.com/in/son-tran-458b24158/" target="_blank" rel="noopener">LinkedIn</a>
+                        <span aria-hidden="true">·</span>
+                        <a href="https://www.upwork.com/freelancers/~0113b97260ff6eb129" target="_blank" rel="noopener">Upwork</a>
+                    </p>
+                </div>
+            </div>
+            <nav class="footer-col" data-i18n-aria="footer_app" aria-label="ChefEasy">
+                <h4 data-i18n="footer_app">Ứng dụng</h4>
+                <a href="#overview" data-i18n="nav_overview">Tổng quan</a>
+                <a href="#cook" data-i18n="nav_cook">Chế độ nấu</a>
+                <a href="#voice" data-i18n="nav_voice">Giọng nói</a>
+                <a href="#perm" data-i18n="ios_perm_eyebrow">Quyền ứng dụng</a>
+                <a href="#pro" data-i18n="nav_pro">ChefEasy Pro</a>
+                <a href="#shots" data-i18n="nav_shots">Ảnh màn hình</a>
+                <a href="/chefeasy" data-i18n="nav_android">Bản Android</a>
+                <a href="/chefeasy/policy" data-i18n="nav_policy">Quyền riêng tư</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_prod" aria-label="Sản phẩm khác">
+                <h4 data-i18n="footer_prod">Sản phẩm khác</h4>
+                <a href="/novaryn">Novaryn</a>
+                <a href="/dungeon-blade">Dungeon of the Fallen Blade</a>
+                <a href="/castle-of-ancients">Castle of Ancients</a>
+                <a href="/bksafe">BKSafe</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_comp" aria-label="Công ty">
+                <h4 data-i18n="footer_comp">Công ty</h4>
+                <a href="/#about" data-i18n="footer_about">Giới thiệu</a>
+                <a href="/#services" data-i18n="footer_services">Dịch vụ</a>
+                <a href="/#contact" data-i18n="footer_contact">Liên hệ</a>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AIBachKhoa</p>
+            <p data-i18n="footer_rights">Bảo lưu mọi quyền.</p>
+        </div>
+    </footer>
+
+    <script src="/chefeasy/chefeasy.js"></script>
+</body>
+</html>
