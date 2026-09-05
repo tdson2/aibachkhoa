@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novaryn for iPhone &amp; iPad | AIBachKhoa</title>
+    <meta name="description" content="A vertical arcade shoot-'em-up for iPhone and iPad. Drag to fly, the cannon fires itself, a boss every fifth wave. Twenty gun tiers, ten ships, no ads, no tracking, plays offline.">
+    <link rel="canonical" href="https://aibachkhoa.com/novaryn/ios">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Novaryn for iPhone &amp; iPad">
+    <meta property="og:description" content="Drag anywhere to fly. The cannon fires by itself — everything else is dodging, timing, and knowing when to push your luck. Endless waves, real bosses, no ads.">
+    <meta property="og:image" content="https://aibachkhoa.com/assets/games/novaryn/feature.png">
+    <meta property="og:url" content="https://aibachkhoa.com/novaryn/ios">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/games/novaryn/icon.png">
+    <link rel="apple-touch-icon" href="/assets/games/novaryn/icon.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/novaryn/novaryn.css">
+</head>
+<!-- This page is the App Store listing's support and marketing URL, so it
+     carries no link to any other storefront: App Review reads a competing
+     store on a linked page as metadata about a third-party platform
+     (guideline 2.3.10), which is what the Android page at /novaryn is for.
+     data-title-key / data-desc-key name the pair of strings the shared script
+     should use for <title> and the meta description. -->
+<body class="page-product" data-title-key="ios_page_title" data-desc-key="ios_meta_desc">
+    <div class="wingfield" aria-hidden="true">
+        <span class="wing wing--1"></span>
+        <span class="wing wing--2"></span>
+        <span class="wing wing--3"></span>
+        <span class="wing wing--4"></span>
+    </div>
+
+    <a href="#overview" class="skip-link" data-i18n="skip_link">Skip to content</a>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="AIBachKhoa">
+                <img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#overview" class="nav-link" data-i18n="nav_overview">Overview</a>
+                <a href="#play" class="nav-link" data-i18n="nav_loop">The run</a>
+                <a href="#purchases" class="nav-link" data-i18n="ios_iap_eyebrow">In-app purchases</a>
+                <a href="#shots" class="nav-link" data-i18n="nav_shots">Screenshots</a>
+                <a href="#support" class="nav-link" data-i18n="ios_support_eyebrow">Support</a>
+                <a href="/novaryn/policy" class="nav-link" data-i18n="nav_policy">Privacy</a>
+                <span class="nav-divider" aria-hidden="true"></span>
+                <select id="lang-select" class="lang-select" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+            </div>
+
+            <div class="mobile-controls">
+                <select id="mobile-lang-select" class="lang-select lang-select--compact" data-display="code" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="mobile-theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
+                </button>
+                <button class="icon-btn mobile-menu-btn" data-i18n-aria="aria_menu" aria-label="Open menu" id="mobile-btn" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="nv-hero" id="overview">
+        <div class="container">
+            <div class="nv-hero-grid">
+                <div class="nv-hero-copy reveal">
+                    <div class="nv-brandline">
+                        <img src="/assets/games/novaryn/icon.png" alt="" class="nv-brandmark" width="512" height="512">
+                        <div>
+                            <p class="nv-wordmark">NOVARYN</p>
+                            <p class="nv-brandsub" data-i18n="ios_kicker">iPhone &amp; iPad · arcade space shooter</p>
+                        </div>
+                    </div>
+                    <h1 class="nv-hero-title" data-i18n="ios_title">One thumb. <em>Endless waves</em>.</h1>
+                    <p class="nv-hero-sub" data-i18n="ios_sub">A vertical arcade shoot-'em-up built for short sessions. Drag anywhere on the glass to fly; the cannon fires by itself. Everything else is dodging, timing, and knowing when to push your luck.</p>
+                    <div class="nv-hero-actions">
+                        <!-- Once the app is approved, swap this span for:
+                             <a href="https://apps.apple.com/app/idAPPLE_APP_ID" target="_blank" rel="noopener" class="btn btn-primary"> … </a>
+                             and change ios_cta_store to "Download on the App Store". -->
+                        <span class="btn btn-primary" style="opacity:.78;cursor:default" aria-disabled="true">
+                            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16.4 12.7c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.1.8-.6 0-1.6-.7-2.7-.7-1.4 0-2.7.8-3.4 2-1.4 2.5-.4 6.2 1 8.2.7 1 1.5 2.1 2.6 2.1 1 0 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.6 1.1 0 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.3s-2.1-.8-2.2-3.1zM14.3 6.3c.6-.7 1-1.7.9-2.6-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.5.9.1 1.8-.5 2.5-1.2z"/></svg>
+                            <span data-i18n="ios_cta_store">Coming to the App Store</span>
+                        </span>
+                        <a href="#shots" class="btn btn-ghost" data-i18n="ios_cta_shots">See how it plays</a>
+                    </div>
+                    <p class="nv-hero-meta" data-i18n="ios_meta">Bundle id <code>com.tdson.novaryn</code> · portrait · iPhone and iPad, iOS 15.0 or later · no ads, no tracking, plays offline.</p>
+                </div>
+
+                <div class="nv-hero-media reveal">
+                    <div class="nv-hero-art" aria-hidden="true"></div>
+                    <div class="nv-phone">
+                        <img src="/assets/games/novaryn/shot-04.png" alt="A boss holding position above a curtain of enemy fire in Novaryn" width="1080" height="2400">
+                    </div>
+                </div>
+            </div>
+
+            <div class="nv-stats reveal">
+                <div class="nv-stat"><span class="nv-stat-n">∞</span><span class="nv-stat-l" data-i18n="ios_stat_waves">Waves — there is no end screen</span></div>
+                <div class="nv-stat"><span class="nv-stat-n">5</span><span class="nv-stat-l" data-i18n="ios_stat_boss">Waves between bosses</span></div>
+                <div class="nv-stat"><span class="nv-stat-n">20</span><span class="nv-stat-l" data-i18n="ios_stat_gun">Gun tiers, each with its own round</span></div>
+                <div class="nv-stat"><span class="nv-stat-n">10</span><span class="nv-stat-l" data-i18n="ios_stat_ships">Ships to fly</span></div>
+                <div class="nv-stat"><span class="nv-stat-n">0</span><span class="nv-stat-l" data-i18n="ios_stat_ads">Ads and trackers, anywhere</span></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= HOW IT PLAYS ================= -->
+        <section class="nv-section nv-section--tint" id="play">
+            <div class="container">
+                <div class="nv-head reveal">
+                    <p class="nv-eyebrow" data-i18n="ios_feat_eyebrow">On iPhone and iPad</p>
+                    <h2 class="nv-title" data-i18n="ios_feat_title">Drag to fly. <em>The rest is nerve</em>.</h2>
+                    <p class="nv-sub" data-i18n="ios_feat_sub">There is no fire button, no joystick and no menu between you and the next attempt. A thumb anywhere on the screen and the ship follows it, which leaves exactly one decision in the game: where to be.</p>
+                </div>
+
+                <div class="nv-cards reveal">
+                    <div class="nv-card">
+                        <span class="nv-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8.5 3.5v9.2L6.2 11a2 2 0 0 0-2.7 2.9l4 5.2a4 4 0 0 0 3.2 1.6h4.2a4 4 0 0 0 4-4V9.5a1.6 1.6 0 0 0-3.2 0"/><path d="M12 9.2V7a1.6 1.6 0 0 0-3.2 0"/><path d="M15.2 9.5V7.6a1.6 1.6 0 0 0-3.2 0"/></svg></span>
+                        <h3 data-i18n="ios_f1_t">One-handed, portrait</h3>
+                        <p data-i18n="ios_f1_d">Steer by dragging anywhere. The cannon fires on its own, so nothing competes for the hand holding the phone.</p>
+                    </div>
+                    <div class="nv-card">
+                        <span class="nv-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21V3"/><path d="m8 7 4-4 4 4"/><path d="M6 13h1.5M16.5 13H18M6 17h1.5M16.5 17H18"/></svg></span>
+                        <h3 data-i18n="ios_f2_t">Twenty gun tiers</h3>
+                        <p data-i18n="ios_f2_d">Every power-up moves you up a rung, and each rung is a different weapon: scatter, piercing lances, plasma that splashes, homing swarms, and a nova cannon at the top.</p>
+                    </div>
+                    <div class="nv-card">
+                        <span class="nv-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h4l2 12h4l2-12h4"/><circle cx="12" cy="12" r="1.4"/></svg></span>
+                        <h3 data-i18n="ios_f3_t">A boss every fifth wave</h3>
+                        <p data-i18n="ios_f3_d">Four waves of formations, then a health bar slides in. A boss throws a pattern you read rather than out-shoot.</p>
+                    </div>
+                    <div class="nv-card">
+                        <span class="nv-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5l3 1.8"/></svg></span>
+                        <h3 data-i18n="ios_f4_t">Offline, and quiet</h3>
+                        <p data-i18n="ios_f4_d">No account, no sign-in, no server, no advertising, no analytics. Scores stay on the device. The game never asks for a permission.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= IN-APP PURCHASES =================
+             App Review guideline 3.1.2 wants the subscription's name, length,
+             price and both legal links stated wherever it is presented. They
+             are in the app's shop screen too; this repeats them where a
+             reviewer, or a customer, will actually look for them. -->
+        <section class="nv-section" id="purchases">
+            <div class="container">
+                <div class="nv-head reveal">
+                    <p class="nv-eyebrow" data-i18n="ios_iap_eyebrow">In-app purchases</p>
+                    <h2 class="nv-title" data-i18n="ios_iap_title">Ships are paint. <em>Nothing else is for sale</em>.</h2>
+                    <p class="nv-sub" data-i18n="ios_iap_sub">Every purchase in Novaryn is cosmetic. No weapon, wave, difficulty or level is behind a payment, and the game is complete without spending anything. Purchases are handled by the App Store; we never see your payment details.</p>
+                </div>
+
+                <div class="nv-cards reveal" style="grid-template-columns: 1fr;">
+                    <div class="nv-card">
+                        <h3 data-i18n="ios_iap_skins_t">Ship skins — one-time purchases</h3>
+                        <p data-i18n="ios_iap_skins_d">Nine ships sold outright, from US$1.99 to US$5.99. Bought once, yours permanently, and restored on a new device with <strong>Restore Purchases</strong> in the shop.</p>
+                    </div>
+
+                    <div class="nv-card">
+                        <h3 data-i18n="ios_pro_t">Novaryn Pro — auto-renewable subscription</h3>
+                        <dl class="nv-terms">
+                            <dt data-i18n="ios_pro_len">Length of subscription</dt>
+                            <dd data-i18n="ios_pro_len_v">1 month, renews automatically</dd>
+                            <dt data-i18n="ios_pro_price">Price</dt>
+                            <dd data-i18n="ios_pro_price_v">US$4.99 per month, billed in your local currency</dd>
+                            <dt data-i18n="ios_pro_what">What it unlocks</dt>
+                            <dd data-i18n="ios_pro_what_v">Every ship skin in the shop while the subscription is active</dd>
+                        </dl>
+                        <p data-i18n="ios_pro_terms">Payment is charged to your Apple Account at confirmation of purchase. The subscription renews automatically unless auto-renew is turned off at least 24 hours before the end of the current period, and your account is charged for renewal within 24 hours before that period ends. Manage or cancel it in <strong>Settings → your name → Subscriptions</strong>. Ships unlocked by an active subscription lock again when it ends; ships bought outright stay yours.</p>
+                        <p class="nv-legal-links">
+                            <a href="/novaryn/policy" data-i18n="ios_legal_privacy">Privacy Policy</a>
+                            <span aria-hidden="true">·</span>
+                            <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener" data-i18n="ios_legal_terms">Terms of Use (EULA)</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SCREENSHOTS ================= -->
+        <section class="nv-section nv-section--tint" id="shots">
+            <div class="container">
+                <div class="nv-head reveal">
+                    <p class="nv-eyebrow" data-i18n="ios_shots_eyebrow">Screenshots</p>
+                    <h2 class="nv-title" data-i18n="ios_shots_title">What a run looks like</h2>
+                </div>
+                <div class="nv-shotgrid reveal">
+                    <img src="/assets/games/novaryn/shot-01.png" alt="An early wave of enemy formations in Novaryn" width="1080" height="2400" loading="lazy">
+                    <img src="/assets/games/novaryn/shot-02.png" alt="The ship firing through a dense formation" width="1080" height="2400" loading="lazy">
+                    <img src="/assets/games/novaryn/shot-03.png" alt="A power-up dropping mid-fight" width="1080" height="2400" loading="lazy">
+                    <img src="/assets/games/novaryn/shot-04.png" alt="A boss holding position with its health bar across the top" width="1080" height="2400" loading="lazy">
+                    <img src="/assets/games/novaryn/shot-05.png" alt="The shop, with ship skins and the Novaryn Pro subscription" width="1080" height="2400" loading="lazy">
+                    <img src="/assets/games/novaryn/shot-06.png" alt="The local high-score table" width="1080" height="2400" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SUPPORT ================= -->
+        <section class="nv-section" id="support">
+            <div class="container">
+                <div class="nv-head reveal">
+                    <p class="nv-eyebrow" data-i18n="ios_support_eyebrow">Support</p>
+                    <h2 class="nv-title" data-i18n="ios_support_title">A person answers this address</h2>
+                    <p class="nv-sub" data-i18n="ios_support_sub">Questions, a bug, a purchase that did not arrive — write to us. We reply within two working days, in English or Vietnamese.</p>
+                </div>
+                <div class="nv-cta-actions reveal" style="justify-content:center">
+                    <a href="mailto:tdson278@gmail.com" class="btn btn-primary">tdson278@gmail.com</a>
+                    <a href="/novaryn/policy" class="btn btn-ghost" data-i18n="nav_policy">Privacy policy</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="nv-cta">
+            <div class="container">
+                <h2 class="cta-title" data-i18n="ios_cta_title">There is no end screen. Only how far you got.</h2>
+                <div class="nv-cta-actions">
+                    <a href="#purchases" class="btn btn-ghost" data-i18n="ios_iap_eyebrow">In-app purchases</a>
+                    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="ios_legal_terms">Terms of Use (EULA)</a>
+                    <a href="/#contact" class="btn btn-ghost" data-i18n="btn_contact">Contact us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo"><img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span></a>
+                <p data-i18n="footer_desc">Building practical AI tools for developers and businesses.</p>
+                <div class="footer-contact">
+                    <p class="footer-contact-name">Trần Đức Sơn</p>
+                    <a href="mailto:tdson278@gmail.com">tdson278@gmail.com</a>
+                    <a href="tel:+84343185566">+84 343 185 566</a>
+                </div>
+            </div>
+            <nav class="footer-col" data-i18n-aria="footer_game" aria-label="Novaryn">
+                <h4 data-i18n="footer_game">The game</h4>
+                <a href="#overview" data-i18n="nav_overview">Overview</a>
+                <a href="#play" data-i18n="nav_loop">The run</a>
+                <a href="#purchases" data-i18n="ios_iap_eyebrow">In-app purchases</a>
+                <a href="#shots" data-i18n="nav_shots">Screenshots</a>
+                <a href="#support" data-i18n="ios_support_eyebrow">Support</a>
+            </nav>
+            <nav class="footer-col" data-i18n-aria="footer_comp" aria-label="Legal">
+                <h4 data-i18n="footer_comp">Legal</h4>
+                <a href="/novaryn/policy" data-i18n="ios_legal_privacy">Privacy Policy</a>
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener" data-i18n="ios_legal_terms">Terms of Use (EULA)</a>
+                <a href="/#about" data-i18n="footer_about">About</a>
+                <a href="/#contact" data-i18n="footer_contact">Contact</a>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 AIBachKhoa</p>
+            <p data-i18n="footer_rights">All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/novaryn/novaryn.js"></script>
+</body>
+</html>

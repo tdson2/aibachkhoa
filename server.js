@@ -43,6 +43,12 @@ app.get('/novaryn/policy', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'novaryn', 'policy', 'index.html'));
 });
 
+// The iOS build gets its own page: an App Store listing's support and
+// marketing URLs must not lead to another storefront.
+app.get('/novaryn/ios', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'novaryn', 'ios', 'index.html'));
+});
+
 // Clean URLs for the Castle of Ancients pages, for the same reason.
 app.get('/castle-of-ancients', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'castle-of-ancients', 'index.html'));

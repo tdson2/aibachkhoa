@@ -118,7 +118,7 @@ const i18n = {
         pol_changes_h: "Changes to this policy",
         pol_changes_p: "If the game ever gains a feature that touches the network, this page will be updated before that version ships, and the date at the top will change with it.",
         pol_contact_h: "Contact",
-        pol_contact_p: "Questions about this policy: <a href=\"mailto:banaibkav@gmail.com\">banaibkav@gmail.com</a>.",
+        pol_contact_p: "Questions about this policy: <a href=\"mailto:tdson278@gmail.com\">tdson278@gmail.com</a>.",
         pol_credit_p: "Artwork from the Tiny Swords pack by Pixel Frog. Mini Castle is made by AIBachKhoa.",
     },
 
@@ -230,7 +230,7 @@ const i18n = {
         pol_changes_h: "Thay đổi chính sách",
         pol_changes_p: "Nếu sau này game có thêm tính năng nào đụng tới mạng, trang này sẽ được cập nhật TRƯỚC khi phiên bản đó phát hành, và ngày ở đầu trang sẽ đổi theo.",
         pol_contact_h: "Liên hệ",
-        pol_contact_p: "Thắc mắc về chính sách này: <a href=\"mailto:banaibkav@gmail.com\">banaibkav@gmail.com</a>.",
+        pol_contact_p: "Thắc mắc về chính sách này: <a href=\"mailto:tdson278@gmail.com\">tdson278@gmail.com</a>.",
         pol_credit_p: "Đồ hoạ lấy từ bộ Tiny Swords của Pixel Frog. Mini Castle do AIBachKhoa thực hiện.",
     }
 };
