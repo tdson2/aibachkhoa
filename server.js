@@ -49,6 +49,21 @@ app.get('/novaryn/ios', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'novaryn', 'ios', 'index.html'));
 });
 
+// Clean URLs for the GenVideo pages, for the same reason.
+app.get('/genvideo', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'genvideo', 'index.html'));
+});
+
+app.get('/genvideo/policy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'genvideo', 'policy', 'index.html'));
+});
+
+// The iOS build gets its own page: an App Store listing's support and
+// marketing URLs must not lead to another storefront.
+app.get('/genvideo/ios', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'genvideo', 'ios', 'index.html'));
+});
+
 // Clean URLs for the Castle of Ancients pages, for the same reason.
 app.get('/castle-of-ancients', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'castle-of-ancients', 'index.html'));

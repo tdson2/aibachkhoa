@@ -1,0 +1,345 @@
+/* =========================================================
+   GenVideo: Master Tool — product page.
+   Sits on top of /style.css: only what this page adds. The palette
+   comes from the app itself (GlassColors in glass_theme.dart), so the
+   page and the product look like one thing.
+   ========================================================= */
+
+:root {
+    --gv-blue: #0a84ff;
+    --gv-violet: #9a64ff;
+    --gv-cyan: #32d0de;
+    --gv-ink: rgba(15, 17, 21, .06);
+}
+
+[data-theme="dark"] {
+    --gv-ink: rgba(255, 255, 255, .07);
+}
+
+/* ---------- hero ---------- */
+.gv-hero {
+    padding: clamp(5rem, 12vw, 9rem) 0 clamp(3rem, 7vw, 5rem);
+    position: relative;
+    overflow: hidden;
+}
+
+.gv-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .gv-hero-grid { grid-template-columns: 1fr; }
+}
+
+.gv-mark {
+    width: 74px;
+    height: 74px;
+    border-radius: 22px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--gv-blue), var(--gv-violet));
+    box-shadow: 0 14px 30px rgba(10, 132, 255, .28);
+    margin-bottom: 1.4rem;
+}
+
+.gv-mark svg { width: 38px; height: 38px; }
+
+.gv-hero h1 {
+    font-size: clamp(2.1rem, 5.2vw, 3.5rem);
+    line-height: 1.08;
+    letter-spacing: -.03em;
+    margin: 0 0 1rem;
+}
+
+.gv-hero-sub {
+    font-size: clamp(1rem, 1.5vw, 1.16rem);
+    line-height: 1.65;
+    color: var(--text-muted);
+    max-width: 60ch;
+    margin-bottom: 1.7rem;
+}
+
+.gv-hero-cta { display: flex; flex-wrap: wrap; gap: .7rem; margin-bottom: 1.5rem; }
+
+.gv-hero-note {
+    font-size: .86rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Ảnh chụp thật, không phải mock — nên khung phải nhường chỗ cho ảnh. */
+.gv-shot {
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    box-shadow: 0 26px 60px rgba(10, 20, 60, .16);
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+
+.gv-shot img { display: block; width: 100%; height: auto; }
+
+.gv-shot--phone { max-width: 300px; margin-inline: auto; border-radius: 22px; }
+
+/* ---------- badges ---------- */
+.gv-badges { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: 1.2rem 0 0; }
+
+.gv-badge {
+    font-size: .78rem;
+    font-weight: 600;
+    padding: .34rem .72rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-muted);
+}
+
+.gv-badge--live {
+    border-color: rgba(52, 199, 89, .4);
+    background: rgba(52, 199, 89, .1);
+    color: #1f8f45;
+}
+
+[data-theme="dark"] .gv-badge--live { color: #63d98a; }
+
+.gv-badge--soon {
+    border-color: rgba(255, 159, 10, .42);
+    background: rgba(255, 159, 10, .12);
+    color: #a8620a;
+}
+
+[data-theme="dark"] .gv-badge--soon { color: #ffc06b; }
+
+/* ---------- generic section ---------- */
+.gv-section { padding: clamp(3.4rem, 8vw, 6rem) 0; }
+.gv-section--tint { background: var(--surface-alt); }
+
+.gv-head { max-width: 62ch; margin-bottom: clamp(2rem, 4vw, 3rem); }
+
+/* ---------- pipeline ---------- */
+.gv-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1rem;
+    counter-reset: gvstep;
+}
+
+.gv-step {
+    position: relative;
+    padding: 1.5rem 1.3rem 1.3rem;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.gv-step::before {
+    counter-increment: gvstep;
+    content: counter(gvstep, decimal-leading-zero);
+    position: absolute;
+    top: .9rem;
+    right: 1rem;
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--gv-blue);
+    opacity: .55;
+}
+
+.gv-step h3 { font-size: 1rem; margin: 0 0 .45rem; }
+.gv-step p { font-size: .9rem; line-height: 1.6; color: var(--text-muted); margin: 0; }
+
+/* ---------- feature grid ---------- */
+.gv-feats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.gv-feat {
+    padding: 1.5rem 1.35rem;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.gv-feat svg { width: 26px; height: 26px; color: var(--gv-blue); margin-bottom: .8rem; }
+.gv-feat h3 { font-size: 1rem; margin: 0 0 .45rem; }
+.gv-feat p { font-size: .9rem; line-height: 1.62; color: var(--text-muted); margin: 0; }
+
+/* ---------- platform split ---------- */
+.gv-plat {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(1.6rem, 4vw, 3.2rem);
+    align-items: center;
+}
+
+.gv-plat + .gv-plat { margin-top: clamp(3rem, 6vw, 4.5rem); }
+.gv-plat--flip .gv-plat-media { order: -1; }
+
+@media (max-width: 860px) {
+    .gv-plat { grid-template-columns: 1fr; }
+    .gv-plat--flip .gv-plat-media { order: 0; }
+}
+
+.gv-plat h3 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); margin: .4rem 0 .7rem; letter-spacing: -.02em; }
+.gv-plat p { color: var(--text-muted); line-height: 1.68; margin: 0 0 .9rem; }
+
+.gv-list { list-style: none; padding: 0; margin: 0; }
+
+.gv-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: .55rem;
+    font-size: .92rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+.gv-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .52em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gv-blue), var(--gv-cyan));
+}
+
+/* ---------- gallery ---------- */
+.gv-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.gv-gallery figure { margin: 0; }
+
+.gv-gallery figcaption {
+    font-size: .82rem;
+    color: var(--text-muted);
+    margin-top: .6rem;
+    line-height: 1.5;
+}
+
+/* ---------- pricing ---------- */
+.gv-plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.gv-plan {
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem 1.4rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.gv-plan--featured {
+    border-color: rgba(10, 132, 255, .45);
+    box-shadow: 0 18px 42px rgba(10, 132, 255, .16);
+}
+
+.gv-plan-name { font-size: .82rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); }
+.gv-plan-price { font-size: 2rem; font-weight: 700; letter-spacing: -.03em; margin: .5rem 0 .1rem; }
+.gv-plan-price span { font-size: .95rem; font-weight: 500; color: var(--text-muted); }
+.gv-plan-unit { font-size: .84rem; color: var(--gv-blue); font-weight: 600; margin-bottom: 1rem; }
+.gv-plan ul { list-style: none; padding: 0; margin: 0; }
+.gv-plan li { font-size: .88rem; line-height: 1.55; color: var(--text-muted); margin-bottom: .45rem; padding-left: 1.2rem; position: relative; }
+.gv-plan li::before { content: "✓"; position: absolute; left: 0; color: var(--gv-blue); font-weight: 700; }
+
+.gv-price-note {
+    margin-top: 1.6rem;
+    font-size: .86rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    max-width: 72ch;
+}
+
+/* ---------- table ---------- */
+.gv-tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+.gv-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    min-width: 460px;
+}
+
+.gv-table th, .gv-table td {
+    text-align: left;
+    padding: .8rem .9rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.55;
+}
+
+.gv-table th { font-weight: 600; color: var(--text); background: var(--gv-ink); }
+.gv-table td { color: var(--text-muted); }
+
+/* ---------- faq ---------- */
+.gv-faq { max-width: 74ch; }
+
+.gv-faq details {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+}
+
+.gv-faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.gv-faq summary::-webkit-details-marker { display: none; }
+.gv-faq summary::after { content: "+"; color: var(--gv-blue); font-weight: 700; }
+.gv-faq details[open] summary::after { content: "−"; }
+.gv-faq p { color: var(--text-muted); line-height: 1.68; margin: .7rem 0 0; font-size: .93rem; }
+
+/* ---------- cta ---------- */
+.gv-cta { padding: clamp(3.4rem, 8vw, 6rem) 0; text-align: center; }
+.gv-cta h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); letter-spacing: -.02em; margin: 0 0 .8rem; }
+.gv-cta p { color: var(--text-muted); max-width: 58ch; margin: 0 auto 1.6rem; line-height: 1.68; }
+.gv-cta-row { display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center; }
+
+/* ---------- policy ---------- */
+.gv-policy { padding: clamp(4.5rem, 10vw, 7rem) 0 clamp(3rem, 6vw, 5rem); }
+.gv-policy-head { max-width: 62ch; margin-bottom: 2.4rem; }
+.gv-policy-stamp { font-size: .86rem; color: var(--text-muted); margin-top: .6rem; }
+.gv-policy-body { max-width: 76ch; }
+.gv-policy-body h2 { font-size: 1.22rem; margin: 2.6rem 0 .8rem; letter-spacing: -.01em; scroll-margin-top: 92px; }
+.gv-policy-body p, .gv-policy-body li { color: var(--text-muted); line-height: 1.72; }
+.gv-policy-body p { margin: 0 0 .9rem; }
+.gv-policy-body ul { margin: 0 0 1rem; padding-left: 1.2rem; }
+.gv-policy-body li { margin-bottom: .4rem; }
+.gv-policy-body code {
+    font-size: .86em;
+    padding: .12em .4em;
+    border-radius: 5px;
+    background: var(--gv-ink);
+}
+
+.gv-toc {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 14px;
+    padding: 1.3rem 1.5rem;
+    margin: 1.8rem 0 2.4rem;
+}
+
+.gv-toc h2 { font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; margin: 0 0 .8rem; color: var(--text-muted); }
+.gv-toc ol { margin: 0; padding-left: 1.2rem; }
+.gv-toc li { margin-bottom: .38rem; line-height: 1.5; }
+.gv-toc a { color: var(--text); text-decoration: none; font-size: .92rem; }
+.gv-toc a:hover { color: var(--gv-blue); text-decoration: underline; }
