@@ -1,0 +1,197 @@
+/* =========================================================
+   JeMul — product page. Namespaced jm-*, on top of /style.css.
+   The palette leans on the emulator's own glass look.
+   ========================================================= */
+.jm-page { --jm-accent: #38bdf8; --jm-accent-2: #a78bfa; }
+
+/* ---------- hero ---------- */
+.jm-hero { padding: 140px 0 72px; position: relative; overflow: hidden; }
+.jm-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: 56px;
+    align-items: center;
+}
+.jm-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 13px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 550;
+    letter-spacing: 0.01em;
+    color: var(--jm-accent);
+    background: color-mix(in srgb, var(--jm-accent) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--jm-accent) 32%, transparent);
+}
+.jm-hero-title {
+    margin: 20px 0 16px;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+.jm-hero-title em {
+    font-style: normal;
+    background: linear-gradient(120deg, var(--jm-accent), var(--jm-accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.jm-hero-sub { font-size: 1.06rem; line-height: 1.65; color: var(--text-muted, #64748b); max-width: 56ch; }
+.jm-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 18px; }
+.jm-hero-meta { font-size: 0.82rem; color: var(--text-muted, #64748b); }
+.jm-hero-meta code {
+    padding: 2px 7px;
+    border-radius: 6px;
+    background: color-mix(in srgb, currentColor 10%, transparent);
+    font-size: 0.94em;
+}
+
+/* The hero shot sits in a browser chrome so it reads as "this runs in a tab". */
+.jm-frame {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+    background: #0b1020;
+    box-shadow: 0 30px 70px rgba(2, 6, 23, 0.28);
+}
+.jm-frame-bar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+.jm-frame-bar i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255, 255, 255, 0.18); }
+.jm-frame-url {
+    margin-left: 6px;
+    padding: 3px 10px;
+    border-radius: 7px;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.06);
+}
+.jm-frame img { display: block; width: 100%; height: auto; }
+
+/* ---------- sections ---------- */
+.jm-section { padding: 76px 0; }
+.jm-section--tint { background: color-mix(in srgb, var(--jm-accent) 4%, transparent); }
+.jm-head { max-width: 62ch; margin-bottom: 40px; }
+.jm-eyebrow {
+    font-size: 0.76rem;
+    font-weight: 650;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--jm-accent);
+}
+.jm-title {
+    margin: 10px 0 12px;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+.jm-lede { font-size: 1rem; line-height: 1.7; color: var(--text-muted, #64748b); }
+
+.jm-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; }
+.jm-card {
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+    background: color-mix(in srgb, currentColor 3%, transparent);
+}
+.jm-card-icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    color: var(--jm-accent);
+    background: color-mix(in srgb, var(--jm-accent) 13%, transparent);
+}
+.jm-card h3 { font-size: 1.02rem; margin-bottom: 7px; }
+.jm-card p { font-size: 0.9rem; line-height: 1.62; color: var(--text-muted, #64748b); }
+
+.jm-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 46px; align-items: center; }
+.jm-split--flip .jm-split-media { order: -1; }
+.jm-list { display: flex; flex-direction: column; gap: 14px; margin-top: 22px; }
+.jm-list li { display: flex; gap: 12px; font-size: 0.93rem; line-height: 1.6; }
+.jm-list li::before {
+    content: "";
+    flex: none;
+    width: 7px;
+    height: 7px;
+    margin-top: 9px;
+    border-radius: 50%;
+    background: var(--jm-accent);
+}
+.jm-shot { border-radius: 16px; overflow: hidden; border: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.jm-shot img { display: block; width: 100%; height: auto; }
+
+/* ---------- phone mockups ---------- */
+.jm-phones { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; }
+.jm-phone {
+    width: 236px;
+    padding: 9px;
+    border-radius: 30px;
+    background: linear-gradient(160deg, #1e293b, #0f172a);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 24px 60px rgba(2, 6, 23, 0.3);
+}
+.jm-phone img { display: block; width: 100%; height: auto; border-radius: 22px; }
+.jm-phone--wide { width: 420px; }
+.jm-phone--wide img { border-radius: 16px; }
+
+/* ---------- gallery ---------- */
+.jm-gal-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.jm-gal-tab {
+    padding: 8px 15px;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    color: var(--text-muted, #64748b);
+    background: color-mix(in srgb, currentColor 6%, transparent);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.jm-gal-tab:hover { color: inherit; }
+.jm-gal-tab.is-active {
+    color: #05070f;
+    background: var(--jm-accent);
+    font-weight: 600;
+}
+.jm-gal-stage { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 28px; align-items: center; }
+.jm-gal-caption h3 { font-size: 1.06rem; margin-bottom: 8px; }
+.jm-gal-caption p { font-size: 0.92rem; line-height: 1.65; color: var(--text-muted, #64748b); }
+
+/* ---------- facts ---------- */
+.jm-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+.jm-fact {
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+}
+.jm-fact dt { font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted, #64748b); }
+.jm-fact dd { margin: 6px 0 0; font-size: 1.02rem; font-weight: 600; }
+
+/* ---------- policy ---------- */
+.jm-policy { padding: 132px 0 80px; }
+.jm-policy-head { margin-bottom: 36px; }
+.jm-policy-updated { font-size: 0.82rem; color: var(--text-muted, #64748b); margin-top: 8px; }
+.jm-policy-body { max-width: 74ch; display: flex; flex-direction: column; gap: 30px; }
+.jm-policy-body h2 { font-size: 1.14rem; margin-bottom: 10px; }
+.jm-policy-body p, .jm-policy-body li { font-size: 0.94rem; line-height: 1.72; color: var(--text-muted, #64748b); }
+.jm-policy-body ul { display: flex; flex-direction: column; gap: 9px; padding-left: 20px; }
+.jm-policy-body li::marker { color: var(--jm-accent); }
+.jm-policy-body a { color: var(--jm-accent); }
+
+@media (max-width: 900px) {
+    .jm-hero { padding-top: 116px; }
+    .jm-hero-grid { grid-template-columns: 1fr; gap: 34px; }
+    .jm-gal-stage { grid-template-columns: 1fr; }
+    .jm-split--flip .jm-split-media { order: 0; }
+}

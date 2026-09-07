@@ -8,6 +8,13 @@ services:
     environment:
       NODE_ENV: production
       PORT: 3000
+      # /jemulwap is reverse-proxied onto the JemulWap service. It is published
+      # on the host at 127.0.0.1:8787, which the container reaches through the
+      # host-gateway alias below.
+      JEMULWAP_ORIGIN: ${JEMULWAP_ORIGIN:-http://host.docker.internal:8787}
+
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       # cloudflared chạy trên host -> trỏ tunnel tới http://localhost:3000
       # Chỉ bind vào localhost nên port KHÔNG lộ ra Internet, dù firewall có mở.
