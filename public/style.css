@@ -811,6 +811,7 @@ ul { list-style: none; }
 .pcard-visual--chef     { --gx: 70%; --gy: 34%; }
 .pcard-visual--novels   { --gx: 40%; --gy: 66%; }
 .pcard-visual--fortune  { --gx: 58%; --gy: 30%; }
+.pcard-visual--jemul    { --gx: 46%; --gy: 38%; }
 .pcard-visual--spacex   { --gx: 50%; --gy: 62%; }
 .pcard-visual--dungeon  { --gx: 44%; --gy: 32%; }
 .pcard-visual--novaryn  { --gx: 56%; --gy: 28%; }
