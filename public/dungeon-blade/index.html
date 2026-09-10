@@ -14,19 +14,13 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/assets/games/dungeon-blade/icon.png">
     <link rel="apple-touch-icon" href="/assets/games/dungeon-blade/icon.png">
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/dungeon-blade/dungeon-blade.css">
 </head>
 <body class="page-product">
-    <div class="wingfield" aria-hidden="true">
-        <span class="wing wing--1"></span>
-        <span class="wing wing--2"></span>
-        <span class="wing wing--3"></span>
-        <span class="wing wing--4"></span>
-    </div>
 
     <a href="#overview" class="skip-link" data-i18n="skip_link">Skip to content</a>
 
@@ -241,19 +235,19 @@
                 <div class="dg-head reveal">
                     <p class="dg-eyebrow" data-i18n="gen_eyebrow">The dungeon</p>
                     <h2 class="dg-title" data-i18n="gen_title">A floor is not a corridor — <em>it runs in four directions</em>.</h2>
-                    <p class="dg-sub" data-i18n="gen_sub">The generator lays out a grid of 28×16-tile rooms and wires them together left, right, up and down, then carves each room from an archetype of its own.</p>
+                    <p class="dg-sub" data-i18n="gen_sub">Every depth is built fresh, with rooms joined left, right, up and down — so a floor is ground to move around in, not a line to walk.</p>
                 </div>
 
                 <div class="dg-grid reveal">
                     <div class="dg-card">
                         <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h4M6.5 10v4"/></svg></span>
                         <h3 data-i18n="g_tree_t">Rooms wired in all four directions</h3>
-                        <p data-i18n="g_tree_d">A randomised spanning tree connects every room, weighted towards vertical steps so a depth stacks as much as it spreads. Neighbours on a row get a side door; rooms stacked on each other get a shaft with a drop-through walkway and staggered ledges climbing back up.</p>
+                        <p data-i18n="g_tree_d">Rooms sit side by side and stacked on top of one another, so a depth climbs as much as it spreads. Side doors join neighbours on a row; shafts with drop-through walkways and staggered ledges join the floors above and below.</p>
                     </div>
                     <div class="dg-card">
                         <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h4l2-5 4 10 2-5h4"/></svg></span>
                         <h3 data-i18n="g_braid_t">Loops and dead ends, not one route</h3>
-                        <p data-i18n="g_braid_d">A few braided edges are cut between neighbours so a floor is never a single corridor. The rate stays low and climbs slowly with depth — past about a quarter of the pairs a floor stops being a route and becomes open ground.</p>
+                        <p data-i18n="g_braid_d">Extra links open between rooms so a floor is never a single corridor. The deeper you go, the more a depth opens out into ground you can move around in rather than a route you follow.</p>
                     </div>
                     <div class="dg-card">
                         <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v2"/></svg></span>
@@ -262,18 +256,18 @@
                     </div>
                     <div class="dg-card">
                         <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 14h18"/><path d="m6 14 1.5-3L9 14l1.5-3L12 14l1.5-3L15 14l1.5-3L18 14"/><path d="M3 19h18"/></svg></span>
-                        <h3 data-i18n="g_pit_t">Pits kill, so the generator proves around them</h3>
-                        <p data-i18n="g_pit_d">Falling into spikes or fire is death on the spot, for the player and for anything chasing them. Pits are capped inside a single flat jump, and the validator marks every deadly tile and refuses to route through one.</p>
+                        <h3 data-i18n="g_pit_t">Pits kill, and every one of them can be cleared</h3>
+                        <p data-i18n="g_pit_d">Falling into spikes or fire is death on the spot, for you and for anything chasing you. No pit is ever wider than a single jump clears, and no route ever asks you to cross a deadly tile.</p>
                     </div>
                     <div class="dg-card">
                         <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6 9 17l-5-5"/></svg></span>
-                        <h3 data-i18n="g_proof_t">Every layout is proved before it is used</h3>
-                        <p data-i18n="g_proof_d">A conservative model of what the player can actually reach — flat and three-tile jumps, no double jump, drop-through platforms, falls, no deadly tiles — checks that the key is reachable with the gate shut, the portal with it open, and that no room is walled off. A layout that does not prove out is re-rolled.</p>
+                        <h3 data-i18n="g_proof_t">Every floor is guaranteed completable</h3>
+                        <p data-i18n="g_proof_d">No depth reaches you without being checked end to end: the key reachable with the gate shut, the portal reachable with it open, and no room sealed off. A layout that does not hold up is discarded and built again.</p>
                     </div>
                     <div class="dg-card">
                         <span class="dg-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h14v16l-7-4-7 4z"/><path d="M9 9h6M9 12.5h4"/></svg></span>
-                        <h3 data-i18n="g_audit_t">And every depth is audited for survivability</h3>
-                        <p data-i18n="g_audit_d">A second pass walks all hundred depths simulating a clean run and flags a floor that would drag, kill in under three hits, hold more than two enemies a room, or leave a gap wider than one flat jump. A third hands each depth to a bot that plays it through the real input actions and reports whether it can be finished.</p>
+                        <h3 data-i18n="g_audit_t">And every depth is checked for pacing</h3>
+                        <p data-i18n="g_audit_d">All hundred depths are reviewed for how a clean run plays out. A floor that would drag, one that could kill too quickly, or one that crowds a room too hard is rebuilt before it ever reaches you.</p>
                     </div>
                 </div>
             </div>
@@ -310,15 +304,15 @@
                 <div class="dg-grid reveal" style="margin-top: 1.1rem;">
                     <div class="dg-card">
                         <h3 data-i18n="l_rhythm_t">A fight you cannot wait out</h3>
-                        <p data-i18n="l_rhythm_d">A lord's moves are staggered at the start, so it does not dump its whole kit in the opening four seconds. A shared gap between any two moves keeps the kit a rhythm rather than one unbroken pin. And every cooldown shortens the longer the fight runs, so turtling on a ledge just brings the leap sooner.</p>
+                        <p data-i18n="l_rhythm_d">A lord's moves are spaced out at the start rather than thrown at you all at once, and the gaps between them tighten the longer the fight runs. Waiting it out on a ledge only brings the leap sooner.</p>
                     </div>
                     <div class="dg-card">
                         <h3 data-i18n="l_size_t">Size is derived from health</h3>
-                        <p data-i18n="l_size_d">How big a thing looks is how much punishment it will take, and that comparison holds across sprite sheets drawn at different resolutions. Twenty lords are built from seven family kits crossed with a per-boss spec: size, colour, health, reach, volley and what it roars when it is hurt.</p>
+                        <p data-i18n="l_size_d">How big a thing looks is how much punishment it will take, and that reading holds for every enemy in the game. Each of the twenty lords has its own size, colour, health, reach, volley and roar.</p>
                     </div>
                     <div class="dg-card">
-                        <h3 data-i18n="l_arena_t">Four arena patterns, checked by hand</h3>
-                        <p data-i18n="l_arena_d">Arenas come in four ledge patterns of increasing length, so twenty fights do not all happen in the same hall repainted. An arena skips the ordinary validator, so every ledge tier is checked against the 6.08 tiles a double jump actually clears.</p>
+                        <h3 data-i18n="l_arena_t">Four arena layouts</h3>
+                        <p data-i18n="l_arena_d">Arenas come in four ledge patterns of increasing length, so twenty fights do not all happen in the same hall repainted. Every ledge sits within reach of a double jump.</p>
                     </div>
                 </div>
             </div>
@@ -360,8 +354,8 @@
                         <p class="dg-sub" style="margin-bottom: 1.8rem;" data-i18n="phone_sub">A floating analogue stick on the left half of the screen and a compact action cluster in the bottom-right corner: attack, jump, bow, dodge, potion, plus a <em>use</em> pad that only appears next to a chest or a gate.</p>
                         <ul class="dg-list">
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_multi"><strong>Every pad is multi-touch.</strong> Hold a direction, attack and jump at the same moment. The touch targets are about 30% larger than the art so they stay easy to hit.</span></li>
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_wide"><strong>A tall screen gets a wider view, not black bars.</strong> The 384×216 viewport fixes its height and grows its width to fill the device, and the HUD re-anchors itself on rotation.</span></li>
-                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_pixel"><strong>Whole pixels on real hardware.</strong> 1920×1080 is exactly 5× the canvas, so on a 2220×1080 phone the art lands on whole pixels with no resampling.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_wide"><strong>A tall screen gets a wider view, not black bars.</strong> The view keeps its height and widens to fill the device, and the HUD re-anchors itself on rotation.</span></li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_pixel"><strong>Whole pixels on real hardware.</strong> On common phone resolutions the art scales by a whole number, so nothing is softened by resampling.</span></li>
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="p_auto"><strong>On automatically, and switchable.</strong> The pads turn on for Android, iOS or anything reporting a touchscreen; <em>Options → Touch pad</em> cycles auto / on / off. Gamepads and keyboards work throughout.</span></li>
                         </ul>
                     </div>
@@ -380,7 +374,7 @@
                 <div class="dg-head reveal">
                     <p class="dg-eyebrow" data-i18n="gal_eyebrow">Screenshots</p>
                     <h2 class="dg-title" data-i18n="gal_title">Straight captures, <em>no mock-ups</em>.</h2>
-                    <p class="dg-sub" data-i18n="gal_sub">Every frame here comes off the running build at 1920×1080 — five times the game's own canvas, so the pixels stay square.</p>
+                    <p class="dg-sub" data-i18n="gal_sub">Every frame here comes straight off the running build at full resolution.</p>
                 </div>
 
                 <div class="dg-gal reveal">
@@ -408,35 +402,6 @@
         </section>
 
         <!-- ================= UNDER THE HOOD ================= -->
-        <section class="dg-section dg-section--tint" id="build">
-            <div class="container">
-                <div class="dg-head reveal">
-                    <p class="dg-eyebrow" data-i18n="hood_eyebrow">Under the hood</p>
-                    <h2 class="dg-title" data-i18n="hood_title">Built in Godot, <em>drawn by code</em>.</h2>
-                    <p class="dg-sub" data-i18n="hood_sub">Godot 4.7, GDScript, the GL Compatibility renderer, and a 384×216 canvas that scales by whole pixels.</p>
-                </div>
-
-                <div class="dg-grid reveal">
-                    <div class="dg-card">
-                        <h3 data-i18n="h_gen_t">Almost every asset is generated</h3>
-                        <p data-i18n="h_gen_d">The tileset, props, parallax backgrounds, combat effects, HUD chrome, touch pads, the bitmap font and all the audio come out of Python generators — 29 sound effects and six music loops synthesised from oscillators rather than sampled. Only the character sprite sheets and the arrow are drawn art.</p>
-                    </div>
-                    <div class="dg-card">
-                        <h3 data-i18n="h_scene_t">Almost no scene files</h3>
-                        <p data-i18n="h_scene_d">The whole game is one node with a script. The TileSet, SpriteFrames, collision shapes and UI are all built at runtime, so there is nothing to keep in sync between the editor and the code.</p>
-                    </div>
-                    <div class="dg-card">
-                        <h3 data-i18n="h_font_t">A 5×7 font that carries Vietnamese</h3>
-                        <p data-i18n="h_font_d">Accented glyphs are composed from a base letter plus combining marks on a 7×13 canvas rather than drawn by hand, so a capital with two marks above it fits. A checker measures every translated string against the box the UI gives it, using the real font metrics, and fails the build if one would not fit.</p>
-                    </div>
-                    <div class="dg-card">
-                        <h3 data-i18n="h_lang_t">Six languages, English as the base</h3>
-                        <p data-i18n="h_lang_d">English, Tiếng Việt, Español, Français, Deutsch and Português. English holds every key and anything a translation is missing falls back to it. Labels step down through four baked font sizes to fit their box.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- ================= NO STRINGS ================= -->
         <section class="dg-section" id="privacy">
             <div class="container">
@@ -459,7 +424,7 @@
                         <div class="dg-faq">
                             <details class="dg-faq-item" open>
                                 <summary data-i18n="faq1_q">Which Android versions does it run on?</summary>
-                                <p data-i18n="faq1_a">Android 7.0 and up, on arm64-v8a and armeabi-v7a. Google Play splits the bundle per device, so a phone downloads roughly a third of the whole build. It is verified on a Galaxy S8+ at 2220×1080, which is exactly 5× the game's canvas.</p>
+                                <p data-i18n="faq1_a">Android 7.0 and up, on arm64-v8a and armeabi-v7a. Google Play splits the bundle per device, so a phone downloads roughly a third of the whole build.</p>
                             </details>
                             <details class="dg-faq-item">
                                 <summary data-i18n="faq2_q">Does it need an internet connection?</summary>
@@ -475,7 +440,7 @@
                             </details>
                             <details class="dg-faq-item">
                                 <summary data-i18n="faq4_q">Can I play it with a gamepad, or on a desktop?</summary>
-                                <p data-i18n="faq4_a">Yes. Keyboard and gamepad bindings are first-class, and the on-screen pads can be forced off under <em>Options → Touch pad</em>. The project runs on the GL Compatibility renderer at a base viewport that scales by whole pixels, so it stays crisp on a handheld or a desktop.</p>
+                                <p data-i18n="faq4_a">Yes. Keyboard and gamepad bindings are first-class, and the on-screen pads can be forced off under <em>Options → Touch pad</em>. The art scales by whole pixels, so it stays crisp on a handheld or a desktop.</p>
                             </details>
                             <details class="dg-faq-item">
                                 <summary data-i18n="faq5_q">How violent is it?</summary>
@@ -510,13 +475,8 @@
                 <a href="/" class="logo"><img src="/assets/logo.png" alt="" class="logo-img"><span class="logo-word">AIBachKhoa</span></a>
                 <p data-i18n="footer_desc">Building practical AI tools for developers and businesses.</p>
                 <div class="footer-contact">
-                    <p class="footer-contact-name">Trần Đức Sơn</p>
+                    <p class="footer-contact-name">Son Tran</p>
                     <a href="mailto:contact@aibachkhoa.com">contact@aibachkhoa.com</a>
-                    <p class="footer-contact-apps">
-                        <a href="https://www.linkedin.com/in/son-tran-458b24158/" target="_blank" rel="noopener">LinkedIn</a>
-                        <span aria-hidden="true">·</span>
-                        <a href="https://www.upwork.com/freelancers/~0113b97260ff6eb129" target="_blank" rel="noopener">Upwork</a>
-                    </p>
                 </div>
             </div>
             <nav class="footer-col" data-i18n-aria="footer_game" aria-label="Dungeon of the Fallen Blade">

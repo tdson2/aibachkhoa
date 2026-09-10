@@ -17,7 +17,7 @@
 .il-section--tint { background: var(--surface-2); }
 
 .il-eyebrow {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-size: 0.78rem;
     font-weight: 600;
     letter-spacing: 0.14em;
@@ -27,7 +27,7 @@
 }
 
 .il-title {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: clamp(1.8rem, 3.6vw, 2.9rem);
     line-height: 1.14;
@@ -56,7 +56,7 @@
     position: absolute;
     inset: -40% 30% auto -10%;
     height: 70vh;
-    background: radial-gradient(closest-side, var(--hero-glow), transparent 70%);
+    background: transparent;
     pointer-events: none;
 }
 .il-hero-grid {
@@ -70,7 +70,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -82,7 +82,7 @@
     border-radius: 999px;
 }
 .il-hero-title {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: clamp(2.3rem, 5.4vw, 4rem);
     line-height: 1.06;
@@ -106,7 +106,7 @@
     max-width: 34rem;
 }
 .il-hero-meta code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: var(--font-mono);
     font-size: 0.86em;
     background: var(--surface-2);
     border: 1px solid var(--border);
@@ -119,7 +119,7 @@
     position: relative;
     border-radius: 14px;
     overflow: hidden;
-    border: 1px solid var(--border-strong);
+    border: 2px solid var(--ink);
     background: var(--il-navy);
     box-shadow: var(--shadow);
     aspect-ratio: 16 / 9;
@@ -132,7 +132,7 @@
     width: 84px;
     height: 84px;
     border-radius: 20px;
-    border: 1px solid var(--border-strong);
+    border: 2px solid var(--ink);
     box-shadow: var(--shadow);
     background: var(--surface);
 }
@@ -143,14 +143,14 @@
     grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
     gap: 1px;
     background: var(--border);
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 14px;
     overflow: hidden;
     margin-top: clamp(2.5rem, 5vw, 3.5rem);
 }
 .il-stat { background: var(--bg); padding: 1.4rem 1.2rem; text-align: center; }
 .il-stat-n {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-size: clamp(1.6rem, 2.6vw, 2.2rem);
     font-weight: 700;
     color: var(--accent);
@@ -171,7 +171,7 @@
 }
 .il-card {
     background: var(--surface);
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 14px;
     padding: 1.5rem;
     transition: border-color 0.2s ease, transform 0.2s ease;
@@ -187,7 +187,7 @@
 }
 .il-card-ico svg { width: 20px; height: 20px; }
 .il-card h3 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-size: 1.05rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -197,7 +197,7 @@
     margin-top: 0.9rem;
     font-size: 0.78rem;
     color: var(--text-muted);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
@@ -223,7 +223,7 @@
     margin-bottom: 1.4rem;
 }
 .il-gal-tab {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-muted);
@@ -250,7 +250,7 @@
 }
 .il-gal-stage img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .il-gal-cap { margin-top: 1.1rem; max-width: 44rem; }
-.il-gal-cap-t { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1rem; }
+.il-gal-cap-t { font-family: var(--font-display); font-weight: 600; font-size: 1rem; }
 .il-gal-cap-d { color: var(--text-muted); font-size: 0.94rem; line-height: 1.65; margin-top: 0.3rem; }
 
 /* -------------------------------------------------------------- note ---- */
@@ -279,7 +279,7 @@
     position: absolute;
     inset: auto -20% -60% -20%;
     height: 60%;
-    background: radial-gradient(closest-side, rgba(255, 200, 87, 0.18), transparent 70%);
+    background: transparent;
     pointer-events: none;
 }
 .il-cta-inner .il-title { color: #f4f7fb; position: relative; }
@@ -291,7 +291,7 @@
 }
 .il-soon {
     display: inline-flex; align-items: center; gap: 0.5rem;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.9rem;
+    font-family: var(--font-display); font-weight: 600; font-size: 0.9rem;
     color: var(--il-navy); background: var(--il-gold);
     border-radius: 10px; padding: 0.75rem 1.3rem;
 }
@@ -302,13 +302,13 @@
 .il-policy-stamp { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.6rem; }
 .il-policy-body { max-width: 48rem; }
 .il-policy-body h2 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-size: 1.3rem; font-weight: 600;
     margin: 2.6rem 0 0.9rem;
     scroll-margin-top: 6rem;
 }
 .il-policy-body h3 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-size: 1.02rem; font-weight: 600;
     margin: 1.7rem 0 0.6rem;
 }
@@ -349,7 +349,7 @@
     letter-spacing: 0.1em;
     color: var(--text-muted);
     margin: 0 0 0.9rem;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
     font-weight: 600;
 }
 .il-toc ol { margin: 0 0 0 1.1rem; }
@@ -364,7 +364,7 @@
     border-bottom: 1px solid var(--border); vertical-align: top;
 }
 .il-table th {
-    font-family: 'Space Grotesk', sans-serif; font-weight: 600;
+    font-family: var(--font-display); font-weight: 600;
     color: var(--text); white-space: nowrap;
 }
 .il-table td { color: var(--text-muted); line-height: 1.6; }
@@ -386,4 +386,29 @@
 @media (max-width: 560px) {
     .il-stats { grid-template-columns: repeat(2, 1fr); }
     .il-hero-actions .btn, .il-cta-actions .btn { width: 100%; justify-content: center; }
+}
+
+/* ===== new design system ===== */
+/* Appended last so it wins over the rules above: the product's own
+   palette is remapped onto the shared system, the decorative glow is
+   switched off, and the headings take the shared display treatment. */
+:root[data-theme="light"] {
+    --il-navy: var(--panel-ink);
+    --il-navy-2: var(--panel-ink);
+    --il-gold: #c2417f;
+}
+:root[data-theme="dark"] {
+    --il-navy: var(--panel-ink);
+    --il-navy-2: var(--panel-ink);
+    --il-gold: #ffa1ce;
+}
+
+.il-hero-title, .il-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    line-height: 0.86;
+    letter-spacing: -0.035em;
+}
+.il-hero-title em, .il-title em {
+    font-style: normal;
 }

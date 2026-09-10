@@ -36,9 +36,7 @@
        never widens the page (same as .il-hero on the Iron Line page) */
     overflow: hidden;
     padding: calc(68px + clamp(3rem, 7vw, 5.5rem)) 0 clamp(3.5rem, 7vw, 5.5rem);
-    background:
-        radial-gradient(46% 40% at 12% 0%, var(--ce-glow), transparent 68%),
-        radial-gradient(48% 44% at 88% 16%, var(--hero-glow), transparent 70%);
+    background: transparent;
 }
 
 .ce-hero-grid {
@@ -59,7 +57,7 @@
     box-shadow: 0 12px 30px -14px rgba(0, 0, 0, 0.55);
 }
 .ce-wordmark {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 1.35rem;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -96,7 +94,7 @@
 
 .ce-hero-meta { font-size: 0.85rem; color: var(--text-muted); }
 .ce-hero-meta code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: var(--font-mono);
     font-size: 0.85em;
     padding: 0.1rem 0.35rem;
     border-radius: 5px;
@@ -112,9 +110,7 @@
     position: absolute;
     inset: 6% -6% 12%;
     border-radius: 24px;
-    background:
-        radial-gradient(58% 46% at 30% 26%, var(--ce-glow), transparent 72%),
-        radial-gradient(52% 44% at 76% 70%, rgba(180, 128, 26, 0.16), transparent 74%);
+    background: transparent;
     opacity: 0.9;
     -webkit-mask-image: radial-gradient(72% 60% at 50% 45%, #000, transparent 78%);
             mask-image: radial-gradient(72% 60% at 50% 45%, #000, transparent 78%);
@@ -159,7 +155,7 @@
     grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
     gap: 1px;
     margin-top: clamp(2.5rem, 5vw, 3.5rem);
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 14px;
     overflow: hidden;
     background: var(--border);
@@ -167,7 +163,7 @@
 .ce-stat { background: var(--surface); padding: 1.3rem 1.2rem; }
 .ce-stat-n {
     display: block;
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: clamp(1.6rem, 2.6vw, 2.15rem);
     font-weight: 700;
     color: var(--ce-ink);
@@ -214,7 +210,7 @@
 }
 .ce-card {
     padding: 1.5rem;
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 14px;
     background: var(--surface);
     transition: transform 0.25s ease, border-color 0.25s ease;
@@ -251,7 +247,7 @@
     font-size: 0.93rem;
 }
 .ce-table thead th {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 0.76rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -295,7 +291,7 @@
 .ce-gal-stage.is-wide img { aspect-ratio: 3 / 2; border-radius: 12px; }
 
 .ce-gal-side { display: grid; gap: 1.1rem; align-content: start; }
-.ce-gal-cap-t { font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 1.15rem; font-weight: 600; }
+.ce-gal-cap-t { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
 .ce-gal-cap-d { margin-top: 0.35rem; font-size: 0.95rem; color: var(--text-muted); }
 
 .ce-gal-tabs { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -334,7 +330,7 @@
 /* ---------- FAQ ---------- */
 .ce-faq { display: grid; gap: 0.7rem; max-width: 52rem; }
 .ce-faq-item {
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 12px;
     background: var(--surface);
     padding: 0.2rem 1.15rem;
@@ -356,7 +352,7 @@
 .ce-faq-item[open] summary::after { content: "\2212"; }
 .ce-faq-item p { padding-bottom: 1rem; font-size: 0.93rem; color: var(--text-muted); }
 .ce-faq-item code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: var(--font-mono);
     font-size: 0.85em;
     padding: 0.1rem 0.35rem;
     border-radius: 5px;
@@ -367,7 +363,7 @@
 .ce-note {
     padding: 1.1rem 1.25rem;
     margin-bottom: 1.4rem;
-    border: 1px solid var(--ce-line);
+    border: 2px solid var(--ink);
     border-radius: 12px;
     background: var(--ce-soft);
 }
@@ -376,9 +372,7 @@
 /* ---------- CTA ---------- */
 .ce-cta {
     padding: clamp(3rem, 6vw, 5rem) 0;
-    background:
-        radial-gradient(58% 100% at 50% 0%, var(--ce-glow), transparent 72%),
-        var(--bg);
+    background: var(--bg);
     border-top: 1px solid var(--border);
 }
 .ce-cta-inner { text-align: center; }
@@ -434,7 +428,7 @@
 .ce-policy-body strong { color: var(--text); font-weight: 600; }
 .ce-policy-body a { color: var(--ce-ink); text-decoration: underline; text-underline-offset: 2px; }
 .ce-policy-body code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: var(--font-mono);
     font-size: 0.85em;
     padding: 0.1rem 0.35rem;
     border-radius: 5px;
@@ -451,7 +445,7 @@
 .ce-toc h2 {
     all: unset;
     display: block;
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 0.76rem;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -488,7 +482,7 @@
     display: grid;
     gap: 0.45rem;
     padding: 1.35rem 1.5rem;
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 14px;
     background: var(--surface);
 }
@@ -560,7 +554,7 @@
     width: 100%;
     height: auto;
     border-radius: 14px;
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     background: var(--ce-void);
 }
 
@@ -595,4 +589,41 @@
     background: var(--ce);
     color: #fff;
     font-weight: 600;
+}
+
+/* ===== new design system ===== */
+/* Appended last so it wins over the rules above: the product's own
+   palette is remapped onto the shared system, the decorative glow is
+   switched off, and the headings take the shared display treatment. */
+:root[data-theme="light"] {
+    --ce: #c2417f;
+    --ce-ink: #a8336c;
+    --ce-soft: color-mix(in srgb, #c2417f 12%, transparent);
+    --ce-line: var(--line-strong);
+    --ce-glow: transparent;
+    --ce-void: var(--panel-ink);
+    --ce-star: var(--surface-2);
+    --ce-hot: #2f9e82;
+    --ce-gold: #2f9e82;
+}
+:root[data-theme="dark"] {
+    --ce: #ffa1ce;
+    --ce-ink: #ffb8da;
+    --ce-soft: color-mix(in srgb, #ffa1ce 12%, transparent);
+    --ce-line: var(--line-strong);
+    --ce-glow: transparent;
+    --ce-void: var(--panel-ink);
+    --ce-star: var(--surface-2);
+    --ce-hot: #41c8a6;
+    --ce-gold: #41c8a6;
+}
+
+.ce-hero-title, .ce-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    line-height: 0.86;
+    letter-spacing: -0.035em;
+}
+.ce-hero-title em, .ce-title em {
+    font-style: normal;
 }

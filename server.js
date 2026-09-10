@@ -115,6 +115,12 @@ app.get('/mini-castle/policy', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'mini-castle', 'policy', 'index.html'));
 });
 
+// The redesign now *is* the home page; /new stays as an alias so any
+// link handed out while it was a preview still lands somewhere sensible.
+app.get('/new', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 

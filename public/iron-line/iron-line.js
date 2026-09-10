@@ -130,7 +130,7 @@ const i18n = {
         pol_toc: "On this page",
 
         pol_h_summary: "Summary",
-        pol_summary: "Iron Line is a single-player, offline tower defense game for Android, published by AIBachKhoa (Trần Đức Sơn), Vietnam. It contains no advertising, no in-app purchases, no analytics and no third-party SDKs of any kind. It does not request the <code>INTERNET</code> permission, so it cannot open a network connection. The only information it writes is your own game progress, stored in the app's private directory on your device.",
+        pol_summary: "Iron Line is a single-player, offline tower defense game for Android, published by AIBachKhoa (Son Tran), Vietnam. It contains no advertising, no in-app purchases, no analytics and no third-party SDKs of any kind. It does not request the <code>INTERNET</code> permission, so it cannot open a network connection. The only information it writes is your own game progress, stored in the app's private directory on your device.",
 
         pol_h_collect: "Information we collect",
         pol_collect_1: "<strong>None.</strong> The App does not collect, transmit, sell or share any personal data. Specifically, it does not collect any of the following:",
@@ -174,7 +174,7 @@ const i18n = {
         pol_h_contact: "Contact",
         pol_contact_1: "If anything on this page is unclear, or you want to raise a privacy question about the App, get in touch:",
         pol_contact_dev: "Developer",
-        pol_contact_dev_v: "Trần Đức Sơn (AIBachKhoa)",
+        pol_contact_dev_v: "Son Tran (AIBachKhoa)",
         pol_contact_email: "Email",
         pol_contact_app: "Application id",
         pol_contact_country: "Country",

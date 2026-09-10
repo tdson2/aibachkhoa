@@ -26,9 +26,7 @@
 /* ---------- Hero ---------- */
 .bk-hero {
     padding: calc(68px + clamp(3rem, 7vw, 6rem)) 0 clamp(3.5rem, 7vw, 6rem);
-    background:
-        radial-gradient(48% 42% at 8% 0%, var(--bk-glow), transparent 68%),
-        radial-gradient(46% 44% at 92% 12%, var(--hero-glow), transparent 70%);
+    background: transparent;
 }
 
 .bk-hero-grid {
@@ -49,7 +47,7 @@
     box-shadow: 0 10px 30px -14px rgba(0, 0, 0, 0.5);
 }
 .bk-wordmark {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -107,7 +105,7 @@
     border-radius: 30px;
     padding: 8px;
     background: linear-gradient(160deg, #35393c, #16181a);
-    border: 1px solid rgba(255, 255, 255, 0.09);
+    border: 2px solid var(--ink);
     box-shadow: 0 34px 70px -32px rgba(20, 12, 4, 0.6);
 }
 .phone-frame img { display: block; width: 100%; height: auto; border-radius: 23px; }
@@ -128,7 +126,7 @@
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1px;
     background: var(--border);
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 16px;
     overflow: hidden;
 }
@@ -149,7 +147,7 @@
     display: flex;
     gap: 1.2rem;
     padding: 1.8rem;
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 16px;
     background: var(--surface);
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -198,21 +196,15 @@
 .bk-platform--mac { border-top: 1px solid var(--border); }
 .bk-platform--win {
     border-top: 1px solid var(--border);
-    background:
-        radial-gradient(42% 42% at 8% 0%, var(--bk-glow), transparent 70%),
-        var(--surface-2);
+    background: var(--surface-2);
 }
 .bk-platform--droid {
     border-top: 1px solid var(--border);
-    background:
-        radial-gradient(40% 40% at 90% 0%, var(--bk-glow), transparent 70%),
-        var(--surface-2);
+    background: var(--surface-2);
 }
 .bk-platform--linux {
     border-top: 1px solid var(--border);
-    background:
-        radial-gradient(42% 42% at 92% 0%, var(--bk-glow), transparent 70%),
-        var(--surface-2);
+    background: var(--surface-2);
 }
 
 .bk-plat-head { max-width: 44rem; margin-bottom: 3rem; }
@@ -224,7 +216,7 @@
     align-items: center;
     gap: 0.4rem;
     padding: 0.35rem 0.8rem;
-    border: 1px solid var(--border-strong);
+    border: 2px solid var(--ink);
     border-radius: 999px;
     font-size: 0.8rem;
     font-weight: 500;
@@ -250,7 +242,7 @@
 }
 .bk-feat {
     padding: 1.5rem;
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 14px;
     background: var(--surface);
     transition: border-color 0.25s ease, transform 0.25s ease;
@@ -313,7 +305,7 @@
     display: flex;
     gap: 1.1rem;
     padding: 1.6rem 1.7rem;
-    border: 1px solid var(--bk-line);
+    border: 2px solid var(--ink);
     border-radius: 16px;
     background: var(--bk-soft);
     margin-bottom: clamp(2.5rem, 5vw, 4rem);
@@ -324,7 +316,7 @@
 .bk-note p { font-size: 0.93rem; color: var(--text-muted); line-height: 1.68; max-width: 58rem; }
 
 code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: var(--font-mono);
     font-size: 0.88em;
     background: var(--surface-2);
     border: 1px solid var(--border);
@@ -335,7 +327,7 @@ code {
 /* ---------- steps ---------- */
 .bk-steps {
     padding: 1.9rem;
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 16px;
     background: var(--surface);
 }
@@ -357,7 +349,7 @@ code {
     background: var(--bk-soft);
     color: var(--bk-ink);
     border: 1px solid var(--bk-line);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-size: 0.85rem;
     font-weight: 700;
 }
@@ -400,7 +392,7 @@ code {
 }
 .bk-lite-brand { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.1rem; }
 .bk-lite-brand img { width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0; }
-.bk-lite-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; }
+.bk-lite-name { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; }
 .bk-lite-pkg { font-size: 0.8rem; color: var(--text-muted); }
 .bk-lite-copy h3 { font-size: clamp(1.35rem, 2.4vw, 1.75rem); font-weight: 700; margin-bottom: 0.7rem; }
 .bk-lite-sub { font-size: 0.98rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.4rem; }
@@ -452,7 +444,7 @@ code {
     display: flex;
     flex-direction: column;
     padding: 1.9rem;
-    border: 1px solid var(--border-strong);
+    border: 2px solid var(--ink);
     border-radius: 18px;
     background: var(--surface);
     box-shadow: var(--shadow);
@@ -546,7 +538,7 @@ code {
 
 .bk-dl-card {
     padding: 1.9rem;
-    border: 1px solid var(--border-strong);
+    border: 2px solid var(--ink);
     border-radius: 18px;
     background: var(--surface);
     box-shadow: var(--shadow);
@@ -574,7 +566,7 @@ code {
     background: var(--bk-soft);
     border: 1px solid var(--bk-line);
     color: var(--bk-ink);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-size: 0.78rem;
     font-weight: 700;
     white-space: nowrap;
@@ -593,7 +585,7 @@ code {
     padding: 0.7rem 1.2rem;
     border-radius: 10px;
     background: #101215;
-    border: 1px solid #2b2f34;
+    border: 2px solid var(--ink);
     color: #fff;
     margin-bottom: 1.5rem;
     transition: background-color 0.2s ease, transform 0.2s ease;
@@ -601,7 +593,7 @@ code {
 .bk-play-badge:hover { background: #1b1f24; transform: translateY(-1px); }
 .bk-play-badge svg { width: 27px; height: 27px; flex-shrink: 0; }
 .bk-play-badge small { display: block; font-size: 0.62rem; letter-spacing: 0.13em; opacity: 0.72; }
-.bk-play-badge strong { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; font-weight: 600; line-height: 1.2; }
+.bk-play-badge strong { display: block; font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; line-height: 1.2; }
 
 /* spec table */
 .bk-specs { display: grid; gap: 0; border-top: 1px solid var(--border); }
@@ -723,9 +715,7 @@ code {
     padding: clamp(2.5rem, 5vw, 4rem) 1.5rem;
     border: 1px solid var(--border);
     border-radius: 20px;
-    background:
-        radial-gradient(60% 100% at 50% 0%, var(--bk-glow), transparent 70%),
-        var(--surface);
+    background: var(--surface);
 }
 .bk-cta .cta-title { font-size: clamp(1.7rem, 3.2vw, 2.5rem); font-weight: 700; margin-bottom: 1.6rem; }
 .bk-cta .cta-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
@@ -770,13 +760,13 @@ code {
 .bk-policy-stamp { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.6rem; }
 .bk-policy-body { max-width: 48rem; }
 .bk-policy-body h2 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-size: 1.3rem; font-weight: 600;
     margin: 2.6rem 0 0.9rem;
     scroll-margin-top: 6rem;
 }
 .bk-policy-body h3 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--font-display);
     font-size: 1.02rem; font-weight: 600;
     margin: 1.7rem 0 0.6rem;
 }
@@ -799,7 +789,7 @@ code {
 }
 .bk-policy-body a { color: var(--bk-ink); text-decoration: underline; text-underline-offset: 2px; }
 .bk-policy-body code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: var(--font-mono);
     font-size: 0.88em;
 }
 
@@ -816,7 +806,7 @@ code {
     letter-spacing: 0.1em;
     color: var(--text-muted);
     margin: 0 0 0.9rem;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
     font-weight: 600;
 }
 .bk-toc ol { margin: 0 0 0 1.1rem; }
@@ -831,7 +821,38 @@ code {
     border-bottom: 1px solid var(--border); vertical-align: top;
 }
 .bk-table th {
-    font-family: 'Space Grotesk', sans-serif; font-weight: 600;
+    font-family: var(--font-display); font-weight: 600;
     color: var(--text); white-space: nowrap;
 }
 .bk-table td { color: var(--text-muted); line-height: 1.6; }
+
+/* ===== new design system ===== */
+/* Appended last so it wins over the rules above: the product's own
+   palette is remapped onto the shared system, the decorative glow is
+   switched off, and the headings take the shared display treatment. */
+:root[data-theme="light"] {
+    --bk: #2f9e82;
+    --bk-ink: #1f8a70;
+    --bk-soft: color-mix(in srgb, #2f9e82 12%, transparent);
+    --bk-line: var(--line-strong);
+    --bk-glow: transparent;
+    --bk-chrome: var(--panel-ink);
+}
+:root[data-theme="dark"] {
+    --bk: #41c8a6;
+    --bk-ink: #6fe0c4;
+    --bk-soft: color-mix(in srgb, #41c8a6 12%, transparent);
+    --bk-line: var(--line-strong);
+    --bk-glow: transparent;
+    --bk-chrome: var(--panel-ink);
+}
+
+.bk-hero-title, .bk-wordmark {
+    font-family: var(--font-display);
+    font-weight: 900;
+    line-height: 0.86;
+    letter-spacing: -0.035em;
+}
+.bk-hero-title em, .bk-wordmark em {
+    font-style: normal;
+}

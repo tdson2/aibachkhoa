@@ -31,9 +31,7 @@
 .dg-hero {
     position: relative;
     padding: calc(68px + clamp(3rem, 7vw, 5.5rem)) 0 clamp(3.5rem, 7vw, 5.5rem);
-    background:
-        radial-gradient(46% 40% at 10% 0%, var(--dg-glow), transparent 68%),
-        radial-gradient(48% 44% at 90% 14%, var(--hero-glow), transparent 70%);
+    background: transparent;
 }
 
 .dg-hero-grid {
@@ -54,7 +52,7 @@
     box-shadow: 0 12px 30px -14px rgba(0, 0, 0, 0.55);
 }
 .dg-wordmark {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 1.35rem;
     font-weight: 700;
     letter-spacing: 0.01em;
@@ -107,10 +105,8 @@
     position: relative;
     border-radius: 16px;
     padding: 8px;
-    border: 1px solid var(--border-strong);
-    background:
-        radial-gradient(80% 60% at 50% 0%, var(--dg-soft), transparent 72%),
-        var(--surface-2);
+    border: 2px solid var(--ink);
+    background: var(--surface-2);
     box-shadow: var(--shadow);
 }
 .dg-shot-frame img {
@@ -130,9 +126,7 @@
     border-radius: 16px;
     padding: 8px;
     border: 1px solid var(--border-strong);
-    background:
-        radial-gradient(80% 60% at 50% 0%, var(--dg-soft), transparent 72%),
-        var(--surface);
+    background: var(--surface);
     box-shadow: var(--shadow);
 }
 
@@ -201,7 +195,7 @@
     grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
     gap: 1px;
     margin-top: clamp(2.5rem, 5vw, 3.5rem);
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 14px;
     overflow: hidden;
     background: var(--border);
@@ -209,7 +203,7 @@
 .dg-stat { background: var(--surface); padding: 1.3rem 1.2rem; }
 .dg-stat-n {
     display: block;
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: clamp(1.6rem, 2.6vw, 2.15rem);
     font-weight: 700;
     color: var(--dg-ink);
@@ -256,7 +250,7 @@
 }
 .dg-card {
     padding: 1.5rem;
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 14px;
     background: var(--surface);
     transition: transform 0.25s ease, border-color 0.25s ease;
@@ -294,7 +288,7 @@
     background: var(--surface);
 }
 .dg-act-d {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 0.78rem;
     font-weight: 600;
     color: var(--text-muted);
@@ -321,7 +315,7 @@
     font-size: 0.93rem;
 }
 .dg-table thead th {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 0.76rem;
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -341,7 +335,7 @@
     border-radius: 5px;
     background: var(--surface-2);
     color: var(--text);
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: var(--font-mono);
     font-size: 0.8rem;
 }
 
@@ -359,7 +353,7 @@
 }
 .dg-boon-n {
     display: block;
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.06em;
@@ -379,9 +373,7 @@
     border-radius: 16px;
     padding: 8px;
     border: 1px solid var(--border-strong);
-    background:
-        radial-gradient(80% 60% at 50% 0%, var(--dg-soft), transparent 72%),
-        var(--surface-2);
+    background: var(--surface-2);
 }
 .dg-gal-stage img {
     display: block;
@@ -393,7 +385,7 @@
     image-rendering: pixelated;
 }
 .dg-gal-cap { margin-top: 0.9rem; padding: 0 0.3rem; }
-.dg-gal-cap-t { font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 600; }
+.dg-gal-cap-t { font-family: var(--font-display); font-weight: 600; }
 .dg-gal-cap-d { font-size: 0.9rem; color: var(--text-muted); }
 
 .dg-gal-tabs { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -432,7 +424,7 @@
 /* ---------- FAQ ---------- */
 .dg-faq { display: grid; gap: 0.7rem; max-width: 52rem; }
 .dg-faq-item {
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 12px;
     background: var(--surface);
     padding: 0.2rem 1.15rem;
@@ -454,7 +446,7 @@
 .dg-faq-item[open] summary::after { content: "\2212"; }
 .dg-faq-item p { padding-bottom: 1rem; font-size: 0.93rem; color: var(--text-muted); }
 .dg-faq-item code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: var(--font-mono);
     font-size: 0.85em;
     padding: 0.1rem 0.35rem;
     border-radius: 5px;
@@ -464,9 +456,7 @@
 /* ---------- CTA ---------- */
 .dg-cta {
     padding: clamp(3rem, 6vw, 5rem) 0;
-    background:
-        radial-gradient(58% 100% at 50% 0%, var(--dg-glow), transparent 72%),
-        var(--bg);
+    background: var(--bg);
     border-top: 1px solid var(--border);
 }
 .dg-cta-inner { text-align: center; }
@@ -525,7 +515,7 @@
 .dg-note {
     padding: 1.1rem 1.25rem;
     margin-bottom: 1.4rem;
-    border: 1px solid var(--dg-line);
+    border: 2px solid var(--ink);
     border-radius: 12px;
     background: var(--dg-soft);
 }
@@ -541,7 +531,7 @@
 .dg-toc h2 {
     all: unset;
     display: block;
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 0.76rem;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -579,7 +569,7 @@
     display: grid;
     gap: 0.45rem;
     padding: 1.35rem 1.5rem;
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     border-radius: 14px;
     background: var(--surface);
 }
@@ -611,4 +601,39 @@
 @media (prefers-reduced-motion: reduce) {
     .dg-card, .dg-gal-tab { transition: none; }
     .dg-card:hover { transform: none; }
+}
+
+/* ===== new design system ===== */
+/* Appended last so it wins over the rules above: the product's own
+   palette is remapped onto the shared system, the decorative glow is
+   switched off, and the headings take the shared display treatment. */
+:root[data-theme="light"] {
+    --dg: #c2417f;
+    --dg-ink: #a8336c;
+    --dg-soft: color-mix(in srgb, #c2417f 12%, transparent);
+    --dg-line: var(--line-strong);
+    --dg-glow: transparent;
+    --dg-chrome: var(--panel-ink);
+    --dg-stone: var(--surface-2);
+    --dg-blood: #2f9e82;
+}
+:root[data-theme="dark"] {
+    --dg: #ffa1ce;
+    --dg-ink: #ffb8da;
+    --dg-soft: color-mix(in srgb, #ffa1ce 12%, transparent);
+    --dg-line: var(--line-strong);
+    --dg-glow: transparent;
+    --dg-chrome: var(--panel-ink);
+    --dg-stone: var(--surface-2);
+    --dg-blood: #41c8a6;
+}
+
+.dg-hero-title, .dg-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    line-height: 0.86;
+    letter-spacing: -0.035em;
+}
+.dg-hero-title em, .dg-title em {
+    font-style: normal;
 }

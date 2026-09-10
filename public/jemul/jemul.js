@@ -41,7 +41,7 @@ const i18n = {
         c2_h: "Made for old screens",
         c2_p: "These games were drawn for 128×128 up to 480×800. JeMul scales them with the pixels kept crisp, keeps the original aspect ratio, and can rotate the display for the builds that expect a landscape handset.",
         c3_h: "Your progress stays",
-        c3_p: "High scores and saved games are written the way the game expects (MIDP record stores) and kept between sessions, so quitting and coming back tomorrow picks up where you left off.",
+        c3_p: "High scores and saved games are kept the way the original game expects and preserved between sessions, so quitting and coming back tomorrow picks up where you left off.",
 
         an_eyebrow: "Android app",
         an_title: "JeMul on your phone.",
@@ -54,7 +54,7 @@ const i18n = {
 
         web_eyebrow: "Browser edition",
         web_title: "Nothing to install.",
-        web_lede: "The browser edition runs the emulator on the server and streams the picture into a canvas, so the games run at the speed of a desktop rather than of a phone from 2006. Sign in with Google and press play.",
+        web_lede: "The browser edition does the heavy lifting for you, so the games run at the speed of a desktop rather than of a phone from 2006. Sign in with Google and press play.",
         web_l1: "A library of more than a thousand titles, searchable and filterable",
         web_l2: "60 frames per second, with the frame rate shown while you play",
         web_l3: "Keyboard, mouse for touch games, and an on-screen keypad",
@@ -155,7 +155,7 @@ const i18n = {
         c2_h: "Dành cho màn hình cũ",
         c2_p: "Các game này được vẽ cho 128×128 đến 480×800. JeMul phóng to mà vẫn giữ nét pixel, giữ đúng tỉ lệ gốc, và xoay được màn hình cho những bản làm cho máy nằm ngang.",
         c3_h: "Tiến trình được giữ lại",
-        c3_p: "Điểm cao và game đã lưu được ghi đúng cách game mong đợi (record store của MIDP) và giữ nguyên giữa các lần chơi, nên hôm sau mở lại là chơi tiếp.",
+        c3_p: "Điểm cao và game đã lưu được giữ đúng cách game gốc mong đợi và còn nguyên giữa các lần chơi, nên hôm sau mở lại là chơi tiếp.",
 
         an_eyebrow: "App Android",
         an_title: "JeMul trên điện thoại.",
@@ -168,7 +168,7 @@ const i18n = {
 
         web_eyebrow: "Bản web",
         web_title: "Không phải cài gì cả.",
-        web_lede: "Bản web chạy trình giả lập trên máy chủ rồi đẩy hình ảnh thẳng vào canvas, nên game chạy bằng sức máy tính chứ không phải sức một chiếc điện thoại đời 2006. Đăng nhập Google rồi bấm chơi.",
+        web_lede: "Bản web gánh phần nặng thay bạn, nên game chạy bằng sức máy tính chứ không phải sức một chiếc điện thoại đời 2006. Đăng nhập Google rồi bấm chơi.",
         web_l1: "Thư viện hơn một nghìn tựa game, tìm và lọc được",
         web_l2: "60 khung hình mỗi giây, hiện số FPS ngay khi chơi",
         web_l3: "Bàn phím, chuột cho game cảm ứng, và bàn phím ảo trên màn hình",

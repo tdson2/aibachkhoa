@@ -73,7 +73,7 @@
 /* Ảnh chụp thật, không phải mock — nên khung phải nhường chỗ cho ảnh. */
 .gv-shot {
     border-radius: 16px;
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     background: var(--surface);
     box-shadow: 0 26px 60px rgba(10, 20, 60, .16);
     overflow: hidden;
@@ -93,7 +93,7 @@
     font-weight: 600;
     padding: .34rem .72rem;
     border-radius: 999px;
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     background: var(--surface);
     color: var(--text-muted);
 }
@@ -161,7 +161,7 @@
 .gv-feat {
     padding: 1.5rem 1.35rem;
     border-radius: 14px;
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     background: var(--surface);
 }
 
@@ -239,7 +239,7 @@
     flex-direction: column;
     padding: 1.6rem 1.4rem;
     border-radius: 16px;
-    border: 1px solid var(--border);
+    border: 2px solid var(--ink);
     background: var(--surface);
 }
 
@@ -343,3 +343,30 @@
 .gv-toc li { margin-bottom: .38rem; line-height: 1.5; }
 .gv-toc a { color: var(--text); text-decoration: none; font-size: .92rem; }
 .gv-toc a:hover { color: var(--gv-blue); text-decoration: underline; }
+
+/* ===== new design system ===== */
+/* Appended last so it wins over the rules above: the product's own
+   palette is remapped onto the shared system, the decorative glow is
+   switched off, and the headings take the shared display treatment. */
+:root[data-theme="light"] {
+    --gv-blue: #477bff;
+    --gv-ink: #2f5ce0;
+    --gv-violet: #2f9e82;
+    --gv-cyan: #2f9e82;
+}
+:root[data-theme="dark"] {
+    --gv-blue: #6e96ff;
+    --gv-ink: #9ab3ff;
+    --gv-violet: #41c8a6;
+    --gv-cyan: #41c8a6;
+}
+
+.gv-hero-title, .gv-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    line-height: 0.86;
+    letter-spacing: -0.035em;
+}
+.gv-hero-title em, .gv-title em {
+    font-style: normal;
+}

@@ -27,7 +27,7 @@
 }
 .jm-hero-title {
     margin: 20px 0 16px;
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: clamp(2.3rem, 5vw, 3.5rem);
     line-height: 1.05;
     letter-spacing: -0.03em;
@@ -53,7 +53,7 @@
 .jm-frame {
     border-radius: 16px;
     overflow: hidden;
-    border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+    border: 2px solid var(--ink);
     background: #0b1020;
     box-shadow: 0 30px 70px rgba(2, 6, 23, 0.28);
 }
@@ -89,7 +89,7 @@
 }
 .jm-title {
     margin: 10px 0 12px;
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: clamp(1.7rem, 3.4vw, 2.4rem);
     line-height: 1.15;
     letter-spacing: -0.02em;
@@ -100,7 +100,7 @@
 .jm-card {
     padding: 24px;
     border-radius: 16px;
-    border: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+    border: 2px solid var(--ink);
     background: color-mix(in srgb, currentColor 3%, transparent);
 }
 .jm-card-icon {
@@ -129,7 +129,7 @@
     border-radius: 50%;
     background: var(--jm-accent);
 }
-.jm-shot { border-radius: 16px; overflow: hidden; border: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.jm-shot { border-radius: 16px; overflow: hidden; border: 2px solid var(--ink); }
 .jm-shot img { display: block; width: 100%; height: auto; }
 
 /* ---------- phone mockups ---------- */
@@ -194,4 +194,27 @@
     .jm-hero-grid { grid-template-columns: 1fr; gap: 34px; }
     .jm-gal-stage { grid-template-columns: 1fr; }
     .jm-split--flip .jm-split-media { order: 0; }
+}
+
+/* ===== new design system ===== */
+/* Appended last so it wins over the rules above: the product's own
+   palette is remapped onto the shared system, the decorative glow is
+   switched off, and the headings take the shared display treatment. */
+:root[data-theme="light"] {
+    --jm-accent: #477bff;
+    --jm-accent-2: #2f9e82;
+}
+:root[data-theme="dark"] {
+    --jm-accent: #6e96ff;
+    --jm-accent-2: #41c8a6;
+}
+
+.jm-hero-title, .jm-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    line-height: 0.86;
+    letter-spacing: -0.035em;
+}
+.jm-hero-title em, .jm-title em {
+    font-style: normal;
 }

@@ -24,9 +24,7 @@
     position: relative;
     padding: 116px 0 72px;
     overflow: hidden;
-    background:
-        radial-gradient(1100px 440px at 80% -6%, rgba(168, 90, 46, .22), transparent 62%),
-        radial-gradient(880px 400px at 10% 10%, rgba(14, 42, 61, .12), transparent 60%);
+    background: transparent;
 }
 
 .cn-hero-grid {
@@ -46,7 +44,7 @@
 }
 
 .cn-wordmark {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-weight: 700;
     font-size: 1.6rem;
     letter-spacing: .01em;
@@ -62,7 +60,7 @@
 }
 
 .cn-hero-title {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: clamp(2.1rem, 4.4vw, 3.4rem);
     line-height: 1.1;
     margin: 0 0 18px;
@@ -86,7 +84,7 @@
     line-height: 1.7;
 }
 .cn-hero-meta code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-family: var(--font-mono);
     font-size: .82rem;
     padding: .1rem .35rem;
     border-radius: 6px;
@@ -100,7 +98,7 @@
     width: min(300px, 100%);
     border-radius: 26px;
     overflow: hidden;
-    border: 1px solid var(--glass-brd);
+    border: 2px solid var(--ink);
     background: var(--glass);
     backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
     -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
@@ -114,7 +112,7 @@
 .cn-quote blockquote {
     margin: 0;
     max-width: 62ch;
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: clamp(1.2rem, 2.4vw, 1.6rem);
     line-height: 1.5;
     letter-spacing: -.01em;
@@ -137,7 +135,7 @@
     color: var(--cn-clay);
 }
 .cn-title {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: clamp(1.7rem, 3.2vw, 2.5rem);
     line-height: 1.15;
     margin: 0 0 14px;
@@ -152,13 +150,13 @@
 }
 
 .cn-step, .cn-card {
-    border: 1px solid var(--glass-brd);
+    border: 2px solid var(--ink);
     border-radius: 18px;
     background: var(--glass);
     padding: 26px 24px;
 }
 .cn-step h3, .cn-card h3 {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 1.1rem;
     margin: 0 0 10px;
     display: flex;
@@ -206,7 +204,7 @@
     width: min(268px, 100%);
     border-radius: 24px;
     overflow: hidden;
-    border: 1px solid var(--glass-brd);
+    border: 2px solid var(--ink);
     background: var(--glass);
     box-shadow: var(--glass-shadow), inset 0 1px 0 var(--glass-edge);
     padding: 7px;
@@ -234,7 +232,7 @@
     color: var(--text);
     padding: .5rem .95rem;
     font-size: .9rem;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
     cursor: pointer;
     transition: background-color .2s ease, border-color .2s ease, color .2s ease;
 }
@@ -272,7 +270,7 @@
 }
 .cn-fact b {
     display: block;
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 1.7rem;
     line-height: 1.1;
     color: var(--cn-clay);
@@ -285,7 +283,7 @@
 .cn-policy-date { color: var(--text-muted); font-size: .92rem; margin: 10px 0 0; }
 .cn-policy-body { max-width: 74ch; }
 .cn-policy-body h2 {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: var(--font-display);
     font-size: 1.24rem;
     margin: 40px 0 12px;
 }
@@ -312,4 +310,31 @@
     .cn-split, .cn-split--flip { grid-template-columns: minmax(0, 1fr); gap: 34px; }
     .cn-split--flip .cn-shot { order: 0; }
     .cn-section { padding: 56px 0; }
+}
+
+/* ===== new design system ===== */
+/* Appended last so it wins over the rules above: the product's own
+   palette is remapped onto the shared system, the decorative glow is
+   switched off, and the headings take the shared display treatment. */
+:root[data-theme="light"] {
+    --cn-clay: #c2417f;
+    --cn-clay-deep: #a8336c;
+    --cn-paper: var(--surface-2);
+    --cn-blush: var(--surface-2);
+}
+:root[data-theme="dark"] {
+    --cn-clay: #ffa1ce;
+    --cn-clay-deep: #ffb8da;
+    --cn-paper: var(--surface-2);
+    --cn-blush: var(--surface-2);
+}
+
+.cn-hero-title, .cn-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    line-height: 0.86;
+    letter-spacing: -0.035em;
+}
+.cn-hero-title em, .cn-title em {
+    font-style: normal;
 }
