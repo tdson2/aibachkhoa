@@ -1,0 +1,10 @@
+# https://aibachkhoa.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Installer binaries: no value in a search index, and crawling them burns
+# crawl budget on tens of megabytes.
+Disallow: /downloads/
+
+Sitemap: https://aibachkhoa.com/sitemap.xml

@@ -11,8 +11,8 @@
 
 const i18n = {
     vi: {
-        page_title: "ChefEasy — nấu theo từng bước, không cần rời tay khỏi bếp | AIBachKhoa",
-        meta_desc: "Ứng dụng công thức nấu ăn cho Android: 44 món Việt, Trung, Nhật, Hàn, chế độ nấu dẫn từng bước có hẹn giờ, tìm món bằng giọng nói và toàn bộ công thức đọc được khi không có mạng.",
+        page_title: "ChefEasy — app công thức nấu ăn từng bước | AIBachKhoa",
+        meta_desc: "App công thức nấu ăn cho Android: 44 món Việt, Trung, Nhật, Hàn, chế độ nấu từng bước có hẹn giờ, tìm bằng giọng nói, đọc được khi không mạng.",
         aria_lang: "Đổi ngôn ngữ",
         aria_theme: "Đổi giao diện sáng/tối",
         aria_menu: "Mở menu",
@@ -149,8 +149,8 @@ const i18n = {
         footer_rights: "Bảo lưu mọi quyền.",
 
         /* ---------- iOS page ---------- */
-        ios_page_title: "ChefEasy cho iPhone & iPad — nấu theo từng bước | AIBachKhoa",
-        ios_meta_desc: "Ứng dụng công thức nấu ăn cho iPhone và iPad: 44 món Việt, Trung, Nhật, Hàn, chế độ nấu dẫn từng bước có hẹn giờ, tìm món bằng giọng nói, đọc được khi không có mạng. Yêu cầu iOS 15.0 trở lên.",
+        ios_page_title: "ChefEasy cho iPhone & iPad — nấu từng bước | AIBachKhoa",
+        ios_meta_desc: "App công thức nấu ăn cho iPhone và iPad: 44 món Á, chế độ nấu từng bước có hẹn giờ, tìm bằng giọng nói, đọc offline. Yêu cầu iOS 15.0 trở lên.",
         ios_kicker: "iPhone & iPad · nấu ăn tại nhà",
         ios_meta: "Mã bundle <code>com.tdson.cooky</code> · dọc màn hình · iPhone và iPad, iOS 15.0 trở lên · miễn phí, có quảng cáo và gói đăng ký tuỳ chọn.",
         ios_faq1_q: "Chạy được trên iPhone, iPad nào?",
@@ -169,7 +169,7 @@ const i18n = {
 
         /* ---------- Policy ---------- */
         pol_page_title: "Chính sách quyền riêng tư — ChefEasy | AIBachKhoa",
-        pol_meta_desc: "ChefEasy xử lý thông tin thế nào: cái gì ở lại trong máy bạn, đoạn giọng nói đi đâu, quảng cáo và thanh toán nhận được gì, và vì sao app không cần thêm quyền nào khác.",
+        pol_meta_desc: "ChefEasy xử lý thông tin thế nào: cái gì ở lại trong máy bạn, đoạn giọng nói đi đâu, quảng cáo và thanh toán nhận được gì.",
         pol_eyebrow: "Pháp lý",
         pol_title: "Chính sách quyền riêng tư",
         pol_app: "ChefEasy",
@@ -256,7 +256,7 @@ const i18n = {
    page should be too. Keys missing here fall through to Vietnamese. */
 i18n.en = {
     page_title: "ChefEasy — cook a recipe one step at a time | AIBachKhoa",
-    meta_desc: "A cooking app for Android: 44 Vietnamese, Chinese, Japanese and Korean dishes, a guided cooking mode with a timer on every task, voice search, and every recipe readable with no connection.",
+    meta_desc: "A cooking app for Android: 44 Vietnamese, Chinese, Japanese and Korean dishes, guided step-by-step mode with timers, voice search, works offline.",
     aria_lang: "Change language",
     aria_theme: "Toggle theme",
     aria_menu: "Open menu",
@@ -392,8 +392,8 @@ i18n.en = {
     footer_contact: "Contact",
     footer_rights: "All rights reserved.",
 
-    ios_page_title: "ChefEasy for iPhone & iPad — cook one step at a time | AIBachKhoa",
-    ios_meta_desc: "A cooking app for iPhone and iPad: 44 Vietnamese, Chinese, Japanese and Korean dishes, a guided cooking mode with a timer on every task, voice search, and every recipe readable offline. Requires iOS 15.0 or later.",
+    ios_page_title: "ChefEasy for iPhone & iPad — cook step by step | AIBachKhoa",
+    ios_meta_desc: "A cooking app for iPhone and iPad: 44 Asian dishes, guided step-by-step mode with timers, voice search, works offline. Requires iOS 15.0 or later.",
     ios_kicker: "iPhone & iPad · home cooking",
     ios_meta: "Bundle id <code>com.tdson.cooky</code> · portrait · iPhone and iPad, iOS 15.0 or later · free, with ads and an optional subscription.",
     ios_faq1_q: "Which iPhones and iPads does it run on?",
@@ -411,7 +411,7 @@ i18n.en = {
     ios_pro_a5: "Ads return and the Chinese, Japanese and Korean dishes lock again at the end of the period you paid for. The Vietnamese dishes stay.",
 
     pol_page_title: "Privacy Policy — ChefEasy | AIBachKhoa",
-    pol_meta_desc: "How ChefEasy handles information: what stays on your device, where a voice search goes, what the ad network and the app stores receive, and why the app needs no other permission.",
+    pol_meta_desc: "How ChefEasy handles information: what stays on your device, where a voice search goes, and what the ad network and app stores receive.",
     pol_eyebrow: "Legal",
     pol_title: "Privacy Policy",
     pol_app: "ChefEasy",
@@ -523,6 +523,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // A choice made on these pages wins, then whatever the visitor picked on
     // the landing page, then the browser's own preference.
     const detectLang = () => {
+        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // or a previous visit would have preferred.
+        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
+        if (fromUrl) return fromUrl;
         const own = localStorage.getItem('chefeasy-lang');
         if (own && supported.includes(own)) return own;
         const site = localStorage.getItem('lang');
@@ -570,8 +574,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
-        currentLang = sel.value;
-        localStorage.setItem('chefeasy-lang', currentLang);
+        const lang = sel.value;
+        localStorage.setItem('chefeasy-lang', lang);
+        // Each language is its own page now, so go there rather
+        // than rewriting this one and leaving the URL lying.
+        if (window.LangUrl) {
+            window.location.href = window.LangUrl.hrefFor(lang, DEFAULT_LANG, supported);
+            return;
+        }
+        currentLang = lang;
         updateLanguage(currentLang);
     }));
 
@@ -589,7 +600,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dict = i18n[currentLang] || i18n[DEFAULT_LANG];
         const fallback = i18n[DEFAULT_LANG];
         const key = active.dataset.key;
-        galImg.src = SHOT_DIR + active.dataset.shot + '.png';
+        galImg.src = SHOT_DIR + active.dataset.shot + '.webp';
         galImg.alt = 'ChefEasy — ' + (dict[key + '_title'] || fallback[key + '_title'] || '');
         if (galTitle) galTitle.textContent = dict[key + '_title'] || fallback[key + '_title'] || '';
         if (galCap) galCap.textContent = dict[key + '_cap'] || fallback[key + '_cap'] || '';
@@ -607,7 +618,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Warm the neighbouring shots so the first few clicks feel instant.
     if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
-            tabs.slice(1).forEach(tab => { new Image().src = SHOT_DIR + tab.dataset.shot + '.png'; });
+            tabs.slice(1).forEach(tab => { new Image().src = SHOT_DIR + tab.dataset.shot + '.webp'; });
         });
     }
 

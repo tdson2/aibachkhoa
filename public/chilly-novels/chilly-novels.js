@@ -9,9 +9,9 @@ const SHOT_DIR = '/assets/apps/novels/';
 const i18n = {
     en: {
         page_title: "Chilly Novels — download once, read offline | AIBachKhoa",
-        meta_desc: "A small Vietnamese reading app for short stories and comics. Pick what you want, download it once — a story weighs about 15 KB — and read it offline forever. No account, nothing to sign up for.",
+        meta_desc: "A small Vietnamese reading app for short stories and comics. Download once — about 15 KB a story — and read offline forever. No account needed.",
         pol_page_title: "Chilly Novels — privacy policy | AIBachKhoa",
-        pol_meta_desc: "Chilly Novels has no accounts and collects no personal information. Favourites, history and reading progress stay on your device. Where the stories come from, and how to ask for one to be removed.",
+        pol_meta_desc: "Chilly Novels has no accounts and collects no personal information. Favourites, history and reading progress all stay on your own device.",
 
         aria_lang: "Change language",
         aria_theme: "Toggle theme",
@@ -137,9 +137,9 @@ const i18n = {
 
     vi: {
         page_title: "Chilly Novels — tải một lần, đọc offline | AIBachKhoa",
-        meta_desc: "Ứng dụng đọc truyện ngắn và truyện tranh. Chọn truyện bạn thích, tải một lần — mỗi truyện chữ chỉ khoảng 15 KB — rồi đọc offline thoải mái. Không tài khoản, không phải đăng ký.",
+        meta_desc: "Ứng dụng đọc truyện ngắn và truyện tranh. Tải một lần, mỗi truyện chỉ khoảng 15 KB, rồi đọc offline thoải mái. Không cần tài khoản.",
         pol_page_title: "Chilly Novels — chính sách quyền riêng tư | AIBachKhoa",
-        pol_meta_desc: "Chilly Novels không có tài khoản và không thu thập thông tin cá nhân. Truyện yêu thích, lịch sử và tiến trình đọc đều nằm trên máy bạn. Nguồn truyện đến từ đâu, và cách yêu cầu gỡ nội dung.",
+        pol_meta_desc: "Chilly Novels không có tài khoản và không thu thập thông tin cá nhân. Truyện yêu thích, lịch sử và tiến trình đọc đều nằm trên máy bạn.",
 
         aria_lang: "Đổi ngôn ngữ",
         aria_theme: "Đổi giao diện sáng/tối",
@@ -288,6 +288,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const supported = LANGS.map(l => l.code);
 
     const detectLang = () => {
+        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // or a previous visit would have preferred.
+        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
+        if (fromUrl) return fromUrl;
         const own = localStorage.getItem('chilly-novels-lang');
         if (own && supported.includes(own)) return own;
         const site = localStorage.getItem('lang');
@@ -335,8 +339,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
-        currentLang = sel.value;
-        localStorage.setItem('chilly-novels-lang', currentLang);
+        const lang = sel.value;
+        localStorage.setItem('chilly-novels-lang', lang);
+        // Each language is its own page now, so go there rather
+        // than rewriting this one and leaving the URL lying.
+        if (window.LangUrl) {
+            window.location.href = window.LangUrl.hrefFor(lang, DEFAULT_LANG, supported);
+            return;
+        }
+        currentLang = lang;
         updateLanguage(currentLang);
     }));
 
@@ -353,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!active || !galImg) return;
         const dict = i18n[currentLang] || i18n[DEFAULT_LANG];
         const key = active.dataset.key;
-        galImg.src = SHOT_DIR + active.dataset.shot + '.png';
+        galImg.src = SHOT_DIR + active.dataset.shot + '.webp';
         galImg.alt = 'Chilly Novels — ' + (dict[key + '_h'] || '');
         if (galTitle) galTitle.textContent = dict[key + '_h'] || '';
         if (galCap) galCap.textContent = dict[key + '_p'] || '';
@@ -370,7 +381,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
-            tabs.slice(1).forEach(tab => { new Image().src = SHOT_DIR + tab.dataset.shot + '.png'; });
+            tabs.slice(1).forEach(tab => { new Image().src = SHOT_DIR + tab.dataset.shot + '.webp'; });
         });
     }
 

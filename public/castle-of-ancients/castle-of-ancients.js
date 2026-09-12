@@ -12,7 +12,7 @@
 const i18n = {
     en: {
         page_title: "Castle of Ancients — hold the road | AIBachKhoa",
-        meta_desc: "A hand-drawn pixel tower defense game for iPhone and iPad. Four guard posts, twelve maps, twenty-four kinds of enemy, and campaign rules you set yourself. No ads, no purchases, plays offline.",
+        meta_desc: "A hand-drawn pixel tower defense for iPhone and iPad. Four guard posts, twelve maps, twenty-four enemies. No ads, no purchases, plays offline.",
         aria_lang: "Change language",
         aria_theme: "Toggle theme",
         aria_menu: "Open menu",
@@ -181,7 +181,7 @@ const i18n = {
 
         /* ---------- Privacy policy ---------- */
         pol_page_title: "Privacy Policy — Castle of Ancients | AIBachKhoa",
-        pol_meta_desc: "How Castle of Ancients handles information: it collects nothing, sends nothing, and has no network access at all. Everything the game saves stays in its own folder on your device.",
+        pol_meta_desc: "How Castle of Ancients handles information: it collects nothing, sends nothing, and has no network access. Every save stays on your device.",
         pol_kicker: "Last updated: 2 September 2026",
         pol_title: "Privacy Policy — Castle of Ancients",
         pol_lead: "Castle of Ancients does not collect, transmit or share any information about you. It has no network access at all, no analytics, no advertising, no accounts and no in-app purchases. Everything it saves stays in the app's own folder on your device.",
@@ -240,7 +240,7 @@ const i18n = {
 
     vi: {
         page_title: "Castle of Ancients — giữ lấy con đường | AIBachKhoa",
-        meta_desc: "Game thủ thành pixel vẽ tay cho iPhone và iPad. Bốn loại trạm canh gác, mười hai bản đồ, hai mươi bốn loại quân địch, và luật chơi chiến dịch do bạn đặt. Không quảng cáo, không mua trong ứng dụng, chơi offline.",
+        meta_desc: "Game thủ thành pixel vẽ tay cho iPhone và iPad. Bốn trạm canh, mười hai bản đồ, hai mươi bốn loại quân địch. Không quảng cáo, chơi offline.",
         aria_lang: "Đổi ngôn ngữ",
         aria_theme: "Đổi giao diện",
         aria_menu: "Mở menu",
@@ -409,7 +409,7 @@ const i18n = {
 
         /* ---------- Chính sách quyền riêng tư ---------- */
         pol_page_title: "Chính sách quyền riêng tư — Castle of Ancients | AIBachKhoa",
-        pol_meta_desc: "Cách Castle of Ancients xử lý thông tin: không thu thập gì, không gửi đi gì, và không có quyền mạng nào. Mọi thứ game lưu đều nằm trong thư mục riêng của nó trên máy bạn.",
+        pol_meta_desc: "Cách Castle of Ancients xử lý thông tin: không thu thập gì, không gửi đi gì, không có quyền mạng. Mọi thứ game lưu đều nằm trên máy bạn.",
         pol_kicker: "Cập nhật lần cuối: 2 tháng 9 năm 2026",
         pol_title: "Chính sách quyền riêng tư — Castle of Ancients",
         pol_lead: "Castle of Ancients không thu thập, không truyền đi và không chia sẻ bất kỳ thông tin nào về bạn. Ứng dụng không có quyền mạng nào, không đo đạc, không quảng cáo, không tài khoản và không mua trong ứng dụng. Mọi thứ nó lưu đều nằm trong thư mục riêng của ứng dụng trên máy bạn.",
@@ -468,7 +468,8 @@ const i18n = {
 };
 
 const LANGS = [
-    { code: 'en', label: 'English' }
+    { code: 'en', label: 'English' },
+    { code: 'vi', label: 'Tiếng Việt' }
 ];
 const DEFAULT_LANG = 'en';
 const SHOT_DIR = '/assets/games/castle-of-ancients/';
@@ -494,6 +495,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // page. Anything no longer offered — a 'vi' left over from before it was
     // hidden — falls back to English rather than painting a blank page.
     const detectLang = () => {
+        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // or a previous visit would have preferred.
+        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
+        if (fromUrl) return fromUrl;
         const own = localStorage.getItem('castleofancients-lang');
         if (own && supported.includes(own)) return own;
         const site = localStorage.getItem('lang');
@@ -542,8 +547,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
-        currentLang = sel.value;
-        localStorage.setItem('castleofancients-lang', currentLang);
+        const lang = sel.value;
+        localStorage.setItem('castleofancients-lang', lang);
+        // Each language is its own page now, so go there rather
+        // than rewriting this one and leaving the URL lying.
+        if (window.LangUrl) {
+            window.location.href = window.LangUrl.hrefFor(lang, DEFAULT_LANG, supported);
+            return;
+        }
+        currentLang = lang;
         updateLanguage(currentLang);
     }));
 
@@ -560,7 +572,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!active || !galImg) return;
         const dict = i18n[currentLang] || i18n[DEFAULT_LANG];
         const key = active.dataset.key;
-        galImg.src = SHOT_DIR + active.dataset.shot + '.png';
+        galImg.src = SHOT_DIR + active.dataset.shot + '.webp';
         galImg.alt = 'Castle of Ancients — ' + (dict[key + '_title'] || '');
         if (galTitle) galTitle.textContent = dict[key + '_title'] || '';
         if (galCap) galCap.textContent = dict[key + '_cap'] || '';
@@ -578,7 +590,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Warm the neighbouring shots so the first few clicks feel instant.
     if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
-            tabs.slice(1).forEach(tab => { new Image().src = SHOT_DIR + tab.dataset.shot + '.png'; });
+            tabs.slice(1).forEach(tab => { new Image().src = SHOT_DIR + tab.dataset.shot + '.webp'; });
         });
     }
 

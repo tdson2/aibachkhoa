@@ -12,7 +12,7 @@
 const i18n = {
     en: {
         page_title: "Novaryn — one thumb, endless waves | AIBachKhoa",
-        meta_desc: "A vertical arcade shoot-'em-up for Android. Drag to fly, the cannon fires itself, and every fifth wave brings a boss with a health bar. Ten ships, three power-ups, no ads, plays offline.",
+        meta_desc: "A vertical arcade shoot-'em-up for Android. Drag to fly, the cannon fires itself, a boss every fifth wave. Ten ships, no ads, plays offline.",
         aria_lang: "Change language",
         aria_theme: "Toggle theme",
         aria_menu: "Open menu",
@@ -157,7 +157,7 @@ const i18n = {
 
         /* ---------- Privacy policy ---------- */
         pol_page_title: "Privacy Policy — Novaryn | AIBachKhoa",
-        pol_meta_desc: "How Novaryn handles information: what stays on your device, what the App Store and Google Play receive when you buy a ship or subscribe to Pro, and why the app needs no other permission.",
+        pol_meta_desc: "How Novaryn handles information: what stays on your device, and what the App Store and Google Play receive when you buy a ship or Pro.",
         pol_back: "Back to the game",
         pol_eyebrow: "Legal",
         pol_title: "Privacy Policy",
@@ -255,7 +255,7 @@ const i18n = {
         /* ---- /novaryn/ios : the iOS build has its own page, because the
            App Store listing must not send anyone to another storefront ---- */
         ios_page_title: "Novaryn for iPhone & iPad | AIBachKhoa",
-        ios_meta_desc: "A vertical arcade shoot-'em-up for iPhone and iPad. Drag to fly, the cannon fires itself, a boss every fifth wave. Twenty gun tiers, ten ships, no ads, no tracking, plays offline.",
+        ios_meta_desc: "A vertical arcade shoot-'em-up for iPhone and iPad. Drag to fly, the cannon fires itself, a boss every fifth wave. Ten ships, no ads, offline.",
         ios_kicker: "iPhone &amp; iPad · arcade space shooter",
         ios_title: "One thumb. <em>Endless waves</em>.",
         ios_sub: "A vertical arcade shoot-'em-up built for short sessions. Drag anywhere on the glass to fly; the cannon fires by itself. Everything else is dodging, timing, and knowing when to push your luck.",
@@ -303,7 +303,7 @@ const i18n = {
 
     vi: {
         page_title: "Novaryn — một ngón tay, vô tận đợt tấn công | AIBachKhoa",
-        meta_desc: "Game bắn phi thuyền arcade dọc màn hình cho Android. Kéo để bay, súng tự bắn, cứ mỗi đợt thứ năm là một trùm có thanh máu. Mười phi thuyền, ba loại vật phẩm, không quảng cáo, chơi offline.",
+        meta_desc: "Game bắn phi thuyền arcade dọc màn hình cho Android. Kéo để bay, súng tự bắn, cứ đợt thứ năm là một trùm. Mười phi thuyền, chơi offline.",
         aria_lang: "Đổi ngôn ngữ",
         aria_theme: "Đổi giao diện",
         aria_menu: "Mở menu",
@@ -448,7 +448,7 @@ const i18n = {
 
         /* ---------- Chính sách quyền riêng tư ---------- */
         pol_page_title: "Chính sách quyền riêng tư — Novaryn | AIBachKhoa",
-        pol_meta_desc: "Cách Novaryn xử lý thông tin: những gì ở lại trên máy bạn, những gì Google Play Billing nhận khi bạn mua phi thuyền hay đăng ký Pro, và vì sao ứng dụng không cần quyền nào khác.",
+        pol_meta_desc: "Cách Novaryn xử lý thông tin: gì ở lại trên máy bạn, và Google Play Billing nhận gì khi bạn mua phi thuyền hay đăng ký Pro.",
         pol_back: "Quay lại trang game",
         pol_eyebrow: "Pháp lý",
         pol_title: "Chính sách quyền riêng tư",
@@ -545,7 +545,7 @@ const i18n = {
 
         /* ---- /novaryn/ios ---- */
         ios_page_title: "Novaryn cho iPhone & iPad | AIBachKhoa",
-        ios_meta_desc: "Game bắn phi thuyền arcade dọc màn hình cho iPhone và iPad. Kéo để bay, súng tự bắn, cứ đợt thứ năm là một trùm. Hai mươi bậc súng, mười phi thuyền, không quảng cáo, chơi offline.",
+        ios_meta_desc: "Game bắn phi thuyền arcade dọc màn hình cho iPhone và iPad. Kéo để bay, súng tự bắn, cứ đợt thứ năm là một trùm. Mười phi thuyền, offline.",
         ios_kicker: "iPhone &amp; iPad · game bắn phi thuyền arcade",
         ios_title: "Một ngón tay. <em>Vô tận đợt tấn công</em>.",
         ios_sub: "Game bắn phi thuyền dọc màn hình cho những phiên chơi ngắn. Kéo bất cứ đâu trên màn hình để bay; súng tự bắn. Phần còn lại là né, canh thời điểm, và biết lúc nào nên liều.",
@@ -593,7 +593,8 @@ const i18n = {
 };
 
 const LANGS = [
-    { code: 'en', label: 'English' }
+    { code: 'en', label: 'English' },
+    { code: 'vi', label: 'Tiếng Việt' }
 ];
 const DEFAULT_LANG = 'en';
 const SHOT_DIR = '/assets/games/novaryn/';
@@ -621,6 +622,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // page. Anything no longer offered — a 'vi' left over from before it was
     // hidden — falls back to English rather than painting a blank page.
     const detectLang = () => {
+        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // or a previous visit would have preferred.
+        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
+        if (fromUrl) return fromUrl;
         const own = localStorage.getItem('novaryn-lang');
         if (own && supported.includes(own)) return own;
         const site = localStorage.getItem('lang');
@@ -669,8 +674,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
-        currentLang = sel.value;
-        localStorage.setItem('novaryn-lang', currentLang);
+        const lang = sel.value;
+        localStorage.setItem('novaryn-lang', lang);
+        // Each language is its own page now, so go there rather
+        // than rewriting this one and leaving the URL lying.
+        if (window.LangUrl) {
+            window.location.href = window.LangUrl.hrefFor(lang, DEFAULT_LANG, supported);
+            return;
+        }
+        currentLang = lang;
         updateLanguage(currentLang);
     }));
 
@@ -689,7 +701,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dict = i18n[currentLang] || i18n[DEFAULT_LANG];
         const key = active.dataset.key;
         const shot = active.dataset.shot;
-        galImg.src = SHOT_DIR + shot + '.png';
+        galImg.src = SHOT_DIR + shot + '.webp';
         galImg.alt = 'Novaryn — ' + (dict[key + '_title'] || '');
         if (galStage) galStage.classList.toggle('is-wide', WIDE_SHOTS.has(shot));
         if (galTitle) galTitle.textContent = dict[key + '_title'] || '';
@@ -708,7 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Warm the neighbouring shots so the first few clicks feel instant.
     if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
-            tabs.slice(1).forEach(tab => { new Image().src = SHOT_DIR + tab.dataset.shot + '.png'; });
+            tabs.slice(1).forEach(tab => { new Image().src = SHOT_DIR + tab.dataset.shot + '.webp'; });
         });
     }
 

@@ -12,8 +12,8 @@
 
 const i18n = {
     en: {
-        page_title: "Dungeon of the Fallen Blade — a hundred depths, one blade | AIBachKhoa",
-        meta_desc: "A hand-made pixel-art action roguelite for Android: a hundred procedurally generated depths, twenty lords, a three-hit sword combo, a bow and a dodge roll, with Google Play Games leaderboards. No ads, no purchases.",
+        page_title: "Dungeon of the Fallen Blade — pixel roguelite | AIBachKhoa",
+        meta_desc: "A hand-made pixel-art action roguelite for Android: a hundred procedural depths, twenty lords, sword combos, bow and dodge roll. No ads, no purchases.",
         aria_lang: "Change language",
         aria_theme: "Toggle theme",
         aria_menu: "Open menu",
@@ -203,7 +203,7 @@ const i18n = {
 
         // ---- privacy policy page ----
         pol_page_title: "Privacy Policy — Dungeon of the Fallen Blade | AIBachKhoa",
-        pol_meta_desc: "How Dungeon of the Fallen Blade handles information: what stays on your device, what Google Play Games receives when you sign in, and why the app asks for the internet permission.",
+        pol_meta_desc: "How Dungeon of the Fallen Blade handles information: what stays on your device, what Google Play Games receives, and why it needs internet.",
         pol_eyebrow: "Legal",
         pol_title: "Privacy Policy",
         pol_game: "Dungeon of the Fallen Blade",
@@ -363,8 +363,8 @@ const i18n = {
     },
 
     vi: {
-        page_title: "Dungeon of the Fallen Blade — một trăm tầng ngục, một thanh kiếm | AIBachKhoa",
-        meta_desc: "Game hành động roguelite pixel art cho Android: một trăm tầng ngục sinh ngẫu nhiên, hai mươi lãnh chúa, combo kiếm ba nhát, cung tên và lăn né, kèm bảng xếp hạng Google Play Games. Không quảng cáo, không mua trong ứng dụng.",
+        page_title: "Dungeon of the Fallen Blade — roguelite pixel | AIBachKhoa",
+        meta_desc: "Game hành động roguelite pixel art cho Android: một trăm tầng ngục sinh ngẫu nhiên, hai mươi lãnh chúa, combo kiếm, cung tên và lăn né.",
         aria_lang: "Đổi ngôn ngữ",
         aria_theme: "Đổi giao diện sáng tối",
         aria_menu: "Mở menu",
@@ -553,8 +553,8 @@ const i18n = {
         footer_rights: "Bảo lưu mọi quyền.",
 
         // ---- privacy policy page ----
-        pol_page_title: "Chính sách quyền riêng tư — Dungeon of the Fallen Blade | AIBachKhoa",
-        pol_meta_desc: "Dungeon of the Fallen Blade xử lý thông tin ra sao: những gì nằm lại trên máy bạn, những gì Google Play Games nhận khi bạn đăng nhập, và vì sao ứng dụng xin quyền internet.",
+        pol_page_title: "Chính sách riêng tư — Dungeon of the Fallen Blade",
+        pol_meta_desc: "Dungeon of the Fallen Blade xử lý thông tin ra sao: gì nằm lại trên máy bạn, Google Play Games nhận gì, vì sao cần quyền internet.",
         pol_eyebrow: "Pháp lý",
         pol_title: "Chính sách quyền riêng tư",
         pol_game: "Dungeon of the Fallen Blade",
@@ -717,7 +717,8 @@ const i18n = {
 /* Languages offered in the picker, in order.
    'vi' is deliberately left out — add { code: 'vi', label: 'Tiếng Việt' } to show it again. */
 const LANGS = [
-    { code: 'en', label: 'English' }
+    { code: 'en', label: 'English' },
+    { code: 'vi', label: 'Tiếng Việt' }
 ];
 const DEFAULT_LANG = 'en';
 const SHOT_DIR = '/assets/games/dungeon-blade/';
@@ -744,6 +745,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // page. Anything no longer offered — a 'vi' left over from before it was
     // hidden — falls back to English rather than painting a blank page.
     const detectLang = () => {
+        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // or a previous visit would have preferred.
+        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
+        if (fromUrl) return fromUrl;
         const own = localStorage.getItem('dungeon-lang');
         if (own && supported.includes(own)) return own;
         const site = localStorage.getItem('lang');
@@ -792,8 +797,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
-        currentLang = sel.value;
-        localStorage.setItem('dungeon-lang', currentLang);
+        const lang = sel.value;
+        localStorage.setItem('dungeon-lang', lang);
+        // Each language is its own page now, so go there rather
+        // than rewriting this one and leaving the URL lying.
+        if (window.LangUrl) {
+            window.location.href = window.LangUrl.hrefFor(lang, DEFAULT_LANG, supported);
+            return;
+        }
+        currentLang = lang;
         updateLanguage(currentLang);
     }));
 
@@ -810,7 +822,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!active || !galImg) return;
         const dict = i18n[currentLang] || i18n[DEFAULT_LANG];
         const key = active.dataset.key;
-        galImg.src = SHOT_DIR + active.dataset.shot + '.png';
+        galImg.src = SHOT_DIR + active.dataset.shot + '.webp';
         galImg.alt = 'Dungeon of the Fallen Blade — ' + (dict[key + '_title'] || '');
         if (galTitle) galTitle.textContent = dict[key + '_title'] || '';
         if (galCap) galCap.textContent = dict[key + '_cap'] || '';
@@ -828,7 +840,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Warm the neighbouring shots so the first few clicks feel instant.
     if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
-            tabs.slice(1).forEach(t => { new Image().src = SHOT_DIR + t.dataset.shot + '.png'; });
+            tabs.slice(1).forEach(t => { new Image().src = SHOT_DIR + t.dataset.shot + '.webp'; });
         });
     }
 

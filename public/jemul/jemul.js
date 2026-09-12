@@ -7,10 +7,10 @@ const SHOT_DIR = '/assets/apps/jemulwap/';
 
 const i18n = {
     en: {
-        page_title: "JeMul — play Java (J2ME) games on Android and in the browser | AIBachKhoa",
-        meta_desc: "JeMul runs the old Java ME games from feature phones. Install the Android app to play your own .jar files, or open the browser edition and play a whole library without installing anything.",
+        page_title: "JeMul — J2ME emulator for Android and browser | AIBachKhoa",
+        meta_desc: "JeMul runs the old Java ME games from feature phones. Install the Android app to play your own .jar files, or play a whole library in your browser.",
         pol_page_title: "JeMul — privacy policy | AIBachKhoa",
-        pol_meta_desc: "JeMul has no accounts on Android and keeps everything on the device. The browser edition signs in with Google only to control who can start a game. What is stored, and how to ask for content to be removed.",
+        pol_meta_desc: "JeMul has no accounts on Android and keeps everything on the device. The browser edition signs in with Google only to control who can play.",
 
         aria_lang: "Change language",
         aria_theme: "Toggle theme",
@@ -121,10 +121,10 @@ const i18n = {
     },
 
     vi: {
-        page_title: "JeMul — chơi game Java (J2ME) trên Android và trên trình duyệt | AIBachKhoa",
-        meta_desc: "JeMul chạy lại những game Java ME của điện thoại phổ thông. Cài app Android để chơi file .jar của bạn, hoặc mở bản web và chơi cả thư viện mà không cần cài gì.",
+        page_title: "JeMul — giả lập game Java J2ME cho Android | AIBachKhoa",
+        meta_desc: "JeMul chạy lại game Java ME của điện thoại phổ thông. Cài app Android để chơi file .jar của bạn, hoặc mở bản web chơi cả thư viện.",
         pol_page_title: "JeMul — chính sách quyền riêng tư | AIBachKhoa",
-        pol_meta_desc: "Bản Android không có tài khoản và giữ mọi thứ trên máy. Bản web đăng nhập Google chỉ để biết ai đang dùng máy chủ. Dữ liệu nào được lưu, và cách yêu cầu gỡ nội dung.",
+        pol_meta_desc: "Bản Android không có tài khoản và giữ mọi thứ trên máy. Bản web đăng nhập Google chỉ để biết ai đang dùng máy chủ.",
 
         aria_lang: "Đổi ngôn ngữ",
         aria_theme: "Đổi giao diện sáng/tối",
@@ -259,6 +259,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const supported = LANGS.map(l => l.code);
 
     const detectLang = () => {
+        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // or a previous visit would have preferred.
+        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
+        if (fromUrl) return fromUrl;
         const own = localStorage.getItem('jemul-lang');
         if (own && supported.includes(own)) return own;
         const site = localStorage.getItem('lang');
@@ -302,8 +306,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
-        currentLang = sel.value;
-        localStorage.setItem('jemul-lang', currentLang);
+        const lang = sel.value;
+        localStorage.setItem('jemul-lang', lang);
+        // Each language is its own page now, so go there rather
+        // than rewriting this one and leaving the URL lying.
+        if (window.LangUrl) {
+            window.location.href = window.LangUrl.hrefFor(lang, DEFAULT_LANG, supported);
+            return;
+        }
+        currentLang = lang;
         updateLanguage(currentLang);
     }));
 
@@ -318,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!active || !galImg) return;
         const dict = i18n[currentLang] || i18n[DEFAULT_LANG];
         const key = active.dataset.key;
-        galImg.src = SHOT_DIR + active.dataset.shot + '.png';
+        galImg.src = SHOT_DIR + active.dataset.shot + '.webp';
         galImg.alt = 'JeMul — ' + (dict[key + '_h'] || '');
         if (galTitle) galTitle.textContent = dict[key + '_h'] || '';
         if (galCap) galCap.textContent = dict[key + '_p'] || '';
@@ -335,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
-            tabs.slice(1).forEach(tab => { new Image().src = SHOT_DIR + tab.dataset.shot + '.png'; });
+            tabs.slice(1).forEach(tab => { new Image().src = SHOT_DIR + tab.dataset.shot + '.webp'; });
         });
     }
 

@@ -20,7 +20,7 @@ const i18n = {
         footer_contact: "Contact",
         footer_rights: "All rights reserved.",
         page_title: "Mini Castle — every gatherer is one less spear | AIBachKhoa",
-        meta_desc: "A castle-defense game with a stripped-down RTS economy for iPhone, iPad and Android. Twenty nights, twenty-one maps, twenty-four edicts. No ads, no purchases, fully offline.",
+        meta_desc: "A castle-defense game with a stripped-down RTS economy for iPhone, iPad and Android. Twenty nights, twenty-one maps. No ads, no purchases, offline.",
         pol_page_title: "Privacy Policy — Mini Castle | AIBachKhoa",
         pol_meta_desc: "Mini Castle collects nothing. No account, no network access, no analytics, no ads — every save file stays on your device.",
 
@@ -131,8 +131,8 @@ const i18n = {
         footer_services: "Dịch vụ",
         footer_contact: "Liên hệ",
         footer_rights: "Bảo lưu mọi quyền.",
-        page_title: "Mini Castle — mỗi dân đi hái là một dân không cầm giáo | AIBachKhoa",
-        meta_desc: "Game thủ thành pha kinh tế RTS rút gọn cho iPhone, iPad và Android. Hai mươi đêm, hai mươi mốt bản đồ, hai mươi bốn sắc lệnh. Không quảng cáo, không mua trong ứng dụng, chơi offline hoàn toàn.",
+        page_title: "Mini Castle — game thủ thành pha kinh tế RTS | AIBachKhoa",
+        meta_desc: "Game thủ thành pha kinh tế RTS rút gọn cho iPhone, iPad và Android. Hai mươi đêm, hai mươi mốt bản đồ. Không quảng cáo, chơi offline.",
         pol_page_title: "Chính sách quyền riêng tư — Mini Castle | AIBachKhoa",
         pol_meta_desc: "Mini Castle không thu thập bất cứ dữ liệu nào. Không tài khoản, không mạng, không phân tích, không quảng cáo — mọi thứ lưu trên máy bạn.",
 
@@ -260,6 +260,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const supported = LANGS.map(l => l.code);
 
     const detectLang = () => {
+        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // or a previous visit would have preferred.
+        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
+        if (fromUrl) return fromUrl;
         const own = localStorage.getItem('mini-castle-lang');
         if (own && supported.includes(own)) return own;
         const site = localStorage.getItem('lang');
@@ -307,8 +311,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
-        currentLang = sel.value;
-        localStorage.setItem('mini-castle-lang', currentLang);
+        const lang = sel.value;
+        localStorage.setItem('mini-castle-lang', lang);
+        // Each language is its own page now, so go there rather
+        // than rewriting this one and leaving the URL lying.
+        if (window.LangUrl) {
+            window.location.href = window.LangUrl.hrefFor(lang, DEFAULT_LANG, supported);
+            return;
+        }
+        currentLang = lang;
         updateLanguage(currentLang);
     }));
 
@@ -325,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!active || !galImg) return;
         const dict = i18n[currentLang] || i18n[DEFAULT_LANG];
         const key = active.dataset.key;
-        galImg.src = SHOT_DIR + active.dataset.shot + '.png';
+        galImg.src = SHOT_DIR + active.dataset.shot + '.webp';
         galImg.alt = 'Mini Castle — ' + (dict[key + '_h'] || '');
         if (galTitle) galTitle.textContent = dict[key + '_h'] || '';
         if (galCap) galCap.textContent = dict[key + '_p'] || '';
@@ -342,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
-            tabs.slice(1).forEach(tab => { new Image().src = SHOT_DIR + tab.dataset.shot + '.png'; });
+            tabs.slice(1).forEach(tab => { new Image().src = SHOT_DIR + tab.dataset.shot + '.webp'; });
         });
     }
 

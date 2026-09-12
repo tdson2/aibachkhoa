@@ -5,7 +5,14 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": "npm run og && npm run social && npm run schema && npm run i18n && npm run sitemap",
+    "og": "python3 tools/build-og-images.py",
+    "social": "python3 tools/build-social-tags.py",
+    "schema": "node tools/build-structured-data.js",
+    "i18n": "node tools/build-i18n-pages.js",
+    "sitemap": "node tools/build-sitemap.js",
+    "webp": "python3 tools/build-webp.py"
   },
   "dependencies": {
     "express": "^4.19.2"

@@ -10,8 +10,8 @@
 const i18n = {
     en: {
         /* ---------------------------------------------------- shell ---- */
-        page_title: "Iron Line — hold the line across 12 battlefields | AIBachKhoa",
-        meta_desc: "An offline tower defense for Android: 12 battlefields, four towers with four tiers each, fifteen enemy types on the ground and in the air. No ads, no purchases, no internet permission.",
+        page_title: "Iron Line — tower defense across 12 maps | AIBachKhoa",
+        meta_desc: "An offline tower defense for Android: 12 battlefields, four towers with four tiers each, fifteen enemy types. No ads, no purchases, no internet.",
         aria_lang: "Change language",
         aria_theme: "Toggle theme",
         aria_menu: "Open menu",
@@ -120,7 +120,7 @@ const i18n = {
 
         /* --------------------------------------------------- policy ---- */
         pol_page_title: "Privacy Policy — Iron Line | AIBachKhoa",
-        pol_meta_desc: "The Iron Line privacy policy: the app collects no data, declares no internet permission, contains no third-party SDKs, and stores progress only on your own device.",
+        pol_meta_desc: "The Iron Line privacy policy: no data collected, no internet permission, no third-party SDKs, and progress stored only on your own device.",
         pol_back: "Back to the game",
         pol_eyebrow: "Legal",
         pol_title: "Privacy Policy",
@@ -190,7 +190,7 @@ const LANGS = [
 ];
 const DEFAULT_LANG = 'en';
 const SHOT_DIR = '/assets/games/iron-line/';
-const SHOT_EXT = '.jpg';
+const SHOT_EXT = '.webp';
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.documentElement;
@@ -214,6 +214,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // page. Anything no longer offered falls back to English rather than
     // painting a blank page.
     const detectLang = () => {
+        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // or a previous visit would have preferred.
+        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
+        if (fromUrl) return fromUrl;
         const own = localStorage.getItem('ironline-lang');
         if (own && supported.includes(own)) return own;
         const site = localStorage.getItem('lang');
@@ -262,8 +266,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
-        currentLang = sel.value;
-        localStorage.setItem('ironline-lang', currentLang);
+        const lang = sel.value;
+        localStorage.setItem('ironline-lang', lang);
+        // Each language is its own page now, so go there rather
+        // than rewriting this one and leaving the URL lying.
+        if (window.LangUrl) {
+            window.location.href = window.LangUrl.hrefFor(lang, DEFAULT_LANG, supported);
+            return;
+        }
+        currentLang = lang;
         updateLanguage(currentLang);
     }));
 

@@ -41,8 +41,7 @@ const i18n = {
         skip_link: "Skip to content",
         nav_about: "About",
         nav_products: "Products",
-        hero_eyebrow: "Software studio · Hà Nội, Việt Nam",
-        hero_title: "AI tools for work and <em>automation</em>.",
+        hero_title: "AI <em>everywhere</em>, making life easier.",
         hero_subtitle: "CrewAI Platform runs your AI agents. BKSafe watches your machines. Alongside them, a shelf of mobile apps and games.",
         btn_explore: "Explore products",
         products_title: "Pick the tool that fits.",
@@ -124,7 +123,7 @@ const i18n = {
         latest_castle: "Un camino, un castillo. Coloca puestos de guardia sobre la hierba y convierte un tramo de camino abierto en una trampa mortal: doce mapas, sin anuncios, totalmente sin conexión.",
         latest_minicastle: "Cada aldeano que envías a recolectar es una lanza menos en la muralla. Veinte noches, veintiún mapas.",
         latest_bksafemac: "CPU, GPU, memoria, discos, red y temperatura en una sola pantalla, más un análisis de malware y un limpiador de archivos basura.",
-        page_title: "AIBachKhoa — Herramientas de IA para el trabajo y la automatización",
+        page_title: "AIBachKhoa — Herramientas de IA y automatización",
         meta_desc: "AIBachKhoa crea software práctico: CrewAI Platform para ejecutar agentes de IA, BKSafe para la seguridad de tus dispositivos, y apps móviles y juegos.",
         aria_lang: "Cambiar idioma",
         aria_theme: "Cambiar tema",
@@ -146,8 +145,7 @@ const i18n = {
         skip_link: "Saltar al contenido",
         nav_about: "Nosotros",
         nav_products: "Productos",
-        hero_eyebrow: "Estudio de software · Hà Nội, Vietnam",
-        hero_title: "Herramientas de IA para el trabajo y la <em>automatización</em>.",
+        hero_title: "IA en <em>todas partes</em>, para una vida más fácil.",
         hero_subtitle: "CrewAI Platform ejecuta tus agentes de IA. BKSafe vigila tus equipos. Junto a ellos, una estantería de apps móviles y juegos.",
         btn_explore: "Explorar productos",
         products_title: "Elige la herramienta que necesitas.",
@@ -251,8 +249,7 @@ const i18n = {
         skip_link: "跳到主要内容",
         nav_about: "关于我们",
         nav_products: "产品",
-        hero_eyebrow: "软件工作室 · 越南河内",
-        hero_title: "用于工作与<em>自动化</em>的 AI 工具。",
+        hero_title: "AI <em>无处不在</em>，让生活更轻松。",
         hero_subtitle: "CrewAI Platform 运行你的 AI 智能体，BKSafe 看护你的设备，旁边还有一整排移动应用和游戏。",
         btn_explore: "浏览产品",
         products_title: "选择适合你的工具。",
@@ -356,8 +353,7 @@ const i18n = {
         skip_link: "मुख्य सामग्री पर जाएँ",
         nav_about: "हमारे बारे में",
         nav_products: "उत्पाद",
-        hero_eyebrow: "सॉफ़्टवेयर स्टूडियो · हा नोई, वियतनाम",
-        hero_title: "काम और <em>स्वचालन</em> के लिए AI टूल।",
+        hero_title: "AI <em>हर जगह</em>, ज़िंदगी को आसान बनाते हुए।",
         hero_subtitle: "CrewAI Platform आपके AI एजेंट चलाता है। BKSafe आपकी मशीनों पर नज़र रखता है। इनके साथ मोबाइल ऐप्स और गेम्स की एक पूरी शेल्फ़।",
         btn_explore: "उत्पाद देखें",
         products_title: "अपने लिए सही टूल चुनें।",
@@ -461,8 +457,7 @@ const i18n = {
         skip_link: "تخطَّ إلى المحتوى",
         nav_about: "من نحن",
         nav_products: "المنتجات",
-        hero_eyebrow: "استوديو برمجيات · هانوي، فيتنام",
-        hero_title: "أدوات ذكاء اصطناعي للعمل و<em>الأتمتة</em>.",
+        hero_title: "الذكاء الاصطناعي في <em>كل مكان</em>، ليصبح العيش أسهل.",
         hero_subtitle: "منصة CrewAI تشغّل وكلاء الذكاء الاصطناعي لديك، وBKSafe يراقب أجهزتك، وإلى جانبهما رفّ كامل من تطبيقات الهاتف والألعاب.",
         btn_explore: "استكشف المنتجات",
         products_title: "اختر الأداة المناسبة لك.",
@@ -566,8 +561,7 @@ const i18n = {
         skip_link: "Ir para o conteúdo",
         nav_about: "Sobre nós",
         nav_products: "Produtos",
-        hero_eyebrow: "Estúdio de software · Hà Nội, Vietnam",
-        hero_title: "Ferramentas de IA para o trabalho e a <em>automação</em>.",
+        hero_title: "IA em <em>todo o lado</em>, para uma vida mais fácil.",
         hero_subtitle: "A CrewAI Platform executa os seus agentes de IA. O BKSafe vigia as suas máquinas. Ao lado deles, uma prateleira de apps móveis e jogos.",
         btn_explore: "Explorar produtos",
         products_title: "Escolha a ferramenta certa para você.",
@@ -649,8 +643,8 @@ const i18n = {
         latest_castle: "Une route, un château. Posez des postes de garde sur l'herbe et transformez un tronçon de route dégagée en champ de tir &mdash; douze cartes, sans publicité, entièrement hors ligne.",
         latest_minicastle: "Chaque villageois envoyé récolter, c'est une lance de moins sur le rempart. Vingt nuits, vingt et une cartes.",
         latest_bksafemac: "Processeur, carte graphique, mémoire, disques, réseau et température sur un seul écran, plus une analyse antimalware et un nettoyeur de fichiers inutiles.",
-        page_title: "AIBachKhoa — Des outils d'IA pour le travail et l'automatisation",
-        meta_desc: "AIBachKhoa crée des logiciels utiles : CrewAI Platform pour faire tourner des agents IA, BKSafe pour la sécurité des appareils, plus des applications mobiles et des jeux.",
+        page_title: "AIBachKhoa — Outils d'IA pour le travail",
+        meta_desc: "AIBachKhoa crée des logiciels utiles : CrewAI Platform pour les agents IA, BKSafe pour la sécurité des appareils, plus des apps et des jeux.",
         aria_lang: "Changer de langue",
         aria_theme: "Changer de thème",
         aria_menu: "Ouvrir le menu",
@@ -671,8 +665,7 @@ const i18n = {
         skip_link: "Aller au contenu",
         nav_about: "À propos",
         nav_products: "Produits",
-        hero_eyebrow: "Studio logiciel · Hà Nội, Vietnam",
-        hero_title: "Des outils d'IA pour le travail et l'<em>automatisation</em>.",
+        hero_title: "L'IA <em>partout</em>, pour une vie plus simple.",
         hero_subtitle: "CrewAI Platform fait tourner vos agents IA. BKSafe surveille vos machines. À côté, toute une étagère d'applications mobiles et de jeux.",
         btn_explore: "Découvrir les produits",
         products_title: "Choisissez l'outil qu'il vous faut.",
@@ -774,8 +767,7 @@ const i18n = {
         skip_link: "Zum Inhalt springen",
         nav_about: "Über uns",
         nav_products: "Produkte",
-        hero_eyebrow: "Software-Studio · Hà Nội, Vietnam",
-        hero_title: "KI-Werkzeuge für Arbeit und <em>Automatisierung</em>.",
+        hero_title: "KI <em>überall</em>, für ein einfacheres Leben.",
         hero_subtitle: "CrewAI Platform betreibt Ihre KI-Agenten. BKSafe behält Ihre Geräte im Blick. Daneben ein ganzes Regal voller Mobile-Apps und Spiele.",
         btn_explore: "Produkte entdecken",
         products_title: "Wählt das passende Werkzeug.",
@@ -879,8 +871,7 @@ const i18n = {
         skip_link: "本文へスキップ",
         nav_about: "私たちについて",
         nav_products: "製品",
-        hero_eyebrow: "ソフトウェアスタジオ · ベトナム・ハノイ",
-        hero_title: "仕事と<em>自動化</em>のための AI ツール。",
+        hero_title: "AI を<em>どこにでも</em>。暮らしをもっと楽に。",
         hero_subtitle: "CrewAI Platform がAIエージェントを動かし、BKSafe が端末を見守ります。その隣には、モバイルアプリとゲームがずらり。",
         btn_explore: "製品を見る",
         products_title: "目的に合ったツールを選ぶ。",
@@ -984,8 +975,7 @@ const i18n = {
         skip_link: "본문으로 건너뛰기",
         nav_about: "회사 소개",
         nav_products: "제품",
-        hero_eyebrow: "소프트웨어 스튜디오 · 베트남 하노이",
-        hero_title: "업무와 <em>자동화</em>를 위한 AI 도구.",
+        hero_title: "AI를 <em>어디에나</em>. 삶을 더 쉽게.",
         hero_subtitle: "CrewAI Platform이 AI 에이전트를 돌리고, BKSafe가 기기를 지켜봅니다. 그 옆에는 모바일 앱과 게임이 한 칸 가득.",
         btn_explore: "제품 살펴보기",
         products_title: "필요에 맞는 도구를 고르세요.",
@@ -1089,8 +1079,7 @@ const i18n = {
         skip_link: "Перейти к содержимому",
         nav_about: "О нас",
         nav_products: "Продукты",
-        hero_eyebrow: "Студия разработки · Ханой, Вьетнам",
-        hero_title: "ИИ-инструменты для работы и <em>автоматизации</em>.",
+        hero_title: "ИИ <em>повсюду</em> — чтобы жить было проще.",
         hero_subtitle: "CrewAI Platform запускает ваших ИИ-агентов. BKSafe присматривает за вашими устройствами. Рядом — целая полка мобильных приложений и игр.",
         btn_explore: "Смотреть продукты",
         products_title: "Выберите подходящий инструмент.",
@@ -1196,8 +1185,7 @@ const i18n = {
         skip_link: "Bỏ qua đến nội dung",
         nav_about: "Về chúng tôi",
         nav_products: "Sản phẩm",
-        hero_eyebrow: "Xưởng phần mềm · Hà Nội, Việt Nam",
-        hero_title: "Công cụ AI cho công việc và <em>tự động hóa</em>.",
+        hero_title: "AI <em>khắp mọi nơi</em>, cho cuộc sống dễ hơn.",
         hero_subtitle: "CrewAI Platform chạy các AI agent của bạn. BKSafe trông chừng máy móc của bạn. Bên cạnh đó là cả một kệ ứng dụng di động và trò chơi.",
         btn_explore: "Khám phá sản phẩm",
         products_title: "Chọn công cụ phù hợp với bạn.",
@@ -1277,7 +1265,8 @@ const LANGS = [
     { code: 'de', label: 'Deutsch' },
     { code: 'ja', label: '日本語' },
     { code: 'ko', label: '한국어' },
-    { code: 'ru', label: 'Русский' }
+    { code: 'ru', label: 'Русский' },
+    { code: 'vi', label: 'Tiếng Việt' }
 ];
 const RTL_LANGS = new Set(['ar']);
 const DEFAULT_LANG = 'en';
@@ -1301,6 +1290,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const supported = LANGS.map(l => l.code);
 
     const detectLang = () => {
+        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // or a previous visit would have preferred.
+        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
+        if (fromUrl) return fromUrl;
         const saved = localStorage.getItem('lang');
         if (saved && supported.includes(saved)) return saved;
         const prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
@@ -1343,8 +1336,15 @@ document.addEventListener('DOMContentLoaded', () => {
     updateLanguage(currentLang);
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
-        currentLang = sel.value;
-        localStorage.setItem('lang', currentLang);
+        const lang = sel.value;
+        localStorage.setItem('lang', lang);
+        // Each language is its own page now, so go there rather
+        // than rewriting this one and leaving the URL lying.
+        if (window.LangUrl) {
+            window.location.href = window.LangUrl.hrefFor(lang, DEFAULT_LANG, supported);
+            return;
+        }
+        currentLang = lang;
         updateLanguage(currentLang);
     }));
 

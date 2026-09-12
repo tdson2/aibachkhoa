@@ -12,11 +12,11 @@
 
 const i18n = {
     vi: {
-        page_title: "BKSafe — Bảo vệ máy Mac, máy Windows và điện thoại Android | AIBachKhoa",
-        meta_desc: "BKSafe theo dõi sức khoẻ máy, quét mã độc, dọn rác và canh lưu lượng mạng. Bản macOS 1.3.2, Windows 1.3.0 và Linux 1.3.1 tải trực tiếp, bản Android và bản Lite cho máy yếu trên Google Play.",
+        page_title: "BKSafe — bảo vệ máy Mac, Windows và Android | AIBachKhoa",
+        meta_desc: "BKSafe theo dõi sức khoẻ máy, quét mã độc, dọn rác và canh lưu lượng mạng. Tải trực tiếp cho macOS, Windows, Linux; bản Android trên Google Play.",
         nav_policy: "Quyền riêng tư",
         pol_page_title: "Chính sách quyền riêng tư — BKSafe | AIBachKhoa",
-        pol_meta_desc: "Chính sách quyền riêng tư của BKSafe: dữ liệu nào được thu thập trên bản điện thoại, vì sao bản máy tính không thu thập gì, và hai đường ra mạng duy nhất của nó.",
+        pol_meta_desc: "Chính sách riêng tư BKSafe: bản điện thoại thu thập gì, vì sao bản máy tính không thu thập gì, và hai đường ra mạng duy nhất.",
         pol_back: "Về trang sản phẩm",
         pol_eyebrow: "Pháp lý",
         pol_title: "Chính sách quyền riêng tư",
@@ -415,8 +415,8 @@ const i18n = {
     },
 
     en: {
-        page_title: "BKSafe — Security for your Mac, your PC and your Android phone | AIBachKhoa",
-        meta_desc: "BKSafe watches machine health, scans for malware, clears junk and keeps an eye on network traffic. macOS 1.3.2, Windows 1.3.0 and Linux 1.3.1 as direct downloads, Android and the lightweight Lite build on Google Play.",
+        page_title: "BKSafe — security for Mac, Windows and Android | AIBachKhoa",
+        meta_desc: "BKSafe watches machine health, scans for malware, clears junk and monitors network traffic. Direct downloads for macOS, Windows and Linux, plus Android.",
         nav_policy: "Privacy",
         pol_page_title: "Privacy Policy — BKSafe | AIBachKhoa",
         pol_meta_desc: "The BKSafe privacy policy: what the Android build collects, why the desktop builds collect nothing, and the only two network connections they make.",
@@ -821,7 +821,8 @@ const i18n = {
 /* Languages offered in the picker, in order.
    'vi' is deliberately left out — add { code: 'vi', label: 'Tiếng Việt' } to show it again. */
 const LANGS = [
-    { code: 'en', label: 'English' }
+    { code: 'en', label: 'English' },
+    { code: 'vi', label: 'Tiếng Việt' }
 ];
 const DEFAULT_LANG = 'en';
 const SHOT_DIR = '/assets/bksafe/macos/';
@@ -848,6 +849,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // landing page. Anything no longer offered — a 'vi' left over from
     // before it was hidden, say — falls through to the default.
     const detectLang = () => {
+        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // or a previous visit would have preferred.
+        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
+        if (fromUrl) return fromUrl;
         const saved = localStorage.getItem('bksafe-lang');
         if (saved && supported.includes(saved)) return saved;
         const site = localStorage.getItem('lang');
@@ -895,8 +900,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
-        currentLang = sel.value;
-        localStorage.setItem('bksafe-lang', currentLang);
+        const lang = sel.value;
+        localStorage.setItem('bksafe-lang', lang);
+        // Each language is its own page now, so go there rather
+        // than rewriting this one and leaving the URL lying.
+        if (window.LangUrl) {
+            window.location.href = window.LangUrl.hrefFor(lang, DEFAULT_LANG, supported);
+            return;
+        }
+        currentLang = lang;
         updateLanguage(currentLang);
     }));
 
@@ -913,7 +925,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!active || !galImg) return;
         const dict = i18n[currentLang] || i18n[DEFAULT_LANG];
         const key = active.dataset.key;
-        galImg.src = SHOT_DIR + active.dataset.shot + '.png';
+        galImg.src = SHOT_DIR + active.dataset.shot + '.webp';
         galImg.alt = 'BKSafe — ' + (dict[key + '_title'] || '');
         if (galTitle) galTitle.textContent = dict[key + '_title'] || '';
         if (galCap) galCap.textContent = dict[key + '_cap'] || '';
@@ -931,7 +943,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Warm the neighbouring shots so the first few clicks feel instant.
     if ('requestIdleCallback' in window) {
         requestIdleCallback(() => {
-            tabs.slice(1, 6).forEach(t => { new Image().src = SHOT_DIR + t.dataset.shot + '.png'; });
+            tabs.slice(1, 6).forEach(t => { new Image().src = SHOT_DIR + t.dataset.shot + '.webp'; });
         });
     }
 

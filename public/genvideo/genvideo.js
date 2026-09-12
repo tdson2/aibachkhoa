@@ -36,7 +36,7 @@ const i18n = {
         footer_rights: "All rights reserved.",
 
         /* ---------- product page ---------- */
-        page_title: "GenVideo: Master Tool — Turn a topic into a finished video | AIBachKhoa",
+        page_title: "GenVideo: Master Tool — AI video generator | AIBachKhoa",
         meta_desc: "Type a topic, get a narrated video with generated artwork, subtitles and music. Runs on Windows, macOS, Linux and Android. One dollar a video, two free to try.",
 
         hero_eyebrow: "AI video generator",
@@ -345,6 +345,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // A stored choice wins, then whatever the visitor picked on the landing
     // page. Anything no longer offered falls through to the default.
     const detectLang = () => {
+        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // or a previous visit would have preferred.
+        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
+        if (fromUrl) return fromUrl;
         const saved = localStorage.getItem('genvideo-lang');
         if (saved && supported.includes(saved)) return saved;
         const site = localStorage.getItem('lang');
@@ -397,8 +401,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
-        currentLang = sel.value;
-        localStorage.setItem('genvideo-lang', currentLang);
+        const lang = sel.value;
+        localStorage.setItem('genvideo-lang', lang);
+        // Each language is its own page now, so go there rather
+        // than rewriting this one and leaving the URL lying.
+        if (window.LangUrl) {
+            window.location.href = window.LangUrl.hrefFor(lang, DEFAULT_LANG, supported);
+            return;
+        }
+        currentLang = lang;
         updateLanguage(currentLang);
     }));
 

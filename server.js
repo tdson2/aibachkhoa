@@ -1,132 +1,46 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Clean URL for the BKSafe product page — served directly so the
-// browser never sees a /bksafe -> /bksafe/ redirect.
-app.get('/bksafe', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'bksafe', 'index.html'));
-});
+// /new was the preview URL for the redesign that is now simply the home
+// page. It redirects rather than serving a second copy: two URLs with the
+// same content compete with each other in search results.
+app.get('/new', (req, res) => res.redirect(301, '/'));
 
-app.get('/bksafe/policy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'bksafe', 'policy', 'index.html'));
-});
+// Clean URLs, for every page and every language: /bksafe, /vi/bksafe and
+// /chefeasy/policy are each served straight from their own index.html. The
+// alternative — letting express.static redirect /bksafe to /bksafe/ — puts a
+// 301 in front of every visit, including the ones arriving from a paid ad.
+//
+// This replaced a hand-written route per page. Translated pages are generated
+// (tools/build-i18n-pages.js), so that list could only ever fall behind.
+app.use((req, res, next) => {
+  if (req.method !== 'GET' && req.method !== 'HEAD') return next();
+  if (req.path.includes('.')) return next();          // let static files through
 
-// Clean URLs for the Dungeon of the Fallen Blade pages, for the same
-// reason: no /dungeon-blade -> /dungeon-blade/ redirect on the way in.
-app.get('/dungeon-blade', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'dungeon-blade', 'index.html'));
-});
+  const root = path.join(__dirname, 'public');
+  const file = path.join(root, req.path.replace(/\/+$/, ''), 'index.html');
 
-app.get('/dungeon-blade/policy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'dungeon-blade', 'policy', 'index.html'));
-});
+  // path.join has already resolved any "..", so this rejects traversal.
+  if (!file.startsWith(root + path.sep)) return next();
+  if (!fs.existsSync(file)) return next();
 
-// Clean URLs for the Iron Line pages, for the same reason: no
-// /iron-line -> /iron-line/ redirect on the way in.
-app.get('/iron-line', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'iron-line', 'index.html'));
-});
-
-app.get('/iron-line/policy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'iron-line', 'policy', 'index.html'));
-});
-
-// Clean URLs for the Novaryn pages, for the same reason.
-app.get('/novaryn', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'novaryn', 'index.html'));
-});
-
-app.get('/novaryn/policy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'novaryn', 'policy', 'index.html'));
-});
-
-// The iOS build gets its own page: an App Store listing's support and
-// marketing URLs must not lead to another storefront.
-app.get('/novaryn/ios', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'novaryn', 'ios', 'index.html'));
-});
-
-// Clean URLs for the GenVideo pages, for the same reason.
-app.get('/genvideo', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'genvideo', 'index.html'));
-});
-
-app.get('/genvideo/policy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'genvideo', 'policy', 'index.html'));
-});
-
-// The iOS build gets its own page: an App Store listing's support and
-// marketing URLs must not lead to another storefront.
-app.get('/genvideo/ios', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'genvideo', 'ios', 'index.html'));
-});
-
-// Clean URLs for the Castle of Ancients pages, for the same reason.
-app.get('/castle-of-ancients', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'castle-of-ancients', 'index.html'));
-});
-
-app.get('/castle-of-ancients/policy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'castle-of-ancients', 'policy', 'index.html'));
-});
-
-// Clean URLs for the Chilly Novels pages, for the same reason.
-app.get('/chilly-novels', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'chilly-novels', 'index.html'));
-});
-
-app.get('/chilly-novels/policy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'chilly-novels', 'policy', 'index.html'));
-});
-
-// Clean URLs for the ChefEasy pages. The App Store listing's support and
-// marketing URLs must not lead to a Google Play page, so the iOS build gets
-// its own page next to the Android one.
-app.get('/chefeasy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'chefeasy', 'index.html'));
-});
-
-app.get('/chefeasy/ios', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'chefeasy', 'ios', 'index.html'));
-});
-
-app.get('/chefeasy/policy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'chefeasy', 'policy', 'index.html'));
-});
-
-// Clean URLs for the JeMul pages, for the same reason.
-app.get('/jemul', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'jemul', 'index.html'));
-});
-
-app.get('/jemul/policy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'jemul', 'policy', 'index.html'));
-});
-
-// Clean URLs for the Mini Castle pages, for the same reason.
-app.get('/mini-castle', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'mini-castle', 'index.html'));
-});
-
-app.get('/mini-castle/policy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'mini-castle', 'policy', 'index.html'));
-});
-
-// The redesign now *is* the home page; /new stays as an alias so any
-// link handed out while it was a preview still lands somewhere sensible.
-app.get('/new', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(file);
 });
 
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Fallback to index.html for any other requests (SPA-like behavior)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// Anything that reached this point matched no page and no static file.
+// This site is a set of distinct static pages, not a single-page app, so the
+// old catch-all that replied with index.html only produced soft 404s: every
+// mistyped or stale URL answered 200 with a copy of the home page, which
+// search engines then had to sort out. Answer with a real 404 instead.
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
 
 app.listen(PORT, () => {
