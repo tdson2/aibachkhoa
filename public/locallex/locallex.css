@@ -1,0 +1,139 @@
+/* =========================================================
+   LocalLex product page.
+   Rides on ../style.css for chrome (nav, footer, buttons, container).
+   No product-specific palette override — uses the site's default
+   accent blue, which happens to already match LocalLex's own brand.
+   ========================================================= */
+
+.ll-hero {
+    position: relative;
+    padding: calc(68px + clamp(3rem, 7vw, 5.5rem)) 0 clamp(3.5rem, 7vw, 5.5rem);
+}
+
+.ll-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.75fr);
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    align-items: center;
+}
+
+.ll-brandline { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1.5rem; }
+.ll-brandmark { width: 60px; height: 60px; border-radius: 14px; }
+.ll-wordmark {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0;
+}
+.ll-brandsub {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    margin: 0.15rem 0 0;
+}
+
+.ll-hero-title {
+    font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.15rem;
+}
+.ll-hero-title em { font-style: normal; color: var(--accent-ink); }
+
+.ll-hero-sub {
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+    color: var(--text-muted);
+    max-width: 34rem;
+    margin-bottom: 1.8rem;
+}
+
+.ll-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem; }
+.ll-hero-meta { font-size: 0.85rem; color: var(--text-muted); }
+.ll-hero-meta code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    padding: 0.1rem 0.35rem;
+    border-radius: 5px;
+    background: var(--surface-2);
+}
+
+.ll-hero-media { display: flex; justify-content: center; }
+
+.ll-phone {
+    position: relative;
+    width: min(17rem, 72vw);
+    padding: 9px;
+    border-radius: 32px;
+    border: 1px solid var(--border-strong);
+    background: linear-gradient(180deg, var(--surface-2), var(--surface));
+    box-shadow: var(--shadow);
+}
+.ll-phone img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1080 / 2400;
+    object-fit: cover;
+    border-radius: 24px;
+    background: var(--surface-2);
+}
+
+/* ---------- Sections ---------- */
+.ll-section { padding: var(--pad-y) 0; }
+.ll-section--tint { background: var(--surface); }
+
+.ll-head { max-width: 42rem; margin: 0 auto clamp(2.5rem, 5vw, 3.5rem); text-align: center; }
+.ll-eyebrow {
+    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent-ink); margin: 0 0 0.6rem;
+}
+.ll-title { font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.02em; margin: 0 0 0.8rem; }
+.ll-sub { font-size: 1.02rem; color: var(--text-muted); margin: 0; }
+
+.ll-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+    gap: 1.25rem;
+}
+.ll-card {
+    padding: 1.5rem;
+    border: var(--border-w) solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+}
+.ll-card-ico {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 42px; height: 42px; border-radius: 12px;
+    background: var(--accent); color: #fff; margin-bottom: 1rem;
+}
+.ll-card-ico svg { width: 22px; height: 22px; }
+.ll-card h3 { font-size: 1.05rem; font-weight: 700; margin: 0 0 0.5rem; }
+.ll-card p { font-size: 0.92rem; color: var(--text-muted); margin: 0; line-height: 1.55; }
+
+/* ---------- Gallery ---------- */
+.ll-gal { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+.ll-gal-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+.ll-gal-tab {
+    padding: 0.55rem 1.1rem;
+    border-radius: 9999px;
+    border: var(--border-w) solid var(--ink);
+    background: transparent;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 0.88rem;
+    cursor: pointer;
+}
+.ll-gal-tab.is-active { background: var(--ink); color: var(--on-ink); }
+.ll-gal-stage { display: flex; justify-content: center; }
+
+.ll-privacy { text-align: center; max-width: 40rem; }
+.ll-privacy .btn { margin-top: 0.5rem; }
+
+@media (max-width: 860px) {
+    .ll-hero-grid { grid-template-columns: 1fr; }
+    .ll-hero-media { order: -1; }
+}
