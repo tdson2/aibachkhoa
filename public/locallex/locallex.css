@@ -130,10 +130,136 @@
 .ll-gal-tab.is-active { background: var(--ink); color: var(--on-ink); }
 .ll-gal-stage { display: flex; justify-content: center; }
 
+/* ---------- Download (Linux) ---------- */
+.ll-dl {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(21rem, 100%), 1fr));
+    gap: 1.4rem;
+    align-items: start;
+}
+.ll-dl-card {
+    min-width: 0;
+    padding: 1.7rem;
+    border: var(--border-w) solid var(--line);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+}
+
+.ll-dl-top {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    margin-bottom: 1.4rem;
+}
+.ll-dl-os { display: flex; align-items: center; gap: 0.85rem; }
+.ll-dl-os > svg { width: 34px; height: 34px; flex-shrink: 0; }
+.ll-dl-os h3 {
+    font-size: 1.15rem; font-weight: 700; margin: 0 0 0.18rem;
+    display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem;
+}
+.ll-flag {
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.ll-dl-os p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+.ll-verpill {
+    flex-shrink: 0;
+    padding: 0.3rem 0.7rem;
+    border-radius: 9999px;
+    border: 1px solid var(--border-strong);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.ll-dl-btn { width: 100%; justify-content: center; margin-bottom: 1.5rem; }
+
+.ll-specs { display: grid; gap: 0; border-top: 1px solid var(--border); margin: 0; }
+.ll-specs > div {
+    display: grid;
+    grid-template-columns: 9.5rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+.ll-specs dt { color: var(--text-muted); margin: 0; }
+.ll-specs dd { font-weight: 500; margin: 0; overflow-wrap: anywhere; }
+.ll-specs code, .ll-sha-hint code, .ll-run code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+}
+.ll-dim { color: var(--text-muted); font-weight: 400; }
+
+.ll-sha { margin-top: 1.4rem; }
+.ll-sha-head {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+.ll-copy {
+    padding: 0.3rem 0.7rem;
+    border-radius: 9999px;
+    border: 1px solid var(--border-strong);
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    cursor: pointer;
+}
+.ll-copy:hover { background: var(--surface-2); }
+.ll-sha-value {
+    display: block;
+    padding: 0.7rem 0.85rem;
+    border-radius: 0.6rem;
+    background: var(--surface-2);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+.ll-sha-hint { margin-top: 0.7rem; font-size: 0.83rem; color: var(--text-muted); line-height: 1.6; }
+.ll-sha-hint a { color: var(--ink); font-weight: 500; border-bottom: 1px solid var(--line-strong); }
+
+.ll-run { margin-top: 1.4rem; }
+.ll-run h4 {
+    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 0.6rem;
+}
+.ll-run p { margin: 0 0 0.6rem; font-size: 0.9rem; color: var(--text-muted); line-height: 1.55; }
+.ll-run pre {
+    margin: 0;
+    padding: 0.7rem 0.85rem;
+    border-radius: 0.6rem;
+    background: var(--surface-2);
+    overflow-x: auto;
+}
+.ll-run pre code { font-size: 0.8rem; white-space: pre; }
+.ll-run-note { margin: 0.6rem 0 0 !important; font-size: 0.85rem; }
+
+.ll-dl-foot {
+    max-width: 44rem;
+    margin: 1.6rem auto 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
 .ll-privacy { text-align: center; max-width: 40rem; }
 .ll-privacy .btn { margin-top: 0.5rem; }
 
 @media (max-width: 860px) {
     .ll-hero-grid { grid-template-columns: 1fr; }
     .ll-hero-media { order: -1; }
+    .ll-specs > div { grid-template-columns: 1fr; gap: 0.2rem; }
+    .ll-dl-card { padding: 1.3rem; }
 }

@@ -49,6 +49,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }));
 
+    // ---------- Copy the SHA-256 ----------
+    document.querySelectorAll('.ll-copy').forEach(btn => {
+        const value = btn.closest('.ll-sha')?.querySelector('.ll-sha-value');
+        if (!value) return;
+        btn.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(value.textContent.trim());
+                const truoc = btn.textContent;
+                btn.textContent = 'Đã sao chép';
+                setTimeout(() => { btn.textContent = truoc; }, 1600);
+            } catch {
+                // Clipboard refused (no permission, or a non-secure origin):
+                // select the hash so the reader can copy it by hand.
+                const range = document.createRange();
+                range.selectNodeContents(value);
+                const sel = window.getSelection();
+                sel.removeAllRanges();
+                sel.addRange(range);
+            }
+        });
+    });
+
     // ---------- Reveal on view ----------
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const reveals = document.querySelectorAll('.reveal');
