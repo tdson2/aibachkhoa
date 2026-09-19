@@ -7,4 +7,10 @@ Allow: /
 # crawl budget on tens of megabytes.
 Disallow: /downloads/
 
+# The analytics dashboard and its API. Both already refuse anyone without
+# the password and answer with X-Robots-Tag: noindex; this is the polite
+# version of the same thing, so crawlers never ask.
+Disallow: /admin
+Disallow: /api/
+
 Sitemap: https://aibachkhoa.com/sitemap.xml

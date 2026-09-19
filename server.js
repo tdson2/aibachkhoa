@@ -2,8 +2,19 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 
+const analytics = require('./lib/analytics/collect');
+const store = require('./lib/analytics/store');
+const admin = require('./lib/admin/routes');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Behind the Cloudflare tunnel the client address and the original scheme
+// only exist in forwarded headers; without this, every visitor looks like it
+// came from the tunnel over plain HTTP. The container publishes its port on
+// 127.0.0.1 only, so nothing but the tunnel can set those headers.
+app.set('trust proxy', true);
+app.disable('x-powered-by');
 
 // /new was the preview URL for the redesign that is now simply the home
 // page. It redirects rather than serving a second copy: two URLs with the
@@ -18,6 +29,19 @@ app.use((req, res, next) => {
   if (req.path !== '/vi' && !req.path.startsWith('/vi/')) return next();
   res.redirect(301, req.path.slice(3) || '/');
 });
+
+// The analytics beacon. It sits ahead of everything static because it is a
+// POST to a path that does not exist on disk, and it answers 204 with no
+// body: a page has nothing to do with the reply and should not wait for one.
+app.post('/api/collect', analytics.handleCollect);
+
+// The dashboard and its API. Mounted before the page routes so that /admin
+// can never be answered by a file that happens to be sitting in public/.
+admin.mount(app);
+
+// Counts installer downloads on the request for the file itself, then hands
+// the request straight on to express.static, which does the serving.
+app.use(analytics.downloadTracker);
 
 // Clean URLs, for every page and every language: /bksafe, /es/bksafe and
 // /chefeasy/policy are each served straight from their own index.html. The
@@ -51,6 +75,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res) => {
   res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
+
+// Retention: drop event files past the window at boot and once a day after
+// that, so the volume cannot grow without bound on a machine nobody watches.
+store.prune();
+setInterval(() => store.prune(), 24 * 3600 * 1000).unref();
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

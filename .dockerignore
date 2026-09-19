@@ -9,3 +9,8 @@ Dockerfile
 .dockerignore
 docker-compose.yml
 *.md
+.env
+.env.example
+data
+data-demo
+tools

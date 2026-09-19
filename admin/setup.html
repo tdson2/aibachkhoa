@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Set a password — AIBachKhoa analytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/admin/admin.css">
+    <script>
+      try { document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light'); } catch (e) {}
+    </script>
+</head>
+<body class="admin">
+    <main class="gate">
+        <div class="gate-card" style="width:min(560px,100%)">
+            <img src="/assets/logo.png" alt="AIBachKhoa" width="36" height="36" style="border-radius:10px">
+            <h1>One step left</h1>
+            <p class="lede">
+                The dashboard has no password yet, so it refuses to open. There is
+                deliberately no default: a dashboard that ships with a known password
+                is a dashboard anybody can read.
+            </p>
+
+            <p class="lede" style="margin-bottom:0.6rem">Set <code>ADMIN_PASSWORD</code> and restart:</p>
+<pre class="setup">docker compose:
+  environment:
+    ADMIN_PASSWORD: "a long random string"
+
+or, running it directly:
+  ADMIN_PASSWORD='a long random string' npm start</pre>
+
+            <p class="gate-foot">
+                Changing the password signs out every open session, by design.
+                <a href="/">Back to the site</a>
+            </p>
+        </div>
+    </main>
+</body>
+</html>

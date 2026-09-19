@@ -1,0 +1,597 @@
+/* =========================================================
+   AIBachKhoa — admin dashboard.
+
+   Loads after /style.css and inherits the whole design system from it:
+   the cream ground, the 2px ink borders, the pill buttons, Archivo and
+   DM Mono, and the light/dark token swap on [data-theme].
+
+   Everything below is either a piece the public site has no use for
+   (stat tiles, charts, data tables) or a correction where the public
+   rhythm is wrong for a dense screen — the public panels are built to
+   breathe at 9rem of vertical padding, which a dashboard cannot afford.
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Chart palette
+
+   Validated for both modes against the panel surface: every adjacent
+   pair clears the deuteranopia and protanopia separation floor and the
+   3:1 contrast floor. The categorical slots are assigned in this fixed
+   order and never cycled; the ordinal ramp is one hue, and it runs
+   light-to-dark on cream and dark-to-light on charcoal so that "more"
+   always reads as "stronger" against its own background.
+   --------------------------------------------------------- */
+:root,
+:root[data-theme="light"] {
+    --c1: #2f5ce0;
+    --c2: #1f9e80;
+    --c3: #b06a00;
+    --c4: #d4487f;
+
+    --o1: #93b0f8;
+    --o2: #5b86f0;
+    --o3: #2f5ce0;
+
+    --grid: rgba(39, 38, 42, 0.12);
+    --track: rgba(39, 38, 42, 0.07);
+    --good: #1f7a4d;
+    --bad: #b3341f;
+}
+
+:root[data-theme="dark"] {
+    --c1: #5b86f0;
+    --c2: #29a486;
+    --c3: #b88026;
+    --c4: #dd6396;
+
+    --o1: #3f5fa8;
+    --o2: #5b86f0;
+    --o3: #93b0f8;
+
+    --grid: rgba(235, 234, 220, 0.16);
+    --track: rgba(235, 234, 220, 0.09);
+    --good: #48c98a;
+    --bad: #ff8a72;
+}
+
+body.admin {
+    background: var(--bg);
+    min-height: 100vh;
+}
+
+.admin-shell {
+    width: min(1440px, 100% - 2.5rem);
+    margin-inline: auto;
+    padding-block: 1.75rem 4rem;
+}
+
+/* ---------------------------------------------------------
+   Bar
+   --------------------------------------------------------- */
+.admin-bar {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: var(--bg);
+    border-bottom: var(--border-w) solid var(--ink);
+}
+
+.admin-bar-inner {
+    width: min(1440px, 100% - 2.5rem);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-block: 0.85rem;
+}
+
+.admin-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+}
+
+.admin-mark img { width: 28px; height: 28px; border-radius: 8px; }
+
+.admin-mark span.tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    color: var(--ink-soft);
+}
+
+.admin-bar-spacer { flex: 1 1 auto; }
+
+.range {
+    display: inline-flex;
+    border: var(--border-w) solid var(--ink);
+    border-radius: 999px;
+    overflow: hidden;
+    background: var(--surface);
+}
+
+.range button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--ink);
+    font: inherit;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.45rem 0.95rem;
+    cursor: pointer;
+}
+
+.range button + button { border-left: 1px solid var(--line); }
+.range button[aria-pressed="true"] { background: var(--ink); color: var(--on-ink); }
+
+.bar-form { display: inline; }
+
+/* ---------------------------------------------------------
+   Headings and sections
+   --------------------------------------------------------- */
+.admin-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-block: 2rem 1.5rem;
+}
+
+.admin-head h1 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 1;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0;
+}
+
+.admin-head .sub {
+    margin: 0.5rem 0 0;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+}
+
+.section { margin-top: 2.5rem; }
+
+.section > h2 {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+    margin: 0 0 0.9rem;
+}
+
+/* ---------------------------------------------------------
+   Cards
+   --------------------------------------------------------- */
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); }
+.grid--kpi { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+
+.box {
+    background: var(--surface);
+    border: var(--border-w) solid var(--ink);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.35rem 1.4rem;
+    min-width: 0;
+}
+
+.box > h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: -0.015em;
+}
+
+.box > .hint {
+    margin: 0 0 1rem;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+}
+
+.box--wide { grid-column: 1 / -1; }
+
+/* ---------------------------------------------------------
+   Figures
+
+   Proportional figures for the standalone numbers, tabular only in
+   columns — a hero number set in tabular digits looks loose.
+   --------------------------------------------------------- */
+.hero-fig {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-fig .value {
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: clamp(3rem, 7vw, 4.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+.tile .label,
+.hero-fig .label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 0.45rem;
+}
+
+.tile .value {
+    font-weight: 800;
+    font-size: 1.85rem;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.tile .foot {
+    margin: 0.35rem 0 0;
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+}
+
+.delta {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    border-radius: 999px;
+    padding: 0.18rem 0.5rem;
+    border: 1px solid var(--line-strong);
+    white-space: nowrap;
+}
+
+.delta--up { color: var(--good); border-color: color-mix(in srgb, var(--good) 45%, transparent); }
+.delta--down { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 45%, transparent); }
+.delta--flat { color: var(--ink-faint); }
+
+/* ---------------------------------------------------------
+   Charts
+   --------------------------------------------------------- */
+.chart { position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+
+.chart text {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    fill: var(--ink-faint);
+}
+
+.chart .axis-line { stroke: var(--grid); stroke-width: 1; }
+.chart .mark-label { fill: var(--ink-soft); font-weight: 500; }
+
+.legend {
+    display: flex;
+    gap: 1.1rem;
+    flex-wrap: wrap;
+    margin: 0 0 0.9rem;
+    padding: 0;
+    list-style: none;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+}
+
+.legend li { display: inline-flex; align-items: center; gap: 0.45rem; }
+
+.legend .key {
+    width: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--c1);
+    flex: none;
+}
+
+.legend .key--dot { width: 10px; height: 10px; border-radius: 50%; }
+
+.tip {
+    position: absolute;
+    z-index: 5;
+    pointer-events: none;
+    background: var(--panel-ink);
+    color: #ebeadc;
+    border-radius: var(--radius-sm);
+    padding: 0.55rem 0.7rem;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    min-width: 120px;
+    box-shadow: 0 8px 24px var(--shadow-hard);
+    opacity: 0;
+    transition: opacity 0.12s ease;
+}
+
+.tip[data-show="1"] { opacity: 1; }
+.tip b { font-weight: 700; }
+.tip .row { display: flex; align-items: center; gap: 0.45rem; justify-content: space-between; }
+.tip .row .name { display: inline-flex; align-items: center; gap: 0.4rem; color: rgba(235, 234, 220, 0.75); }
+.tip .swatch { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.tip .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* ---------------------------------------------------------
+   Tables
+   --------------------------------------------------------- */
+.table-wrap { overflow-x: auto; }
+
+table.data {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+table.data th {
+    text-align: left;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    padding: 0 0.6rem 0.55rem;
+    border-bottom: var(--border-w) solid var(--ink);
+    white-space: nowrap;
+}
+
+table.data td {
+    padding: 0.6rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+}
+
+table.data tr:last-child td { border-bottom: 0; }
+table.data .num { text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+table.data .muted { color: var(--ink-soft); }
+table.data .path { font-family: var(--font-mono); font-size: 0.82rem; word-break: break-all; }
+
+/* A bar drawn inside a cell: the column stays sortable-looking and the
+   magnitude is readable without a second chart. */
+.cell-bar {
+    display: block;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--o2);
+    min-width: 2px;
+}
+
+.cell-bar-track {
+    background: var(--track);
+    border-radius: 3px;
+    overflow: hidden;
+    min-width: 60px;
+}
+
+/* ---------------------------------------------------------
+   Chips
+   --------------------------------------------------------- */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    padding: 0.15rem 0.55rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.chip .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--o2); flex: none; }
+.chip--lead .dot { background: var(--o3); }
+.chip--potential .dot { background: var(--o2); }
+.chip--casual .dot { background: var(--o1); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+
+/* ---------------------------------------------------------
+   Funnel
+   --------------------------------------------------------- */
+.funnel { display: grid; gap: 0.85rem; }
+
+.funnel-row {
+    display: grid;
+    grid-template-columns: minmax(150px, auto) 1fr minmax(90px, auto);
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.funnel-name { font-weight: 700; font-size: 0.92rem; }
+.funnel-name small { display: block; font-weight: 400; font-size: 0.78rem; color: var(--ink-soft); }
+
+.funnel-track {
+    background: var(--track);
+    border-radius: var(--radius-sm);
+    height: 26px;
+    overflow: hidden;
+}
+
+.funnel-fill { height: 100%; border-radius: var(--radius-sm); }
+.funnel-value { text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: 500; }
+.funnel-value small { display: block; color: var(--ink-faint); font-size: 0.75rem; }
+
+/* ---------------------------------------------------------
+   Meter (scroll depth in a cell)
+   --------------------------------------------------------- */
+.meter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 110px;
+}
+
+.meter-track {
+    flex: 1;
+    height: 6px;
+    background: var(--track);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.meter-fill { height: 100%; background: var(--o2); border-radius: 3px; }
+
+/* ---------------------------------------------------------
+   States
+   --------------------------------------------------------- */
+.empty {
+    border: 2px dashed var(--line-strong);
+    border-radius: var(--radius);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    color: var(--ink-soft);
+}
+
+.banner {
+    border: var(--border-w) solid var(--ink);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.92rem;
+}
+
+.banner b { display: block; margin-bottom: 0.2rem; }
+.banner code { word-break: break-all; }
+
+.admin-foot {
+    margin-top: 3rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* The table view every chart is paired with, so no number is reachable
+   only by hovering a shape. */
+details.table-view { margin-top: 1rem; }
+
+details.table-view > summary {
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+}
+
+details.table-view > summary:hover { color: var(--ink); }
+details.table-view[open] > summary { margin-bottom: 0.8rem; }
+
+/* ---------------------------------------------------------
+   Sign-in
+   --------------------------------------------------------- */
+.gate {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem 1.25rem;
+}
+
+.gate-card {
+    width: min(420px, 100%);
+    background: var(--surface);
+    border: var(--border-w) solid var(--ink);
+    border-radius: var(--radius);
+    padding: 2rem 1.9rem 2.1rem;
+}
+
+.gate-card h1 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    font-size: 2rem;
+    line-height: 1;
+    margin: 1.2rem 0 0.5rem;
+}
+
+.gate-card p.lede { margin: 0 0 1.5rem; color: var(--ink-soft); font-size: 0.95rem; }
+
+.field { display: block; margin-bottom: 1.1rem; }
+
+.field span {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 0.4rem;
+}
+
+.field input {
+    width: 100%;
+    font: inherit;
+    color: var(--ink);
+    background: var(--surface-2);
+    border: var(--border-w) solid var(--ink);
+    border-radius: var(--radius-sm);
+    padding: 0.7rem 0.9rem;
+}
+
+.notice {
+    border: var(--border-w) solid var(--bad);
+    color: var(--bad);
+    border-radius: var(--radius-sm);
+    padding: 0.6rem 0.8rem;
+    margin: 0 0 1.2rem;
+    font-size: 0.88rem;
+}
+
+.gate-card .btn { width: 100%; justify-content: center; }
+.gate-foot { margin: 1.4rem 0 0; font-size: 0.8rem; color: var(--ink-faint); }
+.gate-foot a { color: inherit; }
+
+pre.setup {
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 0.9rem 1rem;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.7;
+    text-align: left;
+}
+
+@media (max-width: 720px) {
+    .admin-shell, .admin-bar-inner { width: min(1440px, 100% - 1.5rem); }
+    .funnel-row { grid-template-columns: 1fr; gap: 0.35rem; }
+    .funnel-value { text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tip { transition: none; }
+}

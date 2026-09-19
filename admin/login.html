@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Sign in — AIBachKhoa analytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/admin/admin.css">
+    <script>
+      // Before first paint, so the page never flashes the wrong ground.
+      try { document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light'); } catch (e) {}
+    </script>
+</head>
+<body class="admin">
+    <main class="gate">
+        <div class="gate-card">
+            <img src="/assets/logo.png" alt="AIBachKhoa" width="36" height="36" style="border-radius:10px">
+            <h1>Analytics</h1>
+            <p class="lede">This dashboard is private. Enter the password to continue.</p>
+
+            {{NOTICE}}
+
+            <form method="post" action="/admin/login">
+                <label class="field">
+                    <span>Password</span>
+                    <input type="password" name="password" autocomplete="current-password" autofocus required>
+                </label>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+
+            <p class="gate-foot">Nothing here is tracked. <a href="/">Back to the site</a></p>
+        </div>
+    </main>
+</body>
+</html>

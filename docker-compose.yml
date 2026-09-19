@@ -8,6 +8,17 @@ services:
     environment:
       NODE_ENV: production
       PORT: 3000
+      # Where the analytics events are written. Must be the volume below:
+      # the rest of the filesystem is read-only.
+      ANALYTICS_DIR: /app/data
+      ANALYTICS_RETENTION_DAYS: 90
+      # The one password for /admin. Put it in a .env file next to this one;
+      # leaving it unset does not stop the site, it only leaves the dashboard
+      # closed and showing how to set it.
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+    volumes:
+      # The only writable path in the container.
+      - analytics-data:/app/data
     ports:
       # cloudflared chạy trên host -> trỏ tunnel tới http://localhost:3000
       # Chỉ bind vào localhost nên port KHÔNG lộ ra Internet, dù firewall có mở.
@@ -33,3 +44,6 @@ services:
       timeout: 3s
       start_period: 5s
       retries: 3
+
+volumes:
+  analytics-data:
