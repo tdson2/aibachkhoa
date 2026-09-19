@@ -12,7 +12,7 @@
 const i18n = {
     en: {
         page_title: "Novaryn — one thumb, endless waves | AIBachKhoa",
-        meta_desc: "A vertical arcade shoot-'em-up for Android. Drag to fly, the cannon fires itself, a boss every fifth wave. Ten ships, no ads, plays offline.",
+        meta_desc: "A vertical arcade shoot-'em-up for Android. Drag to fly, the cannon fires itself, a boss every fifth wave. Ten ships, plays offline.",
         aria_lang: "Change language",
         aria_theme: "Toggle theme",
         aria_menu: "Open menu",
@@ -134,7 +134,7 @@ const i18n = {
         faq1_q: "Which Android versions does it run on?",
         faq1_a: "Android 7.0 and up. The listing is version 1.0.0, published on 18 August 2026, rated Everyone with in-game purchases declared.",
         faq2_q: "Are there ads?",
-        faq2_a: "None. No banner, no interstitial between runs, and no rewarded video offering you a revive. There is no ad network in the build at all.",
+        faq2_a: "On Android, yes — between runs, never during one, and never a video you have to sit through to carry on playing. A Novaryn Pro subscription removes them completely. The iPhone and iPad version has no ads at all.",
         faq3_q: "Does it need an internet connection?",
         faq3_a: "No. A run plays identically with the connection off. A connection is only used when you open the shop or make a purchase, because that goes through Google Play Billing.",
         faq4_q: "Can I lose a skin I paid for?",
@@ -162,17 +162,17 @@ const i18n = {
         pol_eyebrow: "Legal",
         pol_title: "Privacy Policy",
         pol_game: "Novaryn",
-        pol_updated: "Last updated: 2 September 2026",
+        pol_updated: "Last updated: 19 September 2026",
         pol_lead: "This Privacy Policy explains how Novaryn (\"we\", \"our\", or \"us\") collects, uses, and protects your information when you use our mobile application Novaryn (the \"App\"). We are committed to protecting your privacy and complying with applicable data protection laws, including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA), where applicable.",
         pol_toc: "On this page",
 
         pol_h_intro: "Introduction",
-        pol_intro: "Novaryn is a vertical arcade shoot-'em-up for iPhone, iPad and Android: endless waves of enemy formations, a boss on every fifth wave, and a collection of purely cosmetic ship skins. The game runs entirely on your own device. It has no accounts, no player profiles, no chat, no advertising and no analytics.",
+        pol_intro: "Novaryn is a vertical arcade shoot-'em-up for iPhone, iPad and Android: endless waves of enemy formations, a boss on every fifth wave, and a collection of purely cosmetic ship skins. The game runs entirely on your own device. It has no accounts, no player profiles, no chat and no analytics. The Android version shows advertising supplied by Google AdMob; the iPhone and iPad version shows none. A Novaryn Pro subscription removes advertising altogether.",
 
         pol_h_short: "The short version",
         pol_short_1: "<strong>We run no servers and we receive no data about you.</strong> Your settings and your best score are written to the App's own save file on your device and never leave it.",
-        pol_short_2: "<strong>There are no ads and no tracking.</strong> There is no advertising SDK, no analytics SDK and no crash-reporting SDK in the build, so nothing is profiling you or measuring what you do.",
-        pol_short_3: "<strong>The only third parties are the app stores</strong> — Apple's App Store on iPhone and iPad, Google Play on Android — and only when you choose to buy a ship skin or subscribe to Novaryn Pro. Apple or Google handles that transaction; we never see your payment details.",
+        pol_short_2: "<strong>The Android version shows ads; the iPhone and iPad version does not.</strong> Ads on Android are served by Google AdMob, which may use your device's advertising identifier to choose them. There is still no analytics SDK and no crash-reporting SDK in either build, and a Novaryn Pro subscription switches advertising off.",
+        pol_short_3: "<strong>The third parties are the app stores and, on Android, Google AdMob</strong> — Apple's App Store on iPhone and iPad, Google Play on Android, each only when you choose to buy a ship skin or subscribe to Novaryn Pro, and AdMob whenever an ad loads on Android. Apple or Google handles the transaction; we never see your payment details.",
         pol_short_4: "<strong>The App asks for no sensitive permission.</strong> No location, no contacts, no camera, no microphone, no access to your files.",
 
         pol_h_defs: "Interpretation and Definitions",
@@ -191,11 +191,11 @@ const i18n = {
         pol_d_you: "<strong>You</strong> means the individual accessing or using the Service.",
 
         pol_h_collect: "Data We Collect",
-        pol_collect_lead: "We do not collect Personal Data. To be specific about what that means in practice:",
+        pol_collect_lead: "<em>We</em> collect no Personal Data. On Android our advertising partner does receive data of its own — see <a href='#advertising'>Advertising</a>. To be specific about what we do and do not handle:",
         pol_collect_none_t: "We do not collect",
         pol_collect_n1: "Your name, email address, phone number or any other contact detail.",
         pol_collect_n2: "Any account identifier — the App has no accounts and no sign-in.",
-        pol_collect_n3: "Advertising identifiers, device identifiers, or any other identifier used for tracking or profiling.",
+        pol_collect_n3: "Advertising or device identifiers — none of them ever reaches us. On Android, Google AdMob may read the device's advertising identifier for ad selection; see <a href='#advertising'>Advertising</a>.",
         pol_collect_n4: "Location, contacts, photos, files, camera or microphone input.",
         pol_collect_n5: "Analytics, usage statistics, session length, crash reports or performance metrics.",
         pol_collect_local_t: "Stored on your device only",
@@ -211,13 +211,21 @@ const i18n = {
         pol_purchase_4: "The Novaryn Pro subscription renews monthly until you cancel it, and you can cancel at any time — on iPhone or iPad in <strong>Settings → your name → Subscriptions</strong>, on Android in <strong>Google Play → Payments &amp; subscriptions</strong>. Ships unlocked through an active Pro subscription lock again if the subscription ends; ships you bought outright remain yours permanently and restore when you reinstall the App.",
 
         pol_h_sharing: "Sharing Data with Third Parties",
-        pol_sharing_1: "We do not sell user data, and we have no user data to sell. There is no advertising network, no analytics provider, no crash-reporting service and no social SDK in the App.",
-        pol_sharing_2: "The App Store and Google Play are the only third-party services the App communicates with, and only at the moment you open the shop or complete a purchase. Outside of that, the App makes no network requests of its own.",
+        pol_sharing_1: "We do not sell user data, and we hold no user data to sell. On Android the App includes one third-party SDK — Google AdMob, which serves the ads and is described under <a href='#advertising'>Advertising</a>. There is no analytics provider, no crash-reporting service and no social SDK, and the iPhone and iPad build contains no third-party SDK at all.",
+        pol_sharing_2: "On iPhone and iPad the App Store is the only third-party service the App talks to, and only at the moment you open the shop or complete a purchase. On Android there are two: Google Play for the same purpose, and Google AdMob when an ad loads. Nothing else leaves the device.",
+
+        pol_h_ads: "Advertising",
+        pol_ads_1: "The Android version of Novaryn shows advertising supplied by <strong>Google AdMob</strong>. The iPhone and iPad version contains no advertising SDK and shows no ads. Ads never appear during a run — only between them.",
+        pol_ads_2: "To select and measure an ad, Google may process your device's advertising identifier, coarse location inferred from your IP address, device and app information, and interaction with the ad itself. That processing is Google's, as an independent controller — the data goes to Google, not to us. We receive only anonymous, aggregated earnings figures, which identify nobody.",
+        pol_ads_3: "Where the GDPR or comparable law applies, the App asks for your consent before personalised ads are shown, using Google's consent tool. You can reopen that choice at any time from <strong>Settings → Privacy options</strong> inside the game, and withdrawing consent means you keep seeing ads, but non-personalised ones.",
+        pol_ads_4: "Android itself also lets you limit this: <strong>Settings → Privacy → Ads</strong> on your device can delete or reset the advertising ID, which stops past activity being tied to future ads.",
+        pol_ads_5: "<strong>Novaryn Pro removes advertising completely.</strong> While the subscription is active the ad SDK is not started at all, so no ad request is made and no advertising identifier is read.",
+        pol_ads_6: "How Google uses the data it collects from apps that use its services is set out in <a href='https://policies.google.com/technologies/partner-sites' target='_blank' rel='noopener'>Google's partner policy</a>.",
 
         pol_h_perm: "Permissions and Network Access",
-        pol_perm_1: "On iOS the App declares no permission at all: the build carries no camera, microphone or photo-library usage description, because it touches none of them. On Android it declares <code>INTERNET</code>, which Google Play Billing requires in order to verify purchases and entitlements, and <code>WAKE_LOCK</code>, which keeps the screen from sleeping in the middle of a run.",
+        pol_perm_1: "On iOS the App declares no permission at all: the build carries no camera, microphone or photo-library usage description, because it touches none of them. On Android it declares <code>INTERNET</code>, which Google Play Billing requires in order to verify purchases and entitlements and which AdMob uses to fetch an ad, <code>WAKE_LOCK</code>, which keeps the screen from sleeping in the middle of a run, and <code>com.google.android.gms.permission.AD_ID</code>, which lets AdMob read the device's advertising identifier.",
         pol_perm_2: "It requests no other sensitive permission: no location, no contacts, no camera, no microphone, and no access to the photos, videos or documents on your device.",
-        pol_perm_3: "The game itself does not require a connection. Every wave, every boss and every power-up works with the connection off — the only thing that needs the network is the shop.",
+        pol_perm_3: "The game itself does not require a connection. Every wave, every boss and every power-up works with the connection off — the only things that need the network are the shop and, on Android, loading an ad. With the connection off the game still plays in full; ads simply do not appear.",
 
         pol_h_storage: "Data Storage and Deletion",
         pol_storage_1: "We operate no servers of our own and store no user data. Everything the game needs in order to run is processed and stored locally on your device.",
@@ -225,7 +233,7 @@ const i18n = {
         pol_storage_3: "Your purchase history is the exception, because it is held by Apple or Google rather than by us. Uninstalling the App does not erase a purchase — that is deliberate, and it is what lets a skin you paid for come back when you reinstall, through <strong>Restore Purchases</strong> in the shop. Review or manage it through your Apple Account or your Google Play account.",
 
         pol_h_children: "Children's Privacy",
-        pol_children_1: "Novaryn is rated for general audiences and contains no content directed at, or unsuitable for, children. We do not knowingly collect personal information from anyone, of any age, including children under 13.",
+        pol_children_1: "Novaryn is rated for general audiences and contains no content directed at, or unsuitable for, children. We do not knowingly collect personal information from anyone, of any age, including children under 13. The App is not directed at children, and the Android build is configured so that ads served to it are not based on interest profiles where the store or the law treats the audience as a child audience.",
         pol_children_2: "The App does contain in-app purchases. If a child uses your device, we suggest requiring authentication before a purchase completes — Ask to Buy or <strong>Screen Time → Content &amp; Privacy Restrictions</strong> on iOS, and purchase authentication in the Google Play Store settings on Android.",
 
         pol_h_rights: "Your Rights",
@@ -233,10 +241,10 @@ const i18n = {
         pol_rights_1: "<strong>Access:</strong> we hold no data about you to disclose.",
         pol_rights_2: "<strong>Deletion:</strong> uninstalling the App removes everything the App has stored.",
         pol_rights_3: "<strong>Purchases:</strong> requests about payment records should go to Apple or Google, whichever processed them.",
-        pol_rights_4: "<strong>Objection:</strong> there is no profiling, automated decision-making or targeted advertising in the App to object to.",
+        pol_rights_4: "<strong>Objection and consent:</strong> there is no profiling or automated decision-making in the App. On Android you can change or withdraw your advertising consent at any time, or remove ads outright with Novaryn Pro — see <a href='#advertising'>Advertising</a>.",
 
         pol_h_security: "Security",
-        pol_security: "Because the App stores its data locally and transmits none of it, the ordinary risks of data in transit do not arise. Purchase traffic is handled by the App Store or Google Play over their own secured channels. That said, no method of electronic storage is completely secure, and the save file on your device is protected by your device's own security — a screen lock is worth having.",
+        pol_security: "The App stores its data locally, so the ordinary risks of data in transit barely arise. Purchase traffic is handled by the App Store or Google Play over their own secured channels, and on Android the ad request goes to Google over theirs. Neither carries a save file or a score. That said, no method of electronic storage is completely secure, and the save file on your device is protected by your device's own security — a screen lock is worth having.",
 
         pol_h_changes: "Changes to this Privacy Policy",
         pol_changes_1: "We may update this Privacy Policy from time to time — for instance, if a future version of the App gains a feature that changes how data is handled. We will post the new policy on this page and update the \"Last updated\" date at the top.",
@@ -425,7 +433,7 @@ const i18n = {
         faq1_q: "Chạy trên phiên bản Android nào?",
         faq1_a: "Android 7.0 trở lên. Bản trên cửa hàng là 1.0.0, phát hành ngày 18 tháng 8 năm 2026, phân loại Everyone và có khai báo mua trong game.",
         faq2_q: "Có quảng cáo không?",
-        faq2_a: "Không. Không banner, không quảng cáo chen giữa các ván, và không có video đổi thưởng nào mời bạn hồi sinh. Trong bản dựng không hề có mạng quảng cáo nào.",
+        faq2_a: "Trên Android thì có — giữa các ván, không bao giờ giữa lúc đang chơi, và không có video nào bắt bạn ngồi xem hết mới được chơi tiếp. Gói Novaryn Pro gỡ bỏ chúng hoàn toàn. Phiên bản iPhone và iPad thì không có quảng cáo nào cả.",
         faq3_q: "Có cần kết nối mạng không?",
         faq3_a: "Không. Một ván chơi y hệt khi tắt mạng. Mạng chỉ dùng khi bạn mở cửa hàng hoặc mua hàng, vì phần đó đi qua Google Play Billing.",
         faq4_q: "Tôi có thể mất skin đã mua không?",
@@ -453,17 +461,17 @@ const i18n = {
         pol_eyebrow: "Pháp lý",
         pol_title: "Chính sách quyền riêng tư",
         pol_game: "Novaryn",
-        pol_updated: "Cập nhật lần cuối: 18 tháng 8 năm 2026",
+        pol_updated: "Cập nhật lần cuối: 19 tháng 9 năm 2026",
         pol_lead: "Chính sách quyền riêng tư này giải thích cách Novaryn (\"chúng tôi\") thu thập, sử dụng và bảo vệ thông tin của bạn khi bạn dùng ứng dụng di động Novaryn (\"Ứng dụng\"). Chúng tôi cam kết bảo vệ quyền riêng tư của bạn và tuân thủ các luật bảo vệ dữ liệu hiện hành, bao gồm Quy định chung về bảo vệ dữ liệu (GDPR) và Đạo luật quyền riêng tư của người tiêu dùng California (CCPA), khi áp dụng.",
         pol_toc: "Nội dung trang này",
 
         pol_h_intro: "Giới thiệu",
-        pol_intro: "Novaryn là game bắn phi thuyền arcade dọc màn hình cho iPhone, iPad và Android: các đợt đội hình địch vô tận, một trùm ở mỗi đợt thứ năm, và một bộ sưu tập skin phi thuyền thuần trang trí. Trò chơi chạy hoàn toàn trên máy của bạn. Nó không có tài khoản, không có hồ sơ người chơi, không có trò chuyện, không có quảng cáo và không có phân tích hành vi.",
+        pol_intro: "Novaryn là game bắn phi thuyền arcade dọc màn hình cho iPhone, iPad và Android: các đợt đội hình địch vô tận, một trùm ở mỗi đợt thứ năm, và một bộ sưu tập skin phi thuyền thuần trang trí. Trò chơi chạy hoàn toàn trên máy của bạn. Nó không có tài khoản, không có hồ sơ người chơi, không có trò chuyện và không có phân tích hành vi. Phiên bản Android có hiển thị quảng cáo do Google AdMob cung cấp; phiên bản iPhone và iPad thì không. Gói Novaryn Pro gỡ bỏ hoàn toàn quảng cáo.",
 
         pol_h_short: "Bản tóm tắt",
         pol_short_1: "<strong>Chúng tôi không vận hành máy chủ nào và không nhận dữ liệu nào về bạn.</strong> Cài đặt và điểm cao nhất của bạn được ghi vào tệp lưu riêng của Ứng dụng trên máy bạn và không bao giờ rời khỏi đó.",
-        pol_short_2: "<strong>Không có quảng cáo và không có theo dõi.</strong> Trong bản dựng không có SDK quảng cáo, SDK phân tích hay SDK báo lỗi nào, nên không có gì đang lập hồ sơ hay đo đếm hành vi của bạn.",
-        pol_short_3: "<strong>Bên thứ ba duy nhất là các cửa hàng ứng dụng</strong> — App Store của Apple trên iPhone và iPad, Google Play trên Android — và chỉ khi bạn chủ động mua một skin phi thuyền hoặc đăng ký Novaryn Pro. Apple hoặc Google xử lý giao dịch đó; chúng tôi không bao giờ thấy thông tin thanh toán của bạn.",
+        pol_short_2: "<strong>Phiên bản Android có quảng cáo; phiên bản iPhone và iPad thì không.</strong> Quảng cáo trên Android do Google AdMob phục vụ, và AdMob có thể dùng mã quảng cáo của thiết bị để chọn quảng cáo. Trong cả hai bản dựng vẫn không có SDK phân tích hay SDK báo lỗi nào, và gói Novaryn Pro sẽ tắt quảng cáo.",
+        pol_short_3: "<strong>Các bên thứ ba là các cửa hàng ứng dụng và, trên Android, Google AdMob</strong> — App Store của Apple trên iPhone và iPad, Google Play trên Android, mỗi bên chỉ khi bạn chủ động mua một skin phi thuyền hoặc đăng ký Novaryn Pro, còn AdMob là mỗi khi một quảng cáo được tải trên Android. Apple hoặc Google xử lý giao dịch; chúng tôi không bao giờ thấy thông tin thanh toán của bạn.",
         pol_short_4: "<strong>Ứng dụng không xin quyền nhạy cảm nào.</strong> Không vị trí, không danh bạ, không camera, không micro, không truy cập tệp của bạn.",
 
         pol_h_defs: "Diễn giải và định nghĩa",
@@ -482,11 +490,11 @@ const i18n = {
         pol_d_you: "<strong>Bạn</strong> là cá nhân truy cập hoặc sử dụng Dịch vụ.",
 
         pol_h_collect: "Dữ liệu chúng tôi thu thập",
-        pol_collect_lead: "Chúng tôi không thu thập Dữ liệu cá nhân. Cụ thể điều đó nghĩa là:",
+        pol_collect_lead: "<em>Chúng tôi</em> không thu thập Dữ liệu cá nhân. Trên Android, đối tác quảng cáo của chúng tôi có nhận dữ liệu riêng của họ — xem mục <a href='#advertising'>Quảng cáo</a>. Cụ thể những gì chúng tôi có và không xử lý:",
         pol_collect_none_t: "Chúng tôi không thu thập",
         pol_collect_n1: "Tên, địa chỉ email, số điện thoại hay bất kỳ thông tin liên hệ nào của bạn.",
         pol_collect_n2: "Bất kỳ mã tài khoản nào — Ứng dụng không có tài khoản và không có đăng nhập.",
-        pol_collect_n3: "Mã quảng cáo, mã thiết bị, hay bất kỳ mã định danh nào dùng để theo dõi hoặc lập hồ sơ.",
+        pol_collect_n3: "Mã quảng cáo hay mã thiết bị — không mã nào đến tay chúng tôi. Trên Android, Google AdMob có thể đọc mã quảng cáo của thiết bị để chọn quảng cáo; xem mục <a href='#advertising'>Quảng cáo</a>.",
         pol_collect_n4: "Vị trí, danh bạ, ảnh, tệp, dữ liệu camera hay micro.",
         pol_collect_n5: "Số liệu phân tích, thống kê sử dụng, thời lượng phiên, báo lỗi hay chỉ số hiệu năng.",
         pol_collect_local_t: "Chỉ lưu trên máy bạn",
@@ -502,13 +510,21 @@ const i18n = {
         pol_purchase_4: "Gói Novaryn Pro tự gia hạn hằng tháng cho tới khi bạn huỷ, và bạn có thể huỷ bất cứ lúc nào — trên iPhone hoặc iPad trong <strong>Cài đặt → tên bạn → Các gói đăng ký</strong>, trên Android trong <strong>Google Play → Thanh toán và gói đăng ký</strong>. Những phi thuyền mở khoá nhờ gói Pro đang hiệu lực sẽ khoá lại khi gói kết thúc; những phi thuyền bạn mua đứt vẫn là của bạn vĩnh viễn và sẽ khôi phục khi bạn cài lại Ứng dụng.",
 
         pol_h_sharing: "Chia sẻ dữ liệu với bên thứ ba",
-        pol_sharing_1: "Chúng tôi không bán dữ liệu người dùng, và cũng không có dữ liệu người dùng nào để bán. Trong Ứng dụng không có mạng quảng cáo, không có nhà cung cấp phân tích, không có dịch vụ báo lỗi và không có SDK mạng xã hội nào.",
-        pol_sharing_2: "App Store và Google Play là những dịch vụ bên thứ ba duy nhất Ứng dụng liên lạc, và chỉ vào lúc bạn mở cửa hàng hoặc hoàn tất một giao dịch. Ngoài việc đó ra, Ứng dụng không tự gửi yêu cầu mạng nào.",
+        pol_sharing_1: "Chúng tôi không bán dữ liệu người dùng, và cũng không giữ dữ liệu nào để bán. Trên Android, Ứng dụng có một SDK của bên thứ ba — Google AdMob, phục vụ quảng cáo, được mô tả ở mục <a href='#advertising'>Quảng cáo</a>. Không có nhà cung cấp phân tích, không có dịch vụ báo lỗi và không có SDK mạng xã hội nào, còn bản iPhone và iPad thì không chứa SDK bên thứ ba nào cả.",
+        pol_sharing_2: "Trên iPhone và iPad, App Store là dịch vụ bên thứ ba duy nhất mà Ứng dụng liên lạc, và chỉ vào lúc bạn mở cửa hàng hoặc hoàn tất giao dịch. Trên Android có hai: Google Play cho cùng mục đích, và Google AdMob khi một quảng cáo được tải. Ngoài ra không có gì rời khỏi thiết bị.",
+
+        pol_h_ads: "Quảng cáo",
+        pol_ads_1: "Phiên bản Android của Novaryn hiển thị quảng cáo do <strong>Google AdMob</strong> cung cấp. Phiên bản iPhone và iPad không chứa SDK quảng cáo và không hiển thị quảng cáo. Quảng cáo không bao giờ xuất hiện giữa một ván đang chơi — chỉ xuất hiện giữa các ván.",
+        pol_ads_2: "Để chọn và đo lường quảng cáo, Google có thể xử lý mã quảng cáo của thiết bị, vị trí tương đối suy ra từ địa chỉ IP, thông tin thiết bị và ứng dụng, cùng tương tác của bạn với chính quảng cáo đó. Việc xử lý đó là của Google với tư cách bên kiểm soát độc lập — dữ liệu đi tới Google chứ không tới chúng tôi. Chúng tôi chỉ nhận số liệu doanh thu tổng hợp, ẩn danh, không nhận dạng được ai.",
+        pol_ads_3: "Ở nơi GDPR hoặc luật tương đương áp dụng, Ứng dụng sẽ hỏi sự đồng ý của bạn trước khi hiển thị quảng cáo cá nhân hoá, thông qua công cụ đồng ý của Google. Bạn có thể mở lại lựa chọn đó bất cứ lúc nào tại <strong>Cài đặt → Tùy chọn quyền riêng tư</strong> trong game; rút lại đồng ý nghĩa là bạn vẫn thấy quảng cáo, nhưng là quảng cáo không cá nhân hoá.",
+        pol_ads_4: "Bản thân Android cũng cho phép bạn giới hạn điều này: vào <strong>Cài đặt → Quyền riêng tư → Quảng cáo</strong> trên máy để xoá hoặc đặt lại mã quảng cáo, khiến hoạt động cũ không còn được gắn với quảng cáo sau này.",
+        pol_ads_5: "<strong>Novaryn Pro gỡ bỏ hoàn toàn quảng cáo.</strong> Khi gói đang có hiệu lực, SDK quảng cáo không được khởi động, nên không có yêu cầu quảng cáo nào được gửi và không mã quảng cáo nào được đọc.",
+        pol_ads_6: "Cách Google sử dụng dữ liệu thu thập từ các ứng dụng dùng dịch vụ của họ được nêu tại <a href='https://policies.google.com/technologies/partner-sites' target='_blank' rel='noopener'>chính sách đối tác của Google</a>.",
 
         pol_h_perm: "Quyền và truy cập mạng",
-        pol_perm_1: "Trên iOS, Ứng dụng không khai báo quyền nào cả: bản build không chứa mô tả mục đích cho camera, micro hay thư viện ảnh, vì nó không đụng tới thứ nào trong số đó. Trên Android, Ứng dụng khai báo <code>INTERNET</code>, thứ mà Google Play Billing cần để xác minh giao dịch và quyền sở hữu, cùng <code>WAKE_LOCK</code>, để màn hình không tắt giữa một ván chơi.",
+        pol_perm_1: "Trên iOS, Ứng dụng không khai báo quyền nào cả: bản build không chứa mô tả mục đích cho camera, micro hay thư viện ảnh, vì nó không đụng tới thứ nào trong số đó. Trên Android, Ứng dụng khai báo <code>INTERNET</code>, thứ mà Google Play Billing cần để xác minh giao dịch và quyền sở hữu và AdMob dùng để tải quảng cáo, <code>WAKE_LOCK</code> để màn hình không tắt giữa một ván chơi, và <code>com.google.android.gms.permission.AD_ID</code> để AdMob đọc mã quảng cáo của thiết bị.",
         pol_perm_2: "Ứng dụng không xin quyền nhạy cảm nào khác: không vị trí, không danh bạ, không camera, không micro, và không truy cập ảnh, video hay tài liệu trên máy bạn.",
-        pol_perm_3: "Bản thân trò chơi không cần kết nối. Mọi đợt tấn công, mọi con trùm và mọi vật phẩm đều hoạt động khi tắt mạng — thứ duy nhất cần mạng là cửa hàng.",
+        pol_perm_3: "Bản thân trò chơi không cần kết nối. Mọi đợt tấn công, mọi con trùm và mọi vật phẩm đều hoạt động khi tắt mạng — chỉ có cửa hàng và, trên Android, việc tải quảng cáo là cần mạng. Tắt mạng thì game vẫn chơi đầy đủ, chỉ là quảng cáo không hiện.",
 
         pol_h_storage: "Lưu trữ và xoá dữ liệu",
         pol_storage_1: "Chúng tôi không vận hành máy chủ nào của riêng mình và không lưu dữ liệu người dùng nào. Mọi thứ trò chơi cần để chạy đều được xử lý và lưu ngay trên máy bạn.",
@@ -516,7 +532,7 @@ const i18n = {
         pol_storage_3: "Lịch sử mua hàng là ngoại lệ, vì nó do Apple hoặc Google giữ chứ không phải chúng tôi. Gỡ Ứng dụng không xoá một khoản mua — đó là chủ ý, và chính điều đó cho phép skin bạn đã trả tiền quay lại khi cài lại, qua nút <strong>Restore Purchases</strong> trong cửa hàng. Hãy xem hoặc quản lý nó qua Tài khoản Apple hoặc tài khoản Google Play của bạn.",
 
         pol_h_children: "Quyền riêng tư của trẻ em",
-        pol_children_1: "Novaryn được phân loại cho mọi đối tượng và không chứa nội dung hướng tới trẻ em hay không phù hợp với trẻ em. Chúng tôi không cố ý thu thập thông tin cá nhân của bất kỳ ai, ở bất kỳ độ tuổi nào, kể cả trẻ em dưới 13 tuổi.",
+        pol_children_1: "Novaryn được phân loại cho mọi đối tượng và không chứa nội dung hướng tới trẻ em hay không phù hợp với trẻ em. Chúng tôi không cố ý thu thập thông tin cá nhân của bất kỳ ai, ở bất kỳ độ tuổi nào, kể cả trẻ em dưới 13 tuổi. Ứng dụng không hướng tới trẻ em, và bản Android được cấu hình sao cho quảng cáo hiển thị không dựa trên hồ sơ sở thích ở những nơi mà cửa hàng hoặc pháp luật coi người xem là trẻ em.",
         pol_children_2: "Ứng dụng có mua trong ứng dụng. Nếu trẻ dùng máy của bạn, chúng tôi khuyến nghị bật xác thực trước khi một giao dịch hoàn tất — Ask to Buy hoặc <strong>Thời gian sử dụng → Giới hạn nội dung và quyền riêng tư</strong> trên iOS, và xác thực mua hàng trong cài đặt Google Play Store trên Android.",
 
         pol_h_rights: "Quyền của bạn",
@@ -524,10 +540,10 @@ const i18n = {
         pol_rights_1: "<strong>Truy cập:</strong> chúng tôi không giữ dữ liệu nào về bạn để cung cấp.",
         pol_rights_2: "<strong>Xoá:</strong> gỡ Ứng dụng là xoá mọi thứ Ứng dụng đã lưu.",
         pol_rights_3: "<strong>Mua hàng:</strong> yêu cầu về hồ sơ thanh toán nên gửi tới Apple hoặc Google, bên đã xử lý chúng.",
-        pol_rights_4: "<strong>Phản đối:</strong> trong Ứng dụng không có việc lập hồ sơ, ra quyết định tự động hay quảng cáo nhắm mục tiêu nào để phản đối.",
+        pol_rights_4: "<strong>Phản đối và đồng ý:</strong> trong Ứng dụng không có việc lập hồ sơ hay ra quyết định tự động. Trên Android, bạn có thể thay đổi hoặc rút lại sự đồng ý với quảng cáo bất cứ lúc nào, hoặc gỡ hẳn quảng cáo bằng Novaryn Pro — xem mục <a href='#advertising'>Quảng cáo</a>.",
 
         pol_h_security: "Bảo mật",
-        pol_security: "Vì Ứng dụng lưu dữ liệu cục bộ và không truyền đi thứ gì, các rủi ro thông thường của dữ liệu trên đường truyền không phát sinh. Lưu lượng giao dịch do App Store hoặc Google Play xử lý qua kênh bảo mật của riêng họ. Dù vậy, không phương thức lưu trữ điện tử nào an toàn tuyệt đối, và tệp lưu trên máy bạn được bảo vệ bởi chính bảo mật của thiết bị — nên có khoá màn hình.",
+        pol_security: "Ứng dụng lưu dữ liệu cục bộ, nên các rủi ro thông thường của dữ liệu trên đường truyền gần như không phát sinh. Lưu lượng giao dịch do App Store hoặc Google Play xử lý qua kênh bảo mật của riêng họ, và trên Android, yêu cầu quảng cáo đi tới Google qua kênh của họ. Cả hai đều không mang theo tệp lưu hay điểm số. Dù vậy, không phương thức lưu trữ điện tử nào an toàn tuyệt đối, và tệp lưu trên máy bạn được bảo vệ bởi chính bảo mật của thiết bị — nên có khoá màn hình.",
 
         pol_h_changes: "Thay đổi với Chính sách này",
         pol_changes_1: "Chúng tôi có thể cập nhật Chính sách quyền riêng tư này theo thời gian — ví dụ nếu một phiên bản sau của Ứng dụng có thêm tính năng làm thay đổi cách xử lý dữ liệu. Chúng tôi sẽ đăng chính sách mới trên trang này và cập nhật ngày \"Cập nhật lần cuối\" ở đầu trang.",
