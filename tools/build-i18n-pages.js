@@ -159,9 +159,12 @@ function hreflangBlock(pathAfterHost, langs, def) {
     return lines.join('\n') + '\n';
 }
 
-/** Drop any previously generated alternates so the script is repeatable. */
+/** Drop any previously generated alternates so the script is repeatable.
+ *  The optional carriage return matters: these pages are checked out with
+ *  CRLF endings, so a pattern anchored to a bare line feed matched nothing
+ *  in them and stale alternates survived every run in silence. */
 const stripAlternates = (html) =>
-    html.replace(/^[ \t]*<link rel="alternate" hreflang="[^"]*"[^>]*>[ \t]*\n/gm, '');
+    html.replace(/^[ \t]*<link rel="alternate" hreflang="[^"]*"[^>]*>[ \t]*\r?\n/gm, '');
 
 function setTag(html, re, replacement) {
     return re.test(html) ? html.replace(re, replacement) : html;

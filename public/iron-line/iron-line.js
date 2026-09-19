@@ -182,9 +182,8 @@ const i18n = {
     }
 };
 
-/* Languages offered in the picker, in order.
-   Matches the rest of the site: add { code: 'vi', label: 'Tiếng Việt' }
-   here once the Vietnamese copy is translated to show the picker again. */
+/* Languages offered in the picker, in order. English only: the picker
+   hides itself when there is nothing to pick between. */
 const LANGS = [
     { code: 'en', label: 'English' }
 ];
@@ -214,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // page. Anything no longer offered falls back to English rather than
     // painting a blank page.
     const detectLang = () => {
-        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // The URL wins: /es/… is the Spanish page whatever the browser
         // or a previous visit would have preferred.
         const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
         if (fromUrl) return fromUrl;

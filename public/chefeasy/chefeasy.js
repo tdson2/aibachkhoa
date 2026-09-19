@@ -10,250 +10,10 @@
    ========================================================= */
 
 const i18n = {
-    vi: {
-        page_title: "ChefEasy — app công thức nấu ăn từng bước | AIBachKhoa",
-        meta_desc: "App công thức nấu ăn cho Android: 44 món Việt, Trung, Nhật, Hàn, chế độ nấu từng bước có hẹn giờ, tìm bằng giọng nói, đọc được khi không mạng.",
-        aria_lang: "Đổi ngôn ngữ",
-        aria_theme: "Đổi giao diện sáng/tối",
-        aria_menu: "Mở menu",
-        skip_link: "Tới nội dung chính",
-
-        nav_home: "Trang chủ",
-        nav_overview: "Tổng quan",
-        nav_cook: "Chế độ nấu",
-        nav_voice: "Giọng nói",
-        nav_pro: "ChefEasy Pro",
-        nav_shots: "Ảnh màn hình",
-        nav_policy: "Quyền riêng tư",
-        nav_ios: "Bản iPhone & iPad",
-        nav_android: "Bản Android",
-
-        switch_label: "Nền tảng:",
-        switch_android: "Android",
-        switch_ios: "iPhone & iPad",
-
-        hero_kicker: "Android · nấu ăn tại nhà",
-        hero_title: "Nấu theo từng bước, <em>không phải đọc lại từ đầu</em>.",
-        hero_sub: "Phần khó của một công thức không nằm ở danh sách nguyên liệu, mà ở lúc tay bạn đang dính bột và cần biết bước tiếp theo là gì. ChefEasy dẫn từng bước một, mỗi bước một đồng hồ riêng, màn hình không tự tắt giữa chừng.",
-        btn_play: "Tải trên Google Play",
-        btn_appstore: "Xem trên App Store",
-        btn_shots: "Xem giao diện",
-        btn_policy: "Đọc chính sách quyền riêng tư",
-        btn_contact: "Liên hệ",
-        hero_meta: "Mã ứng dụng <code>com.tdson.cooky</code> · dọc màn hình · Android 7.0 trở lên · miễn phí, có quảng cáo và gói đăng ký tuỳ chọn.",
-
-        stat_recipes: "Món ăn, đọc được khi không có mạng",
-        stat_langs: "Ngôn ngữ giao diện và công thức",
-        stat_cuisine: "Nền ẩm thực: Việt, Trung, Nhật, Hàn",
-        stat_offline: "Lần cần mạng để mở một công thức",
-        stat_account: "Tài khoản phải tạo trước khi nấu",
-
-        cook_eyebrow: "Chế độ nấu",
-        cook_title: "Một bước một màn hình, <em>và một cái đồng hồ</em>.",
-        cook_sub: "Công thức in trên giấy bắt bạn tự tìm lại dòng đang đọc dở. Chế độ nấu của ChefEasy làm ngược lại: mỗi lần chỉ hiện đúng việc đang phải làm, kèm đồng hồ đếm cho việc đó, và chỉ chuyển tiếp khi bạn bảo nó chuyển.",
-
-        c_step_t: "Đúng một việc trên màn hình",
-        c_step_d: "Bước đang thực hiện chiếm trọn khung nhìn, các bước còn lại thu xuống thành danh sách tiến độ bên dưới. Không phải dò mắt tìm dòng đang dở giữa một trang chữ dày đặc.",
-        c_timer_t: "Đồng hồ gắn vào từng việc, không phải cả món",
-        c_timer_d: "\"Ngâm đậu xanh 6-8 tiếng\" và \"cắt hành lá\" không cùng một loại thời gian. Mỗi việc mang đồng hồ riêng, chạy tự động khi tới lượt, và có nút xong sớm khi bếp nhà bạn nhanh hơn công thức.",
-        c_screen_t: "Màn hình không tắt giữa chừng",
-        c_screen_d: "Khi đang ở chế độ nấu, app giữ màn hình sáng. Không phải chạm vào điện thoại bằng tay dính dầu chỉ để đọc tiếp bước ba.",
-        c_check_t: "Nguyên liệu tick được",
-        c_check_d: "Danh sách nguyên liệu có ô đánh dấu và bộ đếm ở góc. Đi chợ về tick dần, hoặc vừa sơ chế vừa tick — cái nào chưa làm nhìn là biết.",
-
-        voice_eyebrow: "Giọng nói",
-        voice_title: "Tay bận thì <em>nói</em>.",
-        voice_sub: "Nút micro nổi ở góc màn hình có mặt ở cả trang chủ, trang chi tiết lẫn trong lúc nấu. Nói tên món để tìm, hoặc ra lệnh chuyển bước mà không cần chạm vào máy.",
-        v_1: "<strong>Tìm món bằng lời.</strong> Đọc tên món và app lọc ngay trong 44 công thức, khớp cả tên tiếng Việt lẫn tên đã dịch.",
-        v_2: "<strong>Điều khiển lúc đang nấu.</strong> Chuyển bước, quay lại, bật hoặc dừng đồng hồ — bằng giọng, giữa lúc hai tay đang bận.",
-        v_3: "<strong>Chỉ bật khi bạn bấm.</strong> Micro không nghe nền. Nó chỉ mở sau khi bạn chạm nút, và tắt ngay khi bạn nói xong.",
-        v_note: "<strong>Cần nói rõ:</strong> việc chuyển giọng nói thành chữ do dịch vụ nhận dạng của hệ điều hành đảm nhiệm, nên đoạn âm thanh đó được gửi tới máy chủ của Google (trên Android) hoặc Apple (trên iPhone, iPad). ChefEasy không nhận được bản ghi, không lưu lại và không có máy chủ nào để lưu. Không muốn dùng thì đừng bấm nút micro — mọi thứ còn lại của app không cần tới nó.",
-
-        lang_eyebrow: "Ngôn ngữ",
-        lang_title: "Năm thứ tiếng, <em>dịch cả công thức</em>.",
-        lang_sub: "Không chỉ nút bấm và nhãn menu. Tên món, nguyên liệu và từng bước nấu đều có bản dịch riêng — phần nào chưa dịch thì lùi về tiếng Anh chứ không để trống.",
-        lang_vi: "Tiếng Việt",
-        lang_en: "English",
-        lang_ja: "日本語",
-        lang_ko: "한국어",
-        lang_zh: "中文",
-        lang_note: "Số liệu — thời gian, khẩu phần, calo — giữ nguyên khi đổi ngôn ngữ, vì đó là thông tin của món ăn chứ không phải của bản dịch.",
-
-        offline_eyebrow: "Không cần mạng",
-        offline_title: "Công thức nằm sẵn <em>trong máy</em>.",
-        offline_sub: "Toàn bộ 44 công thức và ảnh món đi kèm ứng dụng, được giải nén vào máy ở lần mở đầu tiên. Từ lần thứ hai trở đi, mở app là có ngay — kể cả khi bếp nhà bạn nằm chỗ sóng yếu.",
-        o_1: "<strong>Đọc công thức không cần mạng.</strong> Tắt Wi-Fi và 4G thì phần nấu nướng không đổi gì.",
-        o_2: "<strong>Không có tài khoản.</strong> Không đăng ký, không đăng nhập, không hồ sơ người dùng. Mở app là dùng được.",
-        o_3: "<strong>Món yêu thích lưu trong máy.</strong> Danh sách yêu thích và lịch sử xem nằm trong bộ nhớ riêng của app, không gửi đi đâu.",
-        o_4: "<strong>Mạng chỉ dùng cho hai việc.</strong> Tải quảng cáo ở bản miễn phí, và xử lý thanh toán khi bạn đăng ký Pro.",
-
-        pro_eyebrow: "ChefEasy Pro",
-        pro_title: "Tuỳ chọn, và <em>nói rõ từng dòng</em>.",
-        pro_sub: "Bản miễn phí dùng được đầy đủ toàn bộ món Việt — không giới hạn số lần mở, không khoá bước nào. Pro là gói đăng ký để bỏ quảng cáo và mở thêm món nước ngoài.",
-        th_q: "Câu hỏi",
-        th_a: "Trả lời",
-        pro_q1: "Pro mở thêm gì",
-        pro_a1: "Bỏ toàn bộ quảng cáo, mở khoá các món Trung, Nhật, Hàn, và nhận món mới bổ sung hằng tuần.",
-        pro_q2: "Không mua thì mất gì",
-        pro_a2: "Không mất gì trong phần món Việt. Toàn bộ món Việt, chế độ nấu từng bước, hẹn giờ, tìm bằng giọng nói và chế độ ngoại tuyến đều miễn phí.",
-        pro_q3: "Tính tiền thế nào",
-        pro_a3: "Gói tháng hoặc gói năm, tự gia hạn, thanh toán qua Google Play. Giá hiện theo tiền tệ của bạn ngay trong app.",
-        pro_q4: "Huỷ ở đâu",
-        pro_a4: "Trong Google Play → Gói thuê bao, huỷ bất cứ lúc nào. App không có màn hình níu kéo, và chúng tôi không bao giờ thấy thẻ của bạn.",
-        pro_q5: "Huỷ rồi thì sao",
-        pro_a5: "Quảng cáo quay lại và các món Trung, Nhật, Hàn khoá lại khi hết kỳ đã trả. Món Việt vẫn nguyên.",
-
-        gal_eyebrow: "Ảnh màn hình",
-        gal_title: "Chụp thẳng từ máy, <em>không dựng</em>.",
-        gal_sub: "Mọi khung hình dưới đây chụp trực tiếp trên thiết bị, đúng như app vẽ ra.",
-
-        s1_title: "Trang chủ",
-        s1_cap: "Món yêu thích và vừa xem gần đây nằm trên cùng, bên dưới là toàn bộ danh sách kèm thời gian nấu, calo, khẩu phần và độ khó — đủ để chọn món trước khi mở ra.",
-        s2_title: "Trang chi tiết món",
-        s2_cap: "Ảnh món, thẻ phân loại, mô tả ngắn, rồi tới sáu chỉ số của món. Hai nút dưới cùng là hai lối vào song song: đọc toàn bộ một trang, hoặc để app dẫn từng bước.",
-        s3_title: "Nguyên liệu",
-        s3_cap: "Mỗi dòng một nguyên liệu kèm ghi chú sơ chế và ô đánh dấu. Bộ đếm ở góc cho biết còn bao nhiêu thứ chưa chuẩn bị.",
-        s4_title: "Công thức đầy đủ",
-        s4_cap: "Bản đọc một trang cho người thích nhìn toàn cảnh trước khi bắt tay vào làm, có nút chuyển thẳng sang chế độ nấu từng bước ở cuối.",
-        s5_title: "Đang nấu",
-        s5_cap: "Bước hiện tại chiếm trọn màn hình, đồng hồ của việc đang làm chạy ở giữa, tiến độ các việc còn lại nằm ngay dưới.",
-
-        a4_title: "Đang nấu",
-        a4_cap: "Bước hiện tại chiếm trọn màn hình, đồng hồ của việc đang làm chạy ở giữa, tiến độ các việc còn lại nằm ngay dưới.",
-        a5_title: "ChefEasy Pro",
-        a5_cap: "Hộp thoại nâng cấp nói thẳng ba thứ Pro mở ra, và có nút Để sau — bản miễn phí vẫn dùng đủ toàn bộ món Việt.",
-
-        faq_eyebrow: "Câu hỏi thường gặp",
-        faq1_q: "Chạy được trên Android nào?",
-        faq1_a: "Android 7.0 trở lên, màn hình dọc. Ứng dụng miễn phí, có quảng cáo và có gói đăng ký tuỳ chọn.",
-        faq2_q: "Có quảng cáo không?",
-        faq2_a: "Bản miễn phí có quảng cáo hiện lúc mở app. Không có quảng cáo chen ngang giữa lúc đang nấu. Đăng ký Pro thì bỏ hẳn.",
-        faq3_q: "Có cần mạng không?",
-        faq3_a: "Không, để đọc và nấu công thức. Mạng chỉ cần cho quảng cáo, cho thanh toán, và cho phần tìm bằng giọng nói.",
-        faq4_q: "App có thu thập dữ liệu của tôi không?",
-        faq4_a: "Chúng tôi không có máy chủ và không nhận dữ liệu nào về bạn. Món yêu thích, lịch sử xem và cài đặt nằm trong bộ nhớ riêng của app trên máy bạn. Bên thứ ba duy nhất là Google — cho quảng cáo, thanh toán và nhận dạng giọng nói.",
-        faq5_q: "Micro dùng để làm gì?",
-        faq5_a: "Chỉ để tìm món và ra lệnh khi đang nấu, và chỉ sau khi bạn bấm nút micro. App không nghe nền, không ghi âm và không lưu bất cứ đoạn tiếng nào.",
-        faq6_q: "Trẻ em dùng được không?",
-        faq6_a: "Nội dung là công thức nấu ăn, không có gì nhạy cảm. Nhưng app có quảng cáo và có mua trong ứng dụng, nên máy dùng chung nên đặt mã PIN mua hàng trên cửa hàng.",
-
-        cta_title: "Mở app, chọn món, và để nó dẫn bạn từng bước.",
-
-        footer_desc: "Xây dựng công cụ AI thiết thực cho lập trình viên và doanh nghiệp.",
-        footer_app: "Ứng dụng",
-        footer_prod: "Sản phẩm khác",
-        footer_comp: "Công ty",
-        footer_about: "Giới thiệu",
-        footer_services: "Dịch vụ",
-        footer_contact: "Liên hệ",
-        footer_rights: "Bảo lưu mọi quyền.",
-
-        /* ---------- iOS page ---------- */
-        ios_page_title: "ChefEasy cho iPhone & iPad — nấu từng bước | AIBachKhoa",
-        ios_meta_desc: "App công thức nấu ăn cho iPhone và iPad: 44 món Á, chế độ nấu từng bước có hẹn giờ, tìm bằng giọng nói, đọc offline. Yêu cầu iOS 15.0 trở lên.",
-        ios_kicker: "iPhone & iPad · nấu ăn tại nhà",
-        ios_meta: "Mã bundle <code>com.tdson.cooky</code> · dọc màn hình · iPhone và iPad, iOS 15.0 trở lên · miễn phí, có quảng cáo và gói đăng ký tuỳ chọn.",
-        ios_faq1_q: "Chạy được trên iPhone, iPad nào?",
-        ios_faq1_a: "iOS 15.0 trở lên, cho cả iPhone lẫn iPad.",
-        ios_faq3_a: "Không, để đọc và nấu công thức. Mạng chỉ cần cho quảng cáo, cho thanh toán qua App Store, và cho phần tìm bằng giọng nói.",
-        ios_faq4_a: "Chúng tôi không có máy chủ và không nhận dữ liệu nào về bạn. Món yêu thích, lịch sử xem và cài đặt nằm trong bộ nhớ riêng của app trên máy bạn. Bên thứ ba là Google (quảng cáo) và Apple (thanh toán, nhận dạng giọng nói).",
-        ios_perm_eyebrow: "Quyền ứng dụng xin",
-        ios_perm_title: "Đúng hai quyền, <em>và chỉ khi bạn bấm</em>.",
-        ios_perm_sub: "iOS hỏi bạn trước khi cấp, và cả hai chỉ được xin ở đúng lúc bạn chạm nút micro — không phải lúc mở app.",
-        ios_perm_mic: "<strong>Micro.</strong> Để nghe câu bạn nói khi tìm món hoặc ra lệnh lúc đang nấu.",
-        ios_perm_speech: "<strong>Nhận dạng giọng nói.</strong> Để chuyển câu đó thành chữ. Việc này do dịch vụ của Apple xử lý, nên đoạn âm thanh được gửi tới máy chủ Apple.",
-        ios_perm_none: "<strong>Ngoài hai quyền trên, không xin gì thêm.</strong> Không vị trí, không danh bạ, không máy ảnh, không ảnh, không thông báo đẩy.",
-        ios_pro_a3: "Gói tháng hoặc gói năm, tự gia hạn, thanh toán qua App Store. Giá hiện theo tiền tệ của bạn ngay trong app.",
-        ios_pro_a4: "Trong Cài đặt → tên bạn → Đăng ký, huỷ bất cứ lúc nào. App không có màn hình níu kéo, và chúng tôi không bao giờ thấy thẻ của bạn.",
-        ios_pro_a5: "Quảng cáo quay lại và các món Trung, Nhật, Hàn khoá lại khi hết kỳ đã trả. Món Việt vẫn nguyên.",
-
-        /* ---------- Policy ---------- */
-        pol_page_title: "Chính sách quyền riêng tư — ChefEasy | AIBachKhoa",
-        pol_meta_desc: "ChefEasy xử lý thông tin thế nào: cái gì ở lại trong máy bạn, đoạn giọng nói đi đâu, quảng cáo và thanh toán nhận được gì.",
-        pol_eyebrow: "Pháp lý",
-        pol_title: "Chính sách quyền riêng tư",
-        pol_app: "ChefEasy",
-        pol_updated: "Cập nhật lần cuối: 6 tháng 9, 2026",
-        pol_back: "Quay lại trang ứng dụng",
-        pol_toc: "Nội dung trang này",
-        pol_lead: "Chính sách này giải thích ChefEasy (\"chúng tôi\") thu thập, sử dụng và bảo vệ thông tin của bạn ra sao khi bạn dùng ứng dụng di động ChefEasy (\"Ứng dụng\"). Chúng tôi tuân thủ các quy định bảo vệ dữ liệu hiện hành, bao gồm GDPR và CCPA ở những nơi các quy định này được áp dụng.",
-
-        pol_h_intro: "Giới thiệu",
-        pol_intro: "ChefEasy là ứng dụng công thức nấu ăn cho Android, iPhone và iPad: 44 món Việt, Trung, Nhật, Hàn, kèm chế độ nấu dẫn từng bước có hẹn giờ. Toàn bộ công thức đi kèm ứng dụng và chạy trên chính máy bạn. Không có tài khoản, không có hồ sơ người dùng, không có phần bình luận hay trò chuyện.",
-
-        pol_h_short: "Bản tóm tắt",
-        pol_short_1: "<strong>Chúng tôi không vận hành máy chủ nào và không nhận dữ liệu nào về bạn.</strong> Món yêu thích, lịch sử xem, ngôn ngữ và các cài đặt khác được ghi vào bộ nhớ riêng của Ứng dụng trên máy bạn và không rời khỏi đó.",
-        pol_short_2: "<strong>Bản miễn phí có quảng cáo</strong> do Google AdMob cung cấp. AdMob có thể đọc mã định danh quảng cáo của thiết bị để chọn và đo lường quảng cáo. Đăng ký ChefEasy Pro thì quảng cáo tắt hoàn toàn.",
-        pol_short_3: "<strong>Tìm bằng giọng nói gửi đoạn âm thanh đi.</strong> Việc chuyển tiếng nói thành chữ do dịch vụ nhận dạng của hệ điều hành thực hiện — Google trên Android, Apple trên iPhone và iPad. Chỉ xảy ra sau khi bạn chạm nút micro. Chúng tôi không nhận, không nghe và không lưu đoạn âm thanh đó.",
-        pol_short_4: "<strong>Không có SDK phân tích hay báo lỗi nào trong bản dựng.</strong> Không có gì đo đếm bạn làm gì trong app.",
-        pol_short_5: "<strong>Ứng dụng chỉ xin quyền micro và nhận dạng giọng nói</strong>, và chỉ xin khi bạn chủ động bấm nút micro. Không vị trí, không danh bạ, không máy ảnh, không truy cập tệp của bạn.",
-
-        pol_h_defs: "Giải thích và định nghĩa",
-        pol_h_interp: "Giải thích",
-        pol_interp: "Những từ viết hoa chữ cái đầu mang nghĩa được định nghĩa dưới đây, không phụ thuộc vào việc chúng ở dạng số ít hay số nhiều.",
-        pol_h_defs2: "Định nghĩa",
-        pol_defs_lead: "Trong Chính sách này:",
-        pol_d_app: "<strong>Ứng dụng</strong> là ChefEasy, phần mềm do Công ty cung cấp.",
-        pol_d_company: "<strong>Công ty</strong> (\"chúng tôi\") là tdson, nhà phát triển Ứng dụng.",
-        pol_d_country: "<strong>Quốc gia</strong>: Việt Nam.",
-        pol_d_device: "<strong>Thiết bị</strong> là máy có thể chạy Ứng dụng, ví dụ điện thoại hoặc máy tính bảng.",
-        pol_d_personal: "<strong>Dữ liệu cá nhân</strong> là thông tin liên quan tới một cá nhân đã hoặc có thể xác định được.",
-        pol_d_provider: "<strong>Bên xử lý dữ liệu</strong> là tổ chức xử lý dữ liệu thay mặt Công ty. Với Ứng dụng này chỉ gồm: Google (quảng cáo AdMob, thanh toán Google Play, nhận dạng giọng nói trên Android) và Apple (thanh toán App Store, nhận dạng giọng nói trên iOS).",
-        pol_d_purchase: "<strong>Mua trong ứng dụng</strong> là gói đăng ký ChefEasy Pro theo tháng hoặc theo năm, thanh toán qua Google Play hoặc App Store tuỳ nơi bạn cài Ứng dụng.",
-        pol_d_you: "<strong>Bạn</strong> là cá nhân sử dụng Ứng dụng.",
-
-        pol_h_collect: "Dữ liệu Ứng dụng lưu",
-        pol_collect_lead: "Ứng dụng lưu những thứ sau, tất cả đều nằm trong bộ nhớ riêng của nó trên máy bạn và không được gửi tới chúng tôi:",
-        pol_c_1: "Danh sách món yêu thích và lịch sử món đã xem.",
-        pol_c_2: "Ngôn ngữ đã chọn, giao diện sáng hoặc tối, và tuỳ chọn giữ màn hình sáng khi nấu.",
-        pol_c_3: "Trạng thái đăng ký Pro, để Ứng dụng biết có nên hiện quảng cáo hay không.",
-        pol_c_4: "Gói dữ liệu công thức đã giải nén ở lần mở đầu tiên.",
-        pol_collect_none: "Ứng dụng không hỏi tên, email, số điện thoại hay bất kỳ thông tin định danh nào của bạn, vì nó không có nơi để gửi những thứ đó tới.",
-
-        pol_h_voice: "Micro và nhận dạng giọng nói",
-        pol_voice_1: "Ứng dụng có nút micro để tìm món và ra lệnh khi đang nấu. Micro chỉ bật sau khi bạn chạm vào nút đó, và tắt ngay khi bạn nói xong. Ứng dụng không nghe nền và không ghi âm.",
-        pol_voice_2: "Việc chuyển tiếng nói thành chữ không diễn ra trên máy bạn: đoạn âm thanh được chuyển tới dịch vụ nhận dạng giọng nói của hệ điều hành — Google trên Android, Apple trên iPhone và iPad — và chỉ phần chữ được trả về cho Ứng dụng. Cách Google và Apple xử lý đoạn âm thanh đó chịu sự điều chỉnh của chính sách quyền riêng tư của họ.",
-        pol_voice_3: "Chúng tôi không nhận được đoạn âm thanh, không nghe được nội dung, và không lưu lại phần chữ trả về sau khi tìm kiếm kết thúc. Nếu bạn không muốn dùng, chỉ cần không bấm nút micro — mọi tính năng khác của Ứng dụng không cần tới nó.",
-
-        pol_h_ads: "Quảng cáo",
-        pol_ads_1: "Bản miễn phí hiện quảng cáo do Google AdMob cung cấp, dạng quảng cáo toàn màn hình lúc mở Ứng dụng. Không có quảng cáo nào chen vào giữa lúc bạn đang nấu.",
-        pol_ads_2: "Để chọn và đo lường quảng cáo, AdMob có thể đọc mã định danh quảng cáo của thiết bị cùng thông tin kỹ thuật cơ bản như kiểu máy và phiên bản hệ điều hành. Chúng tôi không cung cấp cho AdMob bất kỳ thông tin nào về bạn, vì chúng tôi không có.",
-        pol_ads_3: "Bạn có thể đặt lại hoặc xoá mã định danh quảng cáo trong phần cài đặt của hệ điều hành. Đăng ký ChefEasy Pro sẽ tắt quảng cáo hoàn toàn, và khi đó Ứng dụng không nạp SDK quảng cáo nữa.",
-
-        pol_h_purchases: "Mua hàng và đăng ký",
-        pol_pur_1: "ChefEasy Pro là gói đăng ký tự gia hạn theo tháng hoặc theo năm, dùng để tắt quảng cáo và mở khoá các món Trung, Nhật, Hàn.",
-        pol_pur_2: "Giao dịch do Google Play hoặc App Store xử lý hoàn toàn, tuỳ nơi bạn cài Ứng dụng. Chúng tôi không bao giờ nhìn thấy, không nhận và không lưu thông tin thẻ hay thông tin thanh toán của bạn. Ứng dụng chỉ nhận được kết quả cuối cùng: đăng ký đang hoạt động hay không.",
-        pol_pur_3: "Huỷ đăng ký trong Google Play → Gói thuê bao, hoặc Cài đặt → tên bạn → Đăng ký trên iPhone và iPad.",
-
-        pol_h_perm: "Quyền và truy cập mạng",
-        pol_perm_1: "Trên Android, Ứng dụng khai báo quyền ghi âm (cho nút micro) cùng quyền truy cập Internet và trạng thái mạng. Trên iPhone và iPad, Ứng dụng xin quyền micro và quyền nhận dạng giọng nói, và chỉ xin khi bạn chạm nút micro lần đầu.",
-        pol_perm_2: "Ứng dụng không xin quyền vị trí, danh bạ, lịch, máy ảnh, thư viện ảnh hay quyền đọc tệp của bạn.",
-        pol_perm_3: "Kết nối mạng chỉ được dùng cho ba việc: nạp quảng cáo ở bản miễn phí, xử lý thanh toán khi bạn đăng ký Pro, và gửi đoạn âm thanh tới dịch vụ nhận dạng giọng nói khi bạn dùng nút micro. Việc đọc và nấu theo công thức hoạt động bình thường khi không có mạng.",
-
-        pol_h_storage: "Lưu trữ và xoá dữ liệu",
-        pol_storage_1: "Mọi thứ Ứng dụng lưu đều nằm trong vùng nhớ riêng của nó trên máy bạn. Chúng tôi không có bản sao ở nơi nào khác, vì chúng tôi không vận hành máy chủ.",
-        pol_storage_2: "Gỡ Ứng dụng sẽ xoá toàn bộ những dữ liệu đó. Bạn cũng có thể xoá dữ liệu ứng dụng trong phần cài đặt hệ điều hành mà không cần gỡ.",
-
-        pol_h_children: "Quyền riêng tư của trẻ em",
-        pol_children: "Ứng dụng không nhắm tới trẻ em dưới 13 tuổi và không cố ý thu thập dữ liệu cá nhân của trẻ em. Ứng dụng có chứa quảng cáo và mua trong ứng dụng, nên với máy dùng chung, chúng tôi khuyên bật mã PIN xác nhận mua hàng trên Google Play hoặc bật Screen Time trên thiết bị Apple.",
-
-        pol_h_rights: "Quyền của bạn",
-        pol_rights: "GDPR và CCPA cho bạn quyền truy cập, chỉnh sửa, xoá và mang đi dữ liệu cá nhân mà một tổ chức nắm giữ về bạn. Với Ứng dụng này, những quyền đó gần như không có gì để thực thi: chúng tôi không nắm giữ dữ liệu cá nhân nào của bạn. Dữ liệu duy nhất tồn tại nằm trên máy bạn và bạn xoá được bất cứ lúc nào bằng cách gỡ Ứng dụng. Với dữ liệu mà Google hoặc Apple xử lý — quảng cáo, thanh toán, nhận dạng giọng nói — vui lòng thực hiện quyền của bạn trực tiếp với họ.",
-
-        pol_h_security: "Bảo mật",
-        pol_security: "Vì Ứng dụng không truyền dữ liệu cá nhân đi, không có đường truyền nào để chặn bắt và không có cơ sở dữ liệu nào của chúng tôi để bị xâm nhập. Gói công thức đi kèm Ứng dụng được mã hoá và chỉ giải mã trên máy bạn. Dù vậy, không có phương thức lưu trữ điện tử nào an toàn tuyệt đối.",
-
-        pol_h_changes: "Thay đổi chính sách",
-        pol_changes: "Khi có thay đổi, bản mới sẽ được đăng tại chính trang này kèm ngày cập nhật mới. Nếu một bản cập nhật của Ứng dụng làm thay đổi cách xử lý dữ liệu, chúng tôi sẽ sửa trang này trước khi bản cập nhật đó được phát hành.",
-
-        pol_h_contact: "Liên hệ",
-        pol_contact: "Có câu hỏi về chính sách này, xin liên hệ:",
-        pol_back_app: "Quay lại trang ChefEasy"
-    }
 };
 
-/* English mirrors the Vietnamese copy; the app itself is bilingual, so the
-   page should be too. Keys missing here fall through to Vietnamese. */
+/* The page's only language. It used to be the translation of a Vietnamese
+   source; the Vietnamese copy went when /vi/ did, and this became the base. */
 i18n.en = {
     page_title: "ChefEasy — cook a recipe one step at a time | AIBachKhoa",
     meta_desc: "A cooking app for Android: 44 Vietnamese, Chinese, Japanese and Korean dishes, guided step-by-step mode with timers, voice search, works offline.",
@@ -494,10 +254,9 @@ i18n.en = {
 };
 
 const LANGS = [
-    { code: 'vi', label: 'Tiếng Việt' },
     { code: 'en', label: 'English' }
 ];
-const DEFAULT_LANG = 'vi';
+const DEFAULT_LANG = 'en';
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.documentElement;
@@ -523,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // A choice made on these pages wins, then whatever the visitor picked on
     // the landing page, then the browser's own preference.
     const detectLang = () => {
-        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // The URL wins: /es/… is the Spanish page whatever the browser
         // or a previous visit would have preferred.
         const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
         if (fromUrl) return fromUrl;

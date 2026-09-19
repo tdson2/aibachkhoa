@@ -1,5 +1,5 @@
 /* The language a page is in now lives in its URL: /bksafe is English,
- * /vi/bksafe is the Vietnamese build of the same page. Both are real,
+ * /es/bksafe is the Spanish build of the same page. Both are real,
  * pre-rendered files (see tools/build-i18n-pages.js), so a crawler and a
  * reader who arrives cold both get the right language with no JavaScript.
  *

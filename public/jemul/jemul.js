@@ -119,125 +119,10 @@ const i18n = {
         pol_s7_h: "Contact",
         pol_s7_p: "Questions about this policy, or a request to remove data or content:",
     },
-
-    vi: {
-        page_title: "JeMul — giả lập game Java J2ME cho Android | AIBachKhoa",
-        meta_desc: "JeMul chạy lại game Java ME của điện thoại phổ thông. Cài app Android để chơi file .jar của bạn, hoặc mở bản web chơi cả thư viện.",
-        pol_page_title: "JeMul — chính sách quyền riêng tư | AIBachKhoa",
-        pol_meta_desc: "Bản Android không có tài khoản và giữ mọi thứ trên máy. Bản web đăng nhập Google chỉ để biết ai đang dùng máy chủ.",
-
-        aria_lang: "Đổi ngôn ngữ",
-        aria_theme: "Đổi giao diện sáng/tối",
-        aria_menu: "Mở menu",
-        skip_link: "Tới nội dung",
-
-        nav_home: "Trang chủ",
-        nav_overview: "Tổng quan",
-        nav_android: "App Android",
-        nav_web: "Chơi trên web",
-        nav_shots: "Ảnh chụp",
-        nav_policy: "Quyền riêng tư",
-        nav_back: "Quay lại JeMul",
-
-        hero_kicker: "App Android · bản web · J2ME",
-        hero_title: "Những game trên chiếc điện thoại đầu tiên, <em>chạy lại</em>.",
-        hero_sub: "JeMul là trình giả lập Java ME. Cài app Android rồi trỏ vào file .jar của bạn, hoặc mở bản web — nơi đã có sẵn hơn một nghìn tựa game, không cần cài, không cần thiết lập.",
-        hero_meta: "Mã ứng dụng <code>com.tdson.jemul</code> · điện thoại và máy tính bảng Android · miễn phí",
-        btn_play: "Tải trên Google Play",
-        btn_web: "Chơi trên trình duyệt",
-        btn_web_open: "Mở bản web",
-
-        ov_eyebrow: "JeMul là gì",
-        ov_title: "Một trình giả lập, không phải trang tải game.",
-        ov_lede: "JeMul chạy các ứng dụng MIDP — những file .jar mà điện thoại phổ thông chạy trong khoảng 2001–2012. Bản thân nó không kèm game nào: trên Android bạn tự đưa file vào, còn bản web đọc thư viện mà người vận hành đã đặt sẵn trên máy chủ.",
-        c1_h: "Phím bấm đầy đủ",
-        c1_p: "Nguyên bàn phím điện thoại: phím điều hướng, hai phím mềm, 0–9, sao và thăng, phím xóa. Trên máy tính mỗi phím đều gán lại được; trên điện thoại chúng nằm ngay dưới ngón tay.",
-        c2_h: "Dành cho màn hình cũ",
-        c2_p: "Các game này được vẽ cho 128×128 đến 480×800. JeMul phóng to mà vẫn giữ nét pixel, giữ đúng tỉ lệ gốc, và xoay được màn hình cho những bản làm cho máy nằm ngang.",
-        c3_h: "Tiến trình được giữ lại",
-        c3_p: "Điểm cao và game đã lưu được giữ đúng cách game gốc mong đợi và còn nguyên giữa các lần chơi, nên hôm sau mở lại là chơi tiếp.",
-
-        an_eyebrow: "App Android",
-        an_title: "JeMul trên điện thoại.",
-        an_lede: "Thêm một file .jar hoặc .jad là nó xuất hiện trong thư viện kèm icon và dung lượng. Mọi thứ chạy ngay trên máy — không tài khoản, không máy chủ, không cần mạng sau khi đã có file.",
-        an_l1: "Nhập file .jar và .jad trực tiếp từ bộ nhớ máy",
-        an_l2: "Thư viện có tìm kiếm, chơi gần đây và chi tiết từng game",
-        an_l3: "Bàn phím ảo theo kiểu Nokia, Samsung hoặc Sony Ericsson",
-        an_l4: "Toàn màn hình, giữ tỉ lệ, chỉnh kích thước và tốc độ khung hình",
-        an_l5: "Âm thanh game và rung phản hồi mỗi lần bấm phím",
-
-        web_eyebrow: "Bản web",
-        web_title: "Không phải cài gì cả.",
-        web_lede: "Bản web gánh phần nặng thay bạn, nên game chạy bằng sức máy tính chứ không phải sức một chiếc điện thoại đời 2006. Đăng nhập Google rồi bấm chơi.",
-        web_l1: "Thư viện hơn một nghìn tựa game, tìm và lọc được",
-        web_l2: "60 khung hình mỗi giây, hiện số FPS ngay khi chơi",
-        web_l3: "Bàn phím, chuột cho game cảm ứng, và bàn phím ảo trên màn hình",
-        web_l4: "Giao diện kính chỉnh được: màu, độ mờ, tỉ lệ, đường quét",
-        web_l5: "Chơi được cả trên điện thoại: phím và màn hình gọn trong một khung, không phải cuộn",
-
-        gal_eyebrow: "Ảnh chụp",
-        gal_title: "Nhìn qua một vòng.",
-        g1_t: "Thư viện", g1_h: "Thư viện",
-        g1_p: "Có ảnh bìa thì dùng ảnh bìa, không có thì lấy icon ngay trong file .jar. Lọc theo thể loại, độ phân giải hoặc năm, hoặc chỉ cần gõ tìm.",
-        g2_t: "Chi tiết game", g2_h: "Một game, nhiều bản",
-        g2_p: "Một game ngày xưa thường có hàng chục bản, mỗi bản cho một dòng máy. Chọn độ phân giải bạn muốn là chạy đúng file đó.",
-        g3_t: "Đang chơi", g3_h: "Đang chơi",
-        g3_p: "Màn hình, bàn phím, và toàn bộ điều khiển liệt kê bên phải kèm phím tương ứng. Tạm dừng, tua nhanh, khởi động lại, chụp màn hình đều chỉ một phím.",
-        g4_t: "Cài đặt", g4_h: "Cài đặt dùng được thật",
-        g4_p: "Độ trong của kính, độ mờ, màu nhấn, tỉ lệ, đường quét — và cả tuỳ chọn của máy ảo: dòng máy, xoay màn hình, giới hạn FPS, âm thanh.",
-        g5_t: "Bàn phím", g5_h: "Bảng hướng dẫn phím",
-        g5_p: "Từng phím điện thoại đặt cạnh phím bàn phím đang gán cho nó. Bấm một dòng rồi nhấn phím mới là đổi được, kể cả khi đang chơi.",
-        g6_t: "Trên điện thoại", g6_h: "Trên điện thoại",
-        g6_p: "Nằm ngang thì phím điều hướng và phím bấm chia hai bên màn hình; nằm dọc thì nằm bên dưới. Không phải cuộn, và chế độ tập trung ẩn hết chỉ chừa game.",
-
-        facts_eyebrow: "Thông số",
-        facts_title: "Tóm tắt.",
-        f1_t: "Nền tảng", f1_v: "Android · mọi trình duyệt hiện đại",
-        f2_t: "Chạy được", f2_v: "File .jar J2ME / MIDP 2.0",
-        f3_t: "Giá", f3_v: "Miễn phí",
-        f4_t: "Mã ứng dụng",
-
-        cta_title: "Chọn nơi bạn muốn chơi.",
-
-        footer_desc: "Xây dựng công cụ AI thiết thực cho lập trình viên và doanh nghiệp.",
-        footer_app: "Ứng dụng",
-        footer_prod: "Sản phẩm khác",
-        footer_comp: "Công ty",
-        footer_about: "Giới thiệu",
-        footer_services: "Dịch vụ",
-        footer_contact: "Liên hệ",
-        footer_rights: "Bảo lưu mọi quyền.",
-
-        pol_title: "Chính sách quyền riêng tư",
-        pol_updated: "Cập nhật lần cuối: 07/09/2026",
-        pol_s1_h: "Tóm tắt",
-        pol_s1_p: "Bản Android không có tài khoản và không gửi gì đi đâu: game, file lưu và cài đặt đều nằm trên máy bạn. Bản web yêu cầu đăng nhập Google trước khi chơi để người vận hành biết ai đang dùng máy chủ — đó là dữ liệu cá nhân duy nhất liên quan.",
-        pol_s2_h: "Bản Android lưu những gì",
-        pol_s2_l1: "Các file .jar và .jad bạn nhập vào, nằm trong bộ nhớ riêng của ứng dụng.",
-        pol_s2_l2: "File lưu game và điểm cao do chính game ghi ra.",
-        pol_s2_l3: "Cài đặt hiển thị, bàn phím và âm thanh của bạn.",
-        pol_s2_p: "Tất cả nằm trên máy bạn. Gỡ ứng dụng là mất hết. Không có gì được tải lên, và không có SDK quảng cáo hay phân tích nào đọc chúng.",
-        pol_s3_h: "Bản web lưu những gì",
-        pol_s3_l1: "Tên, địa chỉ email và ảnh đại diện của tài khoản Google, lấy từ lần đăng nhập và dùng để nhận diện bạn với người vận hành.",
-        pol_s3_l2: "Ghi nhận lượt truy cập và việc game nào được mở, lúc nào, trong bao lâu — để biết máy chủ đang được dùng ra sao.",
-        pol_s3_l3: "Cài đặt giao diện và file lưu game, giữ trên máy chủ để lần sau vẫn còn.",
-        pol_s3_p: "Việc đăng nhập do Google Firebase Authentication đảm nhiệm; JeMul không bao giờ thấy mật khẩu của bạn. Firebase Analytics được dùng để đếm lượt xem trang và sự kiện cơ bản. Bạn có thể dừng toàn bộ bằng cách đăng xuất và không chơi.",
-        pol_s4_h: "Nội dung game",
-        pol_s4_p: "JeMul không cung cấp game. Trên Android bạn tự đưa file vào. Ở bản web, thư viện thuộc về người vận hành bản cài đặt đó; tác giả JeMul không tạo ra, không sở hữu và không phân phối nó. Chủ sở hữu quyền muốn gỡ một tựa game khỏi một bản cài đặt xin liên hệ người vận hành bản đó, nội dung sẽ được gỡ.",
-        pol_s5_h: "Trẻ em",
-        pol_s5_p: "JeMul không hướng tới trẻ em dưới 13 tuổi và không chủ ý thu thập dữ liệu cá nhân từ các em.",
-        pol_s6_h: "Quyền của bạn",
-        pol_s6_l1: "Android: xoá dữ liệu ứng dụng hoặc gỡ cài đặt là xoá sạch.",
-        pol_s6_l2: "Web: đăng xuất bất cứ lúc nào; yêu cầu người vận hành xoá lịch sử hoạt động và file lưu của bạn.",
-        pol_s6_l3: "Gửi thư tới địa chỉ bên dưới, dữ liệu của bạn sẽ được xoá trong vòng 30 ngày.",
-        pol_s7_h: "Liên hệ",
-        pol_s7_p: "Thắc mắc về chính sách này, hoặc yêu cầu xoá dữ liệu hay nội dung:",
-    },
 };
 
 const LANGS = [
-    { code: 'en', label: 'English' },
-    { code: 'vi', label: 'Tiếng Việt' },
+    { code: 'en', label: 'English' }
 ];
 const DEFAULT_LANG = 'en';
 
@@ -259,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const supported = LANGS.map(l => l.code);
 
     const detectLang = () => {
-        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // The URL wins: /es/… is the Spanish page whatever the browser
         // or a previous visit would have preferred.
         const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
         if (fromUrl) return fromUrl;

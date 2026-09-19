@@ -10,7 +10,16 @@ const PORT = process.env.PORT || 3000;
 // same content compete with each other in search results.
 app.get('/new', (req, res) => res.redirect(301, '/'));
 
-// Clean URLs, for every page and every language: /bksafe, /vi/bksafe and
+// The site used to ship a Vietnamese translation under /vi/. It has been
+// retired, but those URLs were indexed and linked, so they answer with a
+// permanent redirect to the English page rather than a 404: every /vi/<path>
+// had an English twin at /<path>, which makes the mapping exact.
+app.use((req, res, next) => {
+  if (req.path !== '/vi' && !req.path.startsWith('/vi/')) return next();
+  res.redirect(301, req.path.slice(3) || '/');
+});
+
+// Clean URLs, for every page and every language: /bksafe, /es/bksafe and
 // /chefeasy/policy are each served straight from their own index.html. The
 // alternative — letting express.static redirect /bksafe to /bksafe/ — puts a
 // 301 in front of every visit, including the ones arriving from a paid ad.

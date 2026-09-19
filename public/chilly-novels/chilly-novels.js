@@ -133,140 +133,11 @@ const i18n = {
         footer_services: "Services",
         footer_contact: "Contact",
         footer_rights: "All rights reserved."
-    },
-
-    vi: {
-        page_title: "Chilly Novels — tải một lần, đọc offline | AIBachKhoa",
-        meta_desc: "Ứng dụng đọc truyện ngắn và truyện tranh. Tải một lần, mỗi truyện chỉ khoảng 15 KB, rồi đọc offline thoải mái. Không cần tài khoản.",
-        pol_page_title: "Chilly Novels — chính sách quyền riêng tư | AIBachKhoa",
-        pol_meta_desc: "Chilly Novels không có tài khoản và không thu thập thông tin cá nhân. Truyện yêu thích, lịch sử và tiến trình đọc đều nằm trên máy bạn.",
-
-        aria_lang: "Đổi ngôn ngữ",
-        aria_theme: "Đổi giao diện sáng/tối",
-        aria_menu: "Mở menu",
-        skip_link: "Bỏ qua tới nội dung",
-
-        nav_home: "Trang chủ",
-        nav_overview: "Tổng quan",
-        nav_library: "Tủ truyện",
-        nav_reading: "Khi đọc",
-        nav_shots: "Ảnh màn hình",
-        nav_policy: "Quyền riêng tư",
-        nav_back: "Quay lại ứng dụng",
-
-        hero_kicker: "Android · tiếng Việt · đọc offline",
-        hero_title: "Tải một lần. <em>Đọc offline</em> mãi mãi.",
-        hero_sub: "Một tủ truyện nhỏ gồm truyện chữ và truyện tranh. Chọn truyện bạn muốn, tải về máy một lần, rồi đọc trên máy bay, dưới tàu điện, hay bất cứ đâu sóng đã bỏ cuộc. Một truyện chữ trọn bộ chỉ nặng chừng mười lăm kilobyte.",
-        btn_play: "Tải trên Google Play",
-        btn_shots: "Xem giao diện đọc",
-        hero_meta_app: "Mã ứng dụng",
-        hero_meta_rest: "màn hình dọc, điện thoại Android · giao diện tiếng Việt · gán nhãn Teen · miễn phí, có quảng cáo",
-
-        quote: "Tải truyện về máy một lần rồi đọc offline thoải mái.",
-
-        how_eyebrow: "Cách hoạt động",
-        how_title: "Ba lần chạm, rồi sóng mạng hết quan trọng.",
-        how_lede: "Mở app lên là màn hình chuẩn bị tủ sách, không phải form đăng ký. Lúc đọc không có gì tải trực tuyến, nên mất sóng cũng không mất chương nào.",
-        how_1_h: "Chuẩn bị tủ sách",
-        how_1_p: "Lần đầu mở, app bày cả kho truyện kèm ô chọn và dung lượng từng truyện, rồi cộng tổng ở dưới cùng. Lấy vài truyện, hay lấy hết cũng được — hai truyện cộng lại mới 193 KB.",
-        how_2_h: "Tải về máy",
-        how_2_p: "Tải một lần là chữ nằm sẵn trên máy. Truyện bạn bỏ qua vẫn còn trong kho, khi nào có mạng quay lại lấy tiếp.",
-        how_3_h: "Đọc ở bất cứ đâu",
-        how_3_p: "Truyện đã tải mở được khi không có mạng. Truyện yêu thích, lịch sử và tiến trình đọc đều ghi xuống máy và không rời khỏi đó.",
-
-        lib_eyebrow: "Tủ truyện",
-        lib_title: "Hai loại truyện, sắp theo đúng cách bạn đi tìm.",
-        lib_lede: "Truyện chữ và truyện tranh nằm cạnh nhau, chia theo đời thường, hài hước, học đường và kỳ ảo. Bảng tìm kiếm lọc gọn lại để bạn khỏi phải cuộn.",
-        lib_f1_b: "Truyện chữ hay truyện tranh.",
-        lib_f1: "Lọc riêng một loại, hoặc để tất cả.",
-        lib_f2_b: "Sắp xếp thẳng thắn.",
-        lib_f2: "Theo tên truyện, số chương, hoặc dung lượng sẽ chiếm.",
-        lib_f3_b: "Chỉ truyện đã tải.",
-        lib_f3: "Một công tắc ẩn hết những gì chưa tải về — đúng thứ bạn cần khi đang trên tàu.",
-        lib_f4_b: "Thẻ thể loại.",
-        lib_f4: "Đời thường, hài hước, học đường, kỳ ảo — cùng thẻ riêng từng truyện như phiêu lưu hay trinh thám.",
-
-        read_eyebrow: "Trước khi tải",
-        read_title: "Truyện nào cũng khai dung lượng trước.",
-        read_lede: "Mở một truyện ra là thấy bìa, tác giả, bao nhiêu chương và tốn đúng bao nhiêu kilobyte — ghi ngay trên nút, trước khi bạn chạm vào.",
-        read_f1_b: "Tóm tắt thật, không câu kéo.",
-        read_f1: "Hai dòng nói đúng truyện là gì, để bạn còn kịp xếp lại lên kệ.",
-        read_f2_b: "Nằm riêng trên máy bạn.",
-        read_f2: "Truyện tải về nằm trong bộ nhớ riêng của ứng dụng, ở dạng đã mã hoá, không ứng dụng nào khác trên máy đọc được.",
-        read_f3_b: "Yêu thích và tiến trình.",
-        read_f3: "Một trái tim trên truyện, một tab tiến trình cho những gì bạn đã đọc qua. Cả hai đều ở lại trên máy.",
-        read_f4_b: "Không tài khoản, không bao giờ.",
-        read_f4: "Không có màn hình đăng ký, vì chẳng có gì để đăng ký cả.",
-
-        gal_eyebrow: "Ảnh màn hình",
-        gal_title: "Toàn bộ ứng dụng, sáu màn hình.",
-        gal_lede: "Chụp thẳng từ bản đang phát hành trên Google Play.",
-        gal_t1: "Trang chính", gal_c1_h: "Trang chính",
-        gal_c1_p: "Truyện nổi bật ở trên, rồi các kệ chia theo thể loại. Mỗi bìa đều ghi dung lượng, truyện nào đã có trên máy thì được đánh dấu.",
-        gal_t2: "Tìm kiếm", gal_c2_h: "Tìm kiếm và lọc",
-        gal_c2_p: "Gõ tên truyện hoặc tác giả, hoặc lần theo bảng lọc: loại truyện, cách sắp xếp, chỉ truyện đã tải, rồi tới thẻ thể loại.",
-        gal_t3: "Trang truyện", gal_c3_h: "Trang một truyện",
-        gal_c3_p: "Bìa, tác giả, loại truyện, số chương và dung lượng — cùng nút tải ghi rõ cái giá tính bằng kilobyte trước khi bạn bấm.",
-        gal_t4: "Lần đầu mở", gal_c4_h: "Chuẩn bị tủ sách",
-        gal_c4_p: "Màn hình đầu tiên sau khi cài: tích vài truyện, nhìn tổng dung lượng cộng dần, rồi tải cùng lúc. Hoặc để sau cũng được.",
-        gal_t5: "Điều khoản", gal_c5_h: "Điều khoản và quyền riêng tư ngay trong app",
-        gal_c5_p: "Đúng bốn mục như trang chính sách — truyện lấy từ đâu, miễn trừ trách nhiệm, những gì ở lại trên máy bạn, và cách yêu cầu gỡ nội dung.",
-        gal_t6: "Mở app", gal_c6_h: "Lúc mở ứng dụng",
-        gal_c6_p: "Màn hình chào, ở giao diện sáng. Ứng dụng chạy theo giao diện hệ thống nên có sẵn cả bản tối.",
-
-        facts_title: "Vài con số",
-        f1: "loại truyện: truyện chữ và truyện tranh",
-        f2: "cho một truyện chữ trọn bộ",
-        f3: "thể loại trên kệ",
-        f4_b: "Offline",
-        f4: "một khi truyện đã tải về",
-        f5_b: "Không",
-        f5: "tài khoản hay dữ liệu cá nhân nào được thu thập",
-
-        pol_h1: "Chính sách quyền riêng tư",
-        pol_date: "Chilly Novels · cập nhật lần cuối 3 tháng 9, 2026",
-        pol_tldr: "Nói ngắn gọn: không có tài khoản, ứng dụng không thu thập thông tin cá nhân, và mọi thứ bạn làm trong đó — truyện yêu thích, lịch sử đọc, tiến trình — đều ghi xuống máy bạn và ở lại đó. Gỡ ứng dụng là mất sạch.",
-        pol_sources_h: "Truyện đến từ đâu",
-        pol_sources_p: "Toàn bộ truyện trong ứng dụng được thu thập từ các nguồn công khai trên Internet, sau đó tổng hợp và chỉnh sửa lại cho phù hợp để đọc. Chúng tôi không phải chủ sở hữu bản quyền và không xác nhận tính hợp lệ của từng nguồn. Bản quyền thuộc về tác giả và đơn vị phát hành gốc.",
-        pol_takedown_h: "Yêu cầu gỡ nội dung",
-        pol_takedown_p: "Nếu bạn là chủ sở hữu bản quyền một tác phẩm trong ứng dụng và muốn gỡ nó xuống, hãy gửi email kèm thông tin đủ để nhận ra tác phẩm, chúng tôi sẽ gỡ sớm nhất có thể. Không có biểu mẫu nào phải điền và không có gì phải tranh cãi — viết cho <a href=\"mailto:contact@aibachkhoa.com\">contact@aibachkhoa.com</a>.",
-        pol_data_h: "Ứng dụng lưu gì, và lưu ở đâu",
-        pol_data_p: "Ứng dụng không có tài khoản và không hỏi thông tin cá nhân nào — không tên, không email, không số điện thoại, không danh bạ, không vị trí. Những thứ sau nằm trên máy và không được gửi đi đâu cả:",
-        pol_data_1: "Truyện bạn đã tải, giữ trong bộ nhớ riêng của ứng dụng ở dạng đã mã hoá.",
-        pol_data_2: "Danh sách truyện yêu thích.",
-        pol_data_3: "Lịch sử và tiến trình đọc.",
-        pol_data_4: "Cài đặt, chẳng hạn giao diện và ngôn ngữ.",
-        pol_data_after: "Gỡ ứng dụng là xoá sạch tất cả. Không có bản sao lưu nào bên phía chúng tôi để khôi phục, vì bên chúng tôi không hề có bản sao.",
-        pol_net_h: "Khi nào ứng dụng dùng mạng",
-        pol_net_p: "Ứng dụng chỉ chạm tới mạng cho hai việc: lấy danh sách kho truyện và tải truyện bạn yêu cầu. Còn việc đọc thì hoàn toàn offline — truyện đã nằm trên máy rồi thì bật chế độ máy bay nó vẫn mở y như thường.",
-        pol_ads_h: "Quảng cáo",
-        pol_ads_p: "Ứng dụng miễn phí và có hiển thị quảng cáo. Quảng cáo do một nhà cung cấp bên thứ ba phân phối, và bên đó có thể dùng mã nhận dạng quảng cáo của thiết bị theo chính sách riêng của họ. Chúng tôi không nhận mã đó và không gắn bất cứ thứ gì trong ứng dụng với nó. Android cho phép bạn đặt lại hoặc xoá mã này trong phần Cài đặt, và ứng dụng vẫn chạy bình thường.",
-        pol_warranty_h: "Miễn trừ trách nhiệm",
-        pol_warranty_p: "Ứng dụng được cung cấp nguyên trạng, không kèm bảo đảm nào. Chúng tôi không chịu trách nhiệm với bất kỳ sự cố, thiệt hại hay tranh chấp bản quyền nào phát sinh trong quá trình bạn sử dụng, bao gồm cả mất dữ liệu và gián đoạn dịch vụ.",
-        pol_stores_h: "Google Play thấy những gì",
-        pol_stores_p: "Việc cài đặt và cập nhật diễn ra qua Google Play. Google xử lý giao dịch đó theo chính sách riêng của họ và có thể báo cho chúng tôi các con số tổng hợp, ẩn danh — chẳng hạn bao nhiêu người đã cài ứng dụng ở một quốc gia. Chúng tôi không nhận thông tin cá nhân nào từ họ và không thể gắn bất cứ con số nào với một người cụ thể.",
-        pol_children_h: "Trẻ em",
-        pol_children_p: "Ứng dụng được gán nhãn Teen. Vì không thu thập dữ liệu nào cả, nó cũng không thu thập dữ liệu về trẻ em. Ứng dụng không có chat, không có nội dung do người dùng đăng và không có giao dịch mua bán.",
-        pol_changes_h: "Thay đổi chính sách này",
-        pol_changes_p: "Nếu một phiên bản sau thay đổi những gì ứng dụng lưu hoặc gửi đi, trang này sẽ được cập nhật trước khi phiên bản đó phát hành, và ngày ở đầu trang sẽ đổi theo.",
-        pol_contact_h: "Liên hệ",
-        pol_contact_p: "Thắc mắc về chính sách này, hoặc yêu cầu gỡ nội dung: <a href=\"mailto:contact@aibachkhoa.com\">contact@aibachkhoa.com</a>.",
-        pol_credit_p: "Chilly Novels do AIBachKhoa thực hiện.",
-
-        footer_desc: "Xây những công cụ AI dùng được cho lập trình viên và doanh nghiệp.",
-        footer_app: "Ứng dụng",
-        footer_prod: "Sản phẩm khác",
-        footer_comp: "Công ty",
-        footer_about: "Giới thiệu",
-        footer_services: "Dịch vụ",
-        footer_contact: "Liên hệ",
-        footer_rights: "Bảo lưu mọi quyền."
     }
 };
 
 const LANGS = [
-    { code: 'en', label: 'English' },
-    { code: 'vi', label: 'Tiếng Việt' }
+    { code: 'en', label: 'English' }
 ];
 const DEFAULT_LANG = 'en';
 
@@ -288,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const supported = LANGS.map(l => l.code);
 
     const detectLang = () => {
-        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // The URL wins: /es/… is the Spanish page whatever the browser
         // or a previous visit would have preferred.
         const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
         if (fromUrl) return fromUrl;

@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // A stored choice wins, then whatever the visitor picked on the landing
     // page. Anything no longer offered falls through to the default.
     const detectLang = () => {
-        // The URL wins: /vi/… is the Vietnamese page whatever the browser
+        // The URL wins: /es/… is the Spanish page whatever the browser
         // or a previous visit would have preferred.
         const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
         if (fromUrl) return fromUrl;
