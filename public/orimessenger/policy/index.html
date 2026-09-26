@@ -113,11 +113,11 @@
             <div class="om-pol-head">
                 <p class="eyebrow">Legal</p>
                 <h1 class="section-title">Privacy Policy</h1>
-                <p class="section-sub">OriMessenger &mdash; for Windows, Linux and Android.</p>
-                <p class="om-stamp">Last updated: 25 September 2026</p>
+                <p class="section-sub">OriMessenger &mdash; for Windows, macOS, Linux, Android and iOS.</p>
+                <p class="om-stamp">Last updated: 26 September 2026</p>
             </div>
 
-            <p><strong>Short version.</strong> OriMessenger has no account and no phone number. Every message body, name, avatar and attachment is encrypted end to end between the two devices. Where the app has to reach the Internet, the server it talks to sees only a recipient ID and a bag of ciphertext, and nothing about who you are.</p>
+            <p><strong>Short version.</strong> OriMessenger has no account and no phone number. Every message body, avatar and attachment is encrypted end to end between the two devices. Where the app has to reach the Internet, the relay sees a bag of ciphertext it cannot open &mdash; but it does see <em>who sent it to whom, and when</em>, because it has to route the message. Two things are deliberately <strong>not</strong> secret: your chosen display name and status text are readable by any nearby device running OriMessenger, and the relay retains delivery metadata for up to 30 days. Both are explained below.</p>
 
             <nav class="om-toc" aria-label="On this page">
                 <h2>On this page</h2>
@@ -125,6 +125,7 @@
                     <li><a href="#who">Who publishes this app</a></li>
                     <li><a href="#device">What is stored on the device</a></li>
                     <li><a href="#paths">The three network paths a message can take</a></li>
+                    <li><a href="#nearby">What nearby devices can see</a></li>
                     <li><a href="#relay">What the relay server sees</a></li>
                     <li><a href="#collect">What we collect, in categories</a></li>
                     <li><a href="#perm">Permissions the app asks for, and why</a></li>
@@ -142,16 +143,31 @@
             <p>OriMessenger is published by <strong>AIBachKhoa</strong> (Son Tran), based in Hanoi, Vietnam. Contact details are at the bottom of the page.</p>
 
             <h2 id="device">What is stored on the device</h2>
-            <p>On the first launch the app generates an <strong>X25519 identity key pair</strong> and derives your 16-character user ID from the public half. All of this stays on your device. The following is written to the app's own profile directory (on Windows: <code>%APPDATA%/OriMessenger</code>; on Linux: <code>~/.config/OriMessenger</code>; on Android: the app's private storage):</p>
+            <p>On the first launch the app generates <strong>two key pairs</strong>: one used to sign what you send, so the other side can prove it really came from you, and one used to agree a shared secret with each contact. Your 16-character user ID is derived from your <em>public</em> signing key. All of this stays on your device. The following is written to the app's own profile directory:</p>
+            <div style="max-width: 780px; overflow-x: auto;">
+                <table class="om-tbl">
+                    <thead><tr><th>Platform</th><th>Profile directory</th></tr></thead>
+                    <tbody>
+                        <tr><td>Windows</td><td><code>%APPDATA%/com.tdson.orimessenger</code></td></tr>
+                        <tr><td>macOS</td><td><code>~/Library/Application Support/com.tdson.orimessenger</code></td></tr>
+                        <tr><td>Linux</td><td><code>~/.config/com.tdson.orimessenger</code></td></tr>
+                        <tr><td>Android</td><td>The app's private storage. Cloud backup is disabled (<code>allowBackup=false</code>), so it is not copied to Google Drive.</td></tr>
+                        <tr><td>iOS</td><td><code>Library/Application Support/</code> inside the app container &mdash; deliberately <em>not</em> the <code>Documents</code> folder, so chat history and keys are never exposed through the Files app or iTunes file sharing.</td></tr>
+                    </tbody>
+                </table>
+            </div>
             <ul>
                 <li>Your identity key pair. The private half never leaves the device.</li>
                 <li>Your chosen display name, status text, avatar colour and background.</li>
                 <li>Your friend list, blocked list, and any pending friend requests.</li>
-                <li>The chat history, in a local SQLite database. Attachments are stored as files next to it.</li>
+                <li>The chat history, in a local database on your device. Attachments are stored as files next to it.</li>
                 <li>Per-conversation session keys negotiated with your contacts.</li>
                 <li>App preferences: language, light/dark mode, sending channel default.</li>
             </ul>
             <p>Uninstalling the app or clearing its data removes all of the above. There is no cloud backup that we control.</p>
+            <div class="om-note">
+                <p><strong>Be clear about at-rest protection.</strong> The chat database and the private keys are stored as ordinary, unencrypted files in that directory. The app does <em>not</em> add a passphrase or a second layer of encryption on top. They are protected by your operating system: the app sandbox on Android and iOS, your user account and full-disk encryption (FileVault, BitLocker, LUKS) on desktop. Anyone who can read files as your user, on an unlocked device, can read your chat history. If that matters to you, use full-disk encryption and a device passcode.</p>
+            </div>
 
             <h2 id="paths">The three network paths a message can take</h2>
             <p>OriMessenger tries paths in this order and stops at the first one that works:</p>
@@ -163,34 +179,55 @@
                     <tbody>
                         <tr>
                             <td><strong>Bluetooth (BLE)</strong></td>
-                            <td>The device advertises a short service identifier over Bluetooth Low Energy and scans for other devices doing the same. Messages hop directly, phone to phone. Nothing leaves your immediate area &mdash; there is no cell tower or router involved.</td>
+                            <td>The device advertises a fixed service identifier over Bluetooth Low Energy and scans for other devices doing the same. Messages hop directly, device to device &mdash; no cell tower, no router, nothing leaves your immediate area. Note that the device also publishes a small public profile so others can find it: see <a href="#nearby">what nearby devices can see</a>.</td>
                         </tr>
                         <tr>
                             <td><strong>Wi-Fi / LAN</strong></td>
-                            <td>Devices on the same local network find each other with mDNS (<code>_ori._tcp.local.</code>) and connect directly by IP. Traffic stays inside the local network. This works even when outbound Internet is blocked.</td>
+                            <td>Devices on the same local network announce themselves using standard local-network discovery, with a broadcast fallback for networks where that is blocked, then connect to each other directly. Traffic stays inside the local network and works even when outbound Internet is blocked. The discovery records are broadcast in the clear: see <a href="#nearby">what nearby devices can see</a>.</td>
                         </tr>
                         <tr>
                             <td><strong>Internet relay</strong></td>
-                            <td>Only when the two above have failed. The device opens a TLS connection to the relay operated by AIBachKhoa and hands off an envelope addressed by recipient ID. The next section describes exactly what the relay sees.</td>
+                            <td>Only when the two above have failed. The device opens a TLS connection to the relay operated by AIBachKhoa and hands off an envelope addressed by recipient ID. <a href="#relay">What the relay server sees</a> describes exactly what it keeps.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
+            <h2 id="nearby">What nearby devices can see</h2>
+            <p>This is the one part of OriMessenger that is <strong>not</strong> end-to-end encrypted, and it is worth understanding before you choose a display name.</p>
+            <p>To let people find each other without an account or a server, each device publishes a small public profile. It contains your <strong>user ID</strong>, your <strong>display name</strong>, your <strong>status text</strong>, your avatar colour, and your two <strong>public</strong> keys. It never contains your private keys, your chat history, or your friend list.</p>
+            <p>That profile is readable by anyone in range who is looking for it &mdash; not only by your contacts:</p>
+            <ul>
+                <li><strong>Over Bluetooth</strong>, the profile is published so that any device in range may read it. There is no pairing step and no approval prompt, because a stranger has to be able to read your name in order to send you a friend request in the first place.</li>
+                <li><strong>Over Wi-Fi</strong>, the same profile is placed in the discovery records that are broadcast to every device on the local network.</li>
+            </ul>
+            <p>The profile is signed with your private key, so nobody on your network can advertise <em>your</em> name attached to <em>their</em> address. But it is not secret. Practically:</p>
+            <ul>
+                <li>Anyone in the same caf&eacute;, office or classroom running OriMessenger can see the display name and status text you chose, and can tell that your device is present.</li>
+                <li>If you would rather not be visible, turn <strong>Nearby</strong> off in Settings. That stops both the Bluetooth advertising and the Wi-Fi discovery; the Internet relay keeps working, so existing conversations still deliver.</li>
+                <li>Use a nickname rather than your legal name if you expect to be in public places. Your user ID does not reveal anything by itself, but the name you type is shown as you typed it.</li>
+            </ul>
+            <p>Message contents are never part of this. Once two devices decide to talk, everything after the profile exchange is encrypted end to end.</p>
+
             <h2 id="relay">What the relay server sees</h2>
-            <p>The Internet relay is a queue. Each device connects to it with TLS. When your device has a message for someone whose ID it knows, it hands the relay:</p>
+            <p>The Internet relay is a queue. Each device connects to it with TLS and signs a challenge to prove it owns its ID. When your device has a message for someone whose ID it knows, the relay stores a row containing:</p>
             <ul>
                 <li>The <strong>recipient's user ID</strong> (16 characters, derived from their public key).</li>
+                <li>The <strong>sender's user ID</strong> &mdash; that is, yours. The relay needs it to apply block lists and to let the recipient's device verify the signature.</li>
+                <li>A <strong>timestamp</strong>, used to expire the row.</li>
                 <li>The <strong>ciphertext</strong> of the message, sealed with a per-conversation key that only your device and the recipient's have. This includes any attachment bytes and any human-readable metadata such as your name, avatar or status.</li>
                 <li>The <strong>network-layer information</strong> that any TLS connection carries: your IP address and a temporary connection ID.</li>
             </ul>
+            <p>So the relay <strong>does</strong> learn delivery metadata: who sent a message to whom, when, and roughly how large it was. We cannot design that away while still delivering to devices that are offline. If that metadata matters to you, use OriMessenger over Bluetooth or Wi-Fi, where no server is involved at all.</p>
+            <p>The relay also keeps a <strong>block list</strong>: when you block someone, the pair (your ID, their ID) is stored server-side so the relay can refuse their envelopes before they ever reach your device. This list has no expiry; it is removed when you unblock the person, or on request.</p>
             <p>The relay <strong>does not see</strong>:</p>
             <ul>
                 <li>The message text or media contents. It has no key to decrypt them.</li>
-                <li>Your display name, avatar, status, contact list, or which conversation the message belongs to.</li>
+                <li>Your display name, avatar or status &mdash; those travel inside the ciphertext.</li>
+                <li>Your friend list, your pending requests, or anything you exchanged over Bluetooth or Wi-Fi. Those paths never touch the server.</li>
                 <li>Any phone number, email address, or third-party account. There is none associated with your ID.</li>
             </ul>
-            <p>Envelopes are held only until the recipient device fetches them, or up to 30 days, whichever comes first. After that they are deleted from the queue.</p>
+            <p>Envelopes are deleted the moment the recipient's device confirms receipt, or after 30 days, whichever comes first.</p>
 
             <h2 id="collect">What we collect, in categories</h2>
             <p>Mapped to the Google Play Data Safety format:</p>
@@ -200,10 +237,10 @@
                         <tr><th>Category</th><th>Collected?</th><th>Details</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Personal info (name, email, phone)</td><td>No</td><td>No account is created. Your display name is stored only on your own device and on those of contacts you have added.</td></tr>
+                        <tr><td>Personal info (name, email, phone)</td><td>Not collected by us</td><td>No account is created and we never receive your name. But note it is not private either: the display name and status text you choose are broadcast to nearby devices during discovery &mdash; see <a href="#nearby">what nearby devices can see</a>. We collect no email and no phone number at all.</td></tr>
                         <tr><td>Contacts (address book)</td><td>No</td><td>The app does not read your device's contacts.</td></tr>
                         <tr><td>Location (GPS or fine)</td><td>No</td><td>Not requested, not collected.</td></tr>
-                        <tr><td>Messages</td><td>Only in transit, encrypted</td><td>The relay handles opaque ciphertext. It cannot read message contents.</td></tr>
+                        <tr><td>Messages</td><td>Only in transit, encrypted</td><td>The relay handles opaque ciphertext and cannot read message contents. It does retain delivery metadata (sender ID, recipient ID, timestamp) until delivery or for 30 days &mdash; see <a href="#relay">what the relay server sees</a>.</td></tr>
                         <tr><td>Photos and media</td><td>Only what you attach</td><td>You pick files to send; the encrypted bytes travel through the chosen network path. Nothing is auto-uploaded.</td></tr>
                         <tr><td>App activity, in-app actions</td><td>No analytics</td><td>The app does not embed a third-party analytics SDK.</td></tr>
                         <tr><td>App info and performance (crash logs)</td><td>Only on request</td><td>Crash reports are written locally. If you send us one, you attach the file yourself.</td></tr>
@@ -226,6 +263,10 @@
                         <tr><td><code>FOREGROUND_SERVICE</code>, <code>RECEIVE_BOOT_COMPLETED</code> (Android)</td><td>To keep discovering nearby users and delivering messages while the app is in the background, and to resume on reboot. Optional &mdash; you can turn this off in Settings.</td></tr>
                         <tr><td><code>POST_NOTIFICATIONS</code> (Android 13+)</td><td>To show incoming-message notifications.</td></tr>
                         <tr><td><code>READ_MEDIA_IMAGES</code> / storage read (Android, Windows, Linux)</td><td>To let you pick a photo to attach or a background image. Only files you choose are read.</td></tr>
+                        <tr><td>Bluetooth (macOS, iOS)</td><td>Same purpose as on Android: to find nearby users and exchange messages without the Internet. macOS and iOS ask you once, with a system prompt; you can revoke it later in Settings &rarr; Privacy &amp; Security &rarr; Bluetooth.</td></tr>
+                        <tr><td>Local Network (macOS, iOS)</td><td>To find devices on the same Wi-Fi and connect to them directly. Declining it leaves Bluetooth and the Internet relay working.</td></tr>
+                        <tr><td>Notifications (macOS, iOS)</td><td>To show incoming-message notifications. Optional; declining costs you only the banners.</td></tr>
+                        <tr><td>Background Bluetooth (iOS)</td><td>To keep receiving messages from nearby devices while the app is not in the foreground. iOS limits this heavily and does not allow the continuous background operation that Android permits; iOS cannot deliver messages at all while the app is fully closed.</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -241,16 +282,20 @@
             <h2 id="retention">Retention and deletion</h2>
             <p>Chat history, key material and profile settings live on your device until you delete them. Uninstalling the app removes them, on every platform.</p>
             <p>Undelivered envelopes on the relay are dropped once the recipient fetches them, or after 30 days. Delivered envelopes are dropped immediately.</p>
+            <p>Server-side block entries (your ID paired with the ID you blocked) have no expiry. They are deleted when you unblock the person in the app, or if you ask us to clear your relay data by ID.</p>
             <p>Server-side logs of relay traffic (TLS connection metadata, timestamps, byte counts &mdash; no message payloads and no user IDs) are retained for up to 14 days for operational debugging, then rotated out.</p>
 
             <h2 id="children">Children's privacy</h2>
             <p>OriMessenger is not directed at users under 13. In jurisdictions that require parental consent, we follow the local rule. If you believe a child has created an ID and you want it removed, write to the address below with the ID; we can delete the corresponding relay queue.</p>
 
             <h2 id="rights">Your rights</h2>
-            <p>Because there is no account, most rights you would normally exercise against a company are yours to exercise directly on the device: access, correction, deletion and export all mean opening the app or the profile directory. If you need something we can help with &mdash; for example deleting your relay queue by ID &mdash; write to the address below.</p>
+            <p>Because there is no account, most rights you would normally exercise against a company are yours to exercise directly on the device: access, correction, deletion and export all mean opening the app or the profile directory. Inside the app you can clear your whole history, remove a contact, turn <strong>Nearby</strong> off so you stop being discoverable, and <strong>block</strong> or <strong>report</strong> anyone who sends you something abusive. A report is prepared on your device and sent to the address below &mdash; we act on those, and we can delete a relay queue by ID.</p>
+            <p>If you need something we can help with &mdash; deleting your relay queue, clearing a server-side block entry &mdash; write to the address below with the ID concerned.</p>
 
             <h2 id="security">Security</h2>
-            <p>All Internet traffic uses TLS 1.3 to the relay. End-to-end encryption uses a curve25519 handshake and an authenticated stream cipher (ChaCha20-Poly1305) for the payload. The Windows installer, the Android APK and the Play AAB are signed with a certificate whose fingerprint is:</p>
+            <p>All Internet traffic to the relay is encrypted in transit. On top of that, every message is encrypted end to end between the two devices and signed, so the recipient can verify both that the contents were not altered and that they really came from you. The relay carries the result without holding any key that could open it.</p>
+            <p><strong>On-device data is not separately encrypted by the app.</strong> As described under <a href="#device">what is stored on the device</a>, the chat database and private keys are ordinary files protected by the operating system rather than by an app passphrase. We would rather state that plainly than imply a protection the app does not provide.</p>
+            <p>The Windows installer, the Android APK and the Play AAB are signed with a certificate whose fingerprint is:</p>
             <div class="om-note">
                 <p style="font-family: 'DM Mono', monospace; font-size: .82rem; word-break: break-all; margin: 0;">SHA-256 &nbsp; 8A:0D:79:F8:73:F4:8F:A6:F3:E5:BD:5A:C5:04:28:A5:21:C1:86:C4:B1:0A:46:20:EE:D3:89:BA:48:F4:33:32</p>
             </div>

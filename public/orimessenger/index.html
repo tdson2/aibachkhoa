@@ -10,13 +10,13 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OriMessenger — offline-friendly chat over Bluetooth, LAN and the Internet | AIBachKhoa</title>
-    <meta name="description" content="OriMessenger is an end-to-end encrypted messenger that talks over Bluetooth or Wi-Fi/LAN when someone is nearby, and falls back to the Internet when they are not. Windows, Linux and Android.">
+    <title>OriMessenger &mdash; chat that works without the Internet | AIBachKhoa</title>
+    <meta name="description" content="End-to-end encrypted messaging over Bluetooth, Wi-Fi or the Internet. Available for iPhone, Android, Windows, macOS and Linux.">
     <link rel="canonical" href="https://aibachkhoa.com/orimessenger">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="AIBachKhoa">
-    <meta property="og:title" content="OriMessenger — chat that works without the Internet">
-    <meta property="og:description" content="End-to-end encrypted messaging over Bluetooth, LAN or the Internet. Signed builds for Windows, Linux and Android.">
+    <meta property="og:title" content="OriMessenger &mdash; chat that works without the Internet">
+    <meta property="og:description" content="End-to-end encrypted messaging over Bluetooth, Wi-Fi or the Internet. Available for iPhone, Android, Windows, macOS and Linux.">
     <meta property="og:url" content="https://aibachkhoa.com/orimessenger">
     <meta property="og:image" content="https://aibachkhoa.com/assets/orimessenger/icon.png">
     <meta property="og:image:alt" content="OriMessenger icon">
@@ -46,7 +46,7 @@
                 "@type": "SoftwareApplication",
                 "name": "OriMessenger",
                 "url": "https://aibachkhoa.com/orimessenger",
-                "operatingSystem": "Windows, Linux, Android",
+                "operatingSystem": "Windows, macOS, Linux, Android, iOS",
                 "applicationCategory": "CommunicationApplication",
                 "softwareVersion": "0.2.1",
                 "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
@@ -97,7 +97,7 @@
             </a>
             <div class="nav-links" id="nav-links">
                 <a href="/" class="nav-link">Home</a>
-                <a href="#download" class="nav-link">Download</a>
+                <a href="#platforms" class="nav-link">Get the app</a>
                 <a href="#features" class="nav-link">Features</a>
                 <a href="/orimessenger/policy" class="nav-link">Privacy</a>
                 <span class="nav-divider" aria-hidden="true"></span>
@@ -123,20 +123,19 @@
             <div class="container">
                 <p class="eyebrow">Peer-to-peer messenger &middot; v0.2.1</p>
                 <h1 class="hero-title">Chat that keeps talking <em>when the Internet stops</em>.</h1>
-                <p class="hero-subtitle" style="max-width: 720px;">OriMessenger sends your messages over Bluetooth or the same Wi-Fi/LAN when the other person is close, and falls back to the Internet only when they are not. Every message is end-to-end encrypted &mdash; the server never sees the plaintext, and mostly does not see anything at all.</p>
+                <p class="hero-subtitle" style="max-width: 720px;">OriMessenger sends your messages over Bluetooth or the same Wi-Fi when the other person is close, and falls back to the Internet only when they are not. Every message is end-to-end encrypted.</p>
                 <div class="om-badges">
                     <span class="om-badge">End-to-end encrypted</span>
                     <span class="om-badge">No phone number required</span>
-                    <span class="om-badge">Bluetooth &middot; LAN &middot; Internet</span>
+                    <span class="om-badge">Bluetooth &middot; Wi-Fi &middot; Internet</span>
                     <span class="om-badge">Offline-first</span>
                 </div>
                 <div class="hero-actions">
-                    <a href="#download" class="btn btn-primary">Get OriMessenger</a>
+                    <a href="#platforms" class="btn btn-primary">Get the app</a>
                     <a href="/orimessenger/policy" class="btn btn-ghost">Read the privacy policy</a>
                 </div>
             </div>
         </header>
-
         <section class="panel panel--white" id="features">
             <div class="container">
                 <p class="eyebrow">Why OriMessenger</p>
@@ -150,59 +149,39 @@
                     </div>
                     <div class="om-feat">
                         <h3>2. Wi-Fi / LAN &mdash; same network</h3>
-                        <p>On the same Wi-Fi or wired network, devices find each other over mDNS and exchange messages inside the local network. This works on captive-portal Wi-Fi where outbound Internet is blocked, and it is fast enough for photos.</p>
+                        <p>On the same Wi-Fi or wired network, devices find each other automatically and exchange messages inside the local network. This works on captive-portal Wi-Fi where outbound Internet is blocked, and it is fast enough for photos.</p>
                     </div>
                     <div class="om-feat">
                         <h3>3. Internet &mdash; when neither of the above works</h3>
-                        <p>Only when Bluetooth and LAN both fail does the message go through a relay. The relay is a dumb pipe: it sees the recipient's ID and encrypted bytes, and nothing else. Names, profiles, message bodies and attachments are all encrypted end to end.</p>
+                        <p>Only when Bluetooth and LAN both fail does the message go through a relay. The relay is a dumb pipe: names, profiles, message bodies and attachments are all encrypted end to end, so it cannot read any of them. It does see who sent to whom and when &mdash; it needs that to route the message &mdash; and holds it for at most 30 days.</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="panel panel--cream" id="download">
+        </section>        <section class="panel panel--cream" id="platforms">
             <div class="container">
-                <p class="eyebrow">Downloads</p>
-                <h2 class="display display--lg">Signed builds, direct from us.</h2>
-                <p class="section-sub" style="max-width: 720px;">Version 0.2.1. The Windows installer and the Android APK are signed with the same certificate they will keep being signed with, so future updates install cleanly on top. All builds default to English; you can change the language from Settings inside the app.</p>
+                <p class="eyebrow">Get the app</p>
+                <h2 class="display display--lg">Pick your device.</h2>
+                <p class="section-sub" style="max-width: 720px;">Version 0.2.1. The same app and the same privacy rules on every platform &mdash; only the way you install it differs.</p>
 
                 <div class="om-downloads">
-                    <a class="om-dl" href="/downloads/OriMessenger-0.2.1-x64.msi" download>
-                        <div class="om-dl-os">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2 4.5 11 3v8H2zM12 3l10-1.5V11H12zM2 12h9v8L2 21.5zM12 12h10v10.5L12 21z"/></svg>
-                            Windows 10 &middot; 11
-                        </div>
-                        <div class="om-dl-name">OriMessenger-0.2.1-x64.msi</div>
-                        <div class="om-dl-meta">MSI installer &middot; 6.2 MB &middot; 64-bit</div>
+                    <a class="om-dl" href="/orimessenger/ios">
+                        <div class="om-dl-os">iPhone &amp; iPad</div>
+                        <div class="om-dl-name">iOS</div>
+                        <div class="om-dl-meta">Release in preparation</div>
                     </a>
-                    <a class="om-dl" href="/downloads/OriMessenger-0.2.1-arm64.apk" download>
-                        <div class="om-dl-os">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 8h12l-1 10a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2zM8.5 3l1 1.5M15.5 3l-1 1.5M6 7h12M9 12v5M15 12v5"/><path stroke="currentColor" stroke-width="1.5" fill="none" d="M8.5 3l1 1.5M15.5 3l-1 1.5"/></svg>
-                            Android 7.0 and newer
-                        </div>
-                        <div class="om-dl-name">OriMessenger-0.2.1-arm64.apk</div>
-                        <div class="om-dl-meta">APK, signed release &middot; 21.6 MB &middot; arm64-v8a</div>
+                    <a class="om-dl" href="/orimessenger/android">
+                        <div class="om-dl-os">Phones &amp; tablets</div>
+                        <div class="om-dl-name">Android</div>
+                        <div class="om-dl-meta">Android 7.0 and newer</div>
                     </a>
-                    <a class="om-dl" href="/downloads/OriMessenger-0.2.1-amd64.deb" download>
-                        <div class="om-dl-os">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/></svg>
-                            Linux (Debian, Ubuntu)
-                        </div>
-                        <div class="om-dl-name">OriMessenger-0.2.1-amd64.deb</div>
-                        <div class="om-dl-meta">DEB package &middot; 8.8 MB &middot; x86_64</div>
+                    <a class="om-dl" href="/orimessenger/desktop">
+                        <div class="om-dl-os">Computers</div>
+                        <div class="om-dl-name">Windows &middot; macOS &middot; Linux</div>
+                        <div class="om-dl-meta">Desktop builds</div>
                     </a>
-                </div>
-
-                <p class="om-verify">SHA-256 (OriMessenger-0.2.1-amd64.deb): cf4c5534eda7f2630ff4216fd112b07bc7f16dc1d564413ba8f150a89b5748be &middot; <a href="/downloads/OriMessenger-0.2.1-amd64.deb.sha256">.sha256</a></p>
-
-                <div class="om-note">
-                    <p><strong>Windows SmartScreen warning?</strong> The Windows installer is not signed with a Microsoft-issued code-signing certificate yet, so SmartScreen may show &ldquo;Windows protected your PC&rdquo; the first time. Click <em>More info &rarr; Run anyway</em> to continue.</p>
-                    <p style="margin-top: .75rem;"><strong>Android install:</strong> allow &ldquo;Install unknown apps&rdquo; for the browser you download the APK with, then tap the file. Google Play distribution is on the way.</p>
-                    <p style="margin-top: .75rem;"><strong>Linux install:</strong> run <code>sudo apt install ./OriMessenger-0.2.1-amd64.deb</code> from the folder you downloaded it to; apt pulls in WebKitGTK and the other dependencies. Requires Ubuntu 24.04 / Debian 13 or newer (64-bit).</p>
                 </div>
             </div>
         </section>
-
         <section class="panel panel--white om-how">
             <div class="container">
                 <p class="eyebrow">How it works</p>
@@ -213,12 +192,12 @@
                     <div class="om-how-item">
                         <p class="n">01</p>
                         <h4>Keys stay on the device</h4>
-                        <p>Each install generates an X25519 identity key pair. The private half never leaves the device. Your ID is derived from the public half.</p>
+                        <p>Each install generates its own pair of identity keys. The private half never leaves the device. Your ID is derived from the public half.</p>
                     </div>
                     <div class="om-how-item">
                         <p class="n">02</p>
                         <h4>Message payloads are sealed</h4>
-                        <p>Message bodies, sender/recipient names, avatars and attachments are encrypted with a per-conversation key negotiated between the two devices. The relay only sees the recipient ID and the ciphertext.</p>
+                        <p>Message bodies, sender/recipient names, avatars and attachments are encrypted with a per-conversation key negotiated between the two devices. The relay only ever sees the ciphertext plus the delivery details it needs to route it: sender ID, recipient ID and a timestamp.</p>
                     </div>
                     <div class="om-how-item">
                         <p class="n">03</p>
@@ -228,13 +207,11 @@
                     <div class="om-how-item">
                         <p class="n">04</p>
                         <h4>History stays on the device</h4>
-                        <p>Chat history is kept in a local SQLite database inside your user profile. Uninstalling the app or deleting the app data removes it. There is no cloud backup that we control.</p>
+                        <p>Chat history is kept in a local database inside your user profile. Uninstalling the app or deleting the app data removes it. There is no cloud backup that we control.</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="panel panel--blue">
+        </section>        <section class="panel panel--blue">
             <div class="container breakout">
                 <h2 class="display display--lg">Built for places the Internet is unreliable.</h2>
                 <p class="section-sub">A concert, a metro tunnel, a campsite, a captive-portal hotel Wi-Fi, a country where messenger apps get blocked at the DNS layer. OriMessenger keeps working because it does not depend on a single network being up.</p>
@@ -257,9 +234,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
-
-        <section class="panel panel--ink closing" id="contact">
+        </section>        <section class="panel panel--ink closing" id="contact">
             <div class="container">
                 <h2 class="cta-title">Questions or a bug?</h2>
                 <p class="section-sub" style="margin-inline:auto;text-align:center;">Email works best &mdash; usually answered the same day.</p>
@@ -269,8 +244,7 @@
                 </div>
                 <p class="closing-contact">Son Tran &middot; <a href="mailto:contact@aibachkhoa.com">contact@aibachkhoa.com</a></p>
             </div>
-        </section>
-    </main>
+        </section>    </main>
 
     <footer class="footer">
         <div class="container">
@@ -288,7 +262,7 @@
                 </nav>
                 <nav class="footer-col" aria-label="This product">
                     <h4>OriMessenger</h4>
-                    <a href="#download">Download</a>
+                    <a href="#platforms">Get the app</a>
                     <a href="#features">Features</a>
                     <a href="/orimessenger/policy">Privacy policy</a>
                 </nav>
