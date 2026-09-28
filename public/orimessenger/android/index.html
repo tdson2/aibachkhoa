@@ -145,15 +145,15 @@
                 <div class="om-features">
                     <div class="om-feat">
                         <h3>1. Bluetooth &mdash; when you are within a few metres</h3>
-                        <p>The app advertises itself over Bluetooth Low Energy and discovers other Ori users nearby. When you are within roughly 10 to 30 metres, messages hop directly, phone to phone, without touching a router or a cell tower. No Internet needed at all.</p>
+                        <p>The app finds other Ori users nearby over Bluetooth. When you are within roughly 10 to 30 metres, messages go directly from device to device, without touching a router or a cell tower. No Internet needed at all.</p>
                     </div>
                     <div class="om-feat">
                         <h3>2. Wi-Fi / LAN &mdash; same network</h3>
-                        <p>On the same Wi-Fi or wired network, devices find each other automatically and exchange messages inside the local network. This works on captive-portal Wi-Fi where outbound Internet is blocked, and it is fast enough for photos.</p>
+                        <p>On the same Wi-Fi or wired network, devices find each other automatically and messages stay inside the local network. This works even on hotel or guest Wi-Fi where the Internet is blocked, and it is fast enough for photos.</p>
                     </div>
                     <div class="om-feat">
                         <h3>3. Internet &mdash; when neither of the above works</h3>
-                        <p>Only when Bluetooth and LAN both fail does the message go through a relay. The relay is a dumb pipe: names, profiles, message bodies and attachments are all encrypted end to end, so it cannot read any of them. It does see who sent to whom and when &mdash; it needs that to route the message &mdash; and holds it for at most 30 days.</p>
+                        <p>Only when Bluetooth and the local network both fail does the message travel through our server. Names, profiles, messages and attachments are all encrypted end to end, so the server cannot read any of them. It does see who sent to whom and when &mdash; it needs that to deliver the message &mdash; and holds it for at most 30 days.</p>
                     </div>
                 </div>
             </div>
@@ -180,36 +180,36 @@
         <section class="panel panel--white om-how">
             <div class="container">
                 <p class="eyebrow">How it works</p>
-                <h2 class="display display--lg">End-to-end encryption, spelled out.</h2>
-                <p class="section-sub" style="max-width: 720px;">This is not marketing. Here is exactly what is signed, encrypted, and stored where.</p>
+                <h2 class="display display--lg">Your privacy, in plain terms.</h2>
+                <p class="section-sub" style="max-width: 720px;">What stays on your phone, what is protected, and what we can and cannot see. The <a href="/orimessenger/policy">privacy policy</a> has the full details.</p>
 
                 <div class="om-how-grid">
                     <div class="om-how-item">
                         <p class="n">01</p>
-                        <h4>Keys stay on the device</h4>
-                        <p>Each install generates its own pair of identity keys. The private half never leaves the device. Your ID is derived from the public half.</p>
+                        <h4>Your identity stays on the device</h4>
+                        <p>Your identity is created on your device the first time you open the app, and the secret part of it never leaves that device.</p>
                     </div>
                     <div class="om-how-item">
                         <p class="n">02</p>
-                        <h4>Message payloads are sealed</h4>
-                        <p>Message bodies, sender/recipient names, avatars and attachments are encrypted with a per-conversation key negotiated between the two devices. The relay only ever sees the ciphertext plus the delivery details it needs to route it: sender ID, recipient ID and a timestamp.</p>
+                        <h4>Messages are sealed</h4>
+                        <p>Messages, names, avatars and attachments are end-to-end encrypted, so only the person you are talking to can read them. When a message goes over the Internet, our server sees only what it needs to deliver it: who it is from, who it is for, and when.</p>
                     </div>
                     <div class="om-how-item">
                         <p class="n">03</p>
                         <h4>Friend requests carry no profile</h4>
-                        <p>A request contains only the sender's ID and public key. Your display name and status are only sent, encrypted, after the other side accepts.</p>
+                        <p>A friend request carries only your ID. Your display name and status are shared with that person, encrypted, only after they accept.</p>
                     </div>
                     <div class="om-how-item">
                         <p class="n">04</p>
                         <h4>History stays on the device</h4>
-                        <p>Chat history is kept in a local database inside your user profile. Uninstalling the app or deleting the app data removes it. There is no cloud backup that we control.</p>
+                        <p>Chat history is kept only on your device. Uninstalling the app or deleting the app data removes it. There is no cloud backup that we control.</p>
                     </div>
                 </div>
             </div>
         </section>        <section class="panel panel--blue">
             <div class="container breakout">
                 <h2 class="display display--lg">Built for places the Internet is unreliable.</h2>
-                <p class="section-sub">A concert, a metro tunnel, a campsite, a captive-portal hotel Wi-Fi, a country where messenger apps get blocked at the DNS layer. OriMessenger keeps working because it does not depend on a single network being up.</p>
+                <p class="section-sub">A concert, a metro tunnel, a campsite, a captive-portal hotel Wi-Fi, a country where messenger apps get blocked. OriMessenger keeps working because it does not depend on a single network being up.</p>
                 <ul class="breakout-points">
                     <li>
                         <h3>No phone number</h3>
@@ -220,11 +220,11 @@
                         <p>No email, no password, no recovery flow. Losing the device is losing the identity, and that is by design.</p>
                     </li>
                     <li>
-                        <h3>Uses the Play billing sandbox: no</h3>
-                        <p>The app is free. There are no subscriptions, no in-app purchases and no advertising SDK.</p>
+                        <h3>Free, with no ads</h3>
+                        <p>The app is free. There are no subscriptions, no in-app purchases and no advertising.</p>
                     </li>
                     <li>
-                        <h3>Open protocol, closed to strangers</h3>
+                        <h3>Closed to strangers</h3>
                         <p>You can only be messaged by someone who already has your ID. The nearby list is opt-in from the same screen.</p>
                     </li>
                 </ul>

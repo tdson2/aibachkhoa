@@ -35,7 +35,7 @@ const i18n = {
 
         ov_eyebrow: "What it is",
         ov_title: "An emulator, not a download site.",
-        ov_lede: "JeMul runs MIDP applications — the .jar files that feature phones ran between roughly 2001 and 2012. It ships with no game content of its own: on Android you bring your own files, and the browser edition reads a library the operator has already put on the server.",
+        ov_lede: "JeMul runs MIDP applications — the .jar files that feature phones ran between roughly 2001 and 2012. It ships with no game content of its own: on Android you bring your own files, and the browser edition comes with a library the operator has already set up.",
         c1_h: "Real controls",
         c1_p: "A full phone keypad: D-pad, both soft keys, 0–9, star and hash, clear. On a computer every one of them is a keyboard key you can rebind; on a phone they are buttons under your thumbs.",
         c2_h: "Made for old screens",
@@ -54,7 +54,7 @@ const i18n = {
 
         web_eyebrow: "Browser edition",
         web_title: "Nothing to install.",
-        web_lede: "The browser edition does the heavy lifting for you, so the games run at the speed of a desktop rather than of a phone from 2006. Sign in with Google and press play.",
+        web_lede: "The browser edition is ready the moment you open it, and the games run smoothly rather than at the pace of a phone from 2006. Sign in with Google and press play.",
         web_l1: "A library of more than a thousand titles, searchable and filterable",
         web_l2: "60 frames per second, with the frame rate shown while you play",
         web_l3: "Keyboard, mouse for touch games, and an on-screen keypad",
@@ -102,7 +102,7 @@ const i18n = {
         pol_s2_l1: "The .jar and .jad files you import, in the app's own storage.",
         pol_s2_l2: "Saved games and high scores written by the games themselves.",
         pol_s2_l3: "Your display, keypad and sound settings.",
-        pol_s2_p: "All of it is on your device. Uninstalling the app removes it. Nothing is uploaded, and there is no analytics or advertising SDK reading it.",
+        pol_s2_p: "All of it is on your device. Uninstalling the app removes it. Nothing is uploaded, and there is no analytics or advertising in the app.",
         pol_s3_h: "What the browser edition stores",
         pol_s3_l1: "Your Google account's name, email address and profile picture, taken from the sign-in and used to identify you to the operator.",
         pol_s3_l2: "A record of visits and of which games were started, when, and for how long — used to see how the server is being used.",

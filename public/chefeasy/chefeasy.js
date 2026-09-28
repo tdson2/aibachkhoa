@@ -85,7 +85,7 @@ i18n.en = {
 
     offline_eyebrow: "Offline",
     offline_title: "The recipes live <em>on your device</em>.",
-    offline_sub: "All 44 recipes and their photographs ship inside the app and unpack on first launch. From the second launch onward it opens straight away — including in the corner of the kitchen where the signal dies.",
+    offline_sub: "All 44 recipes and their photographs come with the app. Once it is installed it opens straight away — including in the corner of the kitchen where the signal dies.",
     o_1: "<strong>Recipes read with no connection.</strong> Turn off Wi-Fi and mobile data and the cooking side of the app is unchanged.",
     o_2: "<strong>No account.</strong> No sign-up, no login, no user profile. Open the app and use it.",
     o_3: "<strong>Favourites stay on the device.</strong> Your favourites and viewing history live in the app's own storage and are not sent anywhere.",
@@ -187,7 +187,7 @@ i18n.en = {
     pol_short_1: "<strong>We run no servers and we receive no data about you.</strong> Your favourites, viewing history, language and other settings are written to the App's own storage on your device and never leave it.",
     pol_short_2: "<strong>The free tier carries ads</strong> served by Google AdMob. AdMob may read your device's advertising identifier in order to select and measure those ads. A ChefEasy Pro subscription switches them off entirely.",
     pol_short_3: "<strong>Voice search sends audio away.</strong> Turning speech into text is done by the operating system's recognition service — Google's on Android, Apple's on iPhone and iPad. It happens only after you tap the microphone button. We never receive, hear or keep that audio.",
-    pol_short_4: "<strong>There is no analytics or crash-reporting SDK in the build.</strong> Nothing is measuring what you do in the app.",
+    pol_short_4: "<strong>There is no analytics or crash reporting in the App.</strong> Nothing is measuring what you do in the app.",
     pol_short_5: "<strong>The App asks only for the microphone and speech recognition</strong>, and only when you deliberately press the microphone button. No location, no contacts, no camera, no access to your files.",
 
     pol_h_defs: "Interpretation and Definitions",
@@ -209,7 +209,7 @@ i18n.en = {
     pol_c_1: "Your list of favourite dishes and the recipes you viewed recently.",
     pol_c_2: "Your chosen language, light or dark theme, and whether the screen should stay awake while cooking.",
     pol_c_3: "Your Pro subscription state, so the App knows whether to show ads.",
-    pol_c_4: "The recipe data bundle, unpacked on first launch.",
+    pol_c_4: "The recipes and photographs that come with the App.",
     pol_collect_none: "The App never asks for your name, email address, phone number or any other identifying information, because it has nowhere to send them.",
 
     pol_h_voice: "Microphone and Speech Recognition",
@@ -220,7 +220,7 @@ i18n.en = {
     pol_h_ads: "Advertising",
     pol_ads_1: "The free tier shows advertising supplied by Google AdMob, as a full-screen ad when the App opens. Nothing interrupts you while you are cooking.",
     pol_ads_2: "To select and measure those ads, AdMob may read your device's advertising identifier along with basic technical information such as device model and operating system version. We supply AdMob with no information about you, because we hold none.",
-    pol_ads_3: "You can reset or delete the advertising identifier in your operating system's settings. A ChefEasy Pro subscription removes advertising entirely, and the App then does not load the ad SDK at all.",
+    pol_ads_3: "You can reset or delete the advertising identifier in your operating system's settings. A ChefEasy Pro subscription removes advertising entirely, and the App then does not load ads at all.",
 
     pol_h_purchases: "Purchases and Subscriptions",
     pol_pur_1: "ChefEasy Pro is an auto-renewing subscription, monthly or yearly, that removes advertising and unlocks the Chinese, Japanese and Korean dishes.",
@@ -243,7 +243,7 @@ i18n.en = {
     pol_rights: "The GDPR and the CCPA give you rights to access, correct, delete and port the personal data an organisation holds about you. For this App there is almost nothing to exercise them against: we hold no personal data about you. The only data that exists is on your device, and you can delete it at any time by uninstalling the App. For data processed by Google or Apple — advertising, payment, speech recognition — please exercise your rights with them directly.",
 
     pol_h_security: "Security",
-    pol_security: "Because the App transmits no personal data, there is no transfer to intercept and no database of ours to breach. The recipe bundle shipped with the App is encrypted and is decrypted only on your device. That said, no method of electronic storage is completely secure.",
+    pol_security: "Because the App transmits no personal data, there is no transfer to intercept and no database of ours to breach. Recipe content stays on your device. That said, no method of electronic storage is completely secure.",
 
     pol_h_changes: "Changes to this Privacy Policy",
     pol_changes: "When this policy changes, the new version is posted on this page with a new date at the top. If an update to the App changes how data is handled, we will update this page before that update ships.",

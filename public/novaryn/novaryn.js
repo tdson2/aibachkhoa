@@ -69,7 +69,7 @@ const i18n = {
         th_q: "The question",
         th_a: "The answer",
         pro_q1: "What it unlocks",
-        pro_a1: "The whole shop, for as long as the subscription is active — and advertising, which stops completely: with Pro the ad code is never started at all.",
+        pro_a1: "The whole shop, for as long as the subscription is active — and advertising, which stops completely for as long as Pro is active.",
         pro_q2: "What it costs",
         pro_a2: "$4.99 a month on the US list, shown in your own currency at checkout and billed by Google Play.",
         pro_q3: "What it does to a run",
@@ -103,18 +103,18 @@ const i18n = {
         p_portrait: "<strong>Portrait and one-handed.</strong> Playable while standing on a bus, with no rotation and no second thumb required.",
         p_offline: "<strong>Plays fully offline.</strong> The whole game runs on the device. Turn the connection off and nothing changes.",
         p_small: "<strong>Small download, old hardware.</strong> Android 7.0 and up, and it does not ask a budget phone for more than it has.",
-        p_local: "<strong>Your best score is yours.</strong> It is kept on the device, in the game's own save file, and it is not sent anywhere.",
+        p_local: "<strong>Your best score is yours.</strong> It is kept on the device and it is not sent anywhere.",
 
         faq1_q: "Which Android versions does it run on?",
         faq1_a: "Android 7.0 and up, rated Everyone with in-game purchases declared.",
         faq2_q: "Are there ads?",
         faq2_a: "On Android, yes — between runs, never during one, and never a video you have to sit through to carry on playing. A Novaryn Pro subscription removes them completely. The iPhone and iPad version has no ads at all.",
         faq3_q: "Does it need an internet connection?",
-        faq3_a: "No. A run plays identically with the connection off. A connection is only used when you open the shop or make a purchase, because that goes through Google Play Billing.",
+        faq3_a: "No. A run plays identically with the connection off. A connection is only used when you open the shop or make a purchase, because that goes through Google Play.",
         faq4_q: "Can I lose a skin I paid for?",
         faq4_a: "Not one you bought outright — those are one-time purchases tied to your Google account and restore when you reinstall. Only ships unlocked <em>through</em> a Pro subscription lock again if Pro lapses.",
         faq5_q: "Is my high score sent anywhere?",
-        faq5_a: "Your best score is kept on the device, in the game's own save file. Uninstalling the app removes it.",
+        faq5_a: "Your best score is kept on the device. Uninstalling the app removes it.",
         faq6_q: "Is it suitable for children?",
         faq6_a: "It is rated Everyone: an abstract space shooter with no blood, no story and no chat. Worth knowing that it does carry in-app purchases, so a shared device is worth a Play Store purchase PIN.",
 
@@ -144,8 +144,8 @@ const i18n = {
         pol_intro: "Novaryn is a vertical arcade shoot-'em-up for iPhone, iPad and Android: endless waves of enemy formations, bosses along the way, and a collection of purely cosmetic ship skins. The game runs entirely on your own device. It has no accounts, no player profiles, no chat and no analytics. The Android version shows advertising supplied by Google AdMob; the iPhone and iPad version shows none. A Novaryn Pro subscription removes advertising altogether.",
 
         pol_h_short: "The short version",
-        pol_short_1: "<strong>We run no servers and we receive no data about you.</strong> Your settings and your best score are written to the App's own save file on your device and never leave it.",
-        pol_short_2: "<strong>The Android version shows ads; the iPhone and iPad version does not.</strong> Ads on Android are served by Google AdMob, which may use your device's advertising identifier to choose them. There is still no analytics SDK and no crash-reporting SDK in either build, and a Novaryn Pro subscription switches advertising off.",
+        pol_short_1: "<strong>We run no servers and we receive no data about you.</strong> Your settings and your best score are stored privately on your device and never leave it.",
+        pol_short_2: "<strong>The Android version shows ads; the iPhone and iPad version does not.</strong> Ads on Android are served by Google AdMob, which may use your device's advertising identifier to choose them. There is still no analytics and no crash reporting in either version, and a Novaryn Pro subscription switches advertising off.",
         pol_short_3: "<strong>The third parties are the app stores and, on Android, Google AdMob</strong> — Apple's App Store on iPhone and iPad, Google Play on Android, each only when you choose to buy a ship skin or subscribe to Novaryn Pro, and AdMob whenever an ad loads on Android. Apple or Google handles the transaction; we never see your payment details.",
         pol_short_4: "<strong>The App asks for no sensitive permission.</strong> No location, no contacts, no camera, no microphone, no access to your files.",
 
@@ -176,7 +176,7 @@ const i18n = {
         pol_collect_l1: "Your best score, so the BEST figure under the score counter has something to compare against.",
         pol_collect_l2: "Your sound-effects volume setting.",
         pol_collect_l3: "Which ship skin you have equipped, and which skins you own.",
-        pol_collect_note: "<strong>Note:</strong> the three items above are written to the App's own private save file on your device. They are not transmitted to us or to anyone else, and we have no way of reading them.",
+        pol_collect_note: "<strong>Note:</strong> the three items above are stored privately on your device. They are not transmitted to us or to anyone else, and we have no way of reading them.",
 
         pol_h_purchases: "Purchases and Subscriptions",
         pol_purchase_1: "Novaryn offers optional in-app purchases: individual ship skins as one-time purchases, and <strong>Novaryn Pro</strong> as a monthly subscription that unlocks every ship in the shop while it is active. All purchases are cosmetic. Nothing sold in the App changes how the game plays.",
@@ -185,19 +185,19 @@ const i18n = {
         pol_purchase_4: "The Novaryn Pro subscription renews monthly until you cancel it, and you can cancel at any time — on iPhone or iPad in <strong>Settings → your name → Subscriptions</strong>, on Android in <strong>Google Play → Payments &amp; subscriptions</strong>. Ships unlocked through an active Pro subscription lock again if the subscription ends; ships you bought outright remain yours permanently and restore when you reinstall the App.",
 
         pol_h_sharing: "Sharing Data with Third Parties",
-        pol_sharing_1: "We do not sell user data, and we hold no user data to sell. On Android the App includes one third-party SDK — Google AdMob, which serves the ads and is described under <a href='#advertising'>Advertising</a>. There is no analytics provider, no crash-reporting service and no social SDK, and the iPhone and iPad build contains no third-party SDK at all.",
+        pol_sharing_1: "We do not sell user data, and we hold no user data to sell. On Android the App uses one third-party service inside the game — Google AdMob, which serves the ads and is described under <a href='#advertising'>Advertising</a>. There is no analytics provider, no crash-reporting service and no social network integration, and the iPhone and iPad version includes no third-party service of that kind at all.",
         pol_sharing_2: "On iPhone and iPad the App Store is the only third-party service the App talks to, and only at the moment you open the shop or complete a purchase. On Android there are two: Google Play for the same purpose, and Google AdMob when an ad loads. Nothing else leaves the device.",
 
         pol_h_ads: "Advertising",
-        pol_ads_1: "The Android version of Novaryn shows advertising supplied by <strong>Google AdMob</strong>. The iPhone and iPad version contains no advertising SDK and shows no ads. Ads never appear during a run — only between them.",
+        pol_ads_1: "The Android version of Novaryn shows advertising supplied by <strong>Google AdMob</strong>. The iPhone and iPad version contains no advertising and shows no ads. Ads never appear during a run — only between them.",
         pol_ads_2: "To select and measure an ad, Google may process your device's advertising identifier, coarse location inferred from your IP address, device and app information, and interaction with the ad itself. That processing is Google's, as an independent controller — the data goes to Google, not to us. We receive only anonymous, aggregated earnings figures, which identify nobody.",
-        pol_ads_3: "Where the GDPR or a comparable law applies, personalised advertising may only be shown once consent has been collected through Google's consent tool. No consent message is configured for Novaryn, so in those regions the App shows <strong>no advertising at all</strong> rather than showing any without permission. If a consent message is added later, a <strong>Privacy options</strong> control appears in the game's Settings so the choice can be changed or withdrawn at any time.",
+        pol_ads_3: "Where the GDPR or a comparable law applies, personalised advertising may only be shown once consent has been collected through Google's consent tool. Novaryn does not currently ask for that consent, so in those regions the App shows <strong>no advertising at all</strong> rather than showing any without permission. If a consent message is added later, a <strong>Privacy options</strong> control appears in the game's Settings so the choice can be changed or withdrawn at any time.",
         pol_ads_4: "Android itself also lets you limit this: <strong>Settings → Privacy → Ads</strong> on your device can delete or reset the advertising ID, which stops past activity being tied to future ads.",
-        pol_ads_5: "<strong>Novaryn Pro removes advertising completely.</strong> While the subscription is active the ad SDK is not started at all, so no ad request is made and no advertising identifier is read.",
+        pol_ads_5: "<strong>Novaryn Pro removes advertising completely.</strong> While the subscription is active advertising is switched off entirely, so no ad request is made and no advertising identifier is read.",
         pol_ads_6: "How Google uses the data it collects from apps that use its services is set out in <a href='https://policies.google.com/technologies/partner-sites' target='_blank' rel='noopener'>Google's partner policy</a>.",
 
         pol_h_perm: "Permissions and Network Access",
-        pol_perm_1: "On iOS the App declares no permission at all: the build carries no camera, microphone or photo-library usage description, because it touches none of them. On Android it declares <code>INTERNET</code>, which Google Play Billing requires in order to verify purchases and entitlements and which AdMob uses to fetch an ad, <code>WAKE_LOCK</code>, which keeps the screen from sleeping in the middle of a run, and <code>com.google.android.gms.permission.AD_ID</code>, which lets AdMob read the device's advertising identifier.",
+        pol_perm_1: "On iOS the App asks for no permission at all: it never uses the camera, microphone or photo library. On Android it asks for three: <strong>internet access</strong>, which Google Play needs in order to verify purchases and which AdMob uses to fetch an ad; <strong>keeping the screen awake</strong>, so the screen does not sleep in the middle of a run; and <strong>access to the advertising ID</strong>, which lets AdMob read the device's advertising identifier.",
         pol_perm_2: "It requests no other sensitive permission: no location, no contacts, no camera, no microphone, and no access to the photos, videos or documents on your device.",
         pol_perm_3: "The game itself does not require a connection. Every wave, every boss and every power-up works with the connection off — the only things that need the network are the shop and, on Android, loading an ad. With the connection off the game still plays in full; ads simply do not appear.",
 
@@ -207,7 +207,7 @@ const i18n = {
         pol_storage_3: "Your purchase history is the exception, because it is held by Apple or Google rather than by us. Uninstalling the App does not erase a purchase — that is deliberate, and it is what lets a skin you paid for come back when you reinstall, through <strong>Restore Purchases</strong> in the shop. Review or manage it through your Apple Account or your Google Play account.",
 
         pol_h_children: "Children's Privacy",
-        pol_children_1: "Novaryn is rated for general audiences and contains no content directed at, or unsuitable for, children. We do not knowingly collect personal information from anyone, of any age, including children under 13. The App is not directed at children, and the Android build is configured so that ads served to it are not based on interest profiles where the store or the law treats the audience as a child audience.",
+        pol_children_1: "Novaryn is rated for general audiences and contains no content directed at, or unsuitable for, children. We do not knowingly collect personal information from anyone, of any age, including children under 13. The App is not directed at children, and on Android, ads are not based on interest profiles where the store or the law treats the audience as a child audience.",
         pol_children_2: "The App does contain in-app purchases. If a child uses your device, we suggest requiring authentication before a purchase completes — Ask to Buy or <strong>Screen Time → Content &amp; Privacy Restrictions</strong> on iOS, and purchase authentication in the Google Play Store settings on Android.",
 
         pol_h_rights: "Your Rights",
@@ -218,7 +218,7 @@ const i18n = {
         pol_rights_4: "<strong>Objection and consent:</strong> there is no profiling or automated decision-making in the App. On Android you can change or withdraw your advertising consent at any time, or remove ads outright with Novaryn Pro — see <a href='#advertising'>Advertising</a>.",
 
         pol_h_security: "Security",
-        pol_security: "The App stores its data locally, so the ordinary risks of data in transit barely arise. Purchase traffic is handled by the App Store or Google Play over their own secured channels, and on Android the ad request goes to Google over theirs. Neither carries a save file or a score. That said, no method of electronic storage is completely secure, and the save file on your device is protected by your device's own security — a screen lock is worth having.",
+        pol_security: "The App stores its data locally, so the ordinary risks of data in transit barely arise. Purchase traffic is handled by the App Store or Google Play over their own secured channels, and on Android the ad request goes to Google over theirs. Neither carries your saved progress or a score. That said, no method of electronic storage is completely secure, and the data on your device is protected by your device's own security — a screen lock is worth having.",
 
         pol_h_changes: "Changes to this Privacy Policy",
         pol_changes_1: "We may update this Privacy Policy from time to time — for instance, if a future version of the App gains a feature that changes how data is handled. We will post the new policy on this page and update the \"Last updated\" date at the top.",

@@ -40,7 +40,7 @@ const i18n = {
         btn_shots: "See how it plays",
         btn_policy: "Privacy policy",
         btn_contact: "Ask about a build",
-        hero_meta: "Application id <code>com.tdson.ironline</code> · landscape · arm64-v8a, armeabi-v7a and x86_64 · English and Tiếng Việt · plays entirely offline.",
+        hero_meta: "Application id <code>com.tdson.ironline</code> · landscape · English and Tiếng Việt · plays entirely offline.",
 
         stat_missions: "Battlefields across five terrains",
         stat_towers: "Towers, four tiers each",
@@ -105,11 +105,11 @@ const i18n = {
 
         /* -------------------------------------------------- privacy ---- */
         priv_eyebrow: "Privacy",
-        priv_title: "It cannot phone home. <em>There is no network code</em>.",
+        priv_title: "It cannot phone home. <em>It never goes online</em>.",
         priv_sub: "Iron Line is not built to collect anything, and it is not able to. The app ships without the internet permission, so there is no connection for data to leave through even if something tried.",
         priv_1: "<strong>No data collected.</strong> No account, no sign-in, no analytics, no advertising id, no crash reporting.",
-        priv_2: "<strong>No third-party SDKs.</strong> Nothing from an ad network, an analytics vendor or a games service is linked into the build.",
-        priv_3: "<strong>No internet permission.</strong> <code>INTERNET</code> is not declared in the manifest. The only permissions are <code>VIBRATE</code> and <code>WAKE_LOCK</code>.",
+        priv_2: "<strong>No third-party SDKs.</strong> Nothing from an ad network, an analytics vendor or a games service is included in the app.",
+        priv_3: "<strong>No internet permission.</strong> The app does not ask for <code>INTERNET</code> access. The only permissions it requests are <code>VIBRATE</code> and <code>WAKE_LOCK</code>.",
         priv_4: "<strong>Your save stays yours.</strong> Progress is written to the app's private storage on the device and is removed with the app.",
         priv_link: "Read the full privacy policy",
 
@@ -130,7 +130,7 @@ const i18n = {
         pol_toc: "On this page",
 
         pol_h_summary: "Summary",
-        pol_summary: "Iron Line is a single-player, offline tower defense game for Android, published by AIBachKhoa (Son Tran), Vietnam. It contains no advertising, no in-app purchases, no analytics and no third-party SDKs of any kind. It does not request the <code>INTERNET</code> permission, so it cannot open a network connection. The only information it writes is your own game progress, stored in the app's private directory on your device.",
+        pol_summary: "Iron Line is a single-player, offline tower defense game for Android, published by AIBachKhoa (Son Tran), Vietnam. It contains no advertising, no in-app purchases, no analytics and no third-party services of any kind. It does not request the <code>INTERNET</code> permission, so it cannot open a network connection. The only information it writes is your own game progress, stored in the app's private directory on your device.",
 
         pol_h_collect: "Information we collect",
         pol_collect_1: "<strong>None.</strong> The App does not collect, transmit, sell or share any personal data. Specifically, it does not collect any of the following:",
@@ -152,10 +152,10 @@ const i18n = {
         pol_perm_th_w: "Why it is there",
         pol_perm_vibrate_w: "Haptic feedback when a tower fires, a hull is destroyed or the core is hit. Can be turned off in the settings.",
         pol_perm_wake_w: "Keeps the screen awake during a battle, so the display does not sleep while a long wave plays out.",
-        pol_perm_2: "<strong>The <code>INTERNET</code> permission is deliberately not declared.</strong> Android enforces this at the system level: without it, the App is structurally incapable of opening a network connection, regardless of what its code attempts. You can verify this yourself by inspecting the manifest of the installed package.",
+        pol_perm_2: "<strong>The <code>INTERNET</code> permission is deliberately not declared.</strong> Android enforces this at the system level: without it, the App cannot open a network connection at all. You can verify this yourself in the App's permission list in Android Settings or on its store listing.",
 
         pol_h_third: "Third-party services",
-        pol_third_1: "There are none. The App contains no advertising network, no analytics or attribution SDK, no crash reporting service, no social login, and no games service such as Google Play Games. Nothing in the App shares data with anyone, because nothing in the App talks to anyone.",
+        pol_third_1: "There are none. The App contains no advertising network, no analytics or attribution tracking, no crash reporting service, no social login, and no games service such as Google Play Games. Nothing in the App shares data with anyone, because nothing in the App talks to anyone.",
         pol_third_2: "If you obtained the App through Google Play, Google's own handling of your download and any Play Store data is governed by Google's privacy policy, not this one. That relationship is between you and Google and exists independently of the App.",
 
         pol_h_children: "Children's privacy",

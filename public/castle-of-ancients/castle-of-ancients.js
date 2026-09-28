@@ -140,10 +140,10 @@ const i18n = {
 
         touch_eyebrow: "Touch",
         touch_title: "Built for a hand, <em>not shrunk to fit one</em>.",
-        touch_sub: "The touch layout is not the desktop layout with bigger buttons. It is a different set of numbers, chosen because a finger is not a cursor.",
+        touch_sub: "The touch layout is not the desktop layout with bigger buttons. It was designed from scratch, because a finger is not a cursor.",
         touch_l1: "<strong>The cards are taller</strong> and the side bar is wider, because a thumb reaching across a landscape screen is less accurate than a mouse that never misses.",
-        touch_l2: "<strong>The drag threshold is wider,</strong> so a tap that wobbles two pixels is still a tap and not a half-started build you have to cancel.",
-        touch_l3: "<strong>The tower ghost lifts clear of your fingertip,</strong> because your hand covers exactly the tile you are aiming at — the one place a preview must not be.",
+        touch_l2: "<strong>Taps are forgiving,</strong> so a tap that wobbles a little is still a tap and not a half-started build you have to cancel.",
+        touch_l3: "<strong>The tower preview lifts clear of your fingertip,</strong> because your hand covers exactly the tile you are aiming at — the one place a preview must not be.",
         touch_l4: "<strong>Pinch to zoom, one finger to pan</strong> on the campaign maps, which are wider than any screen you own.",
 
         shot_eyebrow: "Screenshots",
@@ -188,7 +188,7 @@ const i18n = {
         pol_h_short: "The short version",
         pol_short_1: "<strong>Nothing is collected.</strong> The game asks for no personal information and has no field to type any into.",
         pol_short_2: "<strong>Nothing is sent.</strong> The app declares no network capability, so there is no route by which anything could leave your device even by mistake.",
-        pol_short_3: "<strong>No third parties.</strong> No advertising network, no analytics SDK, no crash reporter, no social login.",
+        pol_short_3: "<strong>No third parties.</strong> No advertising network, no analytics, no crash reporter, no social login.",
         pol_short_4: "<strong>No tracking.</strong> No advertising identifier is read, and nothing you do is linked to you or to any other app.",
         pol_short_5: "<strong>Deleting the app deletes everything.</strong> There is no server copy, because there was never a copy anywhere but your device.",
 
@@ -201,7 +201,7 @@ const i18n = {
         pol_row_opt_w: "Your settings",
         pol_row_opt_y: "Game speed, music and sound volume, language, control scheme, and the four campaign dials.",
         pol_row_log_w: "A local log file",
-        pol_row_log_y: "Written by the game engine to help diagnose a crash on your own device. It is never sent anywhere and you can delete it by deleting the app.",
+        pol_row_log_y: "Written by the game to help diagnose a crash on your own device. It is never sent anywhere and you can delete it by deleting the app.",
         pol_stores_note: "That is the whole list. There is no identifier, no timestamp tied to a person, and no usage history.",
 
         pol_h_perm: "Permissions",
