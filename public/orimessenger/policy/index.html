@@ -295,10 +295,11 @@
             <h2 id="security">Security</h2>
             <p>All Internet traffic to the relay is encrypted in transit. On top of that, every message is encrypted end to end between the two devices and signed, so the recipient can verify both that the contents were not altered and that they really came from you. The relay carries the result without holding any key that could open it.</p>
             <p><strong>On-device data is not separately encrypted by the app.</strong> As described under <a href="#device">what is stored on the device</a>, chat history and private keys are protected by the operating system rather than by an app passphrase. We would rather state that plainly than imply a protection the app does not provide.</p>
-            <p>The Windows installer, the Android APK and the Google Play build are signed with a certificate whose fingerprint is:</p>
+            <p>The Android APK and the Google Play build are signed with a certificate whose fingerprint is:</p>
             <div class="om-note">
                 <p style="font-family: 'DM Mono', monospace; font-size: .82rem; word-break: break-all; margin: 0;">SHA-256 &nbsp; 8A:0D:79:F8:73:F4:8F:A6:F3:E5:BD:5A:C5:04:28:A5:21:C1:86:C4:B1:0A:46:20:EE:D3:89:BA:48:F4:33:32</p>
             </div>
+            <p>The Windows installer is not code-signed yet; check it against the SHA-256 published on the download page instead.</p>
             <p>No system is fully secure and we do not promise otherwise. If you find a vulnerability, please email <a href="mailto:contact@aibachkhoa.com">contact@aibachkhoa.com</a> with the details rather than posting it publicly.</p>
 
             <h2 id="changes">Changes to this policy</h2>
