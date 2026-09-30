@@ -18,6 +18,7 @@ const i18n = {
         skip_link: "Skip to content",
 
         nav_home: "Home",
+        nav_blog: "Blog",
         nav_overview: "Overview",
         nav_trailer: "Trailer",
         nav_descent: "The descent",
@@ -33,6 +34,7 @@ const i18n = {
         btn_shots: "See how it plays",
         btn_contact: "Ask about a build",
         hero_meta: "Application id <code>com.tdson.dungeonblade</code> · landscape, arm64-v8a and armeabi-v7a · English, Tiếng Việt, Español, Français, Deutsch, Português.",
+        hero_alt: "The title screen of Dungeon of the Fallen Blade",
 
         stat_depths: "Depths, new every run",
         stat_lords: "Named lords, one every fifth",
@@ -49,6 +51,26 @@ const i18n = {
         descent_eyebrow: "The descent",
         descent_title: "Twenty acts of five, <em>and a lord at the bottom of each</em>.",
         descent_sub: "An act sets the colour of its stone, how often a pit is fire rather than spikes, which music plays and which enemies patrol it. Its first four depths are ordinary warrens; its fifth is an arena holding that act's lord. So a boss waits on depth 5, 10, 15 … 100.",
+        act_1: "The Forgotten Crypt",
+        act_2: "Halls of Rust",
+        act_3: "The Blood Cistern",
+        act_4: "Emberfall Depths",
+        act_5: "The Drowned Vaults",
+        act_6: "The Marrow Warrens",
+        act_7: "The Ashen Galleries",
+        act_8: "The Sunken Spire",
+        act_9: "The Grinding Works",
+        act_10: "The Hollow Cathedral",
+        act_11: "The Frostbound Silence",
+        act_12: "The Voidlit Reaches",
+        act_13: "The Warlord's Waste",
+        act_14: "The Severed Sanctum",
+        act_15: "The Gilded Ossuary",
+        act_16: "The Dread Furnace",
+        act_17: "The World's Wound",
+        act_18: "The Plague Gardens",
+        act_19: "The Black Procession",
+        act_20: "The Fallen Throne",
 
         combat_eyebrow: "Combat",
         combat_title: "Swings with <em>weight</em>.",
@@ -68,9 +90,11 @@ const i18n = {
         th_keyboard: "Keyboard",
         th_gamepad: "Gamepad",
         k_move: "Move",
+        k_arrows: "or arrows",
         g_stick: "Left stick / D-pad",
         k_jump: "Jump (double jump)",
         k_drop: "Drop through platform",
+        k_plus_jump: "jump",
         g_downa: "Down + A",
         k_attack: "Attack (3-hit combo)",
         k_lmb: "left mouse",
@@ -125,6 +149,14 @@ const i18n = {
         boon_eyebrow: "Boons",
         boon_title: "One choice <em>at every gate</em>.",
         boon_sub: "Level up as you kill, then take a boon on the way down. Three are offered, one is yours — and the deeper you go, the more it takes.",
+        bn_vit: "Vitality",
+        bn_might: "Might",
+        bn_swift: "Swiftness",
+        bn_keen: "Keen Edge",
+        bn_leech: "Blood Pact",
+        bn_ward: "Iron Ward",
+        bn_quiver: "Deep Quiver",
+        bn_flask: "Alchemy",
         b_vit: "+25 max HP and heal fully",
         b_might: "+4 attack power",
         b_swift: "+12% speed and +20 stamina",
@@ -142,10 +174,12 @@ const i18n = {
         p_wide: "<strong>A tall screen gets a wider view, not black bars.</strong> The view widens to fill the device, and the HUD stays in place when you rotate.",
         p_pixel: "<strong>Crisp pixels on real hardware.</strong> On common phone screens the pixel art stays sharp, with nothing blurred or smeared.",
         p_auto: "<strong>On automatically, and switchable.</strong> The pads turn on for Android, iOS or anything reporting a touchscreen; <em>Options → Touch pad</em> cycles auto / on / off. Gamepads and keyboards work throughout.",
+        phone_alt: "On-screen controls during a fight on Depth II",
 
         gal_eyebrow: "Screenshots",
         gal_title: "Straight captures, <em>no mock-ups</em>.",
         gal_sub: "Every frame here is captured from the game itself at full resolution.",
+        gal_img_alt: "Dungeon of the Fallen Blade screenshot",
         s1_title: "The title screen",
         s1_cap: "A branded intro clip plays first; any key, click or tap skips it. The deepest descent and the run count sit under the menu.",
         s2_title: "The three-hit combo",
@@ -364,7 +398,17 @@ const i18n = {
 /* Languages offered in the picker, in order. English only: the picker
    hides itself when there is nothing to pick between. */
 const LANGS = [
-    { code: 'en', label: 'English' }
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' },
+    { code: 'zh', label: '中文' },
+    { code: 'hi', label: 'हिन्दी' },
+    { code: 'ar', label: 'العربية' },
+    { code: 'pt', label: 'Português' },
+    { code: 'fr', label: 'Français' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'ja', label: '日本語' },
+    { code: 'ko', label: '한국어' },
+    { code: 'ru', label: 'Русский' }
 ];
 const DEFAULT_LANG = 'en';
 const SHOT_DIR = '/assets/games/dungeon-blade/';
@@ -387,25 +431,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSelects = [document.getElementById('lang-select'), document.getElementById('mobile-lang-select')].filter(Boolean);
     const supported = LANGS.map(l => l.code);
 
-    // A stored choice wins, then whatever the visitor picked on the landing
-    // page. Anything no longer offered — a 'vi' left over from before it was
-    // hidden — falls back to English rather than painting a blank page.
-    const detectLang = () => {
-        // The URL wins: /es/… is the Spanish page whatever the browser
-        // or a previous visit would have preferred.
-        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
-        if (fromUrl) return fromUrl;
-        const own = localStorage.getItem('dungeon-lang');
-        if (own && supported.includes(own)) return own;
-        const site = localStorage.getItem('lang');
-        if (site && supported.includes(site)) return site;
-        const prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
-        for (const pref of prefs) {
-            const base = String(pref).toLowerCase().split('-')[0];
-            if (supported.includes(base)) return base;
-        }
-        return DEFAULT_LANG;
-    };
+    // The URL names the language; see LangUrl.detect in /lang-url.js.
+    const detectLang = () => window.LangUrl ? window.LangUrl.detect(supported, DEFAULT_LANG) : DEFAULT_LANG;
 
     langSelects.forEach(sel => {
         const short = sel.dataset.display === 'code';
@@ -444,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
         const lang = sel.value;
-        localStorage.setItem('dungeon-lang', lang);
+        localStorage.setItem('lang', lang);
         // Each language is its own page now, so go there rather
         // than rewriting this one and leaving the URL lying.
         if (window.LangUrl) {

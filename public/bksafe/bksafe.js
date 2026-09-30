@@ -94,6 +94,7 @@ const i18n = {
         skip_link: "Skip to content",
 
         nav_home: "Home",
+        nav_blog: "Blog",
         nav_overview: "Overview",
         cta_download: "Download",
 
@@ -113,6 +114,15 @@ const i18n = {
         pillar_portable_d: "The Windows build is a folder you can copy anywhere — a USB stick, a network share, another PC. No installer; double-click and it runs.",
         pillar_two_t: "Desktop and phone",
         pillar_two_d: "The macOS app looks after the Mac, the Windows app after the PC, the Android app after the phone. Same thinking, three interfaces built for their own platform.",
+
+        alt_hero_mac: "BKSafe on macOS — the System screen",
+        alt_hero_droid: "BKSafe on Android — the home screen",
+
+        plat_mac: "BKSafe for macOS",
+        plat_win: "BKSafe for Windows",
+        plat_linux: "BKSafe for Linux",
+        plat_droid: "BKSafe for Android",
+        plat_lite: "BKSafe Lite for Android",
 
         pick_title: "Pick your platform.",
         pick_sub: "Three separate apps, each written for the operating system it runs on.",
@@ -161,6 +171,7 @@ const i18n = {
         gal_title: "See every screen for yourself",
         gal_sub: "Actual screens from the macOS build.",
         gal_aria: "Choose a screen",
+        gal_img_alt: "BKSafe — System, Overview",
 
         s01_tab: "Overview", s01_title: "System — Overview",
         s01_cap: "CPU, GPU, memory, storage and network side by side, with the machine spec and its current state.",
@@ -251,6 +262,8 @@ const i18n = {
         droid_badge_store: "On Google Play",
         droid_badge_free: "Free to download",
         droid_badge_vi: "Vietnamese interface",
+        alt_droid_home: "BKSafe for Android — home screen with the quick scan button",
+        alt_droid_tools: "BKSafe for Android — the protection toolkit",
         d_scan_t: "Quick scan on the device",
         d_scan_d: "One tap checks every installed app and file on the phone. The analysis runs on the device, so it works with no connection at all.",
         d_call_t: "Scam call blocking",
@@ -266,6 +279,8 @@ const i18n = {
 
         lite_title: "Older phone, slower phone? Take the Lite build.",
         lite_sub: "BKSafe Lite is built for older and lower-powered phones: no background service, and a short set of tools reachable straight from the home screen.",
+        alt_lite_home: "BKSafe Lite — home screen with the file scan button",
+        alt_lite_speed: "BKSafe Lite — the network speed test result",
         lite_f1_t: "File scan",
         lite_f1_d: "Scans files on the phone for threats — no connection required.",
         lite_f2_t: "Junk cleanup",
@@ -417,7 +432,17 @@ const i18n = {
 /* Languages offered in the picker, in order. English only: the picker
    hides itself when there is nothing to pick between. */
 const LANGS = [
-    { code: 'en', label: 'English' }
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' },
+    { code: 'zh', label: '中文' },
+    { code: 'hi', label: 'हिन्दी' },
+    { code: 'ar', label: 'العربية' },
+    { code: 'pt', label: 'Português' },
+    { code: 'fr', label: 'Français' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'ja', label: '日本語' },
+    { code: 'ko', label: '한국어' },
+    { code: 'ru', label: 'Русский' }
 ];
 const DEFAULT_LANG = 'en';
 const SHOT_DIR = '/assets/bksafe/macos/';
@@ -440,20 +465,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSelects = [document.getElementById('lang-select'), document.getElementById('mobile-lang-select')].filter(Boolean);
     const supported = LANGS.map(l => l.code);
 
-    // A stored choice wins, then whatever the visitor picked on the
-    // landing page. Anything no longer offered — a 'vi' left over from
-    // before it was hidden, say — falls through to the default.
-    const detectLang = () => {
-        // The URL wins: /es/… is the Spanish page whatever the browser
-        // or a previous visit would have preferred.
-        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
-        if (fromUrl) return fromUrl;
-        const saved = localStorage.getItem('bksafe-lang');
-        if (saved && supported.includes(saved)) return saved;
-        const site = localStorage.getItem('lang');
-        if (site && supported.includes(site)) return site;
-        return DEFAULT_LANG;
-    };
+    // The URL names the language; see LangUrl.detect in /lang-url.js.
+    const detectLang = () => window.LangUrl ? window.LangUrl.detect(supported, DEFAULT_LANG) : DEFAULT_LANG;
 
     langSelects.forEach(sel => {
         // Nothing to choose between while only one language is offered.
@@ -496,7 +509,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
         const lang = sel.value;
-        localStorage.setItem('bksafe-lang', lang);
+        localStorage.setItem('lang', lang);
         // Each language is its own page now, so go there rather
         // than rewriting this one and leaving the URL lying.
         if (window.LangUrl) {

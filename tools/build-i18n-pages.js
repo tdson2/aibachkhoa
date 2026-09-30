@@ -38,7 +38,11 @@ const GROUPS = [
     { js: 'iron-line/iron-line.js', pages: ['iron-line/index.html', 'iron-line/policy/index.html'] },
     { js: 'mini-castle/mini-castle.js', pages: ['mini-castle/index.html', 'mini-castle/policy/index.html'] },
     { js: 'novaryn/novaryn.js', pages: ['novaryn/index.html', 'novaryn/ios/index.html', 'novaryn/policy/index.html'] },
-    { js: 'dungeon-blade/dungeon-blade.js', pages: ['dungeon-blade/index.html', 'dungeon-blade/policy/index.html'] }
+    { js: 'dungeon-blade/dungeon-blade.js', pages: ['dungeon-blade/index.html', 'dungeon-blade/policy/index.html'] },
+    { js: 'orimessenger/orimessenger.js', pages: ['orimessenger/index.html', 'orimessenger/android/index.html', 'orimessenger/desktop/index.html', 'orimessenger/ios/index.html', 'orimessenger/policy/index.html'] },
+    // Only the list is translated; each post stays in the language it was
+    // written in (tools/build-blog.js).
+    { js: 'blog/blog.js', pages: ['blog/index.html'] }
 ];
 
 // ------------------------------------------------------- reading the source
@@ -71,17 +75,34 @@ function readDicts(jsRel) {
     const open = src.indexOf('{', start);
     const dict = eval('(' + src.slice(open, matchBrace(src, open) + 1) + ')');
 
-    // chefeasy attaches its second language after the literal.
-    for (const m of src.matchAll(/^i18n\.([a-z]{2}) = \{/gm)) {
-        const o = src.indexOf('{', m.index);
-        dict[m[1]] = eval('(' + src.slice(o, matchBrace(src, o) + 1) + ')');
+    // A language can also be attached after the literal (chefeasy does this),
+    // or live in its own file next to the page script: <dir>/i18n/<lang>.js,
+    // holding `i18n.<lang> = { … };`. Those files are what the translated
+    // copies load, so an English visitor never downloads ten dictionaries.
+    const attach = (text) => {
+        for (const m of text.matchAll(/^i18n\.([a-z]{2}) = \{/gm)) {
+            const o = text.indexOf('{', m.index);
+            dict[m[1]] = eval('(' + text.slice(o, matchBrace(text, o) + 1) + ')');
+        }
+    };
+    attach(src);
+    const langFiles = {};
+    const langDir = path.join(PUB, path.dirname(jsRel), 'i18n');
+    if (path.dirname(jsRel) !== '.' && fs.existsSync(langDir)) {
+        for (const f of fs.readdirSync(langDir).filter(f => /^[a-z]{2}\.js$/.test(f)).sort()) {
+            attach(fs.readFileSync(path.join(langDir, f), 'utf8'));
+            langFiles[f.slice(0, 2)] = '/' + path.posix.join(path.dirname(jsRel), 'i18n', f);
+        }
     }
 
     const langsStart = src.indexOf('const LANGS = [');
     const langs = eval(src.slice(src.indexOf('[', langsStart),
         src.indexOf('];', langsStart) + 1)).map(l => l.code);
     const def = /const DEFAULT_LANG = '([a-z]{2})'/.exec(src)[1];
-    return { dict, langs, def };
+    // Only offer a language that has a dictionary to back it, so a LANGS
+    // entry added ahead of its translation cannot publish an English page
+    // under a foreign URL.
+    return { dict, langs: langs.filter(l => dict[l]), def, langFiles };
 }
 
 // ------------------------------------------------------------- transforming
@@ -128,6 +149,17 @@ function applyAria(html, dict) {
                 ? (pre + post).replace(/\saria-label="[^"]*"/, ` aria-label="${esc(value)}"`)
                 : `${pre}${post} aria-label="${esc(value)}"`;
             return `<${tag}${body} data-i18n-aria="${key}">`;
+        });
+}
+
+function applyAlt(html, dict) {
+    return html.replace(
+        /<img((?:"[^"]*"|[^>"])*?)\sdata-i18n-alt="([^"]+)"((?:"[^"]*"|[^>"])*?)>/g,
+        (full, pre, key, post) => {
+            const value = dict[key];
+            if (value === undefined) return full;
+            const body = (pre + post).replace(/\salt="[^"]*"/, '');
+            return `<img${body} alt="${esc(value)}" data-i18n-alt="${key}">`;
         });
 }
 
@@ -251,6 +283,15 @@ for (const group of groups) {
         if (!fs.existsSync(file)) throw new Error(`missing page ${pageRel}`);
         const source = fs.readFileSync(file, 'utf8');
 
+        // The copies live one directory deeper (/es/…), so a relative URL
+        // that works on the English page points at nothing on every
+        // translation — which is how the home page lost its images in all
+        // ten languages. Refuse to build rather than publish broken pages.
+        const relative = [...source.matchAll(/\s(?:src|href|srcset|poster)="(?!\/|[a-z]+:|#|\{)([^"]+)"/g)].map(m => m[1]);
+        if (relative.length) {
+            throw new Error(`${pageRel}: relative URL(s) would break under /<lang>/ — make them start with "/": ${relative.slice(0, 5).join(', ')}`);
+        }
+
         // "/bksafe/policy/index.html" -> "/bksafe/policy"; "index.html" -> "/"
         const urlPath = '/' + pageRel.replace(/index\.html$/, '').replace(/\/$/, '');
         const canonicalPath = urlPath === '/' ? '/' : urlPath;
@@ -276,6 +317,7 @@ for (const group of groups) {
 
             let out = applyI18n(base, d);
             out = applyAria(out, d);
+            out = applyAlt(out, d);
             out = prefixLinks(out, lang, pagesByLang.get(lang) || new Set());
 
             const canon = `${SITE}${prefix}${canonicalPath === '/' ? '' : canonicalPath}`;
@@ -307,6 +349,14 @@ for (const group of groups) {
                 `<meta property="og:url" content="${canon}">`);
             out = out.replace(/<meta property="og:site_name"/,
                 `<meta property="og:locale" content="${lang}">\n    <meta property="og:site_name"`);
+
+            // The page script only carries English; hand this copy its own
+            // dictionary, loaded right after the script that declares i18n.
+            if (group.langFiles[lang]) {
+                const tagRe = new RegExp(`([ \t]*)<script src="/${group.js.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"></script>`);
+                if (!tagRe.test(out)) throw new Error(`no <script src="/${group.js}"> in ${pageRel}`);
+                out = out.replace(tagRe, (m, ind) => `${m}\n${ind}<script src="${group.langFiles[lang]}"></script>`);
+            }
 
             out = localiseJsonLd(out, canonicalPath, prefix, lang, d[titleKey], d[descKey]);
 

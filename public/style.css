@@ -122,15 +122,19 @@ code {
 .panel--blue { background: var(--accent); color: #fff; }
 .panel--tight { padding-block: clamp(3rem, 5vw, 5rem); }
 
+/* Hidden by sliding it up out of view, not sideways: an element parked at
+   left:-9999px becomes scrollable space on right-to-left pages, which let
+   the Arabic pages scroll ten thousand pixels into nothing. */
 .skip-link {
-    position: absolute; left: -9999px; top: 0; z-index: 300;
+    position: absolute; inset-inline-start: 0; top: 0; z-index: 300;
+    transform: translateY(-120%);
     background: var(--ink); color: var(--on-ink);
     padding: 0.7rem 1.1rem;
     border-radius: 0 0 0.6rem 0;
     font-weight: 700;
     text-decoration: none;
 }
-.skip-link:focus { left: 0; }
+.skip-link:focus { transform: none; }
 
 /* ---------------------------------------------------------
    3. Type
@@ -572,6 +576,72 @@ code {
     font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
     margin-left: 0.5rem;
 }
+
+/* Blog post cards — on the home page and the blog itself. Each
+   category owns one colour, used for its dot and its cover field. */
+:root {
+    --cat-tech: #477bff;
+    --cat-review: #41c8a6;
+    --cat-security: #ff6b4a;
+    --cat-news: #ffa1ce;
+}
+/* A post without a cover gets a flat colour field with its category's
+   initial, rather than a stock photo. */
+.post-card-media {
+    display: grid;
+    place-items: center;
+    background: var(--cat-news);
+}
+.post-card-media--tech { background: var(--cat-tech); }
+.post-card-media--review { background: var(--cat-review); }
+.post-card-media--security { background: var(--cat-security); }
+.post-card-media--news { background: var(--cat-news); }
+.post-card-mark {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(5rem, 12vw, 9rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #27262a;
+    opacity: 0.9;
+}
+
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.9rem;
+}
+.card-tag.post-meta { letter-spacing: 0.08em; }
+.post-cat {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--ink);
+    font-weight: 500;
+}
+.post-cat::before {
+    content: "";
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    border: 1.5px solid var(--ink);
+    background: var(--cat-news);
+}
+.post-cat--tech::before { background: var(--cat-tech); }
+.post-cat--review::before { background: var(--cat-review); }
+.post-cat--security::before { background: var(--cat-security); }
+
+.home-blog-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem 3rem;
+}
+.home-blog-head .section-sub { max-width: 58ch; }
+.home-blog .cards { grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
+
 
 /* ---------------------------------------------------------
    12. Product index

@@ -18,6 +18,7 @@ const i18n = {
         skip_link: "Skip to content",
 
         nav_home: "Home",
+        nav_blog: "Blog",
         nav_overview: "Overview",
         nav_towers: "Towers",
         nav_enemies: "Enemies",
@@ -40,6 +41,7 @@ const i18n = {
         btn_shots: "See how it plays",
         btn_policy: "Privacy policy",
         btn_contact: "Ask about a build",
+        hero_img_alt: "Iron Line — a fortified line on Sand Belt",
         hero_meta: "Application id <code>com.tdson.ironline</code> · landscape · English and Tiếng Việt · plays entirely offline.",
 
         stat_missions: "Battlefields across five terrains",
@@ -70,6 +72,7 @@ const i18n = {
         air_eyebrow: "Ground and air",
         air_title: "Fifteen ways in, <em>and only one road</em>.",
         air_sub: "Scouts, armoured hulls, shielded carriers and swarms follow the route you fortified. Drones, biplanes, jets and heavy bombers ignore it completely and fly straight at the core.",
+        air_img_alt: "Iron Line — a column caught at the first bend",
         air_1: "<strong>The road is only half the map.</strong> Five of the fifteen enemy types never touch it — they take the straight line to your core instead.",
         air_2: "<strong>Rockets cannot elevate.</strong> An all-Rocket wall holds the road perfectly and loses the sky, so the line has to stay balanced.",
         air_3: "<strong>They shoot back.</strong> Armoured hulls, serpents and bosses return fire on your emplacements, and bombers drop ordnance directly on top of them.",
@@ -79,6 +82,7 @@ const i18n = {
         pace_eyebrow: "Your pace",
         pace_title: "Call the wave, <em>or take the minute</em>.",
         pace_sub: "Nothing runs on a timer you do not control. Call a wave early for bonus credits when the line is ready, or run the battle at 1x, 2x or 3x once it is set. Pause at any point.",
+        pace_img_alt: "Iron Line — the tower card, showing range and upgrade cost",
         pace_1: "<strong>Early-call bonus.</strong> Every wave you summon ahead of schedule pays extra credits into the same budget you are building with.",
         pace_2: "<strong>Three speeds.</strong> Once the line holds itself, run it at double or triple time rather than watching it work.",
         pace_3: "<strong>Ranked out of three.</strong> Keep the core untouched to earn all three marks. Progress saves on the device, with no account and no sync.",
@@ -87,6 +91,7 @@ const i18n = {
         gal_eyebrow: "Screenshots",
         gal_title: "The real thing, <em>at native resolution</em>.",
         gal_sub: "Captured from the game as it runs, with no device frames and no added marketing copy.",
+        gal_img_alt: "Iron Line — the line",
 
         g_menu_title: "Main menu",
         g_menu_cap: "Twelve missions behind one button, with the terrain from the campaign running underneath.",
@@ -185,7 +190,17 @@ const i18n = {
 /* Languages offered in the picker, in order. English only: the picker
    hides itself when there is nothing to pick between. */
 const LANGS = [
-    { code: 'en', label: 'English' }
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' },
+    { code: 'zh', label: '中文' },
+    { code: 'hi', label: 'हिन्दी' },
+    { code: 'ar', label: 'العربية' },
+    { code: 'pt', label: 'Português' },
+    { code: 'fr', label: 'Français' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'ja', label: '日本語' },
+    { code: 'ko', label: '한국어' },
+    { code: 'ru', label: 'Русский' }
 ];
 const DEFAULT_LANG = 'en';
 const SHOT_DIR = '/assets/games/iron-line/';
@@ -209,25 +224,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSelects = [document.getElementById('lang-select'), document.getElementById('mobile-lang-select')].filter(Boolean);
     const supported = LANGS.map(l => l.code);
 
-    // A stored choice wins, then whatever the visitor picked on the landing
-    // page. Anything no longer offered falls back to English rather than
-    // painting a blank page.
-    const detectLang = () => {
-        // The URL wins: /es/… is the Spanish page whatever the browser
-        // or a previous visit would have preferred.
-        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
-        if (fromUrl) return fromUrl;
-        const own = localStorage.getItem('ironline-lang');
-        if (own && supported.includes(own)) return own;
-        const site = localStorage.getItem('lang');
-        if (site && supported.includes(site)) return site;
-        const prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
-        for (const pref of prefs) {
-            const base = String(pref).toLowerCase().split('-')[0];
-            if (supported.includes(base)) return base;
-        }
-        return DEFAULT_LANG;
-    };
+    // The URL names the language; see LangUrl.detect in /lang-url.js.
+    const detectLang = () => window.LangUrl ? window.LangUrl.detect(supported, DEFAULT_LANG) : DEFAULT_LANG;
 
     langSelects.forEach(sel => {
         const short = sel.dataset.display === 'code';
@@ -257,6 +255,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const value = t(lang, el.getAttribute('data-i18n-aria'));
             if (value) el.setAttribute('aria-label', value);
         });
+        document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+            const value = t(lang, el.getAttribute('data-i18n-alt'));
+            if (value) el.setAttribute('alt', value);
+        });
         document.title = t(lang, titleKey);
         if (metaDesc) metaDesc.setAttribute('content', t(lang, descKey));
         root.lang = lang;
@@ -266,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
         const lang = sel.value;
-        localStorage.setItem('ironline-lang', lang);
+        localStorage.setItem('lang', lang);
         // Each language is its own page now, so go there rather
         // than rewriting this one and leaving the URL lying.
         if (window.LangUrl) {

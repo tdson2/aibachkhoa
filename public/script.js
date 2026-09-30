@@ -6,6 +6,29 @@
    ========================================================= */
 const i18n = {
     en: {
+        nav_blog: "Blog",
+        tag_ori: "Peer-to-peer messenger",
+        ori_desc: "End-to-end encrypted chat that keeps working when the Internet does not, so you can still reach people nearby. No account, no phone number, no analytics.",
+        feat_ori_offline: "Works nearby even with no Internet connection",
+        feat_ori_e2e: "End-to-end encrypted, for Windows, Linux and Android",
+        action_ori: "Get OriMessenger",
+        latest_ori: "End-to-end encrypted chat that keeps working with people nearby, even when the Internet is down. Windows, Linux and Android.",
+        index_ori: "End-to-end encrypted chat that works nearby even without the Internet. No account, no phone number. Windows, Linux and Android.",
+        blog_eyebrow: "From the blog",
+        blog_title: "Technology, <em>explained plainly</em>.",
+        blog_sub: "Write-ups on the tools we build and use, honest reviews, and security alerts you can act on — each one with its sources.",
+        blog_cta: "Read the blog",
+        read_post: "Read the post",
+        cat_tech: "Technology",
+        cat_review: "Review",
+        cat_security: "Security alert",
+        cat_news: "News",
+        min_read: "{n} min read",
+        alt_bksafe_mac: "BKSafe running on macOS",
+        alt_bksafe_android: "BKSafe on Android",
+        alt_platform: "The CrewAI Platform canvas",
+        alt_genvideo: "GenVideo on the desktop",
+        alt_bksafe_temp: "BKSafe temperature screen on macOS",
         footer_games: "Games",
         action_castle: "Explore the game",
         badge_new: "New",
@@ -113,6 +136,29 @@ const i18n = {
         action_ironline: "Explore the game"
     },
     es: {
+        nav_blog: "Blog",
+        tag_ori: "Mensajería entre pares",
+        ori_desc: "Chat cifrado de extremo a extremo que sigue funcionando cuando Internet falla, para que puedas seguir hablando con quien tengas cerca. Sin cuenta, sin número de teléfono, sin analíticas.",
+        feat_ori_offline: "Funciona de cerca incluso sin conexión a Internet",
+        feat_ori_e2e: "Cifrado de extremo a extremo, para Windows, Linux y Android",
+        action_ori: "Descargar OriMessenger",
+        latest_ori: "Chat cifrado de extremo a extremo que sigue funcionando con quien tengas cerca, incluso cuando cae Internet. Windows, Linux y Android.",
+        index_ori: "Chat cifrado de extremo a extremo que funciona de cerca incluso sin Internet. Sin cuenta, sin número de teléfono. Windows, Linux y Android.",
+        blog_eyebrow: "Del blog",
+        blog_title: "Tecnología, <em>explicada con claridad</em>.",
+        blog_sub: "Artículos sobre las herramientas que creamos y usamos, reseñas honestas y alertas de seguridad con pasos concretos — cada uno con sus fuentes.",
+        blog_cta: "Leer el blog",
+        read_post: "Leer el artículo",
+        cat_tech: "Tecnología",
+        cat_review: "Reseña",
+        cat_security: "Alerta de seguridad",
+        cat_news: "Novedades",
+        min_read: "{n} min de lectura",
+        alt_bksafe_mac: "BKSafe funcionando en macOS",
+        alt_bksafe_android: "BKSafe en Android",
+        alt_platform: "El lienzo de CrewAI Platform",
+        alt_genvideo: "GenVideo en el escritorio",
+        alt_bksafe_temp: "Pantalla de temperatura de BKSafe en macOS",
         footer_games: "Juegos",
         action_castle: "Descubre el juego",
         badge_new: "Nuevo",
@@ -220,6 +266,29 @@ const i18n = {
         action_ironline: "Descubre el juego"
     },
     zh: {
+        nav_blog: "博客",
+        tag_ori: "点对点通讯",
+        ori_desc: "端到端加密的聊天应用，断网时依然能用，让你仍能联系身边的人。无需账号、无需手机号、不做任何统计分析。",
+        feat_ori_offline: "没有网络，也能与附近的人聊天",
+        feat_ori_e2e: "端到端加密，支持 Windows、Linux 和 Android",
+        action_ori: "获取 OriMessenger",
+        latest_ori: "端到端加密的聊天应用，即使断网也能与附近的人保持联系。支持 Windows、Linux 和 Android。",
+        index_ori: "端到端加密的聊天应用，没有互联网也能在附近使用。无需账号、无需手机号。支持 Windows、Linux 和 Android。",
+        blog_eyebrow: "来自博客",
+        blog_title: "科技，<em>讲得明明白白</em>。",
+        blog_sub: "介绍我们打造和使用的工具，给出诚实的评测，并发布你可以马上采取行动的安全警报——每一篇都注明来源。",
+        blog_cta: "阅读博客",
+        read_post: "阅读全文",
+        cat_tech: "科技",
+        cat_review: "评测",
+        cat_security: "安全警报",
+        cat_news: "新闻",
+        min_read: "阅读约 {n} 分钟",
+        alt_bksafe_mac: "在 macOS 上运行的 BKSafe",
+        alt_bksafe_android: "Android 版 BKSafe",
+        alt_platform: "CrewAI Platform 画布",
+        alt_genvideo: "桌面版 GenVideo",
+        alt_bksafe_temp: "macOS 版 BKSafe 的温度界面",
         footer_games: "游戏",
         action_castle: "了解这款游戏",
         badge_new: "新品",
@@ -327,6 +396,29 @@ const i18n = {
         action_ironline: "了解这款游戏"
     },
     hi: {
+        nav_blog: "ब्लॉग",
+        tag_ori: "पीयर-टू-पीयर मैसेंजर",
+        ori_desc: "एंड-टू-एंड एन्क्रिप्टेड चैट जो इंटरनेट बंद होने पर भी चलती रहती है, ताकि आप आस-पास के लोगों तक पहुँच सकें। न अकाउंट, न फ़ोन नंबर, न कोई एनालिटिक्स।",
+        feat_ori_offline: "इंटरनेट कनेक्शन के बिना भी आस-पास काम करता है",
+        feat_ori_e2e: "एंड-टू-एंड एन्क्रिप्टेड, Windows, Linux और Android के लिए",
+        action_ori: "OriMessenger पाएँ",
+        latest_ori: "एंड-टू-एंड एन्क्रिप्टेड चैट जो इंटरनेट बंद होने पर भी आस-पास के लोगों से जोड़े रखती है। Windows, Linux और Android।",
+        index_ori: "एंड-टू-एंड एन्क्रिप्टेड चैट जो इंटरनेट के बिना भी आस-पास काम करती है। न अकाउंट, न फ़ोन नंबर। Windows, Linux और Android।",
+        blog_eyebrow: "ब्लॉग से",
+        blog_title: "टेक्नोलॉजी, <em>सीधी-सरल भाषा में</em>।",
+        blog_sub: "हम जो टूल बनाते और इस्तेमाल करते हैं उन पर लेख, ईमानदार रिव्यू, और ऐसे सुरक्षा अलर्ट जिन पर आप तुरंत कदम उठा सकें — हर एक के साथ उसके स्रोत।",
+        blog_cta: "ब्लॉग पढ़ें",
+        read_post: "पोस्ट पढ़ें",
+        cat_tech: "टेक्नोलॉजी",
+        cat_review: "रिव्यू",
+        cat_security: "सुरक्षा अलर्ट",
+        cat_news: "समाचार",
+        min_read: "{n} मिनट में पढ़ें",
+        alt_bksafe_mac: "macOS पर चलता BKSafe",
+        alt_bksafe_android: "Android पर BKSafe",
+        alt_platform: "CrewAI Platform का कैनवास",
+        alt_genvideo: "डेस्कटॉप पर GenVideo",
+        alt_bksafe_temp: "macOS पर BKSafe की तापमान स्क्रीन",
         footer_games: "गेम",
         action_castle: "गेम देखें",
         badge_new: "नया",
@@ -434,6 +526,29 @@ const i18n = {
         action_ironline: "गेम देखें"
     },
     ar: {
+        nav_blog: "المدونة",
+        tag_ori: "مراسلة من نظير إلى نظير",
+        ori_desc: "دردشة مشفّرة من طرف إلى طرف تواصل العمل حين ينقطع الإنترنت، لتبقى قادرًا على التواصل مع من حولك. بلا حساب، وبلا رقم هاتف، وبلا تحليلات.",
+        feat_ori_offline: "تعمل مع من حولك حتى من دون اتصال بالإنترنت",
+        feat_ori_e2e: "مشفّرة من طرف إلى طرف، لأنظمة Windows وLinux وAndroid",
+        action_ori: "احصل على OriMessenger",
+        latest_ori: "دردشة مشفّرة من طرف إلى طرف تبقيك على اتصال بمن حولك حتى عند انقطاع الإنترنت. Windows وLinux وAndroid.",
+        index_ori: "دردشة مشفّرة من طرف إلى طرف تعمل مع من حولك حتى من دون إنترنت. بلا حساب وبلا رقم هاتف. Windows وLinux وAndroid.",
+        blog_eyebrow: "من المدونة",
+        blog_title: "التقنية، <em>بشرحٍ واضح</em>.",
+        blog_sub: "مقالات عن الأدوات التي نبنيها ونستخدمها، ومراجعات صادقة، وتنبيهات أمنية يمكنك التصرف بناءً عليها — كلٌّ منها مع مصادره.",
+        blog_cta: "اقرأ المدونة",
+        read_post: "اقرأ المقال",
+        cat_tech: "تقنية",
+        cat_review: "مراجعة",
+        cat_security: "تنبيه أمني",
+        cat_news: "أخبار",
+        min_read: "قراءة في {n} دقيقة",
+        alt_bksafe_mac: "BKSafe يعمل على macOS",
+        alt_bksafe_android: "BKSafe على Android",
+        alt_platform: "لوحة عمل CrewAI Platform",
+        alt_genvideo: "GenVideo على سطح المكتب",
+        alt_bksafe_temp: "شاشة درجة الحرارة في BKSafe على macOS",
         footer_games: "الألعاب",
         action_castle: "استكشف اللعبة",
         badge_new: "جديد",
@@ -541,6 +656,29 @@ const i18n = {
         action_ironline: "استكشف اللعبة"
     },
     pt: {
+        nav_blog: "Blog",
+        tag_ori: "Mensageiro ponto a ponto",
+        ori_desc: "Chat com criptografia de ponta a ponta que continua funcionando quando a Internet cai, para você ainda falar com quem está por perto. Sem conta, sem número de telefone, sem análises.",
+        feat_ori_offline: "Funciona por perto mesmo sem conexão com a Internet",
+        feat_ori_e2e: "Criptografia de ponta a ponta, para Windows, Linux e Android",
+        action_ori: "Baixar o OriMessenger",
+        latest_ori: "Chat com criptografia de ponta a ponta que mantém você em contato com quem está por perto, mesmo quando a Internet cai. Windows, Linux e Android.",
+        index_ori: "Chat com criptografia de ponta a ponta que funciona por perto mesmo sem Internet. Sem conta, sem número de telefone. Windows, Linux e Android.",
+        blog_eyebrow: "Do blog",
+        blog_title: "Tecnologia, <em>explicada sem rodeios</em>.",
+        blog_sub: "Textos sobre as ferramentas que criamos e usamos, análises honestas e alertas de segurança que dizem o que fazer — cada um com suas fontes.",
+        blog_cta: "Ler o blog",
+        read_post: "Ler o post",
+        cat_tech: "Tecnologia",
+        cat_review: "Análise",
+        cat_security: "Alerta de segurança",
+        cat_news: "Novidades",
+        min_read: "{n} min de leitura",
+        alt_bksafe_mac: "BKSafe rodando no macOS",
+        alt_bksafe_android: "BKSafe no Android",
+        alt_platform: "O canvas do CrewAI Platform",
+        alt_genvideo: "GenVideo no desktop",
+        alt_bksafe_temp: "Tela de temperatura do BKSafe no macOS",
         footer_games: "Jogos",
         action_castle: "Conheça o jogo",
         badge_new: "Novo",
@@ -648,6 +786,31 @@ const i18n = {
         action_ironline: "Conheça o jogo"
     },
     fr: {
+        nav_blog: "Blog",
+        tag_ori: "Messagerie pair à pair",
+        ori_desc: "Une messagerie chiffrée de bout en bout qui continue de fonctionner quand Internet tombe, pour rester en contact avec les personnes à proximité. Sans compte, sans numéro de téléphone, sans statistiques.",
+        feat_ori_offline: "Fonctionne à proximité, même sans connexion Internet",
+        feat_ori_e2e: "Chiffrée de bout en bout, pour Windows, Linux et Android",
+        action_ori: "Obtenir OriMessenger",
+        latest_ori: "Une messagerie chiffrée de bout en bout qui garde le contact avec les personnes à proximité, même quand Internet est coupé. Windows, Linux et Android.",
+        index_ori: "Messagerie chiffrée de bout en bout qui fonctionne à proximité, même sans Internet. Sans compte, sans numéro de téléphone. Windows, Linux et Android.",
+        blog_eyebrow: "Sur le blog",
+        blog_title: "La technologie, <em>expliquée simplement</em>.",
+        blog_sub: "Des articles sur les outils que nous créons et utilisons, des tests honnêtes et des alertes de sécurité sur lesquelles vous pouvez agir — chacun avec ses sources.",
+        blog_cta: "Lire le blog",
+        read_post: "Lire l'article",
+        cat_tech: "Technologie",
+        cat_review: "Test",
+        cat_security: "Alerte de sécurité",
+        cat_news: "Actualités",
+        min_read: "{n} min de lecture",
+        alt_bksafe_mac: "BKSafe sur macOS",
+        alt_bksafe_android: "BKSafe sur Android",
+        alt_platform: "Le canevas de CrewAI Platform",
+        alt_genvideo: "GenVideo sur ordinateur",
+        alt_bksafe_temp: "L'écran de température de BKSafe sur macOS",
+        feat_jemul_keys: "Un clavier de téléphone complet, à l'écran ou sur votre clavier",
+        action_jemul: "Découvrir l'app",
         footer_games: "Jeux",
         action_castle: "Découvrir le jeu",
         badge_new: "Nouveau",
@@ -753,6 +916,29 @@ const i18n = {
         action_ironline: "Découvrir le jeu"
     },
     de: {
+        nav_blog: "Blog",
+        tag_ori: "Peer-to-Peer-Messenger",
+        ori_desc: "Ende-zu-Ende-verschlüsselter Chat, der weiterläuft, wenn das Internet ausfällt — so erreichst du Menschen in deiner Nähe trotzdem. Kein Konto, keine Telefonnummer, keine Analyse.",
+        feat_ori_offline: "Funktioniert in der Nähe auch ohne Internetverbindung",
+        feat_ori_e2e: "Ende-zu-Ende-verschlüsselt, für Windows, Linux und Android",
+        action_ori: "OriMessenger holen",
+        latest_ori: "Ende-zu-Ende-verschlüsselter Chat, der auch bei Internetausfall mit Menschen in der Nähe funktioniert. Windows, Linux und Android.",
+        index_ori: "Ende-zu-Ende-verschlüsselter Chat, der in der Nähe auch ohne Internet funktioniert. Kein Konto, keine Telefonnummer. Windows, Linux und Android.",
+        blog_eyebrow: "Aus dem Blog",
+        blog_title: "Technik, <em>verständlich erklärt</em>.",
+        blog_sub: "Beiträge über die Werkzeuge, die wir bauen und nutzen, ehrliche Tests und Sicherheitswarnungen, nach denen du handeln kannst — jeweils mit Quellen.",
+        blog_cta: "Zum Blog",
+        read_post: "Beitrag lesen",
+        cat_tech: "Technik",
+        cat_review: "Test",
+        cat_security: "Sicherheitswarnung",
+        cat_news: "News",
+        min_read: "{n} Min. Lesezeit",
+        alt_bksafe_mac: "BKSafe unter macOS",
+        alt_bksafe_android: "BKSafe auf Android",
+        alt_platform: "Die Arbeitsfläche von CrewAI Platform",
+        alt_genvideo: "GenVideo auf dem Desktop",
+        alt_bksafe_temp: "Temperaturansicht von BKSafe unter macOS",
         footer_games: "Spiele",
         action_castle: "Das Spiel ansehen",
         badge_new: "Neu",
@@ -860,6 +1046,29 @@ const i18n = {
         action_ironline: "Das Spiel ansehen"
     },
     ja: {
+        nav_blog: "ブログ",
+        tag_ori: "P2P メッセンジャー",
+        ori_desc: "インターネットが使えないときも動き続ける、エンドツーエンド暗号化チャット。近くにいる人とはそのまま連絡が取れます。アカウント不要、電話番号不要、解析なし。",
+        feat_ori_offline: "インターネットに接続できなくても近くの人と使える",
+        feat_ori_e2e: "エンドツーエンド暗号化、Windows・Linux・Android に対応",
+        action_ori: "OriMessenger を入手",
+        latest_ori: "インターネットが止まっても近くの人とやり取りを続けられる、エンドツーエンド暗号化チャット。Windows・Linux・Android 対応。",
+        index_ori: "インターネットがなくても近くで使える、エンドツーエンド暗号化チャット。アカウントも電話番号も不要。Windows・Linux・Android 対応。",
+        blog_eyebrow: "ブログより",
+        blog_title: "テクノロジーを、<em>わかりやすく</em>。",
+        blog_sub: "私たちが作り、使っているツールの解説、正直なレビュー、そしてすぐに行動に移せるセキュリティ警告——どれも出典つきでお届けします。",
+        blog_cta: "ブログを読む",
+        read_post: "記事を読む",
+        cat_tech: "テクノロジー",
+        cat_review: "レビュー",
+        cat_security: "セキュリティ警告",
+        cat_news: "お知らせ",
+        min_read: "{n} 分で読めます",
+        alt_bksafe_mac: "macOS で動作する BKSafe",
+        alt_bksafe_android: "Android 版 BKSafe",
+        alt_platform: "CrewAI Platform のキャンバス",
+        alt_genvideo: "デスクトップ版 GenVideo",
+        alt_bksafe_temp: "macOS 版 BKSafe の温度画面",
         footer_games: "ゲーム",
         action_castle: "ゲームを見る",
         badge_new: "新着",
@@ -967,6 +1176,29 @@ const i18n = {
         action_ironline: "ゲームを見る"
     },
     ko: {
+        nav_blog: "블로그",
+        tag_ori: "P2P 메신저",
+        ori_desc: "인터넷이 끊겨도 계속 작동하는 종단 간 암호화 채팅으로, 가까이 있는 사람과 계속 연락할 수 있습니다. 계정도, 전화번호도, 분석 도구도 없습니다.",
+        feat_ori_offline: "인터넷 연결 없이도 가까운 사람과 사용 가능",
+        feat_ori_e2e: "종단 간 암호화, Windows·Linux·Android 지원",
+        action_ori: "OriMessenger 받기",
+        latest_ori: "인터넷이 끊겨도 가까운 사람과 대화를 이어 주는 종단 간 암호화 채팅. Windows, Linux, Android.",
+        index_ori: "인터넷 없이도 가까운 곳에서 작동하는 종단 간 암호화 채팅. 계정도 전화번호도 필요 없습니다. Windows, Linux, Android.",
+        blog_eyebrow: "블로그에서",
+        blog_title: "기술을, <em>쉽게 풀어서</em>.",
+        blog_sub: "우리가 만들고 쓰는 도구 이야기, 솔직한 리뷰, 바로 행동에 옮길 수 있는 보안 경보 — 모두 출처와 함께 전합니다.",
+        blog_cta: "블로그 읽기",
+        read_post: "글 읽기",
+        cat_tech: "기술",
+        cat_review: "리뷰",
+        cat_security: "보안 경보",
+        cat_news: "소식",
+        min_read: "{n}분 분량",
+        alt_bksafe_mac: "macOS에서 실행 중인 BKSafe",
+        alt_bksafe_android: "Android용 BKSafe",
+        alt_platform: "CrewAI Platform 캔버스",
+        alt_genvideo: "데스크톱의 GenVideo",
+        alt_bksafe_temp: "macOS용 BKSafe의 온도 화면",
         footer_games: "게임",
         action_castle: "게임 보기",
         badge_new: "신규",
@@ -1074,6 +1306,29 @@ const i18n = {
         action_ironline: "게임 보기"
     },
     ru: {
+        nav_blog: "Блог",
+        tag_ori: "P2P-мессенджер",
+        ori_desc: "Чат со сквозным шифрованием, который продолжает работать, когда пропадает интернет, — чтобы вы могли связаться с людьми поблизости. Без аккаунта, без номера телефона, без аналитики.",
+        feat_ori_offline: "Работает поблизости даже без подключения к интернету",
+        feat_ori_e2e: "Сквозное шифрование, для Windows, Linux и Android",
+        action_ori: "Скачать OriMessenger",
+        latest_ori: "Чат со сквозным шифрованием, который связывает с людьми поблизости, даже когда интернет недоступен. Windows, Linux и Android.",
+        index_ori: "Чат со сквозным шифрованием, работающий поблизости даже без интернета. Без аккаунта и номера телефона. Windows, Linux и Android.",
+        blog_eyebrow: "Из блога",
+        blog_title: "Технологии <em>простым языком</em>.",
+        blog_sub: "Статьи об инструментах, которые мы создаём и используем, честные обзоры и предупреждения о безопасности, по которым можно действовать, — всё со ссылками на источники.",
+        blog_cta: "Читать блог",
+        read_post: "Читать статью",
+        cat_tech: "Технологии",
+        cat_review: "Обзор",
+        cat_security: "Безопасность",
+        cat_news: "Новости",
+        min_read: "{n} мин чтения",
+        alt_bksafe_mac: "BKSafe на macOS",
+        alt_bksafe_android: "BKSafe на Android",
+        alt_platform: "Холст CrewAI Platform",
+        alt_genvideo: "GenVideo на компьютере",
+        alt_bksafe_temp: "Экран температуры BKSafe на macOS",
         footer_games: "Игры",
         action_castle: "Посмотреть игру",
         badge_new: "Новое",
@@ -1218,20 +1473,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSelects = [document.getElementById('lang-select'), document.getElementById('mobile-lang-select')].filter(Boolean);
     const supported = LANGS.map(l => l.code);
 
-    const detectLang = () => {
-        // The URL wins: /es/… is the Spanish page whatever the browser
-        // or a previous visit would have preferred.
-        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
-        if (fromUrl) return fromUrl;
-        const saved = localStorage.getItem('lang');
-        if (saved && supported.includes(saved)) return saved;
-        const prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
-        for (const pref of prefs) {
-            const base = String(pref).toLowerCase().split('-')[0];
-            if (supported.includes(base)) return base;
-        }
-        return DEFAULT_LANG;
-    };
+    // The URL names the language; see LangUrl.detect in /lang-url.js.
+    const detectLang = () => window.LangUrl ? window.LangUrl.detect(supported, DEFAULT_LANG) : DEFAULT_LANG;
 
     // Fill both pickers: full names on desktop, short codes in the mobile bar.
     langSelects.forEach(sel => {
@@ -1263,6 +1506,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentLang = detectLang();
     updateLanguage(currentLang);
+
+    // ---------- Blog cards: dates and reading time in the page's language ----------
+    let dateFmt = null;
+    try {
+        dateFmt = new Intl.DateTimeFormat(currentLang === 'zh' ? 'zh-CN' : currentLang,
+            { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+    } catch (e) { /* old browser: keep the English date */ }
+    document.querySelectorAll('.home-blog time[datetime]').forEach(el => {
+        const d = new Date(el.getAttribute('datetime') + 'T00:00:00Z');
+        if (dateFmt && !isNaN(d)) el.textContent = dateFmt.format(d);
+    });
+    document.querySelectorAll('.home-blog .post-read[data-minutes]').forEach(el => {
+        el.textContent = t(currentLang, 'min_read').replace('{n}', el.dataset.minutes);
+    });
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
         const lang = sel.value;

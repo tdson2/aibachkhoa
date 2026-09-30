@@ -15,6 +15,7 @@ const i18n = {
         /* ---------- shared chrome ---------- */
         skip_link: "Skip to content",
         nav_home: "Home",
+        nav_blog: "Blog",
         nav_overview: "Overview",
         nav_how: "How it works",
         nav_desktop: "Desktop",
@@ -320,7 +321,17 @@ const i18n = {
 };
 
 const LANGS = [
-    { code: 'en', label: 'English' }
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' },
+    { code: 'zh', label: '中文' },
+    { code: 'hi', label: 'हिन्दी' },
+    { code: 'ar', label: 'العربية' },
+    { code: 'pt', label: 'Português' },
+    { code: 'fr', label: 'Français' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'ja', label: '日本語' },
+    { code: 'ko', label: '한국어' },
+    { code: 'ru', label: 'Русский' }
 ];
 const DEFAULT_LANG = 'en';
 
@@ -342,19 +353,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSelects = [document.getElementById('lang-select'), document.getElementById('mobile-lang-select')].filter(Boolean);
     const supported = LANGS.map(l => l.code);
 
-    // A stored choice wins, then whatever the visitor picked on the landing
-    // page. Anything no longer offered falls through to the default.
-    const detectLang = () => {
-        // The URL wins: /es/… is the Spanish page whatever the browser
-        // or a previous visit would have preferred.
-        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
-        if (fromUrl) return fromUrl;
-        const saved = localStorage.getItem('genvideo-lang');
-        if (saved && supported.includes(saved)) return saved;
-        const site = localStorage.getItem('lang');
-        if (site && supported.includes(site)) return site;
-        return DEFAULT_LANG;
-    };
+    // The URL names the language; see LangUrl.detect in /lang-url.js.
+    const detectLang = () => window.LangUrl ? window.LangUrl.detect(supported, DEFAULT_LANG) : DEFAULT_LANG;
 
     langSelects.forEach(sel => {
         // Nothing to choose between while only one language is offered.
@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
         const lang = sel.value;
-        localStorage.setItem('genvideo-lang', lang);
+        localStorage.setItem('lang', lang);
         // Each language is its own page now, so go there rather
         // than rewriting this one and leaving the URL lying.
         if (window.LangUrl) {

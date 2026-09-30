@@ -200,7 +200,7 @@ let count = 0;
             name: 'AIBachKhoa',
             description: descOf(html),
             publisher: { '@id': ORG['@id'] },
-            inLanguage: ['en', 'vi', 'es', 'zh', 'hi', 'ar', 'pt', 'fr', 'de', 'ja', 'ko', 'ru']
+            inLanguage: ['en', 'es', 'zh', 'hi', 'ar', 'pt', 'fr', 'de', 'ja', 'ko', 'ru']
         }
     ]);
     count++;

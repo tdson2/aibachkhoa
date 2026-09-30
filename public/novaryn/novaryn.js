@@ -18,6 +18,7 @@ const i18n = {
         skip_link: "Skip to content",
 
         nav_home: "Home",
+        nav_blog: "Blog",
         nav_overview: "Overview",
         nav_loop: "The run",
         nav_gems: "Power-ups",
@@ -32,6 +33,7 @@ const i18n = {
         btn_shots: "See how it plays",
         btn_policy: "Read the privacy policy",
         btn_contact: "Contact us",
+        alt_hero_phone: "Novaryn on a phone, part-way through a run",
         hero_meta: "Application id <code>com.tdson.novaryn</code> · portrait, Android 7.0 and up · rated Everyone, with in-game purchases.",
 
 
@@ -51,6 +53,7 @@ const i18n = {
         boss_title: "Sooner or later, <em>something with a name</em>.",
         boss_sub: "Formations give way to a single ship that holds its ground, takes real punishment and attacks in shapes you have to read rather than out-shoot. Each fights like itself, and learning one is learning it for good.",
         boss_read_t: "No two of them open the same way",
+        alt_boss: "A boss holding position above a curtain of enemy fire in Novaryn",
         boss_read_d: "Each one has its own way of filling the screen, and its own tell before it does. Which is as much as is worth saying here — the rest is better met than read about.",
 
         gem_eyebrow: "Power-ups",
@@ -82,6 +85,7 @@ const i18n = {
         gal_eyebrow: "Screenshots",
         gal_title: "Straight captures, <em>no mock-ups</em>.",
         gal_sub: "Every frame comes straight off a phone, exactly as the game draws it — hand-made pixel art, start to finish.",
+        gal_img_alt: "Novaryn screenshot",
         s1_title: "The title screen",
         s1_cap: "Start, shop, settings — and the HUD already showing behind the panel, so the first thing you see is the thing you will be reading all run.",
         s2_title: "Into the first formation",
@@ -272,6 +276,12 @@ const i18n = {
         ios_legal_terms: "Terms of Use (EULA)",
         ios_shots_eyebrow: "Screenshots",
         ios_shots_title: "What a run looks like",
+        ios_alt_s1: "An early wave of enemy formations in Novaryn",
+        ios_alt_s2: "The ship firing through a dense formation",
+        ios_alt_s3: "A power-up dropping mid-fight",
+        ios_alt_s4: "A boss holding position with its health bar across the top",
+        ios_alt_s5: "The shop, with ship skins and the Novaryn Pro subscription",
+        ios_alt_s6: "The local high-score table",
         ios_support_eyebrow: "Support",
         ios_support_title: "A person answers this address",
         ios_support_sub: "Questions, a bug, a purchase that did not arrive — write to us. We reply within two working days, in English or Vietnamese.",
@@ -280,7 +290,17 @@ const i18n = {
 };
 
 const LANGS = [
-    { code: 'en', label: 'English' }
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' },
+    { code: 'zh', label: '中文' },
+    { code: 'hi', label: 'हिन्दी' },
+    { code: 'ar', label: 'العربية' },
+    { code: 'pt', label: 'Português' },
+    { code: 'fr', label: 'Français' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'ja', label: '日本語' },
+    { code: 'ko', label: '한국어' },
+    { code: 'ru', label: 'Русский' }
 ];
 const DEFAULT_LANG = 'en';
 const SHOT_DIR = '/assets/games/novaryn/';
@@ -304,25 +324,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSelects = [document.getElementById('lang-select'), document.getElementById('mobile-lang-select')].filter(Boolean);
     const supported = LANGS.map(l => l.code);
 
-    // A stored choice wins, then whatever the visitor picked on the landing
-    // page. Anything no longer offered — a 'vi' left over from before it was
-    // hidden — falls back to English rather than painting a blank page.
-    const detectLang = () => {
-        // The URL wins: /es/… is the Spanish page whatever the browser
-        // or a previous visit would have preferred.
-        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
-        if (fromUrl) return fromUrl;
-        const own = localStorage.getItem('novaryn-lang');
-        if (own && supported.includes(own)) return own;
-        const site = localStorage.getItem('lang');
-        if (site && supported.includes(site)) return site;
-        const prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
-        for (const pref of prefs) {
-            const base = String(pref).toLowerCase().split('-')[0];
-            if (supported.includes(base)) return base;
-        }
-        return DEFAULT_LANG;
-    };
+    // The URL names the language; see LangUrl.detect in /lang-url.js.
+    const detectLang = () => window.LangUrl ? window.LangUrl.detect(supported, DEFAULT_LANG) : DEFAULT_LANG;
 
     langSelects.forEach(sel => {
         const short = sel.dataset.display === 'code';
@@ -361,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
         const lang = sel.value;
-        localStorage.setItem('novaryn-lang', lang);
+        localStorage.setItem('lang', lang);
         // Each language is its own page now, so go there rather
         // than rewriting this one and leaving the URL lying.
         if (window.LangUrl) {

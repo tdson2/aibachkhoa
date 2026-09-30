@@ -13,6 +13,18 @@
     <title>Privacy Policy — OriMessenger | AIBachKhoa</title>
     <meta name="description" content="The OriMessenger privacy policy: what the app stores on your device, what the relay server does and does not see, and the three network paths a message can take.">
     <link rel="canonical" href="https://aibachkhoa.com/orimessenger/policy">
+    <link rel="alternate" hreflang="en" href="https://aibachkhoa.com/orimessenger/policy">
+    <link rel="alternate" hreflang="es" href="https://aibachkhoa.com/es/orimessenger/policy">
+    <link rel="alternate" hreflang="zh" href="https://aibachkhoa.com/zh/orimessenger/policy">
+    <link rel="alternate" hreflang="hi" href="https://aibachkhoa.com/hi/orimessenger/policy">
+    <link rel="alternate" hreflang="ar" href="https://aibachkhoa.com/ar/orimessenger/policy">
+    <link rel="alternate" hreflang="pt" href="https://aibachkhoa.com/pt/orimessenger/policy">
+    <link rel="alternate" hreflang="fr" href="https://aibachkhoa.com/fr/orimessenger/policy">
+    <link rel="alternate" hreflang="de" href="https://aibachkhoa.com/de/orimessenger/policy">
+    <link rel="alternate" hreflang="ja" href="https://aibachkhoa.com/ja/orimessenger/policy">
+    <link rel="alternate" hreflang="ko" href="https://aibachkhoa.com/ko/orimessenger/policy">
+    <link rel="alternate" hreflang="ru" href="https://aibachkhoa.com/ru/orimessenger/policy">
+    <link rel="alternate" hreflang="x-default" href="https://aibachkhoa.com/orimessenger/policy">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="AIBachKhoa">
     <meta property="og:title" content="Privacy Policy — OriMessenger">
@@ -81,9 +93,9 @@
       code { background: rgba(99,102,241,.1); padding: .1rem .35rem; border-radius: 4px; font-family: 'DM Mono', monospace; font-size: .9em; }
     </style>
 </head>
-<body class="page-product">
+<body class="page-product" data-title-key="pol_page_title" data-desc-key="pol_meta_desc">
 
-    <a href="#policy" class="skip-link">Skip to content</a>
+    <a href="#policy" class="skip-link" data-i18n="skip_link">Skip to content</a>
 
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
@@ -91,16 +103,19 @@
                 <img src="/assets/logo.png" alt="" class="logo-img" width="30" height="30"><span class="logo-word">AIBachKhoa</span>
             </a>
             <div class="nav-links" id="nav-links">
-                <a href="/" class="nav-link">Home</a>
-                <a href="/orimessenger" class="nav-link">Back to product</a>
+                <a href="/" class="nav-link" data-i18n="nav_home">Home</a>
+                <a href="/blog" class="nav-link" data-i18n="nav_blog">Blog</a>
+                <a href="/orimessenger" class="nav-link" data-i18n="nav_back">Back to product</a>
                 <span class="nav-divider" aria-hidden="true"></span>
-                <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+                <select id="lang-select" class="lang-select" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
                     <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
                     <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
                 </button>
             </div>
             <div class="mobile-controls">
-                <button id="mobile-theme-toggle" class="icon-btn" aria-label="Toggle theme">
+                <select id="mobile-lang-select" class="lang-select lang-select--compact" data-display="code" data-i18n-aria="aria_lang" aria-label="Change language"></select>
+                <button id="mobile-theme-toggle" class="icon-btn" data-i18n-aria="aria_theme" aria-label="Toggle theme">
                     <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg>
                     <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.5 13.4A8 8 0 0 1 10.6 3.5 8 8 0 1 0 20.5 13.4z"/></svg>
                 </button>
@@ -111,207 +126,207 @@
     <main class="om-pol" id="policy">
         <div class="container">
             <div class="om-pol-head">
-                <p class="eyebrow">Legal</p>
-                <h1 class="section-title">Privacy Policy</h1>
-                <p class="section-sub">OriMessenger &mdash; for Windows, macOS, Linux, Android and iOS.</p>
-                <p class="om-stamp">Last updated: 26 September 2026</p>
+                <p class="eyebrow" data-i18n="pol_eyebrow">Legal</p>
+                <h1 class="section-title" data-i18n="pol_title">Privacy Policy</h1>
+                <p class="section-sub" data-i18n="pol_sub">OriMessenger &mdash; for Windows, macOS, Linux, Android and iOS.</p>
+                <p class="om-stamp" data-i18n="pol_updated">Last updated: 26 September 2026</p>
             </div>
 
-            <p><strong>Short version.</strong> OriMessenger has no account and no phone number. Every message body, avatar and attachment is encrypted end to end between the two devices. Where the app has to reach the Internet, our relay server carries encrypted messages it cannot open &mdash; but it does see <em>who sent it to whom, and when</em>, because it has to route the message. Two things are deliberately <strong>not</strong> secret: your chosen display name and status text are readable by any nearby device running OriMessenger, and the relay retains delivery metadata for up to 30 days. Both are explained below.</p>
+            <p data-i18n="pol_short"><strong>Short version.</strong> OriMessenger has no account and no phone number. Every message body, avatar and attachment is encrypted end to end between the two devices. Where the app has to reach the Internet, our relay server carries encrypted messages it cannot open &mdash; but it does see <em>who sent it to whom, and when</em>, because it has to route the message. Two things are deliberately <strong>not</strong> secret: your chosen display name and status text are readable by any nearby device running OriMessenger, and the relay retains delivery metadata for up to 30 days. Both are explained below.</p>
 
-            <nav class="om-toc" aria-label="On this page">
-                <h2>On this page</h2>
+            <nav class="om-toc" data-i18n-aria="pol_toc" aria-label="On this page">
+                <h2 data-i18n="pol_toc">On this page</h2>
                 <ol>
-                    <li><a href="#who">Who publishes this app</a></li>
-                    <li><a href="#device">What is stored on the device</a></li>
-                    <li><a href="#paths">The three network paths a message can take</a></li>
-                    <li><a href="#nearby">What nearby devices can see</a></li>
-                    <li><a href="#relay">What the relay server sees</a></li>
-                    <li><a href="#collect">What we collect, in categories</a></li>
-                    <li><a href="#perm">Permissions the app asks for, and why</a></li>
-                    <li><a href="#share">Sharing with third parties</a></li>
-                    <li><a href="#retention">Retention and deletion</a></li>
-                    <li><a href="#children">Children's privacy</a></li>
-                    <li><a href="#rights">Your rights</a></li>
-                    <li><a href="#security">Security</a></li>
-                    <li><a href="#changes">Changes to this policy</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#who" data-i18n="pol_who_h">Who publishes this app</a></li>
+                    <li><a href="#device" data-i18n="pol_device_h">What is stored on the device</a></li>
+                    <li><a href="#paths" data-i18n="pol_paths_h">The three network paths a message can take</a></li>
+                    <li><a href="#nearby" data-i18n="pol_nearby_h">What nearby devices can see</a></li>
+                    <li><a href="#relay" data-i18n="pol_relay_h">What the relay server sees</a></li>
+                    <li><a href="#collect" data-i18n="pol_collect_h">What we collect, in categories</a></li>
+                    <li><a href="#perm" data-i18n="pol_perm_h">Permissions the app asks for, and why</a></li>
+                    <li><a href="#share" data-i18n="pol_share_h">Sharing with third parties</a></li>
+                    <li><a href="#retention" data-i18n="pol_retention_h">Retention and deletion</a></li>
+                    <li><a href="#children" data-i18n="pol_children_h">Children's privacy</a></li>
+                    <li><a href="#rights" data-i18n="pol_rights_h">Your rights</a></li>
+                    <li><a href="#security" data-i18n="pol_security_h">Security</a></li>
+                    <li><a href="#changes" data-i18n="pol_changes_h">Changes to this policy</a></li>
+                    <li><a href="#contact" data-i18n="footer_contact">Contact</a></li>
                 </ol>
             </nav>
 
-            <h2 id="who">Who publishes this app</h2>
-            <p>OriMessenger is published by <strong>AIBachKhoa</strong> (Son Tran), based in Hanoi, Vietnam. Contact details are at the bottom of the page.</p>
+            <h2 id="who" data-i18n="pol_who_h">Who publishes this app</h2>
+            <p data-i18n="pol_who_p">OriMessenger is published by <strong>AIBachKhoa</strong> (Son Tran), based in Hanoi, Vietnam. Contact details are at the bottom of the page.</p>
 
-            <h2 id="device">What is stored on the device</h2>
-            <p>On the first launch the app creates your identity on the device: a set of encryption keys, used to protect your messages and to prove to your contacts that they really came from you, and your 16-character user ID. The secret parts never leave your device. Everything below is kept in the app's own private data folder:</p>
+            <h2 id="device" data-i18n="pol_device_h">What is stored on the device</h2>
+            <p data-i18n="pol_device_p">On the first launch the app creates your identity on the device: a set of encryption keys, used to protect your messages and to prove to your contacts that they really came from you, and your 16-character user ID. The secret parts never leave your device. Everything below is kept in the app's own private data folder:</p>
             <div style="max-width: 780px; overflow-x: auto;">
                 <table class="om-tbl">
-                    <thead><tr><th>Platform</th><th>Where it is kept</th></tr></thead>
+                    <thead><tr><th data-i18n="pol_th_platform">Platform</th><th data-i18n="pol_th_where">Where it is kept</th></tr></thead>
                     <tbody>
-                        <tr><td>Windows</td><td>The app's data folder inside your Windows user profile.</td></tr>
-                        <tr><td>macOS</td><td>The app's data folder inside your macOS user account.</td></tr>
-                        <tr><td>Linux</td><td>The app's data folder inside your home directory.</td></tr>
-                        <tr><td>Android</td><td>The app's private storage. It is excluded from Android cloud backup, so it is not copied to Google Drive.</td></tr>
-                        <tr><td>iOS</td><td>The app's private storage &mdash; chat history and keys are never exposed through the Files app or iTunes file sharing.</td></tr>
+                        <tr><td>Windows</td><td data-i18n="pol_where_win">The app's data folder inside your Windows user profile.</td></tr>
+                        <tr><td>macOS</td><td data-i18n="pol_where_mac">The app's data folder inside your macOS user account.</td></tr>
+                        <tr><td>Linux</td><td data-i18n="pol_where_linux">The app's data folder inside your home directory.</td></tr>
+                        <tr><td>Android</td><td data-i18n="pol_where_android">The app's private storage. It is excluded from Android cloud backup, so it is not copied to Google Drive.</td></tr>
+                        <tr><td>iOS</td><td data-i18n="pol_where_ios">The app's private storage &mdash; chat history and keys are never exposed through the Files app or iTunes file sharing.</td></tr>
                     </tbody>
                 </table>
             </div>
             <ul>
-                <li>Your identity keys. The secret part never leaves the device.</li>
-                <li>Your chosen display name, status text, avatar colour and background.</li>
-                <li>Your friend list, blocked list, and any pending friend requests.</li>
-                <li>The chat history and the attachments you sent or received.</li>
-                <li>The encryption keys for each of your conversations.</li>
-                <li>App preferences: language, light/dark mode, sending channel default.</li>
+                <li data-i18n="pol_dev_li1">Your identity keys. The secret part never leaves the device.</li>
+                <li data-i18n="pol_dev_li2">Your chosen display name, status text, avatar colour and background.</li>
+                <li data-i18n="pol_dev_li3">Your friend list, blocked list, and any pending friend requests.</li>
+                <li data-i18n="pol_dev_li4">The chat history and the attachments you sent or received.</li>
+                <li data-i18n="pol_dev_li5">The encryption keys for each of your conversations.</li>
+                <li data-i18n="pol_dev_li6">App preferences: language, light/dark mode, sending channel default.</li>
             </ul>
-            <p>Uninstalling the app or clearing its data removes all of the above. There is no cloud backup that we control.</p>
+            <p data-i18n="pol_dev_uninstall">Uninstalling the app or clearing its data removes all of the above. There is no cloud backup that we control.</p>
             <div class="om-note">
-                <p><strong>Be clear about at-rest protection.</strong> Your chat history and private keys are stored unencrypted in the app's data folder. The app does <em>not</em> add a passphrase or a second layer of encryption on top. They are protected by your operating system: the app sandbox on Android and iOS, your user account and full-disk encryption (FileVault, BitLocker, LUKS) on desktop. Anyone who can read files as your user, on an unlocked device, can read your chat history. If that matters to you, use full-disk encryption and a device passcode.</p>
+                <p data-i18n="pol_dev_note"><strong>Be clear about at-rest protection.</strong> Your chat history and private keys are stored unencrypted in the app's data folder. The app does <em>not</em> add a passphrase or a second layer of encryption on top. They are protected by your operating system: the app sandbox on Android and iOS, your user account and full-disk encryption (FileVault, BitLocker, LUKS) on desktop. Anyone who can read files as your user, on an unlocked device, can read your chat history. If that matters to you, use full-disk encryption and a device passcode.</p>
             </div>
 
-            <h2 id="paths">The three network paths a message can take</h2>
-            <p>OriMessenger tries paths in this order and stops at the first one that works:</p>
+            <h2 id="paths" data-i18n="pol_paths_h">The three network paths a message can take</h2>
+            <p data-i18n="pol_paths_p">OriMessenger tries paths in this order and stops at the first one that works:</p>
             <div style="max-width: 780px; overflow-x: auto;">
                 <table class="om-tbl">
                     <thead>
-                        <tr><th>Path</th><th>What travels, and to where</th></tr>
+                        <tr><th data-i18n="pol_th_path">Path</th><th data-i18n="pol_th_travels">What travels, and to where</th></tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>Bluetooth</strong></td>
-                            <td>The device makes itself discoverable over Bluetooth and looks for other OriMessenger devices nearby. Messages go directly, device to device &mdash; no cell tower, no router, nothing leaves your immediate area. Note that the device also publishes a small public profile so others can find it: see <a href="#nearby">what nearby devices can see</a>.</td>
+                            <td data-i18n="pol_path_bt">The device makes itself discoverable over Bluetooth and looks for other OriMessenger devices nearby. Messages go directly, device to device &mdash; no cell tower, no router, nothing leaves your immediate area. Note that the device also publishes a small public profile so others can find it: see <a href="#nearby">what nearby devices can see</a>.</td>
                         </tr>
                         <tr>
                             <td><strong>Wi-Fi / LAN</strong></td>
-                            <td>Devices on the same local network announce themselves to each other, then connect directly. Traffic stays inside the local network and works even when the Internet is blocked. These announcements are visible to every device on the network: see <a href="#nearby">what nearby devices can see</a>.</td>
+                            <td data-i18n="pol_path_lan">Devices on the same local network announce themselves to each other, then connect directly. Traffic stays inside the local network and works even when the Internet is blocked. These announcements are visible to every device on the network: see <a href="#nearby">what nearby devices can see</a>.</td>
                         </tr>
                         <tr>
-                            <td><strong>Internet relay</strong></td>
-                            <td>Only when the two above have failed. The device opens an encrypted connection to the relay server operated by AIBachKhoa and hands over the encrypted message, addressed to the recipient's ID. <a href="#relay">What the relay server sees</a> describes exactly what it keeps.</td>
+                            <td data-i18n="pol_path_relay_h"><strong>Internet relay</strong></td>
+                            <td data-i18n="pol_path_relay">Only when the two above have failed. The device opens an encrypted connection to the relay server operated by AIBachKhoa and hands over the encrypted message, addressed to the recipient's ID. <a href="#relay" data-i18n="pol_relay_h">What the relay server sees</a> describes exactly what it keeps.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <h2 id="nearby">What nearby devices can see</h2>
-            <p>This is the one part of OriMessenger that is <strong>not</strong> end-to-end encrypted, and it is worth understanding before you choose a display name.</p>
-            <p>To let people find each other without an account or a server, each device publishes a small public profile. It contains your <strong>user ID</strong>, your <strong>display name</strong>, your <strong>status text</strong>, your avatar colour, and your <strong>public</strong> keys. It never contains your private keys, your chat history, or your friend list.</p>
-            <p>That profile is readable by anyone in range who is looking for it &mdash; not only by your contacts:</p>
+            <h2 id="nearby" data-i18n="pol_nearby_h">What nearby devices can see</h2>
+            <p data-i18n="pol_nearby_p1">This is the one part of OriMessenger that is <strong>not</strong> end-to-end encrypted, and it is worth understanding before you choose a display name.</p>
+            <p data-i18n="pol_nearby_p2">To let people find each other without an account or a server, each device publishes a small public profile. It contains your <strong>user ID</strong>, your <strong>display name</strong>, your <strong>status text</strong>, your avatar colour, and your <strong>public</strong> keys. It never contains your private keys, your chat history, or your friend list.</p>
+            <p data-i18n="pol_nearby_p3">That profile is readable by anyone in range who is looking for it &mdash; not only by your contacts:</p>
             <ul>
-                <li><strong>Over Bluetooth</strong>, the profile is published so that any device in range may read it. There is no pairing step and no approval prompt, because a stranger has to be able to read your name in order to send you a friend request in the first place.</li>
-                <li><strong>Over Wi-Fi</strong>, the same profile is included in the announcements sent to every device on the local network.</li>
+                <li data-i18n="pol_nearby_bt"><strong>Over Bluetooth</strong>, the profile is published so that any device in range may read it. There is no pairing step and no approval prompt, because a stranger has to be able to read your name in order to send you a friend request in the first place.</li>
+                <li data-i18n="pol_nearby_wifi"><strong>Over Wi-Fi</strong>, the same profile is included in the announcements sent to every device on the local network.</li>
             </ul>
-            <p>The profile is signed with your identity, so nobody on your network can advertise <em>your</em> name attached to <em>their</em> address. But it is not secret. Practically:</p>
+            <p data-i18n="pol_nearby_p4">The profile is signed with your identity, so nobody on your network can advertise <em>your</em> name attached to <em>their</em> address. But it is not secret. Practically:</p>
             <ul>
-                <li>Anyone in the same caf&eacute;, office or classroom running OriMessenger can see the display name and status text you chose, and can tell that your device is present.</li>
-                <li>If you would rather not be visible, turn <strong>Nearby</strong> off in Settings. That stops you being discoverable over both Bluetooth and Wi-Fi; the Internet relay keeps working, so existing conversations still deliver.</li>
-                <li>Use a nickname rather than your legal name if you expect to be in public places. Your user ID does not reveal anything by itself, but the name you type is shown as you typed it.</li>
+                <li data-i18n="pol_nearby_li1">Anyone in the same caf&eacute;, office or classroom running OriMessenger can see the display name and status text you chose, and can tell that your device is present.</li>
+                <li data-i18n="pol_nearby_li2">If you would rather not be visible, turn <strong>Nearby</strong> off in Settings. That stops you being discoverable over both Bluetooth and Wi-Fi; the Internet relay keeps working, so existing conversations still deliver.</li>
+                <li data-i18n="pol_nearby_li3">Use a nickname rather than your legal name if you expect to be in public places. Your user ID does not reveal anything by itself, but the name you type is shown as you typed it.</li>
             </ul>
-            <p>Message contents are never part of this. Once two devices decide to talk, everything after the profile exchange is encrypted end to end.</p>
+            <p data-i18n="pol_nearby_p5">Message contents are never part of this. Once two devices decide to talk, everything after the profile exchange is encrypted end to end.</p>
 
-            <h2 id="relay">What the relay server sees</h2>
-            <p>The Internet relay holds messages until they can be delivered. Each device connects to it over an encrypted connection and proves that it owns its ID. When your device has a message for someone whose ID it knows, the relay stores a record containing:</p>
+            <h2 id="relay" data-i18n="pol_relay_h">What the relay server sees</h2>
+            <p data-i18n="pol_relay_p1">The Internet relay holds messages until they can be delivered. Each device connects to it over an encrypted connection and proves that it owns its ID. When your device has a message for someone whose ID it knows, the relay stores a record containing:</p>
             <ul>
-                <li>The <strong>recipient's user ID</strong> (16 characters).</li>
-                <li>The <strong>sender's user ID</strong> &mdash; that is, yours. The relay needs it to apply block lists and to let the recipient's device verify the signature.</li>
-                <li>A <strong>timestamp</strong>, used to expire the record.</li>
-                <li>The <strong>encrypted message</strong>, which only your device and the recipient's can open. This includes any attachment bytes and any human-readable metadata such as your name, avatar or status.</li>
-                <li>The <strong>network information</strong> that any Internet connection carries: your IP address and a temporary connection ID.</li>
+                <li data-i18n="pol_relay_li1">The <strong>recipient's user ID</strong> (16 characters).</li>
+                <li data-i18n="pol_relay_li2">The <strong>sender's user ID</strong> &mdash; that is, yours. The relay needs it to apply block lists and to let the recipient's device verify the signature.</li>
+                <li data-i18n="pol_relay_li3">A <strong>timestamp</strong>, used to expire the record.</li>
+                <li data-i18n="pol_relay_li4">The <strong>encrypted message</strong>, which only your device and the recipient's can open. This includes any attachment bytes and any human-readable metadata such as your name, avatar or status.</li>
+                <li data-i18n="pol_relay_li5">The <strong>network information</strong> that any Internet connection carries: your IP address and a temporary connection ID.</li>
             </ul>
-            <p>So the relay <strong>does</strong> learn delivery metadata: who sent a message to whom, when, and roughly how large it was. We cannot design that away while still delivering to devices that are offline. If that metadata matters to you, use OriMessenger over Bluetooth or Wi-Fi, where no server is involved at all.</p>
-            <p>The relay also keeps a <strong>block list</strong>: when you block someone, the pair (your ID, their ID) is stored server-side so the relay can refuse their messages before they ever reach your device. This list has no expiry; it is removed when you unblock the person, or on request.</p>
-            <p>The relay <strong>does not see</strong>:</p>
+            <p data-i18n="pol_relay_p2">So the relay <strong>does</strong> learn delivery metadata: who sent a message to whom, when, and roughly how large it was. We cannot design that away while still delivering to devices that are offline. If that metadata matters to you, use OriMessenger over Bluetooth or Wi-Fi, where no server is involved at all.</p>
+            <p data-i18n="pol_relay_p3">The relay also keeps a <strong>block list</strong>: when you block someone, the pair (your ID, their ID) is stored server-side so the relay can refuse their messages before they ever reach your device. This list has no expiry; it is removed when you unblock the person, or on request.</p>
+            <p data-i18n="pol_relay_p4">The relay <strong>does not see</strong>:</p>
             <ul>
-                <li>The message text or media contents. It has no key to decrypt them.</li>
-                <li>Your display name, avatar or status &mdash; those travel inside the encrypted message.</li>
-                <li>Your friend list, your pending requests, or anything you exchanged over Bluetooth or Wi-Fi. Those paths never touch the server.</li>
-                <li>Any phone number, email address, or third-party account. There is none associated with your ID.</li>
+                <li data-i18n="pol_relay_not1">The message text or media contents. It has no key to decrypt them.</li>
+                <li data-i18n="pol_relay_not2">Your display name, avatar or status &mdash; those travel inside the encrypted message.</li>
+                <li data-i18n="pol_relay_not3">Your friend list, your pending requests, or anything you exchanged over Bluetooth or Wi-Fi. Those paths never touch the server.</li>
+                <li data-i18n="pol_relay_not4">Any phone number, email address, or third-party account. There is none associated with your ID.</li>
             </ul>
-            <p>Stored messages are deleted the moment the recipient's device confirms receipt, or after 30 days, whichever comes first.</p>
+            <p data-i18n="pol_relay_p5">Stored messages are deleted the moment the recipient's device confirms receipt, or after 30 days, whichever comes first.</p>
 
-            <h2 id="collect">What we collect, in categories</h2>
-            <p>Mapped to the Google Play Data Safety format:</p>
+            <h2 id="collect" data-i18n="pol_collect_h">What we collect, in categories</h2>
+            <p data-i18n="pol_collect_p">Mapped to the Google Play Data Safety format:</p>
             <div style="max-width: 780px; overflow-x: auto;">
                 <table class="om-tbl">
                     <thead>
-                        <tr><th>Category</th><th>Collected?</th><th>Details</th></tr>
+                        <tr><th data-i18n="pol_th_category">Category</th><th data-i18n="pol_th_collected">Collected?</th><th data-i18n="pol_th_details">Details</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Personal info (name, email, phone)</td><td>Not collected by us</td><td>No account is created and we never receive your name. But note it is not private either: the display name and status text you choose are broadcast to nearby devices during discovery &mdash; see <a href="#nearby">what nearby devices can see</a>. We collect no email and no phone number at all.</td></tr>
-                        <tr><td>Contacts (address book)</td><td>No</td><td>The app does not read your device's contacts.</td></tr>
-                        <tr><td>Location (GPS or fine)</td><td>No</td><td>Not requested, not collected.</td></tr>
-                        <tr><td>Messages</td><td>Only in transit, encrypted</td><td>The relay handles only encrypted messages and cannot read their contents. It does retain delivery metadata (sender ID, recipient ID, timestamp) until delivery or for 30 days &mdash; see <a href="#relay">what the relay server sees</a>.</td></tr>
-                        <tr><td>Photos and media</td><td>Only what you attach</td><td>You pick files to send; the encrypted bytes travel through the chosen network path. Nothing is auto-uploaded.</td></tr>
-                        <tr><td>App activity, in-app actions</td><td>No analytics</td><td>The app contains no third-party analytics.</td></tr>
-                        <tr><td>App info and performance (crash logs)</td><td>Only on request</td><td>Crash reports are written locally. If you send us one, you attach the file yourself.</td></tr>
-                        <tr><td>Device or other identifiers</td><td>No</td><td>No IMEI, no Android ID, no advertising ID.</td></tr>
+                        <tr><td data-i18n="pol_c1_cat">Personal info (name, email, phone)</td><td data-i18n="pol_c1_col">Not collected by us</td><td data-i18n="pol_c1_det">No account is created and we never receive your name. But note it is not private either: the display name and status text you choose are broadcast to nearby devices during discovery &mdash; see <a href="#nearby">what nearby devices can see</a>. We collect no email and no phone number at all.</td></tr>
+                        <tr><td data-i18n="pol_c2_cat">Contacts (address book)</td><td data-i18n="pol_no">No</td><td data-i18n="pol_c2_det">The app does not read your device's contacts.</td></tr>
+                        <tr><td data-i18n="pol_c3_cat">Location (GPS or fine)</td><td data-i18n="pol_no">No</td><td data-i18n="pol_c3_det">Not requested, not collected.</td></tr>
+                        <tr><td data-i18n="pol_c4_cat">Messages</td><td data-i18n="pol_c4_col">Only in transit, encrypted</td><td data-i18n="pol_c4_det">The relay handles only encrypted messages and cannot read their contents. It does retain delivery metadata (sender ID, recipient ID, timestamp) until delivery or for 30 days &mdash; see <a href="#relay">what the relay server sees</a>.</td></tr>
+                        <tr><td data-i18n="pol_c5_cat">Photos and media</td><td data-i18n="pol_c5_col">Only what you attach</td><td data-i18n="pol_c5_det">You pick files to send; the encrypted bytes travel through the chosen network path. Nothing is auto-uploaded.</td></tr>
+                        <tr><td data-i18n="pol_c6_cat">App activity, in-app actions</td><td data-i18n="pol_c6_col">No analytics</td><td data-i18n="pol_c6_det">The app contains no third-party analytics.</td></tr>
+                        <tr><td data-i18n="pol_c7_cat">App info and performance (crash logs)</td><td data-i18n="pol_c7_col">Only on request</td><td data-i18n="pol_c7_det">Crash reports are written locally. If you send us one, you attach the file yourself.</td></tr>
+                        <tr><td data-i18n="pol_c8_cat">Device or other identifiers</td><td data-i18n="pol_no">No</td><td data-i18n="pol_c8_det">No IMEI, no Android ID, no advertising ID.</td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <h2 id="perm">Permissions the app asks for, and why</h2>
+            <h2 id="perm" data-i18n="pol_perm_h">Permissions the app asks for, and why</h2>
             <div style="max-width: 780px; overflow-x: auto;">
                 <table class="om-tbl">
                     <thead>
-                        <tr><th>Permission</th><th>Why it is needed</th></tr>
+                        <tr><th data-i18n="pol_th_permission">Permission</th><th data-i18n="pol_th_why">Why it is needed</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Nearby devices / Bluetooth (Android)</td><td>To find nearby OriMessenger users and exchange messages directly, without the Internet.</td></tr>
-                        <tr><td>Location (Android 11 and older)</td><td>Older Android versions require this to be granted alongside Bluetooth scan. The app does not read GPS or use the location.</td></tr>
-                        <tr><td>Internet access (Android, Linux, Windows)</td><td>To reach the relay when Bluetooth and LAN are not available.</td></tr>
-                        <tr><td>Network and Wi-Fi status (Android)</td><td>To detect whether Wi-Fi is on and whether the device is on a LAN worth trying.</td></tr>
-                        <tr><td>Run in the background and start at boot (Android)</td><td>To keep discovering nearby users and delivering messages while the app is in the background, and to resume on reboot. Optional &mdash; you can turn this off in Settings.</td></tr>
-                        <tr><td>Notifications (Android 13+)</td><td>To show incoming-message notifications.</td></tr>
-                        <tr><td>Photos / file access (Android, Windows, Linux)</td><td>To let you pick a photo to attach or a background image. Only files you choose are read.</td></tr>
-                        <tr><td>Bluetooth (macOS, iOS)</td><td>Same purpose as on Android: to find nearby users and exchange messages without the Internet. macOS and iOS ask you once, with a system prompt; you can revoke it later in Settings &rarr; Privacy &amp; Security &rarr; Bluetooth.</td></tr>
-                        <tr><td>Local Network (macOS, iOS)</td><td>To find devices on the same Wi-Fi and connect to them directly. Declining it leaves Bluetooth and the Internet relay working.</td></tr>
-                        <tr><td>Notifications (macOS, iOS)</td><td>To show incoming-message notifications. Optional; declining costs you only the banners.</td></tr>
-                        <tr><td>Background Bluetooth (iOS)</td><td>To keep receiving messages from nearby devices while the app is not in the foreground. iOS limits this heavily and does not allow the continuous background operation that Android permits; iOS cannot deliver messages at all while the app is fully closed.</td></tr>
+                        <tr><td data-i18n="pol_p1_name">Nearby devices / Bluetooth (Android)</td><td data-i18n="pol_p1_why">To find nearby OriMessenger users and exchange messages directly, without the Internet.</td></tr>
+                        <tr><td data-i18n="pol_p2_name">Location (Android 11 and older)</td><td data-i18n="pol_p2_why">Older Android versions require this to be granted alongside Bluetooth scan. The app does not read GPS or use the location.</td></tr>
+                        <tr><td data-i18n="pol_p3_name">Internet access (Android, Linux, Windows)</td><td data-i18n="pol_p3_why">To reach the relay when Bluetooth and LAN are not available.</td></tr>
+                        <tr><td data-i18n="pol_p4_name">Network and Wi-Fi status (Android)</td><td data-i18n="pol_p4_why">To detect whether Wi-Fi is on and whether the device is on a LAN worth trying.</td></tr>
+                        <tr><td data-i18n="pol_p5_name">Run in the background and start at boot (Android)</td><td data-i18n="pol_p5_why">To keep discovering nearby users and delivering messages while the app is in the background, and to resume on reboot. Optional &mdash; you can turn this off in Settings.</td></tr>
+                        <tr><td data-i18n="pol_p6_name">Notifications (Android 13+)</td><td data-i18n="pol_p6_why">To show incoming-message notifications.</td></tr>
+                        <tr><td data-i18n="pol_p7_name">Photos / file access (Android, Windows, Linux)</td><td data-i18n="pol_p7_why">To let you pick a photo to attach or a background image. Only files you choose are read.</td></tr>
+                        <tr><td data-i18n="pol_p8_name">Bluetooth (macOS, iOS)</td><td data-i18n="pol_p8_why">Same purpose as on Android: to find nearby users and exchange messages without the Internet. macOS and iOS ask you once, with a system prompt; you can revoke it later in Settings &rarr; Privacy &amp; Security &rarr; Bluetooth.</td></tr>
+                        <tr><td data-i18n="pol_p9_name">Local Network (macOS, iOS)</td><td data-i18n="pol_p9_why">To find devices on the same Wi-Fi and connect to them directly. Declining it leaves Bluetooth and the Internet relay working.</td></tr>
+                        <tr><td data-i18n="pol_p10_name">Notifications (macOS, iOS)</td><td data-i18n="pol_p10_why">To show incoming-message notifications. Optional; declining costs you only the banners.</td></tr>
+                        <tr><td data-i18n="pol_p11_name">Background Bluetooth (iOS)</td><td data-i18n="pol_p11_why">To keep receiving messages from nearby devices while the app is not in the foreground. iOS limits this heavily and does not allow the continuous background operation that Android permits; iOS cannot deliver messages at all while the app is fully closed.</td></tr>
                     </tbody>
                 </table>
             </div>
 
-            <h2 id="share">Sharing with third parties</h2>
-            <p><strong>We do not sell user data, and we do not share it with advertising networks.</strong> The only situations in which any information related to you leaves our systems are:</p>
+            <h2 id="share" data-i18n="pol_share_h">Sharing with third parties</h2>
+            <p data-i18n="pol_share_p"><strong>We do not sell user data, and we do not share it with advertising networks.</strong> The only situations in which any information related to you leaves our systems are:</p>
             <ul>
-                <li><strong>Infrastructure providers</strong> that host the relay (a Vietnamese cloud provider) &mdash; they see the encrypted messages passing through it, no more than the relay itself does.</li>
-                <li><strong>Law enforcement</strong>, when we are legally required to respond to a valid request. Given that the relay only holds encrypted messages and delivery metadata, the useful surface is small; we will say so if asked.</li>
-                <li><strong>A successor entity</strong>, in the event of a merger or acquisition. Any transfer inherits this policy.</li>
+                <li data-i18n="pol_share_li1"><strong>Infrastructure providers</strong> that host the relay (a Vietnamese cloud provider) &mdash; they see the encrypted messages passing through it, no more than the relay itself does.</li>
+                <li data-i18n="pol_share_li2"><strong>Law enforcement</strong>, when we are legally required to respond to a valid request. Given that the relay only holds encrypted messages and delivery metadata, the useful surface is small; we will say so if asked.</li>
+                <li data-i18n="pol_share_li3"><strong>A successor entity</strong>, in the event of a merger or acquisition. Any transfer inherits this policy.</li>
             </ul>
 
-            <h2 id="retention">Retention and deletion</h2>
-            <p>Chat history, key material and profile settings live on your device until you delete them. Uninstalling the app removes them, on every platform.</p>
-            <p>Undelivered messages on the relay are dropped once the recipient fetches them, or after 30 days. Delivered messages are dropped immediately.</p>
-            <p>Server-side block entries (your ID paired with the ID you blocked) have no expiry. They are deleted when you unblock the person in the app, or if you ask us to clear your relay data by ID.</p>
-            <p>Server-side logs of relay traffic (connection metadata, timestamps, byte counts &mdash; no message payloads and no user IDs) are retained for up to 14 days for operational debugging, then rotated out.</p>
+            <h2 id="retention" data-i18n="pol_retention_h">Retention and deletion</h2>
+            <p data-i18n="pol_ret_p1">Chat history, key material and profile settings live on your device until you delete them. Uninstalling the app removes them, on every platform.</p>
+            <p data-i18n="pol_ret_p2">Undelivered messages on the relay are dropped once the recipient fetches them, or after 30 days. Delivered messages are dropped immediately.</p>
+            <p data-i18n="pol_ret_p3">Server-side block entries (your ID paired with the ID you blocked) have no expiry. They are deleted when you unblock the person in the app, or if you ask us to clear your relay data by ID.</p>
+            <p data-i18n="pol_ret_p4">Server-side logs of relay traffic (connection metadata, timestamps, byte counts &mdash; no message payloads and no user IDs) are retained for up to 14 days for operational debugging, then rotated out.</p>
 
-            <h2 id="children">Children's privacy</h2>
-            <p>OriMessenger is not directed at users under 13. In jurisdictions that require parental consent, we follow the local rule. If you believe a child has created an ID and you want it removed, write to the address below with the ID; we can delete the corresponding data on the relay.</p>
+            <h2 id="children" data-i18n="pol_children_h">Children's privacy</h2>
+            <p data-i18n="pol_children_p">OriMessenger is not directed at users under 13. In jurisdictions that require parental consent, we follow the local rule. If you believe a child has created an ID and you want it removed, write to the address below with the ID; we can delete the corresponding data on the relay.</p>
 
-            <h2 id="rights">Your rights</h2>
-            <p>Because there is no account, most rights you would normally exercise against a company are yours to exercise directly on the device: access, correction, deletion and export all mean opening the app. Inside the app you can clear your whole history, remove a contact, turn <strong>Nearby</strong> off so you stop being discoverable, and <strong>block</strong> or <strong>report</strong> anyone who sends you something abusive. A report is prepared on your device and sent to the address below &mdash; we act on those, and we can delete relay data by ID.</p>
-            <p>If you need something we can help with &mdash; deleting your data on the relay, clearing a server-side block entry &mdash; write to the address below with the ID concerned.</p>
+            <h2 id="rights" data-i18n="pol_rights_h">Your rights</h2>
+            <p data-i18n="pol_rights_p1">Because there is no account, most rights you would normally exercise against a company are yours to exercise directly on the device: access, correction, deletion and export all mean opening the app. Inside the app you can clear your whole history, remove a contact, turn <strong>Nearby</strong> off so you stop being discoverable, and <strong>block</strong> or <strong>report</strong> anyone who sends you something abusive. A report is prepared on your device and sent to the address below &mdash; we act on those, and we can delete relay data by ID.</p>
+            <p data-i18n="pol_rights_p2">If you need something we can help with &mdash; deleting your data on the relay, clearing a server-side block entry &mdash; write to the address below with the ID concerned.</p>
 
-            <h2 id="security">Security</h2>
-            <p>All Internet traffic to the relay is encrypted in transit. On top of that, every message is encrypted end to end between the two devices and signed, so the recipient can verify both that the contents were not altered and that they really came from you. The relay carries the result without holding any key that could open it.</p>
-            <p><strong>On-device data is not separately encrypted by the app.</strong> As described under <a href="#device">what is stored on the device</a>, chat history and private keys are protected by the operating system rather than by an app passphrase. We would rather state that plainly than imply a protection the app does not provide.</p>
-            <p>The Android APK and the Google Play build are signed with a certificate whose fingerprint is:</p>
+            <h2 id="security" data-i18n="pol_security_h">Security</h2>
+            <p data-i18n="pol_sec_p1">All Internet traffic to the relay is encrypted in transit. On top of that, every message is encrypted end to end between the two devices and signed, so the recipient can verify both that the contents were not altered and that they really came from you. The relay carries the result without holding any key that could open it.</p>
+            <p data-i18n="pol_sec_p2"><strong>On-device data is not separately encrypted by the app.</strong> As described under <a href="#device">what is stored on the device</a>, chat history and private keys are protected by the operating system rather than by an app passphrase. We would rather state that plainly than imply a protection the app does not provide.</p>
+            <p data-i18n="pol_sec_p3">The Android APK and the Google Play build are signed with a certificate whose fingerprint is:</p>
             <div class="om-note">
                 <p style="font-family: 'DM Mono', monospace; font-size: .82rem; word-break: break-all; margin: 0;">SHA-256 &nbsp; 8A:0D:79:F8:73:F4:8F:A6:F3:E5:BD:5A:C5:04:28:A5:21:C1:86:C4:B1:0A:46:20:EE:D3:89:BA:48:F4:33:32</p>
             </div>
-            <p>The Windows installer is not code-signed yet; check it against the SHA-256 published on the download page instead.</p>
-            <p>No system is fully secure and we do not promise otherwise. If you find a vulnerability, please email <a href="mailto:contact@aibachkhoa.com">contact@aibachkhoa.com</a> with the details rather than posting it publicly.</p>
+            <p data-i18n="pol_sec_p4">The Windows installer is not code-signed yet; check it against the SHA-256 published on the download page instead.</p>
+            <p data-i18n="pol_sec_p5">No system is fully secure and we do not promise otherwise. If you find a vulnerability, please email <a href="mailto:contact@aibachkhoa.com">contact@aibachkhoa.com</a> with the details rather than posting it publicly.</p>
 
-            <h2 id="changes">Changes to this policy</h2>
-            <p>This policy may change as the app changes. The &ldquo;last updated&rdquo; date at the top always reflects the current version. Changes that materially affect how your data is handled will be surfaced inside the app, not just published on this page.</p>
+            <h2 id="changes" data-i18n="pol_changes_h">Changes to this policy</h2>
+            <p data-i18n="pol_changes_p">This policy may change as the app changes. The &ldquo;last updated&rdquo; date at the top always reflects the current version. Changes that materially affect how your data is handled will be surfaced inside the app, not just published on this page.</p>
 
-            <h2 id="contact">Contact</h2>
+            <h2 id="contact" data-i18n="footer_contact">Contact</h2>
             <div style="max-width: 780px; overflow-x: auto;">
                 <table class="om-tbl">
                     <tbody>
-                        <tr><th>Email</th><td><a href="mailto:contact@aibachkhoa.com">contact@aibachkhoa.com</a></td></tr>
-                        <tr><th>Address</th><td>Cau Giay District, Hanoi, Vietnam</td></tr>
-                        <tr><th>Publisher</th><td>AIBachKhoa (Son Tran)</td></tr>
+                        <tr><th data-i18n="pol_th_email">Email</th><td><a href="mailto:contact@aibachkhoa.com">contact@aibachkhoa.com</a></td></tr>
+                        <tr><th data-i18n="pol_th_address">Address</th><td data-i18n="pol_address">Cau Giay District, Hanoi, Vietnam</td></tr>
+                        <tr><th data-i18n="pol_th_publisher">Publisher</th><td>AIBachKhoa (Son Tran)</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -324,40 +339,28 @@
                 <div class="footer-brand">
                     <a href="/" class="logo"><img src="/assets/logo.png" alt="" class="logo-img" width="30" height="30" loading="lazy"><span class="logo-word">AIBachKhoa</span></a>
                 </div>
-                <nav class="footer-col" aria-label="Products">
-                    <h4>Products</h4>
+                <nav class="footer-col" data-i18n-aria="footer_prod" aria-label="Products">
+                    <h4 data-i18n="footer_prod">Products</h4>
                     <a href="/orimessenger">OriMessenger</a>
                     <a href="/bksafe">BKSafe</a>
                     <a href="/locallex">LocalLex</a>
                 </nav>
-                <nav class="footer-col" aria-label="Company">
-                    <h4>Company</h4>
-                    <a href="/#about">About</a>
-                    <a href="/#services">Services</a>
-                    <a href="mailto:contact@aibachkhoa.com">Contact</a>
+                <nav class="footer-col" data-i18n-aria="footer_comp" aria-label="Company">
+                    <h4 data-i18n="footer_comp">Company</h4>
+                    <a href="/#about" data-i18n="footer_about">About</a>
+                    <a href="/#services" data-i18n="footer_services">Services</a>
+                    <a href="mailto:contact@aibachkhoa.com" data-i18n="footer_contact">Contact</a>
                 </nav>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 AIBachKhoa</p>
-                <p>All rights reserved.</p>
+                <p data-i18n="footer_rights">All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-      (function () {
-        const html = document.documentElement;
-        const saved = (function () { try { return localStorage.getItem('theme'); } catch (e) { return null; } })();
-        if (saved === 'dark' || saved === 'light') html.setAttribute('data-theme', saved);
-        function toggle() {
-          const cur = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-          html.setAttribute('data-theme', cur);
-          try { localStorage.setItem('theme', cur); } catch (e) {}
-        }
-        document.getElementById('theme-toggle')?.addEventListener('click', toggle);
-        document.getElementById('mobile-theme-toggle')?.addEventListener('click', toggle);
-      })();
-    </script>
+    <script src="/lang-url.js"></script>
+    <script src="/orimessenger/orimessenger.js"></script>
     <script defer src="/analytics.js"></script>
 </body>
 </html>

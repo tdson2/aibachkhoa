@@ -18,6 +18,7 @@ const i18n = {
         skip_link: "Skip to content",
 
         nav_home: "Home",
+        nav_blog: "Blog",
         nav_overview: "Overview",
         nav_posts: "Guard posts",
         nav_foes: "Enemies",
@@ -33,6 +34,7 @@ const i18n = {
         btn_contact: "Contact us",
         hero_meta: "Bundle id <code>com.tdson.castleofancients</code> · landscape, iPhone and iPad · no ads, no in-app purchases, plays fully offline.",
         hero_shot_alt: "Castle of Ancients — archer towers holding a bend in the road against a goblin column",
+        blockers_shot_alt: "Barracks warriors blocking the road while archer towers fire over them",
 
         stat_maps: "Maps across two modes",
         stat_posts: "Guard posts, three levels each",
@@ -81,6 +83,20 @@ const i18n = {
         foe_title: "Twenty-four kinds of <em>trouble</em>.",
         foe_sub: "They do not just get bigger. Each one breaks a rule the last one obeyed — which is why a line that held for six waves can fail on the seventh without anything about it changing.",
 
+        foe_n_torch: "Torch Goblin",
+        foe_n_barrel: "Barrel Goblin",
+        foe_n_tnt: "TNT Goblin",
+        foe_n_skull: "Skeleton",
+        foe_n_spider: "Stone Spider",
+        foe_n_bat: "Bat",
+        foe_n_imp: "Imp",
+        foe_n_wisp: "Wisp",
+        foe_n_raft: "Landing Raft",
+        foe_n_serpent: "Serpent",
+        foe_n_turtle: "Sea Turtle",
+        foe_n_ogre: "Ogre",
+        foe_n_mino: "Minotaur",
+
         foe_torch: "Basic infantry. The wave you build against.",
         foe_barrel: "Fast, thin, and through a gap before you look up.",
         foe_tnt: "Lobs bombs at your blockers from out of their reach.",
@@ -114,6 +130,7 @@ const i18n = {
 
         camp_t: "Campaign — seven larger maps, unlocked from the start",
         camp_d: "Bigger than the screen, so you pinch to zoom and drag to pan. From a windswept S-bend to a three-gate river delta, a 98-tile spiral, a mountaintop keep with a single ramp, and a castle beset on four sides at once.",
+        maps_shot_alt: "Siege of the Old Keep — a spiral road with the keep ringed in the middle",
 
         dial_eyebrow: "Your rules",
         dial_title: "Four dials, and <em>every one comes off</em>.",
@@ -145,10 +162,13 @@ const i18n = {
         touch_l2: "<strong>Taps are forgiving,</strong> so a tap that wobbles a little is still a tap and not a half-started build you have to cancel.",
         touch_l3: "<strong>The tower preview lifts clear of your fingertip,</strong> because your hand covers exactly the tile you are aiming at — the one place a preview must not be.",
         touch_l4: "<strong>Pinch to zoom, one finger to pan</strong> on the campaign maps, which are wider than any screen you own.",
+        touch_shot_alt: "A guard post card lifted off the side bar and held over open grass",
 
         shot_eyebrow: "Screenshots",
         shot_title: "Real captures, <em>no mock-ups</em>.",
         shot_sub: "Every shot below is the game running, at full resolution, with nothing painted on afterwards.",
+
+        s1_alt: "Castle of Ancients — the main menu",
 
         s1_title: "The main menu",
         s1_cap: "Two modes and a settings screen. No account, no daily reward, nothing between the icon and a run.",
@@ -239,7 +259,17 @@ const i18n = {
 };
 
 const LANGS = [
-    { code: 'en', label: 'English' }
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' },
+    { code: 'zh', label: '中文' },
+    { code: 'hi', label: 'हिन्दी' },
+    { code: 'ar', label: 'العربية' },
+    { code: 'pt', label: 'Português' },
+    { code: 'fr', label: 'Français' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'ja', label: '日本語' },
+    { code: 'ko', label: '한국어' },
+    { code: 'ru', label: 'Русский' }
 ];
 const DEFAULT_LANG = 'en';
 const SHOT_DIR = '/assets/games/castle-of-ancients/';
@@ -261,25 +291,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSelects = [document.getElementById('lang-select'), document.getElementById('mobile-lang-select')].filter(Boolean);
     const supported = LANGS.map(l => l.code);
 
-    // A stored choice wins, then whatever the visitor picked on the landing
-    // page. Anything no longer offered — a 'vi' left over from before it was
-    // hidden — falls back to English rather than painting a blank page.
-    const detectLang = () => {
-        // The URL wins: /es/… is the Spanish page whatever the browser
-        // or a previous visit would have preferred.
-        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
-        if (fromUrl) return fromUrl;
-        const own = localStorage.getItem('castleofancients-lang');
-        if (own && supported.includes(own)) return own;
-        const site = localStorage.getItem('lang');
-        if (site && supported.includes(site)) return site;
-        const prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
-        for (const pref of prefs) {
-            const base = String(pref).toLowerCase().split('-')[0];
-            if (supported.includes(base)) return base;
-        }
-        return DEFAULT_LANG;
-    };
+    // The URL names the language; see LangUrl.detect in /lang-url.js.
+    const detectLang = () => window.LangUrl ? window.LangUrl.detect(supported, DEFAULT_LANG) : DEFAULT_LANG;
 
     langSelects.forEach(sel => {
         const short = sel.dataset.display === 'code';
@@ -318,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
         const lang = sel.value;
-        localStorage.setItem('castleofancients-lang', lang);
+        localStorage.setItem('lang', lang);
         // Each language is its own page now, so go there rather
         // than rewriting this one and leaving the URL lying.
         if (window.LangUrl) {

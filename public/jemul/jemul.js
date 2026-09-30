@@ -18,6 +18,7 @@ const i18n = {
         skip_link: "Skip to content",
 
         nav_home: "Home",
+        nav_blog: "Blog",
         nav_overview: "Overview",
         nav_android: "Android app",
         nav_web: "Play in browser",
@@ -32,6 +33,7 @@ const i18n = {
         btn_play: "Get it on Google Play",
         btn_web: "Play in your browser",
         btn_web_open: "Open the browser edition",
+        hero_img_alt: "JeMul browser edition running Prince of Persia",
 
         ov_eyebrow: "What it is",
         ov_title: "An emulator, not a download site.",
@@ -51,6 +53,8 @@ const i18n = {
         an_l3: "On-screen keypad in Nokia, Samsung or Sony Ericsson layouts",
         an_l4: "Fullscreen, aspect-ratio lock, size and frame-rate settings",
         an_l5: "Game sound and haptic feedback on every key press",
+        an_img1_alt: "A game running with the on-screen keypad",
+        an_img2_alt: "The game library on a phone",
 
         web_eyebrow: "Browser edition",
         web_title: "Nothing to install.",
@@ -60,6 +64,7 @@ const i18n = {
         web_l3: "Keyboard, mouse for touch games, and an on-screen keypad",
         web_l4: "A glass interface you can retune: colours, blur, scale, scanlines",
         web_l5: "Works on a phone too: controls and screen on one screen, no scrolling",
+        web_img_alt: "The browser library",
 
         gal_eyebrow: "Screenshots",
         gal_title: "A look around.",
@@ -122,7 +127,17 @@ const i18n = {
 };
 
 const LANGS = [
-    { code: 'en', label: 'English' }
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' },
+    { code: 'zh', label: '中文' },
+    { code: 'hi', label: 'हिन्दी' },
+    { code: 'ar', label: 'العربية' },
+    { code: 'pt', label: 'Português' },
+    { code: 'fr', label: 'Français' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'ja', label: '日本語' },
+    { code: 'ko', label: '한국어' },
+    { code: 'ru', label: 'Русский' }
 ];
 const DEFAULT_LANG = 'en';
 
@@ -143,22 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSelects = [document.getElementById('lang-select'), document.getElementById('mobile-lang-select')].filter(Boolean);
     const supported = LANGS.map(l => l.code);
 
-    const detectLang = () => {
-        // The URL wins: /es/… is the Spanish page whatever the browser
-        // or a previous visit would have preferred.
-        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
-        if (fromUrl) return fromUrl;
-        const own = localStorage.getItem('jemul-lang');
-        if (own && supported.includes(own)) return own;
-        const site = localStorage.getItem('lang');
-        if (site && supported.includes(site)) return site;
-        const prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
-        for (const pref of prefs) {
-            const base = String(pref).toLowerCase().split('-')[0];
-            if (supported.includes(base)) return base;
-        }
-        return DEFAULT_LANG;
-    };
+    // The URL names the language; see LangUrl.detect in /lang-url.js.
+    const detectLang = () => window.LangUrl ? window.LangUrl.detect(supported, DEFAULT_LANG) : DEFAULT_LANG;
 
     langSelects.forEach(sel => {
         const short = sel.dataset.display === 'code';
@@ -192,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
         const lang = sel.value;
-        localStorage.setItem('jemul-lang', lang);
+        localStorage.setItem('lang', lang);
         // Each language is its own page now, so go there rather
         // than rewriting this one and leaving the URL lying.
         if (window.LangUrl) {

@@ -19,6 +19,7 @@ const i18n = {
         skip_link: "Skip to content",
 
         nav_home: "Home",
+        nav_blog: "Blog",
         nav_overview: "Overview",
         nav_library: "The library",
         nav_reading: "Reading",
@@ -46,6 +47,10 @@ const i18n = {
         how_3_h: "Read anywhere",
         how_3_p: "Downloaded stories open with no network at all. Favourites, reading history and progress are written to the phone and never leave it.",
 
+        alt_hero: "Chilly Novels home screen, with a featured story and shelves by genre",
+        alt_search: "The search sheet, filtering by story type, sort order and genre",
+        alt_story: "A story page: cover, author, chapter count, size and a download button",
+
         lib_eyebrow: "The library",
         lib_title: "Two kinds of story, sorted the way you look for them.",
         lib_lede: "The shelf holds prose and comics side by side, grouped into everyday life, humour, school and fantasy. The search sheet narrows it down without making you scroll.",
@@ -71,6 +76,7 @@ const i18n = {
         read_f4: "There is no sign-up screen, because there is nothing to sign up to.",
 
         gal_eyebrow: "Screenshots",
+        alt_gallery: "Chilly Novels screenshot",
         gal_title: "The whole app, six screens.",
         gal_lede: "Straight from the current build on Google Play.",
         gal_t1: "Home", gal_c1_h: "Home",
@@ -137,7 +143,17 @@ const i18n = {
 };
 
 const LANGS = [
-    { code: 'en', label: 'English' }
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' },
+    { code: 'zh', label: '中文' },
+    { code: 'hi', label: 'हिन्दी' },
+    { code: 'ar', label: 'العربية' },
+    { code: 'pt', label: 'Português' },
+    { code: 'fr', label: 'Français' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'ja', label: '日本語' },
+    { code: 'ko', label: '한국어' },
+    { code: 'ru', label: 'Русский' }
 ];
 const DEFAULT_LANG = 'en';
 
@@ -158,22 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSelects = [document.getElementById('lang-select'), document.getElementById('mobile-lang-select')].filter(Boolean);
     const supported = LANGS.map(l => l.code);
 
-    const detectLang = () => {
-        // The URL wins: /es/… is the Spanish page whatever the browser
-        // or a previous visit would have preferred.
-        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
-        if (fromUrl) return fromUrl;
-        const own = localStorage.getItem('chilly-novels-lang');
-        if (own && supported.includes(own)) return own;
-        const site = localStorage.getItem('lang');
-        if (site && supported.includes(site)) return site;
-        const prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
-        for (const pref of prefs) {
-            const base = String(pref).toLowerCase().split('-')[0];
-            if (supported.includes(base)) return base;
-        }
-        return DEFAULT_LANG;
-    };
+    // The URL names the language; see LangUrl.detect in /lang-url.js.
+    const detectLang = () => window.LangUrl ? window.LangUrl.detect(supported, DEFAULT_LANG) : DEFAULT_LANG;
 
     langSelects.forEach(sel => {
         const short = sel.dataset.display === 'code';
@@ -211,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
         const lang = sel.value;
-        localStorage.setItem('chilly-novels-lang', lang);
+        localStorage.setItem('lang', lang);
         // Each language is its own page now, so go there rather
         // than rewriting this one and leaving the URL lying.
         if (window.LangUrl) {

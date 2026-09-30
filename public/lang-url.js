@@ -26,5 +26,29 @@
             + window.location.search + window.location.hash;
     }
 
-    window.LangUrl = { fromPath: fromPath, hrefFor: hrefFor };
+    // The language a page should run in. The URL decides: a page without a
+    // prefix is the default language. The one exception is a visitor who
+    // explicitly picked another language somewhere on the site (the picker
+    // stores it as 'lang'): they are sent to that language's copy of this
+    // page instead of being left on the English one. Browser preferences
+    // are deliberately not consulted, so a crawler and a first-time visitor
+    // always get the page the URL names.
+    function detect(supported, defaultLang) {
+        var fromUrl = fromPath(supported);
+        if (fromUrl) return fromUrl;
+        var saved = null;
+        try { saved = window.localStorage.getItem('lang'); } catch (e) { /* storage blocked */ }
+        if (saved && saved !== defaultLang && supported.indexOf(saved) !== -1) {
+            window.location.replace(hrefFor(saved, defaultLang, supported));
+        }
+        return defaultLang;
+    }
+
+    // One site-wide choice, so picking Spanish on the home page carries
+    // through to every product page and back.
+    function remember(lang) {
+        try { window.localStorage.setItem('lang', lang); } catch (e) { /* storage blocked */ }
+    }
+
+    window.LangUrl = { fromPath: fromPath, hrefFor: hrefFor, detect: detect, remember: remember };
 })();

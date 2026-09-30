@@ -23,6 +23,7 @@ i18n.en = {
     skip_link: "Skip to content",
 
     nav_home: "Home",
+    nav_blog: "Blog",
     nav_overview: "Overview",
     nav_cook: "Cooking mode",
     nav_voice: "Voice",
@@ -51,6 +52,10 @@ i18n.en = {
     stat_cuisine: "Cuisines: Vietnamese, Chinese, Japanese, Korean",
     stat_offline: "Times you need a connection to open a recipe",
     stat_account: "Accounts to create before you can cook",
+
+    alt_hero: "ChefEasy home screen",
+    alt_cook: "ChefEasy step-by-step cooking mode",
+    alt_gallery: "ChefEasy screenshot",
 
     cook_eyebrow: "Cooking mode",
     cook_title: "One step per screen, <em>and a clock for it</em>.",
@@ -254,7 +259,17 @@ i18n.en = {
 };
 
 const LANGS = [
-    { code: 'en', label: 'English' }
+    { code: 'en', label: 'English' },
+    { code: 'es', label: 'Español' },
+    { code: 'zh', label: '中文' },
+    { code: 'hi', label: 'हिन्दी' },
+    { code: 'ar', label: 'العربية' },
+    { code: 'pt', label: 'Português' },
+    { code: 'fr', label: 'Français' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'ja', label: '日本語' },
+    { code: 'ko', label: '한국어' },
+    { code: 'ru', label: 'Русский' }
 ];
 const DEFAULT_LANG = 'en';
 
@@ -279,24 +294,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const langSelects = [document.getElementById('lang-select'), document.getElementById('mobile-lang-select')].filter(Boolean);
     const supported = LANGS.map(l => l.code);
 
-    // A choice made on these pages wins, then whatever the visitor picked on
-    // the landing page, then the browser's own preference.
-    const detectLang = () => {
-        // The URL wins: /es/… is the Spanish page whatever the browser
-        // or a previous visit would have preferred.
-        const fromUrl = window.LangUrl && window.LangUrl.fromPath(supported);
-        if (fromUrl) return fromUrl;
-        const own = localStorage.getItem('chefeasy-lang');
-        if (own && supported.includes(own)) return own;
-        const site = localStorage.getItem('lang');
-        if (site && supported.includes(site)) return site;
-        const prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
-        for (const pref of prefs) {
-            const base = String(pref).toLowerCase().split('-')[0];
-            if (supported.includes(base)) return base;
-        }
-        return DEFAULT_LANG;
-    };
+    // The URL names the language; see LangUrl.detect in /lang-url.js.
+    const detectLang = () => window.LangUrl ? window.LangUrl.detect(supported, DEFAULT_LANG) : DEFAULT_LANG;
 
     langSelects.forEach(sel => {
         const short = sel.dataset.display === 'code';
@@ -334,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     langSelects.forEach(sel => sel.addEventListener('change', () => {
         const lang = sel.value;
-        localStorage.setItem('chefeasy-lang', lang);
+        localStorage.setItem('lang', lang);
         // Each language is its own page now, so go there rather
         // than rewriting this one and leaving the URL lying.
         if (window.LangUrl) {
