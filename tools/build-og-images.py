@@ -60,6 +60,8 @@ CARDS = {
                 'assets/games/novaryn/icon.png', 'assets/games/novaryn/shot-01.png'),
     'novaryn-ios': ('Novaryn', 'Endless waves on iPhone and iPad.',
                     'assets/games/novaryn/icon.png', 'assets/games/novaryn/shot-01.png'),
+    'melodiai': ('MelodiAI', 'Write the lyrics. Hear the song.',
+                 'assets/melodiai/icon.png', 'assets/melodiai/studio.png'),
     'dungeon-blade': ('Dungeon of the Fallen Blade', 'A hundred depths, one blade.',
                       'assets/games/dungeon-blade/icon.png',
                       'assets/games/dungeon-blade/shot-01.png'),

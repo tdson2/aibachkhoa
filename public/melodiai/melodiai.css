@@ -1,0 +1,173 @@
+/* =========================================================
+   MelodiAI — product page. Only what is special to this
+   product: the app's teal/violet as accents, browser-framed
+   screenshots, and the sample players on the dark panel.
+   ========================================================= */
+.page-melodiai {
+    --mx-teal: #00c9ae;           /* the app's teal, darkened to read on cream */
+    --mx-glow: #00f5d4;           /* the app's teal as it is on its dark ground */
+    --mx-violet: #7701d0;
+}
+:root[data-theme="dark"] .page-melodiai { --mx-teal: #00f5d4; }
+
+/* ---------- hero ---------- */
+.mx-hero { padding-bottom: clamp(3rem, 6vw, 5rem); }
+.mx-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
+    gap: clamp(2rem, 4vw, 4rem);
+    align-items: center;
+}
+.mx-hero .hero-title em { color: var(--mx-teal); font-style: normal; }
+.mx-badges {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    list-style: none; padding: 0; margin: 1.75rem 0 0;
+}
+.mx-badges li {
+    padding: 0.4rem 0.8rem;
+    border: var(--border-w) solid var(--ink);
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+.mx-badges li:first-child { background: var(--mx-glow); border-color: var(--mx-glow); color: #00382f; font-weight: 500; }
+@media (max-width: 960px) {
+    .mx-hero-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- screenshots in a browser frame ---------- */
+.mx-frame {
+    margin: 0;
+    border: var(--border-w) solid var(--ink);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: #111319;
+    box-shadow: 10px 10px 0 var(--shadow-hard);
+}
+.mx-frame img { display: block; width: 100%; height: auto; }
+.mx-frame-bar {
+    display: flex; align-items: center; gap: 0.4rem;
+    padding: 0.55rem 0.8rem;
+    background: #0c0e14;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.mx-frame-bar i { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: #3a3b42; }
+.mx-frame-bar i:first-child { background: #ff6b6b; }
+.mx-frame-bar i:nth-child(2) { background: #ffd166; }
+.mx-frame-bar i:nth-child(3) { background: #06d6a0; }
+.mx-frame-bar b {
+    margin-left: 0.6rem; padding: 0.15rem 0.7rem;
+    border-radius: 999px; background: #1e1f26;
+    font: 500 0.72rem var(--font-mono); color: #b9cac4;
+}
+.mx-hero-shot { transform: rotate(-1deg); }
+@media (prefers-reduced-motion: no-preference) {
+    .mx-hero-shot { transition: transform 0.4s ease; }
+    .mx-hero-shot:hover { transform: rotate(0deg) translateY(-4px); }
+}
+.row-media.mx-frame { padding: 0; }
+
+/* ---------- sample players ---------- */
+.mx-samples .display em { color: var(--mx-glow); }
+.mx-tracks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+.mx-track {
+    position: relative;
+    display: flex; align-items: center; gap: 1rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid rgba(235, 234, 220, 0.14);
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--c1) 22%, #17161a), #17161a 70%);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.mx-track:hover { border-color: rgba(235, 234, 220, 0.34); }
+.mx-track.is-playing { border-color: var(--mx-glow); box-shadow: 0 0 0 1px var(--mx-glow), 0 0 28px rgba(0, 245, 212, 0.18); }
+.mx-play {
+    flex: none;
+    width: 3.2rem; height: 3.2rem;
+    border: 0; border-radius: 50%;
+    background: linear-gradient(160deg, var(--c1), var(--c2));
+    display: grid; place-items: center;
+    cursor: pointer;
+    color: #fff;
+}
+.mx-play:focus-visible { outline: 2px solid var(--mx-glow); outline-offset: 3px; }
+.mx-play span {                            /* play triangle, pause bars when playing */
+    width: 0; height: 0;
+    border-left: 0.95rem solid #fff;
+    border-top: 0.6rem solid transparent;
+    border-bottom: 0.6rem solid transparent;
+    margin-left: 0.2rem;
+}
+.is-playing .mx-play span {
+    width: 0.85rem; height: 1rem; margin: 0;
+    border: 0;
+    border-left: 0.28rem solid #fff;
+    border-right: 0.28rem solid #fff;
+}
+.mx-track-body { flex: 1; min-width: 0; }
+.mx-track h3 { margin: 0; font-size: 1.08rem; font-weight: 700; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mx-track p { margin: 0.15rem 0 0.6rem; font-size: 0.86rem; color: rgba(235, 234, 220, 0.66); }
+.mx-bar {
+    height: 4px; border-radius: 4px;
+    background: rgba(235, 234, 220, 0.16);
+    cursor: pointer;
+    overflow: hidden;
+}
+.mx-bar i { display: block; height: 100%; width: 0; background: var(--mx-glow); }
+.mx-time { flex: none; font: 500 0.82rem var(--font-mono); color: rgba(235, 234, 220, 0.66); }
+
+.mx-remix {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr);
+    gap: 2rem;
+    align-items: center;
+    margin-top: 3.5rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px dashed rgba(0, 245, 212, 0.45);
+    border-radius: var(--radius);
+}
+.mx-remix-head h3 { margin: 0.2rem 0 0.5rem; font-size: clamp(1.5rem, 2.6vw, 2.1rem); color: #fff; }
+.mx-remix-head p:last-child { margin: 0; color: rgba(235, 234, 220, 0.75); }
+.mx-remix-pair { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 0.8rem; align-items: center; }
+.mx-arrow { font-size: 1.6rem; color: var(--mx-glow); }
+.mx-tag {
+    display: inline-block; margin-right: 0.35rem; padding: 0.05rem 0.45rem;
+    border-radius: 999px; background: rgba(235, 234, 220, 0.16);
+    font: 500 0.68rem var(--font-mono); letter-spacing: 0.04em; text-transform: uppercase; vertical-align: 0.15em;
+}
+.mx-tag--after { background: var(--mx-glow); color: #00382f; }
+@media (max-width: 960px) {
+    .mx-remix { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+    .mx-tracks { grid-template-columns: 1fr; }
+    .mx-remix-pair { grid-template-columns: 1fr; }
+    .mx-arrow { transform: rotate(90deg); justify-self: center; }
+}
+
+/* ---------- steps and notes ---------- */
+.mx-steps {
+    list-style: none; padding: 0; margin: 2.5rem 0 0;
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem;
+}
+.mx-steps li {
+    padding: 1.6rem;
+    border: var(--border-w) solid var(--ink);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+}
+.mx-n { font: 500 0.85rem var(--font-mono); color: var(--accent-ink); letter-spacing: 0.1em; }
+.mx-steps h3 { margin: 0.6rem 0 0.4rem; font-size: 1.3rem; }
+.mx-steps p { margin: 0; color: var(--ink-soft); line-height: 1.6; }
+.mx-know { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; margin-top: 2rem; }
+.mx-know h3 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+.mx-know p { margin: 0; color: var(--ink-soft); line-height: 1.6; }
+@media (max-width: 860px) {
+    .mx-steps, .mx-know { grid-template-columns: 1fr; }
+}
+.mx-hero .hero-title { font-size: clamp(2.6rem, 5.6vw, 5.6rem); }

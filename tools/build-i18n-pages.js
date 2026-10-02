@@ -39,6 +39,7 @@ const GROUPS = [
     { js: 'mini-castle/mini-castle.js', pages: ['mini-castle/index.html', 'mini-castle/policy/index.html'] },
     { js: 'novaryn/novaryn.js', pages: ['novaryn/index.html', 'novaryn/ios/index.html', 'novaryn/policy/index.html'] },
     { js: 'dungeon-blade/dungeon-blade.js', pages: ['dungeon-blade/index.html', 'dungeon-blade/policy/index.html'] },
+    { js: 'melodiai/melodiai.js', pages: ['melodiai/index.html'] },
     { js: 'orimessenger/orimessenger.js', pages: ['orimessenger/index.html', 'orimessenger/android/index.html', 'orimessenger/desktop/index.html', 'orimessenger/ios/index.html', 'orimessenger/policy/index.html'] },
     // Only the list is translated; each post stays in the language it was
     // written in (tools/build-blog.js).

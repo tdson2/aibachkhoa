@@ -91,6 +91,11 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://aibachkhoa.com/melodiai</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://aibachkhoa.com/mini-castle</loc>
         <lastmod>2026-09-30</lastmod>
         <priority>0.8</priority>
@@ -113,6 +118,11 @@
     <url>
         <loc>https://aibachkhoa.com/ru</loc>
         <lastmod>2026-09-30</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi</loc>
+        <lastmod>2026-09-20</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
@@ -173,6 +183,11 @@
     <url>
         <loc>https://aibachkhoa.com/ar/jemul</loc>
         <lastmod>2026-09-30</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/ar/melodiai</loc>
+        <lastmod>2026-10-02</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
@@ -276,6 +291,11 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://aibachkhoa.com/de/melodiai</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://aibachkhoa.com/de/mini-castle</loc>
         <lastmod>2026-09-30</lastmod>
         <priority>0.7</priority>
@@ -366,6 +386,11 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://aibachkhoa.com/es/melodiai</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://aibachkhoa.com/es/mini-castle</loc>
         <lastmod>2026-09-30</lastmod>
         <priority>0.7</priority>
@@ -453,6 +478,11 @@
     <url>
         <loc>https://aibachkhoa.com/fr/jemul</loc>
         <lastmod>2026-09-30</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/fr/melodiai</loc>
+        <lastmod>2026-10-02</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
@@ -551,6 +581,11 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://aibachkhoa.com/hi/melodiai</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://aibachkhoa.com/hi/mini-castle</loc>
         <lastmod>2026-09-30</lastmod>
         <priority>0.7</priority>
@@ -641,6 +676,11 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://aibachkhoa.com/ja/melodiai</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://aibachkhoa.com/ja/mini-castle</loc>
         <lastmod>2026-09-30</lastmod>
         <priority>0.7</priority>
@@ -728,6 +768,11 @@
     <url>
         <loc>https://aibachkhoa.com/ko/jemul</loc>
         <lastmod>2026-09-30</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/ko/melodiai</loc>
+        <lastmod>2026-10-02</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
@@ -841,6 +886,11 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://aibachkhoa.com/pt/melodiai</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://aibachkhoa.com/pt/mini-castle</loc>
         <lastmod>2026-09-30</lastmod>
         <priority>0.7</priority>
@@ -931,6 +981,11 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://aibachkhoa.com/ru/melodiai</loc>
+        <lastmod>2026-10-02</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://aibachkhoa.com/ru/mini-castle</loc>
         <lastmod>2026-09-30</lastmod>
         <priority>0.7</priority>
@@ -963,6 +1018,46 @@
     <url>
         <loc>https://aibachkhoa.com/ru/orimessenger/ios</loc>
         <lastmod>2026-09-30</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/bksafe</loc>
+        <lastmod>2026-09-20</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/castle-of-ancients</loc>
+        <lastmod>2026-09-20</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/chilly-novels</loc>
+        <lastmod>2026-09-20</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/dungeon-blade</loc>
+        <lastmod>2026-09-20</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/jemul</loc>
+        <lastmod>2026-09-20</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/mini-castle</loc>
+        <lastmod>2026-09-20</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/novaryn</loc>
+        <lastmod>2026-09-20</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/novaryn/ios</loc>
+        <lastmod>2026-09-20</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
@@ -1018,6 +1113,11 @@
     <url>
         <loc>https://aibachkhoa.com/zh/jemul</loc>
         <lastmod>2026-09-30</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/zh/melodiai</loc>
+        <lastmod>2026-10-02</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
@@ -1608,6 +1708,41 @@
     <url>
         <loc>https://aibachkhoa.com/ru/orimessenger/policy</loc>
         <lastmod>2026-09-30</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/bksafe/policy</loc>
+        <lastmod>2026-09-20</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/castle-of-ancients/policy</loc>
+        <lastmod>2026-09-20</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/chilly-novels/policy</loc>
+        <lastmod>2026-09-20</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/dungeon-blade/policy</loc>
+        <lastmod>2026-09-20</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/jemul/policy</loc>
+        <lastmod>2026-09-20</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/mini-castle/policy</loc>
+        <lastmod>2026-09-20</lastmod>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://aibachkhoa.com/vi/novaryn/policy</loc>
+        <lastmod>2026-09-20</lastmod>
         <priority>0.3</priority>
     </url>
     <url>
